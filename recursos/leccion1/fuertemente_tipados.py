@@ -1,3 +1,4 @@
+# -*- coding: utf8 -*-
 """ 
     El fuertemente tipado significa que el tipo de valor no 
     cambia repentinamente. Una cadena que contiene solo dígitos 

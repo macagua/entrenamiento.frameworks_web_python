@@ -29,8 +29,9 @@ Esta práctica ofrece una introducción rápida a la programación en Python:
 
 #. Uso de Clases en Python 3:
 
-   .. note::
-        Usando el código ejemplo https://gist.github.com/macagua/c3b8141f5eaf44b891d536861d42bf7f
+.. literalinclude:: ../../recursos/leccion1/clases.py
+    :language: python
+    :lines: 1-158
 
 
 ----
@@ -50,7 +51,7 @@ Preparar entorno de desarrollo
 
     ::
 
-        sudo apt-get install python3-dev python3-pip python3-virtualenv ipython3
+        sudo apt-get install python3-dev python3-pip python3-virtualenv
 
 #. Creación de entornos virtuales Python, con los siguientes comando:
 
@@ -166,6 +167,8 @@ Comando GNU/Linux
 +------------+-----------+-----------------------------------------------+
 | pip        | uninstall | httpie                                        |
 +------------+-----------+-----------+-----------------+-----------------+
+| python     | clases.py | persona                                       |
++------------+-----------+-----------+-----------------+-----------------+
 | printf     | |pip_conf|            |        >>       | ~/.pip/pip.conf |
 +------------+-----------------------+-----------------+-----------------+
 
@@ -181,8 +184,9 @@ Comando GNU/Linux
 .. important::
     Usted puede descargar el código usado en esta sección haciendo clic en los 
     siguientes enlaces: 
-    :download:`fuertemente_tipados.py <../../recursos/leccion1/fuertemente_tipados.py>`
-    y :download:`tipado_dinamico.py <../../recursos/leccion1/tipado_dinamico.py>`.
+    :download:`tipado_dinamico.py <../../recursos/leccion1/tipado_dinamico.py>`, 
+    :download:`fuertemente_tipados.py <../../recursos/leccion1/fuertemente_tipados.py>`, 
+    y :download:`clases.py <../../recursos/leccion1/clases.py>`.
 
 
 .. tip::
@@ -192,6 +196,7 @@ Comando GNU/Linux
     ::
 
         leccion9/
+        ├── clases.py
         ├── fuertemente_tipados.py
         └── tipado_dinamico.py
 
@@ -200,7 +205,9 @@ Comando GNU/Linux
     ::
 
         python fuertemente_tipados.py
-        python errores_propios.py
+        python tipado_dinamico.py
+        python clases.py persona
+        python clases.py supervisor
 
 
 ----
@@ -210,7 +217,6 @@ Comando GNU/Linux
 
     Consulte la sección de :ref:`lecturas suplementarias <lecturas_suplementarias_leccion1>` 
     del entrenamiento para ampliar su conocimiento en esta temática.
-
 
 .. commets:
 	http://jupyter.org

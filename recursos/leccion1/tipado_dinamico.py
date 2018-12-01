@@ -1,3 +1,4 @@
+# -*- coding: utf8 -*-
 """
     El tipado dinámico significa que los objetos en tiempo de 
     ejecución (valores) tienen un tipo, a diferencia del tipado 
