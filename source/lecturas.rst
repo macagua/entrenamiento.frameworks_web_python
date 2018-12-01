@@ -44,7 +44,6 @@ Lección 1 - Fast-Track en Python
 - Articulo `Instalación de paquetes Python con Distribute y pip <https://lcaballero.wordpress.com/2013/03/20/instalacion-de-paquetes-python-con-distribute-y-pip/>`_.
 
 
-
 .. _lecturas_suplementarias_leccion2:
 
 Lección 2 - Base de datos SQL
@@ -84,18 +83,44 @@ Lección 4 - Web Server Gateway Interface
 .. _lecturas_suplementarias_leccion5:
 
 
-Lección 5 - Framework Web Flask
--------------------------------
+Lección 5 - Frameworks Web en Python
+------------------------------------
+
+- `Flask framework <http://flask.pocoo.org/>`_.
+
+- `Django project <https://www.djangoproject.com/>`_.
 
 .. todo::
-    TODO escribir esta sección
+    TODO terminar de escribir esta sección
 
 
 .. _lecturas_suplementarias_leccion6:
 
 
-Lección 6 - Framework Web Django
---------------------------------
+Lección 6 - Framework Web Flask
+-------------------------------
+
+- `Flask framework <http://flask.pocoo.org/>`_.
+
+- `Flask-SQLAlchemy <http://flask-sqlalchemy.pocoo.org/>`_.
 
 .. todo::
-    TODO escribir esta sección
+    TODO terminar de escribir esta sección
+
+
+.. _lecturas_suplementarias_leccion7:
+
+
+Lección 7 - Framework Web Django
+--------------------------------
+
+- `Django project <https://www.djangoproject.com/>`_.
+
+- `Django project 2.1 Documentation <https://docs.djangoproject.com/es/2.1/>`_.
+
+- `Parte 1 del tutorial Escribiendo su primera aplicación en Django <https://docs.djangoproject.com/es/2.1/intro/tutorial01/>`_.
+
+- `Parte 2 del tutorial Escribiendo su primera aplicación en Django <https://docs.djangoproject.com/es/2.1/intro/tutorial02/>`_.
+
+.. todo::
+    TODO terminar de escribir esta sección

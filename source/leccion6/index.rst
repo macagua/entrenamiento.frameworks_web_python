@@ -3,11 +3,11 @@
 
 .. _python_leccion6:
 
-Framework Web Django
-====================
+Framework Web Flask
+===================
 
 .. todo::
-    TODO Escribir la introducción sección "Framework Web Django".
+    TODO Escribir la introducción sección "Framework Web Flask".
 
 
 ----

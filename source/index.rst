@@ -36,6 +36,7 @@ Tabla de contenidos:
    leccion4/index
    leccion5/index
    leccion6/index
+   leccion7/index
 
 
 .. warning::
