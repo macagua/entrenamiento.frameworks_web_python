@@ -29,6 +29,10 @@ Las lecturas están organizada como las lecciones y sus temas.
 Lección 1 - Fast-Track en Python
 --------------------------------
 
+
+Vía rápida de programación en Python
+....................................
+
 - `Uso del fuertemente tipado en Python 3 <https://gist.github.com/macagua/38a87e11b2bda5dcad8f0d39aad00b0f>`_.
 
 - `Uso tipado dinámico en Python 3 <https://gist.github.com/macagua/637116aec6892fa911c6522ada09c497>`_.
@@ -37,17 +41,33 @@ Lección 1 - Fast-Track en Python
 
 - Materiales del entrenamiento `Programación en Python - Nivel básico <https://entrenamiento-python-basico.readthedocs.io/es/latest/>`_.
 
-- Articulo `Inmersión al modo interactivo de Python <https://lcaballero.wordpress.com/2012/07/01/inmersion-al-modo-interactivo-de-python/>`_.
+
+Preparar entorno de desarrollo
+..............................
 
 - Articulo `Creación de entornos virtuales Python <https://lcaballero.wordpress.com/2012/10/22/creacion-de-entornos-virtuales-python/>`_.
 
 - Articulo `Instalación de paquetes Python con Distribute y pip <https://lcaballero.wordpress.com/2013/03/20/instalacion-de-paquetes-python-con-distribute-y-pip/>`_.
+
+- `macagua/gist:e5078c1ce8e005a6790c25e916f72e1b <https://gist.github.com/macagua/e5078c1ce8e005a6790c25e916f72e1b>`_.
+
+- `macagua/gist:a365ef25212e151e79bee213197ed0fb <https://gist.github.com/macagua/a365ef25212e151e79bee213197ed0fb>`_.
+
+
+Introspección a Python
+......................
+
+- Articulo `Inmersión al modo interactivo de Python <https://lcaballero.wordpress.com/2012/07/01/inmersion-al-modo-interactivo-de-python/>`_.
 
 
 .. _lecturas_suplementarias_leccion2:
 
 Lección 2 - Base de datos SQL
 -----------------------------
+
+
+Patrón de diseño ORM
+....................
 
 - `SQLAlchemy <https://www.sqlalchemy.org/>`_.
 

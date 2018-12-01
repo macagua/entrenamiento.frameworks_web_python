@@ -61,6 +61,7 @@ class Supervisor(Persona):
         """Mostrar las tareas del Supervisor"""
         return ', '.join(self.tareas)
 
+
 def poblar_persona():
     """Función que crea objetos desde la clase Persona"""
 
@@ -89,6 +90,7 @@ def poblar_persona():
 
     print("\n" + str(persona2) + "\n")
 
+    # Atributo(s) y Método(s) heredado de la clase Persona
     print("- Cedula de identidad: {0}.".format(persona2.cedula))
     print("- Nombre completo: {0} {1}.".format(persona2.nombre,
         persona2.apellido))
@@ -96,11 +98,11 @@ def poblar_persona():
         persona2.getGenero(persona2.__getattribute__('sexo'))))
     print("- {0} {1} dijo: {2}".format(persona2.nombre, 
         persona2.apellido, persona2.hablar("Hola Leonardo ^_^")))
-
     print(persona2.hablar("\nHola, Soy otra Persona") + \
         ", me llamo '"+ persona2.__getattribute__('nombre') +" "+ \
-        persona2.__getattribute__('apellido') +"', con cédula '"+  \
+        persona2.__getattribute__('apellido') +"', con cédula '"+ \
         persona2.__getattribute__('cedula') +"'.")
+
 
 def poblar_supervisor():
     """Función que crea objetos desde la clase Supervisor"""
@@ -128,16 +130,16 @@ def poblar_supervisor():
     print("- Rol: {0}.".format(supervisor1.rol))
     print("- N. Tareas: {0}.".format(supervisor1.consulta_tareas()))
 
-    # Mostrar los atributos y métodos propios de la clase Supervisor 
+    # Mostrar atributo(s) y método(s) propios de la clase Supervisor 
     # y los heredados de la clase Persona
-
     print("""\nHola, Soy el {0} {1} {2}, mi cédula es '{3}', 
 mi genero '{4}', con el rol '{5}' y mis tareas
 asignadas '{6}'.""".format(
         supervisor1.__doc__[26:37].lower(),
-        supervisor1.nombre, supervisor1.apellido, supervisor1.cedula, 
-        supervisor1.getGenero(supervisor1.sexo), supervisor1.rol,
-        supervisor1.consulta_tareas()))
+        supervisor1.nombre, supervisor1.apellido, 
+        supervisor1.cedula, supervisor1.getGenero(supervisor1.sexo), 
+        supervisor1.rol, supervisor1.consulta_tareas()))
+
 
 if __name__ == '__main__':
     """Inicia el programa Python"""
@@ -147,7 +149,7 @@ if __name__ == '__main__':
         elif sys.argv[1] == "supervisor":
             poblar_supervisor()
     else:
-        print("ERROR: Introdujo cero (0) o más de dos (2) argumentos")
+        print("ERROR: Ingreso cero (0) o más de dos (2) argumentos")
         print("SOLUCIÓN: Introduce los argumentos correctamente")
         print("Ejemplo: python clases.py persona")
         print("Ejemplo: python clases.py supervisor")
@@ -155,4 +157,4 @@ elif __name__ == "clases":
     initialize()
 else:
     print(
-        "Este programa esta mal configurado, debes llamar a su modulo.")
+        "El programa esta mal configurado, debe llamar a su modulo")

@@ -13,25 +13,43 @@ Vía rápida de programación en Python
 Esta práctica ofrece una introducción rápida a la programación en Python:
 
 
-#. Uso del fuertemente tipado en Python 3:
+#. **Python 3 es fuertemente tipado:** esto significa que el tipo de valor no cambia 
+   repentinamente. Una cadena que contiene solo dígitos no se convierte mágicamente 
+   en un número. Cada cambio de tipo requiere una conversión explícita.
 
-.. literalinclude:: ../../recursos/leccion1/fuertemente_tipados.py
-    :language: python
-    :lines: 1-25
+   ::
+ 
+       >>> valor1 = 2
+       >>> valor2 = "5"
+       >>> total = valor1 + valor2
+       Traceback (most recent call last):
+         File "<stdin>", line 1, in <module>
+       TypeError: unsupported operand type(s) for +: 'int' and 'str'
+       >>> total = valor1 + int(valor2)
+       >>> print ("El total es: " + str(total))
+       7
+
+#. **Python 3 es tipado dinámico:** significa que los objetos en tiempo de ejecución 
+   (valores) tienen un tipo, a diferencia del tipado estático donde las variables tienen 
+   un tipo.
+
+   ::
+ 
+       >>> variable = 11
+       >>> print (variable, type(variable))
+       11 <class 'int'>
+       >>> variable = "activo"
+       >>> print (variable, type(variable))
+       activo <class 'str'>
 
 
-#. Uso tipado dinámico en Python 3:
+#. **Python 3 soporta POO y Clases:** significa que todo el Python es un objeto. A 
+   continuación se muestra el uso de la Programación Orientado a Objetos implementando 
+   la técnica *herencia simple* de Clases en Python 3:
 
-.. literalinclude:: ../../recursos/leccion1/tipado_dinamico.py
-    :language: python
-    :lines: 1-20
-
-
-#. Uso de Clases en Python 3:
-
-.. literalinclude:: ../../recursos/leccion1/clases.py
-    :language: python
-    :lines: 1-158
+   .. literalinclude:: ../../recursos/leccion1/clases.py
+       :language: python
+       :lines: 7-160
 
 
 ----
@@ -63,12 +81,13 @@ Preparar entorno de desarrollo
 
 #. Crear directorio cache para paquetes Python descargados. Cuando hay latencia de 
    Internet y se requiere la instalación de paquetes de Python por un archivo 
-   ``requeriments.txt`` de pip pero la instalación falló, entonces puede evitar que 
-   la herramienta ``pip`` vuelva a descargar los paquetes previamente descargados, 
-   ejecutando este comando:
+   ``requeriments.txt`` de la herramienta ``pip`` pero la instalación falló, entonces 
+   puede evitar que la herramienta ``pip`` vuelva a descargar los paquetes previamente 
+   descargados, ejecutando este comando:
 
-   .. note::
-       Usando el código ejemplo https://gist.github.com/macagua/a365ef25212e151e79bee213197ed0fb
+    ::
+
+        mkdir -p ~/.cache/pip && mkdir ~/.pip && printf '[global]\ndownload_cache = ~/.cache/pip\n' >> ~/.pip/pip.conf
 
 #. Gestionar paquetes Python dentro de un entorno virtual creado, con los siguientes 
    comando:
@@ -80,10 +99,11 @@ Preparar entorno de desarrollo
 
 #. Instalar paquetes Python con latencia de conexión a Internet. Cuando hay latencia 
    de Internet y se requiere la instalación de paquetes de Python, ejecute este 
-   comando con el parámetro habilitado por el tiempo de espera:
+   comando con el parámetro ``--timeout`` habilitado para el tiempo de espera:
 
-   .. note::
-       Usando el código ejemplo https://gist.github.com/macagua/e5078c1ce8e005a6790c25e916f72e1b
+    ::
+
+        pip install -r requirements.txt --timeout 120
 
 #. Desactivar entorno virtual creado, con el siguiente comando:
 
@@ -190,8 +210,9 @@ Comando GNU/Linux
 
 
 .. tip::
-    Para ejecutar el código :file:`fuertemente_tipados.py` y :file:`tipado_dinamico.py`, 
-    abra una consola de comando, acceda al directorio donde se encuentra ambos programas: 
+    Para ejecutar el código :file:`fuertemente_tipados.py`, :file:`tipado_dinamico.py` 
+    y :file:`clases.py`, abra una consola de comando, acceda al directorio donde se 
+    encuentra ambos programas:
 
     ::
 
