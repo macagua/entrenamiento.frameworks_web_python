@@ -29,6 +29,12 @@ Las lecturas están organizada como las lecciones y sus temas.
 Lección 1 - Fast-Track en Python
 --------------------------------
 
+- `Uso del fuertemente tipado en Python 3 <https://gist.github.com/macagua/38a87e11b2bda5dcad8f0d39aad00b0f>`_.
+
+- `Uso tipado dinámico en Python 3 <https://gist.github.com/macagua/637116aec6892fa911c6522ada09c497>`_.
+
+- `Uso de Clases en Python 3 <https://gist.github.com/macagua/c3b8141f5eaf44b891d536861d42bf7f>`_.
+
 - Materiales del entrenamiento `Programación en Python - Nivel básico <https://entrenamiento-python-basico.readthedocs.io/es/latest/>`_.
 
 - Articulo `Inmersión al modo interactivo de Python <https://lcaballero.wordpress.com/2012/07/01/inmersion-al-modo-interactivo-de-python/>`_.

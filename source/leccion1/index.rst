@@ -15,13 +15,17 @@ Esta práctica ofrece una introducción rápida a la programación en Python:
 
 #. Uso del fuertemente tipado en Python 3:
 
-   .. note::
-        Usando el código ejemplo https://gist.github.com/macagua/38a87e11b2bda5dcad8f0d39aad00b0f
+.. literalinclude:: ../../recursos/leccion1/fuertemente_tipados.py
+    :language: python
+    :lines: 1-25
+
 
 #. Uso tipado dinámico en Python 3:
 
-   .. note::
-        Usando el código ejemplo https://gist.github.com/macagua/637116aec6892fa911c6522ada09c497
+.. literalinclude:: ../../recursos/leccion1/tipado_dinamico.py
+    :language: python
+    :lines: 1-20
+
 
 #. Uso de Clases en Python 3:
 
@@ -172,6 +176,35 @@ Comando GNU/Linux
 
 
 ----
+
+
+.. important::
+    Usted puede descargar el código usado en esta sección haciendo clic en los 
+    siguientes enlaces: 
+    :download:`fuertemente_tipados.py <../../recursos/leccion1/fuertemente_tipados.py>`
+    y :download:`tipado_dinamico.py <../../recursos/leccion1/tipado_dinamico.py>`.
+
+
+.. tip::
+    Para ejecutar el código :file:`fuertemente_tipados.py` y :file:`tipado_dinamico.py`, 
+    abra una consola de comando, acceda al directorio donde se encuentra ambos programas: 
+
+    ::
+
+        leccion9/
+        ├── fuertemente_tipados.py
+        └── tipado_dinamico.py
+
+    Si tiene la estructura de archivo previa, entonces ejecute el siguiente comando:
+
+    ::
+
+        python fuertemente_tipados.py
+        python errores_propios.py
+
+
+----
+
 
 .. seealso::
 
