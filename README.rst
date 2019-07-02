@@ -104,7 +104,7 @@ ejecute los siguientes comando:
   (venv)$ make latexpdf
 
 Al finalizar exitosamente la ejecución del comando anterior, este genera un PDF 
-llamado ``entrenamientoframeworks_web_python.pdf`` y se encuentra desde el directorio 
+llamado ``entrenamiento_frameworks_web_python.pdf`` y se encuentra desde el directorio 
 ``build/latex/``,  desde allí puede abrir para visualizar con cualquier programas 
 de visor de PDF favorito (Evince, Acrobat Reader, etc).
 
