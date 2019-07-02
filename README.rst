@@ -101,7 +101,6 @@ ejecute los siguientes comando:
 
 ::
 
-  (venv)$ cd ~/entrenamiento.frameworks_web_python/source
   (venv)$ make latexpdf
 
 Al finalizar exitosamente la ejecución del comando anterior, este genera un PDF 
