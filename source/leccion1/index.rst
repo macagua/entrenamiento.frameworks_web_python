@@ -216,7 +216,7 @@ Comando GNU/Linux
 
     ::
 
-        leccion9/
+        leccion1/
         ├── clases.py
         ├── fuertemente_tipados.py
         └── tipado_dinamico.py

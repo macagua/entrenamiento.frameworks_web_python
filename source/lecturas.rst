@@ -49,9 +49,9 @@ Preparar entorno de desarrollo
 
 - Articulo `Instalación de paquetes Python con Distribute y pip <https://lcaballero.wordpress.com/2013/03/20/instalacion-de-paquetes-python-con-distribute-y-pip/>`_.
 
-- `macagua/gist:e5078c1ce8e005a6790c25e916f72e1b <https://gist.github.com/macagua/e5078c1ce8e005a6790c25e916f72e1b>`_.
+- `Truco sobre cache de paquetes con pip <https://gist.github.com/macagua/a365ef25212e151e79bee213197ed0fb>`_.
 
-- `macagua/gist:a365ef25212e151e79bee213197ed0fb <https://gist.github.com/macagua/a365ef25212e151e79bee213197ed0fb>`_.
+- `Truco sobre latencia de conexión con pip <https://gist.github.com/macagua/e5078c1ce8e005a6790c25e916f72e1b>`_.
 
 
 Introspección a Python
