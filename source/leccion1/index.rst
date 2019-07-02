@@ -19,3 +19,9 @@ disponibles en la Web para tomar en cuenta. A continuación el temario de esta l
    comando_gnulinux
    fast_track_python
    entorno_desarrollo
+
+
+.. seealso::
+
+    Consulte la sección de :ref:`lecturas suplementarias <lecturas_suplementarias_leccion1>` 
+    del entrenamiento para ampliar su conocimiento en esta temática.
