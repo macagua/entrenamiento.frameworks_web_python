@@ -40,7 +40,8 @@ los siguientes comando:
 
 ::
 
-  $ sudo apt-get install python3-dev python-pip python-setuptools git
+  $ sudo apt install python3-dev python-pip python-setuptools git
+  $ sudo apt install texlive-latex-base texlive-latex-recommended texlive-lang-spanish
   $ sudo pip install virtualenv
 
 
@@ -60,8 +61,6 @@ comando:
 
 ::
 
-  $ sudo apt-get install python-pip python-setuptools git
-  $ sudo pip install virtualenv
   $ cd ~/entrenamiento.frameworks_web_python
   $ virtualenv --python=/usr/bin/python venv
   $ source ./venv/bin/activate
@@ -90,6 +89,9 @@ ejecute los siguientes comando:
 
   (venv)$ make html
 
+Una vez generado el formato HTML se puede abrir desde el directorio ``build/html/index.html``
+con su navegador Web favorito (Mozilla Firefox, Google Chrome, etc).
+
 
 Formato PDF
 -----------
@@ -105,17 +107,16 @@ ejecute los siguientes comando:
 Al finalizar exitosamente la ejecución del comando anterior, este genera un PDF 
 llamado ``entrenamientoframeworks_web_python.pdf`` y se encuentra desde el directorio 
 ``build/latex/``,  desde allí puede abrir para visualizar con cualquier programas 
-de visor de PDF favorito (Evince, Acrobat Reader, ...).
+de visor de PDF favorito (Evince, Acrobat Reader, etc).
 
-.. commets:
 
-    Estatus de Calidad
-    ==================
+Estatus de Calidad
+==================
 
-    .. image:: https://readthedocs.org/projects/entrenamiento-frameworks-web-python/badge/?version=latest
-       :target: http://entrenamiento-frameworks-web-python.rtfd.org/
-       :align: left
-       :alt: entrenamiento-frameworks-web-python ReadTheDocs build status
+.. image:: https://readthedocs.org/projects/entrenamiento-frameworks-web-python/badge/?version=latest
+   :target: http://entrenamiento-frameworks-web-python.rtfd.io/
+   :align: left
+   :alt: entrenamiento-frameworks-web-python ReadTheDocs build status
 
 
 Colabora
