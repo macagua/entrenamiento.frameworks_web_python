@@ -20,7 +20,8 @@ Para preparar el entorno de desarrollo, ejecute los siguientes pasos:
 
     ::
 
-        $ sudo apt-get install python3-dev python3-pip python3-virtualenv
+        $ sudo apt-get install python3-dev python3-pip \
+               python3-virtualenv
 
 #. Creación de entornos virtuales Python, con los siguientes comando:
 
@@ -39,7 +40,8 @@ Para preparar el entorno de desarrollo, ejecute los siguientes pasos:
     ::
 
         $ mkdir -p ~/.cache/pip && mkdir ~/.pip
-        $ printf '[global]\ndownload_cache = ~/.cache/pip\n' >> ~/.pip/pip.conf
+        $ printf '[global]\ndownload_cache = ~/.cache/pip\n' \
+                >> ~/.pip/pip.conf
 
 #. Gestionar paquetes Python dentro de un entorno virtual creado, con los siguientes 
    comando:
