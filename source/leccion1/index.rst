@@ -19,6 +19,7 @@ disponibles en la Web para tomar en cuenta. A continuación el temario de esta l
    comando_gnulinux
    fast_track_python
    entorno_desarrollo
+   python_interactivo
 
 
 .. seealso::

@@ -39,7 +39,7 @@ Vía rápida de programación en Python
 
 - `Uso de Clases en Python 3 <https://gist.github.com/macagua/c3b8141f5eaf44b891d536861d42bf7f>`_.
 
-- Materiales del entrenamiento `Programación en Python - Nivel básico <https://entrenamiento-python-basico.readthedocs.io/es/latest/>`_.
+- Entrenamiento `Programación en Python - Nivel básico <https://entrenamiento-python-basico.readthedocs.io/es/latest/>`_.
 
 
 Preparar entorno de desarrollo

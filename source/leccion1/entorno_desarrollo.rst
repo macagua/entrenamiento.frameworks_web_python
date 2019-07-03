@@ -125,34 +125,16 @@ Para preparar el entorno de desarrollo, ejecute los siguientes pasos:
 ----
 
 
-Introspección a Python
-----------------------
+.. important::
+    Usted puede descargar el archivo usado en esta sección haciendo clic en el 
+    siguiente enlace: :download:`requirements.txt <../../recursos/leccion1/requirements.txt>`.
 
-#. Actualizar repositorios de paquetes disponibles para instalar, con el siguiente 
-   comando:
 
-    ::
-
-        $ sudo apt-get update
-
-#. Instalar dependencias mínimas necesarias, con el siguiente comando:
+.. tip::
+    Para ejecutar el archivo :file:`requirements.txt`, abra una consola de comando, active el entorno 
+    virtual Python, y te ubicas en el directorio donde descargo el archivo, entonces ejecute el siguiente 
+    comando:
 
     ::
 
-        $ sudo apt-get install ipython3
-
-#. Invocar la consola del interprete Python 3, con el siguiente comando:
-
-    ::
-
-        $ python3
-
-#. Invocar la consola interactiva del interprete Python 3, con el siguiente comando:
-
-    ::
-
-        $ ipython3
-
-
-Así de esta forma tiene instalado y configurado mínimamente el entorno de desarrollo 
-en Python bajo GNU/Linux.
+        pip install -r requirements.txt
