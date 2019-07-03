@@ -62,7 +62,7 @@ comando:
 ::
 
   $ cd ~/entrenamiento.frameworks_web_python
-  $ virtualenv --python=/usr/bin/python venv
+  $ virtualenv --python /usr/bin/python3 venv
   $ source ./venv/bin/activate
 
 Luego instale dependencias Sphinx, ejecutando el siguiente comando:
