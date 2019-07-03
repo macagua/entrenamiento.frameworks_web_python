@@ -53,6 +53,8 @@ Preparar entorno de desarrollo
 
 - `Latencia de conexión al descargar paquetes Python con pip <https://gist.github.com/macagua/e5078c1ce8e005a6790c25e916f72e1b>`_.
 
+- `Cookiecutter - Better Project Templates <https://cookiecutter.readthedocs.io/en/latest/>`_.
+
 
 Introspección a Python
 ......................

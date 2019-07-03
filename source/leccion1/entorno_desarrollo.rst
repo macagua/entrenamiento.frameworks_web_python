@@ -8,118 +8,135 @@ Entorno de desarrollo
 
 Para preparar el entorno de desarrollo, ejecute los siguientes pasos:
 
+Requerimientos previos
+----------------------
 
-#. Actualizar repositorios de paquetes disponibles para instalar, con el siguiente 
-   comando:
+Actualizar repositorios de paquetes disponibles para instalar, con el 
+siguiente comando:
 
-    ::
+::
 
-        $ sudo apt-get update
+    $ sudo apt-get update
 
-#. Instalar dependencias mínimas necesarias, con el siguiente comando:
+Instalar dependencias mínimas necesarias, con el siguiente comando:
 
-    ::
+::
 
-        $ sudo apt-get install python3-dev python3-pip \
-               python3-virtualenv
+    $ sudo apt-get install python3-dev python3-pip python3-virtualenv
 
-#. Creación de entornos virtuales Python, con los siguientes comando:
 
-    ::
+Entornos virtuales Python
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
-        $ mkdir $HOME/virtualenv && cd $_
-        $ virtualenv --python /usr/bin/python3 python3
-        $ source $HOME/virtualenv/python3/bin/activate
+Creación de entornos virtuales Python, con los siguientes comando:
 
-#. Crear directorio cache para paquetes Python descargados. Cuando hay latencia de 
-   Internet y se requiere la instalación de paquetes de Python por un archivo 
-   ``requeriments.txt`` de la herramienta ``pip`` pero la instalación falló, entonces 
-   puede evitar que la herramienta ``pip`` vuelva a descargar los paquetes previamente 
-   descargados, ejecutando este comando:
+::
 
-    ::
+    $ mkdir $HOME/virtualenv && cd $_
+    $ virtualenv --python /usr/bin/python3 python3
+    $ source $HOME/virtualenv/python3/bin/activate
 
-        $ mkdir -p ~/.cache/pip && mkdir ~/.pip
-        $ printf '[global]\ndownload_cache = ~/.cache/pip\n' \
-                >> ~/.pip/pip.conf
+Para desactivar entorno virtual creado, con el siguiente comando:
 
-#. Gestionar paquetes Python dentro de un entorno virtual creado, con los siguientes 
-   comando:
+::
 
-    ::
+    $ deactivate
 
-        $ pip install cookiecutter
-        $ cookiecutter --help
 
-#. Instalar paquetes Python con latencia de conexión a Internet. Cuando hay latencia 
-   de Internet y se requiere la instalación de paquetes de Python, ejecute este 
-   comando con el parámetro ``--timeout`` habilitado para el tiempo de espera:
+Cache local de paquetes con Pip
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-    ::
+Crear directorio cache para paquetes Python descargados. Cuando hay latencia de 
+Internet y se requiere la instalación de paquetes de Python por un archivo 
+``requeriments.txt`` de la herramienta ``pip`` pero la instalación falló, entonces 
+puede evitar que la herramienta ``pip`` vuelva a descargar los paquetes previamente 
+descargados, ejecutando este comando:
 
-        $ pip install cookiecutter --timeout 120
+::
 
-#. Ademas puede gestionar una lista de instalación de paquetes y sus versiones para indicar 
-   a la herramienta ``pip`` que los instale con un solo comando, para esto cree y edite un 
-   archivo, ejecutando lo siguiente:
+    $ mkdir -p ~/.cache/pip && mkdir ~/.pip
+    $ printf '[global]\ndownload_cache = ~/.cache/pip\n' \
+            >> ~/.pip/pip.conf
 
-    ::
 
-        $ nano requirements.txt
+Gestionar paquetes Python
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   Agregue el siguiente contenido:
+Para gestionar paquetes Python dentro de un entorno virtual creado, con el siguiente comando:
 
-    ::
+::
 
-        cookiecutter==1.6.0
+    $ pip install cookiecutter
 
-   Guarde el archivo y procede a ejecutar la herramienta ``pip``, con el parámetro ``-r`` 
-   seguido de la ruta absoluta o relativa del archivo previamente creado.
+El paquete `cookiecutter <https://cookiecutter.readthedocs.io/en/latest/>`_ se instalo previamente puede usarlo vía script de linea de comando, con el siguiente:
 
-    ::
+::
 
-        $ pip install -r requirements.txt
+    $ cookiecutter --help
 
-   Luego de la instalación puede ejecuta el comando ``pip freeze`` el cual ofrece una salida de 
-   paquetes instalados en formato de archivos `requirements <https://pip.pypa.io/en/stable/user_guide/#requirements-files>`_. 
-   Los paquetes se enumeran en un ordenan de forma tal que no distingue entre mayúsculas y minúsculas.
+Ademas si requiere instalar paquetes Python con latencia de conexión a Internet. Cuando hay latencia 
+de Internet y se requiere la instalación de paquetes de Python, ejecute este 
+comando con el parámetro ``--timeout`` habilitado para el tiempo de espera:
 
-    ::
+::
 
-        $ pip freeze
-        arrow==0.14.2
-        binaryornot==0.4.4
-        certifi==2019.6.16
-        chardet==3.0.4
-        Click==7.0
-        cookiecutter==1.6.0
-        future==0.17.1
-        idna==2.8
-        Jinja2==2.10.1
-        jinja2-time==0.2.0
-        MarkupSafe==1.1.1
-        pkg-resources==0.0.0
-        poyo==0.4.2
-        python-dateutil==2.8.0
-        requests==2.22.0
-        six==1.12.0
-        urllib3==1.25.3
-        whichcraft==0.5.2
+    $ pip install cookiecutter --timeout 120
 
-   Usted puede actualizar el archivo ``requirements.txt`` con el resultado de la ejecución el comando 
-   ``pip freeze`` ejecutando el siguiente comando:
+También puede gestionar una lista de instalación de paquetes y sus versiones para indicar 
+a la herramienta ``pip`` que los instale con un solo comando, para esto cree y edite un 
+archivo, ejecutando lo siguiente:
 
-    ::
+::
 
-        $ pip freeze > requirements.txt
+    $ nano requirements.txt
 
-   Así de esta forma congela las versiones usadas para el proceso de instalación de sus paquetes Python.
+Agregue el siguiente contenido:
 
-#. Desactivar entorno virtual creado, con el siguiente comando:
+::
 
-    ::
+    cookiecutter==1.6.0
 
-        $ deactivate
+Guarde el archivo y procede a ejecutar la herramienta ``pip``, con el parámetro ``-r`` 
+seguido de la ruta absoluta o relativa del archivo previamente creado.
+
+::
+
+    $ pip install -r requirements.txt
+
+Luego de la instalación puede ejecuta el comando ``pip freeze`` el cual ofrece una salida de 
+paquetes instalados en formato de archivos `requirements <https://pip.pypa.io/en/stable/user_guide/#requirements-files>`_. 
+Los paquetes se enumeran en un ordenan de forma tal que no distingue entre mayúsculas y minúsculas.
+
+::
+
+    $ pip freeze
+    arrow==0.14.2
+    binaryornot==0.4.4
+    certifi==2019.6.16
+    chardet==3.0.4
+    Click==7.0
+    cookiecutter==1.6.0
+    future==0.17.1
+    idna==2.8
+    Jinja2==2.10.1
+    jinja2-time==0.2.0
+    MarkupSafe==1.1.1
+    pkg-resources==0.0.0
+    poyo==0.4.2
+    python-dateutil==2.8.0
+    requests==2.22.0
+    six==1.12.0
+    urllib3==1.25.3
+    whichcraft==0.5.2
+
+Usted puede actualizar el archivo ``requirements.txt`` con el resultado de la ejecución el comando 
+``pip freeze`` ejecutando el siguiente comando:
+
+::
+
+    $ pip freeze > requirements.txt
+
+Así de esta forma congela las versiones usadas para el proceso de instalación de sus paquetes Python.
 
 
 ----
