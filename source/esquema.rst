@@ -1,6 +1,3 @@
-.. -*- coding: utf-8 -*-
-
-
 .. _esquema_entrenamiento:
 
 Esquema del entrenamiento
