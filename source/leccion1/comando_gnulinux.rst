@@ -1,6 +1,3 @@
-.. -*- coding: utf-8 -*-
-
-
 .. _python_comando_linux:
 
 Comando GNU/Linux
@@ -27,6 +24,10 @@ Explicación
 
 - ``otros-comando``, otro comando que recibe la entrada de datos desde otra 
   ejecución.
+
+
+Ejemplos
+--------
 
 A continuación una tabla de ejemplo de comando detallado:
     

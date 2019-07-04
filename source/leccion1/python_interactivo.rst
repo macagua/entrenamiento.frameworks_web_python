@@ -1,6 +1,3 @@
-.. -*- coding: utf-8 -*-
-
-
 .. _python_interactivo:
 
 Inmersión al modo interactivo
@@ -612,7 +609,7 @@ módulos propios escritos en Python que tienes instalado en tu sistema.
 
 .. seealso::
 
-    Consulte la sección de :ref:`lecturas suplementarias <lecturas_suplementarias_leccion1>` 
+    Consulte la sección de :ref:`lecturas suplementarias <lecturas_extras_leccion1>` 
     del entrenamiento para ampliar su conocimiento en esta temática.
 
 

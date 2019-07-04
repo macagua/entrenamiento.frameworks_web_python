@@ -1,7 +1,4 @@
-.. -*- coding: utf-8 -*-
-
-
-.. _lecturas_suplementarias_entrenamiento:
+.. _lecturas_extras_entrenamiento:
 
 Lecturas suplementarias del entrenamiento
 =========================================
@@ -24,7 +21,7 @@ Las lecturas están organizada como las lecciones y sus temas.
     TODO terminar de escribir esta sección.
 
 
-.. _lecturas_suplementarias_leccion1:
+.. _lecturas_extras_leccion1:
 
 Lección 1 - Fast-Track en Python
 --------------------------------

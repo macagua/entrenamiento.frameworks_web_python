@@ -1,6 +1,3 @@
-.. -*- coding: utf-8 -*-
-
-
 .. _python_entorno_desarrollo:
 
 Entorno de desarrollo

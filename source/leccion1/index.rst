@@ -1,6 +1,3 @@
-.. -*- coding: utf-8 -*-
-
-
 .. _python_leccion1:
 
 Fast-Track en Python
@@ -24,5 +21,5 @@ disponibles en la Web para tomar en cuenta. A continuación el temario de esta l
 
 .. seealso::
 
-    Consulte la sección de :ref:`lecturas suplementarias <lecturas_suplementarias_leccion1>` 
+    Consulte la sección de :ref:`lecturas suplementarias <lecturas_extras_leccion1>` 
     del entrenamiento para ampliar su conocimiento en esta temática.
