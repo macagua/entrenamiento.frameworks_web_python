@@ -99,15 +99,21 @@ Lección 4 - Web Server Gateway Interface
     TODO terminar de escribir esta sección
 
 
-.. _lecturas_suplementarias_leccion5:
+.. _lecturas_extras_leccion5:
 
 
 Lección 5 - Frameworks Web en Python
 ------------------------------------
 
+- `Web framework rankings - HotFrameworks <http://hotframeworks.com/>`_.
+
 - `Flask framework <http://flask.pocoo.org/>`_.
 
 - `Django project <https://www.djangoproject.com/>`_.
+
+- `Sanic framework <https://sanicframework.org/>`_.
+
+- `Sanic Async Python 3.6+ web server/framework <https://github.com/huge-success/sanic>`_.
 
 .. todo::
     TODO terminar de escribir esta sección
