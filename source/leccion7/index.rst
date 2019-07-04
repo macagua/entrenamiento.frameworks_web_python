@@ -1,10 +1,15 @@
-.. -*- coding: utf-8 -*-
-
-
 .. _python_leccion7:
 
-Framework Web Django
-====================
+Django
+======
+
+Django es un framework web extremadamente popular y completamente 
+funcional, escrito en Python. 
+
+En esta lección se busca mostrar por qué Django es uno de los 
+frameworks de servidores web más populares, cómo configurar un entorno 
+de desarrollo y cómo empezar a usarlo para crear tus propias aplicaciones 
+web.
 
 .. todo::
     TODO Escribir la introducción sección "Framework Web Django".
@@ -14,7 +19,7 @@ Framework Web Django
 
 .. seealso::
 
-    Consulte la sección de :ref:`lecturas suplementarias <lecturas_suplementarias_leccion7>` 
+    Consulte la sección de :ref:`lecturas suplementarias <lecturas_extras_leccion7>` 
     del entrenamiento para ampliar su conocimiento en esta temática.
 
 .. comments:

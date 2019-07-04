@@ -127,11 +127,11 @@ Lección 6 - Framework Web Flask
     TODO terminar de escribir esta sección
 
 
-.. _lecturas_suplementarias_leccion7:
+.. _lecturas_extras_leccion7:
 
 
-Lección 7 - Framework Web Django
---------------------------------
+Lección 7 - Django
+------------------
 
 - `Django project <https://www.djangoproject.com/>`_.
 
@@ -140,6 +140,10 @@ Lección 7 - Framework Web Django
 - `Parte 1 del tutorial Escribiendo su primera aplicación en Django <https://docs.djangoproject.com/es/2.1/intro/tutorial01/>`_.
 
 - `Parte 2 del tutorial Escribiendo su primera aplicación en Django <https://docs.djangoproject.com/es/2.1/intro/tutorial02/>`_.
+
+- `Django en PyPI <https://pypi.org/project/Django>`_.
+
+- `Framework Web Django (Python) - Aprende sobre desarrollo web - MDN <https://developer.mozilla.org/es/docs/Learn/Server-side/Django`_.
 
 .. todo::
     TODO terminar de escribir esta sección
