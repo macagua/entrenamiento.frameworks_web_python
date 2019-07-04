@@ -113,15 +113,21 @@ Lección 5 - Frameworks Web en Python
     TODO terminar de escribir esta sección
 
 
-.. _lecturas_suplementarias_leccion6:
+.. _lecturas_extras_leccion6:
 
 
-Lección 6 - Framework Web Flask
--------------------------------
+Lección 6 - Flask
+-----------------
 
-- `Flask framework <http://flask.pocoo.org/>`_.
+- `Sitio Web de Flask <http://flask.pocoo.org/>`_.
 
 - `Flask-SQLAlchemy <http://flask-sqlalchemy.pocoo.org/>`_.
+
+- `Documentación de Flask <http://flask.pocoo.org/docs/>`_.
+
+- `Código fuente del proyecto en Github <http://github.com/mitsuhiko/flask>`_.
+
+- `Flask en PyPI <https://pypi.org/project/Flask>`_.
 
 .. todo::
     TODO terminar de escribir esta sección
