@@ -59,7 +59,7 @@ Introspección a Python
 - Articulo `Inmersión al modo interactivo de Python <https://lcaballero.wordpress.com/2012/07/01/inmersion-al-modo-interactivo-de-python/>`_.
 
 
-.. _lecturas_suplementarias_leccion2:
+.. _lecturas_extras_leccion2:
 
 Lección 2 - Base de datos SQL
 -----------------------------
