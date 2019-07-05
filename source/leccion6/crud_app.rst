@@ -32,7 +32,7 @@ Instalar dependencias mínimas necesarias, con el siguiente comando:
 
 ::
 
-	$ sudo apt install sqlitebrowser
+	$ sudo apt install python3-dev python3-pip python3-virtualenv git sqlitebrowser
 
 
 Entorno virtual Python

@@ -19,7 +19,7 @@ Instalar dependencias mínimas necesarias, con el siguiente comando:
 
 ::
 
-	$ sudo apt install git sqlitebrowser
+	$ sudo apt install python3-dev python3-pip python3-virtualenv git sqlitebrowser
 
 
 Descargar código
