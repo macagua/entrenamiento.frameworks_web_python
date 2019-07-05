@@ -42,12 +42,14 @@ Crear entorno virtual Python en directorio ``$HOME`` con el
 siguiente comando:
 
 ::
-	
+
 	$ virtualenv --python=/usr/bin/python3 venv
 
 
 Activarlo entorno virtual Python creado con el siguiente comando:
-	
+
+::
+
 	$ source ~/venv/bin/activate
 
 
@@ -75,7 +77,7 @@ Cree modulo Python llamado :file:`bookmanager.py` dentro del
 directorio :file:`~/projects/flask-crud-app`, con el siguiente comando:
 
 ::
-	
+
 	$ nano ~/projects/flask-crud-app/bookmanager.py
 
 Agregue el siguiente contenido al archivo :file:`~/projects/flask-crud-app/bookmanager.py`.
@@ -89,8 +91,8 @@ Cree plantilla HTML llamado :file:`home.html` dentro del directorio
 :file:`~/projects/flask-crud-app/templates`, con el siguiente comando:
 
 ::
-	
-	$ nano ~/projects/flask-crud-app/bookmanager.py
+
+	$ nano ~/projects/flask-crud-app/templates/home.html
 
 Agregue el siguiente contenido al archivo :file:`~/projects/flask-crud-app/templates/home.html`.
 
