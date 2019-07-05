@@ -108,6 +108,7 @@ Crear base de datos SQLite, con los siguientes comando:
 
 ::
 
+	$ cd ~/projects/flask-crud-app/
 	$ python3
 	>>> from bookmanager import db
 	>>> db.create_all()
