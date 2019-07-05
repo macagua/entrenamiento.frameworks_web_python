@@ -13,14 +13,14 @@ con licencia BSD.
 
 .. comments:
 
-	.. figure:: ../_static/flask-logo.png
+	.. figure:: ../_static/flask-framework.png
 	  :class: image-inline
 	  :alt: Flash framework
 	  :align: center
 
 	  Flash framework
 
-.. figure:: https://raw.githubusercontent.com/Covantec/entrenamiento.frameworks_web_python/master/source/_static/flask-logo.png
+.. figure:: https://raw.githubusercontent.com/Covantec/entrenamiento.frameworks_web_python/master/source/_static/flask-framework.png
   :class: image-inline
   :alt: Flash framework
   :align: center
