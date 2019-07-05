@@ -1,0 +1,6 @@
+[submodule "recursos/leccion6/flask-crud-app"]
+	path = recursos/leccion6/flask-crud-app
+	url = git@github.com:macagua/flask-crud-app.git
+[submodule "recursos/leccion6/flask-helloworld"]
+	path = recursos/leccion6/flask-helloworld
+	url = git@github.com:macagua/flask-helloworld.git

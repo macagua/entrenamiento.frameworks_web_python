@@ -3,15 +3,25 @@
 Flask
 =====
 
-Flask es un framework minimalista escrito en Python que permite 
-crear aplicaciones web rápidamente y con un mínimo número de 
-líneas de código. Está basado en la especificación WSGI de 
-Werkzeug y el motor de plantillas Jinja2 y tiene una licencia BSD.
+Es un framework minimalista escrito en Python que permite crear 
+aplicaciones web rápidamente y con un mínimo número de líneas de 
+código. 
 
-En esta lección se busca hacer una introducción sección al Framework Web Flask
+En esta lección se busca hacer una introducción al Framework Web 
+Flask, su instalación, y algunas practicas útiles de casos básicos 
+de trabajo con el mismo.
 
 .. todo::
-    TODO Escribir la introducción sección "Framework Web Flask".
+    TODO Terminar de escribir la introducción a la sección "Flask".
+
+.. toctree::
+   :maxdepth: 2
+
+   introduccion
+   instalacion
+   hello_world
+   crud_app
+   admin_dashboard
 
 
 ----
@@ -20,9 +30,3 @@ En esta lección se busca hacer una introducción sección al Framework Web Flas
 
     Consulte la sección de :ref:`lecturas suplementarias <lecturas_extras_leccion6>` 
     del entrenamiento para ampliar su conocimiento en esta temática.
-
-.. comments:
-
-	.. toctree::
-	   :maxdepth: 2
-	   
