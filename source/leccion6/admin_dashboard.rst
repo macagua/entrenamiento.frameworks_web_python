@@ -3,13 +3,30 @@
 Admin Dashboard
 ===============
 
-Hacer un demo local de Flask Admin Dashboard
+El objeto de esta sección es hacer un demostración local de una 
+interfaz "Admin" que integre un "Dashboard" en Flask.
 
 
 Requisitos previos
 ------------------
 
-Actualizar repositorios de paquetes disponibles para instalar, con el siguiente comando:
+Para hacer un demostración local de un Flask Admin Dashboard 
+requiere instalar las siguientes librerías:
+
+- `Flask <https://pypi.org/project/Flask/>`_.
+
+- `Flask-Admin <https://pypi.org/project/Flask-Admin/>`_.
+
+- `Flask-SQLAlchemy <https://pypi.org/project/Flask-SQLAlchemy/>`_.
+
+- `Flask-Security <https://pypi.org/project/Flask-Security/>`_.
+
+- `SQLAlchemy <https://pypi.org/project/SQLAlchemy/>`_.
+
+- `AdminLTE <https://adminlte.io>`_.
+
+Actualizar repositorios de paquetes disponibles para instalar, con 
+el siguiente comando:
 
 ::
 

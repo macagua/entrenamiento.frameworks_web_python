@@ -125,15 +125,32 @@ Lección 5 - Frameworks Web en Python
 Lección 6 - Flask
 -----------------
 
+Flask
+^^^^^
+
 - `Sitio Web de Flask <http://flask.pocoo.org/>`_.
+
+- `Flask documentation <http://flask.pocoo.org/docs/>`_.
+
+- `Flask - PyPI <https://pypi.org/project/Flask>`_.
+
+- `pallets/flask: The Python micro framework for building web applications <https://github.com/pallets/flask>`_.
+
+
+Aplicación CRUD
+^^^^^^^^^^^^^^^
 
 - `Flask-SQLAlchemy <http://flask-sqlalchemy.pocoo.org/>`_.
 
-- `Documentación de Flask <http://flask.pocoo.org/docs/>`_.
 
-- `Código fuente del proyecto en Github <http://github.com/mitsuhiko/flask>`_.
+Admin Dashboard
+^^^^^^^^^^^^^^^
 
-- `Flask en PyPI <https://pypi.org/project/Flask>`_.
+- `Flask-Admin - PyPI <https://pypi.org/project/Flask-Admin/>`_.
+
+- `Flask-Admin documentation <https://flask-admin.readthedocs.io/en/latest/>`_.
+
+- `flask-admin/flask-admin: Simple and extensible administrative interface framework for Flask <https://github.com/flask-admin/flask-admin/>`_.
 
 .. todo::
     TODO terminar de escribir esta sección

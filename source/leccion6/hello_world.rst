@@ -3,7 +3,17 @@
 Hello World
 ===========
 
-Hacer un demo local de Hello World en Flask
+El objeto de esta sección es hacer un demostración local de 
+`Hello World <https://es.wikipedia.org/wiki/Hola_mundo>`_ en Flask.
+
+
+Requisitos previos
+------------------
+
+Para trabajar una aplicación Flask requiere instalar la siguiente 
+librería:
+
+- :doc:`Flask <./instalacion>` framework.
 
 
 Estructura de proyecto
