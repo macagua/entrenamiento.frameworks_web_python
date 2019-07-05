@@ -19,3 +19,9 @@ python:
 #     - requirements: docs/requirements.txt
     - requirements: requirements.txt
 
+# VCS submodules configuration. Only Git is supported at the moment.
+submodules:
+  # You can use the all keyword to include all submodules.
+  include: all
+  # Do a recursive clone of the submodules.
+  recursive: true
