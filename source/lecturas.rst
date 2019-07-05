@@ -28,7 +28,7 @@ Lección 1 - Fast-Track en Python
 
 
 Vía rápida de programación en Python
-....................................
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 - `Uso del fuertemente tipado en Python 3 <https://gist.github.com/macagua/38a87e11b2bda5dcad8f0d39aad00b0f>`_.
 
@@ -40,7 +40,7 @@ Vía rápida de programación en Python
 
 
 Preparar entorno de desarrollo
-..............................
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 - Articulo `Creación de entornos virtuales Python <https://lcaballero.wordpress.com/2012/10/22/creacion-de-entornos-virtuales-python/>`_.
 
@@ -54,7 +54,7 @@ Preparar entorno de desarrollo
 
 
 Introspección a Python
-......................
+^^^^^^^^^^^^^^^^^^^^^^
 
 - Articulo `Inmersión al modo interactivo de Python <https://lcaballero.wordpress.com/2012/07/01/inmersion-al-modo-interactivo-de-python/>`_.
 
@@ -66,12 +66,11 @@ Lección 2 - Base de datos SQL
 
 
 Patrón de diseño ORM
-....................
+^^^^^^^^^^^^^^^^^^^^
 
 - `SQLAlchemy <https://www.sqlalchemy.org/>`_.
 
 - `Tutorial SQLAlchemy <https://docs.sqlalchemy.org/en/latest/orm/tutorial.html>`_.
-
 
 .. todo::
     TODO terminar de escribir esta sección
@@ -102,8 +101,8 @@ Lección 4 - Web Server Gateway Interface
 .. _lecturas_extras_leccion5:
 
 
-Lección 5 - Frameworks Web en Python
-------------------------------------
+Lección 5 - Frameworks Web
+--------------------------
 
 - `Web framework rankings - HotFrameworks <http://hotframeworks.com/>`_.
 
@@ -172,7 +171,7 @@ Lección 7 - Django
 
 - `Django en PyPI <https://pypi.org/project/Django>`_.
 
-- `Framework Web Django (Python) - Aprende sobre desarrollo web - MDN <https://developer.mozilla.org/es/docs/Learn/Server-side/Django`_.
+- `Framework Web Django (Python) - Aprende sobre desarrollo web - MDN <https://developer.mozilla.org/es/docs/Learn/Server-side/Django>`_.
 
 .. todo::
     TODO terminar de escribir esta sección
