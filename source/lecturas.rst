@@ -141,15 +141,21 @@ Aplicación CRUD
 
 - `Flask-SQLAlchemy <http://flask-sqlalchemy.pocoo.org/>`_.
 
+- `Flask-SQLAlchemy - PyPI <https://pypi.org/project/Flask-SQLAlchemy/>`_.
+
 
 Admin Dashboard
 ^^^^^^^^^^^^^^^
 
-- `Flask-Admin - PyPI <https://pypi.org/project/Flask-Admin/>`_.
-
 - `Flask-Admin documentation <https://flask-admin.readthedocs.io/en/latest/>`_.
 
+- `Flask-Admin - PyPI <https://pypi.org/project/Flask-Admin/>`_.
+
 - `flask-admin/flask-admin: Simple and extensible administrative interface framework for Flask <https://github.com/flask-admin/flask-admin/>`_.
+
+- `Flask-Security <https://flask-security.readthedocs.io/>`_.
+
+- `Flask-Security - PyPI <https://pypi.org/project/Flask-Security/>`_.
 
 .. todo::
     TODO terminar de escribir esta sección
