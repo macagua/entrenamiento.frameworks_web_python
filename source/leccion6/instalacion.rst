@@ -25,14 +25,15 @@ Instalar dependencias mínimas necesarias, con el siguiente comando:
 Entorno virtual Python
 ----------------------
 
-Crear entorno virtual Python en directorio ``$HOME`` con el siguiente comando:
+Crear entorno virtual Python en directorio raíz con el siguiente comando:
 
 ::
-	
+
+	$ cd $HOME
 	$ virtualenv --python=/usr/bin/python3 venv
 
 
-Activarlo entorno virtual Python creado con el siguiente comando:
+Activar el entorno virtual Python creado con el siguiente comando:
 	
 	$ source ~/venv/bin/activate
 

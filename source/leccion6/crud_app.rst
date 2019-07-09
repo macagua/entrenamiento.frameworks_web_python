@@ -130,17 +130,17 @@ Abrir en navegador >>> http://127.0.0.1:8087
 
 	.. figure:: ../_static/flask-bookmanager.png
 	  :class: image-inline
-	  :alt: BookManager - una Aplicación CRUD Flash
+	  :alt: BookManager - una Aplicación CRUD Flask
 	  :align: center
 
-	  BookManager - una Aplicación CRUD Flash
+	  BookManager - una Aplicación CRUD Flask
 
 .. figure:: https://raw.githubusercontent.com/Covantec/entrenamiento.frameworks_web_python/master/source/_static/flask-bookmanager.png
   :class: image-inline
-  :alt: BookManager - una Aplicación CRUD Flash
+  :alt: BookManager - una Aplicación CRUD Flask
   :align: center
 
-  BookManager - una Aplicación CRUD Flash
+  BookManager - una Aplicación CRUD Flask
 
 
 .. note::

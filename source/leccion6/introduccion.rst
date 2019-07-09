@@ -15,17 +15,17 @@ con licencia BSD.
 
 	.. figure:: ../_static/flask-framework.png
 	  :class: image-inline
-	  :alt: Flash framework
+	  :alt: Flask framework
 	  :align: center
 
-	  Flash framework
+	  Flask framework
 
 .. figure:: https://raw.githubusercontent.com/Covantec/entrenamiento.frameworks_web_python/master/source/_static/flask-framework.png
   :class: image-inline
-  :alt: Flash framework
+  :alt: Flask framework
   :align: center
 
-  Flash framework
+  Flask framework
 
 Características
 ---------------

@@ -54,17 +54,17 @@ Abrir en navegador >>> http://127.0.0.1:5000
 
 	.. figure:: ../_static/flask-hello-world.png
 	  :class: image-inline
-	  :alt: Hello World en Flash
+	  :alt: Hello World en Flask
 	  :align: center
 
-	  Hello World en Flash
+	  Hello World en Flask
 
 .. figure:: https://raw.githubusercontent.com/Covantec/entrenamiento.frameworks_web_python/master/source/_static/flask-hello-world.png
   :class: image-inline
-  :alt: Hello World en Flash
+  :alt: Hello World en Flask
   :align: center
 
-  Hello World en Flash
+  Hello World en Flask
 
 Mostrara un mensaje **Hello, World!**, como la figura anterior.
 

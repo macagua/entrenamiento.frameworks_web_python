@@ -91,49 +91,49 @@ Abrir en navegador >>> http://127.0.0.1:5000/admin/
 
 	.. figure:: ../_static/flask-admin-dashboard-index.png
 	  :class: image-inline
-	  :alt: Flash Admin Dashboard - Index
+	  :alt: Flask Admin Dashboard - Index
 	  :align: center
 
-	  Flash Admin Dashboard - Index
+	  Flask Admin Dashboard - Index
 
 .. figure:: https://raw.githubusercontent.com/Covantec/entrenamiento.frameworks_web_python/master/source/_static/flask-admin-dashboard-index.png
   :class: image-inline
-  :alt: Flash Admin Dashboard - Index
+  :alt: Flask Admin Dashboard - Index
   :align: center
 
-  Flash Admin Dashboard - Index
+  Flask Admin Dashboard - Index
 
 .. comments:
 
 	.. figure:: ../_static/flask-admin-dashboard-login.png
 	  :class: image-inline
-	  :alt: Flash Admin Dashboard - Inicio de sesión
+	  :alt: Flask Admin Dashboard - Inicio de sesión
 	  :align: center
 
-	  Flash Admin Dashboard - Inicio de sesión
+	  Flask Admin Dashboard - Inicio de sesión
 
 .. figure:: https://raw.githubusercontent.com/Covantec/entrenamiento.frameworks_web_python/master/source/_static/flask-admin-dashboard-login.png
   :class: image-inline
-  :alt: Flash Admin Dashboard - Inicio de sesión
+  :alt: Flask Admin Dashboard - Inicio de sesión
   :align: center
 
-  Flash Admin Dashboard - Inicio de sesión
+  Flask Admin Dashboard - Inicio de sesión
 
 .. comments:
 
 	.. figure:: ../_static/flask-admin-dashboard.png
 	  :class: image-inline
-	  :alt: Flash Admin Dashboard
+	  :alt: Flask Admin Dashboard
 	  :align: center
 
-	  Flash Admin Dashboard
+	  Flask Admin Dashboard
 
 .. figure:: https://raw.githubusercontent.com/Covantec/entrenamiento.frameworks_web_python/master/source/_static/flask-admin-dashboard.png
   :class: image-inline
-  :alt: Flash Admin Dashboard
+  :alt: Flask Admin Dashboard
   :align: center
 
-  Flash Admin Dashboard
+  Flask Admin Dashboard
 
 .. note::
     El código ejemplo usado puede encontrarlo en: https://github.com/jonalxh/Flask-Admin-Dashboard
