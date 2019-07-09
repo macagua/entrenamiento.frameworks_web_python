@@ -48,7 +48,7 @@ Para ejecutar aplicación Web Flask, con el siguiente comando:
 
 	$ FLASK_APP=hello.py flask run
 
-Abrir en navegador >>> http://127.0.0.1:5000
+Abrir en navegador favorito la siguiente dirección http://127.0.0.1:5000
 
 .. comments:
 
