@@ -14,6 +14,13 @@ web.
 .. todo::
     TODO Escribir la introducción sección "Framework Web Django".
 
+.. toctree::
+   :maxdepth: 2
+
+   introduccion
+   instalacion
+   hello_world
+
 
 ----
 
@@ -22,8 +29,3 @@ web.
     Consulte la sección de :ref:`lecturas suplementarias <lecturas_extras_leccion7>` 
     del entrenamiento para ampliar su conocimiento en esta temática.
 
-.. comments:
-
-	.. toctree::
-	   :maxdepth: 2
-	   
