@@ -34,7 +34,9 @@ Crear entorno virtual Python en directorio raíz con el siguiente comando:
 
 
 Activar el entorno virtual Python creado con el siguiente comando:
-	
+
+::
+
 	$ source ~/venv/bin/activate
 
 
