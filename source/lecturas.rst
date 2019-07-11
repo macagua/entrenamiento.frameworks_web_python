@@ -88,11 +88,16 @@ Lección 3 - Protocolo HTTP en Python
     TODO escribir esta sección
 
 
-.. _lecturas_suplementarias_leccion4:
+.. _lecturas_extras_leccion4:
 
 
 Lección 4 - Web Server Gateway Interface
 ----------------------------------------
+
+Introducción a WSGI
+^^^^^^^^^^^^^^^^^^^
+
+- `WSGI <https://wsgi.readthedocs.io/en/latest/>`_.
 
 - wsgiref - `WSGI Utilities and Reference Implementation <https://docs.python.org/3/library/wsgiref.html>`_.
 
