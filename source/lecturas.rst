@@ -61,16 +61,18 @@ Introspección a Python
 
 .. _lecturas_extras_leccion2:
 
-Lección 2 - Base de datos SQL
------------------------------
+Lección 2 - Base de datos relacional
+------------------------------------
 
 
-Patrón de diseño ORM
-^^^^^^^^^^^^^^^^^^^^
+Librería SQLAlchemy
+^^^^^^^^^^^^^^^^^^^
 
 - `SQLAlchemy <https://www.sqlalchemy.org/>`_.
 
 - `Tutorial SQLAlchemy <https://docs.sqlalchemy.org/en/latest/orm/tutorial.html>`_.
+
+- `Patrón de diseño ORM <https://es.wikipedia.org/wiki/Mapeo_objeto-relacional>`_.
 
 .. todo::
     TODO terminar de escribir esta sección
