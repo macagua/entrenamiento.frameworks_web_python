@@ -26,13 +26,13 @@ con el siguiente comando:
 
 ::
 
-	$ sudo apt update
+    $ sudo apt update
 
 Instalar dependencias mínimas necesarias, con el siguiente comando:
 
 ::
 
-	$ sudo apt install python3-dev python3-pip python3-virtualenv git sqlitebrowser
+    $ sudo apt install python3-dev python3-pip python3-virtualenv git sqlitebrowser
 
 
 Entorno virtual Python
@@ -43,14 +43,14 @@ siguiente comando:
 
 ::
 
-	$ virtualenv --python=/usr/bin/python3 venv
+    $ virtualenv --python=/usr/bin/python3 venv
 
 
 Activarlo entorno virtual Python creado con el siguiente comando:
 
 ::
 
-	$ source ~/venv/bin/activate
+    $ source ~/venv/bin/activate
 
 
 Instalar paquetes Python
@@ -61,7 +61,7 @@ el siguiente comando:
 
 ::
 
-	$ pip3 install Flask==1.0.2 Flask-SQLAlchemy==2.4.0 SQLAlchemy==1.3.5
+    $ pip3 install Flask==1.0.2 Flask-SQLAlchemy==2.4.0 SQLAlchemy==1.3.5
 
 
 Estructura de proyecto
@@ -71,14 +71,14 @@ Crear estructura de proyecto Flask, con el siguiente comando:
 
 ::
 
-	$ mkdir -p ~/projects/flask-crud-app/templates && cd $_ && cd ../
+    $ mkdir -p ~/projects/flask-crud-app/templates && cd $_ && cd ../
 
 Cree modulo Python llamado :file:`bookmanager.py` dentro del 
 directorio :file:`~/projects/flask-crud-app`, con el siguiente comando:
 
 ::
 
-	$ nano ~/projects/flask-crud-app/bookmanager.py
+    $ nano ~/projects/flask-crud-app/bookmanager.py
 
 Agregue el siguiente contenido al archivo :file:`~/projects/flask-crud-app/bookmanager.py`.
 
@@ -92,7 +92,7 @@ Cree plantilla HTML llamado :file:`home.html` dentro del directorio
 
 ::
 
-	$ nano ~/projects/flask-crud-app/templates/home.html
+    $ nano ~/projects/flask-crud-app/templates/home.html
 
 Agregue el siguiente contenido al archivo :file:`~/projects/flask-crud-app/templates/home.html`.
 
@@ -108,11 +108,41 @@ Crear base de datos SQLite, con los siguientes comando:
 
 ::
 
-	$ cd ~/projects/flask-crud-app/
-	$ python3
-	>>> from bookmanager import db
-	>>> db.create_all()
-	>>> exit()
+    $ cd ~/projects/flask-crud-app/
+    $ python3
+    >>> from bookmanager import db
+    >>> db.create_all()
+    >>> exit()
+
+
+De esta forma puede ver gráficamente la estructura de la base de datos 
+SQLite, con el siguiente comando:
+
+::
+
+    $ sqlitebrowser bookdatabase.db
+
+Este mostrara el Database Browser para SQLite de la aplicación BookManager, 
+como la siguiente figura:
+
+.. comments:
+
+	.. figure:: ../_static/flask-bookmanager-sqlitebrowser-db.png
+	  :class: image-inline
+	  :alt: BookManager - Database Browser para SQLite
+	  :align: center
+
+	  BookManager - Database Browser para SQLite
+
+.. figure:: https://raw.githubusercontent.com/Covantec/entrenamiento.frameworks_web_python/master/source/_static/flask-bookmanager-sqlitebrowser-db.png
+  :class: image-inline
+  :alt: BookManager - Database Browser para SQLite
+  :align: center
+
+  BookManager - Database Browser para SQLite
+
+De esta forma ya tiene creada la base de datos SQLite necesaria para 
+la ejecución de la aplicación BookManager.
 
 
 Ejecutar aplicación Flask
@@ -122,18 +152,18 @@ Ejecutar aplicación Web Flask, con el siguiente comando:
 
 ::
 
-	$ python3 bookmanager.py
+    $ python3 bookmanager.py
 
 Abrir en navegador >>> http://127.0.0.1:8087
 
 .. comments:
 
-	.. figure:: ../_static/flask-bookmanager.png
-	  :class: image-inline
-	  :alt: BookManager - una Aplicación CRUD Flask
-	  :align: center
+    .. figure:: ../_static/flask-bookmanager.png
+      :class: image-inline
+      :alt: BookManager - una Aplicación CRUD Flask
+      :align: center
 
-	  BookManager - una Aplicación CRUD Flask
+      BookManager - una Aplicación CRUD Flask
 
 .. figure:: https://raw.githubusercontent.com/Covantec/entrenamiento.frameworks_web_python/master/source/_static/flask-bookmanager.png
   :class: image-inline
