@@ -87,6 +87,15 @@ Para ejecutar aplicación Web Flask, con los siguientes comandos:
 
 Abrir en navegador >>> http://127.0.0.1:5000/admin/
 
+
+Flask Authentication
+--------------------
+
+La aplicación Flask Admin Dashboard usa el plugin 
+`Flask-Security <https://pypi.org/project/Flask-Security/>`_ para 
+la autenticación de usuarios de la aplicación, como se muestra 
+en la siguiente figura:
+
 .. comments:
 
 	.. figure:: ../_static/flask-admin-dashboard-index.png
@@ -119,6 +128,15 @@ Abrir en navegador >>> http://127.0.0.1:5000/admin/
 
   Flask Admin Dashboard - Inicio de sesión
 
+
+Admin Dashboard
+---------------
+
+La aplicación Flask Admin Dashboard usa su propio interfaz Admin usando la 
+librería `Flask-Admin <https://pypi.org/project/Flask-Admin/>`_ que 
+incluye un Dashboard construido bajo la GUI de `AdminLTE <https://adminlte.io>`_, 
+como se muestra en la siguiente figura:
+
 .. comments:
 
 	.. figure:: ../_static/flask-admin-dashboard.png
@@ -134,6 +152,41 @@ Abrir en navegador >>> http://127.0.0.1:5000/admin/
   :align: center
 
   Flask Admin Dashboard
+
+
+Database Browser para SQLite
+----------------------------
+
+La aplicación Flask Admin Dashboard usa la base de datos de SQLite para 
+almacenar sus datos, usted puede ver gráficamente la estructura y registros 
+de la base de datos, con el siguiente comando:
+
+::
+
+    $ sqlitebrowser bookdatabase.db
+
+Este mostrara el Database Browser para SQLite de la aplicación Flask 
+Admin Dashboard, como la siguiente figura:
+
+.. comments:
+
+	.. figure:: ../_static/flask-admin-dashboard-sqlitebrowser-db.png
+	  :class: image-inline
+	  :alt: Flask Admin Dashboard - Database Browser para SQLite
+	  :align: center
+
+	  Flask Admin Dashboard - Database Browser para SQLite
+
+.. figure:: https://raw.githubusercontent.com/Covantec/entrenamiento.frameworks_web_python/master/source/_static/flask-admin-dashboard-sqlitebrowser-db.png
+  :class: image-inline
+  :alt: Flask Admin Dashboard - Database Browser para SQLite
+  :align: center
+
+  Flask Admin Dashboard - Database Browser para SQLite
+
+Como puede ver en la figura anterior la aplicación Flask Admin Dashboard 
+tiene su propia estructura de datos por cada plugin Flask o modelos de 
+su aplicación.
 
 .. note::
     El código ejemplo usado puede encontrarlo en: https://github.com/jonalxh/Flask-Admin-Dashboard
