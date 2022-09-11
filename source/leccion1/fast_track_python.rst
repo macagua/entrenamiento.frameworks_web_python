@@ -50,7 +50,7 @@ la técnica *herencia simple* de Clases en Python 3:
 
 .. literalinclude:: ../../recursos/leccion1/clases.py
    :language: python
-   :lines: 7-160
+   :lines: 6-159
 
 
 ----
@@ -80,10 +80,10 @@ la técnica *herencia simple* de Clases en Python 3:
 
     ::
 
-        python fuertemente_tipados.py
-        python tipado_dinamico.py
-        python clases.py persona
-        python clases.py supervisor
+        python3 fuertemente_tipados.py
+        python3 tipado_dinamico.py
+        python3 clases.py persona
+        python3 clases.py supervisor
 
 
 ----

@@ -13,13 +13,13 @@ siguiente comando:
 
 ::
 
-    $ sudo apt-get update
+    $ sudo apt update
 
 Instalar dependencias mínimas necesarias, con el siguiente comando:
 
 ::
 
-    $ sudo apt-get install python3-dev python3-pip python3-virtualenv
+    $ sudo apt install python3-dev python3-pip python3-virtualenv
 
 
 Entornos virtuales Python
@@ -63,7 +63,7 @@ Para gestionar paquetes Python dentro de un entorno virtual creado, con el sigui
 
 ::
 
-    $ pip install cookiecutter
+    $ pip3 install cookiecutter
 
 El paquete `cookiecutter <https://cookiecutter.readthedocs.io/en/latest/>`_ se instalo previamente puede usarlo vía script de linea de comando, con el siguiente:
 
@@ -77,7 +77,7 @@ comando con el parámetro ``--timeout`` habilitado para el tiempo de espera:
 
 ::
 
-    $ pip install cookiecutter --timeout 120
+    $ pip3 install cookiecutter --timeout 120
 
 También puede gestionar una lista de instalación de paquetes y sus versiones para indicar 
 a la herramienta ``pip`` que los instale con un solo comando, para esto cree y edite un 
@@ -98,15 +98,15 @@ seguido de la ruta absoluta o relativa del archivo previamente creado.
 
 ::
 
-    $ pip install -r requirements.txt
+    $ pip3 install -r requirements.txt
 
-Luego de la instalación puede ejecuta el comando ``pip freeze`` el cual ofrece una salida de 
+Luego de la instalación puede ejecuta el comando ``pip3 freeze`` el cual ofrece una salida de 
 paquetes instalados en formato de archivos `requirements <https://pip.pypa.io/en/stable/user_guide/#requirements-files>`_. 
 Los paquetes se enumeran en un ordenan de forma tal que no distingue entre mayúsculas y minúsculas.
 
 ::
 
-    $ pip freeze
+    $ pip3 freeze
     arrow==0.14.2
     binaryornot==0.4.4
     certifi==2019.6.16
@@ -115,7 +115,7 @@ Los paquetes se enumeran en un ordenan de forma tal que no distingue entre mayú
     cookiecutter==1.6.0
     future==0.17.1
     idna==2.8
-    Jinja2==2.10.1
+    Jinja2==2.11.3
     jinja2-time==0.2.0
     MarkupSafe==1.1.1
     pkg-resources==0.0.0
@@ -123,15 +123,15 @@ Los paquetes se enumeran en un ordenan de forma tal que no distingue entre mayú
     python-dateutil==2.8.0
     requests==2.22.0
     six==1.12.0
-    urllib3==1.25.3
+    urllib3==1.26.5
     whichcraft==0.5.2
 
 Usted puede actualizar el archivo ``requirements.txt`` con el resultado de la ejecución el comando 
-``pip freeze`` ejecutando el siguiente comando:
+``pip3 freeze`` ejecutando el siguiente comando:
 
 ::
 
-    $ pip freeze > requirements.txt
+    $ pip3 freeze > requirements.txt
 
 Así de esta forma congela las versiones usadas para el proceso de instalación de sus paquetes Python.
 
@@ -151,4 +151,4 @@ Así de esta forma congela las versiones usadas para el proceso de instalación 
 
     ::
 
-        pip install -r requirements.txt
+        pip3 install -r requirements.txt

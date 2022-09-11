@@ -1,4 +1,3 @@
-# -*- coding: utf8 -*-
 """
    Ejemplo de Programación Orientado a Objetos usando la 
    Herencia simple de Clase en Python.

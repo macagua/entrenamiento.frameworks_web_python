@@ -565,7 +565,7 @@ este programa ejecute el siguiente comando:
 
 .. code-block:: sh
 
-    sudo pip install bpython
+    sudo pip3 install bpython
 
 Luego cierra sesión de **root** y vuelve al usuario y sustituya el comando
 ``python`` por ``ipython`` de la siguiente forma:
