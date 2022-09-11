@@ -3,7 +3,7 @@ binaryornot==0.4.4
 certifi==2019.6.16
 chardet==3.0.4
 Click==7.0
-cookiecutter==1.6.0
+cookiecutter==2.1.1
 future==0.17.1
 idna==2.8
 Jinja2==2.11.3
