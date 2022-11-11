@@ -3,6 +3,20 @@
 Frameworks Web
 ==============
 
+Un entorno de trabajo (del inglés framework) o marco de trabajo, que
+ofrece un conjunto estandarizado de conceptos, prácticas y criterios
+para enfocar un tipo de problemática particular que sirve como referencia,
+para enfrentar y resolver nuevos problemas de índole similar.
+
+Un framework para aplicaciones web es un framework diseñado para apoyar
+el desarrollo de sitios web dinámicos, aplicaciones web y servicios web.
+Este tipo de frameworks intenta aliviar el exceso de carga asociado con
+actividades comunes usadas en desarrollos web.
+
+Por ejemplo, muchos framework proporcionan bibliotecas para acceder a
+bases de datos, estructuras para plantillas y gestión de sesiones, y
+con frecuencia facilitan la reutilización de código.
+
 Frameworks Web en Python
 
 .. todo::
@@ -13,11 +27,11 @@ Frameworks Web en Python
 
 .. seealso::
 
-    Consulte la sección de :ref:`lecturas suplementarias <lecturas_extras_leccion5>` 
+    Consulte la sección de :ref:`lecturas suplementarias <lecturas_extras_leccion5>`
     del entrenamiento para ampliar su conocimiento en esta temática.
 
-.. comments:
 
-	.. toctree::
-	   :maxdepth: 2
-	   
+.. raw:: html
+   :file: ../_templates/partials/soporte_profesional.html
+
+.. disqus::

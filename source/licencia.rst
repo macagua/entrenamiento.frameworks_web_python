@@ -1,3 +1,5 @@
+.. -*- coding: utf-8 -*-
+
 .. _licencias:
 
 ===============
@@ -11,8 +13,13 @@ Reconocimiento-CompartirIgual 3.0 Venezuela de Creative Commons
 
 .. sidebar:: Sobre esta licencia
 
-    Esta documentación se distribuye bajo los términos de la licencia 
+    Esta documentación se distribuye bajo los términos de la licencia
     `Reconocimiento-CompartirIgual 3.0 Venezuela de Creative Commons`_.
+
+    .. figure:: _static/images/creativecommons_by-sa_3.0.png
+       :alt: Creative Commons Attribution-NonCommercial-ShareAlike
+       :target: https://creativecommons.org/licenses/by-nc-sa/3.0/ve/deed.es
+
 
 Usted es libre de:
 
@@ -35,6 +42,13 @@ Bajo los siguientes términos:
     a partir de esta obra, usted podrá distribuir su contribución siempre
     que utilice la misma licencia que la obra original.
 
-Términos detallados de la licencia: https://creativecommons.org/licenses/by-sa/3.0/ve/legalcode
+
+.. sidebar:: Detalles de la licencia
+
+    Términos detallados de la licencia: https://creativecommons.org/licenses/by-sa/3.0/ve/legalcode
+
+    .. figure:: _static/images/creativecommons_ve.png
+       :alt: Creative Commons Atribución-NoComercial-CompartirIgual 3.0 Venezuela
+       :target: https://creativecommons.org/licenses/by-nc-sa/3.0/ve/deed.es
 
 .. _Reconocimiento-CompartirIgual 3.0 Venezuela de Creative Commons: https://creativecommons.org/licenses/by-sa/3.0/ve/

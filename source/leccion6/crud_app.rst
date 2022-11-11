@@ -1,27 +1,27 @@
-.. _python_flash_crud_app:
+.. _python_flask_crud_app:
 
 Aplicación CRUD
 ===============
 
-Hacer un demo local de una aplicación Flask 
-`CRUD <https://es.wikipedia.org/wiki/CRUD>`_, es decir, 
-una aplicación con las funciones básicas en bases de datos 
+Hacer un demo local de una aplicación Flask
+`CRUD <https://es.wikipedia.org/wiki/CRUD>`_, es decir,
+una aplicación con las funciones básicas en bases de datos
 como "Crear, Leer, Actualizar y Borrar".
 
 
 Requisitos previos
 ------------------
 
-Para trabajar una aplicación Flask con bases de datos relacionales 
+Para trabajar una aplicación Flask con bases de datos relacionales
 requiere instalar las siguientes librerías:
 
 - `Flask <https://pypi.org/project/Flask/>`_.
 
-- `Flask-SQLAlchemy <https://pypi.org/project/Flask-SQLAlchemy/>`_.
+- `Flask-SQLAlchemy <https://pypi.org/project/flask-sqlalchemy/>`_.
 
 - `SQLAlchemy <https://pypi.org/project/SQLAlchemy/>`_.
 
-Actualizar repositorios de paquetes disponibles para instalar, 
+Actualizar repositorios de paquetes disponibles para instalar,
 con el siguiente comando:
 
 ::
@@ -38,7 +38,7 @@ Instalar dependencias mínimas necesarias, con el siguiente comando:
 Entorno virtual Python
 ----------------------
 
-Crear entorno virtual Python en directorio ``$HOME`` con el 
+Crear entorno virtual Python en directorio ``$HOME`` con el
 siguiente comando:
 
 ::
@@ -56,7 +56,7 @@ Activarlo entorno virtual Python creado con el siguiente comando:
 Instalar paquetes Python
 ------------------------
 
-Para instalar las dependencias para usar del framework Flask, con 
+Para instalar las dependencias para usar del framework Flask, con
 el siguiente comando:
 
 ::
@@ -73,7 +73,7 @@ Crear estructura de proyecto Flask, con el siguiente comando:
 
     $ mkdir -p ~/projects/flask-crud-app/templates && cd $_ && cd ../
 
-Cree modulo Python llamado :file:`bookmanager.py` dentro del 
+Cree modulo Python llamado :file:`bookmanager.py` dentro del
 directorio :file:`~/projects/flask-crud-app`, con el siguiente comando:
 
 ::
@@ -87,7 +87,7 @@ Agregue el siguiente contenido al archivo :file:`~/projects/flask-crud-app/bookm
    :lines: 7-66
 
 
-Cree plantilla HTML llamado :file:`home.html` dentro del directorio 
+Cree plantilla HTML llamado :file:`home.html` dentro del directorio
 :file:`~/projects/flask-crud-app/templates`, con el siguiente comando:
 
 ::
@@ -115,40 +115,31 @@ Crear base de datos SQLite, con los siguientes comando:
     >>> exit()
 
 
-De esta forma puede ver gráficamente la estructura de la base de datos 
+De esta forma puede ver gráficamente la estructura de la base de datos
 SQLite, con el siguiente comando:
 
 ::
 
     $ sqlitebrowser bookdatabase.db
 
-Este mostrara el Database Browser para SQLite de la aplicación BookManager, 
+Este mostrara el Database Browser para SQLite de la aplicación BookManager,
 como la siguiente figura:
 
-.. comments:
-
-	.. figure:: ../_static/flask-bookmanager-sqlitebrowser-db.png
-	  :class: image-inline
-	  :alt: BookManager - Database Browser para SQLite
-	  :align: center
-
-	  BookManager - Database Browser para SQLite
-
-.. figure:: https://raw.githubusercontent.com/Covantec/entrenamiento.frameworks_web_python/master/source/_static/flask-bookmanager-sqlitebrowser-db.png
+.. figure:: ../_static/images/flask-bookmanager-sqlitebrowser-db.png
   :class: image-inline
   :alt: BookManager - Database Browser para SQLite
   :align: center
 
   BookManager - Database Browser para SQLite
 
-De esta forma ya tiene creada la base de datos SQLite necesaria para 
+De esta forma ya tiene creada la base de datos SQLite necesaria para
 la ejecución de la aplicación BookManager.
 
 
 Ejecutar aplicación Flask
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Ejecutar aplicación Web Flask, con el siguiente comando: 
+Ejecutar aplicación Web Flask, con el siguiente comando:
 
 ::
 
@@ -156,16 +147,8 @@ Ejecutar aplicación Web Flask, con el siguiente comando:
 
 Abrir en navegador >>> http://127.0.0.1:8087
 
-.. comments:
 
-    .. figure:: ../_static/flask-bookmanager.png
-      :class: image-inline
-      :alt: BookManager - una Aplicación CRUD Flask
-      :align: center
-
-      BookManager - una Aplicación CRUD Flask
-
-.. figure:: https://raw.githubusercontent.com/Covantec/entrenamiento.frameworks_web_python/master/source/_static/flask-bookmanager.png
+.. figure:: ../_static/images/flask-bookmanager.png
   :class: image-inline
   :alt: BookManager - una Aplicación CRUD Flask
   :align: center
@@ -174,7 +157,13 @@ Abrir en navegador >>> http://127.0.0.1:8087
 
 
 .. note::
-    El código ejemplo usado puede encontrarlo en: https://github.com/macagua/flask-crud-app
+    El código ejemplo usado puede encontrarlo en: https://github.com/macagua/example.flask.crud-app
 
 .. tip::
-    Usando el articulo `"Building a CRUD application with Flask and SQLAlchemy" <https://www.codementor.io/garethdwyer/building-a-crud-application-with-flask-and-sqlalchemy-dm3wv7yu2>`_.
+    Usando el articulo `"Building a CRUD application with Flask and SQLAlchemy" <https://www.codementor.io/@garethdwyer/building-a-crud-application-with-flask-and-sqlalchemy-dm3wv7yu2>`_.
+
+
+.. raw:: html
+   :file: ../_templates/partials/soporte_profesional.html
+
+.. disqus::

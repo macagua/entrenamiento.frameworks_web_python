@@ -1,18 +1,21 @@
+.. -*- coding: utf-8 -*-
+
+
 .. _lecturas_extras_entrenamiento:
 
 Lecturas suplementarias del entrenamiento
 =========================================
 
-Siempre aprender un nuevo lenguaje de programación tiene nuevos retos desde aprender 
-sobre la filosofía del lenguaje y hasta léxicos propios los cuales hacen característico 
-el uso y expresión de sus programas con este nuevo lenguaje, y sobre todo usando 
-dialectos tan propios como son los frameworks Web, más esto requiere práctica y tiempo 
+Siempre aprender un nuevo lenguaje de programación tiene nuevos retos desde aprender
+sobre la filosofía del lenguaje y hasta léxicos propios los cuales hacen característico
+el uso y expresión de sus programas con este nuevo lenguaje, y sobre todo usando
+dialectos tan propios como son los frameworks Web, más esto requiere práctica y tiempo
 para lograr la fluidez en hablar y escribir programas usando framework en Python.
 
-Hay más contenido complementario o detallada que el contenido del entrenamiento de las 
-6 lecciones cubiertas en este entrenamiento. Al finalizar, yo he compilado una lista 
-de lecturas relacionadas que soporta la información que usted aprende en cada lección. 
-Piensa que esto como materiales suplementarios. Usted puede leerlo en su tiempo libre 
+Hay más contenido complementario o detallada que el contenido del entrenamiento de las
+6 lecciones cubiertas en este entrenamiento. Al finalizar, yo he compilado una lista
+de lecturas relacionadas que soporta la información que usted aprende en cada lección.
+Piensa que esto como materiales suplementarios. Usted puede leerlo en su tiempo libre
 para ayudar a incrementar tanto la profundidad y amplitud en su conocimiento.
 
 Las lecturas están organizada como las lecciones y sus temas.
@@ -61,8 +64,8 @@ Introspección a Python
 
 .. _lecturas_extras_leccion2:
 
-Lección 2 - Base de datos relacional
-------------------------------------
+Lección 2 - Base de datos
+-------------------------
 
 
 Librería SQLAlchemy
@@ -70,7 +73,7 @@ Librería SQLAlchemy
 
 - `SQLAlchemy <https://www.sqlalchemy.org/>`_.
 
-- `Tutorial SQLAlchemy <https://docs.sqlalchemy.org/en/latest/orm/tutorial.html>`_.
+- `Tutorial SQLAlchemy <https://docs.sqlalchemy.org/en/20/orm/tutorial.html>`_.
 
 - `Patrón de diseño ORM <https://es.wikipedia.org/wiki/Mapeo_objeto-relacional>`_.
 
@@ -78,14 +81,49 @@ Librería SQLAlchemy
     TODO terminar de escribir esta sección
 
 
-.. _lecturas_suplementarias_leccion3:
+.. _lecturas_extras_leccion3:
 
 
-Lección 3 - Protocolo HTTP en Python 
-------------------------------------
+Lección 3 - Protocolo HTTP
+--------------------------
+
+Introducción a HTTP
+^^^^^^^^^^^^^^^^^^^
+
+- `HTTP - Hypertext Transfer Protocol Overview <https://www.w3.org/Protocols/>`_.
+
+- `World Wide Web Consortium (W3C) <https://www.w3.org/>`_.
+
+- `World Wide Web Consortium (W3C) - España <https://chapters.w3.org/hispano/>`_.
+
+
+Cliente y servidor HTTP
+^^^^^^^^^^^^^^^^^^^^^^^
+
+- `http.server — HTTP servers — Python 3.7 documentation <https://docs.python.org/3.7/library/http.server.html>`_.
+
+- `Python: Let’s Create a Simple HTTP Server (Tutorial) <https://www.afternerd.com/blog/python-http-server/>`_.
+
+
+Cliente httpie
+^^^^^^^^^^^^^^
+
+- `cURL <https://curl.se/>`_, utilidad de línea de comandos y biblioteca para transferir datos con URL.
+
+- `HTTPie - línea de comandos cliente HTTP <https://httpie.io/>`_.
+
+- `HTTPie, una herramienta como cURL para humanos <https://unpocodejava.com/2016/07/14/httpie-una-herramienta-curl-like-para-humanos/>`_.
+
+
+Librería requests
+^^^^^^^^^^^^^^^^^
+
+- `requests <http://docs.python-requests.org>`_, Requests: HTTP para Humanos.
+
+- `cURL <https://curl.se/>`_, herramienta de línea de comandos y biblioteca para transferir datos con URL.
 
 .. todo::
-    TODO escribir esta sección
+    TODO terminar de escribir esta sección
 
 
 .. _lecturas_extras_leccion4:
@@ -99,7 +137,7 @@ Introducción a WSGI
 
 - `WSGI <https://wsgi.readthedocs.io/en/latest/>`_.
 
-- wsgiref - `WSGI Utilities and Reference Implementation <https://docs.python.org/3/library/wsgiref.html>`_.
+- wsgiref - `WSGI Utilities and Reference Implementation <https://docs.python.org/3.7/library/wsgiref.html>`_.
 
 .. todo::
     TODO terminar de escribir esta sección
@@ -111,15 +149,15 @@ Introducción a WSGI
 Lección 5 - Frameworks Web
 --------------------------
 
-- `Web framework rankings - HotFrameworks <http://hotframeworks.com/>`_.
+- `Web framework rankings - HotFrameworks <https://hotframeworks.com/>`_.
 
-- `Flask framework <http://flask.pocoo.org/>`_.
+- `Flask framework <https://flask.palletsprojects.com/en/2.2.x/>`_.
 
 - `Django project <https://www.djangoproject.com/>`_.
 
-- `Sanic framework <https://sanicframework.org/>`_.
+- `Sanic framework <https://sanic.dev/>`_.
 
-- `Sanic Async Python 3.6+ web server/framework <https://github.com/huge-success/sanic>`_.
+- `Sanic Async Python 3.6+ web server/framework <https://github.com/sanic-org/sanic>`_.
 
 .. todo::
     TODO terminar de escribir esta sección
@@ -134,9 +172,9 @@ Lección 6 - Flask
 Flask
 ^^^^^
 
-- `Sitio Web de Flask <http://flask.pocoo.org/>`_.
+- `Sitio Web de Flask <https://flask.palletsprojects.com/en/2.2.x/>`_.
 
-- `Flask documentation <http://flask.pocoo.org/docs/>`_.
+- `Flask documentation <https://flask.palletsprojects.com/en/2.2.x/>`_.
 
 - `Flask - PyPI <https://pypi.org/project/Flask>`_.
 
@@ -146,9 +184,9 @@ Flask
 Aplicación CRUD
 ^^^^^^^^^^^^^^^
 
-- `Flask-SQLAlchemy <http://flask-sqlalchemy.pocoo.org/>`_.
+- `Flask-SQLAlchemy <https://flask-sqlalchemy.palletsprojects.com/en/3.0.x/>`_.
 
-- `Flask-SQLAlchemy - PyPI <https://pypi.org/project/Flask-SQLAlchemy/>`_.
+- `Flask-SQLAlchemy - PyPI <https://pypi.org/project/flask-sqlalchemy/>`_.
 
 
 Admin Dashboard
@@ -160,7 +198,7 @@ Admin Dashboard
 
 - `flask-admin/flask-admin: Simple and extensible administrative interface framework for Flask <https://github.com/flask-admin/flask-admin/>`_.
 
-- `Flask-Security <https://flask-security.readthedocs.io/>`_.
+- `Flask-Security <https://flask-security.readthedocs.io/en/3.0.0/>`_.
 
 - `Flask-Security - PyPI <https://pypi.org/project/Flask-Security/>`_.
 

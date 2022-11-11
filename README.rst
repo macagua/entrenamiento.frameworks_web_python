@@ -4,8 +4,8 @@
 Entrenamiento "Frameworks de Desarrollo Web en Python"
 ======================================================
 
-Repositorio de manuales y recursos del entrenamiento *"Frameworks de Desarrollo Web 
-en Python"* realizado por la empresa Covantec R.L.
+Repositorio de manuales y recursos del entrenamiento *"Frameworks de Desarrollo Web
+en *`Python 3.7`_" realizado por la empresa `Covantec R.L`_.
 
 .. contents :: :local:
 
@@ -19,70 +19,72 @@ La estructura general de contenidos esta confirmada por los principales archivos
   Describe el contenido del entrenamiento.
 
 **source**
-  Describe los contenidos de las lecciones *1, 2, 3, 4, 5, 6, 7* del entrenamiento. 
+  Describe los contenidos de las lecciones *1, 2, 3, 4, 5, 6, 7* del entrenamiento.
   Además de otros temas complementarios de Python.
 
 
 Obtener y compilar la documentación
 ===================================
 
-El almacenamiento de este material está disponible en un repositorio Git en Github.com "`entrenamiento.frameworks_web_python`_". 
+El almacenamiento de este material está disponible en un repositorio Git
+en Github.com "`entrenamiento.frameworks_web_python`_".
 
-Si usted tiene una credenciales en este servidor y desea convertirse en un colaborador 
+Si usted tiene una credenciales en este servidor y desea convertirse en un colaborador
 de los materiales de este entrenamiento, usted debe seguir los siguientes pasos:
 
 
 Dependencias
 ------------
 
-Para construir estos recursos, debe ejecutar las dependencias, entonces debe ejecutar 
+Para construir estos recursos, debe ejecutar las dependencias, entonces debe ejecutar
 los siguientes comando:
 
 ::
 
-  $ sudo apt install python3-dev python-pip python-setuptools git
-  $ sudo apt install texlive-latex-base texlive-latex-recommended texlive-lang-spanish
-  $ sudo pip install virtualenv
+  $ sudo apt update
+  $ sudo apt install -y python3-dev python-pip python-setuptools git
+  $ sudo apt install -y texlive-latex-base texlive-latex-recommended texlive-lang-spanish
+  $ sudo pip3 install virtualenv
 
 
 Descargar repositorio
 ---------------------
 
-Para descargar repositorio para modificar los recursos del entrenamiento, ejecute los 
+Para descargar repositorio para modificar los recursos del entrenamiento, ejecute los
 siguientes comando:
 
 ::
 
   $ cd $HOME
-  $ git clone https://github.com/Covantec/entrenamiento.frameworks_web_python.git
+  $ git clone https://github.com/macagua/entrenamiento.frameworks_web_python.git
 
-Crear entorno virtual de Python para reconstruir este proyecto, ejecutando el siguiente 
+Crear entorno virtual de Python para reconstruir este proyecto, ejecutando el siguiente
 comando:
 
 ::
 
   $ cd ~/entrenamiento.frameworks_web_python
-  $ virtualenv --python /usr/bin/python3 venv
+  $ virtualenv --python=/usr/bin/python3 venv
   $ source ./venv/bin/activate
 
-Luego instale dependencias Sphinx, ejecutando el siguiente comando:
+Luego instale dependencias del paquete ``Sphinx``, ejecutando el siguiente comando:
 
 ::
 
-  (venv)$ pip install -r requirements.txt
+  (venv)$ pip3 install -r requirements-dev.txt
 
 
 Recursos del entrenamiento
 ==========================
 
-La herramientas Sphinx le permite generar los recursos usado en el entrenamiento, 
+La herramienta ``Sphinx`` le permite generar los recursos usado en el entrenamiento,
 en diversos formatos, actualmente se tiene bien soportado los siguientes:
 
 
 Formato HTML
 ------------
 
-Usted puede generar la documentación en HTML del módulo *1, 2, 3, 4, 5, 6, 7*; 
+Usted puede generar la documentación en HTML del módulo *1, 2, 3, 4, 5, 6, 7*;
 ejecute los siguientes comando:
 
 ::
@@ -95,17 +97,17 @@ con su navegador Web favorito (Mozilla Firefox, Google Chrome, etc).
 
 Formato PDF
 -----------
-  
-Usted puede generar la documentación en PDF del módulo *1, 2, 3, 4, 5, 6, 7*; 
+
+Usted puede generar la documentación en PDF del módulo *1, 2, 3, 4, 5, 6, 7*;
 ejecute los siguientes comando:
 
 ::
 
-  (venv)$ make latexpdf
+  (venv)$ make pdf
 
-Al finalizar exitosamente la ejecución del comando anterior, este genera un PDF 
-llamado ``entrenamiento_frameworks_web_python.pdf`` y se encuentra desde el directorio 
-``build/latex/``,  desde allí puede abrir para visualizar con cualquier programas 
+Al finalizar exitosamente la ejecución del comando anterior, este genera un PDF
+llamado ``entrenamiento_frameworks_web_python.pdf`` y se encuentra desde el directorio
+``build/latex/``, desde allí puede abrir para visualizar con cualquier programas
 de visor de PDF favorito (Evince, Acrobat Reader, etc).
 
 
@@ -121,22 +123,24 @@ Estatus de Calidad
 Colabora
 ========
 
-¿Tiene alguna idea?, ¿Encontró un error? Por favor, hágalo saber 
+¿Tiene alguna idea?, ¿Encontró un error? Por favor, hágalo saber
 registrando un `ticket de soporte`_.
 
 
 Licencia
 ========
 
-Esta obra está licenciada bajo la licencia Creative Commons 
-Atribución-CompartirIgual 3.0 Venezuela. Para ver una copia de esta licencia, 
-visite https://creativecommons.org/licenses/by-sa/3.0/ve/ o envíe una carta a 
-Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 
+Esta obra está licenciada bajo la licencia Creative Commons
+Atribución-CompartirIgual 3.0 Venezuela. Para ver una copia de esta licencia,
+visite https://creativecommons.org/licenses/by-sa/3.0/ve/ o envíe una carta a
+Creative Commons, 444 Castro Street, Suite 900, Mountain View, California,
 94041, EE.UU.
 
-Una copia de esta licencia en formato de texto se incluye en este paquete 
-dentro del directorio ``docs`` tanto en el idioma Ingles (LICENSE.rst) como 
-el idioma Español (LICENSE.es.rst).
+Una copia de esta licencia en formato de texto se incluye en este paquete dentro del
+directorio ``docs`` tanto en el idioma Ingles (LICENSE.rst) como el idioma Español
+(LICENSE.es.rst).
 
-.. _`entrenamiento.frameworks_web_python`: https://github.com/Covantec/entrenamiento.frameworks_web_python
-.. _`ticket de soporte`: https://github.com/Covantec/entrenamiento.frameworks_web_python/issues/new
+.. _`Covantec R.L`: https://github.com/Covantec
+.. _`Python 3.7`: https://docs.python.org/es/3.7/
+.. _`entrenamiento.frameworks_web_python`: https://github.com/macagua/entrenamiento.frameworks_web_python
+.. _`ticket de soporte`: https://github.com/macagua/entrenamiento.frameworks_web_python/issues/new

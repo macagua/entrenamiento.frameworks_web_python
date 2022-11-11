@@ -1,4 +1,4 @@
-.. _python_flash_instalacion:
+.. _python_flask_instalacion:
 
 Instalación
 ===========
@@ -48,3 +48,9 @@ Para instalar las dependencias para usar del framework Flask, con el siguiente c
 ::
 
 	$ pip3 install -U Flask
+
+
+.. raw:: html
+   :file: ../_templates/partials/soporte_profesional.html
+
+.. disqus::
