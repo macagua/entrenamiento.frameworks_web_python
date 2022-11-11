@@ -10,13 +10,13 @@ Ejecución de un proyecto Django
 
 Instalación de Django
 
-1) Crear el directorio ~/proyects/django/acme con los siguientes comando:
+1) Crear el directorio ``~/proyects/django/acme`` con los siguientes comando:
 
 .. code-block:: console
 
 	mkdir -p ~/proyects/django/acme && cd $_
 
-2) Crear y activar entorno virtual en ~/proyects/django/acme con Python 3, con los siguientes comando:
+2) Crear y activar entorno virtual en ``~/proyects/django/acme`` con Python 3, con los siguientes comando:
 
 .. code-block:: console
 
