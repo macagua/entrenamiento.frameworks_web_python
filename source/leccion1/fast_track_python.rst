@@ -9,8 +9,8 @@ Esta práctica ofrece una introducción rápida a la programación en Python:
 Fuertemente tipado
 ------------------
 
-Python 3 es fuertemente tipado, esto significa que el tipo de valor no cambia 
-repentinamente. Una cadena que contiene solo dígitos no se convierte mágicamente 
+Python 3 es fuertemente tipado, esto significa que el tipo de valor no cambia
+repentinamente. Una cadena que contiene solo dígitos no se convierte mágicamente
 en un número. Cada cambio de tipo requiere una conversión explícita.
 
 ::
@@ -28,8 +28,8 @@ en un número. Cada cambio de tipo requiere una conversión explícita.
 Tipado dinámico
 ---------------
 
-Python 3 es tipado dinámico, significa que los objetos en tiempo de ejecución 
-(valores) tienen un tipo, a diferencia del tipado estático donde las variables 
+Python 3 es tipado dinámico, significa que los objetos en tiempo de ejecución
+(valores) tienen un tipo, a diferencia del tipado estático donde las variables
 tienen un tipo.
 
 ::
@@ -44,8 +44,8 @@ tienen un tipo.
 POO y Clases
 ------------
 
-Python 3 soporta POO y Clases, significa que todo el Python es un objeto. A 
-continuación se muestra el uso de la Programación Orientado a Objetos implementando 
+Python 3 soporta POO y Clases, significa que todo el Python es un objeto. A
+continuación se muestra el uso de la Programación Orientado a Objetos implementando
 la técnica *herencia simple* de Clases en Python 3:
 
 .. literalinclude:: ../../recursos/leccion1/clases.py
@@ -57,16 +57,16 @@ la técnica *herencia simple* de Clases en Python 3:
 
 
 .. important::
-    Usted puede descargar el código usado en esta sección haciendo clic en los 
-    siguientes enlaces: 
-    :download:`tipado_dinamico.py <../../recursos/leccion1/tipado_dinamico.py>`, 
-    :download:`fuertemente_tipados.py <../../recursos/leccion1/fuertemente_tipados.py>`, 
+    Usted puede descargar el código usado en esta sección haciendo clic en los
+    siguientes enlaces:
+    :download:`tipado_dinamico.py <../../recursos/leccion1/tipado_dinamico.py>`,
+    :download:`fuertemente_tipados.py <../../recursos/leccion1/fuertemente_tipados.py>`,
     y :download:`clases.py <../../recursos/leccion1/clases.py>`.
 
 
 .. tip::
-    Para ejecutar el código :file:`fuertemente_tipados.py`, :file:`tipado_dinamico.py` 
-    y :file:`clases.py`, abra una consola de comando, acceda al directorio donde se 
+    Para ejecutar el código :file:`fuertemente_tipados.py`, :file:`tipado_dinamico.py`
+    y :file:`clases.py`, abra una consola de comando, acceda al directorio donde se
     encuentra ambos programas:
 
     ::
@@ -91,8 +91,14 @@ la técnica *herencia simple* de Clases en Python 3:
 
 .. seealso::
 
-    Consulte la sección de :ref:`lecturas suplementarias <lecturas_extras_leccion1>` 
+    Consulte la sección de :ref:`lecturas suplementarias <lecturas_extras_leccion1>`
     del entrenamiento para ampliar su conocimiento en esta temática.
+
+
+.. raw:: html
+   :file: ../_templates/partials/soporte_profesional.html
+
+.. disqus::
 
 .. commets:
 	http://jupyter.org

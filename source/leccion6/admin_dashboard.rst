@@ -1,16 +1,16 @@
-.. _python_flash_admin_dashboard:
+.. _python_flask_admin_dashboard:
 
 Admin Dashboard
 ===============
 
-El objeto de esta sección es hacer un demostración local de una 
+El objeto de esta sección es hacer un demostración local de una
 interfaz "Admin" que integre un "Dashboard" en Flask.
 
 
 Requisitos previos
 ------------------
 
-Para hacer un demostración local de un Flask Admin Dashboard 
+Para hacer un demostración local de un Flask Admin Dashboard
 requiere instalar las siguientes librerías:
 
 - `Flask <https://pypi.org/project/Flask/>`_.
@@ -25,7 +25,7 @@ requiere instalar las siguientes librerías:
 
 - `AdminLTE <https://adminlte.io>`_.
 
-Actualizar repositorios de paquetes disponibles para instalar, con 
+Actualizar repositorios de paquetes disponibles para instalar, con
 el siguiente comando:
 
 ::
@@ -56,12 +56,12 @@ Entorno virtual Python
 Crear entorno virtual Python en directorio file:`~/Flask-Admin-Dashboard` con el siguiente comando:
 
 ::
-	
+
 	$ virtualenv --python=/usr/bin/python3 venv
 
 
 Activarlo entorno virtual Python creado con el siguiente comando:
-	
+
 	$ source ./venv/bin/activate
 
 
@@ -72,7 +72,7 @@ Para instalar las dependencias para usar del framework Flask, con el siguiente c
 
 ::
 
-	$ pip install -r requirements.txt
+	$ pip3 install -r requirements.txt
 
 
 Ejecutar aplicación Flask
@@ -91,37 +91,19 @@ Abrir en navegador >>> http://127.0.0.1:5000/admin/
 Flask Authentication
 --------------------
 
-La aplicación Flask Admin Dashboard usa el plugin 
-`Flask-Security <https://pypi.org/project/Flask-Security/>`_ para 
-la autenticación de usuarios de la aplicación, como se muestra 
+La aplicación Flask Admin Dashboard usa el plugin
+`Flask-Security <https://pypi.org/project/Flask-Security/>`_ para
+la autenticación de usuarios de la aplicación, como se muestra
 en la siguiente figura:
 
-.. comments:
-
-	.. figure:: ../_static/flask-admin-dashboard-index.png
-	  :class: image-inline
-	  :alt: Flask Admin Dashboard - Index
-	  :align: center
-
-	  Flask Admin Dashboard - Index
-
-.. figure:: https://raw.githubusercontent.com/Covantec/entrenamiento.frameworks_web_python/master/source/_static/flask-admin-dashboard-index.png
+.. figure:: ../_static/images/flask-admin-dashboard-index.png
   :class: image-inline
   :alt: Flask Admin Dashboard - Index
   :align: center
 
   Flask Admin Dashboard - Index
 
-.. comments:
-
-	.. figure:: ../_static/flask-admin-dashboard-login.png
-	  :class: image-inline
-	  :alt: Flask Admin Dashboard - Inicio de sesión
-	  :align: center
-
-	  Flask Admin Dashboard - Inicio de sesión
-
-.. figure:: https://raw.githubusercontent.com/Covantec/entrenamiento.frameworks_web_python/master/source/_static/flask-admin-dashboard-login.png
+.. figure:: ../_static/images/flask-admin-dashboard-login.png
   :class: image-inline
   :alt: Flask Admin Dashboard - Inicio de sesión
   :align: center
@@ -132,21 +114,12 @@ en la siguiente figura:
 Admin Dashboard
 ---------------
 
-La aplicación Flask Admin Dashboard usa su propio interfaz Admin usando la 
-librería `Flask-Admin <https://pypi.org/project/Flask-Admin/>`_ que 
-incluye un Dashboard construido bajo la GUI de `AdminLTE <https://adminlte.io>`_, 
+La aplicación Flask Admin Dashboard usa su propio interfaz Admin usando la
+librería `Flask-Admin <https://pypi.org/project/Flask-Admin/>`_ que
+incluye un Dashboard construido bajo la GUI de `AdminLTE <https://adminlte.io>`_,
 como se muestra en la siguiente figura:
 
-.. comments:
-
-	.. figure:: ../_static/flask-admin-dashboard.png
-	  :class: image-inline
-	  :alt: Flask Admin Dashboard
-	  :align: center
-
-	  Flask Admin Dashboard
-
-.. figure:: https://raw.githubusercontent.com/Covantec/entrenamiento.frameworks_web_python/master/source/_static/flask-admin-dashboard.png
+.. figure:: ../_static/images/flask-admin-dashboard.png
   :class: image-inline
   :alt: Flask Admin Dashboard
   :align: center
@@ -157,36 +130,33 @@ como se muestra en la siguiente figura:
 Database Browser para SQLite
 ----------------------------
 
-La aplicación Flask Admin Dashboard usa la base de datos de SQLite para 
-almacenar sus datos, usted puede ver gráficamente la estructura y registros 
+La aplicación Flask Admin Dashboard usa la base de datos de SQLite para
+almacenar sus datos, usted puede ver gráficamente la estructura y registros
 de la base de datos, con el siguiente comando:
 
 ::
 
     $ sqlitebrowser bookdatabase.db
 
-Este mostrara el Database Browser para SQLite de la aplicación Flask 
+Este mostrara el Database Browser para SQLite de la aplicación Flask
 Admin Dashboard, como la siguiente figura:
 
-.. comments:
-
-	.. figure:: ../_static/flask-admin-dashboard-sqlitebrowser-db.png
-	  :class: image-inline
-	  :alt: Flask Admin Dashboard - Database Browser para SQLite
-	  :align: center
-
-	  Flask Admin Dashboard - Database Browser para SQLite
-
-.. figure:: https://raw.githubusercontent.com/Covantec/entrenamiento.frameworks_web_python/master/source/_static/flask-admin-dashboard-sqlitebrowser-db.png
+.. figure:: ../_static/images/flask-admin-dashboard-sqlitebrowser-db.png
   :class: image-inline
   :alt: Flask Admin Dashboard - Database Browser para SQLite
   :align: center
 
   Flask Admin Dashboard - Database Browser para SQLite
 
-Como puede ver en la figura anterior la aplicación Flask Admin Dashboard 
-tiene su propia estructura de datos por cada plugin Flask o modelos de 
+Como puede ver en la figura anterior la aplicación Flask Admin Dashboard
+tiene su propia estructura de datos por cada plugin Flask o modelos de
 su aplicación.
 
 .. note::
     El código ejemplo usado puede encontrarlo en: https://github.com/jonalxh/Flask-Admin-Dashboard
+
+
+.. raw:: html
+   :file: ../_templates/partials/soporte_profesional.html
+
+.. disqus::

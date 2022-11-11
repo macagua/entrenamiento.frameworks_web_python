@@ -6,11 +6,7 @@ SPHINXOPTS    =
 SPHINXBUILD   = sphinx-build
 PAPER         =
 BUILDDIR      = build
-
-# User-friendly check for sphinx-build
-ifeq ($(shell which $(SPHINXBUILD) >/dev/null 2>&1; echo $$?), 1)
-$(error The '$(SPHINXBUILD)' command was not found. Make sure you have Sphinx installed, then set the SPHINXBUILD environment variable to point to the full path of the '$(SPHINXBUILD)' executable. Alternatively you can add the directory with the executable to your PATH. If you don't have Sphinx installed, grab it from http://sphinx-doc.org/)
-endif
+SOURCEDIR     = source
 
 # Internal variables.
 PAPEROPT_a4     = -D latex_paper_size=a4
@@ -19,7 +15,7 @@ ALLSPHINXOPTS   = -d $(BUILDDIR)/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) sou
 # the i18n builder cannot share the environment and doctrees with the others
 I18NSPHINXOPTS  = $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) source
 
-.PHONY: help clean html dirhtml singlehtml pickle json htmlhelp qthelp devhelp epub latex latexpdf text man changes linkcheck doctest coverage gettext
+.PHONY: help clean html dirhtml singlehtml pickle json htmlhelp qthelp devhelp epub latex latexpdf text man changes linkcheck doctest gettext mv_index_latex mv_index_html pdf
 
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
@@ -34,18 +30,14 @@ help:
 	@echo "  epub       to make an epub"
 	@echo "  latex      to make LaTeX files, you can set PAPER=a4 or PAPER=letter"
 	@echo "  latexpdf   to make LaTeX files and run them through pdflatex"
-	@echo "  latexpdfja to make LaTeX files and run them through platex/dvipdfmx"
 	@echo "  text       to make text files"
 	@echo "  man        to make manual pages"
 	@echo "  texinfo    to make Texinfo files"
 	@echo "  info       to make Texinfo files and run them through makeinfo"
 	@echo "  gettext    to make PO message catalogs"
 	@echo "  changes    to make an overview of all changed/added/deprecated items"
-	@echo "  xml        to make Docutils-native XML files"
-	@echo "  pseudoxml  to make pseudoxml-XML files for display purposes"
 	@echo "  linkcheck  to check all external links for integrity"
 	@echo "  doctest    to run all doctests embedded in the documentation (if enabled)"
-	@echo "  coverage   to run coverage check of the documentation (if enabled)"
 
 clean:
 	rm -rf $(BUILDDIR)/*
@@ -86,17 +78,17 @@ qthelp:
 	@echo
 	@echo "Build finished; now you can run "qcollectiongenerator" with the" \
 	      ".qhcp project file in $(BUILDDIR)/qthelp, like this:"
-	@echo "# qcollectiongenerator $(BUILDDIR)/qthelp/FrameworksdeDesarrolloWebenPython.qhcp"
+	@echo "# qcollectiongenerator $(BUILDDIR)/qthelp/frameworks_desarrollo_web_python.qhcp"
 	@echo "To view the help file:"
-	@echo "# assistant -collectionFile $(BUILDDIR)/qthelp/FrameworksdeDesarrolloWebenPython.qhc"
+	@echo "# assistant -collectionFile $(BUILDDIR)/qthelp/frameworks_desarrollo_web_python.qhc"
 
 devhelp:
 	$(SPHINXBUILD) -b devhelp $(ALLSPHINXOPTS) $(BUILDDIR)/devhelp
 	@echo
 	@echo "Build finished."
 	@echo "To view the help file:"
-	@echo "# mkdir -p $$HOME/.local/share/devhelp/FrameworksdeDesarrolloWebenPython"
-	@echo "# ln -s $(BUILDDIR)/devhelp $$HOME/.local/share/devhelp/FrameworksdeDesarrolloWebenPython"
+	@echo "# mkdir -p $$HOME/.local/share/devhelp/frameworks_desarrollo_web_python"
+	@echo "# ln -s $(BUILDDIR)/devhelp $$HOME/.local/share/devhelp/frameworks_desarrollo_web_python"
 	@echo "# devhelp"
 
 epub:
@@ -115,12 +107,6 @@ latexpdf:
 	$(SPHINXBUILD) -b latex $(ALLSPHINXOPTS) $(BUILDDIR)/latex
 	@echo "Running LaTeX files through pdflatex..."
 	$(MAKE) -C $(BUILDDIR)/latex all-pdf
-	@echo "pdflatex finished; the PDF files are in $(BUILDDIR)/latex."
-
-latexpdfja:
-	$(SPHINXBUILD) -b latex $(ALLSPHINXOPTS) $(BUILDDIR)/latex
-	@echo "Running LaTeX files through platex and dvipdfmx..."
-	$(MAKE) -C $(BUILDDIR)/latex all-pdf-ja
 	@echo "pdflatex finished; the PDF files are in $(BUILDDIR)/latex."
 
 text:
@@ -167,17 +153,19 @@ doctest:
 	@echo "Testing of doctests in the sources finished, look at the " \
 	      "results in $(BUILDDIR)/doctest/output.txt."
 
-coverage:
-	$(SPHINXBUILD) -b coverage $(ALLSPHINXOPTS) $(BUILDDIR)/coverage
-	@echo "Testing of coverage in the sources finished, look at the " \
-	      "results in $(BUILDDIR)/coverage/python.txt."
-
-xml:
-	$(SPHINXBUILD) -b xml $(ALLSPHINXOPTS) $(BUILDDIR)/xml
+# Rename index file to the new name index_html for later generate a PDF file.
+mv_index_latex:
+	mv $(SOURCEDIR)/index.rst $(SOURCEDIR)/index_html.rst
+	mv $(SOURCEDIR)/index_latex.rst $(SOURCEDIR)/index.rst
 	@echo
-	@echo "Build finished. The XML files are in $(BUILDDIR)/xml."
+	@echo "Renamed finished. The $(SOURCEDIR)/index_latex.rst file now is $(SOURCEDIR)/index.rst file."
 
-pseudoxml:
-	$(SPHINXBUILD) -b pseudoxml $(ALLSPHINXOPTS) $(BUILDDIR)/pseudoxml
+# Rename index file to the new name index_latex for later generate the HTML files.
+mv_index_html:
+	mv $(SOURCEDIR)/index.rst $(SOURCEDIR)/index_latex.rst
+	mv $(SOURCEDIR)/index_html.rst $(SOURCEDIR)/index.rst
 	@echo
-	@echo "Build finished. The pseudo-XML files are in $(BUILDDIR)/pseudoxml."
+	@echo "Renamed finished. The $(SOURCEDIR)/index_html.rst file now is $(SOURCEDIR)/index.rst file."
+
+# Generate PDF.
+pdf:mv_index_latex clean latexpdf mv_index_html

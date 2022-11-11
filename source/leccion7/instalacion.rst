@@ -53,3 +53,9 @@ Puede probar la instalación hecha en el comando previo del framework Django, co
 ::
 
 	$ python3 -m django --version
+
+
+.. raw:: html
+   :file: ../_templates/partials/soporte_profesional.html
+
+.. disqus::

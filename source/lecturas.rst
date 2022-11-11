@@ -1,18 +1,21 @@
+.. -*- coding: utf-8 -*-
+
+
 .. _lecturas_extras_entrenamiento:
 
 Lecturas suplementarias del entrenamiento
 =========================================
 
-Siempre aprender un nuevo lenguaje de programación tiene nuevos retos desde aprender 
-sobre la filosofía del lenguaje y hasta léxicos propios los cuales hacen característico 
-el uso y expresión de sus programas con este nuevo lenguaje, y sobre todo usando 
-dialectos tan propios como son los frameworks Web, más esto requiere práctica y tiempo 
+Siempre aprender un nuevo lenguaje de programación tiene nuevos retos desde aprender
+sobre la filosofía del lenguaje y hasta léxicos propios los cuales hacen característico
+el uso y expresión de sus programas con este nuevo lenguaje, y sobre todo usando
+dialectos tan propios como son los frameworks Web, más esto requiere práctica y tiempo
 para lograr la fluidez en hablar y escribir programas usando framework en Python.
 
-Hay más contenido complementario o detallada que el contenido del entrenamiento de las 
-6 lecciones cubiertas en este entrenamiento. Al finalizar, yo he compilado una lista 
-de lecturas relacionadas que soporta la información que usted aprende en cada lección. 
-Piensa que esto como materiales suplementarios. Usted puede leerlo en su tiempo libre 
+Hay más contenido complementario o detallada que el contenido del entrenamiento de las
+6 lecciones cubiertas en este entrenamiento. Al finalizar, yo he compilado una lista
+de lecturas relacionadas que soporta la información que usted aprende en cada lección.
+Piensa que esto como materiales suplementarios. Usted puede leerlo en su tiempo libre
 para ayudar a incrementar tanto la profundidad y amplitud en su conocimiento.
 
 Las lecturas están organizada como las lecciones y sus temas.
@@ -61,8 +64,8 @@ Introspección a Python
 
 .. _lecturas_extras_leccion2:
 
-Lección 2 - Base de datos relacional
-------------------------------------
+Lección 2 - Base de datos
+-------------------------
 
 
 Librería SQLAlchemy
@@ -78,14 +81,51 @@ Librería SQLAlchemy
     TODO terminar de escribir esta sección
 
 
-.. _lecturas_suplementarias_leccion3:
+.. _lecturas_extras_leccion3:
 
 
-Lección 3 - Protocolo HTTP en Python 
-------------------------------------
+Lección 3 - Protocolo HTTP
+--------------------------
+
+Introducción a HTTP
+^^^^^^^^^^^^^^^^^^^
+
+- `HTTP - Hypertext Transfer Protocol Overview <https://www.w3.org/Protocols/>`_.
+
+- `World Wide Web Consortium (W3C) <https://www.w3.org/>`_.
+
+- `World Wide Web Consortium (W3C) - España <https://chapters.w3.org/hispano/>`_.
+
+
+Cliente y servidor HTTP
+^^^^^^^^^^^^^^^^^^^^^^^
+
+- `SimpleHTTPServer - Simple HTTP request handler — Python 2.7 documentation <https://docs.python.org/2.7/library/simplehttpserver.html>`_.
+
+- `http.server — HTTP servers — Python 3.7 documentation <https://docs.python.org/3/library/http.server.html>`_.
+
+- `Python: Let’s Create a Simple HTTP Server (Tutorial) <https://www.afternerd.com/blog/python-http-server/>`_.
+
+
+Cliente httpie
+^^^^^^^^^^^^^^
+
+- `cURL <https://curl.haxx.se/>`_, utilidad de línea de comandos y biblioteca para transferir datos con URL.
+
+- `HTTPie - línea de comandos cliente HTTP <https://httpie.org>`_.
+
+- `HTTPie, una herramienta como cURL para humanos <https://unpocodejava.com/2016/07/14/httpie-una-herramienta-curl-like-para-humanos/>`_.
+
+
+Librería requests
+^^^^^^^^^^^^^^^^^
+
+- `requests <http://docs.python-requests.org>`_, Requests: HTTP para Humanos.
+
+- `cURL <https://curl.haxx.se/>`_, herramienta de línea de comandos y biblioteca para transferir datos con URL.
 
 .. todo::
-    TODO escribir esta sección
+    TODO terminar de escribir esta sección
 
 
 .. _lecturas_extras_leccion4:

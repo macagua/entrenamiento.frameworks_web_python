@@ -3,14 +3,14 @@
 Hello World
 ===========
 
-El objeto de esta sección es hacer un demostración local de 
+El objeto de esta sección es hacer un demostración local de
 `Hello World <https://es.wikipedia.org/wiki/Hola_mundo>`_ en Django.
 
 
 Requisitos previos
 ------------------
 
-Para trabajar una aplicación Django requiere instalar la siguiente 
+Para trabajar una aplicación Django requiere instalar la siguiente
 librería:
 
 - :doc:`Django <./instalacion>` framework.
@@ -26,7 +26,7 @@ Crear estructura de proyecto Django, con los siguientes comando:
     $ cd ~/
     $ django-admin startproject helloworld
 
-Este comando crea un directorio el directorio :file:`helloworld` con varios 
+Este comando crea un directorio el directorio :file:`helloworld` con varios
 archivos dentro, a continuación se muestra:
 
 ::
@@ -39,11 +39,11 @@ archivos dentro, a continuación se muestra:
             urls.py
             wsgi.py
 
-Si quiere entender para que funciona cada archivo consulte la 
+Si quiere entender para que funciona cada archivo consulte la
 `documentación <https://docs.djangoproject.com/en/2.1/intro/tutorial01/#creating-a-project>`_.
 
 
-Cree modulo Python llamado :file:`views.py` dentro del directorio 
+Cree modulo Python llamado :file:`views.py` dentro del directorio
 :file:`~/helloworld/helloworld`
 
 ::
@@ -58,7 +58,7 @@ Agregue el siguiente contenido al archivo :file:`~/helloworld/helloworld/views.p
    :lines: 1-4
 
 
-Adapte modulo Python llamado :file:`urls.py` dentro del directorio 
+Adapte modulo Python llamado :file:`urls.py` dentro del directorio
 :file:`~/helloworld/helloworld`
 
 ::
@@ -76,7 +76,7 @@ Agregue el siguiente contenido al archivo :file:`~/helloworld/helloworld/urls.py
 Ejecutar aplicación Django
 --------------------------
 
-Para ejecutar aplicación Web Django, con el siguiente comando: 
+Para ejecutar aplicación Web Django, con el siguiente comando:
 
 ::
 
@@ -84,16 +84,7 @@ Para ejecutar aplicación Web Django, con el siguiente comando:
 
 Abrir en navegador favorito la siguiente dirección http://127.0.0.1:8000/
 
-.. comments:
-
-	.. figure:: ../_static/django-helloworld.png
-	  :class: image-inline
-	  :alt: Hello World en Django
-	  :align: center
-
-	  Hello World en Django
-
-.. figure:: https://raw.githubusercontent.com/Covantec/entrenamiento.frameworks_web_python/master/source/_static/django-helloworld.png
+.. figure:: ../_static/images/django-helloworld.png
   :class: image-inline
   :alt: Hello World en Django
   :align: center
@@ -105,3 +96,9 @@ Mostrara un mensaje **Hello, World!**, como la figura anterior.
 
 .. note::
     El código ejemplo usado puede encontrarlo en: https://github.com/django-ve/django-helloworld
+
+
+.. raw:: html
+   :file: ../_templates/partials/soporte_profesional.html
+
+.. disqus::
