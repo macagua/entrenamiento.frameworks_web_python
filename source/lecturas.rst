@@ -100,8 +100,6 @@ Introducción a HTTP
 Cliente y servidor HTTP
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-- `SimpleHTTPServer - Simple HTTP request handler — Python 2.7 documentation <https://docs.python.org/2.7/library/simplehttpserver.html>`_.
-
 - `http.server — HTTP servers — Python 3.7 documentation <https://docs.python.org/3.7/library/http.server.html>`_.
 
 - `Python: Let’s Create a Simple HTTP Server (Tutorial) <https://www.afternerd.com/blog/python-http-server/>`_.
