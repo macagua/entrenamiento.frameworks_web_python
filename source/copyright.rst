@@ -19,7 +19,7 @@ Autores
 
 Todas esta documentación es licencia por:
 
-* Copyright © 2016 - 2022 **Leonardo J. Caballero G.** Todos los derechos reservados.
+* Copyright © 2018 - 2022 **Leonardo J. Caballero G.** Todos los derechos reservados.
 
   * :email:`Leonardo J. Caballero G. <leonardocaballero@gmail.com>`
 
@@ -30,7 +30,7 @@ Todas esta documentación es licencia por:
      :alt: Leonardo J. Caballero G.
      :target: acerca_de.html#sobre-el-instructor
 
-* Copyright © 2014 - 2016 `Covantec R.L`_. Todos los derechos reservados.
+* Copyright © 2018 - 2019 `Covantec R.L`_. Todos los derechos reservados.
 
   .. figure:: _static/images/covantec_logo_web.jpg
      :align: center
