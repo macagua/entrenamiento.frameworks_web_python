@@ -46,7 +46,7 @@ Eso da como resultado:
 
 **Ejemplo:**
 
-Se utilizará la función ``requests.get()`` en el sitio `https://pythonista.io/cursos <https://pythonista.io/>`_
+Se utilizará la función ``requests.get()`` en el sitio `https://python.org/ <https://python.org/>`_
 para abrir una conexión enviando una petición utilizando el método *GET*. Se desplegarán
 los siguientes datos guardados en el objeto resultante, ligado al nombre ``sitio``.
 
@@ -63,23 +63,25 @@ Los encabezados de la petición contenidos en el atributo ``sitio.headers``.
 
 Eso da como resultado:
 
-.. code-block:: json
+::
 
-    {'Connection': 'keep-alive',
-    'Content-Length': '50872',
-    'Server': 'nginx',
-    'Content-Type': 'text/html; charset=utf-8',
-    'X-Frame-Options': 'DENY',
-    'Via': '1.1 vegur, 1.1 varnish, 1.1 varnish',
-    'Accept-Ranges': 'bytes',
-    'Date': 'Fri, 11 Nov 2022 05:44:23 GMT',
-    'Age': '868',
-    'X-Served-By': 'cache-iad-kiad7000025-IAD, cache-pdk17821-PDK',
-    'X-Cache': 'HIT, HIT',
-    'X-Cache-Hits': '424, 2',
-    'X-Timer': 'S1668145464.920838,VS0,VE0',
-    'Vary': 'Cookie',
-    'Strict-Transport-Security': 'max-age=63072000; includeSubDomains'}
+    {
+        'Connection': 'keep-alive',
+        'Content-Length': '50872',
+        'Server': 'nginx',
+        'Content-Type': 'text/html; charset=utf-8',
+        'X-Frame-Options': 'DENY',
+        'Via': '1.1 vegur, 1.1 varnish, 1.1 varnish',
+        'Accept-Ranges': 'bytes',
+        'Date': 'Fri, 11 Nov 2022 05:44:23 GMT',
+        'Age': '868',
+        'X-Served-By': 'cache-iad-kiad7000025-IAD, cache-pdk17821-PDK',
+        'X-Cache': 'HIT, HIT',
+        'X-Cache-Hits': '424, 2',
+        'X-Timer': 'S1668145464.920838,VS0,VE0',
+        'Vary': 'Cookie',
+        'Strict-Transport-Security': 'max-age=63072000; includeSubDomains'
+    }
 
 
 El mensaje de estado resultante contenido en el atributo ``sitio.status_code``.
@@ -140,8 +142,8 @@ Eso da como resultado:
 **Ejemplo:**
 
 Se utilizará la función requests.get() para acceder
-a https://pythonista.mx (el cual hace un redireccionamiento
-a `https://pythonista.io <https://pythonista.io/../>`_) para abir una
+a https://www.python.org/ (el cual hace un redireccionamiento
+a `https://python.org/ <https://python.org/>`_) para abrir una
 conexión enviando una petición con el método *GET*. Se desplegarán los
 siguientes datos guardados en el objeto resultante, ligado al
 nombre ``sitio``.
@@ -207,7 +209,7 @@ Para desplegar una imagen se utilizará la función ``Image`` del módulo ``iPyt
 
 Eso da como resultado:
 
-    |cerdo.png|
+    |cerdo_png|
 
 Se cerrará la conexión mediante el método ``cerdo.close()``.
 
@@ -231,24 +233,28 @@ de regreso el contenido de la petición.
 
 Eso da como resultado:
 
-.. code-block:: json
+::
 
-    {'args': {},
-     'data': '{"saludo": "Hola"}',
-     'files': {},
-     'form': {},
-     'headers': {'Accept': '*/*',
-      'Accept-Encoding': 'gzip, deflate',
-      'Content-Length': '18',
-      'Content-Type': 'application/json',
-      'Host': 'httpbin.org',
-      'User-Agent': 'python-requests/2.22.0'},
-     'json': {'saludo': 'Hola'},
-     'origin': '200.82.210.213, 200.82.210.213',
-     'url': 'https://httpbin.org/post'}
+    {
+        'args': {},
+        'data': '{"saludo": "Hola"}',
+        'files': {},
+        'form': {},
+        'headers': {'Accept': '*/*',
+        'Accept-Encoding': 'gzip, deflate',
+        'Content-Length': '18',
+        'Content-Type': 'application/json',
+        'Host': 'httpbin.org',
+        'User-Agent': 'python-requests/2.22.0'},
+        'json': {'saludo': 'Hola'},
+        'origin': '200.82.210.213, 200.82.210.213',
+        'url': 'https://httpbin.org/post'
+    }
 
-.. |cerdo.png| image:: https://pythonista.io/cursos/py201/imagenes/puerquito.png/@@images/096baa90-3a9c-492e-b620-cb7ac83d7872.png
+.. |cerdo_png| image:: ../_static/images/cerdo.png
    :class: image-inline
+   :alt: Imagen generada
+   :align: middle
 
 .. raw:: html
    :file: ../_templates/partials/soporte_profesional.html
