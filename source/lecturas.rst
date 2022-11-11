@@ -102,7 +102,7 @@ Cliente y servidor HTTP
 
 - `SimpleHTTPServer - Simple HTTP request handler — Python 2.7 documentation <https://docs.python.org/2.7/library/simplehttpserver.html>`_.
 
-- `http.server — HTTP servers — Python 3.7 documentation <https://docs.python.org/3/library/http.server.html>`_.
+- `http.server — HTTP servers — Python 3.7 documentation <https://docs.python.org/3.7/library/http.server.html>`_.
 
 - `Python: Let’s Create a Simple HTTP Server (Tutorial) <https://www.afternerd.com/blog/python-http-server/>`_.
 
@@ -139,7 +139,7 @@ Introducción a WSGI
 
 - `WSGI <https://wsgi.readthedocs.io/en/latest/>`_.
 
-- wsgiref - `WSGI Utilities and Reference Implementation <https://docs.python.org/3/library/wsgiref.html>`_.
+- wsgiref - `WSGI Utilities and Reference Implementation <https://docs.python.org/3.7/library/wsgiref.html>`_.
 
 .. todo::
     TODO terminar de escribir esta sección
