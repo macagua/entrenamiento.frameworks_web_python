@@ -378,7 +378,14 @@ latex_show_pagerefs = True
 latex_show_urls = "footnote"
 
 # Documents to append as an appendix to all manuals.
-latex_appendices = ["glosario", "licencia"]
+latex_appendices = [
+    "acerca_de",
+    "esquema",
+    "lecturas",
+    "glosario",
+    "copyright",
+    "licencia",
+]
 
 # If false, no module index is generated.
 # latex_domain_indices = True
