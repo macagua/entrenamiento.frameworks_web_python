@@ -691,7 +691,7 @@ módulos propios escritos en Python que tienes instalado en tu sistema.
 .. _`librería del estándar`: https://docs.python.org/es/3.7/library/index.html
 .. _`modo interactivo`: https://es.wikipedia.org/wiki/Python#Modo_interactivo
 .. _`SciPy`: https://en.wikipedia.org/wiki/SciPy
-.. _`ipython`: https://ipython.readthedocs.io/
+.. _`ipython`: https://ipython.readthedocs.io/en/stable/
 .. _`bpython`: https://pypi.org/project/bpython/
 .. _`interprete bpython`: https://bpython-interpreter.org/
 .. _`estilo de completación de lineas de comandos`: https://en.wikipedia.org/wiki/Command_line_completion

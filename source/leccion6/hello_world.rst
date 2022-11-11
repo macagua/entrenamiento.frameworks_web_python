@@ -61,7 +61,7 @@ Mostrara un mensaje **Hello, World!**, como la figura anterior.
 
 
 .. note::
-    El código ejemplo usado puede encontrarlo en: https://github.com/macagua/flask-helloworld
+    El código ejemplo usado puede encontrarlo en: https://github.com/macagua/example.flask.helloworld
 
 
 .. raw:: html

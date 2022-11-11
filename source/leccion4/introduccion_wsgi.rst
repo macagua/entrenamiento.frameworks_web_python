@@ -62,7 +62,7 @@ para integrar los que no lo están.
 Python 2.5 y versiones posteriores vienen con un servidor WSGI
 que se utilizará en este tutorial. En 2.4 y anteriores se puede
 instalar. Para el código de producción, emplee un estándar probado
-en la industria como Apache con `mod_wsgi <https://modwsgi.readthedocs.io/>`_.
+en la industria como Apache con `mod_wsgi <https://modwsgi.readthedocs.io/en/master/>`_.
 
 Todo el código en este tutorial es de bajo nivel y tiene el único
 propósito de demostrar la especificación WSGI en funcionamiento.

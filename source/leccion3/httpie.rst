@@ -4,7 +4,7 @@ Cliente httpie
 ==============
 
 HTTPie (pronunciado aitch-tee-tee-pie) es un cliente HTTP de línea de
-comandos sustituto del `cURL <https://curl.haxx.se/>`_. Su objetivo es
+comandos sustituto del `cURL <https://curl.se/>`_. Su objetivo es
 hacer que la interacción de CLI con los servicios web sea lo más amigable
 posible para los usuarios.
 

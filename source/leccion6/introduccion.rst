@@ -3,12 +3,12 @@
 Introducción
 ============
 
-`Flask <http://flask.pocoo.org/>`_ es un framework minimalista
+`Flask <https://flask.palletsprojects.com/en/2.2.x/>`_ es un framework minimalista
 escrito en Python que permite crear aplicaciones web rápidamente
 y con un mínimo número de líneas de código. Está basado en la
 especificación `WSGI <https://wsgi.readthedocs.io/en/latest/>`_ de
-`Werkzeug <https://www.palletsprojects.com/p/werkzeug/>`_ y el motor
-de plantillas `Jinja2 <https://www.palletsprojects.com/p/jinja/>`_
+`Werkzeug <https://palletsprojects.com/p/werkzeug/>`_ y el motor
+de plantillas `Jinja2 <https://palletsprojects.com/p/jinja/>`_
 con licencia BSD.
 
 .. figure:: ../_static/images/flask-framework.png
@@ -64,19 +64,19 @@ El patrón de diseño MVC es soportado en Flask se divide en tres capas:
 Capa Modelo
 ^^^^^^^^^^^
 
-- `Tutorial SQLAlchemy (Capa modelo) <https://docs.sqlalchemy.org/en/latest/orm/tutorial.html>`_.
+- `Tutorial SQLAlchemy (Capa modelo) <https://docs.sqlalchemy.org/en/20/orm/tutorial.html>`_.
 
-- `Select, Insert, Delete - Flask-SQLAlchemy) <http://flask-sqlalchemy.pocoo.org/2.3/queries/>`_.
+- `Select, Insert, Delete - Flask-SQLAlchemy) <https://flask-sqlalchemy.palletsprojects.com/en/2.x/queries/>`_.
 
 Capa Vista
 ^^^^^^^^^^
 
-- `Sistema de plantillas Jinja2 (Capa vista) <http://jinja.pocoo.org/docs/2.10/templates/>`_.
+- `Sistema de plantillas Jinja2 (Capa vista) <https://jinja.palletsprojects.com/en/2.10.x/templates/>`_.
 
 Capa Controlador
 ^^^^^^^^^^^^^^^^
 
-- `Documentación Flask (Capa Controlador) <http://flask.pocoo.org/>`_.
+- `Documentación Flask (Capa Controlador) <https://flask.palletsprojects.com/en/2.2.x/>`_.
 
 
 .. raw:: html

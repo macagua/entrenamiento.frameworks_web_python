@@ -17,7 +17,7 @@ requiere instalar las siguientes librerías:
 
 - `Flask <https://pypi.org/project/Flask/>`_.
 
-- `Flask-SQLAlchemy <https://pypi.org/project/Flask-SQLAlchemy/>`_.
+- `Flask-SQLAlchemy <https://pypi.org/project/flask-sqlalchemy/>`_.
 
 - `SQLAlchemy <https://pypi.org/project/SQLAlchemy/>`_.
 
@@ -157,10 +157,10 @@ Abrir en navegador >>> http://127.0.0.1:8087
 
 
 .. note::
-    El código ejemplo usado puede encontrarlo en: https://github.com/macagua/flask-crud-app
+    El código ejemplo usado puede encontrarlo en: https://github.com/macagua/example.flask.crud-app
 
 .. tip::
-    Usando el articulo `"Building a CRUD application with Flask and SQLAlchemy" <https://www.codementor.io/garethdwyer/building-a-crud-application-with-flask-and-sqlalchemy-dm3wv7yu2>`_.
+    Usando el articulo `"Building a CRUD application with Flask and SQLAlchemy" <https://www.codementor.io/@garethdwyer/building-a-crud-application-with-flask-and-sqlalchemy-dm3wv7yu2>`_.
 
 
 .. raw:: html

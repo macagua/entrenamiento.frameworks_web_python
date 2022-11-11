@@ -7,7 +7,7 @@ Python, ofrece el acceso a :doc:`bases de datos <./base_datos_relacional>`
 estandarizado por la especificación Database API (DB-API), actualmente
 en la versión 2.0 *(PEP 249: Python Database API Specification v2.0)*.
 
-La `Python DB API 2.0 <http://legacy.python.org/dev/peps/pep-0249/>`_,
+La `Python DB API 2.0 <https://legacy.python.org/dev/peps/pep-0249/>`_,
 es un conjunto de clases y funciones comunes, estandarizadas,
 similares para los distintos motores de bases de datos o wrappers
 alrededor de estos, escritos en Python. Se desarrolla con la

@@ -308,7 +308,7 @@ A continuación una serie de términos usados en las tecnologías Python/Zope/Pl
 .. _`sitio web de PEAK`: http://peak.telecommunity.com/DevCenter/setuptools
 .. _`obtener acceso de escritura al repositorio`: https://old.plone.org/countries/conosur/documentacion/obtener-acceso-de-escritura-al-repositorio-svn-de-plone
 .. _`crear su estructura básica de repositorio`: https://old.plone.org/countries/conosur/documentacion/crear-un-nuevo-proyecto-en-el-repositorio-collective-de-plone
-.. _`enlace`: https://svn.plone.org/svn/collective/
+.. _`enlace`: https://archive.plone.org/old-svn/
 .. _`obtener acceso de escritura`: https://collective.github.io/
 .. _`seguir las reglas en github/collective`: https://collective.github.io/
 .. _`github.com`: https://github.com/collective

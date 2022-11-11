@@ -17,7 +17,7 @@ requiere instalar las siguientes librerías:
 
 - `Flask-Admin <https://pypi.org/project/Flask-Admin/>`_.
 
-- `Flask-SQLAlchemy <https://pypi.org/project/Flask-SQLAlchemy/>`_.
+- `Flask-SQLAlchemy <https://pypi.org/project/flask-sqlalchemy/>`_.
 
 - `Flask-Security <https://pypi.org/project/Flask-Security/>`_.
 
