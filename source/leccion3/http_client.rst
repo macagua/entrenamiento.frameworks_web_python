@@ -18,7 +18,7 @@ con el siguiente codigo fuente:
 
 Guarde el archivo :file:`httpclient.py` y ejecutandolo con el siguiente comando:
 
-::
+.. code-block:: console
 
   $ python httpclient.py
 
@@ -43,9 +43,9 @@ Guarde el archivo :file:`httpclient.py` y ejecutandolo con el siguiente comando:
 
     Si tiene la estructura de archivo previa, entonces ejecute el siguiente comando:
 
-    ::
+    .. code-block:: console
 
-        python httpclient.py
+        python3 httpclient.py
 
 
 .. raw:: html

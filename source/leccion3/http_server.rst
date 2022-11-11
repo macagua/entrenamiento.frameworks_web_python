@@ -17,7 +17,7 @@ HTTP de forma local.
 En Python 3 usted puede desplegar un simple servidor HTTP desde linea de comando, ejecutando
 el siguiente comando:
 
-::
+.. code-block:: console
 
   $ python3 -m http.server
   Serving HTTP on 0.0.0.0 port 8000 ...
@@ -27,7 +27,7 @@ De esta forma, una vez ejecutado el comando, se puede abrir desde con su navegad
 
 Si desea cambiar el puerto de ejecución del servidor HTTP local, ejecute el siguiente comando:
 
-::
+.. code-block:: console
 
   $ python3 -m http.server 8001
   Serving HTTP on 0.0.0.0 port 8001 ...
@@ -38,7 +38,7 @@ De esta forma, una vez ejecutado el comando, se puede abrir desde con su navegad
 
 Si desea cambiar la IP de ejecución del servidor HTTP local, ejecute el siguiente comando:
 
-::
+.. code-block:: console
 
   $ python3 -m http.server 8080 --bind 127.0.0.1
   Serving HTTP on 127.0.0.1 port 8080 ...
@@ -79,7 +79,8 @@ index.html
     Usted puede descargar el código usado en esta sección haciendo clic en los
     siguientes enlaces:
     :download:`httpserver.py <../../recursos/leccion3/httpserver.py>`,
-    y :download:`index.html <../../recursos/leccion3/index.html>`.
+    :download:`index.html <../../recursos/leccion3/index.html>`,
+    y :download:`index2.html <../../recursos/leccion3/index2.html>`.
 
 
 .. tip::
@@ -90,13 +91,14 @@ index.html
 
         leccion3/
         ├── httpserver.py
-        └── index.html
+        ├── index.html
+        └── index2.html
 
     Si tiene la estructura de archivo previa, entonces ejecute el siguiente comando:
 
     ::
 
-        python httpserver.py
+        python3 httpserver.py
 
 
 .. raw:: html

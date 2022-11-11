@@ -64,7 +64,7 @@ Instalación
 
 Es una aplicación Python, por lo que puedo instalarla con:
 
-::
+.. code-block:: console
 
     $ pip3 install httpie
 
@@ -73,7 +73,7 @@ Uso
 
 Una vez instalado podéis ejecutar el "Hello World":
 
-::
+.. code-block:: console
 
     $ http httpie.org
 
