@@ -527,3 +527,13 @@ feed_author = "Leonardo Caballero"
 
 # Set disqus site short name.
 disqus_shortname = "frameworks-de-desarrollo-web-en-python"
+
+# -- Options for main setup --------------------------------------------------
+
+# def setup(app):
+#     from sphinx.util.texescape import tex_replacements
+#    print(tex_replacements)
+#    tex_replacements.append((u"’", u"'"))
+#    tex_replacements.remove((u"’", r"'"))
+#    tex_replacements.remove(('─', r'-'))
+#    tex_replacements.remove(('│', r'\textbar{}'))
