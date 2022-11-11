@@ -39,7 +39,7 @@ Eso da como resultado:
         Sends a GET request.
 
         :param url: URL for the new :class:`Request` object.
-        :param params: (optional) Dictionary or bytes to be sent in the query string for the :class:`Request`.
+        :param params: (optional) Dictionary, list of tuples or bytes to send in the query string for the :class:`Request`.
         :param \*\*kwargs: Optional arguments that ``request`` takes.
         :return: :class:`Response <Response>` object
         :rtype: requests.Response
@@ -89,6 +89,7 @@ El mensaje de estado resultante contenido en el atributo ``sitio.status_code``.
 .. code-block:: pycon
 
     >>> print(sitio.status_code)
+    >>> 200
 
 El contenido de la respuesta contenido en el atributo ``sitio.content``.
 
@@ -113,7 +114,7 @@ Se cerrará la conexión mediante el método ``sitio.close()``.
 
 **Ejemplo:**
 
-Se utilizará la función requests.get() en el sitio https://python.org/ (la cual no
+Se utilizará la función ``requests.get()`` en el sitio https://python.org/ (el cual no
 existe) para abrir una conexión enviando una petición que incluye al método *GET*. Se
 desplegarán los siguientes datos guardados en el objeto resultante, ligado al nombre ``sitio``.
 
@@ -126,7 +127,7 @@ el bloque de código inscrito.
 
 .. code-block:: python
 
-    with requests.get("https://python.org/") as sitio:
+    with requests.get("https://python.net.ve/") as sitio:
         print(sitio.status_code)
         print(sitio.content)
 
@@ -157,7 +158,7 @@ ejecute el bloque de código inscrito.
 
 .. code-block:: python
 
-    with requests.head("https://python.org/") as sitio:
+    with requests.head("https://www.python.org.ve/") as sitio:
         print(sitio.status_code)
         print(sitio.headers)
 
@@ -166,7 +167,7 @@ Eso da como resultado:
 .. code-block:: pycon
 
     301
-    {'Date': 'Thu, 22 Feb 2018 19:19:13 GMT', 'Server': 'Apache/2.4.18 (Ubuntu)', 'Location': 'https://pythonista.io/', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html; charset=iso-8859-1'}
+    {'Connection': 'keep-alive', 'Content-Length': '162', 'Server': 'GitHub.com', 'Content-Type': 'text/html', 'Location': 'https://python.org.ve/', 'X-GitHub-Request-Id': '0826:9F17:11E9180:17AE001:636E4811', 'Accept-Ranges': 'bytes', 'Date': 'Fri, 11 Nov 2022 13:05:33 GMT', 'Via': '1.1 varnish', 'Age': '139', 'X-Served-By': 'cache-bog2260021-BOG', 'X-Cache': 'HIT', 'X-Cache-Hits': '1', 'X-Timer': 'S1668171933.114927,VS0,VE1', 'Vary': 'Accept-Encoding', 'X-Fastly-Request-ID': '5a964704946146b01877b48fec066858a86a3afb'}
 
 
 Ejemplos prácticos para el uso de HTTP
