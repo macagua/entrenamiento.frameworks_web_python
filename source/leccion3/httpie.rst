@@ -8,6 +8,13 @@ comandos sustituto del `cURL <https://curl.se/>`_. Su objetivo es
 hacer que la interacción de CLI con los servicios web sea lo más amigable
 posible para los usuarios.
 
+.. figure:: ../_static/images/httpie_vs_curl.png
+  :class: image-inline
+  :alt: HTTPie vs cURL
+  :align: center
+
+  HTTPie vs cURL
+
 Proporciona un simple comando ``http`` que permite enviar solicitudes
 HTTP arbitrarias utilizando una sintaxis simple y natural, y muestra
 resultados en color. HTTPie se puede usar para probar, depurar y, en
