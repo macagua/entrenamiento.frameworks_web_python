@@ -18,7 +18,7 @@ por la siguiente linea:
 
 .. important::
     Luego ejecútalo el script de nuevo, el servidor estará atendiendo peticiones
-    en la direccion en http://localhost:8051
+    en la dirección en http://localhost:8051
 
 En una máquina más antigua es posible notar que es más lenta. Lo que sucede
 es que el servidor iteraba sobre la cadena y enviaba un solo byte a la vez
@@ -47,7 +47,7 @@ response será la suma de todas las longitudes de la cadena, como en este script
 
         python3 response_iterable.py
 
-    El servidor estará atendiendo peticiones en la direccion en http://localhost:8051
+    El servidor estará atendiendo peticiones en la dirección en http://localhost:8051
 
 ----
 

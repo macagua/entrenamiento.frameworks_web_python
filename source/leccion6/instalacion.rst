@@ -49,6 +49,16 @@ Para instalar las dependencias para usar del framework Flask, con el siguiente c
 
 	$ pip3 install -U Flask
 
+Puede probar si la instalación se realizo correctamente, ejecutando
+el siguiente comando:
+
+.. code-block:: console
+
+  $ python3 -c "import flask ; print(flask.__version__)"
+
+Si muestra el numero de la versión instalada de SQLAlchemy, tiene
+correctamente instalada la librería.
+
 
 .. raw:: html
    :file: ../_templates/partials/soporte_profesional.html

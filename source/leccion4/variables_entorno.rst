@@ -25,7 +25,7 @@ El servidor rellena el diccionario de entorno con variables similares a
 
         python print_environment.py
 
-    El servidor estará atendiendo peticiones en la direccion en http://localhost:8051
+    El servidor estará atendiendo peticiones en la dirección en http://localhost:8051
 
 ----
 
