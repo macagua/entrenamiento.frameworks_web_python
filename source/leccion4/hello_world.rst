@@ -11,7 +11,15 @@ El objeto de esta sección es hacer un demostración local de
 Solicitud del GET
 -----------------
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet volutpat enim tempor dapibus. Aliquam erat volutpat. Ut eu odio lacus. Integer vel tellus fermentum, laoreet lacus ut, tempor enim. Praesent pharetra sit amet libero quis blandit. Vivamus gravida leo ut ex iaculis ullamcorper. Integer ullamcorper, orci nec dignissim faucibus, libero ante porttitor justo, vel molestie magna ligula venenatis nisi. Nulla sagittis dapibus neque. Nulla id aliquet odio, a suscipit lectus. Nam eget eros non urna faucibus mollis. In ultrices maximus enim quis feugiat. In sed suscipit urna, eu interdum enim. Aliquam convallis arcu sapien. Phasellus cursus, enim ac hendrerit molestie, ex elit malesuada urna, non porta massa libero sed magna. Sed a lorem luctus, cursus dui at, vulputate elit. Curabitur ullamcorper, felis sed suscipit bibendum, tellus augue volutpat erat, vitae iaculis lacus nunc non tellus.
+En pocas palabras, una aplicación compatible con WSGI debe proporcionar
+una (función, clase) invocable que acepte un diccionario ``environ`` y una
+función ``start_response``.
+
+Para una comparación familiar de PHP, puede pensar en el diccionario ``environ``
+como una combinación de `$_SERVER`_, `$_GET`_ y `$_POST`_, con procesamiento
+adicional requerido. Se espera que este invocable invoque la función ``start_response``
+con el código de respuesta/datos de encabezado deseados, y luego devuelva un
+byte iterable con el cuerpo de la respuesta.
 
 .. literalinclude:: ../../recursos/leccion4/hello_world_get_request.py
    :language: python
@@ -22,18 +30,28 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet vo
 Solicitud del POST
 ------------------
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet volutpat enim tempor dapibus. Aliquam erat volutpat. Ut eu odio lacus. Integer vel tellus fermentum, laoreet lacus ut, tempor enim. Praesent pharetra sit amet libero quis blandit. Vivamus gravida leo ut ex iaculis ullamcorper. Integer ullamcorper, orci nec dignissim faucibus, libero ante porttitor justo, vel molestie magna ligula venenatis nisi. Nulla sagittis dapibus neque. Nulla id aliquet odio, a suscipit lectus. Nam eget eros non urna faucibus mollis. In ultrices maximus enim quis feugiat. In sed suscipit urna, eu interdum enim. Aliquam convallis arcu sapien. Phasellus cursus, enim ac hendrerit molestie, ex elit malesuada urna, non porta massa libero sed magna. Sed a lorem luctus, cursus dui at, vulputate elit. Curabitur ullamcorper, felis sed suscipit bibendum, tellus augue volutpat erat, vitae iaculis lacus nunc non tellus.
+Ahora que esta familiarizado con la estructura básica de una aplicación
+compatible con WSGI, ahora podemos experimentar con un ejemplo más práctico.
+A continuación, proporcionamos al cliente un formulario simple que publica un
+campo llamado ``name`` proporcionado para que la aplicación lo salude en
+consecuencia.
+
 
 .. literalinclude:: ../../recursos/leccion4/hello_world_post_request.py
    :language: python
    :lines: 1-56
 
-
-.. todo::
-    TODO Terminar de escribir la sección "Introducción a WSGI".
-
+Aunque algo detallado, ha podido crear una aplicación web simple que maneja los
+datos ``POST`` suministrados utilizando la clase ``FieldStorage`` de los módulos
+`CGI`_. Estos son los bloques de construcción muy simplificados utilizados en marcos
+populares como :ref:`Flask <python_leccion6>` y :ref:`Django <python_leccion7>`.
 
 .. raw:: html
    :file: ../_templates/partials/soporte_profesional.html
 
 .. disqus::
+
+.. _`$_SERVER`: https://www.php.net/manual/es/reserved.variables.server.php
+.. _`$_GET`: https://www.php.net/manual/es/reserved.variables.get.php
+.. _`$_POST`: https://www.php.net/manual/es/reserved.variables.post.php
+.. _`CGI`: https://docs.python.org/es/3/library/cgi.html
