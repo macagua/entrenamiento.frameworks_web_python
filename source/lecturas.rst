@@ -67,6 +67,13 @@ Introspección a Python
 Lección 2 - Base de datos
 -------------------------
 
+Interfaz DB-API
+^^^^^^^^^^^^^^^
+
+- `The Novice’s Guide to the Python 3 DB-API <https://philvarner.github.io/pages/novice-python3-db-api.html>`_.
+
+- `Acceso A Bases De Datos Desde Python - Interfaz Db-Api <https://wiki.python.org.ar/dbapi/>`_.
+
 
 Librería SQLAlchemy
 ^^^^^^^^^^^^^^^^^^^
@@ -120,11 +127,6 @@ Librería requests
 
 - `requests <http://docs.python-requests.org>`_, Requests: HTTP para Humanos.
 
-- `cURL <https://curl.se/>`_, herramienta de línea de comandos y libreria para transferir datos con URL.
-
-.. todo::
-    TODO terminar de escribir esta sección
-
 
 .. _lecturas_extras_leccion4:
 
@@ -151,13 +153,13 @@ Lección 5 - Frameworks Web
 
 - `Web framework rankings - HotFrameworks <https://hotframeworks.com/>`_.
 
-- `Flask framework <https://flask.palletsprojects.com/en/2.2.x/>`_.
+- :ref:`Flask framework <lecturas_extras_leccion6>`.
 
-- `Django project <https://www.djangoproject.com/>`_.
+- :ref:`Django <lecturas_extras_leccion7>`.
 
 - `Sanic framework <https://sanic.dev/>`_.
 
-- `Sanic Async Python 3.6+ web server/framework <https://github.com/sanic-org/sanic>`_.
+  - `Sanic Async Python 3.6+ web server/framework <https://github.com/sanic-org/sanic>`_.
 
 .. todo::
     TODO terminar de escribir esta sección

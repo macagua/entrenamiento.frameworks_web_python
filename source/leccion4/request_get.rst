@@ -61,7 +61,7 @@ La etiqueta HTML ``form`` en este script indica al navegador que realice una sol
 
 .. seealso::
 
-    Consulte la sección de :ref:`lecturas suplementarias <lecturas_extras_leccion4>`
+    Consulte la sección de :ref:`lecturas suplementarias <lecturas_extras_leccion2>`
     del entrenamiento para ampliar su conocimiento en esta temática.
 
 
