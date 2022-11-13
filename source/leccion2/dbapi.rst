@@ -30,8 +30,6 @@ Para lograr esto, el manejo de bases de datos en Python siempre sigue
 los siguientes pasos:
 
 
-
-
 Importar el conector
 --------------------
 
@@ -301,13 +299,13 @@ Las librerias de bases de datos relacionales más populares son:
 La librería :doc:`SQLAlchemy <./sqlalchemy>` es el kit de herramientas
 SQL de Python y el mapeador relacional de objetos.
 
+----
 
-Referencias
-...........
 
-- `The Novice’s Guide to the Python 3 DB-API`_.
+.. seealso::
 
-- `Acceso A Bases De Datos Desde Python - Interfaz Db-Api`_.
+    Consulte la sección de :ref:`lecturas suplementarias <lecturas_extras_leccion2>`
+    del entrenamiento para ampliar su conocimiento en esta temática.
 
 
 .. raw:: html
