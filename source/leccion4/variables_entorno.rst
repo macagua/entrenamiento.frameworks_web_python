@@ -4,26 +4,41 @@ Variables de entorno
 ====================
 
 El servidor rellena el diccionario de entorno con variables similares a
-CGI en cada solicitud del cliente. generará todo el diccionario:This script
-
-
+`CGI`_ en cada solicitud del cliente. Es script generará todo el diccionario:
 
 .. literalinclude:: ../../recursos/leccion4/print_environment.py
    :language: python
    :lines: 1-44
 
-Para ejecutar este script, guárdelo como el nombre, ``print_environment.py``
-abra la terminal, navegue hasta el directorio donde se guardó y escriba
-``python3 environment.py`` en la línea de comando.
 
-El servidor estará atendiendo peticiones en la direccion en http://localhost:8051
+.. important::
+    Usted puede descargar el código usado en esta sección haciendo clic
+    :download:`aquí <../../recursos/leccion4/print_environment.py>`.
 
 
-.. todo::
-    TODO Terminar de escribir la sección "Introducción a WSGI".
+.. tip::
+    Para ejecutar el código :file:`print_environment.py`, abra una consola de
+    comando, acceda al directorio donde se encuentra el mismo, y ejecute el siguiente
+    comando:
+
+    .. code-block:: console
+
+        python print_environment.py
+
+    El servidor estará atendiendo peticiones en la direccion en http://localhost:8051
+
+----
+
+
+.. seealso::
+
+    Consulte la sección de :ref:`lecturas suplementarias <lecturas_extras_leccion4>`
+    del entrenamiento para ampliar su conocimiento en esta temática.
 
 
 .. raw:: html
    :file: ../_templates/partials/soporte_profesional.html
 
 .. disqus::
+
+.. _`CGI`: https://docs.python.org/es/3/library/cgi.html

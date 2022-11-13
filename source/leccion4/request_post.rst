@@ -3,16 +3,46 @@
 Solicitud del POST
 ==================
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet volutpat enim tempor dapibus. Aliquam erat volutpat. Ut eu odio lacus. Integer vel tellus fermentum, laoreet lacus ut, tempor enim. Praesent pharetra sit amet libero quis blandit. Vivamus gravida leo ut ex iaculis ullamcorper. Integer ullamcorper, orci nec dignissim faucibus, libero ante porttitor justo, vel molestie magna ligula venenatis nisi. Nulla sagittis dapibus neque. Nulla id aliquet odio, a suscipit lectus. Nam eget eros non urna faucibus mollis. In ultrices maximus enim quis feugiat. In sed suscipit urna, eu interdum enim. Aliquam convallis arcu sapien. Phasellus cursus, enim ac hendrerit molestie, ex elit malesuada urna, non porta massa libero sed magna. Sed a lorem luctus, cursus dui at, vulputate elit. Curabitur ullamcorper, felis sed suscipit bibendum, tellus augue volutpat erat, vitae iaculis lacus nunc non tellus.
+Cuando el método de solicitud es POST, la cadena de consulta se enviará en el cuerpo de
+la solicitud HTTP en lugar de en la URL. El cuerpo de la solicitud se encuentra en el
+archivo ``wsgi.input`` proporcionado por el servidor WSGI como variable de entorno.
+
+Es necesario conocer el tamaño del cuerpo de la respuesta como un número entero para leerlo
+desde ``wsgi.input``. El `PEP 3333 <https://peps.python.org/pep-3333/>`_ dice que la variable
+``CONTENT_LENGTH``, que contiene el tamaño del cuerpo, puede estar vacía o faltante, así que
+léala en un bloque ``try``/``except``.
+
+La etiqueta HTML ``form`` en este script indica al navegador que realice una solicitud POST
+(``method="post"``):
 
 .. literalinclude:: ../../recursos/leccion4/post_request.py
    :language: python
    :lines: 1-85
 
-El servidor estará atendiendo peticiones en la direccion en http://localhost:8080
 
-.. todo::
-    TODO Terminar de escribir la sección "Introducción a WSGI".
+.. important::
+    Usted puede descargar el código usado en esta sección haciendo clic
+    :download:`aquí <../../recursos/leccion4/post_request.py>`.
+
+
+.. tip::
+    Para ejecutar el código :file:`post_request.py`, abra una consola de
+    comando, acceda al directorio donde se encuentra el mismo, y ejecute el siguiente
+    comando:
+
+    .. code-block:: console
+
+        python3 post_request.py
+
+    El servidor estará atendiendo peticiones en la direccion en http://localhost:8080
+
+----
+
+
+.. seealso::
+
+    Consulte la sección de :ref:`lecturas suplementarias <lecturas_extras_leccion4>`
+    del entrenamiento para ampliar su conocimiento en esta temática.
 
 
 .. raw:: html

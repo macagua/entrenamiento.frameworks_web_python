@@ -23,7 +23,7 @@ tipo de software. Es solo una especificación de interfaz mediante la cual el
 servidor y la aplicación se comunican.
 
 Tanto el lado del servidor como la interfaz de la aplicación se especifican en
-el PEP 3333. Si se escribe una aplicación (o framework o kit de herramientas)
+el *PEP 3333*. Si se escribe una aplicación (o framework o kit de herramientas)
 en la especificación WSGI, se ejecutará en cualquier servidor escrito en esa
 especificación.
 
