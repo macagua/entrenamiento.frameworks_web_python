@@ -161,7 +161,7 @@ html_theme = "sphinx_immaterial"
 html_theme_options = {
     "edit_uri": "edit/3.7/source",
     "repo_url": "https://github.com/macagua/entrenamiento.frameworks_web_python",
-    "repo_name": "entrenamiento.python_basico",
+    "repo_name": "entrenamiento.frameworks_web_python",
     "repo_type": "github",
     "icon": {
         "repo": "fontawesome/brands/github",
