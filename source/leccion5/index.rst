@@ -13,7 +13,7 @@ el desarrollo de sitios web dinámicos, aplicaciones web y servicios web.
 Este tipo de frameworks intenta aliviar el exceso de carga asociado con
 actividades comunes usadas en desarrollos web.
 
-.. figure:: ../_static/images/frameworks_web.png
+.. figure:: ../_static/images/web_development_frameworks.png
   :class: image-inline
   :alt: Frameworks Web
   :align: center
@@ -27,6 +27,13 @@ con frecuencia facilitan la reutilización de código.
 
 Frameworks Web en Python
 ------------------------
+
+.. figure:: ../_static/images/web_frameworks.png
+  :class: image-inline
+  :alt: Frameworks Web en Python
+  :align: center
+
+  Frameworks Web en Python
 
 .. todo::
     TODO Escribir la introducción sección "Frameworks Web en Python".
