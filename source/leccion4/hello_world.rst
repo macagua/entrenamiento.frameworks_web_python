@@ -46,6 +46,37 @@ datos ``POST`` suministrados utilizando la clase ``FieldStorage`` de los módulo
 `CGI`_. Estos son los bloques de construcción muy simplificados utilizados en marcos
 populares como :ref:`Flask <python_leccion6>` y :ref:`Django <python_leccion7>`.
 
+
+.. important::
+    Usted puede descargar el código usado en esta sección haciendo clic en los
+    siguientes enlaces: :download:`hello_world_get_request.py <../../recursos/leccion4/hello_world_get_request.py>`
+    y :download:`hello_world_post_request.py <../../recursos/leccion4/hello_world_post_request.py>`.
+
+
+.. tip::
+    Para ejecutar el código :file:`hello_world_get_request.py` y :file:`hello_world_post_request.py`,
+    abra una consola de comando, acceda al directorio donde se encuentra ambos programas:
+
+    ::
+
+        leccion4/
+        ├── hello_world_get_request.py
+        └── hello_world_post_request.py
+
+    Si tiene la estructura de archivo previa, entonces ejecute el siguiente comando:
+
+    ::
+
+        python3 hello_world_get_request.py
+        python3 hello_world_post_request.py
+
+
+.. seealso::
+
+    Consulte la sección de :ref:`lecturas suplementarias <lecturas_extras_leccion4>`
+    del entrenamiento para ampliar su conocimiento en esta temática.
+
+
 .. raw:: html
    :file: ../_templates/partials/soporte_profesional.html
 
