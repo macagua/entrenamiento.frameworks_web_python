@@ -31,8 +31,8 @@ Lección 2 - Base de datos SQL
 -----------------------------
 
 **Descripción:**
-    Conocer las capacidades en Python para realizar conexiones a Base de datos – DB
-    SQL usando el patrón de diseño Object Relation Mapping – ORM.
+    Conocer las capacidades en Python para realizar conexiones a Base de datos - DB
+    SQL usando el patrón de diseño Object Relation Mapping - ORM.
 
 **Práctica:**
     Entender el patrón ORM, instalar librería SQLAlchemy, creación de una aplicación
