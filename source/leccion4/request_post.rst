@@ -34,7 +34,7 @@ La etiqueta HTML ``form`` en este script indica al navegador que realice una sol
 
         python3 post_request.py
 
-    El servidor estará atendiendo peticiones en la direccion en http://localhost:8080
+    El servidor estará atendiendo peticiones en la dirección en http://localhost:8080
 
 ----
 
