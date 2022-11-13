@@ -10,7 +10,7 @@ complejos.
 Los desarrolladores pueden crear rápidamente aplicaciones web y API de
 alta calidad utilizando el marco Django. Esto se debe a que este marco
 de trabajo de desarrollo web Python de primera línea viene con un sólido
-conjunto de funciones y bibliotecas. Esto elimina la necesidad de mucha
+conjunto de funciones y librerias. Esto elimina la necesidad de mucha
 codificación y permite la reutilización del código. Como resultado, el
 proyecto de desarrollo de aplicaciones web agiliza y acorta el tiempo que
 tarda una aplicación en llegar al mercado.

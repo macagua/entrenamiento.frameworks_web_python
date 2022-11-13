@@ -3,7 +3,7 @@
 Web Server Gateway Interface
 ============================
 
-WSGI es una especificación común para servidores web el cual permite que
+`WSGI`_ es una especificación común para servidores web el cual permite que
 diferentes servidores web y framework de aplicaciones interactúen según
 una API común.
 
@@ -35,3 +35,6 @@ A continuación el temario de esta lección:
    :file: ../_templates/partials/soporte_profesional.html
 
 .. disqus::
+
+
+.. _`WSGI`: https://wsgi.readthedocs.io/en/latest/what.html

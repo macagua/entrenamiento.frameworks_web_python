@@ -108,7 +108,7 @@ Cliente y servidor HTTP
 Cliente httpie
 ^^^^^^^^^^^^^^
 
-- `cURL <https://curl.se/>`_, utilidad de línea de comandos y biblioteca para transferir datos con URL.
+- `cURL <https://curl.se/>`_, utilidad de línea de comandos y libreria para transferir datos con URL.
 
 - `HTTPie - línea de comandos cliente HTTP <https://httpie.io/>`_.
 
@@ -120,7 +120,7 @@ Librería requests
 
 - `requests <http://docs.python-requests.org>`_, Requests: HTTP para Humanos.
 
-- `cURL <https://curl.se/>`_, herramienta de línea de comandos y biblioteca para transferir datos con URL.
+- `cURL <https://curl.se/>`_, herramienta de línea de comandos y libreria para transferir datos con URL.
 
 .. todo::
     TODO terminar de escribir esta sección

@@ -20,7 +20,7 @@ actividades comunes usadas en desarrollos web.
 
   Frameworks Web
 
-Por ejemplo, muchos framework proporcionan bibliotecas para acceder a
+Por ejemplo, muchos framework proporcionan librerias para acceder a
 bases de datos, estructuras para plantillas y gestión de sesiones, y
 con frecuencia facilitan la reutilización de código.
 
