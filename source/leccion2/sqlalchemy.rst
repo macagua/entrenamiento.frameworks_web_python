@@ -71,13 +71,13 @@ Requisitos previos
 Actualizar repositorios de paquetes disponibles para instalar, con
 el siguiente comando:
 
-::
+.. code-block:: console
 
   $ sudo apt update
 
 Instalar dependencias mínimas necesarias, con el siguiente comando:
 
-::
+.. code-block:: console
 
   $ sudo apt install python3-dev python3-pip python3-virtualenv git
 
@@ -88,12 +88,14 @@ Entorno virtual Python
 Crear entorno virtual Python en directorio raíz con el siguiente
 comando:
 
-::
+.. code-block:: console
 
   $ virtualenv --python=/usr/bin/python3 ~/venv
 
 
 Activar el entorno virtual Python creado con el siguiente comando:
+
+.. code-block:: console
 
   $ source ~/venv/bin/activate
 
@@ -104,16 +106,16 @@ Instalar paquetes Python
 Para instalar las dependencias para usar la librería SQLAlchemy,
 con el siguiente comando:
 
-::
+.. code-block:: console
 
   $ pip3 install -U SQLAlchemy
 
 Puede probar si la instalación se realizo correctamente, ejecutando
 el siguiente comando:
 
-::
+.. code-block:: console
 
-    python3 -c "import sqlalchemy ; print(sqlalchemy.__version__ )"
+  $ python3 -c "import sqlalchemy ; print(sqlalchemy.__version__)"
 
 Si muestra el numero de la versión instalada de SQLAlchemy, tiene
 correctamente instalada la librería.
