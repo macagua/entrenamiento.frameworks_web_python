@@ -3,7 +3,30 @@
 Respuesta Iterable
 ==================
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet volutpat enim tempor dapibus. Aliquam erat volutpat. Ut eu odio lacus. Integer vel tellus fermentum, laoreet lacus ut, tempor enim. Praesent pharetra sit amet libero quis blandit. Vivamus gravida leo ut ex iaculis ullamcorper. Integer ullamcorper, orci nec dignissim faucibus, libero ante porttitor justo, vel molestie magna ligula venenatis nisi. Nulla sagittis dapibus neque. Nulla id aliquet odio, a suscipit lectus. Nam eget eros non urna faucibus mollis. In ultrices maximus enim quis feugiat. In sed suscipit urna, eu interdum enim. Aliquam convallis arcu sapien. Phasellus cursus, enim ac hendrerit molestie, ex elit malesuada urna, non porta massa libero sed magna. Sed a lorem luctus, cursus dui at, vulputate elit. Curabitur ullamcorper, felis sed suscipit bibendum, tellus augue volutpat erat, vitae iaculis lacus nunc non tellus.
+Si el último script :ref:`print_environment.py <python_wsgi_variables_entorno>`
+funcionó, cambie la línea de retorno:
+
+.. code-block:: python
+
+    return [response_body]
+
+por la siguiente linea:
+
+.. code-block:: python
+
+    return response_body
+
+.. important::
+    Luego ejecútalo el script de nuevo, el servidor estará atendiendo peticiones
+    en la direccion en http://localhost:8051
+
+En una máquina más antigua es posible notar que es más lenta. Lo que sucede
+es que el servidor iteraba sobre la cadena y enviaba un solo byte a la vez
+al cliente. Así que no olvide envolver la respuesta en un mejor rendimiento
+iterable como una lista.
+
+Si el iterable produce más de una cadena, la longitud del cuerpo de la
+response será la suma de todas las longitudes de la cadena, como en este script:
 
 .. literalinclude:: ../../recursos/leccion4/response_iterable.py
    :language: python
@@ -33,10 +56,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet vo
 
     Consulte la sección de :ref:`lecturas suplementarias <lecturas_extras_leccion4>`
     del entrenamiento para ampliar su conocimiento en esta temática.
-
-
-.. todo::
-    TODO Terminar de escribir la sección "Introducción a WSGI".
 
 
 .. raw:: html
