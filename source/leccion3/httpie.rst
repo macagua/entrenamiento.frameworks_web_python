@@ -77,6 +77,12 @@ Una vez instalado podéis ejecutar el "Hello World":
 
     $ http httpie.org
 
+El uso de la herramienta tiene la siguiente sintaxis,
+
+.. code-block:: console
+
+    $ http [flags] [metodo] <url> [item [item]]
+
 
 .. todo::
     TODO Terminar de escribir sobre el paquete "httpie".
