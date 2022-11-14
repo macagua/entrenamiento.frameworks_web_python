@@ -43,3 +43,18 @@ Características
   personalizar la edición, adición y eliminación de elementos.
 
 - Múltiples mecanismos de caché son compatibles con un marco de caché.
+
+
+----
+
+
+.. seealso::
+
+    Consulte la sección de :ref:`lecturas suplementarias <lecturas_extras_leccion7>`
+    del entrenamiento para ampliar su conocimiento en esta temática.
+
+
+.. raw:: html
+   :file: ../_templates/partials/soporte_profesional.html
+
+.. disqus::
