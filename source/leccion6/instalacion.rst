@@ -60,6 +60,15 @@ Si muestra el numero de la versión instalada de SQLAlchemy, tiene
 correctamente instalada la librería.
 
 
+----
+
+
+.. seealso::
+
+    Consulte la sección de :ref:`lecturas suplementarias <lecturas_extras_leccion6>`
+    del entrenamiento para ampliar su conocimiento en esta temática.
+
+
 .. raw:: html
    :file: ../_templates/partials/soporte_profesional.html
 

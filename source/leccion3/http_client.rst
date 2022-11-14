@@ -48,6 +48,15 @@ Guarde el archivo :file:`httpclient.py` y ejecutandolo con el siguiente comando:
         python3 httpclient.py
 
 
+----
+
+
+.. seealso::
+
+    Consulte la sección de :ref:`lecturas suplementarias <lecturas_extras_leccion3>`
+    del entrenamiento para ampliar su conocimiento en esta temática.
+
+
 .. raw:: html
    :file: ../_templates/partials/soporte_profesional.html
 

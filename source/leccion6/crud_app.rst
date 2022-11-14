@@ -163,6 +163,15 @@ Abrir en navegador >>> http://127.0.0.1:8087
     Usando el articulo `"Building a CRUD application with Flask and SQLAlchemy" <https://www.codementor.io/@garethdwyer/building-a-crud-application-with-flask-and-sqlalchemy-dm3wv7yu2>`_.
 
 
+----
+
+
+.. seealso::
+
+    Consulte la sección de :ref:`lecturas suplementarias <lecturas_extras_leccion6>`
+    del entrenamiento para ampliar su conocimiento en esta temática.
+
+
 .. raw:: html
    :file: ../_templates/partials/soporte_profesional.html
 

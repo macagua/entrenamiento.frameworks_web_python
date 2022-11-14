@@ -98,6 +98,15 @@ Mostrara un mensaje **Hello, World!**, como la figura anterior.
     El código ejemplo usado puede encontrarlo en: https://github.com/django-ve/django-helloworld
 
 
+----
+
+
+.. seealso::
+
+    Consulte la sección de :ref:`lecturas suplementarias <lecturas_extras_leccion7>`
+    del entrenamiento para ampliar su conocimiento en esta temática.
+
+
 .. raw:: html
    :file: ../_templates/partials/soporte_profesional.html
 
