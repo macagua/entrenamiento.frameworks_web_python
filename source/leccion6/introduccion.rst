@@ -79,6 +79,15 @@ Capa Controlador
 - `Documentación Flask (Capa Controlador) <https://flask.palletsprojects.com/en/2.2.x/>`_.
 
 
+----
+
+
+.. seealso::
+
+    Consulte la sección de :ref:`lecturas suplementarias <lecturas_extras_leccion6>`
+    del entrenamiento para ampliar su conocimiento en esta temática.
+
+
 .. raw:: html
    :file: ../_templates/partials/soporte_profesional.html
 
