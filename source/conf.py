@@ -518,7 +518,7 @@ quizdown_config = {
 # -- Options for yasfb extension ---------------------------------------------
 
 # Set the Feed Base Url.
-feed_base_url = "https://entrenamiento-frameworks-web-python.readthedocs.io/es/3.7/"
+feed_base_url = "https://entrenamiento-frameworks-web-python.readthedocs.io/es/latest/"
 
 # Set the Feed Author Name.
 feed_author = "Leonardo Caballero"
