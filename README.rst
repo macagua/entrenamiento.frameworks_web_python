@@ -19,7 +19,7 @@ La estructura general de contenidos esta confirmada por los principales archivos
   Describe el contenido del entrenamiento.
 
 **source**
-  Describe los contenidos de las lecciones *1, 2, 3, 4, 5, 6, 7* del entrenamiento.
+  Describe los contenidos de los módulos *1, 2, 3, 4, 5, 6, 7* del entrenamiento.
   Además de otros temas complementarios de Python.
 
 
@@ -86,7 +86,7 @@ en diversos formatos, actualmente se tiene bien soportado los siguientes:
 Formato HTML
 ------------
 
-Usted puede generar la documentación en HTML del módulo *1, 2, 3, 4, 5, 6, 7*;
+Usted puede generar la documentación en HTML de los módulos *1, 2, 3, 4, 5, 6, 7*;
 ejecute los siguientes comando:
 
 ::
@@ -100,7 +100,7 @@ con su navegador Web favorito (Mozilla Firefox, Google Chrome, etc).
 Formato PDF
 -----------
 
-Usted puede generar la documentación en PDF del módulo *1, 2, 3, 4, 5, 6, 7*;
+Usted puede generar la documentación en PDF de los módulos *1, 2, 3, 4, 5, 6, 7*;
 ejecute los siguientes comando:
 
 ::
