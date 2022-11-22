@@ -108,18 +108,27 @@ con el siguiente comando:
 
 .. code-block:: console
 
-  $ pip3 install -U SQLAlchemy
+  $ pip install -U SQLAlchemy
 
 Puede probar si la instalación se realizo correctamente, ejecutando
 el siguiente comando:
 
 .. code-block:: console
 
-  $ python3 -c "import sqlalchemy ; print(sqlalchemy.__version__)"
+  $ python -c "import sqlalchemy ; print(sqlalchemy.__version__)"
 
 Si muestra el numero de la versión instalada de SQLAlchemy, tiene
 correctamente instalada la librería.
 
+.. todo::
+    TODO Terminar de escribir esta sección.
+
+----
+
+.. seealso::
+
+    Consulte la sección de :ref:`lecturas suplementarias <lectura_extras_leccion2>`
+    del entrenamiento para ampliar su conocimiento en esta temática.
 
 .. raw:: html
    :file: ../_templates/partials/soporte_profesional.html

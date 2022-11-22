@@ -1,11 +1,24 @@
 .. _python_leccion2:
 
-Base de datos
-=============
+Persistencia de datos
+=====================
 
-Una `base de datos <https://es.wikipedia.org/wiki/Base_de_datos>`_
-es un conjunto de datos pertenecientes a un mismo contexto y
-almacenados sistemáticamente para su posterior uso.
+La librería estándar incluye una variedad de módulos para datos persistentes.
+El patrón más común para almacenar datos de objetos de Python para su reutilización
+es serializarlos con el módulo ``pickle`` y luego escribirlos directamente en un
+archivo o almacenarlos usando uno de los muchos formatos de base de datos de pares
+*clave-valor* disponibles con la API del módulo ``dbm`` . Si no le importa el formato
+``dbm`` subyacente, el módulo ``shelve`` proporciona la mejor interfaz de persistencia.
+
+Si le importa, puede usar uno de los otros módulos basados en directamente
+el módulo ``dbm``.
+
+- ``pickle`` y cPickle: serialización de objetos de Python
+
+- ``sqlite3`` - Base de datos relacional integrada SQLite3
+
+Para la serialización en la web, el módulo ``json`` puede ser una mejor
+opción, ya que su formato es más portátil.
 
 En esta lección se busca introducir al uso de Base de datos relacional
 con programación en Python, sus características, modos de instalación,
@@ -15,8 +28,10 @@ la Web para tomar en cuenta. A continuación el temario de esta lección:
 .. toctree::
    :maxdepth: 2
 
+   pickle
    base_datos_relacional
    dbapi
+   sqlite3
    sqlalchemy
 
 ----
