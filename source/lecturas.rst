@@ -121,6 +121,8 @@ Cliente httpie
 
 - `HTTPie, una herramienta como cURL para humanos <https://unpocodejava.com/2016/07/14/httpie-una-herramienta-curl-like-para-humanos/>`_.
 
+- `curl vs HTTPie <https://daniel.haxx.se/docs/curl-vs-httpie.html>`_.
+
 
 Librería requests
 ^^^^^^^^^^^^^^^^^
