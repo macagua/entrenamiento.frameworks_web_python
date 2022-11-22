@@ -42,8 +42,10 @@ los siguientes comando:
 ::
 
   $ sudo apt update
-  $ sudo apt install -y python3-dev python-pip python-setuptools git
-  $ sudo apt install -y texlive-latex-base texlive-latex-recommended texlive-lang-spanish
+  $ sudo apt install -y python3-dev python3-pip python-setuptools git
+  $ sudo apt install -y texlive texlive-base texlive-latex-base texlive-extra-utils \
+                        texlive-font-utils texlive-fonts-recommended texlive-latex-extra \
+                        texlive-latex-recommended texlive-lang-spanish dvi2ps dvipng latexmk
   $ sudo pip3 install virtualenv
 
 
@@ -115,7 +117,7 @@ Estatus de Calidad
 ==================
 
 .. image:: https://readthedocs.org/projects/entrenamiento-frameworks-web-python/badge/?version=latest
-   :target: http://entrenamiento-frameworks-web-python.rtfd.io/
+   :target: https://entrenamiento-frameworks-web-python.rtfd.io/
    :align: left
    :alt: entrenamiento-frameworks-web-python ReadTheDocs build status
 
