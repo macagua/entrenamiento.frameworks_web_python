@@ -7,11 +7,11 @@ En Python, ofrece el acceso a :doc:`bases de datos relacionales <./base_datos_re
 estandarizado por la especificación Database API (DB-API), actualmente
 en la versión 2.0 *(PEP 249: Python Database API Specification v2.0)*.
 
-Gracias a esto, se puede acceder a cualquier base de datos utlizando la misma
+Gracias a esto, se puede acceder a cualquier base de datos utilizando la misma
 interfaz (ya sea un motor remoto, local, `ODBC`_, etc.). Se puede comparar con DAO,
 ADO, ADO.NET en el mundo Microsoft, o a `JDBC`_ en el mundo Java.
 
-Esta especificacion es un conjunto de clases y funciones comunes,
+Esta especificación es un conjunto de clases y funciones comunes,
 estandarizadas, similares para los distintos motores de bases de datos
 o wrappers alrededor de estos, escritos en Python. Se desarrolla con la
 finalidad de lograr la consistencia entre todos estos módulos, y ampliar
@@ -23,8 +23,8 @@ las posibilidades de crear código portable entre las distintas bases de datos.
     de datos `NoSQL`_ no sería conveniente.
 
 Es decir, el mismo codigo se podría llegar a usar para cualquier base de datos,
-tomando siempre los recaudos necesarios: (lenguaje SQL estándard, estilo de
-parametros soportado, etc.)
+tomando siempre los recaudos necesarios: (lenguaje SQL estándar, estilo de
+parámetros soportado, etc.)
 
 Para lograr esto, el manejo de bases de datos en Python siempre sigue
 los siguientes pasos:
@@ -33,13 +33,13 @@ los siguientes pasos:
 Importar el conector
 --------------------
 
-La forma mas comunes de importar la libreria de implementación DB-API
+La forma mas comunes de importar la librería de implementación DB-API
 
 .. code-block:: python
 
     import databasepackage as base_datos
 
-En general, la única método que se usa directamente en la libreria
+En general, la única método que se usa directamente en la librería
 es ``connect``, ya que la mayoría de las demás operaciones se realizan
 en objetos devueltos después de llamar a ``this``.
 
@@ -58,7 +58,7 @@ la conexión y el cursor. Primero obtienes una conexión a una base de datos:
     conexion = base_datos.connect()
 
 Hay varias formas de especificar los parámetros de conexión de la base
-de datos. Para la mayoría de las librerias, los valores predeterminados
+de datos. Para la mayoría de las librerías, los valores predeterminados
 para el método de conexión se conectarán a una base de datos instalada
 localmente configurada de manera predeterminada.
 
@@ -84,7 +84,7 @@ transaccionales, consultas SQL y manipulación de datos.
     cursor = conexion.cursor()
 
 La mejor manera de usar la conexión y el cursor es desde los controladores
-de recursos. La mayoría de las librerias de bases de datos admiten el manejo
+de recursos. La mayoría de las librerías de bases de datos admiten el manejo
 de recursos en la conexión, pero solo unas pocas lo admiten en el cursor.
 Usando `with`_, tanto la conexión como el cursor se cierran después del uso.
 
@@ -92,18 +92,18 @@ Usando `with`_, tanto la conexión como el cursor se cierran después del uso.
 
     server_params = {
         "database": "nomina",  # Nombre de la base de datos
-        "host": "localhost",  # Direccion IP, local o remota del motor de la base de datos
-        "port": "5432",  # Puerto de conexion al motor de la base de datos
-        "user": "postgres",  # Nombre del usuario de conexion a la base de datos
-        "password": "postgres",  # Contrasena del usuario de conexion a la base de datos
+        "host": "localhost",  # Dirección IP, local o remota del motor de la base de datos
+        "port": "5432",  # Puerto de conexión al motor de la base de datos
+        "user": "postgres",  # Nombre del usuario de conexión a la base de datos
+        "password": "postgres",  # Contraseña del usuario de conexión a la base de datos
     }
 
     with base_datos.connect(**server_params) as conexion:
         with conexion.cursor() as cursor:
-            pass  # Los comandos SQL van aqui
+            pass  # Los comandos SQL van aquí
 
 Si solo se admite el manejo de recursos de conexión, entonces el cursor
-debe estar envuelto en un bloque de sentencias ``try``/``finally`` para
+debe estar envuelto en un bloque de sentencias ``try`` / ``finally`` para
 garantizar que el cursor esté cerrado:
 
 .. code-block:: python
@@ -111,7 +111,7 @@ garantizar que el cursor esté cerrado:
     with sqlite3.connect(":memory:") as conexion:
         cursor = conexion.cursor()
         try:
-            pass  # Los comandos SQL van aqui
+            pass  # Los comandos SQL van aquí
         except Exception as e:
             print(e)
         finally:
@@ -126,7 +126,7 @@ Si no se admite el manejo de recursos de conexión, ambos tienen métodos
     conexion = sqlite3.connect(":memory:")
     cursor = conexion.cursor()
     try:
-        pass  # Los comandos SQL van aqui
+        pass  # Los comandos SQL van aquí
     except Exception as e:
         print(e)
     finally:
@@ -135,7 +135,7 @@ Si no se admite el manejo de recursos de conexión, ambos tienen métodos
         if cursor:
             cursor.close()
 
-Todas las librerias para bases de datos relacionales que soportan transacciones
+Todas las librerías para bases de datos relacionales que soportan transacciones
 iniciarán automáticamente una nueva cuando la primera declaración en un cursor
 nuevo o inmediatamente después de una llamada al método ``commit()`` un cursor.
 Todos los cursores en la conexión se ejecutarán dentro de esa transacción.
@@ -152,11 +152,11 @@ del mismo nombre:
     conexion.commit()
 
 La confirmación automática también se puede habilitar configurando
-``conexion.autocommit = True`` en la libreria ``pyscopg2`` después de crear la
+``conexion.autocommit = True`` en la librería ``pyscopg2`` después de crear la
 conexión pero antes de la primera ejecución.
 
 El manejo de excepciones se puede hacer con la clase `Exception`_ genérica o con
-las clases específicas para cada libreria.
+las clases específicas para cada librería.
 
 
 Ejecutar una consulta
@@ -189,7 +189,7 @@ Se recomienda encarecidamente utilizar una de estas formas de sustitución en lu
 una construcción o reemplazo directo de cadenas. Usar los operadores de formato integrados de
 Python no es la forma correcta de hacer esto.
 
-Solo se requiere que cada DB-API admita uno de estos, pero la mayoría de las librerias admiten
+Solo se requiere que cada DB-API admita uno de estos, pero la mayoría de las librerías admiten
 más de uno.
 
 - sqlite3: ``qmark``, ``numeric`` y ``named``.
@@ -281,12 +281,12 @@ del cursor del conector a usado.
     conexion.close()
 
 
-Librerias mas populares
+Librerías mas populares
 -----------------------
 
-Las librerias de bases de datos relacionales más populares son:
+Las librerías de bases de datos relacionales más populares son:
 
-- SQLite: `sqlite3 <https://docs.python.org/3.7/library/sqlite3.html>`_.
+- SQLite: :ref:`sqlite3 <python_modulo_sqlite3>`.
 
 - Pyscopg: `psycopg2 <https://www.psycopg.org/docs/>`_.
 
@@ -294,9 +294,9 @@ Las librerias de bases de datos relacionales más populares son:
 
 - Oracle: `cx_Oracle <https://cx-oracle.readthedocs.io/en/latest/>`_.
 
-- MS SQL Server: `pypyodbc <https://pypi.org/project/pypyodbc/>`_, `pyodbc <https://pypi.org/project/pyodbc/>`_, `pymssql <https://pymssql.readthedocs.io/>`_.
+- MS SQL Server: `pypyodbc <https://pypi.org/project/pypyodbc/>`_, `pyodbc <https://pypi.org/project/pyodbc/>`_, `pymssql <https://pymssql.readthedocs.io/en/latest/>`_.
 
-La librería :doc:`SQLAlchemy <./sqlalchemy>` es el kit de herramientas
+La librería :ref:`SQLAlchemy <python_sqlalchemy>` es el kit de herramientas
 SQL de Python y el mapeador relacional de objetos.
 
 ----
