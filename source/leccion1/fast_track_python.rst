@@ -50,7 +50,8 @@ la técnica *herencia simple* de Clases en Python 3:
 
 .. literalinclude:: ../../recursos/leccion1/clases.py
    :language: python
-   :lines: 6-159
+   :linenos:
+   :lines: 6-189
 
 
 ----
