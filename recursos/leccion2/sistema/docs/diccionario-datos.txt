@@ -1,0 +1,36 @@
+#===============================================================================
+#==   Data Dictionary File for Database : sistema (Build 41)
+#==
+#== Format: table, field
+#===============================================================================
+
+#== clientes ===================================================================
+
+'clientes',    'id'
+'clientes',    'nombre'
+'clientes',    'apellido'
+'clientes',    'codigo_postal'
+'clientes',    'telefono'
+
+#== ciudades ===================================================================
+
+'ciudades',    'id'
+'ciudades',    'nombre'
+'ciudades',    'estado'
+'ciudades',    'poblacion'
+
+#== estados ====================================================================
+
+'estados',     'id'
+'estados',     'codigo'
+'estados',     'nombre'
+'estados',     'pais'
+'estados',     'poblacion'
+
+#== pais =======================================================================
+
+'pais',        'id'
+'pais',        'nombre'
+'pais',        'codigo'
+
+#===============================================================================
