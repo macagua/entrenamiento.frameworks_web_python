@@ -37,7 +37,7 @@ Si requiere insertar registro en una tabla, a continuación tiene un ejemplo:
 .. literalinclude:: ../../recursos/leccion2/sistema/sistema_data.sql
     :language: sql
     :linenos:
-    :lines: 2-5
+    :lines: 2-7
 
 
 Consultar registros de tabla
@@ -48,7 +48,7 @@ Si requiere consultar registros de tabla, a continuación tiene un ejemplo:
 .. literalinclude:: ../../recursos/leccion2/sistema/sistema_data.sql
     :language: sql
     :linenos:
-    :lines: 8-9
+    :lines: 10-11
 
 
 Actualizar registro de tabla
@@ -59,7 +59,7 @@ Si requiere actualizar registro de tabla, a continuación tiene un ejemplo:
 .. literalinclude:: ../../recursos/leccion2/sistema/sistema_data.sql
     :language: sql
     :linenos:
-    :lines: 12-13
+    :lines: 14-15
 
 
 Eliminar registro de tabla
@@ -70,7 +70,7 @@ Si requiere eliminar registro de tabla, a continuación tiene un ejemplo:
 .. literalinclude:: ../../recursos/leccion2/sistema/sistema_data.sql
     :language: sql
     :linenos:
-    :lines: 16
+    :lines: 18
 
 
 Asi de esta forma puede crear una tabla, ingresar, consultar, actualizar y eliminar
