@@ -13,9 +13,9 @@ archivo o almacenarlos usando uno de los muchos formatos de base de datos de par
 Si le importa, puede usar uno de los otros módulos basados en directamente
 el módulo ``dbm``.
 
-- ``pickle`` y cPickle: serialización de objetos de Python
+- ``pickle`` y cPickle: serialización de objetos de Python.
 
-- ``sqlite3`` - Base de datos relacional integrada SQLite3
+- ``sqlite3`` - Base de datos relacional integrada SQLite3.
 
 Para la serialización en la web, el módulo ``json`` puede ser una mejor
 opción, ya que su formato es más portátil.
