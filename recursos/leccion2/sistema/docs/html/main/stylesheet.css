@@ -1,0 +1,85 @@
+/*******************************************************/
+/* header used only in the db-index file               */
+/*******************************************************/
+
+table.indexHeader
+{
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : small;
+	padding : 0;
+	width : 100%;
+}
+
+/*******************************************************/
+/* navigation tree for the left frame                  */
+/*******************************************************/
+
+p.navTree
+{
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : small;
+}
+
+/*******************************************************/
+/* style used for every navigation bar                 */
+/*******************************************************/
+
+table.navBar
+{
+	font-family : Arial, Helvetica, sans-serif;
+	font-weight : bold;
+	font-size : x-small;
+	text-align : center;
+	width : 100%;
+}
+
+/*******************************************************/
+/* styles used for entity names and parts              */
+/*******************************************************/
+
+tr.title
+{
+	font-family : Arial, Helvetica, sans-serif;
+	font-weight : bold;
+	font-size : x-large;
+	background : #ccccff;
+}
+
+/*******************************************************/
+
+tr.paragr
+{
+	font-family : Arial, Helvetica, sans-serif;
+	font-weight : bold;
+	font-size : large;
+	background : #a0d0f0;
+}
+
+/*******************************************************/
+/* background used for revisions, tablespaces, datatyp.*/
+/*******************************************************/
+
+tr.header
+{
+	background : #e8ffff;
+}
+
+/*******************************************************/
+/* background used for sql entities (proc/func/views)  */
+/*******************************************************/
+
+tr.sql
+{
+	background : #e8e8e8;
+}
+
+/*******************************************************/
+
+pre.sql
+{
+	background : #e8e8e8;
+	border : thin solid black;
+	padding : 4px;
+}
+
+/*******************************************************/

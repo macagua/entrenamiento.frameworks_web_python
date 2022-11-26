@@ -22,7 +22,7 @@ las posibilidades de crear código portable entre las distintas bases de datos.
     relacionales, pero implementarla, en lo posible, en motores de base
     de datos `NoSQL`_ no sería conveniente.
 
-Es decir, el mismo codigo se podría llegar a usar para cualquier base de datos,
+Es decir, el mismo código se podría llegar a usar para cualquier base de datos,
 tomando siempre los recaudos necesarios: (lenguaje SQL estándar, estilo de
 parámetros soportado, etc.)
 
@@ -36,6 +36,7 @@ Importar el conector
 La forma mas comunes de importar la librería de implementación DB-API
 
 .. code-block:: python
+    :linenos:
 
     import databasepackage as base_datos
 
@@ -54,6 +55,7 @@ Los dos objetos de nivel superior cuando se trabaja con DB-API son
 la conexión y el cursor. Primero obtienes una conexión a una base de datos:
 
 .. code-block:: python
+    :linenos:
 
     conexion = base_datos.connect()
 
@@ -66,6 +68,7 @@ Algunas bases de datos tienen sus propias opciones, como ``sqlite3`` tiene
 la opción para una base de datos en memoria no persistente:
 
 .. code-block:: python
+    :linenos:
 
     conexion = sqlite3.connect(":memory:")
 
@@ -80,6 +83,7 @@ A continuación, se obtiene un cursor, que se utilizará para ejecutar comandos
 transaccionales, consultas SQL y manipulación de datos.
 
 .. code-block:: python
+    :linenos:
 
     cursor = conexion.cursor()
 
@@ -89,6 +93,7 @@ de recursos en la conexión, pero solo unas pocas lo admiten en el cursor.
 Usando `with`_, tanto la conexión como el cursor se cierran después del uso.
 
 .. code-block:: python
+    :linenos:
 
     server_params = {
         "database": "nomina",  # Nombre de la base de datos
@@ -107,6 +112,7 @@ debe estar envuelto en un bloque de sentencias ``try`` / ``finally`` para
 garantizar que el cursor esté cerrado:
 
 .. code-block:: python
+    :linenos:
 
     with sqlite3.connect(":memory:") as conexion:
         cursor = conexion.cursor()
@@ -122,6 +128,7 @@ Si no se admite el manejo de recursos de conexión, ambos tienen métodos
 ``close()`` que deben llamarse como parte de un bloque finalmente:
 
 .. code-block:: python
+    :linenos:
 
     conexion = sqlite3.connect(":memory:")
     cursor = conexion.cursor()
@@ -147,6 +154,7 @@ automáticamente. La reversión y la confirmación se realizan con los métodos
 del mismo nombre:
 
 .. code-block:: python
+    :linenos:
 
     conexion.rollback()
     conexion.commit()
@@ -169,6 +177,7 @@ Un cursor tiene solo dos métodos, ``execute`` y ``executemany``, que se utiliza
 para todas las consultas y `DML`_:
 
 .. code-block:: python
+    :linenos:
 
     cursor.execute("SELECT * FROM empleados")
 
@@ -209,30 +218,35 @@ o un diccionario para parámetros con nombre.
 qmark:
 
 .. code-block:: python
+    :linenos:
 
     cursor.execute("SELECT * FROM empleados WHERE nombre = ?", ("Leonardo",))
 
 numeric:
 
 .. code-block:: python
+    :linenos:
 
     cursor.execute("SELECT * FROM empleados WHERE nombre = :1", ("Leonardo",))
 
 named:
 
 .. code-block:: python
+    :linenos:
 
     cursor.execute("SELECT * FROM empleados WHERE nombre = :nombre", {"nombre": "Leonardo"})
 
 format:
 
 .. code-block:: python
+    :linenos:
 
     cursor.execute("SELECT * FROM empleados WHERE nombre = %s", ("Leonardo",))
 
 pyformat:
 
 .. code-block:: python
+    :linenos:
 
     cursor.execute(
         "SELECT * FROM empleados WHERE nombre = %(nombre)s", {"nombre": "Leonardo"}
@@ -251,6 +265,7 @@ resultados de la base de datos hasta que hacemos una llamada para buscarlos.
 Se usan los métodos de búsqueda para obtener resultados de la consulta:
 
 .. code-block:: python
+    :linenos:
 
     cursor.fetchall()  # devuelve una lista
     cursor.fetchone()  # devuelve un objecto
@@ -261,6 +276,7 @@ especificadas en DB-API. Por ejemplo, ``psycopg`` hace que el objeto cursor sea 
 lo que puede recorrer de manera escalable un conjunto de resultados potencialmente grande:
 
 .. code-block:: python
+    :linenos:
 
     cursor.execute(
         "SELECT * FROM empleados WHERE nombre = %(nombre)s", {"nombre": "Leonardo"}
@@ -277,6 +293,7 @@ Se puede Cerrar el cursor a la base de datos usando la método ``close``
 del cursor del conector a usado.
 
 .. code-block:: python
+    :linenos:
 
     conexion.close()
 

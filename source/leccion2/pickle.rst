@@ -4,7 +4,7 @@ pickle - Serialización de objetos
 =================================
 
 .. note::
-    **Propósito:** es una biblioteca para implementa protocolos binarios para serializar
+    **Propósito:** es una libraría para implementa protocolos binarios para serializar
     y deserializar una estructura de objetos Python.
 
 La *serialización* es el proceso de convertir un objeto en una secuencia de bytes
