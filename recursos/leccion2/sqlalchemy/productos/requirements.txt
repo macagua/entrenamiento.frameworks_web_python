@@ -1,0 +1,2 @@
+# Install the packages from PyPi repository.
+SQLAlchemy>=1.4.36
