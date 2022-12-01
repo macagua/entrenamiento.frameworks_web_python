@@ -17,9 +17,9 @@ requiere instalar las siguientes librerías:
 
 - `Flask <https://pypi.org/project/Flask/>`_.
 
-- `Flask-SQLAlchemy <https://pypi.org/project/flask-sqlalchemy/>`_.
+- :ref:`SQLAlchemy <python_sqlalchemy>`.
 
-- `SQLAlchemy <https://pypi.org/project/SQLAlchemy/>`_.
+- `Flask-SQLAlchemy <https://pypi.org/project/flask-sqlalchemy/>`_.
 
 Actualizar repositorios de paquetes disponibles para instalar,
 con el siguiente comando:
