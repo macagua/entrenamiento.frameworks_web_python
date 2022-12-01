@@ -3,9 +3,12 @@
 Base de datos relacional
 ========================
 
-Es un tipo de :doc:`bases de datos <./index>`
-(BD) que cumple con el modelo relacional (el modelo más utilizado
-actualmente para implementar las BD ya planificadas).
+Una `base de datos`_ es un conjunto de datos pertenecientes a un mismo
+contexto y almacenados sistemáticamente para su posterior uso.
+
+Una base de datos relacional, es un tipo de bases de datos (BD) que
+cumple con el modelo relacional (el modelo más utilizado actualmente
+para implementar las BD ya planificadas).
 
 El sistema de gestión de bases de datos relacionales o Relational
 Database Management System (RDBMS), es el software utilizado para
@@ -18,8 +21,11 @@ Por defecto todos los sistemas de bases de datos relacionales utilizan
 el *Structured Query Language* (`SQL <https://es.wikipedia.org/wiki/SQL>`_)
 para consultar y mantener la base de datos.
 
-Crear una tabla
-^^^^^^^^^^^^^^^
+
+.. _python_base_crear_tabla:
+
+Crear tablas
+^^^^^^^^^^^^
 
 Si requiere crear una tabla, a continuación tiene un ejemplo:
 
@@ -29,8 +35,10 @@ Si requiere crear una tabla, a continuación tiene un ejemplo:
     :lines: 47-58
 
 
-Insertar registro en una tabla
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. _python_base_ingresar_registro:
+
+Insertar registros
+^^^^^^^^^^^^^^^^^^
 
 Si requiere insertar registro en una tabla, a continuación tiene un ejemplo:
 
@@ -40,8 +48,10 @@ Si requiere insertar registro en una tabla, a continuación tiene un ejemplo:
     :lines: 2-7
 
 
-Consultar registros de tabla
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. _python_base_consultar_registro:
+
+Consultar registros
+^^^^^^^^^^^^^^^^^^^
 
 Si requiere consultar registros de tabla, a continuación tiene un ejemplo:
 
@@ -51,8 +61,10 @@ Si requiere consultar registros de tabla, a continuación tiene un ejemplo:
     :lines: 10-11
 
 
-Actualizar registro de tabla
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. _python_base_actualizar_registro:
+
+Actualizar registros
+^^^^^^^^^^^^^^^^^^^^
 
 Si requiere actualizar registro de tabla, a continuación tiene un ejemplo:
 
@@ -62,8 +74,10 @@ Si requiere actualizar registro de tabla, a continuación tiene un ejemplo:
     :lines: 14-15
 
 
-Eliminar registro de tabla
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. _python_base_eliminar_registro:
+
+Eliminar registros
+^^^^^^^^^^^^^^^^^^
 
 Si requiere eliminar registro de tabla, a continuación tiene un ejemplo:
 
@@ -94,3 +108,5 @@ registro a dicha tabla.
    :file: ../_templates/partials/soporte_profesional.html
 
 .. disqus::
+
+.. _`base de datos`: https://es.wikipedia.org/wiki/Base_de_datos
