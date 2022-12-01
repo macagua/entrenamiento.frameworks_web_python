@@ -264,7 +264,7 @@ precisamente, en cada uno de los modelos.
 
 A continuación, le presento como debe quedar el archivo ``db.py``:
 
-.. literalinclude:: ../../recursos/leccion12/sqlalchemy/productos/db.py
+.. literalinclude:: ../../recursos/leccion2/sqlalchemy/productos/db.py
     :language: python
     :linenos:
     :lines: 1-18
@@ -273,7 +273,7 @@ Por tanto, lo siguiente que debe hacer es crear el modelo ``Productos``. Crea un
 nuevo archivo en el directorio ``productos`` llamado ``models.py`` y
 añade el código que te muestro a continuación:
 
-.. literalinclude:: ../../recursos/leccion12/sqlalchemy/productos/models.py
+.. literalinclude:: ../../recursos/leccion2/sqlalchemy/productos/models.py
     :language: python
     :linenos:
     :lines: 1-23
@@ -560,28 +560,28 @@ A continuación la estructura de proyecto ``productos``
 
 *Archivo requirements.txt*
 
-.. literalinclude:: ../../recursos/leccion12/sqlalchemy/productos/requirements.txt
+.. literalinclude:: ../../recursos/leccion2/sqlalchemy/productos/requirements.txt
     :language: python
     :linenos:
     :lines: 1-2
 
 *Archivo db.py*
 
-.. literalinclude:: ../../recursos/leccion12/sqlalchemy/productos/db.py
+.. literalinclude:: ../../recursos/leccion2/sqlalchemy/productos/db.py
     :language: python
     :linenos:
     :lines: 1-18
 
 *Archivo models.py*
 
-.. literalinclude:: ../../recursos/leccion12/sqlalchemy/productos/models.py
+.. literalinclude:: ../../recursos/leccion2/sqlalchemy/productos/models.py
     :language: python
     :linenos:
     :lines: 1-23
 
 *Archivo main.py*
 
-.. literalinclude:: ../../recursos/leccion12/sqlalchemy/productos/main.py
+.. literalinclude:: ../../recursos/leccion2/sqlalchemy/productos/main.py
     :language: python
     :linenos:
     :lines: 1-144
