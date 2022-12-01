@@ -1,13 +1,15 @@
 .. _python_sqlalchemy:
 
-Librería SQLAlchemy
-===================
+SQLAlchemy
+==========
 
 Muchas aplicaciones manipulan información que persiste en una base de datos.
 En Python existen múltiples conectores para acceder y trabajar con una base
 de datos, puedes usar directamente conectores que implementan la interfaz de
-comunicación con las bases de datos más conocidas, como *PostgreSQL*, *MySQL*,
-*Oracle*, *MongoDB*, etc. O en su lugar, puedes usar `SQLAlchemy`_.
+comunicación con las bases de datos relacionales más conocidas, como
+:ref:`PostgreSQL <python_pkg_postgresql>`, :ref:`MySQL <python_pkg_mysql>`,
+*Oracle*, bases de datos *NoSQL* como `MongoDB`_, etc. O en su lugar, puedes
+usar `SQLAlchemy`_.
 
 
 La librería ``SQLAlchemy`` es el kit de herramientas SQL de Python y el
@@ -47,7 +49,7 @@ Las principales características de ``SQLAlchemy`` incluyen:
   vez mediante uniones, o por consulta por colección en todo el conjunto
   de resultados.
 
-- Un sistema de construcción Core SQL y una capa de interacción DBAPI.
+- Un sistema de construcción Core SQL y una capa de interacción :ref:`DBAPI <python_dbapi>`.
   ``SQLAlchemy`` Core es independiente del ORM y es una capa de abstracción
   de base de datos completa por derecho propio, e incluye un lenguaje de
   expresión SQL basado en Python extensible, metadatos de esquema,
@@ -55,52 +57,49 @@ Las principales características de ``SQLAlchemy`` incluyen:
 
 - Se supone que todas las restricciones de clave primaria y externa son
   compuestas y naturales. Por supuesto, las claves primarias de enteros
-  sustitutos siguen siendo la norma, pero ``SQLAlchemy`` nunca asume ni codifica
-  los códigos de este modelo.
+  sustitutos siguen siendo la norma, pero ``SQLAlchemy`` nunca asume ni
+  codifica los códigos de este modelo.
 
 - Base de datos de introspección y generación. Los esquemas de la base
   de datos se pueden "reflejar" en un solo paso en las estructuras de
   Python que representan los metadatos de la base de datos; esas mismas
-  estructuras pueden generar declaraciones CREATE de inmediato, todas
+  estructuras pueden generar declaraciones ``CREATE`` de inmediato, todas
   dentro del Core, independientemente del ORM.
 
 .. _python_sqlalchemy_funcionamiento:
 
-¿Cómo funciona SQLALchemy?
---------------------------
+¿Cómo funciona?
+---------------
 
-SQLAlchemy proporciona una interfaz única para comunicarte con los diferentes
-drivers de bases de datos Python que implementan el estándar *Python DBAPI*.
+``SQLAlchemy`` proporciona una interfaz única para comunicarte con los diferentes
+drivers de bases de datos Python que implementan el estándar *Python*
+:ref:`DBAPI <python_dbapi>`.
 
 Este estándar, especifica cómo las librerías Python que se integran con las
-bases de datos deben exponer sus interfaces. Por tanto, al usar SQLAlchemy
+bases de datos deben exponer sus interfaces. Por tanto, al usar ``SQLAlchemy``
 no interactuarás directamente con dicho API, sino con la interfaz que precisamente
-proporciona SQLAlchemy. Esto es lo que permite cambiar el motor de base de datos
+proporciona ``SQLAlchemy``. Esto es lo que permite cambiar el motor de base de datos
 de una aplicación sin modificar apenas el código que interactúa con los datos.
 
-En definitiva, al usar SQLAlchemy es necesario instalar también un driver que
-implemente la interfaz *DBAPI* para la base de datos que vayas a utilizar.
+En definitiva, al usar ``SQLAlchemy`` es necesario instalar también un driver que
+implemente la interfaz :ref:`DBAPI <python_dbapi>` para la base de datos que vayas a utilizar.
 
 Ejemplos de estos drivers son:
 
--  *psycopg* para *PostgreSQL*
+-  :ref:`psycopg <python_pkg_postgresql>` para *PostgreSQL*
 
--  *mysql-connector* para *MySQL*
+-  :ref:`mysql-connector <python_pkg_mysql>` para *MySQL*
 
 -  *cx_Oracle* para *Oracle*
 
+
+.. _python_sqlalchemy_instalar:
 
 Instalación
 -----------
 
 Para instalar la librería ``SQLAlchemy`` debe seguir los siguientes
 pasos:
-
-Instalar paquetes Python
-^^^^^^^^^^^^^^^^^^^^^^^^
-
-Para instalar las dependencias para usar la librería ``SQLAlchemy``,
-con el siguiente comando:
 
 .. code-block:: console
 
@@ -119,7 +118,7 @@ correctamente instalada la librería. Con esto, ya tiene todo listo para continu
 .. _python_sqlalchemy_engine:
 
 Crear el Engine
-^^^^^^^^^^^^^^^
+---------------
 
 Lo primero que hay que hacer para trabajar con SQLAlchemy es crear un ``engine``.
 El ``engine`` es el punto de entrada a la base de datos, es decir, el que permite
@@ -145,7 +144,7 @@ Vamos a crear un ``engine``. Para ello, añade un nuevo módulo Python llamado
 
 Como puedes observar, a la función ``create_engine()`` se le pasa la cadena
 de conexión a la base de datos. En este caso, la cadena de conexión a la base de
-datos Sqlite es ``"sqlite:///{DIR_ARCHIVO}{DB_ARCHIVO}"``.
+datos SQLite es ``"sqlite:///{DIR_ARCHIVO}{DB_ARCHIVO}"``.
 
 Crear el ``engine`` no hace que la aplicación se conecte a la base de datos
 inmediatamente, este hecho se pospone para cuando es necesario.
@@ -153,7 +152,7 @@ inmediatamente, este hecho se pospone para cuando es necesario.
 .. _python_sqlalchemy_pool_conexiones:
 
 Pool de conexiones
-^^^^^^^^^^^^^^^^^^
+------------------
 
 ``SQLAlchemy`` utiliza el patrón *Pool de objetos* para manejar las conexiones a la
 base de datos.
@@ -170,7 +169,7 @@ en la configuración de ``SQLAlchemy``.
 .. _python_sqlalchemy_dialectos_base_datos:
 
 Dialectos de base de datos
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------
 
 A pesar de que el lenguaje SQL es universal, cada motor de base de datos
 introduce ciertas variaciones propietarias sobre dicho lenguaje. A esto se le
@@ -185,7 +184,7 @@ pocos cambios en tu código.
 .. _python_sqlalchemy_sesiones:
 
 Sesiones
-^^^^^^^^
+--------
 
 Una vez creado el ``engine``, lo siguiente que debes hacer para trabajar con
 ``SQLAlchemy`` es crear una sesión. Una sesión viene a ser como una transacción,
@@ -193,7 +192,7 @@ es decir, un conjunto de operaciones de base de datos que, bien se ejecutan toda
 de forma atómica, bien no se ejecuta ninguna (si ocurre un fallo en alguna de las
 operaciones).
 
-Desde el punto de vista de SQLAlchemy, una sesión registra una lista de objetos
+Desde el punto de vista de ``SQLAlchemy``, una sesión registra una lista de objetos
 creados, modificados o eliminados dentro de una misma transacción, de manera que,
 cuando se confirma la transacción, se reflejan en base de datos todas la
 operaciones involucradas (o ninguna si ocurre cualquier error).
@@ -222,8 +221,8 @@ a la misma para obtener las sesiones, objeto ``session``.
 
 .. _python_sqlalchemy_modelos:
 
-Crear los modelos para trabajar con tablas
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Crear los modelos
+-----------------
 
 En este punto, ya tiene casi todo listo para interactuar con el ORM.
 Ahora le voy a conocer donde realmente ocurre la *magia*: los modelos.
@@ -260,10 +259,10 @@ el que te muestro a continuación:
 Al final del mismo hemos creado una clase llamada ``Base`` con el método
 ``declarative_base()``. Esta clase será de la que hereden todos los modelos y tiene
 la capacidad de realizar el mapeo correspondiente a partir de la
-metainformación (atributos de clase, nombre de la clase, etc.) que encuentre,
+meta información (atributos de clase, nombre de la clase, etc.) que encuentre,
 precisamente, en cada uno de los modelos.
 
-A continuación, le presento como debe quedar  el archivo ``db.py``:
+A continuación, le presento como debe quedar el archivo ``db.py``:
 
 .. literalinclude:: ../../recursos/leccion12/sqlalchemy/productos/db.py
     :language: python
@@ -282,7 +281,7 @@ añade el código que te muestro a continuación:
 Asi de esta forma tiene definido una clase modelo llamado ``Productos`` la cual mapea
 la tabla ``productos``.
 
-.. _python_sqlalchemy_mapeo-clase-tabla:
+.. _python_sqlalchemy_mapeo_clase_tabla:
 
 Mapeo clase-tabla
 ^^^^^^^^^^^^^^^^^
@@ -315,10 +314,11 @@ Este será el atributo que representa a la *clave primaria* de la tabla.
   es necesario indicar el valor de esta columna ya que lo establecerá la base de
   datos cuando se confirmen los cambios.
 
+
 .. _python_sqlalchemy_create:
 
-Recrear las tablas en la base de datos
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Crear tablas
+------------
 
 Una vez definidos los modelos, hay que crear las tablas correspondientes.
 
@@ -336,16 +336,16 @@ Añade el siguiente código fuente al archivo ``main.py``:
 
     if __name__ == "__main__":
         Base.metadata.create_all(engine)
-        print("Creación exitosa de la tabla productos!\n")
+        print("¡Creación exitosa de la tabla productos!\n")
 
 Lo importante en este punto es la línea ``Base.metadata.create_all(engine)``.
-En ella estamos indicando a SQLAlchemy que cree, si no existen, las tablas de todos
+En ella estamos indicando a ``SQLAlchemy`` que cree, si no existen, las tablas de todos
 los modelos que encuentre en la aplicación. Sin embargo, para que esto ocurra es necesario
 que cualquier modelo se haya importado previamente antes de llamar a la función ``create_all()``.
 
 .. important::
-  Si un modelo no ha sido importado en el código antes de llamar a la función ``create_all()``,
-  no se tendrá en cuenta para crear su tabla correspondiente.
+    Si un modelo no ha sido importado en el código antes de llamar a la función ``create_all()``,
+    no se tendrá en cuenta para crear su tabla correspondiente.
 
 Ejecuta ahora el programa con el siguiente comando:
 
@@ -357,15 +357,16 @@ El anterior código al ejecutar debe mostrar el siguiente mensaje:
 
 .. code-block:: console
 
-    Creación exitosa de la tabla productos!
+    ¡Creación exitosa de la tabla productos!
 
 Se ha creado la tabla ``productos`` en la base de datos ``productos.sqlite3``. Verás que aparece un
 archivo con dicho nombre en el directorio ``productos``.
 
+
 .. _python_sqlalchemy_insertar_modelo:
 
-Insertar registro en una tabla
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Insertar registros
+------------------
 
 Va a crear varias filas en la tabla ``productos``. Como te he indicado anteriormente,
 una fila de una tabla se corresponde con un objeto Python. Por tanto, para crear una
@@ -391,12 +392,12 @@ Añade un método ``ingresar_data()`` del archivo ``main.py`` con el siguiente c
         session.add_all([agua, mantequilla, queso])
         session.commit()
         print(arroz.id)
-        print("Inserción exitosa de los 4 productos!\n")
+        print("¡Inserción exitosa de los 4 productos!\n")
 
 
     if __name__ == "__main__":
         Base.metadata.create_all(engine)
-        print("Creación exitosa de la tabla productos!\n")
+        print("¡Creación exitosa de la tabla productos!\n")
         ingresar_data()
 
 Te explico paso a paso el código y lo que ocurre. Inicialmente se crea el objeto ``arroz``
@@ -413,14 +414,15 @@ El anterior código al ejecutar debe mostrar el siguiente mensaje:
 
 .. code-block:: console
 
-    Creación exitosa de la tabla productos!
+    ¡Creación exitosa de la tabla productos!
 
-    Inserción exitosa de los 4 productos!
+    ¡Inserción exitosa de los 4 productos!
+
 
 .. _python_sqlalchemy_consultas:
 
-Consultar registros de tabla
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Consultar registros
+-------------------
 
 Las consultas devuelven modelos
 
@@ -444,9 +446,11 @@ La variable ``productos`` es de tipo ``Query`` pero todavía no se ha ejecutado 
 de datos, para ello, debemos indicarle qué operación queremos realizar. Las más comunes son
 las siguientes:
 
+
 .. _python_sqlalchemy_obtener_objeto_por_id:
 
-**Obtener un objeto a partir de su id**
+Obtener un objeto a partir de su id
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: python
     :linenos:
@@ -456,9 +460,11 @@ las siguientes:
 El método ``get()`` devuelve un objeto del tipo indicado en la ``Query`` a partir de su
 ``primary_key``. Si no encuentra el objeto, devuelve ``None``.
 
+
 .. _python_sqlalchemy_consulta_todos:
 
-**Obtener los objetos de una consulta**
+Obtener los objetos de una consulta
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Para obtener todos los objetos de un tabla o consulta, simplemente hay que llamar al
 método ``all()``. Este método devuelve una lista con los objetos devueltos por la
@@ -472,9 +478,11 @@ consulta:
 También puedes llamar al método ``first()``. El método ``first()`` devuelve el primer objeto encontrado
 por la consulta. Es útil si sabes que solo existe un elemento que cumpla una determinada condición.
 
+
 .. _python_sqlalchemy_consulta_contar_filas:
 
-**Contar el número de elementos devueltos por una consulta**
+Contar el número de elementos devueltos por una consulta
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Si quieres contar el número de elementos que devuelve una consulta, utiliza el método ``count()``:
 
@@ -486,7 +494,8 @@ Si quieres contar el número de elementos que devuelve una consulta, utiliza el 
 
 .. _python_sqlalchemy_consulta_aplicar_filtros:
 
-**Aplicar filtros a una consulta**
+Aplicar filtros a una consulta
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Para aplicar un filtro a una consulta, lo que sería la cláusula *WHERE* de *SQL*,
 puedes llamar a los métodos ``filter_by(keyword)`` o ``filter()``:
@@ -500,8 +509,8 @@ puedes llamar a los métodos ``filter_by(keyword)`` o ``filter()``:
 
 .. _python_sqlalchemy_actualizar:
 
-Actualizar registro de tabla
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Actualizar registros
+--------------------
 
 Si requiere actualizar registro de tabla, a continuación tiene un ejemplo:
 
@@ -517,8 +526,8 @@ tipo :ref:`diccionario <python_dict>`.
 
 .. _python_sqlalchemy_eliminar:
 
-Eliminar registro de tabla
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Eliminar registros
+------------------
 
 Si requiere eliminar registro de tabla, a continuación tiene un ejemplo:
 
@@ -530,10 +539,11 @@ Si requiere eliminar registro de tabla, a continuación tiene un ejemplo:
 
 El método ``delete()`` le permite eliminar el registro en base a la clave primaria del campo ``id``.
 
-.. _python_sqlalchemy_estructura_proyecto:
+
+.. _python_sqlalchemy_scaffolding:
 
 Estructura de proyecto
-^^^^^^^^^^^^^^^^^^^^^^
+----------------------
 
 A continuación la estructura de proyecto ``productos``
 
@@ -603,19 +613,6 @@ El anterior código al ejecutar debe mostrar el siguiente mensaje:
 
     ¡Consulta todos los productos con mas atributos!
     Arroz 1.25
-    (venv) macagua@DESKTOP-6TO8Q2G:~/proyectos/macagua/entrenamiento.data_scientist_python$ python recursos/leccion12/sqlalchemy/productos/main.py
-    ¡Creación exitosa de la tabla productos!
-
-    ¡Inserción exitosa de los 4 productos!
-
-    ¡Consulta todos los productos!
-    Arroz
-    Agua
-    Mantequilla
-    Queso
-
-    ¡Consulta todos los productos con mas atributos!
-    Arroz 1.25
     Agua 0.3
     Mantequilla 3.56
     Queso 8.56
@@ -668,3 +665,4 @@ tabla usando ``SQLAlchemy``.
 .. disqus::
 
 .. _`SQLAlchemy`: https://pypi.org/project/SQLAlchemy/
+.. _`MongoDB`: https://www.mongodb.com/
