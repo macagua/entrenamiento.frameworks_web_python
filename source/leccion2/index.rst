@@ -31,8 +31,11 @@ la Web para tomar en cuenta. A continuación el temario de esta lección:
    pickle
    base_datos_relacional
    dbapi
-   sqlite3
+   sqlite
+   mysql
+   postgresql
    sqlalchemy
+   sqlacodegen
 
 ----
 

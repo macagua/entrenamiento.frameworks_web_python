@@ -1,0 +1,2 @@
+# Install the packages from PyPi repository.
+psycopg2==2.9.5

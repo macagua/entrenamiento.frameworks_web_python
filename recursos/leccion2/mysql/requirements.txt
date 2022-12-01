@@ -1,0 +1,2 @@
+# Install the packages from PyPi repository.
+mysql-connector-python>=8.0.31

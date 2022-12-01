@@ -184,15 +184,70 @@ para todas las consultas y `DML`_:
 Para consultas que involucran parámetros, hay cinco estilos de sustitución integrados
 en los métodos ``execute``:
 
-- qmark ``INSERT INTO empleados(nombre, last_name, fecha_nacimiento) VALUES (?, ?, ?)``.
 
-- numeric ``INSERT INTO empleados(nombre, apellido, fecha_nacimiento) VALUES (:1, :2, :3)``.
+.. _python_dbapi_execute_qmark:
 
-- named ``INSERT INTO empleados(nombre, apellido, fecha_nacimiento) VALUES (:nombre, :apellido, :fecha_nacimiento)``.
+**qmark**
 
-- format ``INSERT INTO empleados(nombre, apellido, fecha_nacimiento) VALUES (%s, %s, %s)``.
+.. code-block:: sql
+    :linenos:
 
-- pyformat ``INSERT INTO empleados(nombre, apellido, fecha_nacimiento) VALUES (%(nombre)s, %(apellido)s, %(fecha_nacimiento)s)``.
+    INSERT INTO empleados
+        (nombre, apellido, fecha_nacimiento)
+    VALUES
+        (?, ?, ?)
+
+
+.. _python_dbapi_execute_numeric:
+
+**numeric**
+
+.. code-block:: sql
+    :linenos:
+
+    INSERT INTO empleados
+        (nombre, apellido, fecha_nacimiento)
+    VALUES
+        (:1, :2, :3)
+
+
+.. _python_dbapi_execute_named:
+
+**named**
+
+.. code-block:: sql
+    :linenos:
+
+    INSERT INTO empleados
+        (nombre, apellido, fecha_nacimiento)
+    VALUES
+        (:nombre, :apellido, :fecha_nacimiento)
+
+
+.. _python_dbapi_execute_format:
+
+**format**
+
+.. code-block:: sql
+    :linenos:
+
+    INSERT INTO empleados
+        (nombre, apellido, fecha_nacimiento)
+    VALUES
+        (%s, %s, %s)
+
+
+.. _python_dbapi_execute_pyformat:
+
+**pyformat**
+
+.. code-block:: sql
+    :linenos:
+
+    INSERT INTO empleados
+        (nombre, apellido, fecha_nacimiento)
+    VALUES
+        (%(nombre)s, %(apellido)s, %(fecha_nacimiento)s)
 
 Se recomienda encarecidamente utilizar una de estas formas de sustitución en lugar de realizar
 una construcción o reemplazo directo de cadenas. Usar los operadores de formato integrados de
@@ -201,49 +256,49 @@ Python no es la forma correcta de hacer esto.
 Solo se requiere que cada DB-API admita uno de estos, pero la mayoría de las librerías admiten
 más de uno.
 
-- sqlite3: ``qmark``, ``numeric`` y ``named``.
+- sqlite3: :ref:`qmark <python_dbapi_execute_qmark>`, :ref:`numeric <python_dbapi_execute_numeric>` y :ref:`named <python_dbapi_execute_named>`.
 
-- pyscopg: ``format``, ``pyformat``.
+- pyscopg: :ref:`format <python_dbapi_execute_format>` y :ref:`pyformat <python_dbapi_execute_pyformat>`.
 
-- PyMySQL: ``format``.
+- PyMySQL: :ref:`format <python_dbapi_execute_format>`.
 
-- cx_Oracle: ``named``.
+- cx_Oracle: :ref:`named <python_dbapi_execute_named>`.
 
 Si desea indicar al menos uno de los estilos que admite su librería DB-API, cada librería tiene
 una variable global ``paramstyle`` que tiene el valor, por ejemplo, ``sqlite3.paramstyle``
 
-Use marcadores de posición en la declaración y luego pase una tupla para parámetros posicionales
-o un diccionario para parámetros con nombre.
+Use marcadores de posición en la declaración y luego pase una :ref:`tupla <python_tuple>`
+para parámetros posicionales o un :ref:`diccionario <python_dict>` para parámetros con nombre.
 
-qmark:
+**qmark**
 
 .. code-block:: python
     :linenos:
 
     cursor.execute("SELECT * FROM empleados WHERE nombre = ?", ("Leonardo",))
 
-numeric:
+**numeric**
 
 .. code-block:: python
     :linenos:
 
     cursor.execute("SELECT * FROM empleados WHERE nombre = :1", ("Leonardo",))
 
-named:
+**named**
 
 .. code-block:: python
     :linenos:
 
     cursor.execute("SELECT * FROM empleados WHERE nombre = :nombre", {"nombre": "Leonardo"})
 
-format:
+**format**
 
 .. code-block:: python
     :linenos:
 
     cursor.execute("SELECT * FROM empleados WHERE nombre = %s", ("Leonardo",))
 
-pyformat:
+**pyformat**
 
 .. code-block:: python
     :linenos:
@@ -253,8 +308,8 @@ pyformat:
     )
 
 
-Obtener los datos
------------------
+Consultar registros
+-------------------
 
 Se puede Obtener los datos a la base de datos usando la método ``fetch``
 del cursor del conector a usado o iterar sobre el cursor.
@@ -303,15 +358,15 @@ Librerías mas populares
 
 Las librerías de bases de datos relacionales más populares son:
 
-- SQLite: :ref:`sqlite3 <python_modulo_sqlite3>`.
+- :ref:`sqlite3 <python_modulo_sqlite3>` para conexiones a SQLite.
 
-- Pyscopg: `psycopg2 <https://www.psycopg.org/docs/>`_.
+- `psycopg2 <https://www.psycopg.org/docs/>`_ para conexiones a PostgreSQL.
 
-- MySQL: `mysql <http://dev.mysql.com/doc/connector-python/en/>`_.
+- `mysql <http://dev.mysql.com/doc/connector-python/en/>`_ para conexiones a MySQL.
 
-- Oracle: `cx_Oracle <https://cx-oracle.readthedocs.io/en/latest/>`_.
+- `cx_Oracle <https://cx-oracle.readthedocs.io/en/latest/>`_ para conexiones a Oracle.
 
-- MS SQL Server: `pypyodbc <https://pypi.org/project/pypyodbc/>`_, `pyodbc <https://pypi.org/project/pyodbc/>`_, `pymssql <https://pymssql.readthedocs.io/en/latest/>`_.
+- `pypyodbc <https://pypi.org/project/pypyodbc/>`_, `pyodbc <https://pypi.org/project/pyodbc/>`_, `pymssql <https://pymssql.readthedocs.io/en/latest/>`_ para conexiones a MS SQL Server.
 
 La librería :ref:`SQLAlchemy <python_sqlalchemy>` es el kit de herramientas
 SQL de Python y el mapeador relacional de objetos.
