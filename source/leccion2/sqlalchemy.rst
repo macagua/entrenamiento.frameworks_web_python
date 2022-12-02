@@ -86,7 +86,7 @@ implemente la interfaz :ref:`DBAPI <python_dbapi>` para la base de datos que vay
 
 Ejemplos de estos drivers son:
 
--  :ref:`psycopg <python_pkg_postgresql>` para *PostgreSQL*
+-  :ref:`psycopg <python_pkg_postgresql>` para conexiones a *PostgreSQL*.
 
 -  :ref:`PyMySQL <python_pkg_mysql>` para conexiones a *MySQL*.
 

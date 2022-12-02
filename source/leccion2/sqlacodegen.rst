@@ -100,27 +100,15 @@ de ``sqlacodegen``, con el siguiente comando:
 
 .. code-block:: console
 
+    $> .\sqlacodegen.exe --generator declarative mysql+pymysql://USER:PASSW@HOST:PORT/DB --outfile models.py
+
+
 PostgreSQL
 ^^^^^^^^^^
 
-Para configurar el ``engine`` con :ref:`PostgreSQL <python_pkg_postgresql>` debe definir las variables a continuación:
-
-``USER``
-    Usuario de conexión a la base de datos.
-
-``PASSW``
-    Contraseña del usuario de conexión a la base de datos.
-
-``HOST``
-    IP o dirección DNS de conexión al servidor de la base de datos.
-
-``PORT``
-    Puerto de conexión al servidor de la base de datos, por defecto es **5492**.
-
-``DB``
-    Nombre de la base de datos a cual conectar.
-
-Las variables anteriores deben ser reemplazadas con sus propios datos.
+Para configurar el ``engine`` con ``PostgreSQL`` debe definir la :ref:`cadena de conexión <python_psycopg2_conn_strs>`
+que esta compuesto por varios parámetros, los cuales deben ser reemplazadas con sus propios datos
+en la linea de comando con el comando ``sqlacodegen``.
 
 .. tip::
     Para conectarte al servidor ``PostgreSQL`` necesite el paquete :ref:`psycopg2 <python_psycopg2_instalar>`.
@@ -131,6 +119,10 @@ de ``sqlacodegen``, con el siguiente comando:
 .. code-block:: console
 
     $ sqlacodegen --generator declarative postgresql://USER:PASSW@HOST:PORT/DB --outfile models.py
+
+.. code-block:: console
+
+    $> .\sqlacodegen.exe --generator declarative postgresql://USER:PASSW@HOST:PORT/DB --outfile models.py
 
 
 Si necesita más tipos de cadenas de conexión o :ref:`engine <python_sqlalchemy_engine>`, puede
@@ -161,7 +153,7 @@ A continuación la estructura de proyecto ``sistema``
     ├── models.py
     ├── requirements.txt
     ├── sistema.db
-    └── sistema_data.sql
+    └── venezuela_data.sql
 
 *Archivo requirements.txt*
 

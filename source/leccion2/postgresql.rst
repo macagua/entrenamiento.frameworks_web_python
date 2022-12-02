@@ -6,7 +6,7 @@ PostgreSQL
 .. note::
     **Propósito:** Es un Adaptador Python de base de datos `PostgreSQL`_.
 
-Psycopg, es el adaptador de base de datos PostgreSQL más popular para el lenguaje
+`psycopg`_, es el adaptador de base de datos PostgreSQL más popular para el lenguaje
 de programación Python. Sus principales características son la implementación completa
 de la especificación Python :ref:`DB-API 2.0 <python_dbapi>` y la seguridad de
 subprocesos (varios subprocesos pueden compartir la misma conexión).
@@ -15,7 +15,7 @@ Fue diseñado para aplicaciones con múltiples subprocesos que crean y destruyen
 cursores y hacen una gran cantidad de ":ref:`INSERT <python_base_ingresar_registro>`"
 o ":ref:`UPDATE <python_base_actualizar_registro>`" simultáneos.
 
-`psycopg2`_ se implementa principalmente en C como un envoltorio de `libpq`_, lo que
+`psycopg`_ se implementa principalmente en C como un envoltorio de `libpq`_, lo que
 resulta en que sea eficiente y seguro. Cuenta con cursores del lado del cliente y del lado
 del servidor, comunicación asíncrona y notificaciones, compatibilidad con sentencias ``COPY``.
 Muchos tipos de Python son compatibles de forma inmediata y están adaptados para coincidir
@@ -23,7 +23,7 @@ con los tipos de datos de ``PostgreSQL``; la adaptación se puede ampliar y pers
 a un sistema flexible de adaptación de objetos.
 
 .. note::
-    ``psycopg2`` es compatible tanto con Unicode como con Python 3.
+    ``psycopg`` es compatible tanto con Unicode como con Python 3.
 
 
 .. _python_psycopg2_instalar:
@@ -39,8 +39,8 @@ que debe instalar ``psycopg2`` ejecutando los siguientes comandos:
     $ sudo apt install build-essential libpq-dev python3-dev
     $ pip install psycopg2
 
-Puede probar si la instalación se realizo correctamente, ejecutando
-el siguiente comando:
+Puede probar si la instalación se realizo correctamente, ejecute el
+siguiente comando:
 
 .. code-block:: console
 
@@ -48,6 +48,66 @@ el siguiente comando:
 
 Si muestra el numero de la versión instalada de ``psycopg2``, tiene
 correctamente instalada la paquete. Con esto, ya tiene todo listo para continuar.
+
+
+.. _python_psycopg2_conn_strs:
+
+Cadenas de conexión
+-------------------
+
+Para definir el método ``connect`` debe definir las cadenas de conexión con
+``PostgreSQL`` como se describe a continuación:
+
+``USER``
+    Usuario de conexión a la base de datos.
+
+``PASSW``
+    Contraseña del usuario de conexión a la base de datos.
+
+``HOST``
+    IP o dirección DNS de conexión al servidor de la base de datos.
+
+``PORT``
+    Puerto de conexión al servidor de la base de datos, por defecto es **5492**.
+
+``DB``
+    Nombre de la base de datos a cual conectar.
+
+A continuación presento un ejemplo en Python implementando una cadena de conexión
+para una base de datos ``PostgreSQL``:
+
+.. code-block:: python
+    :linenos:
+
+    import psycopg2
+
+    USER = "root"
+    PASSW = "root"
+    HOST = "localhost"
+    PORT = 5492
+    DB = "sistema"
+
+    conexion_bd = psycopg2.connect(
+        user=USER, password=PASSW, host=HOST, port=PORT, database=DB
+    )
+
+El ejemplo anterior se describe a continuación:
+
+    - En la linea 1, se importa la librería ``psycopg2``.
+
+    - En la linea 3, se define en la constante ``USER``, del usuario de conexión a la base de datos.
+
+    - En la linea 4, se define en la constante ``PASSW``, de la contraseña del usuario de conexión a la base de datos.
+
+    - En la linea 5, se define en la constante ``HOST``, la IP o dirección DNS de conexión al servidor de la base de datos.
+
+    - En la linea 6, se define en la constante ``PORT``, el puerto de conexión al servidor de la base de datos.
+
+    - En la linea 7, se define en la constante ``DB``, el nombre de la base de datos a cual conectar.
+
+    - En la linea 8, se define en el método ``connect``, el cual establece la conexión a la base de datos.
+
+De esta forma se crea una cadena de conexión para ``PostgreSQL`` para ser usada por el método ``connect``.
 
 
 Insertar registros
@@ -88,6 +148,6 @@ registro en una tabla en una base de datos ``PostgreSQL``.
 
 
 .. _`PostgreSQL`: https://www.postgresql.org/
-.. _`psycopg2`: https://pypi.org/project/psycopg2/
+.. _`psycopg`: https://www.psycopg.org/docs/
 .. _`psycopg2`: https://pypi.org/project/psycopg2/
 .. _`libpq`: https://www.postgresql.org/docs/current/static/libpq.html

@@ -258,7 +258,7 @@ más de uno.
 
 - ``sqlite3``: :ref:`qmark <python_dbapi_execute_qmark>`, :ref:`numeric <python_dbapi_execute_numeric>` y :ref:`named <python_dbapi_execute_named>`.
 
-- pyscopg: :ref:`format <python_dbapi_execute_format>` y :ref:`pyformat <python_dbapi_execute_pyformat>`.
+- ``pyscopg``: :ref:`format <python_dbapi_execute_format>` y :ref:`pyformat <python_dbapi_execute_pyformat>`.
 
 - ``PyMySQL``: :ref:`format <python_dbapi_execute_format>`.
 
@@ -327,8 +327,9 @@ Se usan los métodos de búsqueda para obtener resultados de la consulta:
     cursor.fetchmany(size=N)  # devuelve una lista
 
 Diferentes bases de datos también proporcionan extensiones propietarias para funciones no
-especificadas en DB-API. Por ejemplo, ``psycopg`` hace que el objeto cursor sea iterable, por
-lo que puede recorrer de manera escalable un conjunto de resultados potencialmente grande:
+especificadas en DB-API. Por ejemplo, :ref:`psycopg <python_pkg_postgresql>` hace que el
+objeto cursor sea iterable, por lo que puede recorrer de manera escalable un conjunto de
+resultados potencialmente grande:
 
 .. code-block:: python
     :linenos:
@@ -360,7 +361,7 @@ Las librerías de bases de datos relacionales más populares son:
 
 - :ref:`sqlite3 <python_modulo_sqlite3>` para conexiones a *SQLite*.
 
-- `psycopg2 <https://www.psycopg.org/docs/>`_ para conexiones a PostgreSQL.
+- :ref:`psycopg <python_pkg_postgresql>` para conexiones a *PostgreSQL*.
 
 - :ref:`mysql <python_pkg_mysql>` para conexiones a *MySQL*.
 
