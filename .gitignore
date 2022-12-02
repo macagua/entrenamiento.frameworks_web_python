@@ -9,6 +9,8 @@ __pycache__/
 
 # Distribution / packaging
 .Python
+.env
+.sass-cache
 env/
 bin/
 build/
@@ -66,5 +68,5 @@ docs/_build/
 *.sublime-project
 *.sublime-workspace
 
-# VSCode
+# Visual Studio Code
 *.code-workspace
