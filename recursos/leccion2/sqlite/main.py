@@ -8,8 +8,8 @@ from sqlite3 import Error, OperationalError, ProgrammingError, connect
 
 logging.basicConfig(level=logging.INFO)
 
-RUTA_BD = os.path.dirname(os.path.abspath(__file__)) + os.sep
-ARCHIVO = RUTA_BD + ARCHIVO_BD
+DB_PATH = os.path.dirname(os.path.abspath(__file__)) + os.sep
+DB = DB_PATH + DB_FILE
 
 
 def crear_conexion(ruta):
@@ -129,8 +129,7 @@ def eliminar_registro(conexion_bd, delete_sql):
 
 
 if __name__ == "__main__":
-    # Crear conexión con un servidor SQLite
-    conexion = crear_conexion(ARCHIVO)
+    conexion = crear_conexion(DB)
     insertar_registro(conexion, INSERT_MULTIPLE_COLUMNS, INSERT_SQL_SCRIPTS)
     consultar_registro(conexion, SELECT_SQL_SCRIPTS)
     actualizar_registro(conexion, UPDATE_MULTIPLE_COLUMNS, UPDATE_SQL_SCRIPTS)

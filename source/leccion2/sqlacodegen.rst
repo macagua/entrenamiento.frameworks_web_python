@@ -69,15 +69,23 @@ SQLite
 Para configurar el ``engine`` con ``SQLite`` debe definir la :ref:`cadena de conexión <python_sqlite3_conn_strs>`
 que esta compuesto por varios parámetros.
 
-Los parámetros deben ser reemplazadas con sus propios datos en la linea de comando a continuación:
+Los parámetros deben ser reemplazadas con sus propios datos en la linea de comando correspondiente
+a tu sistema operativo los cuales se muestran a continuación:
 
-.. code-block:: console
+.. tabs::
 
-    $ sqlacodegen --generator declarative sqlite:///{RUTA_BD}/{ARCHIVO_BD} --outfile models.py
+   .. group-tab:: Linux
 
-.. code-block:: console
+      .. code-block:: console
 
-    $.\sqlacodegen.exe --generator declarative sqlite:///sistema.db --outfile models.py
+          $ sqlacodegen --generator declarative sqlite:///{DB_PATH}/{DB_FILE} \
+            --outfile models.py
+
+   .. group-tab:: Windows
+
+      .. code-block:: console
+
+          $> .\sqlacodegen.exe --generator declarative sqlite:///sistema.db --outfile models.py
 
 
 MySQL
@@ -91,15 +99,22 @@ en la linea de comando con el comando ``sqlacodegen``.
     Para conectarte al servidor ``MySQL`` necesite el paquete :ref:`PyMySQL <python_mysql_instalar>`.
 
 Luego ya teniendo instalado el paquete ``PyMySQL`` debe ejecutar el siguiente comando
-de ``sqlacodegen``, con el siguiente comando:
+de ``sqlacodegen``, correspondiente a tu sistema operativo los cuales se muestran a continuación:
 
-.. code-block:: console
+.. tabs::
 
-    $ sqlacodegen --generator declarative mysql+pymysql://USER:PASSW@HOST:PORT/DB --outfile models.py
+   .. group-tab:: Linux
 
-.. code-block:: console
+      .. code-block:: console
 
-    $> .\sqlacodegen.exe --generator declarative mysql+pymysql://USER:PASSW@HOST:PORT/DB --outfile models.py
+          $ sqlacodegen --generator declarative mysql+pymysql://USER:PASSW@HOST:PORT/DB \
+            --outfile models.py
+
+   .. group-tab:: Windows
+
+      .. code-block:: console
+
+          $> .\sqlacodegen.exe --generator declarative mysql+pymysql://USER:PASSW@HOST:PORT/DB --outfile models.py
 
 
 PostgreSQL
@@ -113,15 +128,23 @@ en la linea de comando con el comando ``sqlacodegen``.
     Para conectarte al servidor ``PostgreSQL`` necesite el paquete :ref:`psycopg2 <python_psycopg2_instalar>`.
 
 Luego ya teniendo instalado el paquete ``psycopg2`` debe ejecutar el siguiente comando
-de ``sqlacodegen``, con el siguiente comando:
+de ``sqlacodegen``, correspondiente a tu sistema operativo los cuales se muestran a continuación:
 
-.. code-block:: console
 
-    $ sqlacodegen --generator declarative postgresql://USER:PASSW@HOST:PORT/DB --outfile models.py
+.. tabs::
 
-.. code-block:: console
+   .. group-tab:: Linux
 
-    $> .\sqlacodegen.exe --generator declarative postgresql://USER:PASSW@HOST:PORT/DB --outfile models.py
+      .. code-block:: console
+
+          $ sqlacodegen --generator declarative postgresql://USER:PASSW@HOST:PORT/DB \
+            --outfile models.py
+
+   .. group-tab:: Windows
+
+      .. code-block:: console
+
+          $> .\sqlacodegen.exe --generator declarative postgresql://USER:PASSW@HOST:PORT/DB --outfile models.py
 
 
 Si necesita más tipos de cadenas de conexión o :ref:`engine <python_sqlalchemy_engine>`, puede
