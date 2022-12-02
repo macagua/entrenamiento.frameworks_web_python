@@ -66,19 +66,18 @@ para la DB respectiva. Para esto se explican algunas configuraciones, para SQLit
 SQLite
 ^^^^^^
 
-Para configurar el ``engine`` con :ref:`SQLite <python_modulo_sqlite3>` debe definir las variables a continuación:
+Para configurar el ``engine`` con ``SQLite`` debe definir la :ref:`cadena de conexión <python_sqlite3_conn_strs>`
+que esta compuesto por varios parámetros.
 
-``RUTA_BD``
-    Ruta absoluta o relativa del archivo de base de datos SQLite.
-
-``ARCHIVO_BD``
-    Nombre del archivo de base de datos SQLite.
-
-Las variables anteriores deben ser reemplazadas con sus propios datos.
+Los parámetros deben ser reemplazadas con sus propios datos en la linea de comando a continuación:
 
 .. code-block:: console
 
     $ sqlacodegen --generator declarative sqlite:///{RUTA_BD}/{ARCHIVO_BD} --outfile models.py
+
+.. code-block:: console
+
+    $.\sqlacodegen.exe --generator declarative sqlite:///sistema.db --outfile models.py
 
 
 MySQL
