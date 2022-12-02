@@ -349,9 +349,19 @@ que cualquier modelo se haya importado previamente antes de llamar a la función
 
 Ejecuta ahora el programa con el siguiente comando:
 
-.. code-block:: console
+.. tabs::
 
-   $> python main.py
+   .. group-tab:: Linux
+
+      .. code-block:: console
+
+          $ python main.py
+
+   .. group-tab:: Windows
+
+      .. code-block:: console
+
+          $> python main.py
 
 El anterior código al ejecutar debe mostrar el siguiente mensaje:
 
