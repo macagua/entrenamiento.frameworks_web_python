@@ -260,7 +260,7 @@ más de uno.
 
 - pyscopg: :ref:`format <python_dbapi_execute_format>` y :ref:`pyformat <python_dbapi_execute_pyformat>`.
 
-- PyMySQL: :ref:`format <python_dbapi_execute_format>`.
+- ``PyMySQL``: :ref:`format <python_dbapi_execute_format>`.
 
 - cx_Oracle: :ref:`named <python_dbapi_execute_named>`.
 
@@ -362,7 +362,7 @@ Las librerías de bases de datos relacionales más populares son:
 
 - `psycopg2 <https://www.psycopg.org/docs/>`_ para conexiones a PostgreSQL.
 
-- `mysql <http://dev.mysql.com/doc/connector-python/en/>`_ para conexiones a MySQL.
+- :ref:`mysql <python_pkg_mysql>` para conexiones a *MySQL*.
 
 - `cx_Oracle <https://cx-oracle.readthedocs.io/en/latest/>`_ para conexiones a Oracle.
 

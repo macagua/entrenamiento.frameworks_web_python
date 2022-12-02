@@ -88,7 +88,7 @@ Ejemplos de estos drivers son:
 
 -  :ref:`psycopg <python_pkg_postgresql>` para *PostgreSQL*
 
--  :ref:`mysql-connector <python_pkg_mysql>` para *MySQL*
+-  :ref:`PyMySQL <python_pkg_mysql>` para conexiones a *MySQL*.
 
 -  *cx_Oracle* para *Oracle*
 
