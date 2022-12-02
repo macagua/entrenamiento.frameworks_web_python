@@ -12,7 +12,7 @@ para almacenarlo o transmitirlo a la memoria, a una base de datos o a un archivo
 Su propósito principal es guardar el estado de un objeto para poder volver a
 crearlo cuando sea necesario. El proceso inverso se denomina *deserialización*.
 
-Por ejemplo, guardar una lista de Python en un archivo de texto o base de datos,
+Por ejemplo, guardar una :ref:`lista <python_list>` de Python en un archivo de texto o base de datos,
 y luego cargarlo cuando sea necesario, para ser tratado con su tipo de datos.
 
 Formatos comunes entre los distintos lenguajes de programación incluyen XML y JSON.

@@ -26,7 +26,7 @@ def consultar_data():
     for cada_producto in todos_productos:
         print(cada_producto)
 
-    print("\n¡Consulta todos los productos con mas atributos!")
+    print("\n¡Consulta todos los productos con más atributos!")
     # SELECT * FROM productos;
     consulta = select(Productos)
     for producto in session.scalars(consulta):

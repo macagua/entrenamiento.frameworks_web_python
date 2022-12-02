@@ -33,7 +33,7 @@ los siguientes pasos:
 Importar el conector
 --------------------
 
-La forma mas comunes de importar la librería de implementación DB-API
+La forma más comunes de importar la librería de implementación DB-API
 
 .. code-block:: python
     :linenos:
@@ -345,7 +345,7 @@ resultados potencialmente grande:
 Cerrar el cursor
 -----------------
 
-Se puede Cerrar el cursor a la base de datos usando la método ``close``
+Se puede cerrar el cursor a la base de datos usando la método ``close``
 del cursor del conector a usado.
 
 .. code-block:: python
@@ -354,7 +354,7 @@ del cursor del conector a usado.
     conexion.close()
 
 
-Librerías mas populares
+Librerías más populares
 -----------------------
 
 Las librerías de bases de datos relacionales más populares son:

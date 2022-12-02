@@ -611,7 +611,7 @@ El anterior código al ejecutar debe mostrar el siguiente mensaje:
     Mantequilla
     Queso
 
-    ¡Consulta todos los productos con mas atributos!
+    ¡Consulta todos los productos con más atributos!
     Arroz 1.25
     Agua 0.3
     Mantequilla 3.56
