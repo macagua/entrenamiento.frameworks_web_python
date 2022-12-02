@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Nombre del archivo de base de datos.
-ARCHIVO_BD = os.getenv("DB")
+DB_FILE = os.getenv("DB")
 
 # Lista de filas a ingresar
 INSERT_MULTIPLE_COLUMNS = [
