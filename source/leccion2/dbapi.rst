@@ -262,7 +262,7 @@ más de uno.
 
 - ``PyMySQL``: :ref:`format <python_dbapi_execute_format>`.
 
-- cx_Oracle: :ref:`named <python_dbapi_execute_named>`.
+- ``cx_Oracle``: :ref:`named <python_dbapi_execute_named>`.
 
 Si desea indicar al menos uno de los estilos que admite su librería DB-API, cada librería tiene
 una variable global ``paramstyle`` que tiene el valor, por ejemplo, ``sqlite3.paramstyle``
@@ -365,12 +365,13 @@ Las librerías de bases de datos relacionales más populares son:
 
 - :ref:`mysql <python_pkg_mysql>` para conexiones a *MySQL*.
 
-- `cx_Oracle <https://cx-oracle.readthedocs.io/en/latest/>`_ para conexiones a Oracle.
+- `cx_Oracle`_ para conexiones a *Oracle*.
 
-- `pypyodbc <https://pypi.org/project/pypyodbc/>`_, `pyodbc <https://pypi.org/project/pyodbc/>`_, `pymssql <https://pymssql.readthedocs.io/en/latest/>`_ para conexiones a MS SQL Server.
+- `pypyodbc`_, `pyodbc`_, `pymssql`_ para conexiones a *MS SQL Server*.
 
-La librería :ref:`SQLAlchemy <python_sqlalchemy>` es el kit de herramientas
-SQL de Python y el mapeador relacional de objetos.
+- :ref:`SQLAlchemy <python_sqlalchemy>` es el kit de herramientas SQL de Python y el
+  mapeador relacional de objetos.
+
 
 ----
 
@@ -394,3 +395,7 @@ SQL de Python y el mapeador relacional de objetos.
 .. _`DML`: https://es.wikipedia.org/wiki/Lenguaje_de_manipulaci%C3%B3n_de_datos
 .. _`The Novice’s Guide to the Python 3 DB-API`: https://philvarner.github.io/pages/novice-python3-db-api.html
 .. _`Acceso A Bases De Datos Desde Python - Interfaz Db-Api`: https://wiki.python.org.ar/dbapi/
+.. _`cx_Oracle`: https://cx-oracle.readthedocs.io/en/latest/
+.. _`pypyodbc`: https://pypi.org/project/pypyodbc/
+.. _`pyodbc`: https://pypi.org/project/pyodbc/
+.. _`pymssql`: https://pymssql.readthedocs.io/en/latest/

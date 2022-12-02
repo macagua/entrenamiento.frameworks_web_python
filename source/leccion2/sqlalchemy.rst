@@ -8,7 +8,7 @@ En Python existen múltiples conectores para acceder y trabajar con una base
 de datos, puedes usar directamente conectores que implementan la interfaz de
 comunicación con las bases de datos relacionales más conocidas, como
 :ref:`PostgreSQL <python_pkg_postgresql>`, :ref:`MySQL <python_pkg_mysql>`,
-*Oracle*, bases de datos *NoSQL* como `MongoDB`_, etc. O en su lugar, puedes
+`cx_Oracle`_, bases de datos *NoSQL* como `MongoDB`_, etc. O en su lugar, puedes
 usar `SQLAlchemy`_.
 
 
@@ -90,7 +90,7 @@ Ejemplos de estos drivers son:
 
 -  :ref:`PyMySQL <python_pkg_mysql>` para conexiones a *MySQL*.
 
--  *cx_Oracle* para *Oracle*
+-  `cx_Oracle`_ para conexiones a *Oracle*.
 
 
 .. _python_sqlalchemy_instalar:
@@ -666,3 +666,4 @@ tabla usando ``SQLAlchemy``.
 
 .. _`SQLAlchemy`: https://pypi.org/project/SQLAlchemy/
 .. _`MongoDB`: https://www.mongodb.com/
+.. _`cx_Oracle`: https://cx-oracle.readthedocs.io/en/latest/
