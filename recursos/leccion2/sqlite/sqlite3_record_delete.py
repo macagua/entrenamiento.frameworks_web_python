@@ -1,4 +1,4 @@
-""" Programa de Python para realizar la eliminación de registro de la tabla """
+""" Programa para realizar la eliminación de registro de la tabla """
 
 import logging
 import sqlite3

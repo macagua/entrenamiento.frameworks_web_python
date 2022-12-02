@@ -256,7 +256,7 @@ Python no es la forma correcta de hacer esto.
 Solo se requiere que cada DB-API admita uno de estos, pero la mayoría de las librerías admiten
 más de uno.
 
-- sqlite3: :ref:`qmark <python_dbapi_execute_qmark>`, :ref:`numeric <python_dbapi_execute_numeric>` y :ref:`named <python_dbapi_execute_named>`.
+- ``sqlite3``: :ref:`qmark <python_dbapi_execute_qmark>`, :ref:`numeric <python_dbapi_execute_numeric>` y :ref:`named <python_dbapi_execute_named>`.
 
 - pyscopg: :ref:`format <python_dbapi_execute_format>` y :ref:`pyformat <python_dbapi_execute_pyformat>`.
 
@@ -358,7 +358,7 @@ Librerías mas populares
 
 Las librerías de bases de datos relacionales más populares son:
 
-- :ref:`sqlite3 <python_modulo_sqlite3>` para conexiones a SQLite.
+- :ref:`sqlite3 <python_modulo_sqlite3>` para conexiones a *SQLite*.
 
 - `psycopg2 <https://www.psycopg.org/docs/>`_ para conexiones a PostgreSQL.
 
