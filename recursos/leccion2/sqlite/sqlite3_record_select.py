@@ -1,4 +1,4 @@
-""" Programa de Python para realizar la consulta de registro(s) de la tabla """
+""" Programa para realizar la consulta de registro(s) de la tabla """
 
 import logging
 import sqlite3

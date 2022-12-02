@@ -33,7 +33,7 @@ los siguientes pasos:
 Importar el conector
 --------------------
 
-La forma mas comunes de importar la librería de implementación DB-API
+La forma más comunes de importar la librería de implementación DB-API
 
 .. code-block:: python
     :linenos:
@@ -256,13 +256,13 @@ Python no es la forma correcta de hacer esto.
 Solo se requiere que cada DB-API admita uno de estos, pero la mayoría de las librerías admiten
 más de uno.
 
-- sqlite3: :ref:`qmark <python_dbapi_execute_qmark>`, :ref:`numeric <python_dbapi_execute_numeric>` y :ref:`named <python_dbapi_execute_named>`.
+- ``sqlite3``: :ref:`qmark <python_dbapi_execute_qmark>`, :ref:`numeric <python_dbapi_execute_numeric>` y :ref:`named <python_dbapi_execute_named>`.
 
-- pyscopg: :ref:`format <python_dbapi_execute_format>` y :ref:`pyformat <python_dbapi_execute_pyformat>`.
+- ``pyscopg``: :ref:`format <python_dbapi_execute_format>` y :ref:`pyformat <python_dbapi_execute_pyformat>`.
 
-- PyMySQL: :ref:`format <python_dbapi_execute_format>`.
+- ``PyMySQL``: :ref:`format <python_dbapi_execute_format>`.
 
-- cx_Oracle: :ref:`named <python_dbapi_execute_named>`.
+- ``cx_Oracle``: :ref:`named <python_dbapi_execute_named>`.
 
 Si desea indicar al menos uno de los estilos que admite su librería DB-API, cada librería tiene
 una variable global ``paramstyle`` que tiene el valor, por ejemplo, ``sqlite3.paramstyle``
@@ -327,8 +327,9 @@ Se usan los métodos de búsqueda para obtener resultados de la consulta:
     cursor.fetchmany(size=N)  # devuelve una lista
 
 Diferentes bases de datos también proporcionan extensiones propietarias para funciones no
-especificadas en DB-API. Por ejemplo, ``psycopg`` hace que el objeto cursor sea iterable, por
-lo que puede recorrer de manera escalable un conjunto de resultados potencialmente grande:
+especificadas en DB-API. Por ejemplo, :ref:`psycopg <python_pkg_postgresql>` hace que el
+objeto cursor sea iterable, por lo que puede recorrer de manera escalable un conjunto de
+resultados potencialmente grande:
 
 .. code-block:: python
     :linenos:
@@ -344,7 +345,7 @@ lo que puede recorrer de manera escalable un conjunto de resultados potencialmen
 Cerrar el cursor
 -----------------
 
-Se puede Cerrar el cursor a la base de datos usando la método ``close``
+Se puede cerrar el cursor a la base de datos usando la método ``close``
 del cursor del conector a usado.
 
 .. code-block:: python
@@ -353,23 +354,24 @@ del cursor del conector a usado.
     conexion.close()
 
 
-Librerías mas populares
+Librerías más populares
 -----------------------
 
 Las librerías de bases de datos relacionales más populares son:
 
-- :ref:`sqlite3 <python_modulo_sqlite3>` para conexiones a SQLite.
+- :ref:`sqlite3 <python_modulo_sqlite3>` para conexiones a *SQLite*.
 
-- `psycopg2 <https://www.psycopg.org/docs/>`_ para conexiones a PostgreSQL.
+- :ref:`psycopg <python_pkg_postgresql>` para conexiones a *PostgreSQL*.
 
-- `mysql <http://dev.mysql.com/doc/connector-python/en/>`_ para conexiones a MySQL.
+- :ref:`mysql <python_pkg_mysql>` para conexiones a *MySQL*.
 
-- `cx_Oracle <https://cx-oracle.readthedocs.io/en/latest/>`_ para conexiones a Oracle.
+- `cx_Oracle`_ para conexiones a *Oracle*.
 
-- `pypyodbc <https://pypi.org/project/pypyodbc/>`_, `pyodbc <https://pypi.org/project/pyodbc/>`_, `pymssql <https://pymssql.readthedocs.io/en/latest/>`_ para conexiones a MS SQL Server.
+- `pypyodbc`_, `pyodbc`_, `pymssql`_ para conexiones a *MS SQL Server*.
 
-La librería :ref:`SQLAlchemy <python_sqlalchemy>` es el kit de herramientas
-SQL de Python y el mapeador relacional de objetos.
+- :ref:`SQLAlchemy <python_sqlalchemy>` es el kit de herramientas SQL de Python y el
+  mapeador relacional de objetos.
+
 
 ----
 
@@ -393,3 +395,7 @@ SQL de Python y el mapeador relacional de objetos.
 .. _`DML`: https://es.wikipedia.org/wiki/Lenguaje_de_manipulaci%C3%B3n_de_datos
 .. _`The Novice’s Guide to the Python 3 DB-API`: https://philvarner.github.io/pages/novice-python3-db-api.html
 .. _`Acceso A Bases De Datos Desde Python - Interfaz Db-Api`: https://wiki.python.org.ar/dbapi/
+.. _`cx_Oracle`: https://cx-oracle.readthedocs.io/en/latest/
+.. _`pypyodbc`: https://pypi.org/project/pypyodbc/
+.. _`pyodbc`: https://pypi.org/project/pyodbc/
+.. _`pymssql`: https://pymssql.readthedocs.io/en/latest/

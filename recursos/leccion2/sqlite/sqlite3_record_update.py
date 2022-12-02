@@ -1,4 +1,4 @@
-""" Programa de Python para realizar la actualización de registro de la tabla """
+""" Programa para realizar la actualización de registro de la tabla """
 
 import logging
 import sqlite3
@@ -10,7 +10,7 @@ NOMBRE_ARCHIVO = "sistema.db"
 DIR_ARCHIVO = os.path.dirname(os.path.abspath(__file__)) + os.sep
 ARCHIVO = DIR_ARCHIVO + NOMBRE_ARCHIVO
 
-# Creando una lista de filas a ingresar
+# Creando una lista de filas a actualizar
 MULTIPLE_COLUMNS = [
     ("5051", 1),
     ("6303", 2),
