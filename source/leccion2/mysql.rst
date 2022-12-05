@@ -22,18 +22,41 @@ Instalación
 -----------
 
 Para conectarte al servidor ``MySQL`` necesita el paquete `PyMySQL`_. Esto
-significa que debe instalar ``PyMySQL`` ejecutando el siguiente comando:
+significa que debe instalar ``PyMySQL`` ejecutando el siguiente comando, el cual
+a continuación se presentan el correspondiente comando de tu sistema operativo:
 
-.. code-block:: console
+.. tabs::
 
-    $ pip install PyMySQL
+   .. group-tab:: Linux
+
+      .. code-block:: console
+
+          $ pip install PyMySQL
+
+   .. group-tab:: Windows
+
+      .. code-block:: console
+
+          > pip install PyMySQL
+
 
 Puede probar si la instalación se realizo correctamente, ejecutando
-el siguiente comando:
+el siguiente comando correspondiente a tu sistema operativo:
 
-.. code-block:: console
+.. tabs::
 
-  $ python -c "import pymysql ; print(pymysql.__version__)"
+   .. group-tab:: Linux
+
+      .. code-block:: console
+
+          $ python -c "import pymysql ; print(pymysql.__version__)"
+
+   .. group-tab:: Windows
+
+      .. code-block:: console
+
+          > python -c "import pymysql ; print(pymysql.__version__)"
+
 
 Si muestra el numero de la versión instalada de ``PyMySQL``, tiene
 correctamente instalada la paquete. Con esto, ya tiene todo listo para continuar.
