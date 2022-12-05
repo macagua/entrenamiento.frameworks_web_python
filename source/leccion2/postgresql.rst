@@ -31,20 +31,43 @@ a un sistema flexible de adaptación de objetos.
 Instalación
 -----------
 
-Para conectarte al servidor ``PostgreSQL`` necesita el paquete `psycopg2`_. Esto significa
-que debe instalar ``psycopg2`` ejecutando los siguientes comandos:
+Para conectarte al servidor ``PostgreSQL`` necesita el paquete `psycopg2`_. Esto
+significa que debe instalar ``psycopg2`` ejecutando los siguientes comandos, el
+cual a continuación se presentan el correspondiente comando de tu sistema operativo:
 
-.. code-block:: console
+.. tabs::
 
-    $ sudo apt install build-essential libpq-dev python3-dev
-    $ pip install psycopg2
+   .. group-tab:: Linux
 
-Puede probar si la instalación se realizo correctamente, ejecute el
-siguiente comando:
+      .. code-block:: console
 
-.. code-block:: console
+          $ sudo apt install build-essential libpq-dev python3-dev
+          $ pip install psycopg2
 
-  $ python -c "import psycopg2 ; print(psycopg2.__version__)"
+   .. group-tab:: Windows
+
+      .. code-block:: console
+
+          > pip install psycopg2
+
+
+Puede probar si la instalación se realizo correctamente, ejecutando
+el siguiente comando correspondiente a tu sistema operativo:
+
+.. tabs::
+
+   .. group-tab:: Linux
+
+      .. code-block:: console
+
+          $ python -c "import psycopg2 ; print(psycopg2.__version__)"
+
+   .. group-tab:: Windows
+
+      .. code-block:: console
+
+          > python -c "import psycopg2 ; print(psycopg2.__version__)"
+
 
 Si muestra el numero de la versión instalada de ``psycopg2``, tiene
 correctamente instalada la paquete. Con esto, ya tiene todo listo para continuar.

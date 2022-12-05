@@ -18,37 +18,60 @@ versión de :ref:`SQLAlchemy <python_sqlalchemy_modelos>`).
 Características
 ---------------
 
-- Soporta ``SQLAlchemy`` 0.8.x - 1.3.x
+- Soporta ``SQLAlchemy`` 0.8.x - 1.4.x.
 
 - Produce código declarativo que casi parece escrito a mano.
 
-- Produce código compatible con PEP 8
+- Produce código compatible con PEP 8.
 
-- Determina con precisión las relaciones, incluidos muchos a muchos, uno a uno
+- Determina con precisión las relaciones, incluidos muchos a muchos, uno a uno.
 
-- Detecta automáticamente la herencia de tablas unidas
+- Detecta automáticamente la herencia de tablas unidas.
 
-- Excelente cobertura de prueba
+- Excelente cobertura de prueba.
 
 
 Instalación
 -----------
 
-Para instalar la librería ``sqlacodegen`` debe seguir los siguientes pasos:
+Para instalar la librería ``sqlacodegen`` debe seguir el siguientes paso, el cual a continuación
+se presentan el correspondiente comando de tu sistema operativo:
 
-.. code-block:: console
+.. tabs::
 
-    $> pip install git+https://github.com/agronholm/sqlacodegen.git@3.0.0rc1#egg=sqlacodegen
+   .. group-tab:: Linux
+
+      .. code-block:: console
+
+          $ pip install git+https://github.com/agronholm/sqlacodegen.git@3.0.0rc1#egg=sqlacodegen
+
+   .. group-tab:: Windows
+
+      .. code-block:: console
+
+          > pip install git+https://github.com/agronholm/sqlacodegen.git@3.0.0rc1#egg=sqlacodegen
+
 
 Puede probar si la instalación se realizo correctamente, ejecutando
-el siguiente comando:
+el siguiente comando correspondiente a tu sistema operativo:
 
-.. code-block:: console
+.. tabs::
 
-    $ python -c "import sqlacodegen ; print(sqlacodegen.__name__)"
+   .. group-tab:: Linux
 
-Si muestra el numero de la versión instalada de ``sqlacodegen``, tiene
-correctamente instalada la librería. Con esto, ya tiene todo listo para continuar.
+      .. code-block:: console
+
+          $ python -c "import sqlacodegen ; print(sqlacodegen.__name__)"
+
+   .. group-tab:: Windows
+
+      .. code-block:: console
+
+          > python -c "import sqlacodegen ; print(sqlacodegen.__name__)"
+
+
+Si muestra el nombre del paquete como ``sqlacodegen``, tiene correctamente instalada la librería.
+Con esto, ya tiene todo listo para continuar.
 
 .. _python_sqlacodegen_uso:
 
@@ -69,8 +92,13 @@ SQLite
 Para configurar el ``engine`` con ``SQLite`` debe definir la :ref:`cadena de conexión <python_sqlite3_conn_strs>`
 que esta compuesto por varios parámetros.
 
-Los parámetros deben ser reemplazadas con sus propios datos en la linea de comando correspondiente
-a tu sistema operativo los cuales se muestran a continuación:
+Los parámetros deben ser reemplazadas con sus propios datos en la linea de comando:
+
+.. code-block:: console
+
+    $ sqlacodegen --generator declarative sqlite:///{DB_PATH}/{DB_FILE} --outfile file.py
+
+A continuación se presentan el correspondiente comando de tu sistema operativo:
 
 .. tabs::
 
@@ -78,14 +106,13 @@ a tu sistema operativo los cuales se muestran a continuación:
 
       .. code-block:: console
 
-          $ sqlacodegen --generator declarative sqlite:///{DB_PATH}/{DB_FILE} \
-            --outfile models.py
+          $ sqlacodegen --generator declarative sqlite:///sistema.db --outfile models.py
 
    .. group-tab:: Windows
 
       .. code-block:: console
 
-          $> .\sqlacodegen.exe --generator declarative sqlite:///sistema.db --outfile models.py
+          > .\sqlacodegen.exe --generator declarative sqlite:///sistema.db --outfile models.py
 
 
 MySQL
@@ -99,7 +126,15 @@ en la linea de comando con el comando ``sqlacodegen``.
     Para conectarte al servidor ``MySQL`` necesite el paquete :ref:`PyMySQL <python_mysql_instalar>`.
 
 Luego ya teniendo instalado el paquete ``PyMySQL`` debe ejecutar el siguiente comando
-de ``sqlacodegen``, correspondiente a tu sistema operativo los cuales se muestran a continuación:
+de ``sqlacodegen``, los parámetros deben ser reemplazadas con sus propios datos en la
+linea de comando:
+
+.. code-block:: console
+
+    $ sqlacodegen --generator declarative mysql+pymysql://USER:PASSW@HOST:PORT/DB \
+        --outfile file.py
+
+A continuación se presentan el correspondiente comando de tu sistema operativo:
 
 .. tabs::
 
@@ -107,14 +142,14 @@ de ``sqlacodegen``, correspondiente a tu sistema operativo los cuales se muestra
 
       .. code-block:: console
 
-          $ sqlacodegen --generator declarative mysql+pymysql://USER:PASSW@HOST:PORT/DB \
+          $ sqlacodegen --generator declarative mysql+pymysql://root:root@localhost:3306/sistema \
             --outfile models.py
 
    .. group-tab:: Windows
 
       .. code-block:: console
 
-          $> .\sqlacodegen.exe --generator declarative mysql+pymysql://USER:PASSW@HOST:PORT/DB --outfile models.py
+          > .\sqlacodegen.exe --generator declarative mysql+pymysql://root:root@localhost:3306/sistema --outfile models.py
 
 
 PostgreSQL
@@ -128,8 +163,15 @@ en la linea de comando con el comando ``sqlacodegen``.
     Para conectarte al servidor ``PostgreSQL`` necesite el paquete :ref:`psycopg2 <python_psycopg2_instalar>`.
 
 Luego ya teniendo instalado el paquete ``psycopg2`` debe ejecutar el siguiente comando
-de ``sqlacodegen``, correspondiente a tu sistema operativo los cuales se muestran a continuación:
+de ``sqlacodegen``, los parámetros deben ser reemplazadas con sus propios datos en la
+linea de comando:
 
+.. code-block:: console
+
+    $ sqlacodegen --generator declarative postgresql://USER:PASSW@HOST:PORT/DB \
+        --outfile file.py
+
+A continuación se presentan el correspondiente comando de tu sistema operativo:
 
 .. tabs::
 
@@ -137,14 +179,14 @@ de ``sqlacodegen``, correspondiente a tu sistema operativo los cuales se muestra
 
       .. code-block:: console
 
-          $ sqlacodegen --generator declarative postgresql://USER:PASSW@HOST:PORT/DB \
+          $ sqlacodegen --generator declarative postgresql://root:root@localhost:3306/sistema \
             --outfile models.py
 
    .. group-tab:: Windows
 
       .. code-block:: console
 
-          $> .\sqlacodegen.exe --generator declarative postgresql://USER:PASSW@HOST:PORT/DB --outfile models.py
+          > .\sqlacodegen.exe --generator declarative postgresql://root:root@localhost:3306/sistema --outfile models.py
 
 
 Si necesita más tipos de cadenas de conexión o :ref:`engine <python_sqlalchemy_engine>`, puede
@@ -208,12 +250,24 @@ A continuación la estructura de proyecto ``sistema``
 
 Teniendo creada la anterior estructura de proyecto
 
-Vuelva a ejecutar ahora el modulo con el siguiente comando:
+Vuelva a ejecutar ahora el modulo con el siguiente comando, el cual a continuación se presentan
+el correspondiente comando de tu sistema operativo:
 
-.. code-block:: console
+.. tabs::
 
-   $> pip install -r requirements.txt
-   $> python main.py
+   .. group-tab:: Linux
+
+      .. code-block:: console
+
+          $ pip install bpython
+          $ python main.py
+
+   .. group-tab:: Windows
+
+      .. code-block:: console
+
+          > pip install -r requirements.txt
+          > python main.py
 
 El anterior código al ejecutar debe mostrar el siguiente mensaje:
 

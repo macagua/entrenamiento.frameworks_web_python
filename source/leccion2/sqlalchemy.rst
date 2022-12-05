@@ -98,19 +98,40 @@ Ejemplos de estos drivers son:
 Instalación
 -----------
 
-Para instalar la librería ``SQLAlchemy`` debe seguir los siguientes
-pasos:
+Para instalar la librería ``SQLAlchemy`` debe ejecutar el siguiente comando, el cual
+a continuación se presentan el correspondiente comando de tu sistema operativo:
 
-.. code-block:: console
+.. tabs::
 
-  $> pip install SQLAlchemy==1.4.36
+   .. group-tab:: Linux
+
+      .. code-block:: console
+
+          $ pip install SQLAlchemy==1.4.36
+
+   .. group-tab:: Windows
+
+      .. code-block:: console
+
+          > pip install SQLAlchemy==1.4.36
+
 
 Puede probar si la instalación se realizo correctamente, ejecutando
-el siguiente comando:
+el siguiente comando correspondiente a tu sistema operativo:
 
-.. code-block:: console
+.. tabs::
 
-  $ python -c "import sqlalchemy ; print(sqlalchemy.__version__)"
+   .. group-tab:: Linux
+
+      .. code-block:: console
+
+          $ python -c "import sqlalchemy ; print(sqlalchemy.__version__)"
+
+   .. group-tab:: Windows
+
+      .. code-block:: console
+
+          > python -c "import sqlalchemy ; print(sqlalchemy.__version__)"
 
 Si muestra el numero de la versión instalada de ``SQLAlchemy``, tiene
 correctamente instalada la librería. Con esto, ya tiene todo listo para continuar.
@@ -361,7 +382,7 @@ Ejecuta ahora el programa con el siguiente comando:
 
       .. code-block:: console
 
-          $> python main.py
+          > python main.py
 
 El anterior código al ejecutar debe mostrar el siguiente mensaje:
 
@@ -600,12 +621,24 @@ A continuación la estructura de proyecto ``productos``
 Teniendo creada la anterior estructura de proyecto
 
 
-Vuelva a ejecutar ahora el modulo con el siguiente comando:
+Vuelva a ejecutar ahora el modulo con el siguiente comando, el cual a continuación se presentan
+el correspondiente comando de tu sistema operativo:
 
-.. code-block:: console
+.. tabs::
 
-   $> pip install -r requirements.txt
-   $> python main.py
+   .. group-tab:: Linux
+
+      .. code-block:: console
+
+          $ pip install bpython
+          $ python main.py
+
+   .. group-tab:: Windows
+
+      .. code-block:: console
+
+          > pip install -r requirements.txt
+          > python main.py
 
 El anterior código al ejecutar debe mostrar el siguiente mensaje:
 
