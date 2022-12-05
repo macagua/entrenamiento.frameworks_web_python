@@ -32,16 +32,16 @@
 	<a name="Overview"></a>
 
 	<table width="100%" border="1" cellspacing="0" cellpadding="2">
-		<tr class="title"><td>Tabla : estados</td></tr>
+		<tr class="title"><td>Tabla : productos</td></tr>
 	</table>
 
-	<p>Tabla de estados</p>
+
 
 
 			<p><b>Ver además:</b></p>
 		<blockquote>
 
-					<a href="ciudades.html">ciudades</a><br/>
+					<a href="pedidos.html">pedidos</a><br/>
 
 		</blockquote>
 
@@ -75,7 +75,7 @@
 
 									</td>
 
-				<td><p>ID del estado</p></td>
+				<td><p>ID de producto</p></td>
 			</tr>
 					<tr>
 				<td>
@@ -87,27 +87,75 @@
 
 				<td>
 
-					varchar25
+					varchar11
 
 									</td>
 
-				<td><p>Nombre del estado</p></td>
+				<td><p>Nombre de producto</p></td>
 			</tr>
 					<tr>
 				<td>
 
-	codigo
+	descripcion
 
 
 	</td>
 
 				<td>
 
-					varchar2
+					varchar25
 
 									</td>
 
-				<td><p>codigo del estado</p></td>
+				<td><p>Descripcion de producto</p></td>
+			</tr>
+					<tr>
+				<td>
+
+	categoria
+
+
+	</td>
+
+				<td>
+
+					varchar25
+
+									</td>
+
+				<td><p>Categoria de producto</p></td>
+			</tr>
+					<tr>
+				<td>
+
+	precio
+
+
+	</td>
+
+				<td>
+
+					int
+
+									</td>
+
+				<td><p>Precio de producto</p></td>
+			</tr>
+					<tr>
+				<td>
+
+	status
+
+
+	</td>
+
+				<td>
+
+					Bool
+
+									</td>
+
+				<td><p>Status de producto</p></td>
 			</tr>
 			</table>
 
@@ -157,6 +205,22 @@
 
 
 	</td>
+				<td>varchar(11)</td>
+
+																											<td align="center"><img alt="unset.gif" src="../images/unset.gif" /></td>
+																																<td align="center"><img alt="unset.gif" src="../images/unset.gif" /></td>
+																										<td align="center"><img alt="set.gif" src="../images/set.gif" /></td>
+																																<td align="center"><img alt="unset.gif" src="../images/unset.gif" /></td>
+																				<td>&nbsp;</td>
+																																<td align="center"><img alt="unset.gif" src="../images/unset.gif" /></td>
+												</tr>
+					<tr>
+				<td>
+
+	descripcion
+
+
+	</td>
 				<td>varchar(25)</td>
 
 																											<td align="center"><img alt="unset.gif" src="../images/unset.gif" /></td>
@@ -169,11 +233,43 @@
 					<tr>
 				<td>
 
-	codigo
+	categoria
 
 
 	</td>
-				<td>varchar(2)</td>
+				<td>varchar(25)</td>
+
+																											<td align="center"><img alt="unset.gif" src="../images/unset.gif" /></td>
+																																<td align="center"><img alt="unset.gif" src="../images/unset.gif" /></td>
+																										<td align="center"><img alt="set.gif" src="../images/set.gif" /></td>
+																																<td align="center"><img alt="unset.gif" src="../images/unset.gif" /></td>
+																				<td>&nbsp;</td>
+																																<td align="center"><img alt="unset.gif" src="../images/unset.gif" /></td>
+												</tr>
+					<tr>
+				<td>
+
+	precio
+
+
+	</td>
+				<td>int</td>
+
+																											<td align="center"><img alt="unset.gif" src="../images/unset.gif" /></td>
+																																<td align="center"><img alt="unset.gif" src="../images/unset.gif" /></td>
+																										<td align="center"><img alt="set.gif" src="../images/set.gif" /></td>
+																																<td align="center"><img alt="unset.gif" src="../images/unset.gif" /></td>
+																				<td>&nbsp;</td>
+																																<td align="center"><img alt="unset.gif" src="../images/unset.gif" /></td>
+												</tr>
+					<tr>
+				<td>
+
+	status
+
+
+	</td>
+				<td>char(1)</td>
 
 																											<td align="center"><img alt="unset.gif" src="../images/unset.gif" /></td>
 																																<td align="center"><img alt="unset.gif" src="../images/unset.gif" /></td>

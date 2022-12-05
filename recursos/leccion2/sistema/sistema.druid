@@ -2,8 +2,8 @@
 
 <project version="2">
 	<attribs>
-		<attrib name="build">41</attrib>
-		<attrib name="serial">1435</attrib>
+		<attrib name="build">48</attrib>
+		<attrib name="serial">2222</attrib>
 	</attribs>
 	<database>
 		<attribs>
@@ -135,23 +135,23 @@
 					<output>C:\Users\Macagua\Desktop\Practicas\DB\sistema\docs\diccionario-datos.txt</output>
 				</ascii>
 			</DatadictGenModule>
-			<SqlGenModule>
-				<stdSql>
-					<output>C:\Users\Macagua\Desktop\Practicas\DB\sistema\sistema.sql</output>
-				</stdSql>
-			</SqlGenModule>
 			<SummaryGenModule>
 				<html>
 					<output>C:\Users\Macagua\Desktop\Practicas\DB\sistema\docs\html\resumen.html</output>
 				</html>
 			</SummaryGenModule>
+			<SqlGenModule>
+				<stdSql>
+					<output>C:\Users\Macagua\Desktop\Practicas\DB\sistema\sistema.sql</output>
+				</stdSql>
+			</SqlGenModule>
 		</modsConfig>
 		<modsUsage>
 			<module name="DocsGenModule.html"/>
-			<module name="SummaryGenModule.html"/>
 			<module name="DatadictGenModule.ascii"/>
-			<module name="SqlGenModule.stdSql"/>
+			<module name="SummaryGenModule.html"/>
 			<module name="DocsGenModule.pdf"/>
+			<module name="SqlGenModule.stdSql"/>
 		</modsUsage>
 		<dataTypes>
 			<constFolder>
@@ -444,9 +444,9 @@
 					<attribs>
 						<attrib name="name">clientes</attrib>
 						<attrib name="colorId">539</attrib>
-						<attrib name="locY">300</attrib>
+						<attrib name="locY">162</attrib>
 						<attrib name="details">-</attrib>
-						<attrib name="locX">288</attrib>
+						<attrib name="locX">290</attrib>
 					</attribs>
 					<modsConfig/>
 					<tables>
@@ -457,9 +457,9 @@
 					<attribs>
 						<attrib name="name">ciudades</attrib>
 						<attrib name="colorId">539</attrib>
-						<attrib name="locY">61</attrib>
+						<attrib name="locY">57</attrib>
 						<attrib name="details">-</attrib>
-						<attrib name="locX">584</attrib>
+						<attrib name="locX">543</attrib>
 					</attribs>
 					<modsConfig/>
 					<tables>
@@ -470,9 +470,9 @@
 					<attribs>
 						<attrib name="name">estados</attrib>
 						<attrib name="colorId">539</attrib>
-						<attrib name="locY">70</attrib>
+						<attrib name="locY">253</attrib>
 						<attrib name="details">-</attrib>
-						<attrib name="locX">295</attrib>
+						<attrib name="locX">551</attrib>
 					</attribs>
 					<modsConfig/>
 					<tables>
@@ -481,15 +481,28 @@
 				</erEntity>
 				<erEntity>
 					<attribs>
-						<attrib name="name">pais</attrib>
+						<attrib name="name">productos</attrib>
 						<attrib name="colorId">539</attrib>
-						<attrib name="locY">67</attrib>
+						<attrib name="locY">254</attrib>
 						<attrib name="details">-</attrib>
-						<attrib name="locX">53</attrib>
+						<attrib name="locX">61</attrib>
 					</attribs>
 					<modsConfig/>
 					<tables>
-						<table id="493"/>
+						<table id="1442"/>
+					</tables>
+				</erEntity>
+				<erEntity>
+					<attribs>
+						<attrib name="name">pedidos</attrib>
+						<attrib name="colorId">539</attrib>
+						<attrib name="locY">48</attrib>
+						<attrib name="details">-</attrib>
+						<attrib name="locX">52</attrib>
+					</attribs>
+					<modsConfig/>
+					<tables>
+						<table id="1436"/>
 					</tables>
 				</erEntity>
 			</erView>
@@ -709,8 +722,8 @@
 				<rules/>
 				<attribs>
 					<attrib name="comment"/>
-					<attrib name="name">ciudades</attrib>
-					<attrib name="id">363</attrib>
+					<attrib name="name">pedidos</attrib>
+					<attrib name="id">1436</attrib>
 					<attrib name="schema"/>
 					<attrib name="tempPK"/>
 					<attrib name="ghost">false</attrib>
@@ -738,11 +751,6 @@
 						</stdSql>
 					</SqlGenModule>
 				</modsConfig>
-				<docs>
-					<p>
-						<t>Tabla de ciudades</t>
-					</p>
-				</docs>
 				<field>
 					<fieldAttribs>
 						<attribs>
@@ -759,7 +767,7 @@
 						<attrib name="matchType">s</attrib>
 						<attrib name="refField">0</attrib>
 						<attrib name="name">id</attrib>
-						<attrib name="id">372</attrib>
+						<attrib name="id">1438</attrib>
 						<attrib name="onDelete">n</attrib>
 						<attrib name="onUpdate">n</attrib>
 						<attrib name="refTable">0</attrib>
@@ -768,7 +776,198 @@
 					<modsConfig/>
 					<docs>
 						<p>
-							<t>ID de la ciudad</t>
+							<t>ID de pedido</t>
+						</p>
+					</docs>
+				</field>
+				<field>
+					<fieldAttribs>
+						<attribs>
+							<attrib name="17">true</attrib>
+							<attrib name="16">false</attrib>
+							<attrib name="15">false</attrib>
+							<attrib name="339"/>
+							<attrib name="338">false</attrib>
+							<attrib name="340">false</attrib>
+						</attribs>
+					</fieldAttribs>
+					<attribs>
+						<attrib name="comment"/>
+						<attrib name="matchType">s</attrib>
+						<attrib name="refField">367</attrib>
+						<attrib name="name">cliente_id</attrib>
+						<attrib name="id">1439</attrib>
+						<attrib name="onDelete">n</attrib>
+						<attrib name="onUpdate">n</attrib>
+						<attrib name="refTable">361</attrib>
+						<attrib name="type">0</attrib>
+					</attribs>
+					<modsConfig/>
+					<docs>
+						<p>
+							<t>ID de cliente</t>
+						</p>
+					</docs>
+				</field>
+				<field>
+					<fieldAttribs>
+						<attribs>
+							<attrib name="17">true</attrib>
+							<attrib name="16">false</attrib>
+							<attrib name="15">false</attrib>
+							<attrib name="339"/>
+							<attrib name="338">false</attrib>
+							<attrib name="340">false</attrib>
+						</attribs>
+					</fieldAttribs>
+					<attribs>
+						<attrib name="comment"/>
+						<attrib name="matchType">s</attrib>
+						<attrib name="refField">0</attrib>
+						<attrib name="name">fecha</attrib>
+						<attrib name="id">1440</attrib>
+						<attrib name="onDelete">n</attrib>
+						<attrib name="onUpdate">n</attrib>
+						<attrib name="refTable">0</attrib>
+						<attrib name="type">7</attrib>
+					</attribs>
+					<modsConfig/>
+					<docs>
+						<p>
+							<t>Fecha de </t>
+							<t>pedido</t>
+						</p>
+					</docs>
+				</field>
+				<field>
+					<fieldAttribs>
+						<attribs>
+							<attrib name="17">true</attrib>
+							<attrib name="16">false</attrib>
+							<attrib name="15">false</attrib>
+							<attrib name="339"/>
+							<attrib name="338">false</attrib>
+							<attrib name="340">false</attrib>
+						</attribs>
+					</fieldAttribs>
+					<attribs>
+						<attrib name="comment"/>
+						<attrib name="matchType">s</attrib>
+						<attrib name="refField">1444</attrib>
+						<attrib name="name">producto_id</attrib>
+						<attrib name="id">1441</attrib>
+						<attrib name="onDelete">n</attrib>
+						<attrib name="onUpdate">n</attrib>
+						<attrib name="refTable">1442</attrib>
+						<attrib name="type">0</attrib>
+					</attribs>
+					<modsConfig/>
+					<docs>
+						<p>
+							<t>ID de producto</t>
+						</p>
+					</docs>
+				</field>
+				<field>
+					<fieldAttribs>
+						<attribs>
+							<attrib name="17">true</attrib>
+							<attrib name="16">false</attrib>
+							<attrib name="15">false</attrib>
+							<attrib name="339"/>
+							<attrib name="338">false</attrib>
+							<attrib name="340">false</attrib>
+						</attribs>
+					</fieldAttribs>
+					<attribs>
+						<attrib name="comment"/>
+						<attrib name="matchType">s</attrib>
+						<attrib name="refField">0</attrib>
+						<attrib name="name">status</attrib>
+						<attrib name="id">1998</attrib>
+						<attrib name="onDelete">n</attrib>
+						<attrib name="onUpdate">n</attrib>
+						<attrib name="refTable">0</attrib>
+						<attrib name="type">12</attrib>
+					</attribs>
+					<modsConfig/>
+					<docs>
+						<p>
+							<t>Status de pedido</t>
+						</p>
+					</docs>
+				</field>
+			</table>
+			<table>
+				<vars>
+					<list>
+						<header>
+							<elem>name</elem>
+							<elem>type</elem>
+							<elem>value</elem>
+							<elem>descr</elem>
+						</header>
+					</list>
+				</vars>
+				<triggers/>
+				<rules/>
+				<attribs>
+					<attrib name="comment"/>
+					<attrib name="name">productos</attrib>
+					<attrib name="id">1442</attrib>
+					<attrib name="schema"/>
+					<attrib name="tempPK"/>
+					<attrib name="ghost">false</attrib>
+					<attrib name="tempFK"/>
+					<attrib name="tempOther"/>
+					<attrib name="sqlCommands"/>
+				</attribs>
+				<modsConfig>
+					<SqlGenModule>
+						<stdSql>
+							<idx type="l">
+								<list>
+									<header>
+										<elem type="i">id</elem>
+										<elem type="s">index</elem>
+										<elem type="s">name</elem>
+									</header>
+									<row>
+										<elem>340</elem>
+										<elem>Idx1</elem>
+										<elem/>
+									</row>
+								</list>
+							</idx>
+						</stdSql>
+					</SqlGenModule>
+				</modsConfig>
+				<field>
+					<fieldAttribs>
+						<attribs>
+							<attrib name="17">true</attrib>
+							<attrib name="16">true</attrib>
+							<attrib name="15">true</attrib>
+							<attrib name="339"/>
+							<attrib name="338">false</attrib>
+							<attrib name="340">false</attrib>
+						</attribs>
+					</fieldAttribs>
+					<attribs>
+						<attrib name="comment"/>
+						<attrib name="matchType">s</attrib>
+						<attrib name="refField">0</attrib>
+						<attrib name="name">id</attrib>
+						<attrib name="id">1444</attrib>
+						<attrib name="onDelete">n</attrib>
+						<attrib name="onUpdate">n</attrib>
+						<attrib name="refTable">0</attrib>
+						<attrib name="type">5</attrib>
+					</attribs>
+					<modsConfig/>
+					<docs>
+						<p>
+							<t>ID de producto</t>
 						</p>
 					</docs>
 				</field>
@@ -788,45 +987,16 @@
 						<attrib name="matchType">s</attrib>
 						<attrib name="refField">0</attrib>
 						<attrib name="name">nombre</attrib>
-						<attrib name="id">373</attrib>
+						<attrib name="id">1445</attrib>
 						<attrib name="onDelete">n</attrib>
 						<attrib name="onUpdate">n</attrib>
 						<attrib name="refTable">0</attrib>
-						<attrib name="type">688</attrib>
+						<attrib name="type">835</attrib>
 					</attribs>
 					<modsConfig/>
 					<docs>
 						<p>
-							<t>Nombre de la ciudad</t>
-						</p>
-					</docs>
-				</field>
-				<field>
-					<fieldAttribs>
-						<attribs>
-							<attrib name="17">true</attrib>
-							<attrib name="16">false</attrib>
-							<attrib name="15">false</attrib>
-							<attrib name="339"/>
-							<attrib name="338">false</attrib>
-							<attrib name="340">false</attrib>
-						</attribs>
-					</fieldAttribs>
-					<attribs>
-						<attrib name="comment"/>
-						<attrib name="matchType">s</attrib>
-						<attrib name="refField">376</attrib>
-						<attrib name="name">estado</attrib>
-						<attrib name="id">374</attrib>
-						<attrib name="onDelete">c</attrib>
-						<attrib name="onUpdate">c</attrib>
-						<attrib name="refTable">365</attrib>
-						<attrib name="type">0</attrib>
-					</attribs>
-					<modsConfig/>
-					<docs>
-						<p>
-							<t>Estado de la ciudad</t>
+							<t>Nombre de producto</t>
 						</p>
 					</docs>
 				</field>
@@ -845,8 +1015,66 @@
 						<attrib name="comment"/>
 						<attrib name="matchType">s</attrib>
 						<attrib name="refField">0</attrib>
-						<attrib name="name">poblacion</attrib>
-						<attrib name="id">375</attrib>
+						<attrib name="name">descripcion</attrib>
+						<attrib name="id">1446</attrib>
+						<attrib name="onDelete">n</attrib>
+						<attrib name="onUpdate">n</attrib>
+						<attrib name="refTable">0</attrib>
+						<attrib name="type">688</attrib>
+					</attribs>
+					<modsConfig/>
+					<docs>
+						<p>
+							<t>Descripcion de producto</t>
+						</p>
+					</docs>
+				</field>
+				<field>
+					<fieldAttribs>
+						<attribs>
+							<attrib name="17">true</attrib>
+							<attrib name="16">false</attrib>
+							<attrib name="15">false</attrib>
+							<attrib name="339"/>
+							<attrib name="338">false</attrib>
+							<attrib name="340">false</attrib>
+						</attribs>
+					</fieldAttribs>
+					<attribs>
+						<attrib name="comment"/>
+						<attrib name="matchType">s</attrib>
+						<attrib name="refField">0</attrib>
+						<attrib name="name">categoria</attrib>
+						<attrib name="id">2165</attrib>
+						<attrib name="onDelete">n</attrib>
+						<attrib name="onUpdate">n</attrib>
+						<attrib name="refTable">0</attrib>
+						<attrib name="type">688</attrib>
+					</attribs>
+					<modsConfig/>
+					<docs>
+						<p>
+							<t>Categoria de producto</t>
+						</p>
+					</docs>
+				</field>
+				<field>
+					<fieldAttribs>
+						<attribs>
+							<attrib name="17">true</attrib>
+							<attrib name="16">false</attrib>
+							<attrib name="15">false</attrib>
+							<attrib name="339"/>
+							<attrib name="338">false</attrib>
+							<attrib name="340">false</attrib>
+						</attribs>
+					</fieldAttribs>
+					<attribs>
+						<attrib name="comment"/>
+						<attrib name="matchType">s</attrib>
+						<attrib name="refField">0</attrib>
+						<attrib name="name">precio</attrib>
+						<attrib name="id">1447</attrib>
 						<attrib name="onDelete">n</attrib>
 						<attrib name="onUpdate">n</attrib>
 						<attrib name="refTable">0</attrib>
@@ -855,7 +1083,36 @@
 					<modsConfig/>
 					<docs>
 						<p>
-							<t>Poblacion de la ciudad</t>
+							<t>Precio de producto</t>
+						</p>
+					</docs>
+				</field>
+				<field>
+					<fieldAttribs>
+						<attribs>
+							<attrib name="17">true</attrib>
+							<attrib name="16">false</attrib>
+							<attrib name="15">false</attrib>
+							<attrib name="339"/>
+							<attrib name="338">false</attrib>
+							<attrib name="340">false</attrib>
+						</attribs>
+					</fieldAttribs>
+					<attribs>
+						<attrib name="comment"/>
+						<attrib name="matchType">s</attrib>
+						<attrib name="refField">0</attrib>
+						<attrib name="name">status</attrib>
+						<attrib name="id">1448</attrib>
+						<attrib name="onDelete">n</attrib>
+						<attrib name="onUpdate">n</attrib>
+						<attrib name="refTable">0</attrib>
+						<attrib name="type">12</attrib>
+					</attribs>
+					<modsConfig/>
+					<docs>
+						<p>
+							<t>Status de producto</t>
 						</p>
 					</docs>
 				</field>
@@ -953,35 +1210,6 @@
 						<attrib name="comment"/>
 						<attrib name="matchType">s</attrib>
 						<attrib name="refField">0</attrib>
-						<attrib name="name">codigo</attrib>
-						<attrib name="id">377</attrib>
-						<attrib name="onDelete">n</attrib>
-						<attrib name="onUpdate">n</attrib>
-						<attrib name="refTable">0</attrib>
-						<attrib name="type">690</attrib>
-					</attribs>
-					<modsConfig/>
-					<docs>
-						<p>
-							<t>codigo del estado</t>
-						</p>
-					</docs>
-				</field>
-				<field>
-					<fieldAttribs>
-						<attribs>
-							<attrib name="17">true</attrib>
-							<attrib name="16">false</attrib>
-							<attrib name="15">false</attrib>
-							<attrib name="339"/>
-							<attrib name="338">false</attrib>
-							<attrib name="340">false</attrib>
-						</attribs>
-					</fieldAttribs>
-					<attribs>
-						<attrib name="comment"/>
-						<attrib name="matchType">s</attrib>
-						<attrib name="refField">0</attrib>
 						<attrib name="name">nombre</attrib>
 						<attrib name="id">378</attrib>
 						<attrib name="onDelete">n</attrib>
@@ -1010,47 +1238,18 @@
 					<attribs>
 						<attrib name="comment"/>
 						<attrib name="matchType">s</attrib>
-						<attrib name="refField">495</attrib>
-						<attrib name="name">pais</attrib>
-						<attrib name="id">379</attrib>
-						<attrib name="onDelete">c</attrib>
-						<attrib name="onUpdate">c</attrib>
-						<attrib name="refTable">493</attrib>
-						<attrib name="type">0</attrib>
-					</attribs>
-					<modsConfig/>
-					<docs>
-						<p>
-							<t>Pais del estado</t>
-						</p>
-					</docs>
-				</field>
-				<field>
-					<fieldAttribs>
-						<attribs>
-							<attrib name="17">true</attrib>
-							<attrib name="16">false</attrib>
-							<attrib name="15">false</attrib>
-							<attrib name="339"/>
-							<attrib name="338">false</attrib>
-							<attrib name="340">false</attrib>
-						</attribs>
-					</fieldAttribs>
-					<attribs>
-						<attrib name="comment"/>
-						<attrib name="matchType">s</attrib>
 						<attrib name="refField">0</attrib>
-						<attrib name="name">poblacion</attrib>
-						<attrib name="id">381</attrib>
+						<attrib name="name">codigo</attrib>
+						<attrib name="id">377</attrib>
 						<attrib name="onDelete">n</attrib>
 						<attrib name="onUpdate">n</attrib>
 						<attrib name="refTable">0</attrib>
-						<attrib name="type">5</attrib>
+						<attrib name="type">690</attrib>
 					</attribs>
 					<modsConfig/>
 					<docs>
 						<p>
-							<t>Poblacion del estado</t>
+							<t>codigo del estado</t>
 						</p>
 					</docs>
 				</field>
@@ -1070,8 +1269,8 @@
 				<rules/>
 				<attribs>
 					<attrib name="comment"/>
-					<attrib name="name">pais</attrib>
-					<attrib name="id">493</attrib>
+					<attrib name="name">ciudades</attrib>
+					<attrib name="id">363</attrib>
 					<attrib name="schema"/>
 					<attrib name="tempPK"/>
 					<attrib name="ghost">false</attrib>
@@ -1101,7 +1300,7 @@
 				</modsConfig>
 				<docs>
 					<p>
-						<t>ID de pais</t>
+						<t>Tabla de ciudades</t>
 					</p>
 				</docs>
 				<field>
@@ -1120,7 +1319,7 @@
 						<attrib name="matchType">s</attrib>
 						<attrib name="refField">0</attrib>
 						<attrib name="name">id</attrib>
-						<attrib name="id">495</attrib>
+						<attrib name="id">372</attrib>
 						<attrib name="onDelete">n</attrib>
 						<attrib name="onUpdate">n</attrib>
 						<attrib name="refTable">0</attrib>
@@ -1129,7 +1328,7 @@
 					<modsConfig/>
 					<docs>
 						<p>
-							<t>ID del pais</t>
+							<t>ID de la ciudad</t>
 						</p>
 					</docs>
 				</field>
@@ -1138,7 +1337,7 @@
 						<attribs>
 							<attrib name="17">true</attrib>
 							<attrib name="16">false</attrib>
-							<attrib name="15">true</attrib>
+							<attrib name="15">false</attrib>
 							<attrib name="339"/>
 							<attrib name="338">false</attrib>
 							<attrib name="340">false</attrib>
@@ -1147,18 +1346,18 @@
 					<attribs>
 						<attrib name="comment"/>
 						<attrib name="matchType">s</attrib>
-						<attrib name="refField">0</attrib>
-						<attrib name="name">nombre</attrib>
-						<attrib name="id">496</attrib>
-						<attrib name="onDelete">n</attrib>
-						<attrib name="onUpdate">n</attrib>
-						<attrib name="refTable">0</attrib>
-						<attrib name="type">688</attrib>
+						<attrib name="refField">376</attrib>
+						<attrib name="name">id_estado</attrib>
+						<attrib name="id">374</attrib>
+						<attrib name="onDelete">c</attrib>
+						<attrib name="onUpdate">c</attrib>
+						<attrib name="refTable">365</attrib>
+						<attrib name="type">0</attrib>
 					</attribs>
 					<modsConfig/>
 					<docs>
 						<p>
-							<t>Nombre del pais</t>
+							<t>Estado de la ciudad</t>
 						</p>
 					</docs>
 				</field>
@@ -1177,17 +1376,46 @@
 						<attrib name="comment"/>
 						<attrib name="matchType">s</attrib>
 						<attrib name="refField">0</attrib>
-						<attrib name="name">codigo</attrib>
-						<attrib name="id">497</attrib>
+						<attrib name="name">nombre</attrib>
+						<attrib name="id">373</attrib>
 						<attrib name="onDelete">n</attrib>
 						<attrib name="onUpdate">n</attrib>
 						<attrib name="refTable">0</attrib>
-						<attrib name="type">690</attrib>
+						<attrib name="type">688</attrib>
 					</attribs>
 					<modsConfig/>
 					<docs>
 						<p>
-							<t>Codigo del pais</t>
+							<t>Nombre de la ciudad</t>
+						</p>
+					</docs>
+				</field>
+				<field>
+					<fieldAttribs>
+						<attribs>
+							<attrib name="17">true</attrib>
+							<attrib name="16">false</attrib>
+							<attrib name="15">false</attrib>
+							<attrib name="339"/>
+							<attrib name="338">false</attrib>
+							<attrib name="340">false</attrib>
+						</attribs>
+					</fieldAttribs>
+					<attribs>
+						<attrib name="comment"/>
+						<attrib name="matchType">s</attrib>
+						<attrib name="refField">0</attrib>
+						<attrib name="name">capital</attrib>
+						<attrib name="id">375</attrib>
+						<attrib name="onDelete">n</attrib>
+						<attrib name="onUpdate">n</attrib>
+						<attrib name="refTable">0</attrib>
+						<attrib name="type">5</attrib>
+					</attribs>
+					<modsConfig/>
+					<docs>
+						<p>
+							<t>Capital</t>
 						</p>
 					</docs>
 				</field>

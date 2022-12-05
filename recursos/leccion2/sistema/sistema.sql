@@ -1,31 +1,32 @@
 -- ======================================================================
 -- ===   Sql Script for Database : sistema
 -- ===
--- === Build : 41
+-- === Build : 48
 -- ======================================================================
 
-CREATE TABLE pais
+CREATE TABLE productos
   (
-    id      int           unique not null,
-    nombre  varchar(25)   not null,
-    codigo  varchar(2)    not null,
+    id           int           unique not null,
+    nombre       varchar(11)   not null,
+    descripcion  varchar(25)   not null,
+    categoria    varchar(25)   not null,
+    precio       int           not null,
+    status       char(1)       not null,
 
-    primary key(id,nombre)
+    primary key(id),
+
+    CHECK(status IN ('y', 'n'))
   );
 
 -- ======================================================================
 
 CREATE TABLE estados
   (
-    id         int           unique not null,
-    codigo     varchar(2)    not null,
-    nombre     varchar(25)   not null,
-    pais       int           not null,
-    poblacion  int           not null,
+    id      int           unique not null,
+    nombre  varchar(25)   not null,
+    codigo  varchar(2)    not null,
 
-    primary key(id),
-
-    foreign key(pais) references pais(id) on update CASCADE on delete CASCADE
+    primary key(id)
   );
 
 -- ======================================================================
@@ -33,13 +34,13 @@ CREATE TABLE estados
 CREATE TABLE ciudades
   (
     id         int           unique not null,
+    id_estado  int           not null,
     nombre     varchar(25)   not null,
-    estado     int           not null,
-    poblacion  int           not null,
+    capital    int           not null,
 
     primary key(id),
 
-    foreign key(estado) references estados(id) on update CASCADE on delete CASCADE
+    foreign key(id_estado) references estados(id) on update CASCADE on delete CASCADE
   );
 
 -- ======================================================================
@@ -55,6 +56,24 @@ CREATE TABLE clientes
     primary key(id),
 
     foreign key(codigo_postal) references ciudades(id) on update CASCADE on delete CASCADE
+  );
+
+-- ======================================================================
+
+CREATE TABLE pedidos
+  (
+    id           int       unique not null,
+    cliente_id   int       not null,
+    fecha        date      not null,
+    producto_id  int       not null,
+    status       char(1)   not null,
+
+    primary key(id),
+
+    foreign key(cliente_id) references clientes(id),
+    foreign key(producto_id) references productos(id),
+
+    CHECK(status IN ('y', 'n'))
   );
 
 -- ======================================================================
