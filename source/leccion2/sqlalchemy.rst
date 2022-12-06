@@ -573,10 +573,11 @@ El método ``delete()`` le permite eliminar el registro en base a la clave prima
 
 .. _python_sqlalchemy_scaffolding:
 
-Estructura de proyecto
-----------------------
+Práctica - Caso real
+--------------------
 
-A continuación la estructura de proyecto ``productos``
+Una práctica más real de implementar esto se presenta, a continuación la estructura
+de proyecto sistema ``productos``:
 
 .. code-block:: console
 
