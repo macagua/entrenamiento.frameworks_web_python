@@ -33,7 +33,6 @@ elif ENGINE == "mysql":
     ):
         # Conexión entre SQLAlchemy y MySQL DB API
         engine = create_engine(f"mysql+pymysql://{USER}:{PASSW}@{HOST}:{PORT}/{DB}")
-        print("Es mysql")
 elif ENGINE == "postgresql":
     if (
         "USER" in globals()
