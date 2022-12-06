@@ -98,7 +98,7 @@ Los parámetros deben ser reemplazadas con sus propios datos en la linea de coma
 
 .. code-block:: console
 
-    $ sqlacodegen --generator declarative sqlite:///{DB_PATH}/{DB_FILE} --outfile file.py
+    sqlacodegen --generator declarative sqlite:///{DB_PATH}/{DB_FILE} --outfile file.py
 
 A continuación se presentan el correspondiente comando de tu sistema operativo:
 
@@ -134,8 +134,7 @@ linea de comando:
 
 .. code-block:: console
 
-    $ sqlacodegen --generator declarative mysql+pymysql://USER:PASSW@HOST:PORT/DB \
-        --outfile file.py
+    sqlacodegen --generator declarative mysql+pymysql://USER:PASSW@HOST:PORT/DB --outfile file.py
 
 A continuación se presentan el correspondiente comando de tu sistema operativo:
 
@@ -172,8 +171,7 @@ linea de comando:
 
 .. code-block:: console
 
-    $ sqlacodegen --generator declarative postgresql://USER:PASSW@HOST:PORT/DB \
-        --outfile file.py
+    sqlacodegen --generator declarative postgresql://USER:PASSW@HOST:PORT/DB --outfile file.py
 
 A continuación se presentan el correspondiente comando de tu sistema operativo:
 
@@ -307,8 +305,8 @@ una mejor representación de los objetos.
 Práctica - Caso real
 --------------------
 
-Una práctica más real de implementar esto se presenta, a continuación la estructura
-de proyecto sistema ``sistema``:
+A continuación se presenta una práctica más real de implementar el uso de ``sqlacodegen``
+en proyectos con ``SQLAlchemy``, a continuación la estructura de proyecto llamado ``sistema``:
 
 .. code-block:: console
 
@@ -321,7 +319,29 @@ de proyecto sistema ``sistema``:
     ├── requirements.txt
     └── sistema.db
 
+.. important::
+    Usted puede descargar el código usado en esta sección haciendo clic en los
+    siguientes enlaces:
+
+    - :download:`.env.example <../../recursos/leccion12/sqlacodegen/sistema/.env.example>`
+
+    - :download:`db.py <../../recursos/leccion12/sqlacodegen/sistema/db.py>`
+
+    - :download:`__init__.py <../../recursos/leccion12/sqlacodegen/sistema/__init__.py>`.
+
+    - :download:`main.py <../../recursos/leccion12/sqlacodegen/sistema/main.py>`
+
+    - :download:`models.py <../../recursos/leccion12/sqlacodegen/sistema/models.py>`
+
+    - :download:`requirements.txt <../../recursos/leccion12/sqlacodegen/sistema/requirements.txt>`
+
+    - :download:`sistema.db <../../recursos/leccion12/sqlacodegen/sistema/sistema.db>`
+
+A continuación se presenta y explica el uso de cada archivo para esta proyecto:
+
 *Archivo .env.example*
+
+Archivo plantilla `dotenv`_ del paquete adicional `python-dotenv`_.
 
 .. literalinclude:: ../../recursos/leccion2/sqlacodegen/sistema/.env.example
     :language: text
@@ -330,12 +350,16 @@ de proyecto sistema ``sistema``:
 
 *Archivo db.py*
 
+Modulo de configuraciones del programa.
+
 .. literalinclude:: ../../recursos/leccion2/sqlacodegen/sistema/db.py
     :language: python
     :linenos:
     :lines: 1-54
 
 *Archivo models.py*
+
+Modulo de :ref:`modelos <python_sqlalchemy_modelos>` de :ref:`SQLAlchemy <python_sqlalchemy>`.
 
 .. literalinclude:: ../../recursos/leccion2/sqlacodegen/sistema/models.py
     :language: python
@@ -344,6 +368,8 @@ de proyecto sistema ``sistema``:
 
 *Archivo main.py*
 
+Modulo principal del programa.
+
 .. literalinclude:: ../../recursos/leccion2/sqlacodegen/sistema/main.py
     :language: python
     :linenos:
@@ -351,10 +377,18 @@ de proyecto sistema ``sistema``:
 
 *Archivo requirements.txt*
 
+Archivo de `requirements.txt`_ de la herramienta de gestión de paquetes `pip`_.
+
 .. literalinclude:: ../../recursos/leccion2/sqlacodegen/sistema/requirements.txt
     :language: python
     :linenos:
     :lines: 1-6
+
+*Archivo sistema.db*
+
+Archivo de base de datos de :ref:`SQLite <python_modulo_sqlite3>` llamado :file:`sistema.db`
+la cual se incluye ya que cada tiene la estructura de tablas y registros iniciales para hacer
+esta practica.
 
 
 Teniendo creada la anterior estructura de proyecto, vuelva a ejecutar ahora el modulo con
@@ -383,10 +417,13 @@ sistema operativo:
         puede modificarlo cambiar valores de la conexión.
 
       .. note::
-        Para conexiones a base de datos ``MySQL`` y ``PostgreSQL`` debe definir las variables
-        que por defecto no están definidas.
+        Para conexiones a base de datos :ref:`MySQL <python_mysql_conn_strs>` y :ref:`PostgreSQL <python_psycopg2_conn_strs>`
+        debe definir las variables que por defecto no están definidas.
 
-      Por ultimo ejecute el modulo ``main.py``, ejecutando el siguiente comando:
+      .. tip::
+        Para ejecutar el código fuente de esta practica debe invocar al modulo :file:`main.py`,
+        abra una consola de comando, acceda al directorio donde se encuentra la estructura previa
+        y ejecute el siguiente comando:
 
       .. code-block:: console
 
@@ -405,17 +442,20 @@ sistema operativo:
       .. code-block:: console
 
           > copy .env.example .env
-          > notepad.exe .env
+          > notepad.exe .env &
 
       .. tip::
         El archivo ``.env`` se definen las configuraciones de conexión a la base de datos,
         puede modificarlo cambiar valores de la conexión.
 
       .. note::
-        Para conexiones a base de datos ``MySQL`` y ``PostgreSQL`` debe definir las variables
-        que por defecto no están definidas.
+        Para conexiones a base de datos :ref:`MySQL <python_mysql_conn_strs>` y :ref:`PostgreSQL <python_psycopg2_conn_strs>`
+        debe definir las variables que por defecto no están definidas.
 
-      Por ultimo ejecute el modulo ``main.py``, ejecutando el siguiente comando:
+      .. tip::
+        Para ejecutar el código fuente de esta practica debe invocar al modulo :file:`main.py`,
+        abra una consola de comando, acceda al directorio donde se encuentra la estructura previa
+        y ejecute el siguiente comando:
 
       .. code-block:: console
 
@@ -430,8 +470,9 @@ El anterior código al ejecutar debe mostrar el siguiente mensaje:
     ¡Consulta todas las ciudades!
 
 
-Asi de esta forma puede usar ``sqlacodegen`` para generar modelos ``SQLAlchemy`` desde una base de datos
-existente e implementar las operaciones ingresar, consultar, actualizar y eliminar registro en las tablas.
+Asi de esta forma puede usar ``sqlacodegen`` para generar modelos ``SQLAlchemy`` desde
+una base de datos existente e implementar las operaciones ingresar, consultar,
+actualizar y eliminar registro en las tablas.
 
 ----
 
@@ -443,3 +484,7 @@ existente e implementar las operaciones ingresar, consultar, actualizar y elimin
 .. _`sqlacodegen`: https://pypi.org/project/sqlacodegen/
 .. _`sqlautocode`: http://code.google.com/p/sqlautocode/
 .. _`Engine Configuration`: https://docs.sqlalchemy.org/en/14/core/engines.html
+.. _`dotenv`: https://dev.to/emma_donery/python-dotenv-keep-your-secrets-safe-4ocn
+.. _`python-dotenv`: https://pypi.org/project/python-dotenv/
+.. _`requirements.txt`: https://pip.pypa.io/en/stable/reference/requirements-file-format/
+.. _`pip`: https://pip.pypa.io/en/stable/

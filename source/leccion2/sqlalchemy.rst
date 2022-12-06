@@ -246,7 +246,7 @@ Crear los modelos
 -----------------
 
 En este punto, ya tiene casi todo listo para interactuar con el ORM.
-Ahora le voy a conocer donde realmente ocurre la *magia*: los modelos.
+Ahora le voy a conocer donde realmente ocurre la *magia*: los `modelos`_.
 
 Los modelos son las clases que representan las tablas de base de datos. En el ejemplo
 tenemos la tabla ``productos``, por tanto, dado que esta usando un ORM, tiene
@@ -576,8 +576,8 @@ El método ``delete()`` le permite eliminar el registro en base a la clave prima
 Práctica - Caso real
 --------------------
 
-Una práctica más real de implementar esto se presenta, a continuación la estructura
-de proyecto sistema ``productos``:
+A continuación se presenta una práctica más real de implementar el uso de proyectos
+con ``SQLAlchemy``, a continuación la estructura de proyecto llamado ``productos``:
 
 .. code-block:: console
 
@@ -590,7 +590,28 @@ de proyecto sistema ``productos``:
     ├── productos.sqlite3
     └── requirements.txt
 
+.. important::
+    Usted puede descargar el código usado en esta sección haciendo clic en los
+    siguientes enlaces:
+
+    - :download:`.env.example <../../recursos/leccion12/sqlalchemy/productos/.env.example>`
+
+    - :download:`db.py <../../recursos/leccion12/sqlalchemy/productos/db.py>`
+
+    - :download:`__init__.py <../../recursos/leccion12/sqlalchemy/productos/__init__.py>`.
+
+    - :download:`main.py <../../recursos/leccion12/sqlalchemy/productos/main.py>`
+
+    - :download:`models.py <../../recursos/leccion12/sqlalchemy/productos/models.py>`
+
+    - :download:`requirements.txt <../../recursos/leccion12/sqlalchemy/productos/requirements.txt>`
+
+
+A continuación se presenta y explica el uso de cada archivo para esta proyecto:
+
 *Archivo .env.example*
+
+Archivo plantilla `dotenv`_ del paquete adicional `python-dotenv`_.
 
 .. literalinclude:: ../../recursos/leccion2/sqlacodegen/sistema/.env.example
     :language: text
@@ -599,12 +620,16 @@ de proyecto sistema ``productos``:
 
 *Archivo db.py*
 
+Modulo de configuraciones del programa.
+
 .. literalinclude:: ../../recursos/leccion2/sqlalchemy/productos/db.py
     :language: python
     :linenos:
     :lines: 1-21
 
 *Archivo models.py*
+
+Modulo de :ref:`modelos <python_sqlalchemy_modelos>` de :ref:`SQLAlchemy <python_sqlalchemy>`.
 
 .. literalinclude:: ../../recursos/leccion2/sqlalchemy/productos/models.py
     :language: python
@@ -613,24 +638,31 @@ de proyecto sistema ``productos``:
 
 *Archivo main.py*
 
+Modulo de configuraciones del programa.
+
 .. literalinclude:: ../../recursos/leccion2/sqlalchemy/productos/main.py
     :language: python
     :linenos:
     :lines: 1-142
 
+*Archivo productos.sqlite3*
+
+Archivo de base de datos de :ref:`SQLite <python_modulo_sqlite3>` llamado :file:`productos.sqlite3`
+la cual no se incluye ya que cada vez que se inicia el programa :file:`main.py` se elimina y crea
+nuevamente, para cuidar la creación de los datos iniciales.
+
 *Archivo requirements.txt*
+
+Archivo de `requirements.txt`_ de la herramienta de gestión de paquetes `pip`_.
 
 .. literalinclude:: ../../recursos/leccion2/sqlalchemy/productos/requirements.txt
     :language: python
     :linenos:
     :lines: 1-3
 
-
-Teniendo creada la anterior estructura de proyecto
-
-
-Vuelva a ejecutar ahora el modulo con el siguiente comando, el cual a continuación se presentan
-el correspondiente comando de tu sistema operativo:
+Teniendo creada la anterior estructura de proyecto, vuelva a ejecutar ahora el modulo con
+el siguiente comando, el cual a continuación se presentan el correspondiente comando de tu
+sistema operativo:
 
 .. tabs::
 
@@ -654,10 +686,13 @@ el correspondiente comando de tu sistema operativo:
         puede modificarlo cambiar valores de la conexión.
 
       .. note::
-        Para conexiones a base de datos ``MySQL`` y ``PostgreSQL`` debe definir las variables
-        que por defecto no están definidas.
+        Para conexiones a base de datos :ref:`MySQL <python_mysql_conn_strs>` y :ref:`PostgreSQL <python_psycopg2_conn_strs>`
+        debe definir las variables que por defecto no están definidas.
 
-      Por ultimo ejecute el modulo ``main.py``, ejecutando el siguiente comando:
+      .. tip::
+        Para ejecutar el código fuente de esta practica debe invocar al modulo :file:`main.py`,
+        abra una consola de comando, acceda al directorio donde se encuentra la estructura previa
+        y ejecute el siguiente comando:
 
       .. code-block:: console
 
@@ -676,17 +711,20 @@ el correspondiente comando de tu sistema operativo:
       .. code-block:: console
 
           > copy .env.example .env
-          > notepad.exe .env
+          > notepad.exe .env &
 
       .. tip::
         El archivo ``.env`` se definen las configuraciones de conexión a la base de datos,
         puede modificarlo cambiar valores de la conexión.
 
       .. note::
-        Para conexiones a base de datos ``MySQL`` y ``PostgreSQL`` debe definir las variables
-        que por defecto no están definidas.
+        Para conexiones a base de datos :ref:`MySQL <python_mysql_conn_strs>` y :ref:`PostgreSQL <python_psycopg2_conn_strs>`
+        debe definir las variables que por defecto no están definidas.
 
-      Por ultimo ejecute el modulo ``main.py``, ejecutando el siguiente comando:
+      .. tip::
+        Para ejecutar el código fuente de esta practica debe invocar al modulo :file:`main.py`,
+        abra una consola de comando, acceda al directorio donde se encuentra la estructura previa
+        y ejecute el siguiente comando:
 
       .. code-block:: console
 
@@ -762,3 +800,8 @@ tabla usando ``SQLAlchemy``.
 .. _`SQLAlchemy`: https://pypi.org/project/SQLAlchemy/
 .. _`MongoDB`: https://www.mongodb.com/
 .. _`cx_Oracle`: https://cx-oracle.readthedocs.io/en/latest/
+.. _`modelos`: https://docs.sqlalchemy.org/en/14/core/schema.html
+.. _`dotenv`: https://dev.to/emma_donery/python-dotenv-keep-your-secrets-safe-4ocn
+.. _`python-dotenv`: https://pypi.org/project/python-dotenv/
+.. _`requirements.txt`: https://pip.pypa.io/en/stable/reference/requirements-file-format/
+.. _`pip`: https://pip.pypa.io/en/stable/
