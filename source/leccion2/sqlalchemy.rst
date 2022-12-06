@@ -288,7 +288,7 @@ A continuación, le presento como debe quedar el archivo ``db.py``:
 .. literalinclude:: ../../recursos/leccion2/sqlalchemy/productos/db.py
     :language: python
     :linenos:
-    :lines: 1-18
+    :lines: 1-20
 
 Por tanto, lo siguiente que debe hacer es crear el modelo ``Productos``. Crea un
 nuevo archivo en el directorio ``productos`` llamado ``models.py`` y
@@ -297,15 +297,15 @@ añade el código que te muestro a continuación:
 .. literalinclude:: ../../recursos/leccion2/sqlalchemy/productos/models.py
     :language: python
     :linenos:
-    :lines: 1-23
+    :lines: 1-31
 
 Asi de esta forma tiene definido una clase modelo llamado ``Productos`` la cual mapea
 la tabla ``productos``.
 
 .. _python_sqlalchemy_mapeo_clase_tabla:
 
-Mapeo clase-tabla
-^^^^^^^^^^^^^^^^^
+Mapeo entre la clase y la tabla
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 La clase ``Productos`` del código anterior representa la tabla ``productos``.
 
@@ -594,28 +594,28 @@ A continuación la estructura de proyecto ``productos``
 .. literalinclude:: ../../recursos/leccion2/sqlalchemy/productos/requirements.txt
     :language: python
     :linenos:
-    :lines: 1-2
+    :lines: 1-3
 
 *Archivo db.py*
 
 .. literalinclude:: ../../recursos/leccion2/sqlalchemy/productos/db.py
     :language: python
     :linenos:
-    :lines: 1-18
+    :lines: 1-21
 
 *Archivo models.py*
 
 .. literalinclude:: ../../recursos/leccion2/sqlalchemy/productos/models.py
     :language: python
     :linenos:
-    :lines: 1-23
+    :lines: 1-31
 
 *Archivo main.py*
 
 .. literalinclude:: ../../recursos/leccion2/sqlalchemy/productos/main.py
     :language: python
     :linenos:
-    :lines: 1-144
+    :lines: 1-142
 
 
 Teniendo creada la anterior estructura de proyecto
@@ -630,7 +630,7 @@ el correspondiente comando de tu sistema operativo:
 
       .. code-block:: console
 
-          $ pip install bpython
+          $ pip install -r requirements.txt
           $ python main.py
 
    .. group-tab:: Windows
