@@ -157,15 +157,15 @@ Vamos a crear un ``engine``. Para ello, añade un nuevo módulo Python llamado
     import os
     from sqlalchemy import create_engine
 
-    DIR_ARCHIVO = os.path.dirname(os.path.abspath(__file__)) + os.sep
-    DB_ARCHIVO = "productos.sqlite3"
+    DB_PATH = os.path.dirname(os.path.abspath(__file__)) + os.sep
+    DB_FILE = "productos.sqlite3"
 
     # Configurar conexiones entre SQLAlchemy y SQLite3 DB API
-    engine = create_engine(f"sqlite:///{DIR_ARCHIVO}{DB_ARCHIVO}")
+    engine = create_engine(f"sqlite:///{DB_PATH}{DB_FILE}")
 
 Como puedes observar, a la función ``create_engine()`` se le pasa la cadena
 de conexión a la base de datos. En este caso, la cadena de conexión a la base de
-datos SQLite es ``"sqlite:///{DIR_ARCHIVO}{DB_ARCHIVO}"``.
+datos SQLite es ``"sqlite:///{DB_PATH}{DB_FILE}"``.
 
 Crear el ``engine`` no hace que la aplicación se conecte a la base de datos
 inmediatamente, este hecho se pospone para cuando es necesario.
@@ -227,10 +227,10 @@ Va a crear una sesión en el proyecto. Abre el archivo ``db.py`` y añade lo sig
     from sqlalchemy import create_engine
     from sqlalchemy.orm import sessionmaker
 
-    DIR_ARCHIVO = os.path.dirname(os.path.abspath(__file__)) + os.sep
-    DB_ARCHIVO = "productos.sqlite3"
+    DB_PATH = os.path.dirname(os.path.abspath(__file__)) + os.sep
+    DB_FILE = "productos.sqlite3"
 
-    engine = create_engine(f"sqlite:///{DIR_ARCHIVO}{DB_ARCHIVO}")
+    engine = create_engine(f"sqlite:///{DB_PATH}{DB_FILE}")
 
     Session = sessionmaker(bind=engine)
     session = Session()
@@ -267,10 +267,10 @@ el que te muestro a continuación:
     from sqlalchemy.orm import sessionmaker
     from sqlalchemy.ext.declarative import declarative_base
 
-    DIR_ARCHIVO = os.path.dirname(os.path.abspath(__file__)) + os.sep
-    DB_ARCHIVO = "productos.sqlite3"
+    DB_PATH = os.path.dirname(os.path.abspath(__file__)) + os.sep
+    DB_FILE = "productos.sqlite3"
 
-    engine = create_engine(f"sqlite:///{DIR_ARCHIVO}{DB_ARCHIVO}")
+    engine = create_engine(f"sqlite:///{DB_PATH}{DB_FILE}")
 
     Session = sessionmaker(bind=engine)
     session = Session()

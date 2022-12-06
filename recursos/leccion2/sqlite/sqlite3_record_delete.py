@@ -6,9 +6,9 @@ import os
 
 logging.basicConfig(level=logging.INFO)
 
-NOMBRE_ARCHIVO = "sistema.db"
-DIR_ARCHIVO = os.path.dirname(os.path.abspath(__file__)) + os.sep
-ARCHIVO = DIR_ARCHIVO + NOMBRE_ARCHIVO
+DB_PATH = os.path.dirname(os.path.abspath(__file__)) + os.sep
+DB_FILE = "sistema.db"
+DB = DB_PATH + DB_FILE
 SQL_SCRIPTS = """DELETE FROM clientes WHERE id = 3;"""
 
 
@@ -18,9 +18,9 @@ def eliminar_registro():
     """
 
     try:
-        conexion = sqlite3.connect(ARCHIVO)
+        conexion = sqlite3.connect(DB)
         cursor = conexion.cursor()
-        logging.info(f"¡Conectado a la base de datos {NOMBRE_ARCHIVO}!\n")
+        logging.info(f"¡Conectado a la base de datos {DB_FILE}!\n")
 
         # Eliminar un fila de registro simple
         cursor.execute(SQL_SCRIPTS)
@@ -35,7 +35,7 @@ def eliminar_registro():
             conexion.close()
             logging.info(
                 "¡La conexión SQLite a la base de datos {} fue cerrada!\n".format(
-                    NOMBRE_ARCHIVO
+                    DB_FILE
                 )
             )
 
