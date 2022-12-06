@@ -6,9 +6,9 @@ import os
 
 logging.basicConfig(level=logging.INFO)
 
-NOMBRE_ARCHIVO = "sistema.db"
-DIR_ARCHIVO = os.path.dirname(os.path.abspath(__file__)) + os.sep
-ARCHIVO = DIR_ARCHIVO + NOMBRE_ARCHIVO
+DB_PATH = os.path.dirname(os.path.abspath(__file__)) + os.sep
+DB_FILE = "sistema.db"
+DB = DB_PATH + DB_FILE
 
 # Creando una lista de filas a ingresar
 MULTIPLE_COLUMNS = [
@@ -26,9 +26,9 @@ def insertar_registro():
     """
 
     try:
-        conexion = sqlite3.connect(ARCHIVO)
+        conexion = sqlite3.connect(DB)
         cursor = conexion.cursor()
-        logging.info(f"¡Conectado a la base de datos {NOMBRE_ARCHIVO}!\n")
+        logging.info(f"¡Conectado a la base de datos {DB_FILE}!\n")
 
         count = cursor.executemany(SQL_SCRIPTS, MULTIPLE_COLUMNS)
         conexion.commit()
@@ -46,7 +46,7 @@ def insertar_registro():
             conexion.close()
             logging.info(
                 "¡La conexión SQLite a la base de datos {} fue cerrada!\n".format(
-                    NOMBRE_ARCHIVO
+                    DB_FILE
                 )
             )
 

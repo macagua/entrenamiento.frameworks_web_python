@@ -1,9 +1,17 @@
-from db import *
+from db import Base
 
 from sqlalchemy import Column, Integer, String, Float
 
 
 class Productos(Base):
+    """Clase de Productos
+
+    Args:
+        Base (Base): clase base declarativa
+
+    Returns:
+        class 'models.Productos': Clase de Productos
+    """
     __tablename__ = "productos"
 
     id = Column(Integer, primary_key=True)

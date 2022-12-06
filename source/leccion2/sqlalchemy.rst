@@ -157,15 +157,15 @@ Vamos a crear un ``engine``. Para ello, añade un nuevo módulo Python llamado
     import os
     from sqlalchemy import create_engine
 
-    DIR_ARCHIVO = os.path.dirname(os.path.abspath(__file__)) + os.sep
-    DB_ARCHIVO = "productos.sqlite3"
+    DB_PATH = os.path.dirname(os.path.abspath(__file__)) + os.sep
+    DB_FILE = "productos.sqlite3"
 
     # Configurar conexiones entre SQLAlchemy y SQLite3 DB API
-    engine = create_engine(f"sqlite:///{DIR_ARCHIVO}{DB_ARCHIVO}")
+    engine = create_engine(f"sqlite:///{DB_PATH}{DB_FILE}")
 
 Como puedes observar, a la función ``create_engine()`` se le pasa la cadena
 de conexión a la base de datos. En este caso, la cadena de conexión a la base de
-datos SQLite es ``"sqlite:///{DIR_ARCHIVO}{DB_ARCHIVO}"``.
+datos SQLite es ``"sqlite:///{DB_PATH}{DB_FILE}"``.
 
 Crear el ``engine`` no hace que la aplicación se conecte a la base de datos
 inmediatamente, este hecho se pospone para cuando es necesario.
@@ -227,10 +227,10 @@ Va a crear una sesión en el proyecto. Abre el archivo ``db.py`` y añade lo sig
     from sqlalchemy import create_engine
     from sqlalchemy.orm import sessionmaker
 
-    DIR_ARCHIVO = os.path.dirname(os.path.abspath(__file__)) + os.sep
-    DB_ARCHIVO = "productos.sqlite3"
+    DB_PATH = os.path.dirname(os.path.abspath(__file__)) + os.sep
+    DB_FILE = "productos.sqlite3"
 
-    engine = create_engine(f"sqlite:///{DIR_ARCHIVO}{DB_ARCHIVO}")
+    engine = create_engine(f"sqlite:///{DB_PATH}{DB_FILE}")
 
     Session = sessionmaker(bind=engine)
     session = Session()
@@ -267,10 +267,10 @@ el que te muestro a continuación:
     from sqlalchemy.orm import sessionmaker
     from sqlalchemy.ext.declarative import declarative_base
 
-    DIR_ARCHIVO = os.path.dirname(os.path.abspath(__file__)) + os.sep
-    DB_ARCHIVO = "productos.sqlite3"
+    DB_PATH = os.path.dirname(os.path.abspath(__file__)) + os.sep
+    DB_FILE = "productos.sqlite3"
 
-    engine = create_engine(f"sqlite:///{DIR_ARCHIVO}{DB_ARCHIVO}")
+    engine = create_engine(f"sqlite:///{DB_PATH}{DB_FILE}")
 
     Session = sessionmaker(bind=engine)
     session = Session()
@@ -288,7 +288,7 @@ A continuación, le presento como debe quedar el archivo ``db.py``:
 .. literalinclude:: ../../recursos/leccion2/sqlalchemy/productos/db.py
     :language: python
     :linenos:
-    :lines: 1-18
+    :lines: 1-20
 
 Por tanto, lo siguiente que debe hacer es crear el modelo ``Productos``. Crea un
 nuevo archivo en el directorio ``productos`` llamado ``models.py`` y
@@ -297,15 +297,15 @@ añade el código que te muestro a continuación:
 .. literalinclude:: ../../recursos/leccion2/sqlalchemy/productos/models.py
     :language: python
     :linenos:
-    :lines: 1-23
+    :lines: 1-31
 
 Asi de esta forma tiene definido una clase modelo llamado ``Productos`` la cual mapea
 la tabla ``productos``.
 
 .. _python_sqlalchemy_mapeo_clase_tabla:
 
-Mapeo clase-tabla
-^^^^^^^^^^^^^^^^^
+Mapeo entre la clase y la tabla
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 La clase ``Productos`` del código anterior representa la tabla ``productos``.
 
@@ -594,28 +594,28 @@ A continuación la estructura de proyecto ``productos``
 .. literalinclude:: ../../recursos/leccion2/sqlalchemy/productos/requirements.txt
     :language: python
     :linenos:
-    :lines: 1-2
+    :lines: 1-3
 
 *Archivo db.py*
 
 .. literalinclude:: ../../recursos/leccion2/sqlalchemy/productos/db.py
     :language: python
     :linenos:
-    :lines: 1-18
+    :lines: 1-21
 
 *Archivo models.py*
 
 .. literalinclude:: ../../recursos/leccion2/sqlalchemy/productos/models.py
     :language: python
     :linenos:
-    :lines: 1-23
+    :lines: 1-31
 
 *Archivo main.py*
 
 .. literalinclude:: ../../recursos/leccion2/sqlalchemy/productos/main.py
     :language: python
     :linenos:
-    :lines: 1-144
+    :lines: 1-142
 
 
 Teniendo creada la anterior estructura de proyecto
@@ -630,7 +630,7 @@ el correspondiente comando de tu sistema operativo:
 
       .. code-block:: console
 
-          $ pip install bpython
+          $ pip install -r requirements.txt
           $ python main.py
 
    .. group-tab:: Windows

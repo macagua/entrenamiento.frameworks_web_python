@@ -115,7 +115,6 @@ def actualizar_otra_data(producto_id, precio_nuevo):
     )
     session.commit()
     print("¡Actualización exitosa de precio del producto!\n")
-    # update(Productos)
 
 
 def eliminar_data(producto_id):
@@ -124,7 +123,6 @@ def eliminar_data(producto_id):
     session.query(Productos).filter(Productos.id == producto_id).delete()
     session.commit()
     print("¡Eliminación exitosa del producto!\n")
-    # delete(Productos)
 
 
 if __name__ == "__main__":
