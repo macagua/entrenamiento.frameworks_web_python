@@ -1,10 +1,21 @@
-from db import *
+""" Modulo de modelos de SQLAlchemy """
+
+from db import Base
 
 from sqlalchemy import Column, Date, Enum, ForeignKey, Integer, String
 from sqlalchemy.orm import declarative_base, relationship
 
 
 class Estados(Base):
+    """Clase de Estados
+
+    Args:
+        Base (Base): clase base declarativa
+
+    Returns:
+        class 'models.Estados': Clase de Estados
+    """
+
     __tablename__ = "estados"
 
     id = Column(Integer, primary_key=True, unique=True)
@@ -21,6 +32,15 @@ class Estados(Base):
 
 
 class Productos(Base):
+    """Clase de Productos
+
+    Args:
+        Base (Base): clase base declarativa
+
+    Returns:
+        class 'models.Productos': Clase de Productos
+    """
+
     __tablename__ = "productos"
 
     id = Column(Integer, primary_key=True, unique=True)
@@ -40,6 +60,15 @@ class Productos(Base):
 
 
 class Ciudades(Base):
+    """Clase de Ciudades
+
+    Args:
+        Base (Base): clase base declarativa
+
+    Returns:
+        class 'models.Ciudades': Clase de Ciudades
+    """
+
     __tablename__ = "ciudades"
 
     id = Column(Integer, primary_key=True, unique=True)
@@ -60,6 +89,15 @@ class Ciudades(Base):
 
 
 class Clientes(Base):
+    """Clase de Clientes
+
+    Args:
+        Base (Base): clase base declarativa
+
+    Returns:
+        class 'models.Clientes': Clase de Clientes
+    """
+
     __tablename__ = "clientes"
 
     id = Column(Integer, primary_key=True, unique=True)
@@ -82,6 +120,15 @@ class Clientes(Base):
 
 
 class Pedidos(Base):
+    """Clase de Pedidos de ventas
+
+    Args:
+        Base (Base): clase base declarativa
+
+    Returns:
+        class 'models.Pedidos': Clase de Pedidos de ventas
+    """
+
     __tablename__ = "pedidos"
 
     id = Column(Integer, primary_key=True, unique=True)

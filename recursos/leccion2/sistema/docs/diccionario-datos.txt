@@ -1,5 +1,5 @@
 #===============================================================================
-#==   Data Dictionary File for Database : sistema (Build 41)
+#==   Data Dictionary File for Database : sistema (Build 48)
 #==
 #== Format: table, field
 #===============================================================================
@@ -12,25 +12,34 @@
 'clientes',    'codigo_postal'
 'clientes',    'telefono'
 
-#== ciudades ===================================================================
+#== pedidos ====================================================================
 
-'ciudades',    'id'
-'ciudades',    'nombre'
-'ciudades',    'estado'
-'ciudades',    'poblacion'
+'pedidos',     'id'
+'pedidos',     'cliente_id'
+'pedidos',     'fecha'
+'pedidos',     'producto_id'
+'pedidos',     'status'
+
+#== productos ==================================================================
+
+'productos',   'id'
+'productos',   'nombre'
+'productos',   'descripcion'
+'productos',   'categoria'
+'productos',   'precio'
+'productos',   'status'
 
 #== estados ====================================================================
 
 'estados',     'id'
-'estados',     'codigo'
 'estados',     'nombre'
-'estados',     'pais'
-'estados',     'poblacion'
+'estados',     'codigo'
 
-#== pais =======================================================================
+#== ciudades ===================================================================
 
-'pais',        'id'
-'pais',        'nombre'
-'pais',        'codigo'
+'ciudades',    'id'
+'ciudades',    'id_estado'
+'ciudades',    'nombre'
+'ciudades',    'capital'
 
 #===============================================================================

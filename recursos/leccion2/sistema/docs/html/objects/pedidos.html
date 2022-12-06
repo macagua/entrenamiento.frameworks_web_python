@@ -32,18 +32,12 @@
 	<a name="Overview"></a>
 
 	<table width="100%" border="1" cellspacing="0" cellpadding="2">
-		<tr class="title"><td>Tabla : estados</td></tr>
+		<tr class="title"><td>Tabla : pedidos</td></tr>
 	</table>
 
-	<p>Tabla de estados</p>
 
 
-			<p><b>Ver además:</b></p>
-		<blockquote>
 
-					<a href="ciudades.html">ciudades</a><br/>
-
-		</blockquote>
 
 	<p/>
 
@@ -75,39 +69,79 @@
 
 									</td>
 
-				<td><p>ID del estado</p></td>
+				<td><p>ID de pedido</p></td>
+			</tr>
+					<tr>
+				<td>
+			<i>
+
+	cliente_id
+
+			</i>
+
+	</td>
+
+				<td>
+											<a href="clientes.html">
+
+					clientes(id)
+
+											</a>
+									</td>
+
+				<td><p>ID de cliente</p></td>
 			</tr>
 					<tr>
 				<td>
 
-	nombre
+	fecha
 
 
 	</td>
 
 				<td>
 
-					varchar25
+					date
 
 									</td>
 
-				<td><p>Nombre del estado</p></td>
+				<td><p>Fecha de pedido</p></td>
+			</tr>
+					<tr>
+				<td>
+			<i>
+
+	producto_id
+
+			</i>
+
+	</td>
+
+				<td>
+											<a href="productos.html">
+
+					productos(id)
+
+											</a>
+									</td>
+
+				<td><p>ID de producto</p></td>
 			</tr>
 					<tr>
 				<td>
 
-	codigo
+	status
 
 
 	</td>
 
 				<td>
 
-					varchar2
+					Bool
 
 									</td>
 
-				<td><p>codigo del estado</p></td>
+				<td><p>Status de pedido</p></td>
 			</tr>
 			</table>
 
@@ -152,12 +186,14 @@
 												</tr>
 					<tr>
 				<td>
+			<i>
 
-	nombre
+	cliente_id
 
+			</i>
 
 	</td>
-				<td>varchar(25)</td>
+				<td>int</td>
 
 																											<td align="center"><img alt="unset.gif" src="../images/unset.gif" /></td>
 																																<td align="center"><img alt="unset.gif" src="../images/unset.gif" /></td>
@@ -169,11 +205,45 @@
 					<tr>
 				<td>
 
-	codigo
+	fecha
 
 
 	</td>
-				<td>varchar(2)</td>
+				<td>date</td>
+
+																											<td align="center"><img alt="unset.gif" src="../images/unset.gif" /></td>
+																																<td align="center"><img alt="unset.gif" src="../images/unset.gif" /></td>
+																										<td align="center"><img alt="set.gif" src="../images/set.gif" /></td>
+																																<td align="center"><img alt="unset.gif" src="../images/unset.gif" /></td>
+																				<td>&nbsp;</td>
+																																<td align="center"><img alt="unset.gif" src="../images/unset.gif" /></td>
+												</tr>
+					<tr>
+				<td>
+			<i>
+
+	producto_id
+
+			</i>
+
+	</td>
+				<td>int</td>
+
+																											<td align="center"><img alt="unset.gif" src="../images/unset.gif" /></td>
+																																<td align="center"><img alt="unset.gif" src="../images/unset.gif" /></td>
+																										<td align="center"><img alt="set.gif" src="../images/set.gif" /></td>
+																																<td align="center"><img alt="unset.gif" src="../images/unset.gif" /></td>
+																				<td>&nbsp;</td>
+																																<td align="center"><img alt="unset.gif" src="../images/unset.gif" /></td>
+												</tr>
+					<tr>
+				<td>
+
+	status
+
+
+	</td>
+				<td>char(1)</td>
 
 																											<td align="center"><img alt="unset.gif" src="../images/unset.gif" /></td>
 																																<td align="center"><img alt="unset.gif" src="../images/unset.gif" /></td>
@@ -190,6 +260,19 @@
 
 
 
+			<table width="100%" border="1" cellspacing="0" cellpadding="2">
+			<tr class="paragr"><td colspan="4">Llaves Extranjeras</td></tr>
+			<tr class="header">
+				<th width="25%">Campo</th>
+				<th width="25%">Origen</th>
+				<th width="25%">Al Actualizar</th>
+				<th width="25%">Al Borrar</th>
+			</tr>
+
+			 <tr><td>cliente_id</td><td>clientes(id)</td><td>NO ACTION</td><td>NO ACTION</td></tr> <tr><td>producto_id</td><td>productos(id)</td><td>NO ACTION</td><td>NO ACTION</td></tr>
+
+		</table>
+		<p/>
 
 
 	<a name="Vars" />

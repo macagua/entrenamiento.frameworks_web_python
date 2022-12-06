@@ -1,8 +1,12 @@
-from db import *
-from models import *
+""" Modulo principal del programa """
+
+from db import session
+from models import Estados, Ciudades
 
 
 def consulta_estados():
+    """Consulta todos los estados"""
+
     print("¡Consulta todos los estados!")
     # SELECT * FROM estados;
     estados = session.query(Estados).all()
@@ -12,6 +16,8 @@ def consulta_estados():
 
 
 def consulta_ciudades():
+    """Consulta todas las ciudades"""
+
     print("¡Consulta todas las ciudades!")
     # SELECT * FROM ciudades;
     ciudades = session.query(Ciudades).all()

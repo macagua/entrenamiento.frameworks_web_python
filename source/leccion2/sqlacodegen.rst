@@ -34,8 +34,8 @@ Características
 Instalación
 -----------
 
-Para instalar la librería ``sqlacodegen`` debe seguir el siguientes paso, el cual a continuación
-se presentan el correspondiente comando de tu sistema operativo:
+Para instalar la librería ``sqlacodegen`` debe seguir el siguientes paso, el cual
+a continuación se presentan el correspondiente comando de tu sistema operativo:
 
 .. tabs::
 
@@ -52,8 +52,8 @@ se presentan el correspondiente comando de tu sistema operativo:
           > pip install git+https://github.com/agronholm/sqlacodegen.git@3.0.0rc1#egg=sqlacodegen
 
 
-Puede probar si la instalación se realizo correctamente, ejecutando
-el siguiente comando correspondiente a tu sistema operativo:
+Puede probar si la instalación se realizo correctamente, ejecutando el siguiente
+comando correspondiente a tu sistema operativo:
 
 .. tabs::
 
@@ -70,8 +70,8 @@ el siguiente comando correspondiente a tu sistema operativo:
           > python -c "import sqlacodegen ; print(sqlacodegen.__name__)"
 
 
-Si muestra el nombre del paquete como ``sqlacodegen``, tiene correctamente instalada la librería.
-Con esto, ya tiene todo listo para continuar.
+Si muestra el nombre del paquete como ``sqlacodegen``, tiene correctamente instalada
+la librería. Con esto, ya tiene todo listo para continuar.
 
 .. _python_sqlacodegen_uso:
 
@@ -80,7 +80,8 @@ Conexión al Engine
 
 Luego configura el :ref:`engine <python_sqlalchemy_engine>` (cadena de conexión)
 para la DB respectiva. Para esto se explican algunas configuraciones, para SQLite,
-:ref:`MySQL <python_pkg_mysql>` y :ref:`PostgreSQL <python_pkg_postgresql>` a continuación:
+:ref:`MySQL <python_pkg_mysql>` y :ref:`PostgreSQL <python_pkg_postgresql>`
+a continuación:
 
 .. tip::
     Cada cadena de conexión necesita que se instale la librería dependiente.
@@ -113,6 +114,83 @@ A continuación se presentan el correspondiente comando de tu sistema operativo:
       .. code-block:: console
 
           > .\sqlacodegen.exe --generator declarative sqlite:///sistema.db --outfile models.py
+
+
+El anterior comando al ejecutar debe generar un modulo python llamado ``models.py`` que contiene el siguiente código:
+
+.. code-block:: python
+    :linenos:
+
+    from sqlalchemy import Column, Date, Enum, ForeignKey, Integer, String
+    from sqlalchemy.orm import declarative_base, relationship
+
+    Base = declarative_base()
+
+
+    class Estados(Base):
+        __tablename__ = 'estados'
+
+        id = Column(Integer, primary_key=True, unique=True)
+        nombre = Column(String(25), nullable=False)
+        codigo = Column(String(2), nullable=False)
+
+        ciudades = relationship('Ciudades', back_populates='estados')
+
+
+    class Productos(Base):
+        __tablename__ = 'productos'
+
+        id = Column(Integer, primary_key=True, unique=True)
+        nombre = Column(String(11), nullable=False)
+        descripcion = Column(String(25), nullable=False)
+        categoria = Column(String(25), nullable=False)
+        precio = Column(Integer, nullable=False)
+        status = Column(Enum('y', 'n'), nullable=False)
+
+        pedidos = relationship('Pedidos', back_populates='producto')
+
+
+    class Ciudades(Base):
+        __tablename__ = 'ciudades'
+
+        id = Column(Integer, primary_key=True, unique=True)
+        id_estado = Column(ForeignKey('estados.id', ondelete='CASCADE', onupdate='CASCADE'), nullable=False)
+        nombre = Column(String(25), nullable=False)
+        capital = Column(Integer, nullable=False)
+
+        estados = relationship('Estados', back_populates='ciudades')
+        clientes = relationship('Clientes', back_populates='ciudades')
+
+
+    class Clientes(Base):
+        __tablename__ = 'clientes'
+
+        id = Column(Integer, primary_key=True, unique=True)
+        nombre = Column(String(25), nullable=False)
+        apellido = Column(String(25), nullable=False)
+        codigo_postal = Column(ForeignKey('ciudades.id', ondelete='CASCADE', onupdate='CASCADE'), nullable=False)
+        telefono = Column(String(11), nullable=False)
+
+        ciudades = relationship('Ciudades', back_populates='clientes')
+        pedidos = relationship('Pedidos', back_populates='cliente')
+
+
+    class Pedidos(Base):
+        __tablename__ = 'pedidos'
+
+        id = Column(Integer, primary_key=True, unique=True)
+        cliente_id = Column(ForeignKey('clientes.id'), nullable=False)
+        fecha = Column(Date, nullable=False)
+        producto_id = Column(ForeignKey('productos.id'), nullable=False)
+        status = Column(Enum('y', 'n'), nullable=False)
+
+        cliente = relationship('Clientes', back_populates='pedidos')
+        producto = relationship('Productos', back_populates='pedidos')
+
+
+Este es el código fuente de modelos ``SQLAlchemy`` generado en base a la base
+de datos ``sistema.db``. Mas adelante se mejorara esta código para obtener una
+mejor representación de los objetos.
 
 
 MySQL
@@ -193,14 +271,6 @@ Si necesita más tipos de cadenas de conexión o :ref:`engine <python_sqlalchemy
 consultar el apartado `Engine Configuration`_ de la documentación oficial de ``SQLAlchemy``.
 
 
-El anterior comando al ejecutar debe generar un modulo python llamado ``models.py`` que contiene el siguiente código:
-
-.. code-block:: python
-    :linenos:
-
-    pass
-
-
 .. _python_sqlacodegen_scaffolding:
 
 Estructura de proyecto
@@ -211,47 +281,53 @@ A continuación la estructura de proyecto ``sistema``
 .. code-block:: console
 
     sistema/
+    ├── .env.example
     ├── db.py
     ├── __init__.py
     ├── main.py
     ├── models.py
     ├── requirements.txt
-    ├── sistema.db
-    └── venezuela_data.sql
+    └── sistema.db
+
+*Archivo .env.example*
+
+.. literalinclude:: ../../recursos/leccion12/sqlacodegen/sistema/.env.example
+    :language: text
+    :linenos:
+    :lines: 1-8
 
 *Archivo requirements.txt*
 
 .. literalinclude:: ../../recursos/leccion12/sqlacodegen/sistema/requirements.txt
     :language: python
     :linenos:
-    :lines: 1-2
+    :lines: 1-6
 
 *Archivo db.py*
 
 .. literalinclude:: ../../recursos/leccion12/sqlacodegen/sistema/db.py
     :language: python
     :linenos:
-    :lines: 1-18
+    :lines: 1-54
 
 *Archivo models.py*
 
 .. literalinclude:: ../../recursos/leccion12/sqlacodegen/sistema/models.py
     :language: python
     :linenos:
-    :lines: 1-100
+    :lines: 1-147
 
 *Archivo main.py*
 
 .. literalinclude:: ../../recursos/leccion12/sqlacodegen/sistema/main.py
     :language: python
     :linenos:
-    :lines: 1-25
+    :lines: 1-31
 
 
-Teniendo creada la anterior estructura de proyecto
-
-Vuelva a ejecutar ahora el modulo con el siguiente comando, el cual a continuación se presentan
-el correspondiente comando de tu sistema operativo:
+Teniendo creada la anterior estructura de proyecto, vuelva a ejecutar ahora el modulo con
+el siguiente comando, el cual a continuación se presentan el correspondiente comando de tu
+sistema operativo:
 
 .. tabs::
 
@@ -259,23 +335,41 @@ el correspondiente comando de tu sistema operativo:
 
       .. code-block:: console
 
-          $ pip install bpython
+          $ pip install -r requirements.txt
+          $ cp .env.example .env
           $ python main.py
+
+      .. tip::
+        El archivo ``.env`` se definen las configuraciones de conexión a la base de datos,
+        puede modificarlo cambiar valores de la conexión.
+
+      .. note::
+        Para conexiones a base de datos ``MySQL`` y ``PostgreSQL`` debe definir las variables
+        que por defecto no están definidas.
 
    .. group-tab:: Windows
 
       .. code-block:: console
 
           > pip install -r requirements.txt
+          > copy .env.example .env
           > python main.py
+
+      .. tip::
+        El archivo ``.env`` se definen las configuraciones de conexión a la base de datos,
+        puede modificarlo cambiar valores de la conexión.
+
+      .. note::
+        Para conexiones a base de datos ``MySQL`` y ``PostgreSQL`` debe definir las variables
+        que por defecto no están definidas.
 
 El anterior código al ejecutar debe mostrar el siguiente mensaje:
 
 .. code-block:: console
 
-    ¡Creación exitosa de la tabla productos!
+    ¡Consulta todos los estados!
 
-    ¡Inserción exitosa de los 4 productos!
+    ¡Consulta todas las ciudades!
 
 
 Asi de esta forma puede usar ``sqlacodegen`` para generar modelos ``SQLAlchemy`` desde una base de datos

@@ -1,2 +1,3 @@
 # Install the packages from PyPi repository.
 SQLAlchemy>=1.4.36
+python-dotenv==0.21.0
