@@ -296,13 +296,6 @@ A continuación la estructura de proyecto ``sistema``
     :linenos:
     :lines: 1-9
 
-*Archivo requirements.txt*
-
-.. literalinclude:: ../../recursos/leccion2/sqlacodegen/sistema/requirements.txt
-    :language: python
-    :linenos:
-    :lines: 1-6
-
 *Archivo db.py*
 
 .. literalinclude:: ../../recursos/leccion2/sqlacodegen/sistema/db.py
@@ -324,6 +317,13 @@ A continuación la estructura de proyecto ``sistema``
     :linenos:
     :lines: 1-31
 
+*Archivo requirements.txt*
+
+.. literalinclude:: ../../recursos/leccion2/sqlacodegen/sistema/requirements.txt
+    :language: python
+    :linenos:
+    :lines: 1-6
+
 
 Teniendo creada la anterior estructura de proyecto, vuelva a ejecutar ahora el modulo con
 el siguiente comando, el cual a continuación se presentan el correspondiente comando de tu
@@ -333,11 +333,18 @@ sistema operativo:
 
    .. group-tab:: Linux
 
+      Antes de ejecutar debes instalar sus dependencias, con el siguiente comando:
+
       .. code-block:: console
 
           $ pip install -r requirements.txt
+
+      Ademas debe instalar y editar el archivo ``.env``, con el siguiente comando:
+
+      .. code-block:: console
+
           $ cp .env.example .env
-          $ python main.py
+          $ nano .env
 
       .. tip::
         El archivo ``.env`` se definen las configuraciones de conexión a la base de datos,
@@ -347,13 +354,24 @@ sistema operativo:
         Para conexiones a base de datos ``MySQL`` y ``PostgreSQL`` debe definir las variables
         que por defecto no están definidas.
 
+      .. code-block:: console
+
+          $ python main.py
+
    .. group-tab:: Windows
+
+      Antes de ejecutar debes instalar sus dependencias, con el siguiente comando:
 
       .. code-block:: console
 
           > pip install -r requirements.txt
+
+      Ademas debe instalar y editar el archivo ``.env``, con el siguiente comando:
+
+      .. code-block:: console
+
           > copy .env.example .env
-          > python main.py
+          > notepad.exe .env
 
       .. tip::
         El archivo ``.env`` se definen las configuraciones de conexión a la base de datos,
@@ -362,6 +380,10 @@ sistema operativo:
       .. note::
         Para conexiones a base de datos ``MySQL`` y ``PostgreSQL`` debe definir las variables
         que por defecto no están definidas.
+
+      .. code-block:: console
+
+          > python main.py
 
 El anterior código al ejecutar debe mostrar el siguiente mensaje:
 
