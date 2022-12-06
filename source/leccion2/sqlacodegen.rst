@@ -291,35 +291,35 @@ A continuación la estructura de proyecto ``sistema``
 
 *Archivo .env.example*
 
-.. literalinclude:: ../../recursos/leccion12/sqlacodegen/sistema/.env.example
+.. literalinclude:: ../../recursos/leccion2/sqlacodegen/sistema/.env.example
     :language: text
     :linenos:
     :lines: 1-9
 
 *Archivo requirements.txt*
 
-.. literalinclude:: ../../recursos/leccion12/sqlacodegen/sistema/requirements.txt
+.. literalinclude:: ../../recursos/leccion2/sqlacodegen/sistema/requirements.txt
     :language: python
     :linenos:
     :lines: 1-6
 
 *Archivo db.py*
 
-.. literalinclude:: ../../recursos/leccion12/sqlacodegen/sistema/db.py
+.. literalinclude:: ../../recursos/leccion2/sqlacodegen/sistema/db.py
     :language: python
     :linenos:
     :lines: 1-54
 
 *Archivo models.py*
 
-.. literalinclude:: ../../recursos/leccion12/sqlacodegen/sistema/models.py
+.. literalinclude:: ../../recursos/leccion2/sqlacodegen/sistema/models.py
     :language: python
     :linenos:
     :lines: 1-147
 
 *Archivo main.py*
 
-.. literalinclude:: ../../recursos/leccion12/sqlacodegen/sistema/main.py
+.. literalinclude:: ../../recursos/leccion2/sqlacodegen/sistema/main.py
     :language: python
     :linenos:
     :lines: 1-31
