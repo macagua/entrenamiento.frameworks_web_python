@@ -12,6 +12,7 @@ class Productos(Base):
     Returns:
         class 'models.Productos': Clase de Productos
     """
+
     __tablename__ = "productos"
 
     id = Column(Integer, primary_key=True)

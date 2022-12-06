@@ -642,6 +642,21 @@ el correspondiente comando de tu sistema operativo:
 
           $ pip install -r requirements.txt
 
+      Ademas debe instalar y editar el archivo ``.env``, con el siguiente comando:
+
+      .. code-block:: console
+
+          $ cp .env.example .env
+          $ nano .env
+
+      .. tip::
+        El archivo ``.env`` se definen las configuraciones de conexión a la base de datos,
+        puede modificarlo cambiar valores de la conexión.
+
+      .. note::
+        Para conexiones a base de datos ``MySQL`` y ``PostgreSQL`` debe definir las variables
+        que por defecto no están definidas.
+
       Por ultimo ejecute el modulo ``main.py``, ejecutando el siguiente comando:
 
       .. code-block:: console
@@ -655,6 +670,21 @@ el correspondiente comando de tu sistema operativo:
       .. code-block:: console
 
           > pip install -r requirements.txt
+
+      Ademas debe instalar y editar el archivo ``.env``, con el siguiente comando:
+
+      .. code-block:: console
+
+          > copy .env.example .env
+          > notepad.exe .env
+
+      .. tip::
+        El archivo ``.env`` se definen las configuraciones de conexión a la base de datos,
+        puede modificarlo cambiar valores de la conexión.
+
+      .. note::
+        Para conexiones a base de datos ``MySQL`` y ``PostgreSQL`` debe definir las variables
+        que por defecto no están definidas.
 
       Por ultimo ejecute el modulo ``main.py``, ejecutando el siguiente comando:
 
