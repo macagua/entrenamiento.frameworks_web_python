@@ -581,6 +581,7 @@ A continuación la estructura de proyecto ``productos``
 .. code-block:: console
 
     productos/
+    ├── .env.example
     ├── db.py
     ├── __init__.py
     ├── main.py
@@ -588,13 +589,12 @@ A continuación la estructura de proyecto ``productos``
     ├── productos.sqlite3
     └── requirements.txt
 
+*Archivo .env.example*
 
-*Archivo requirements.txt*
-
-.. literalinclude:: ../../recursos/leccion2/sqlalchemy/productos/requirements.txt
-    :language: python
+.. literalinclude:: ../../recursos/leccion2/sqlacodegen/sistema/.env.example
+    :language: text
     :linenos:
-    :lines: 1-3
+    :lines: 1-2
 
 *Archivo db.py*
 
@@ -616,6 +616,13 @@ A continuación la estructura de proyecto ``productos``
     :language: python
     :linenos:
     :lines: 1-142
+
+*Archivo requirements.txt*
+
+.. literalinclude:: ../../recursos/leccion2/sqlalchemy/productos/requirements.txt
+    :language: python
+    :linenos:
+    :lines: 1-3
 
 
 Teniendo creada la anterior estructura de proyecto
