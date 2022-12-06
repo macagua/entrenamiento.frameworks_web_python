@@ -635,16 +635,30 @@ el correspondiente comando de tu sistema operativo:
 
    .. group-tab:: Linux
 
+      Antes de ejecutar debes instalar sus dependencias, con el siguiente comando:
+
       .. code-block:: console
 
           $ pip install -r requirements.txt
+
+      Por ultimo ejecute el modulo ``main.py``, ejecutando el siguiente comando:
+
+      .. code-block:: console
+
           $ python main.py
 
    .. group-tab:: Windows
 
+      Antes de ejecutar debes instalar sus dependencias, con el siguiente comando:
+
       .. code-block:: console
 
           > pip install -r requirements.txt
+
+      Por ultimo ejecute el modulo ``main.py``, ejecutando el siguiente comando:
+
+      .. code-block:: console
+
           > python main.py
 
 El anterior código al ejecutar debe mostrar el siguiente mensaje:

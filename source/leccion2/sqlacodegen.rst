@@ -354,6 +354,8 @@ sistema operativo:
         Para conexiones a base de datos ``MySQL`` y ``PostgreSQL`` debe definir las variables
         que por defecto no están definidas.
 
+      Por ultimo ejecute el modulo ``main.py``, ejecutando el siguiente comando:
+
       .. code-block:: console
 
           $ python main.py
@@ -380,6 +382,8 @@ sistema operativo:
       .. note::
         Para conexiones a base de datos ``MySQL`` y ``PostgreSQL`` debe definir las variables
         que por defecto no están definidas.
+
+      Por ultimo ejecute el modulo ``main.py``, ejecutando el siguiente comando:
 
       .. code-block:: console
 
