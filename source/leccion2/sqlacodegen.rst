@@ -294,7 +294,7 @@ A continuación la estructura de proyecto ``sistema``
 .. literalinclude:: ../../recursos/leccion12/sqlacodegen/sistema/.env.example
     :language: text
     :linenos:
-    :lines: 1-8
+    :lines: 1-9
 
 *Archivo requirements.txt*
 
