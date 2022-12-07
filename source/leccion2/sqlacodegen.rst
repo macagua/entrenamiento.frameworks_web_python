@@ -319,24 +319,6 @@ en proyectos con ``SQLAlchemy``, a continuación la estructura de proyecto llama
     ├── requirements.txt
     └── sistema.db
 
-.. important::
-    Usted puede descargar el código usado en esta sección haciendo clic en los
-    siguientes enlaces:
-
-    - :download:`.env.example <../../recursos/leccion12/sqlacodegen/sistema/.env.example>`
-
-    - :download:`db.py <../../recursos/leccion12/sqlacodegen/sistema/db.py>`
-
-    - :download:`__init__.py <../../recursos/leccion12/sqlacodegen/sistema/__init__.py>`.
-
-    - :download:`main.py <../../recursos/leccion12/sqlacodegen/sistema/main.py>`
-
-    - :download:`models.py <../../recursos/leccion12/sqlacodegen/sistema/models.py>`
-
-    - :download:`requirements.txt <../../recursos/leccion12/sqlacodegen/sistema/requirements.txt>`
-
-    - :download:`sistema.db <../../recursos/leccion12/sqlacodegen/sistema/sistema.db>`
-
 A continuación se presenta y explica el uso de cada archivo para esta proyecto:
 
 *Archivo .env.example*

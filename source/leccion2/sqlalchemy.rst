@@ -590,30 +590,13 @@ con ``SQLAlchemy``, a continuación la estructura de proyecto llamado ``producto
     ├── productos.sqlite3
     └── requirements.txt
 
-.. important::
-    Usted puede descargar el código usado en esta sección haciendo clic en los
-    siguientes enlaces:
-
-    - :download:`.env.example <../../recursos/leccion12/sqlalchemy/productos/.env.example>`
-
-    - :download:`db.py <../../recursos/leccion12/sqlalchemy/productos/db.py>`
-
-    - :download:`__init__.py <../../recursos/leccion12/sqlalchemy/productos/__init__.py>`.
-
-    - :download:`main.py <../../recursos/leccion12/sqlalchemy/productos/main.py>`
-
-    - :download:`models.py <../../recursos/leccion12/sqlalchemy/productos/models.py>`
-
-    - :download:`requirements.txt <../../recursos/leccion12/sqlalchemy/productos/requirements.txt>`
-
-
 A continuación se presenta y explica el uso de cada archivo para esta proyecto:
 
 *Archivo .env.example*
 
 Archivo plantilla `dotenv`_ del paquete adicional `python-dotenv`_.
 
-.. literalinclude:: ../../recursos/leccion2/sqlacodegen/sistema/.env.example
+.. literalinclude:: ../../recursos/leccion2/sqlalchemy/productos/.env.example
     :language: text
     :linenos:
     :lines: 1-2
@@ -625,16 +608,7 @@ Modulo de configuraciones del programa.
 .. literalinclude:: ../../recursos/leccion2/sqlalchemy/productos/db.py
     :language: python
     :linenos:
-    :lines: 1-21
-
-*Archivo models.py*
-
-Modulo de :ref:`modelos <python_sqlalchemy_modelos>` de :ref:`SQLAlchemy <python_sqlalchemy>`.
-
-.. literalinclude:: ../../recursos/leccion2/sqlalchemy/productos/models.py
-    :language: python
-    :linenos:
-    :lines: 1-31
+    :lines: 1-23
 
 *Archivo main.py*
 
@@ -643,7 +617,16 @@ Modulo de configuraciones del programa.
 .. literalinclude:: ../../recursos/leccion2/sqlalchemy/productos/main.py
     :language: python
     :linenos:
-    :lines: 1-142
+    :lines: 1-144
+
+*Archivo models.py*
+
+Modulo de :ref:`modelos <python_sqlalchemy_modelos>` de :ref:`SQLAlchemy <python_sqlalchemy>`.
+
+.. literalinclude:: ../../recursos/leccion2/sqlalchemy/productos/models.py
+    :language: python
+    :linenos:
+    :lines: 1-34
 
 *Archivo productos.sqlite3*
 
