@@ -12,6 +12,12 @@ SQLite
 disco que no requiere un proceso de servidor separado y permite acceder a la base
 de datos usando una variación no estándar del lenguaje de consulta SQL.
 
+.. figure:: ../_static/images/sqlite_logo.jpg
+    :align: center
+    :width: 60%
+
+    Logotipo de SQLite
+
 Algunas aplicaciones pueden usar SQLite para almacenamiento interno. También es posible
 prototipar una aplicación usando SQLite y luego transferir el código a una base de
 datos más grande como :ref:`PostgreSQL <python_pkg_postgresql>` u `Oracle <https://cx-oracle.readthedocs.io/en/latest/>`_.
@@ -25,49 +31,228 @@ Instalación
 La librería ``sqlite3`` esta incluida en librería estándar de Python, puede probar la
 instalación existe, ejecutando el siguiente comando:
 
-.. code-block:: console
+.. tabs::
 
-  $ python -c "import sqlite3 ; print(sqlite3.__package__)"
+   .. group-tab:: Linux
+
+      .. code-block:: console
+
+          $ python -c "import sqlite3 ; print(sqlite3.__package__)"
+
+   .. group-tab:: Windows
+
+      .. code-block:: console
+
+          > python -c "import sqlite3 ; print(sqlite3.__package__)"
 
 Si muestra el nombre del paquete  ``sqlite3``, tiene instalado la librería.
 
-Adicionalmente puedes instalar administradores de base de datos nativos para sistemas
-operativos, a continuación se presentan alternativas:
+Adicionalmente puedes instalar administradores de base de datos SQLite nativos para sistemas
+operativos Linux y Windows, a continuación se presentan alternativas:
 
-Plataforma Linux
-^^^^^^^^^^^^^^^^
+SQLite Tools
+^^^^^^^^^^^^
 
-Para instalar administradores de base de datos nativos ``sqlite3`` para la plataforma
-Linux debe seguir los siguientes pasos:
+Es un paquete de herramientas de línea de comandos para administrar archivos
+de base de datos SQLite, incluido el programa :command:`sqlite3.exe` para la
+shell de línea de comandos, el programa :command:`sqldiff.exe` y el programa
+:command:`sqlite3_analyzer.exe`.
 
-.. code-block:: console
+Para instalar el administrador de base de datos SQLite ``SQLite Tools`` de
+forma nativa para sistemas operativos Linux y Windows, a continuación se presentan
+los modos de instalación:
 
-  $ sudo apt install sqlite3 sqlitebrowser
+.. tabs::
 
-Puede probar si la instalación se realizo correctamente, ejecutando
-el siguiente comando:
+   .. group-tab:: Linux
 
-.. code-block:: console
+      Para instalar administradores de base de datos nativos ``sqlite3`` para la plataforma
+      Unix/Linux debe seguir los siguientes pasos:
 
-    $ sqlite3
-    SQLite version 3.31.1 2020-01-27 19:55:54
-    Enter ".help" for usage hints.
-    Connected to a transient in-memory database.
-    Use ".open FILENAME" to reopen on a persistent database.
-    sqlite>
+      .. code-block:: console
 
-Si muestra la consola sqlite ``sqlite>``, tiene correctamente instalada el administrador
-de base de datos nativa ``sqlite3`` por linea de comando.
+          $ sudo apt install sqlite3
 
-Puede probar si la instalación del el administrador de base de datos nativo de ``sqlite3``
-gráfico llamado ``sqlitebrowser`` se realizo correctamente, ejecutando el siguiente comando:
+      Puede probar si la instalación se realizo correctamente, ejecutando
+      el siguiente comando:
 
-.. code-block:: console
+      .. code-block:: console
 
-    $ sqlitebrowser
+          $ sqlite3
+          SQLite version 3.31.1 2020-01-27 19:55:54
+          Enter ".help" for usage hints.
+          Connected to a transient in-memory database.
+          Use ".open FILENAME" to reopen on a persistent database.
+          sqlite>
 
-Si muestra la interfaz gráfica de ``sqlite>``, tiene correctamente instalada el administrador
-de base de datos nativo de ``sqlite3`` gráfico llamado ``sqlitebrowser``.
+      Si muestra la consola sqlite ``sqlite>``, tiene correctamente instalada el administrador
+      de base de datos nativa ``sqlite3`` por linea de comando.
+
+      .. note::
+
+        Mas información consulte https://www.sqlite.org/cli.html
+
+   .. group-tab:: Windows
+
+      Para instalar administradores de base de datos nativos ``sqlite3`` para la plataforma
+      Windows debe descargar e instalar el ``SQLite Tools`` con los siguientes pasos:
+
+      Cree el directorio donde se va a descomprimir las utilidades del ``SQLite Tools``, con
+      los siguientes comandos:
+
+      .. code-block:: console
+
+          > mkdir %HOMEPATH%\sqlite
+          > cd %HOMEPATH%\sqlite
+
+      Seguidamente descargue el *SQLite Tools* para Windows desde la siguiente
+
+      - https://www.sqlite.org/download.html
+
+      .. figure:: ../_static/images/sqlite_tools_windows_download.png
+          :align: center
+          :width: 80%
+
+          Descargar *SQLite Tools* para Windows
+
+      Descomprima del archivo descargado para el ``SQLite Tools`` dentro
+      del directorio previamente creado.
+
+      ::
+
+          sqlite/
+          ├── sqldiff.exe
+          ├── sqlite3.exe
+          └── sqlite3_analyzer.exe
+
+      La estructura previa es como debe quedar el luego de instalar  ``SQLite Tools`` en Windows.
+
+      **Shell de línea de comandos**, el proyecto SQLite proporciona un programa de línea de comandos
+      simple llamado :command:`sqlite3.exe` en Windows que permite al usuario ingresar y ejecutar
+      instrucciones SQL manualmente en una base de datos SQLite. Para usar esta utilidad de línea de
+      comandos, ejecute el siguiente comando:
+
+      .. code-block:: console
+
+          > sqlite3.exe
+
+      .. note::
+
+        Mas información consulte https://www.sqlite.org/cli.html
+
+      **Diferencias de contenido**, el proyecto SQLite proporciona un programa :command:`sqldiff.exe`
+      de línea de comandos que muestra las diferencias de contenido entre las bases de datos SQLite.
+      Para usar esta utilidad de línea de comandos, ejecute el siguiente comando:
+
+      .. code-block:: console
+
+          > sqldiff.exe database1.sqlite database2.sqlite
+
+      .. note::
+
+        Mas información consulte https://www.sqlite.org/sqldiff.html
+
+      **Analizador de base de datos**, el proyecto SQLite proporciona un programa :command:`sqlite3_analyzer.exe`
+      de línea de comandos  que mide y muestra la cantidad y la eficiencia del espacio utilizado por tablas e
+      índices individuales con un archivo de base de datos SQLite. Para usar esta utilidad de línea de comandos,
+      ejecute el siguiente comando:
+
+      .. code-block:: console
+
+          > sqlite3_analyzer.exe database.sqlite
+
+      .. note::
+
+        Mas información consulte https://www.sqlite.org/sqlanalyze.html
+
+
+DB Browser for SQLite (DB4S)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Es una herramienta de código abierto, visual y de alta calidad para crear, diseñar y editar archivos de
+bases de datos compatibles con SQLite.
+
+``DB4S`` es para usuarios y desarrolladores que desean crear, buscar y editar bases de datos. ``DB4S``
+utiliza una interfaz familiar similar a una hoja de cálculo y no es necesario aprender complicados comandos
+SQL.
+
+.. figure:: ../_static/images/dbbrowser4sqlite_logo.jpg
+    :align: center
+    :width: 60%
+
+    Logotipo de DB Browser for SQLite
+
+Los controles y asistentes están disponibles para que los usuarios:
+
+* Crear y compactar archivos de base de datos.
+* Crear, definir, modificar y eliminar tablas.
+* Crear, definir y eliminar índices.
+* Explorar, editar, agregar y eliminar registros.
+* Buscar registros.
+* Importar y exportar registros como texto.
+* Importar y exportar tablas desde/a archivos CSV.
+* Importar y exportar bases de datos desde/hacia archivos de volcado de SQL.
+* Emita consultas SQL e inspeccione los resultados.
+* Examinar un registro de todos los comandos SQL emitidos por la aplicación.
+* Trace gráficos simples basados en tablas o datos de consulta.
+
+.. note::
+    Mas información consulte https://sqlitebrowser.org/
+
+Para instalar el administrador de base de datos SQLite ``DB Browser for SQLite (DB4S)``
+de forma nativa para sistemas operativos Linux y Windows, a continuación se presentan
+los modos de instalación:
+
+.. tabs::
+
+   .. group-tab:: Linux
+
+      Para instalar el programa ``sqlitebrowser`` para administrador de base de datos nativos
+      ``sqlite3`` para la plataforma Unix/Linux debe seguir los siguientes pasos:
+
+      .. code-block:: console
+
+          $ sudo apt install sqlitebrowser
+
+      Puede probar si la instalación del el administrador de base de datos nativo de ``sqlite3``
+      gráfico llamado ``sqlitebrowser`` se realizo correctamente, ejecutando el siguiente comando:
+
+      .. code-block:: console
+
+          $ sqlitebrowser
+
+      El comando anterior debería mostrar la interfaz gráfica de ``sqlitebrowser``, como se muestra
+      a continuación:
+
+      .. figure:: ../_static/images/dbbrowser4sqlite_linux.png
+          :align: center
+          :width: 70%
+
+          DB Browser for SQLite en Linux
+
+      Si muestra la interfaz gráfica de ``sqlitebrowser``, tiene correctamente instalada el administrador
+      de base de datos nativo de ``sqlite3``.
+
+   .. group-tab:: Windows
+
+      Para instalar el programa ``DB Browser for SQLite`` para administrador de base de datos nativos
+      ``sqlite3`` para la plataforma Windows debe seguir los siguientes pasos:
+
+      Debe descargar el software desde la pagina https://sqlitebrowser.org/dl/
+
+      Instalar el software instalador de ``DB Browser for SQLite``.
+
+      Luego valla al *Menu de inicio* > *Aplicaciones* > *DB Browser (SQLite)*
+
+      .. figure:: ../_static/images/dbbrowser4sqlite_win10pro.png
+          :align: center
+          :width: 70%
+
+          DB Browser for SQLite en Windows 10 Pro
+
+      Si muestra la interfaz gráfica de ``DB Browser for SQLite``, tiene
+      correctamente instalada el administrador de base de datos nativo de
+      ``sqlite3``.
 
 
 .. _python_sqlite3_conn_strs:
