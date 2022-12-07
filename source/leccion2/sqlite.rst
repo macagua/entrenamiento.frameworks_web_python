@@ -185,15 +185,25 @@ SQL.
 Los controles y asistentes están disponibles para que los usuarios:
 
 * Crear y compactar archivos de base de datos.
+
 * Crear, definir, modificar y eliminar tablas.
+
 * Crear, definir y eliminar índices.
+
 * Explorar, editar, agregar y eliminar registros.
+
 * Buscar registros.
+
 * Importar y exportar registros como texto.
+
 * Importar y exportar tablas desde/a archivos CSV.
+
 * Importar y exportar bases de datos desde/hacia archivos de volcado de SQL.
+
 * Emita consultas SQL e inspeccione los resultados.
+
 * Examinar un registro de todos los comandos SQL emitidos por la aplicación.
+
 * Trace gráficos simples basados en tablas o datos de consulta.
 
 .. note::
