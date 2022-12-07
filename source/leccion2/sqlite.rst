@@ -166,11 +166,11 @@ los modos de instalación:
         Mas información consulte https://www.sqlite.org/sqlanalyze.html
 
 
-DB Browser for SQLite (DB4S)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+DB Browser for SQLite
+^^^^^^^^^^^^^^^^^^^^^
 
-Es una herramienta de código abierto, visual y de alta calidad para crear, diseñar y editar archivos de
-bases de datos compatibles con SQLite.
+*DB Browser for SQLite (DB4S)*, es una herramienta de código abierto, visual y de alta calidad para crear,
+diseñar y editar archivos de bases de datos compatibles con SQLite.
 
 ``DB4S`` es para usuarios y desarrolladores que desean crear, buscar y editar bases de datos. ``DB4S``
 utiliza una interfaz familiar similar a una hoja de cálculo y no es necesario aprender complicados comandos
