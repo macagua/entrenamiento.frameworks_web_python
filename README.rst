@@ -4,8 +4,8 @@
 Entrenamiento "Frameworks de Desarrollo Web en Python"
 ======================================================
 
-Repositorio de manuales y recursos del entrenamiento *"Frameworks de Desarrollo Web
-en *`Python 3.7`_" realizado por la empresa `Covantec R.L`_.
+Repositorio de manuales y recursos del entrenamiento "Frameworks de Desarrollo Web en
+`Python 3.7`_" realizado por la empresa `Covantec R.L`_.
 
 .. contents :: :local:
 
@@ -73,7 +73,7 @@ Luego instale dependencias del paquete ``Sphinx``, ejecutando el siguiente coman
 
 ::
 
-  (venv)$ pip3 install -r requirements-dev.txt
+  (venv)$ pip install -r requirements-dev.txt
 
 
 Recursos del entrenamiento
