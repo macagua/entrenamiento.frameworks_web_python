@@ -612,7 +612,7 @@ Modulo de configuraciones del programa.
 
 *Archivo main.py*
 
-Modulo de configuraciones del programa.
+Modulo de principal del programa.
 
 .. literalinclude:: ../../recursos/leccion2/sqlalchemy/productos/main.py
     :language: python
