@@ -1,10 +1,10 @@
 .. _python_sqlacodegen:
 
-sqlacodegen
-===========
+Autogenerar modelos SQLAlchemy
+==============================
 
 .. note::
-    **Propósito:** Generador de código de modelo automático para SQLAlchemy
+    **Propósito:** Generador automático de código fuente de modelos SQLAlchemy
 
 
 `sqlacodegen`_ es una herramienta que lee la estructura de una base de datos
