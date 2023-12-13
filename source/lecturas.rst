@@ -20,9 +20,6 @@ para ayudar a incrementar tanto la profundidad y amplitud en su conocimiento.
 
 Las lecturas están organizada como las lecciones y sus temas.
 
-.. todo::
-    TODO terminar de escribir esta sección.
-
 
 .. _lecturas_extras_leccion1:
 

@@ -19,7 +19,7 @@ requiere instalar las siguientes librerías:
 
 - :ref:`SQLAlchemy <python_sqlalchemy>`.
 
-- `Flask-SQLAlchemy <https://pypi.org/project/flask-sqlalchemy/>`_.
+- `Flask-SQLAlchemy <https://pypi.org/project/Flask-SQLAlchemy/>`_.
 
 Actualizar repositorios de paquetes disponibles para instalar,
 con el siguiente comando:
