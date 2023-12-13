@@ -67,6 +67,16 @@ Introspección a Python
 Lección 2 - Base de datos
 -------------------------
 
+
+Librería pickle
+^^^^^^^^^^^^^^^
+
+- `pickle - Serialización de objetos Python <https://docs.python.org/es/3.11/library/pickle.html>`_.
+
+- `Python - simple crud usando pickle <https://www.lawebdelprogramador.com/foros/Python/1556555-simple-crud-usando-pickle.html>`_.
+
+- `Python: Serialización de objetos <http://mundogeek.net/archivos/2008/05/20/python-serializacion-de-objetos/>`_.
+
 Interfaz DB-API
 ^^^^^^^^^^^^^^^
 
