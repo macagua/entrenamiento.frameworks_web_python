@@ -3,7 +3,7 @@
 Librería requests
 =================
 
-La librería `requests <http://docs.python-requests.org>`_ permite hacer peticiones
+La librería `requests <https://requests.readthedocs.io/en/latest/>`_ permite hacer peticiones
 mediante funciones que emulan los métodos del protocolo HTTP, regresando un objeto
 que contiene los mensajes y datos de la respuesta del servidor a modo de atributos.
 
@@ -46,13 +46,13 @@ Eso da como resultado:
 
 **Ejemplo:**
 
-Se utilizará la función ``requests.get()`` en el sitio `https://python.org/ <https://python.org/>`_
+Se utilizará la función ``requests.get()`` en el sitio `https://www.python.org/ <https://www.python.org/>`_
 para abrir una conexión enviando una petición utilizando el método *GET*. Se desplegarán
 los siguientes datos guardados en el objeto resultante, ligado al nombre ``sitio``.
 
 .. code-block:: pycon
 
-    >>> sitio = requests.get("https://python.org/")
+    >>> sitio = requests.get("https://www.python.org/")
 
 
 Los encabezados de la petición contenidos en el atributo ``sitio.headers``.
@@ -114,7 +114,7 @@ Se cerrará la conexión mediante el método ``sitio.close()``.
 
 **Ejemplo:**
 
-Se utilizará la función ``requests.get()`` en el sitio https://python.org/ (el cual no
+Se utilizará la función ``requests.get()`` en el sitio https://www.python.org/ (el cual no
 existe) para abrir una conexión enviando una petición que incluye al método *GET*. Se
 desplegarán los siguientes datos guardados en el objeto resultante, ligado al nombre ``sitio``.
 
@@ -144,7 +144,7 @@ Eso da como resultado:
 
 Se utilizará la función requests.get() para acceder
 a https://www.python.org/ (el cual hace un redireccionamiento
-a `https://python.org/ <https://python.org/>`_) para abrir una
+a `https://www.python.org/ <https://www.python.org/>`_) para abrir una
 conexión enviando una petición con el método *GET*. Se desplegarán los
 siguientes datos guardados en el objeto resultante, ligado al
 nombre ``sitio``.

@@ -185,7 +185,7 @@ Cliente httpie
 Librería requests
 ^^^^^^^^^^^^^^^^^
 
-- `requests <http://docs.python-requests.org>`_, Requests: HTTP para Humanos.
+- `requests <https://requests.readthedocs.io/en/latest/>`_, Requests: HTTP para Humanos.
 
 
 .. _lecturas_extras_leccion4:
