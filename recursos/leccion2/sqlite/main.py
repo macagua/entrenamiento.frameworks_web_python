@@ -36,7 +36,7 @@ def crear_conexion(ruta):
 
 
 def insertar_registro(conexion_bd, insert_values, insert_sql):
-    """Función para realizar la inserción de registro de la tabla
+    """Función para la inserción de registro de la tabla
 
     Args:
         conexion_bd (Connection): Representación conexión a la base de datos SQLite
@@ -59,7 +59,7 @@ def insertar_registro(conexion_bd, insert_values, insert_sql):
 
 
 def consultar_registro(conexion_bd, select_sql):
-    """Función para realizar la consulta de registro(s) de la tabla
+    """Función para la consulta de registro(s) de la tabla
 
     Args:
         conexion_bd (Connection): Representación conexión a la base de datos SQLite
@@ -86,7 +86,7 @@ def consultar_registro(conexion_bd, select_sql):
 
 
 def actualizar_registro(conexion_bd, update_values, update_sql):
-    """Función para realizar la actualización de registro de la tabla
+    """Función para la actualización de registro de la tabla
 
     Args:
         conexion_bd (Connection): Representación conexión a la base de datos SQLite
@@ -110,7 +110,7 @@ def actualizar_registro(conexion_bd, update_values, update_sql):
 
 
 def eliminar_registro(conexion_bd, delete_sql):
-    """Función para realizar la eliminación de registro de la tabla
+    """Función para la eliminación de registro de la tabla
 
     Args:
         conexion_bd (Connection): Representación conexión a la base de datos SQLite

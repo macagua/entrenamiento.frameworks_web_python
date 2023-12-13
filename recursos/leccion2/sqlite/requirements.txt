@@ -1,0 +1,2 @@
+# Install the packages from PyPi repository.
+python-dotenv==0.21.0

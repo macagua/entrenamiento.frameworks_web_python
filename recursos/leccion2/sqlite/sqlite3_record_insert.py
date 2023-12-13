@@ -1,4 +1,4 @@
-""" Programa para realizar la inserción de registro(s) de la tabla """
+"""Programa para realizar la inserción de registro(s) de la tabla"""
 
 import logging
 import sqlite3
@@ -21,9 +21,7 @@ SQL_SCRIPTS = """INSERT INTO clientes VALUES (?, ?, ?, ?, ?);"""
 
 
 def insertar_registro():
-    """
-    Función para realizar la inserción de registro de la tabla
-    """
+    """Función para la inserción de registro de la tabla"""
 
     try:
         conexion = sqlite3.connect(DB)

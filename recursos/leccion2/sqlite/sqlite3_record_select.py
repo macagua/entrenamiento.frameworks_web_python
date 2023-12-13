@@ -1,4 +1,4 @@
-""" Programa para realizar la consulta de registro(s) de la tabla """
+"""Programa para realizar la consulta de registro(s) de la tabla"""
 
 import logging
 import sqlite3
@@ -13,9 +13,7 @@ SQL_SCRIPTS = """SELECT * FROM clientes;"""
 
 
 def consultar_registro():
-    """
-    Función para realizar la consulta de registro(s) de la tabla
-    """
+    """Función para la consulta de registro(s) de la tabla"""
 
     try:
         conexion = sqlite3.connect(DB)
@@ -39,6 +37,7 @@ def consultar_registro():
         print("¡Fallo la consulta de registro(s) en la tabla!", error)
     finally:
         if conexion:
+            # Cerrar la conexión a la base de datos
             conexion.close()
             logging.info(
                 "¡La conexión SQLite a la base de datos {} fue cerrada!\n".format(

@@ -319,6 +319,29 @@ Si requiere insertar registro en una tabla, a continuación tiene un ejemplo:
     :linenos:
     :lines: 1-55
 
+----
+
+
+.. important::
+    Usted puede descargar el código usado en esta sección haciendo clic en el
+    siguiente enlace: :download:`sqlite3_record_insert.py <../../recursos/leccion2/sqlite/sqlite3_record_insert.py>`.
+
+
+.. tip::
+    Para ejecutar el código :file:`sqlite3_record_insert.py`
+    abra una consola de comando, acceda al directorio donde se encuentra el programa:
+
+    ::
+
+        leccion3/
+        └── sqlite3_record_insert.py
+
+    Si tiene la estructura de archivo previa, entonces ejecute el siguiente comando:
+
+    .. code-block:: console
+
+        $ python sqlite3_record_insert.py
+
 El anterior código al ejecutar debe mostrar el siguiente mensaje:
 
 .. code-block:: console
@@ -339,6 +362,29 @@ Si requiere consultar registros de tabla, a continuación tiene un ejemplo:
     :language: python
     :linenos:
     :lines: 1-51
+
+----
+
+
+.. important::
+    Usted puede descargar el código usado en esta sección haciendo clic en el
+    siguiente enlace: :download:`sqlite3_record_select.py <../../recursos/leccion2/sqlite/sqlite3_record_select.py>`.
+
+
+.. tip::
+    Para ejecutar el código :file:`sqlite3_record_select.py`
+    abra una consola de comando, acceda al directorio donde se encuentra el programa:
+
+    ::
+
+        leccion3/
+        └── sqlite3_record_select.py
+
+    Si tiene la estructura de archivo previa, entonces ejecute el siguiente comando:
+
+    .. code-block:: console
+
+        $ python sqlite3_record_select.py
 
 El anterior código al ejecutar debe mostrar el siguiente mensaje:
 
@@ -378,6 +424,28 @@ Si requiere actualizar registro de tabla, a continuación tiene un ejemplo:
     :linenos:
     :lines: 1-54
 
+----
+
+.. important::
+    Usted puede descargar el código usado en esta sección haciendo clic en el
+    siguiente enlace: :download:`sqlite3_record_update.py <../../recursos/leccion2/sqlite/sqlite3_record_update.py>`.
+
+
+.. tip::
+    Para ejecutar el código :file:`sqlite3_record_update.py`
+    abra una consola de comando, acceda al directorio donde se encuentra el programa:
+
+    ::
+
+        leccion3/
+        └── sqlite3_record_update.py
+
+    Si tiene la estructura de archivo previa, entonces ejecute el siguiente comando:
+
+    .. code-block:: console
+
+        $ python sqlite3_record_update.py
+
 El anterior código al ejecutar debe mostrar el siguiente mensaje:
 
 .. code-block:: console
@@ -399,6 +467,30 @@ Si requiere eliminar registro de tabla, a continuación tiene un ejemplo:
     :linenos:
     :lines: 1-44
 
+----
+
+
+.. important::
+    Usted puede descargar el código usado en esta sección haciendo clic en el
+    siguiente enlace: :download:`sqlite3_record_delete.py <../../recursos/leccion2/sqlite/sqlite3_record_delete.py>`.
+
+
+.. tip::
+    Para ejecutar el código :file:`sqlite3_record_delete.py`
+    abra una consola de comando, acceda al directorio donde se encuentra el programa:
+
+    ::
+
+        leccion2/
+            └── sqlite/
+                └── sqlite3_record_delete.py
+
+    Si tiene la estructura de archivo previa, entonces ejecute el siguiente comando:
+
+    .. code-block:: console
+
+        $ python sqlite3_record_delete.py
+
 El anterior código al ejecutar debe mostrar el siguiente mensaje:
 
 .. code-block:: console
@@ -415,6 +507,197 @@ registro en una tabla en una base de datos ``SQLite``.
 
 ----
 
+
+.. _python_sqlite3_scaffolding:
+
+Práctica - Caso real
+--------------------
+
+A continuación se presenta una práctica más real de implementar el uso de proyectos
+con ``sqlite3``, a continuación la estructura de proyecto llamado ``sqlite``:
+
+
+
+A continuación se presenta y explica el uso de cada archivo para este proyecto:
+
+*Archivo .env.example*
+
+Archivo plantilla `dotenv`_ del paquete adicional `python-dotenv`_.
+
+.. literalinclude:: ../../recursos/leccion2/sqlite/.env.example
+    :language: text
+    :linenos:
+    :lines: 1-2
+
+*Archivo main.py*
+
+Modulo de configuraciones del programa.
+
+.. literalinclude:: ../../recursos/leccion2/sqlite/main.py
+    :language: python
+    :linenos:
+    :lines: 1-136
+
+*Archivo requirements.txt*
+
+Archivo de `requirements.txt`_ de la herramienta de gestión de paquetes `pip`_.
+
+.. literalinclude:: ../../recursos/leccion2/sqlite/requirements.txt
+    :language: python
+    :linenos:
+    :lines: 1-2
+
+*Archivo settings.py*
+
+Modulo de principal del programa.
+
+.. literalinclude:: ../../recursos/leccion2/sqlite/settings.py
+    :language: python
+    :linenos:
+    :lines: 1-32
+
+*Archivo sistema.db*
+
+Archivo de base de datos de :ref:`SQLite <python_modulo_sqlite3>` llamado :file:`sistema.db`
+la cual no se incluye ya que cada vez que se inicia el programa :file:`main.py` se elimina y crea
+nuevamente, para cuidar la creación de los datos iniciales.
+
+Teniendo creada la anterior estructura de proyecto, vuelva a ejecutar ahora el modulo con
+el siguiente comando, el cual a continuación se presentan el correspondiente comando de tu
+sistema operativo:
+
+.. tabs::
+
+   .. group-tab:: Linux
+
+      Antes de ejecutar debes instalar sus dependencias, con el siguiente comando:
+
+      .. code-block:: console
+
+          $ pip install -r requirements.txt
+
+      Ademas debe instalar y editar el archivo ``.env``, con el siguiente comando:
+
+      .. code-block:: console
+
+          $ cp .env.example .env
+          $ nano .env
+
+      .. tip::
+        El archivo ``.env`` se definen las configuraciones de conexión a la base de datos,
+        puede modificarlo cambiar valores de la conexión.
+
+      .. tip::
+        Para ejecutar el código fuente de esta practica debe invocar al modulo :file:`main.py`,
+        abra una consola de comando, acceda al directorio donde se encuentra la estructura previa
+        y ejecute el siguiente comando:
+
+      .. code-block:: console
+
+          $ python main.py
+
+   .. group-tab:: Windows
+
+      Antes de ejecutar debes instalar sus dependencias, con el siguiente comando:
+
+      .. code-block:: console
+
+          > pip install -r requirements.txt
+
+      Ademas debe instalar y editar el archivo ``.env``, con el siguiente comando:
+
+      .. code-block:: console
+
+          > copy .env.example .env
+          > notepad.exe .env &
+
+      .. tip::
+        El archivo ``.env`` se definen las configuraciones de conexión a la base de datos,
+        puede modificarlo cambiar valores de la conexión.
+
+      .. tip::
+        Para ejecutar el código fuente de esta practica debe invocar al modulo :file:`main.py`,
+        abra una consola de comando, acceda al directorio donde se encuentra la estructura previa
+        y ejecute el siguiente comando:
+
+      .. code-block:: console
+
+          > python main.py
+
+El anterior código al ejecutar debe mostrar el siguiente mensaje:
+
+.. code-block:: console
+
+    INFO:root:¡Conexión a la base de datos 'sistema.db' fue exitosa!
+
+    INFO:root:¡Fueron insertado(s) 3 registro(s) correctamente en la tabla!
+
+    Total de filas son: 3
+
+    Mostrar cada fila:
+
+            Id: 1
+            Nombre: Leonardo
+            Código postal: Caballero
+            Teléfono: 5001
+
+            Id: 2
+            Nombre: Ana
+            Código postal: Poleo
+            Teléfono: 6302
+
+            Id: 3
+            Nombre: Pedro
+            Código postal: Lopez
+            Teléfono: 4001
+
+    INFO:root:¡Fueron actualizado(s) 2 registro(s) correctamente en la tabla!
+
+    INFO:root:¡Registro eliminado correctamente!
+
+
+Asi de esta forma puede ingresar, consultar, actualizar y eliminar registro en una
+tabla usando ``sqlite``.
+
+
+.. important::
+    Usted puede descargar el código usado en esta sección haciendo clic en los
+    siguientes enlaces:
+
+    - :download:`__init__.py <../../recursos/leccion2/sqlite/__init__.py>`.
+
+    - :download:`.env.example <../../recursos/leccion2/sqlite/.env.example>`.
+
+    - :download:`main.py <../../recursos/leccion2/sqlite/main.py>`.
+
+    - :download:`requirements.txt <../../recursos/leccion2/sqlite/requirements.txt>`.
+
+    - :download:`settings.py <../../recursos/leccion2/sqlite/settings.py>`.
+
+    - :download:`sistema.db <../../recursos/leccion2/sqlite/sistema.db>`.
+
+
+.. tip::
+    Para ejecutar el código del proyecto llamado ``sqlite`` abra una consola de comando,
+    acceda al directorio donde se encuentra el programa:
+
+    ::
+
+        leccion3/
+        └── sqlite/
+            ├── __init__.py
+            ├── .env.example
+            ├── main.py
+            ├── requirements.txt
+            ├── settings.py
+            └── sistema.db
+
+    Si tiene la estructura de archivo previa, entonces ejecute el siguiente comando:
+
+    .. code-block:: console
+
+        $ python main.py
+
 .. seealso::
 
     Consulte la sección de :ref:`lecturas suplementarias <lectura_extras_leccion12>`
@@ -422,4 +705,8 @@ registro en una tabla en una base de datos ``SQLite``.
 
 
 .. _`SQLite`: https://www.sqlite.org/index.html
-.. _`sqlite3`: https://docs.python.org/es/3.7/library/sqlite3.html
+.. _`sqlite3`: https://docs.python.org/es/3.11/library/sqlite3.html
+.. _`dotenv`: https://dev.to/emma_donery/python-dotenv-keep-your-secrets-safe-4ocn
+.. _`python-dotenv`: https://pypi.org/project/python-dotenv/
+.. _`requirements.txt`: https://pip.pypa.io/en/stable/reference/requirements-file-format/
+.. _`pip`: https://pip.pypa.io/en/stable/

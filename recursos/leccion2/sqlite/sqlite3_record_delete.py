@@ -1,4 +1,4 @@
-""" Programa para realizar la eliminación de registro de la tabla """
+"""Programa para realizar la eliminación de registro de la tabla"""
 
 import logging
 import sqlite3
@@ -13,9 +13,7 @@ SQL_SCRIPTS = """DELETE FROM clientes WHERE id = 3;"""
 
 
 def eliminar_registro():
-    """
-    Función para realizar la eliminación de registro de la tabla
-    """
+    """Función para la eliminación de registro de la tabla"""
 
     try:
         conexion = sqlite3.connect(DB)
@@ -24,6 +22,7 @@ def eliminar_registro():
 
         # Eliminar un fila de registro simple
         cursor.execute(SQL_SCRIPTS)
+        # Guardar los cambios en la base de datos
         conexion.commit()
         logging.info("¡Registro eliminado correctamente!\n")
         cursor.close()
@@ -32,6 +31,7 @@ def eliminar_registro():
         print("¡Fallo la eliminación de registro(s) en la tabla!", error)
     finally:
         if conexion:
+            # Cerrar la conexión a la base de datos
             conexion.close()
             logging.info(
                 "¡La conexión SQLite a la base de datos {} fue cerrada!\n".format(
