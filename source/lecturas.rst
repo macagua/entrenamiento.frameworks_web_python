@@ -95,9 +95,29 @@ Base de datos relacional
 Interfaz DB-API
 ^^^^^^^^^^^^^^^
 
-- `The Novice’s Guide to the Python 3 DB-API <https://philvarner.github.io/pages/novice-python3-db-api.html>`_.
+- `PEP 249 - Python Database API Specification v2.0 <https://peps.python.org/pep-0249/>`_.
 
 - `Acceso A Bases De Datos Desde Python - Interfaz Db-Api <https://wiki.python.org.ar/dbapi/>`_.
+
+- `The Novice's Guide to the Python 3 DB-API <https://philvarner.github.io/pages/novice-python3-db-api.html>`_.
+
+- `Python Database API <https://medium.com/@er.26yashiagarwal/python-database-api-beb8e61109cf>`_.
+
+- `Bases de datos en Python <http://mundogeek.net/archivos/2008/06/25/bases-de-datos-en-python/>`_.
+
+- `Databases - The Hitchhiker's Guide to Python <https://docs.python-guide.org/scenarios/db/>`_.
+
+
+Librería SQLite
+^^^^^^^^^^^^^^^
+
+- `sqlite3 — DB-API 2.0 interfaz para bases de datos SQLite <https://docs.python.org/es/3.11/library/sqlite3.html>`_.
+
+- `SQLite Home Page <https://www.sqlite.org/index.html>`_.
+
+- `SQLite - Wikipedia <https://es.wikipedia.org/wiki/SQLite>`_.
+
+- `How To Use the sqlite3 Module in Python 3 <https://www.digitalocean.com/community/tutorials/how-to-use-the-sqlite3-module-in-python-3>`_.
 
 
 Librería SQLAlchemy
@@ -228,7 +248,7 @@ Aplicación CRUD
 
 - `Flask-SQLAlchemy <https://flask-sqlalchemy.palletsprojects.com/en/3.0.x/>`_.
 
-- `Flask-SQLAlchemy - PyPI <https://pypi.org/project/flask-sqlalchemy/>`_.
+- `Flask-SQLAlchemy - PyPI <https://pypi.org/project/Flask-SQLAlchemy/>`_.
 
 
 Admin Dashboard

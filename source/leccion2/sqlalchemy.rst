@@ -297,7 +297,7 @@ añade el código que te muestro a continuación:
 .. literalinclude:: ../../recursos/leccion2/sqlalchemy/productos/models.py
     :language: python
     :linenos:
-    :lines: 1-31
+    :lines: 1-32
 
 Asi de esta forma tiene definido una clase modelo llamado ``Productos`` la cual mapea
 la tabla ``productos``.
@@ -590,7 +590,7 @@ con ``SQLAlchemy``, a continuación la estructura de proyecto llamado ``producto
     ├── productos.sqlite3
     └── requirements.txt
 
-A continuación se presenta y explica el uso de cada archivo para esta proyecto:
+A continuación se presenta y explica el uso de cada archivo para este proyecto:
 
 *Archivo .env.example*
 
@@ -608,7 +608,7 @@ Modulo de configuraciones del programa.
 .. literalinclude:: ../../recursos/leccion2/sqlalchemy/productos/db.py
     :language: python
     :linenos:
-    :lines: 1-23
+    :lines: 1-21
 
 *Archivo main.py*
 
@@ -617,7 +617,7 @@ Modulo de principal del programa.
 .. literalinclude:: ../../recursos/leccion2/sqlalchemy/productos/main.py
     :language: python
     :linenos:
-    :lines: 1-144
+    :lines: 1-142
 
 *Archivo models.py*
 
@@ -626,7 +626,7 @@ Modulo de :ref:`modelos <python_sqlalchemy_modelos>` de :ref:`SQLAlchemy <python
 .. literalinclude:: ../../recursos/leccion2/sqlalchemy/productos/models.py
     :language: python
     :linenos:
-    :lines: 1-34
+    :lines: 1-32
 
 *Archivo productos.sqlite3*
 
@@ -774,6 +774,7 @@ tabla usando ``SQLAlchemy``.
 
     Consulte la sección de :ref:`lecturas suplementarias <lectura_extras_leccion2>`
     del entrenamiento para ampliar su conocimiento en esta temática.
+
 
 .. raw:: html
    :file: ../_templates/partials/soporte_profesional.html
