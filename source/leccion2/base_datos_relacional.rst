@@ -29,10 +29,19 @@ Crear tablas
 
 Si requiere crear una tabla, a continuación tiene un ejemplo:
 
-.. literalinclude:: ../../recursos/leccion2/sistema/sistema.sql
-    :language: sql
+.. code-block:: sql
     :linenos:
-    :lines: 47-58
+
+    CREATE TABLE clientes
+    (
+        id             int           unique not null,
+        nombre         varchar(25)   not null,
+        apellido       varchar(25)   not null,
+        codigo_postal  int           not null,
+        telefono       varchar(11)   not null,
+
+        primary key(id)
+    );
 
 
 .. _python_base_ingresar_registro:
@@ -94,8 +103,23 @@ registro a dicha tabla.
 
 
 .. important::
-    Usted puede descargar el código usado en esta sección haciendo clic
-    :download:`aquí <../../recursos/leccion2/sistema/sistema_data.sql>`.
+    Usted puede descargar el código usado en esta sección haciendo clic en los
+    siguientes enlaces: :download:`sistema.sql <../../recursos/leccion2/sistema/sistema.sql>`
+    y :download:`sistema_data.sql <../../recursos/leccion2/sistema/sistema_data.sql>`.
+
+
+.. tip::
+    Para ejecutar el código SQL de la base de datos debe tener una copia local de los scripts
+    :file:`sistema.sql` y :file:`sistema_data.sql`.
+
+    ::
+
+        leccion2/
+        └── sistema/
+            ├── sistema.sql
+            └── sistema_data.sql
+
+    Si tiene la estructura de archivo previa, solo queda correr esos SQL en la vista de Query DATA.
 
 
 .. seealso::

@@ -64,8 +64,12 @@ Introspección a Python
 
 .. _lecturas_extras_leccion2:
 
-Lección 2 - Base de datos
--------------------------
+Lección 2 - Persistencia de datos
+---------------------------------
+
+- `Persistencia de datos <https://docs.python.org/es/3.11/library/persistence.html>`_.
+
+- `Persistencia e intercambio de datos <https://rico-schmidt.name/pymotw-3/persistence.html>`_.
 
 
 Librería pickle
@@ -76,6 +80,17 @@ Librería pickle
 - `Python - simple crud usando pickle <https://www.lawebdelprogramador.com/foros/Python/1556555-simple-crud-usando-pickle.html>`_.
 
 - `Python: Serialización de objetos <http://mundogeek.net/archivos/2008/05/20/python-serializacion-de-objetos/>`_.
+
+
+Base de datos relacional
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+- `Base de datos relacional <https://es.wikipedia.org/wiki/Base_de_datos_relacional>`_.
+
+- `¿Qué es una base de datos relacional? - IBM <https://www.ibm.com/mx-es/topics/relational-databases>`_.
+
+- `¿Qué es un sistema de administración de bases de datos relacionales? <https://azure.microsoft.com/es-es/resources/cloud-computing-dictionary/what-is-a-relational-database>`_.
+
 
 Interfaz DB-API
 ^^^^^^^^^^^^^^^
