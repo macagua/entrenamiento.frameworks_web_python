@@ -319,7 +319,7 @@ en proyectos con ``SQLAlchemy``, a continuación la estructura de proyecto llama
     ├── requirements.txt
     └── sistema.db
 
-A continuación se presenta y explica el uso de cada archivo para esta proyecto:
+A continuación se presenta y explica el uso de cada archivo para este proyecto:
 
 *Archivo .env.example*
 
@@ -464,7 +464,7 @@ actualizar y eliminar registro en las tablas.
     del entrenamiento para ampliar su conocimiento en esta temática.
 
 .. _`sqlacodegen`: https://pypi.org/project/sqlacodegen/
-.. _`sqlautocode`: http://code.google.com/p/sqlautocode/
+.. _`sqlautocode`: https://code.google.com/archive/p/sqlautocode
 .. _`Engine Configuration`: https://docs.sqlalchemy.org/en/14/core/engines.html
 .. _`dotenv`: https://dev.to/emma_donery/python-dotenv-keep-your-secrets-safe-4ocn
 .. _`python-dotenv`: https://pypi.org/project/python-dotenv/

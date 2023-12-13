@@ -109,8 +109,21 @@ Librería SQLAlchemy
 
 - `Patrón de diseño ORM <https://es.wikipedia.org/wiki/Mapeo_objeto-relacional>`_.
 
-.. todo::
-    TODO terminar de escribir esta sección
+
+Librería sqlacodegen
+^^^^^^^^^^^^^^^^^^^^
+
+- `sqlacodegen,  Automatic model code generator for SQLAlchemy - PyPI <https://pypi.org/project/sqlacodegen/>`_.
+
+- `agronholm/sqlacodegen: Automatic model code generator for SQLAlchemy <https://github.com/agronholm/sqlacodegen>`_.
+
+- `Python - sqlacodegen - SQLAlchemy <https://fausto.app/notes/python-sqlacodegen>`_.
+
+- `Generador de modelos o entidades sqlacodegen para sqlalchemy <https://eduardoaf.com/blog/python/generador-de-modelos-o-entidades-sqlacodegen-para-sqlalchemy-66>`_.
+
+- `Como generar modelos de base de datos con SQLAlchemy en Python <https://raulfranco.es/como-generar-modelos-de-base-de-datos-con-sqlalchemy-en-python/>`_.
+
+- `How to run sqlacodegen? <https://stackoverflow.com/questions/28788186/how-to-run-sqlacodegen>`_.
 
 
 .. _lecturas_extras_leccion3:
