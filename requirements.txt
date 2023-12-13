@@ -2,7 +2,7 @@
 alabaster==0.7.12
 appdirs==1.4.4
 Babel==2.10.3
-certifi==2022.9.14
+certifi==2022.12.7
 charset-normalizer==2.1.1
 docutils==0.18
 idna==3.4
