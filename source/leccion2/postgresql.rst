@@ -138,11 +138,108 @@ Insertar registros
 
 Si requiere insertar registro en una tabla, a continuación tiene un ejemplo:
 
+.. literalinclude:: ../../recursos/leccion2/postgresql/crud/postgresql_record_insert.py
+    :language: python
+    :linenos:
+    :lines: 1-72
+
+----
+
+
+.. important::
+    Usted puede descargar el código usado en esta sección haciendo clic en el
+    siguiente enlace: :download:`postgresql_record_insert.py <../../recursos/leccion2/postgresql/crud/postgresql_record_insert.py>`.
+
+
+.. tip::
+    Para ejecutar el código :file:`postgresql_record_insert.py`
+    abra una consola de comando, acceda al directorio donde se encuentra el programa:
+
+    ::
+
+        leccion2/
+        └── postgresql/
+            └── crud/
+                └── postgresql_record_insert.py
+
+    Si tiene la estructura de archivo previa, entonces ejecute el siguiente comando:
+
+    .. code-block:: console
+
+        $ python postgresql_record_insert.py
+
+El anterior código al ejecutar debe mostrar el siguiente mensaje:
+
+.. code-block:: console
+
+    INFO:root:¡Conectado a la base de datos sistema.db!
+
+    INFO:root:¡Fueron insertado(s) 3 registro(s) correctamente en la tabla!
+
+    INFO:root:¡La conexión PostgreSQL a la base de datos sistema.db fue cerrada!
+
 
 Consultar registros
 -------------------
 
 Si requiere consultar registros de tabla, a continuación tiene un ejemplo:
+
+.. literalinclude:: ../../recursos/leccion2/postgresql/crud/postgresql_record_select.py
+    :language: python
+    :linenos:
+    :lines: 1-55
+
+----
+
+
+.. important::
+    Usted puede descargar el código usado en esta sección haciendo clic en el
+    siguiente enlace: :download:`postgresql_record_select.py <../../recursos/leccion2/postgresql/crud/postgresql_record_select.py>`.
+
+
+.. tip::
+    Para ejecutar el código :file:`postgresql_record_select.py`
+    abra una consola de comando, acceda al directorio donde se encuentra el programa:
+
+    ::
+
+        leccion2/
+        └── postgresql/
+            └── crud/
+                └── postgresql_record_select.py
+
+    Si tiene la estructura de archivo previa, entonces ejecute el siguiente comando:
+
+    .. code-block:: console
+
+        $ python postgresql_record_select.py
+
+El anterior código al ejecutar debe mostrar el siguiente mensaje:
+
+.. code-block:: console
+
+    INFO:root:¡Conectado a la base de datos sistema.db!
+
+    Total de filas son: 3
+
+    Mostrar cada fila:
+
+            Id: 1
+            Nombre: Leonardo
+            Código postal: Caballero
+            Teléfono: 5001
+
+            Id: 2
+            Nombre: Ana
+            Código postal: Poleo
+            Teléfono: 6302
+
+            Id: 3
+            Nombre: Pedro
+            Código postal: Lopez
+            Teléfono: 4001
+
+    INFO:root:¡La conexión PostgreSQL a la base de datos sistema.db fue cerrada!
 
 
 Actualizar registros
@@ -150,14 +247,91 @@ Actualizar registros
 
 Si requiere actualizar registro de tabla, a continuación tiene un ejemplo:
 
+.. literalinclude:: ../../recursos/leccion2/postgresql/crud/postgresql_record_update.py
+    :language: python
+    :linenos:
+    :lines: 1-57
+
+----
+
+.. important::
+    Usted puede descargar el código usado en esta sección haciendo clic en el
+    siguiente enlace: :download:`postgresql_record_update.py <../../recursos/leccion2/postgresql/crud/postgresql_record_update.py>`.
+
+
+.. tip::
+    Para ejecutar el código :file:`postgresql_record_update.py`
+    abra una consola de comando, acceda al directorio donde se encuentra el programa:
+
+    ::
+
+        leccion2/
+        └── postgresql/
+            └── crud/
+                └── postgresql_record_update.py
+
+    Si tiene la estructura de archivo previa, entonces ejecute el siguiente comando:
+
+    .. code-block:: console
+
+        $ python postgresql_record_update.py
+
+El anterior código al ejecutar debe mostrar el siguiente mensaje:
+
+.. code-block:: console
+
+    INFO:root:¡Conectado a la base de datos sistema.db!
+
+    INFO:root:¡Fueron actualizado(s) 2 registro(s) correctamente en la tabla!
+
+    INFO:root:¡La conexión PostgreSQL a la base de datos sistema.db fue cerrada!
+
 
 Eliminar registros
 ------------------
 
 Si requiere eliminar registro de tabla, a continuación tiene un ejemplo:
 
-.. todo::
-    TODO Terminar de escribir esta sección.
+.. literalinclude:: ../../recursos/leccion2/postgresql/crud/postgresql_record_delete.py
+    :language: python
+    :linenos:
+    :lines: 1-52
+
+----
+
+
+.. important::
+    Usted puede descargar el código usado en esta sección haciendo clic en el
+    siguiente enlace: :download:`postgresql_record_delete.py <../../recursos/leccion2/postgresql/crud/postgresql_record_delete.py>`.
+
+
+.. tip::
+    Para ejecutar el código :file:`postgresql_record_delete.py`
+    abra una consola de comando, acceda al directorio donde se encuentra el programa:
+
+    ::
+
+        leccion2/
+        └── postgresql/
+            └── crud/
+                └── postgresql_record_delete.py
+
+    Si tiene la estructura de archivo previa, entonces ejecute el siguiente comando:
+
+    .. code-block:: console
+
+        $ python postgresql_record_delete.py
+
+El anterior código al ejecutar debe mostrar el siguiente mensaje:
+
+.. code-block:: console
+
+    INFO:root:¡Conectado a la base de datos sistema.db!
+
+    INFO:root:¡Registro eliminado correctamente!
+
+    INFO:root:¡La conexión PostgreSQL a la base de datos sistema.db fue cerrada!
+
 
 Asi de esta forma puede ingresar, consultar, actualizar y eliminar
 registro en una tabla en una base de datos ``PostgreSQL``.
@@ -166,11 +340,11 @@ registro en una tabla en una base de datos ``PostgreSQL``.
 
 .. seealso::
 
-    Consulte la sección de :ref:`lecturas suplementarias <lectura_extras_leccion12>`
+    Consulte la sección de :ref:`lecturas suplementarias <lectura_extras_leccion2>`
     del entrenamiento para ampliar su conocimiento en esta temática.
 
 
 .. _`PostgreSQL`: https://www.postgresql.org/
 .. _`psycopg`: https://www.psycopg.org/docs/
 .. _`psycopg2`: https://pypi.org/project/psycopg2/
-.. _`libpq`: https://www.postgresql.org/docs/current/libpq.html
+.. _`libpq`: https://www.postgresql.org/docs/current/static/libpq.html
