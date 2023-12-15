@@ -1,7 +1,7 @@
 .. _python_modulo_pickle:
 
-pickle - Serialización de objetos
-=================================
+Serialización de objetos
+========================
 
 .. note::
     **Propósito:** es una libraría para implementa protocolos binarios para serializar
