@@ -333,7 +333,7 @@ Si requiere insertar registro en una tabla, a continuación tiene un ejemplo:
 
     ::
 
-        leccion3/
+        leccion2/
         └── sqlite/
             └── crud/
                 └── sqlite_record_insert.py
@@ -379,7 +379,7 @@ Si requiere consultar registros de tabla, a continuación tiene un ejemplo:
 
     ::
 
-        leccion3/
+        leccion2/
         └── sqlite/
             └── crud/
                 └── sqlite_record_select.py
@@ -441,7 +441,7 @@ Si requiere actualizar registro de tabla, a continuación tiene un ejemplo:
 
     ::
 
-        leccion3/
+        leccion2/
         └── sqlite/
             └── crud/
                 └── sqlite_record_update.py
@@ -690,7 +690,7 @@ tabla usando ``sqlite``.
 
     ::
 
-        leccion3/
+        leccion2/
         └── sqlite/
             └── sistema/
                 ├── __init__.py
