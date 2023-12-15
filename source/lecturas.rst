@@ -105,8 +105,8 @@ Interfaz DB-API
 - `Databases - The Hitchhiker's Guide to Python <https://docs.python-guide.org/scenarios/db/>`_.
 
 
-Librería SQLite
-^^^^^^^^^^^^^^^
+Librería sqlite3
+^^^^^^^^^^^^^^^^
 
 - `sqlite3 — DB-API 2.0 interfaz para bases de datos SQLite <https://docs.python.org/es/3.11/library/sqlite3.html>`_.
 
@@ -115,6 +115,14 @@ Librería SQLite
 - `SQLite - Wikipedia <https://es.wikipedia.org/wiki/SQLite>`_.
 
 - `How To Use the sqlite3 Module in Python 3 <https://www.digitalocean.com/community/tutorials/how-to-use-the-sqlite3-module-in-python-3>`_.
+
+
+Librería psycopg
+^^^^^^^^^^^^^^^^
+
+- `Psycopg - PostgreSQL database adapter for Python — Psycopg 2.9.9 documentation <https://www.psycopg.org/docs/index.html>`_.
+
+- `psycopg - PostgreSQL database adapter for Python - PyPI <https://pypi.org/project/psycopg/>`_.
 
 
 Librería SQLAlchemy
