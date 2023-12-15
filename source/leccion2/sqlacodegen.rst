@@ -460,7 +460,7 @@ actualizar y eliminar registro en las tablas.
 
 .. seealso::
 
-    Consulte la sección de :ref:`lecturas suplementarias <lectura_extras_leccion12>`
+    Consulte la sección de :ref:`lecturas suplementarias <lectura_extras_leccion2>`
     del entrenamiento para ampliar su conocimiento en esta temática.
 
 .. _`sqlacodegen`: https://pypi.org/project/sqlacodegen/

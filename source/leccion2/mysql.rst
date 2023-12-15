@@ -155,7 +155,7 @@ registro en una tabla en una base de datos ``MySQL``.
 
 .. seealso::
 
-    Consulte la sección de :ref:`lecturas suplementarias <lectura_extras_leccion12>`
+    Consulte la sección de :ref:`lecturas suplementarias <lectura_extras_leccion2>`
     del entrenamiento para ampliar su conocimiento en esta temática.
 
 
