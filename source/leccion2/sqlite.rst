@@ -314,17 +314,17 @@ Insertar registros
 
 Si requiere insertar registro en una tabla, a continuación tiene un ejemplo:
 
-.. literalinclude:: ../../recursos/leccion2/sqlite/sqlite3_record_insert.py
+.. literalinclude:: ../../recursos/leccion2/sqlite/crud/sqlite_record_insert.py
     :language: python
     :linenos:
-    :lines: 1-55
+    :lines: 1-53
 
 ----
 
 
 .. important::
     Usted puede descargar el código usado en esta sección haciendo clic en el
-    siguiente enlace: :download:`sqlite3_record_insert.py <../../recursos/leccion2/sqlite/sqlite3_record_insert.py>`.
+    siguiente enlace: :download:`sqlite3_record_insert.py <../../recursos/leccion2/sqlite/crud/sqlite_record_insert.py>`.
 
 
 .. tip::
@@ -334,13 +334,15 @@ Si requiere insertar registro en una tabla, a continuación tiene un ejemplo:
     ::
 
         leccion3/
-        └── sqlite3_record_insert.py
+        └── sqlite/
+            └── crud/
+                └── sqlite_record_insert.py
 
     Si tiene la estructura de archivo previa, entonces ejecute el siguiente comando:
 
     .. code-block:: console
 
-        $ python sqlite3_record_insert.py
+        $ python sqlite_record_insert.py
 
 El anterior código al ejecutar debe mostrar el siguiente mensaje:
 
@@ -358,17 +360,17 @@ Consultar registros
 
 Si requiere consultar registros de tabla, a continuación tiene un ejemplo:
 
-.. literalinclude:: ../../recursos/leccion2/sqlite/sqlite3_record_select.py
+.. literalinclude:: ../../recursos/leccion2/sqlite/crud/sqlite_record_select.py
     :language: python
     :linenos:
-    :lines: 1-51
+    :lines: 1-50
 
 ----
 
 
 .. important::
     Usted puede descargar el código usado en esta sección haciendo clic en el
-    siguiente enlace: :download:`sqlite3_record_select.py <../../recursos/leccion2/sqlite/sqlite3_record_select.py>`.
+    siguiente enlace: :download:`sqlite3_record_select.py <../../recursos/leccion2/sqlite/crud/sqlite_record_select.py>`.
 
 
 .. tip::
@@ -378,13 +380,15 @@ Si requiere consultar registros de tabla, a continuación tiene un ejemplo:
     ::
 
         leccion3/
-        └── sqlite3_record_select.py
+        └── sqlite/
+            └── crud/
+                └── sqlite_record_select.py
 
     Si tiene la estructura de archivo previa, entonces ejecute el siguiente comando:
 
     .. code-block:: console
 
-        $ python sqlite3_record_select.py
+        $ python sqlite_record_select.py
 
 El anterior código al ejecutar debe mostrar el siguiente mensaje:
 
@@ -419,7 +423,7 @@ Actualizar registros
 
 Si requiere actualizar registro de tabla, a continuación tiene un ejemplo:
 
-.. literalinclude:: ../../recursos/leccion2/sqlite/sqlite3_record_update.py
+.. literalinclude:: ../../recursos/leccion2/sqlite/crud/sqlite_record_update.py
     :language: python
     :linenos:
     :lines: 1-54
@@ -428,7 +432,7 @@ Si requiere actualizar registro de tabla, a continuación tiene un ejemplo:
 
 .. important::
     Usted puede descargar el código usado en esta sección haciendo clic en el
-    siguiente enlace: :download:`sqlite3_record_update.py <../../recursos/leccion2/sqlite/sqlite3_record_update.py>`.
+    siguiente enlace: :download:`sqlite3_record_update.py <../../recursos/leccion2/sqlite/crud/sqlite_record_update.py>`.
 
 
 .. tip::
@@ -438,13 +442,15 @@ Si requiere actualizar registro de tabla, a continuación tiene un ejemplo:
     ::
 
         leccion3/
-        └── sqlite3_record_update.py
+        └── sqlite/
+            └── crud/
+                └── sqlite_record_update.py
 
     Si tiene la estructura de archivo previa, entonces ejecute el siguiente comando:
 
     .. code-block:: console
 
-        $ python sqlite3_record_update.py
+        $ python sqlite_record_update.py
 
 El anterior código al ejecutar debe mostrar el siguiente mensaje:
 
@@ -462,7 +468,7 @@ Eliminar registros
 
 Si requiere eliminar registro de tabla, a continuación tiene un ejemplo:
 
-.. literalinclude:: ../../recursos/leccion2/sqlite/sqlite3_record_delete.py
+.. literalinclude:: ../../recursos/leccion2/sqlite/crud/sqlite_record_delete.py
     :language: python
     :linenos:
     :lines: 1-44
@@ -472,7 +478,7 @@ Si requiere eliminar registro de tabla, a continuación tiene un ejemplo:
 
 .. important::
     Usted puede descargar el código usado en esta sección haciendo clic en el
-    siguiente enlace: :download:`sqlite3_record_delete.py <../../recursos/leccion2/sqlite/sqlite3_record_delete.py>`.
+    siguiente enlace: :download:`sqlite3_record_delete.py <../../recursos/leccion2/sqlite/crud/sqlite_record_delete.py>`.
 
 
 .. tip::
@@ -482,14 +488,15 @@ Si requiere eliminar registro de tabla, a continuación tiene un ejemplo:
     ::
 
         leccion2/
-            └── sqlite/
-                └── sqlite3_record_delete.py
+        └── sqlite/
+            └── crud/
+                └── sqlite_record_delete.py
 
     Si tiene la estructura de archivo previa, entonces ejecute el siguiente comando:
 
     .. code-block:: console
 
-        $ python sqlite3_record_delete.py
+        $ python sqlite_record_delete.py
 
 El anterior código al ejecutar debe mostrar el siguiente mensaje:
 
@@ -524,7 +531,7 @@ A continuación se presenta y explica el uso de cada archivo para este proyecto:
 
 Archivo plantilla `dotenv`_ del paquete adicional `python-dotenv`_.
 
-.. literalinclude:: ../../recursos/leccion2/sqlite/.env.example
+.. literalinclude:: ../../recursos/leccion2/sqlite/sistema/.env.example
     :language: text
     :linenos:
     :lines: 1-2
@@ -533,7 +540,7 @@ Archivo plantilla `dotenv`_ del paquete adicional `python-dotenv`_.
 
 Modulo de configuraciones del programa.
 
-.. literalinclude:: ../../recursos/leccion2/sqlite/main.py
+.. literalinclude:: ../../recursos/leccion2/sqlite/sistema/main.py
     :language: python
     :linenos:
     :lines: 1-136
@@ -542,7 +549,7 @@ Modulo de configuraciones del programa.
 
 Archivo de `requirements.txt`_ de la herramienta de gestión de paquetes `pip`_.
 
-.. literalinclude:: ../../recursos/leccion2/sqlite/requirements.txt
+.. literalinclude:: ../../recursos/leccion2/sqlite/sistema/requirements.txt
     :language: python
     :linenos:
     :lines: 1-2
@@ -551,7 +558,7 @@ Archivo de `requirements.txt`_ de la herramienta de gestión de paquetes `pip`_.
 
 Modulo de principal del programa.
 
-.. literalinclude:: ../../recursos/leccion2/sqlite/settings.py
+.. literalinclude:: ../../recursos/leccion2/sqlite/sistema/settings.py
     :language: python
     :linenos:
     :lines: 1-32
@@ -664,17 +671,17 @@ tabla usando ``sqlite``.
     Usted puede descargar el código usado en esta sección haciendo clic en los
     siguientes enlaces:
 
-    - :download:`__init__.py <../../recursos/leccion2/sqlite/__init__.py>`.
+    - :download:`__init__.py <../../recursos/leccion2/sqlite/sistema/__init__.py>`.
 
-    - :download:`.env.example <../../recursos/leccion2/sqlite/.env.example>`.
+    - :download:`.env.example <../../recursos/leccion2/sqlite/sistema/.env.example>`.
 
-    - :download:`main.py <../../recursos/leccion2/sqlite/main.py>`.
+    - :download:`main.py <../../recursos/leccion2/sqlite/sistema/main.py>`.
 
-    - :download:`requirements.txt <../../recursos/leccion2/sqlite/requirements.txt>`.
+    - :download:`requirements.txt <../../recursos/leccion2/sqlite/sistema/requirements.txt>`.
 
-    - :download:`settings.py <../../recursos/leccion2/sqlite/settings.py>`.
+    - :download:`settings.py <../../recursos/leccion2/sqlite/sistema/settings.py>`.
 
-    - :download:`sistema.db <../../recursos/leccion2/sqlite/sistema.db>`.
+    - :download:`sistema.db <../../recursos/leccion2/sqlite/sistema/sistema.db>`.
 
 
 .. tip::
@@ -685,12 +692,13 @@ tabla usando ``sqlite``.
 
         leccion3/
         └── sqlite/
-            ├── __init__.py
-            ├── .env.example
-            ├── main.py
-            ├── requirements.txt
-            ├── settings.py
-            └── sistema.db
+            └── sistema/
+                ├── __init__.py
+                ├── .env.example
+                ├── main.py
+                ├── requirements.txt
+                ├── settings.py
+                └── sistema.db
 
     Si tiene la estructura de archivo previa, entonces ejecute el siguiente comando:
 
@@ -700,7 +708,7 @@ tabla usando ``sqlite``.
 
 .. seealso::
 
-    Consulte la sección de :ref:`lecturas suplementarias <lectura_extras_leccion12>`
+    Consulte la sección de :ref:`lecturas suplementarias <lectura_extras_leccion2>`
     del entrenamiento para ampliar su conocimiento en esta temática.
 
 

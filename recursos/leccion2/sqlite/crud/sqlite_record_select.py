@@ -1,4 +1,4 @@
-"""Programa para realizar la eliminación de registro de la tabla"""
+"""Programa para la consulta de registro(s) de la tabla"""
 
 import logging
 import sqlite3
@@ -9,26 +9,32 @@ logging.basicConfig(level=logging.INFO)
 DB_PATH = os.path.dirname(os.path.abspath(__file__)) + os.sep
 DB_FILE = "sistema.db"
 DB = DB_PATH + DB_FILE
-SQL_SCRIPTS = """DELETE FROM clientes WHERE id = 3;"""
+SQL_SCRIPTS = """SELECT * FROM clientes;"""
 
 
-def eliminar_registro():
-    """Función para la eliminación de registro de la tabla"""
+def consultar_registro():
+    """Función para la consulta de registro(s) de la tabla"""
 
     try:
         conexion = sqlite3.connect(DB)
         cursor = conexion.cursor()
         logging.info(f"¡Conectado a la base de datos {DB_FILE}!\n")
 
-        # Eliminar un fila de registro simple
         cursor.execute(SQL_SCRIPTS)
-        # Guardar los cambios en la base de datos
-        conexion.commit()
-        logging.info("¡Registro eliminado correctamente!\n")
+        registros = cursor.fetchall()
+
+        print(f"Total de filas son: {len(registros)} \n")
+        print("Mostrar cada fila: \n")
+        for fila in registros:
+            print(f"\tId: {fila[0]}")
+            print(f"\tNombre: {fila[1]}")
+            print(f"\tCódigo postal: {fila[2]}")
+            print(f"\tTeléfono: {fila[3]}\n")
+
         cursor.close()
 
     except sqlite3.Error as error:
-        print("¡Fallo la eliminación de registro(s) en la tabla!", error)
+        print("¡Fallo la consulta de registro(s) en la tabla!", error)
     finally:
         if conexion:
             # Cerrar la conexión a la base de datos
@@ -41,4 +47,4 @@ def eliminar_registro():
 
 
 if __name__ == "__main__":
-    eliminar_registro()
+    consultar_registro()

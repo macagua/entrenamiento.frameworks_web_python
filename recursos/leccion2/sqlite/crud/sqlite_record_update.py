@@ -1,4 +1,4 @@
-"""Programa para realizar la actualización de registro de la tabla"""
+"""Programa para la actualización de registro de la tabla"""
 
 import logging
 import sqlite3
