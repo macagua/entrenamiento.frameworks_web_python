@@ -347,4 +347,4 @@ registro en una tabla en una base de datos ``PostgreSQL``.
 .. _`PostgreSQL`: https://www.postgresql.org/
 .. _`psycopg`: https://www.psycopg.org/docs/
 .. _`psycopg2`: https://pypi.org/project/psycopg2/
-.. _`libpq`: https://www.postgresql.org/docs/current/static/libpq.html
+.. _`libpq`: https://www.postgresql.org/docs/current/libpq.html

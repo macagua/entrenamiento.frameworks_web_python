@@ -222,7 +222,7 @@ Lección 5 - Frameworks Web
 
 - :ref:`Django <lecturas_extras_leccion7>`.
 
-- `Sanic framework <https://sanic.dev/>`_.
+- `Sanic framework <https://sanic.dev/en/>`_.
 
   - `Sanic Async Python 3.6+ web server/framework <https://github.com/sanic-org/sanic>`_.
 
@@ -239,9 +239,9 @@ Lección 6 - Flask
 Flask
 ^^^^^
 
-- `Sitio Web de Flask <https://flask.palletsprojects.com/en/2.2.x/>`_.
+- `Sitio Web de Flask <https://flask.palletsprojects.com/en/stable/>`_.
 
-- `Flask documentation <https://flask.palletsprojects.com/en/2.2.x/>`_.
+- `Flask documentation <https://flask.palletsprojects.com/en/stable/>`_.
 
 - `Flask - PyPI <https://pypi.org/project/Flask>`_.
 
@@ -251,7 +251,7 @@ Flask
 Aplicación CRUD
 ^^^^^^^^^^^^^^^
 
-- `Flask-SQLAlchemy <https://flask-sqlalchemy.palletsprojects.com/en/3.0.x/>`_.
+- `Flask-SQLAlchemy <https://flask-sqlalchemy.palletsprojects.com/en/stable/>`_.
 
 - `Flask-SQLAlchemy - PyPI <https://pypi.org/project/Flask-SQLAlchemy/>`_.
 
@@ -263,9 +263,9 @@ Admin Dashboard
 
 - `Flask-Admin - PyPI <https://pypi.org/project/Flask-Admin/>`_.
 
-- `flask-admin/flask-admin: Simple and extensible administrative interface framework for Flask <https://github.com/flask-admin/flask-admin/>`_.
+- `flask-admin/flask-admin: Simple and extensible administrative interface framework for Flask <https://github.com/pallets-eco/flask-admin>`_.
 
-- `Flask-Security <https://flask-security.readthedocs.io/en/3.0.0/>`_.
+- `Flask-Security <https://flask-security.readthedocs.io/en/stable/>`_.
 
 - `Flask-Security - PyPI <https://pypi.org/project/Flask-Security/>`_.
 
@@ -289,7 +289,7 @@ Lección 7 - Django
 
 - `Django en PyPI <https://pypi.org/project/Django>`_.
 
-- `Framework Web Django (Python) - Aprende sobre desarrollo web - MDN <https://developer.mozilla.org/es/docs/Learn/Server-side/Django>`_.
+- `Framework Web Django (Python) - Aprende sobre desarrollo web - MDN <https://developer.mozilla.org/es/docs/Learn_web_development/Extensions/Server-side/Django>`_.
 
 .. todo::
     TODO terminar de escribir esta sección

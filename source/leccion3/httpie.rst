@@ -32,7 +32,7 @@ Cliente cURL
 
 - Admite trucos de conexión personalizados como --resolve y --connect-to.
 
-- Compatibilidad con HTTP/2 (tanto para HTTP:// como para HTTPS:// URL).
+- Compatibilidad con HTTP/2 (tanto para ``HTTP://`` como para ``HTTPS://`` URL).
 
 - Compatibilidad con HTTP/3.
 

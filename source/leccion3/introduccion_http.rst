@@ -70,7 +70,7 @@ Tipos por el número inicial
 -  5xx Error del servidor.
 
 Puede consultar los mensajes de estado de HTTP en el siguiente
-enlace: https://www.restapitutorial.com/httpstatuscodes.html
+enlace: https://www.restapitutorial.com/httpstatuscodes
 
 Métodos HTTP
 ------------

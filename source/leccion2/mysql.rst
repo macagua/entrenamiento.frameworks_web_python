@@ -159,5 +159,5 @@ registro en una tabla en una base de datos ``MySQL``.
     del entrenamiento para ampliar su conocimiento en esta temática.
 
 
-.. _`MySQL`: https://www.mysql.com/
+.. _`MySQL`: https://es.wikipedia.org/wiki/MySQL
 .. _`PyMySQL`: https://pymysql.readthedocs.io/en/latest/
