@@ -87,8 +87,6 @@ registro en un archivo serializado de objetos python ``pickle``.
 
 ----
 
-----
-
 .. seealso::
 
     Consulte la sección de :ref:`lecturas suplementarias <lectura_extras_leccion2>`
