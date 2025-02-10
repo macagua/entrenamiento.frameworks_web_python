@@ -30,13 +30,13 @@ el siguiente comando:
 
 ::
 
-	$ sudo apt update
+    $ sudo apt update
 
 Instalar dependencias mínimas necesarias, con el siguiente comando:
 
 ::
 
-	$ sudo apt install python3-dev python3-pip python3-virtualenv git sqlitebrowser
+    $ sudo apt install python3-dev python3-pip python3-virtualenv git sqlitebrowser
 
 
 Descargar código
@@ -46,23 +46,23 @@ Usted puede descargar código desde Github, ejecutando el siguiente comando:
 
 ::
 
-	$ cd ~/ && git clone https://github.com/jonalxh/Flask-Admin-Dashboard.git
-	$ cd ~/Flask-Admin-Dashboard
+    $ cd ~/ && git clone https://github.com/jonalxh/Flask-Admin-Dashboard.git
+    $ cd ~/Flask-Admin-Dashboard
 
 
 Entorno virtual Python
 ----------------------
 
-Crear entorno virtual Python en directorio file:`~/Flask-Admin-Dashboard` con el siguiente comando:
+Crear entorno virtual Python en directorio :file:`~/Flask-Admin-Dashboard` con el siguiente comando:
 
 ::
 
-	$ virtualenv --python=/usr/bin/python3 venv
+    $ virtualenv --python=/usr/bin/python3 venv
 
 
 Activarlo entorno virtual Python creado con el siguiente comando:
 
-	$ source ./venv/bin/activate
+    $ source ./venv/bin/activate
 
 
 Instalar paquetes Python
@@ -72,7 +72,7 @@ Para instalar las dependencias para usar del framework Flask, con el siguiente c
 
 ::
 
-	$ pip3 install -r requirements.txt
+    $ pip3 install -r requirements.txt
 
 
 Ejecutar aplicación Flask

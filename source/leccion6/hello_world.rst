@@ -23,13 +23,13 @@ Crear estructura de proyecto Flask, con los siguientes comando:
 
 ::
 
-	$ mkdir -p ~/projects/flask-helloworld/ && cd $_
+    $ mkdir -p ~/projects/flask-helloworld/ && cd $_
 
 Cree modulo Python llamado :file:`hello.py` dentro del directorio :file:`~/projects/flask-helloworld`
 
 ::
 
-	$ nano hello.py
+    $ nano hello.py
 
 
 Agregue el siguiente contenido al archivo :file:`~/projects/flask-helloworld/hello.py`.
@@ -46,7 +46,7 @@ Para ejecutar aplicación Web Flask, con el siguiente comando:
 
 ::
 
-	$ FLASK_APP=hello.py flask run
+    $ FLASK_APP=hello.py flask run
 
 Abrir en navegador favorito la siguiente dirección http://127.0.0.1:5000
 

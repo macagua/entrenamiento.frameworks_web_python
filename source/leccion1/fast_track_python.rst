@@ -102,7 +102,7 @@ la técnica *herencia simple* de Clases en Python 3:
 .. disqus::
 
 .. commets:
-	http://jupyter.org
-	https://ipython.org/ipython-doc/3/notebook/notebook.html#introduction
-	Primeros pasos con Jupyter Notebook https://www.adictosaltrabajo.com/tutoriales/primeros-pasos-con-jupyter-notebook/
-	https://github.com/Covantec/training.python_web/blob/master/notebooks/Networking%20%26%20Sockets.ipynb
+    http://jupyter.org
+    https://ipython.org/ipython-doc/3/notebook/notebook.html#introduction
+    Primeros pasos con Jupyter Notebook https://www.adictosaltrabajo.com/tutoriales/primeros-pasos-con-jupyter-notebook/
+    https://github.com/Covantec/training.python_web/blob/master/notebooks/Networking%20%26%20Sockets.ipynb

@@ -118,7 +118,7 @@ Contribuir
 
 ¡Gracias por considerar contribuir a esta documentación!
 
-Conseguiste algun error (Bug), o error de transcripción "Typo", o tal ves tengas una gran idea para mejorar
+Conseguiste algún error (Bug), o error de transcripción "Typo", o tal ves tengas una gran idea para mejorar
 este material, puedes reportarla o solicitarla en:
 
 * Consulte el `issue tracker <https://github.com/macagua/entrenamiento.frameworks_web_python/issues>`_ para obtener
