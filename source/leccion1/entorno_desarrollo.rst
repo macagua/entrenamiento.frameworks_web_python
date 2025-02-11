@@ -91,7 +91,7 @@ Agregue el siguiente contenido:
 
 .. code-block:: console
 
-    cookiecutter==1.6.0
+    cookiecutter==2.6.0
 
 Guarde el archivo y procede a ejecutar la herramienta ``pip``, con el parámetro ``-r``
 seguido de la ruta absoluta o relativa del archivo previamente creado.
@@ -100,6 +100,13 @@ seguido de la ruta absoluta o relativa del archivo previamente creado.
 
     $ pip3 install -r requirements.txt
 
+Luego de la instalación puede ejecuta el comando ``cookiecutter -V`` el cual ofrece
+una salida de la versión.
+
+.. code-block:: console
+
+    $ cookiecutter -V
+
 Luego de la instalación puede ejecuta el comando ``pip3 freeze`` el cual ofrece una salida de
 paquetes instalados en formato de archivos `requirements <https://pip.pypa.io/en/stable/user_guide/#requirements-files>`_.
 Los paquetes se enumeran en un ordenan de forma tal que no distingue entre mayúsculas y minúsculas.
@@ -107,27 +114,28 @@ Los paquetes se enumeran en un ordenan de forma tal que no distingue entre mayú
 ::
 
     $ pip3 freeze
-    arrow==1.2.3
+    arrow==1.3.0
     binaryornot==0.4.4
-    certifi==2022.9.24
-    chardet==5.0.0
-    charset-normalizer==2.1.1
-    click==8.1.3
-    cookiecutter==2.1.1
-    idna==3.4
-    importlib-metadata==5.0.0
-    Jinja2==3.1.2
-    jinja2-time==0.2.0
-    MarkupSafe==2.1.1
-    python-dateutil==2.8.2
-    python-slugify==6.1.2
-    PyYAML==6.0
-    requests==2.28.1
-    six==1.16.0
+    certifi==2025.1.31
+    chardet==5.2.0
+    charset-normalizer==3.4.1
+    click==8.1.8
+    cookiecutter==2.6.0
+    idna==3.10
+    Jinja2==3.1.5
+    markdown-it-py==3.0.0
+    MarkupSafe==3.0.2
+    mdurl==0.1.2
+    Pygments==2.19.1
+    python-dateutil==2.9.0.post0
+    python-slugify==8.0.4
+    PyYAML==6.0.2
+    requests==2.32.3
+    rich==13.9.4
+    six==1.17.0
     text-unidecode==1.3
-    typing_extensions==4.4.0
-    urllib3==1.26.12
-    zipp==3.10.0
+    types-python-dateutil==2.9.0.20241206
+    urllib3==2.3.0
 
 Usted puede actualizar el archivo ``requirements.txt`` con el resultado de la ejecución el comando
 ``pip3 freeze`` ejecutando el siguiente comando:

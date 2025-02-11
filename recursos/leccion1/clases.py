@@ -1,7 +1,5 @@
-"""
-   Ejemplo de Programación Orientado a Objetos usando la
-   Herencia simple de Clase en Python.
-"""
+"""Ejemplo de Programación Orientado a Objetos usando
+la Herencia simple de Clase en Python."""
 
 import sys
 
@@ -18,8 +16,9 @@ class Persona:
 
     def __str__(self):
         """Devuelve una cadena representativa al Persona"""
+        doc = self.__doc__[25:34] if self.__doc__ else "Persona"
         return "{}: {}, {} {}, {}.".format(
-            self.__doc__[25:34],
+            doc,
             str(self.cedula),
             self.nombre,
             self.apellido,
@@ -56,8 +55,9 @@ class Supervisor(Persona):
 
     def __str__(self):
         """Devuelve una cadena representativa al Supervisor"""
+        doc = self.__doc__[26:37] if self.__doc__ else "Supervisor"
         return "{}: {} {}, rol: '{}', sus tareas: {}.".format(
-            self.__doc__[26:37],
+            doc,
             self.nombre,
             self.apellido,
             self.rol,
@@ -76,8 +76,9 @@ def poblar_persona():
     persona1 = Persona("V-13458796", "Leonardo", "Caballero", "M")
     persona2 = Persona("V-23569874", "Ana", "Poleo", "F")
 
-    print(persona1.__doc__[25:34])
-    print(len(persona1.__doc__[25:34]) * "=")
+    persona1_doc = persona1.__doc__[25:34] if persona1.__doc__ else "Persona"
+    print(persona1_doc)
+    print(len(persona1_doc) * "=")
 
     print("\n" + str(persona1) + "\n")
 
@@ -101,8 +102,8 @@ def poblar_persona():
         + "'."
     )
 
-    print("\nOtra " + persona1.__doc__[25:34])
-    print((len(persona1.__doc__[25:34]) + 5) * "-")
+    print("\nOtra " + persona1_doc)
+    print((len(persona1_doc) + 5) * "-")
 
     print("\n" + str(persona2) + "\n")
 
@@ -131,10 +132,13 @@ def poblar_supervisor():
     """Función que crea objetos desde la clase Supervisor"""
 
     # Una instancia de Objeto Supervisor
-    supervisor1 = Supervisor("V-16987456", "Pedro", "Pérez", "No se", "El chivo")
+    supervisor1 = Supervisor("V-16987456", "Manuel", "Matos", "No se", "El chivo")
 
-    print("\n" + supervisor1.__doc__[26:37])
-    print(len(supervisor1.__doc__[26:37]) * "=")
+    supervisor1_doc = (
+        supervisor1.__doc__[26:37] if supervisor1.__doc__ else "Supervisor"
+    )
+    print("\n" + supervisor1_doc)
+    print(len(supervisor1_doc) * "=")
 
     print("\n" + str(supervisor1) + "\n")
 
@@ -160,7 +164,7 @@ def poblar_supervisor():
         """\nHola, Soy el {} {} {}, mi cédula es '{}',
 mi genero '{}', con el rol '{}' y mis tareas
 asignadas '{}'.""".format(
-            supervisor1.__doc__[26:37].lower(),
+            supervisor1_doc.lower(),
             supervisor1.nombre,
             supervisor1.apellido,
             supervisor1.cedula,
@@ -183,7 +187,5 @@ if __name__ == "__main__":
         print("SOLUCIÓN: Introduce los argumentos correctamente")
         print("Ejemplo: python clases.py persona")
         print("Ejemplo: python clases.py supervisor")
-elif __name__ == "clases":
-    initialize()
 else:
-    print("El programa esta mal configurado, debe llamar a su modulo")
+    print("El programa esta mal configurado, debe llamar a su módulo")

@@ -1,8 +1,7 @@
-"""
-    El fuertemente tipado significa que el tipo de valor no
-    cambia repentinamente. Una cadena que contiene solo dígitos
-    no se convierte mágicamente en un número. Cada cambio de tipo
-    requiere una conversión explícita.
+"""El fuertemente tipado significa que el tipo de valor no
+cambia repentinamente. Una cadena que contiene solo dígitos
+no se convierte mágicamente en un número. Cada cambio de tipo
+requiere una conversión explícita.
 
     >>> valor1, valor2 = 2, "5"
     >>> total = valor1 + valor2

@@ -51,7 +51,7 @@ la técnica *herencia simple* de Clases en Python 3:
 .. literalinclude:: ../../recursos/leccion1/clases.py
    :language: python
    :linenos:
-   :lines: 6-189
+   :lines: 4-191
 
 
 ----
