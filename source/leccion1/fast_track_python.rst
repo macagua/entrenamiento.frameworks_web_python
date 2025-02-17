@@ -68,7 +68,7 @@ la técnica *herencia simple* de Clases en Python 3:
 .. tip::
     Para ejecutar el código :file:`fuertemente_tipados.py`, :file:`tipado_dinamico.py`
     y :file:`clases.py`, abra una consola de comando, acceda al directorio donde se
-    encuentra ambos programas:
+    encuentra los programas:
 
     ::
 

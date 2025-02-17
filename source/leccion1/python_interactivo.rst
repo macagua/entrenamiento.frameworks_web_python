@@ -42,7 +42,7 @@ factores:
 - Hoy en día existente herramientas que te permiten generar
   documentación desde los códigos fuentes Python como `Sphinx`_.
 
-La forma mas fácil es iniciar tu relación con Python simplemente ejecutando
+La forma más fácil es iniciar tu relación con Python simplemente ejecutando
 el comando ``python`` de la siguiente forma:
 
 .. code-block:: console
@@ -574,7 +574,7 @@ Y para cerrar la sesión con el ``ipython`` ejecute el siguiente comando:
 Interprete bpython
 ..................
 
-Alternativamente puedes usar el paquete `bpython` que mejora aun mas la experiencia
+Alternativamente puedes usar el paquete `bpython` que mejora aun más la experiencia
 de trabajo con el paquete `ipython`.
 
 Para mayor información visite su página principal de `interprete bpython`_ y si necesita

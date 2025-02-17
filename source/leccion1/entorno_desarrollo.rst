@@ -13,13 +13,13 @@ siguiente comando:
 
 .. code-block:: console
 
-    $ sudo apt update
+    $ sudo apt update && sudo apt upgrade -y
 
 Instalar dependencias mínimas necesarias, con el siguiente comando:
 
 .. code-block:: console
 
-    $ sudo apt install python3-dev python3-pip python3-virtualenv
+    $ sudo apt install -y python3-dev python3-pip python3-virtualenv
 
 
 Entornos virtuales Python
@@ -65,7 +65,8 @@ Para gestionar paquetes Python dentro de un entorno virtual creado, con el sigui
 
     $ pip3 install cookiecutter
 
-El paquete `cookiecutter <https://cookiecutter.readthedocs.io/en/latest/>`_ se instalo previamente puede usarlo vía script de linea de comando, con el siguiente:
+El paquete `cookiecutter <https://cookiecutter.readthedocs.io/en/latest/>`_ se instalo
+previamente puede usarlo vía script de línea de comando, con el siguiente:
 
 .. code-block:: console
 
@@ -77,6 +78,9 @@ comando con el parámetro ``--timeout`` habilitado para el tiempo de espera:
 
 .. code-block:: console
 
+    $ virtualenv --python=/usr/bin/python3 venv
+    $ source ./venv/bin/activate
+    $ pip3 install -U pip
     $ pip3 install cookiecutter --timeout 120
 
 También puede gestionar una lista de instalación de paquetes y sus versiones para indicar

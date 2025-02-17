@@ -21,8 +21,8 @@ Explicación
 
 - ``valores``, valor(es) de las opciones del comando que va a ejecutar.
 
-- ``meta-caracter``, carácter usado para procesar flujo de información de la
-  salida y entrada de datos entre comandos a ejecutar.
+- ``meta-caracter``, `carácter <https://linux.ciberaula.com/articulo/Curso_comandos_en_Linux_II/>`_
+  usado para procesar flujo de información de la salida y entrada de datos entre comandos a ejecutar.
 
 - ``otros-comando``, otro comando que recibe la entrada de datos desde otra
   ejecución.
@@ -77,7 +77,7 @@ A continuación una tabla de ejemplo de comando detallado:
 
 .. |pip_conf| replace:: ``'[global]\ndownload_cache = ~/.cache/pip\n'``
 
-Así de esta forma entiende de forma practica la ejecución y composición de
+Así de esta forma entiende estos conceptos con prácticas la ejecución y composición de
 comando en GNU/Linux.
 
 
