@@ -1,7 +1,8 @@
-import cgi
+import urllib.parse
+import html
 import os
 import sys
-import time
+from pathlib import Path
 
 try:
     from http.server import BaseHTTPRequestHandler, HTTPServer
@@ -21,81 +22,80 @@ class MyHTTPRequestHandler(BaseHTTPRequestHandler):
     """Create custom HTTPRequestHandler class"""
 
     def _set_headers(self):
-        """set HTTP headers"""
+        """Set HTTP headers"""
 
         # send code 200 response
         self.send_response(200)
         # send header first
-        self.send_header("Content-type", "text/html")
-        self.send_header("Last-Modified", self.date_time_string(time.time()))
+        self.send_header("Content-type", "text/html; charset=utf-8")
+        self.send_header("X-Content-Type-Options", "nosniff")
+        self.send_header("X-Frame-Options", "DENY")
+        self.send_header("Content-Security-Policy", "default-src 'self'")
+        self.send_header("X-XSS-Protection", "1; mode=block")
         # send file content to client
         self.end_headers()
 
-    def do_HEAD(self):
-        """do the HTTP HEAD"""
-
-        # set HTTP headers
-        self._set_headers()
-
     def do_GET(self):
-        """handle GET command"""
+        """Handle GET command"""
 
-        rootdir = os.path.dirname(__file__)  # file location
+        ROOT_DIR = Path(os.path.dirname(__file__))  # file location
         try:
             if self.path.endswith(".html"):
-                f = open(rootdir + self.path)  # open requested file
-                # set headers
-                self._set_headers()
-                # send file content to client
-                self.wfile.write(bytes(f.read(), "utf-8"))
+                # Sanitize and validate path
+                requested_path = ROOT_DIR / self.path.lstrip("/")
+                if not requested_path.is_file() or not str(requested_path).startswith(
+                    str(ROOT_DIR)
+                ):
+                    raise OSError("Invalid path")
+
+                with open(requested_path) as f:  # open requested file
+                    # set headers
+                    self._set_headers()
+                    # send file content to client
+                    self.wfile.write(bytes(f.read(), "utf-8"))
                 f.close()
                 return
-
         except OSError:
-            self.send_error(404, "file not found")
+            self.send_error(404, "File not found")
 
     def do_POST(self):
-        """handle POST command"""
+        """Handle POST command"""
+        try:
+            # Read the form data posted
+            content_length = int(self.headers.get("Content-Length", 0))
+            if content_length > 1048576:  # Limit to 1MB
+                raise ValueError("Content too large")
 
-        # set HTTP headers
-        self._set_headers()
+            post_data = self.rfile.read(content_length)
+            form = urllib.parse.parse_qs(post_data.decode("utf-8"))
 
-        # Create instance of FieldStorage
-        # for parse the form data posted
-        form = cgi.FieldStorage(
-            fp=self.rfile,
-            headers=self.headers,
-            environ={
-                "REQUEST_METHOD": "POST",
-                "CONTENT_TYPE": self.headers["Content-Type"],
-            },
-        )
+            # Get data from fields
+            message = form.get("message", [""])[0] or "Default"
 
-        # Begin the response
-        self._set_headers()
+            # Sanitize user input
+            message = html.escape(message)
 
-        # Get data from fields
-        message = form.getvalue("message")
-
-        html_response = """<!DOCTYPE html>
+            # HTML template response
+            html_response = f"""<!DOCTYPE html>
 <html>
   <body>
     <h1>POST verb demo</h1>
-    <p>The message is '%s'.</p>
+    <p>The message is '{message}'.</p>
     <br />
     <p>This is a POST verb!</p>
   </body>
-</html>
-        """ % (
-            message
-        )
-        self.wfile.write(bytes(html_response, "utf-8"))
-        # b"abcde".decode("utf-8")
-        # html_response.decode("utf-8")
-        # self.wfile.write(bytes(html_response, "utf-8").decode("utf-8"))
+</html>\n"""
+
+            # set HTTP headers
+            self._set_headers()
+            # Write the response
+            self.wfile.write(bytes(html_response, "utf-8"))
+        except Exception as e:
+            self.send_error(400, "Bad Request")
 
 
 def run():
+    server = None
     try:
         print("HTTP Server is starting...")
         server_address = (HOST_NAME, int(PORT_NUMBER))
@@ -105,14 +105,13 @@ def run():
         )
         server.serve_forever()
     except KeyboardInterrupt:
-        print(" o <Ctrl-C> entered, stopping web server....")
-        server.socket.close()
+        print(" o <Ctrl-C> entered, stopping HTTP Server...")
+        if server:
+            server.socket.close()
 
 
 if __name__ == "__main__":
     """Starting Python program"""
     run()
-elif __name__ == "httpserver":
-    initialize()
 else:
-    print("This program is bad configured, you should be call to the module....")
+    print("This program is bad configured, you should be call to the module...")

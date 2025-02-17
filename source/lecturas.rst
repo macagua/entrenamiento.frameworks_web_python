@@ -170,15 +170,28 @@ Introducción a HTTP
 Cliente y servidor HTTP
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-- `http.server — HTTP servers — Python 3.7 documentation <https://docs.python.org/3.7/library/http.server.html>`_.
+- `http.server — HTTP servers — Python 3.11 documentation <https://docs.python.org/3.11/library/http.server.html>`_.
 
 - `Python: Let’s Create a Simple HTTP Server (Tutorial) <https://www.afternerd.com/blog/python-http-server/>`_.
+
+
+Librería requests
+^^^^^^^^^^^^^^^^^
+
+- `requests <https://requests.readthedocs.io/en/latest/>`_, Requests: HTTP para Humanos.
 
 
 Cliente httpie
 ^^^^^^^^^^^^^^
 
-- `cURL <https://curl.se/>`_, utilidad de línea de comandos y libreria para transferir datos con URL.
+- `cURL <https://curl.se/>`_, utilidad de línea de comandos y librería para transferir datos con URL.
+
+- `Qué es el comando cURL y cómo usarlo <https://blog.hubspot.es/website/comando-curl>`_.
+
+
+Cliente httpie
+^^^^^^^^^^^^^^
+
 
 - `HTTPie - línea de comandos cliente HTTP <https://httpie.io/>`_.
 
@@ -186,11 +199,7 @@ Cliente httpie
 
 - `curl vs HTTPie <https://daniel.haxx.se/docs/curl-vs-httpie.html>`_.
 
-
-Librería requests
-^^^^^^^^^^^^^^^^^
-
-- `requests <https://requests.readthedocs.io/en/latest/>`_, Requests: HTTP para Humanos.
+- `HTTPie, un cliente HTTP de línea de comandos disponible para Ubuntu <https://ubunlog.com/httpie-un-cliente-http-de-linea-de-comandos-disponible-para-ubuntu/>`_
 
 
 .. _lecturas_extras_leccion4:

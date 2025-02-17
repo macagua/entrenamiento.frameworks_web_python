@@ -3,24 +3,23 @@
 Cliente HTTP
 ============
 
+Python le permite escribir y ejecutar vía script Python de un cliente HTTP de forma local.
+
 Ejecución en script
 -------------------
 
-Python le permite escribir y ejecutar vía script Python de un servidor HTTP de forma local.
-
-
-Usted puede escribir y ejecutar un simple cliente HTTP desde linea de comando,
-con el siguiente codigo fuente:
+Usted puede escribir y ejecutar un simple cliente HTTP usando la librería :ref:`http.client <python_http_client>`
+desde línea de comando, con el siguiente código fuente:
 
 .. literalinclude:: ../../recursos/leccion3/httpclient.py
    :language: python
-   :lines: 1-51
+   :lines: 1-55
 
-Guarde el archivo :file:`httpclient.py` y ejecutandolo con el siguiente comando:
+Guarde el archivo :file:`httpclient.py` y ejecutándolo con el siguiente comando:
 
 .. code-block:: console
 
-  $ python httpclient.py
+  $ python3 httpclient.py
 
 
 ----
@@ -34,7 +33,7 @@ Guarde el archivo :file:`httpclient.py` y ejecutandolo con el siguiente comando:
 
 .. tip::
     Para ejecutar el código :file:`httpclient.py`, abra una consola de comando,
-    acceda al directorio donde se encuentra ambos programas:
+    acceda al directorio donde se encuentra el programa:
 
     ::
 
@@ -50,6 +49,22 @@ Guarde el archivo :file:`httpclient.py` y ejecutandolo con el siguiente comando:
 
 ----
 
+.. _python_http_external_clients:
+
+Clientes externos
+------------------
+
+Existen varias herramientas clientes del :ref:`protocolo HTTP <python_introduccion_http>`:
+
+- :ref:`requests <python_http_client_requests>`.
+
+- :ref:`cURL <python_http_client_curl>`.
+
+- :ref:`httpie <python_http_client_httpie>`.
+
+
+----
+
 
 .. seealso::
 
@@ -59,5 +74,6 @@ Guarde el archivo :file:`httpclient.py` y ejecutandolo con el siguiente comando:
 
 .. raw:: html
    :file: ../_templates/partials/soporte_profesional.html
+
 
 .. disqus::

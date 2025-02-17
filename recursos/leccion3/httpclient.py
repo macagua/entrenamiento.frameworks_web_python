@@ -5,6 +5,7 @@ import sys
 def run(http_server):
     print("HTTP Client is starting...")
 
+    connection = None
     try:
         # create a connection
         connection = http.client.HTTPConnection(http_server, timeout=10)
@@ -29,11 +30,12 @@ def run(http_server):
             print(response.status, response.reason)
             data_received = response.read()
             print(data_received)
-
-        connection.close()
+        if connection:
+            connection.close()
     except KeyboardInterrupt:
         print(" o <Ctrl-C> entered, stopping HTTP Client....")
-        connection.close()
+        if connection:
+            connection.close()
 
 
 if __name__ == "__main__":
@@ -46,11 +48,8 @@ if __name__ == "__main__":
         print(f"Usage: python3 {sys.argv[0]} IP:PORT")
         sys.exit(2)
     else:
-        # get http server ip
+        # get http server ip, for example 127.0.0.1:8085
         http_server = sys.argv[1]
     run(http_server)
-
-elif __name__ == "httpclient":
-    initialize()
 else:
     print("This program is bad configured, you should be call to the module....")
