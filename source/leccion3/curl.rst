@@ -62,7 +62,7 @@ Es una aplicación de línea de comando, por lo que puedo instalarla con el sigu
 .. code-block:: console
 
     $ sudo apt update && sudo apt upgrade -y
-    $ sudo apt install curl
+    $ sudo apt install -y curl
 
 Una vez instalado puedes ejecutar con el siguiente comando:
 

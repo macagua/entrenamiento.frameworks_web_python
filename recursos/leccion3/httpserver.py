@@ -95,6 +95,7 @@ class MyHTTPRequestHandler(BaseHTTPRequestHandler):
 
 
 def run():
+    """Run HTTP Server"""
     server = None
     try:
         print("HTTP Server is starting...")
