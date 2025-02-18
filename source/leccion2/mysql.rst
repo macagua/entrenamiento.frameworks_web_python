@@ -31,14 +31,13 @@ a continuación se presentan el correspondiente comando de tu sistema operativo:
 
       .. code-block:: console
 
-          $ pip install PyMySQL
+          $ pip3 install PyMySQL
 
    .. group-tab:: Windows
 
       .. code-block:: console
 
-          > pip install PyMySQL
-
+          > pip3 install PyMySQL
 
 Puede probar si la instalación se realizo correctamente, ejecutando
 el siguiente comando correspondiente a tu sistema operativo:
@@ -49,17 +48,62 @@ el siguiente comando correspondiente a tu sistema operativo:
 
       .. code-block:: console
 
-          $ python -c "import pymysql ; print(pymysql.__version__)"
+          $ python3 -c "import pymysql ; print(pymysql.__version__)"
 
    .. group-tab:: Windows
 
       .. code-block:: console
 
-          > python -c "import pymysql ; print(pymysql.__version__)"
+          > python3 -c "import pymysql ; print(pymysql.__version__)"
 
 
-Si muestra el numero de la versión instalada de ``PyMySQL``, tiene
-correctamente instalada la paquete. Con esto, ya tiene todo listo para continuar.
+Si muestra el numero de la versión instalada de ``PyMySQL``, tiene correctamente instalada
+la paquete. Con esto, ya tiene todo listo para continuar.
+
+Servidor MySQL
+'''''''''''''''
+
+Para instalar el servidor ``MySQL`` existen varias formas de realizarlo, para en este caso
+se realizara con la tecnología `Docker`_. Esto significa que debe instalar en tu sistema operativo:
+
+- `Docker Engine`_.
+
+- `Docker Desktop`_.
+
+Luego de instalar las herramientas necesarias, debe ejecutar el siguiente comando correspondiente:
+
+.. code-block:: console
+
+    docker run -d --name mysql -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=sistema -p 3306:3306 -v db_data:/var/lib/mysql --restart always mysql:latest
+
+
+De esta forma ha instalado y ejecutado el servidor ``MySQL`` necesario para las próximas script Python
+a ejecutar. Con esto, ya tiene todo listo para continuar.
+
+Estructura de archivos
+''''''''''''''''''''''
+
+Para crear la estructura de archivos del proyecto ``MySQL`` debe ejecutar los siguientes comandos:
+
+Crear el directorio ``~/proyectos/mysql/crud`` con el siguiente comando:
+
+.. code-block:: console
+
+    mkdir -p ~/proyectos/mysql/crud && cd $_
+
+
+El comando anterior crea la siguiente estructura de directorios:
+
+::
+
+    proyectos/
+    └── mysql/
+        └── crud/
+
+Si tiene la estructura de archivo previa, entonces puede continuar con la siguiente sección.
+
+
+----
 
 
 .. _python_mysql_conn_strs:
@@ -105,21 +149,24 @@ para una base de datos ``MySQL``:
 
 El ejemplo anterior se describe a continuación:
 
-    - En la linea 1, se importa la librería ``pymysql``.
+    - En la línea 1, se importa la librería ``pymysql``.
 
-    - En la linea 3, se define en la constante ``USER``, del usuario de conexión a la base de datos.
+    - En la línea 3, se define en la constante ``USER``, del usuario de conexión a la base de datos.
 
-    - En la linea 4, se define en la constante ``PASSW``, de la contraseña del usuario de conexión a la base de datos.
+    - En la línea 4, se define en la constante ``PASSW``, de la contraseña del usuario de conexión a la base de datos.
 
-    - En la linea 5, se define en la constante ``HOST``, la IP o dirección DNS de conexión al servidor de la base de datos.
+    - En la línea 5, se define en la constante ``HOST``, la IP o dirección DNS de conexión al servidor de la base de datos.
 
-    - En la linea 6, se define en la constante ``PORT``, el puerto de conexión al servidor de la base de datos.
+    - En la línea 6, se define en la constante ``PORT``, el puerto de conexión al servidor de la base de datos.
 
-    - En la linea 7, se define en la constante ``DB``, el nombre de la base de datos a cual conectar.
+    - En la línea 7, se define en la constante ``DB``, el nombre de la base de datos a cual conectar.
 
-    - En la linea 8, se define en el método ``connect``, el cual establece la conexión a la base de datos.
+    - En la línea 8, se define en el método ``connect``, el cual establece la conexión a la base de datos.
 
 De esta forma se crea una cadena de conexión para ``MySQL`` para ser usada por el método ``connect``.
+
+
+----
 
 
 Insertar registros
@@ -127,11 +174,173 @@ Insertar registros
 
 Si requiere insertar registro en una tabla, a continuación tiene un ejemplo:
 
+.. literalinclude:: ../../recursos/leccion2/mysql/crud/mysql_record_insert.py
+    :language: python
+    :linenos:
+    :lines: 1-85
+
+
+.. important::
+    Usted puede descargar el código usado en esta sección haciendo clic en el
+    siguiente enlace: :download:`mysql_record_insert.py <../../recursos/leccion2/mysql/crud/mysql_record_insert.py>`.
+
+
+.. tip::
+    Para ejecutar el código :file:`mysql_record_insert.py`
+    abra una consola de comando, acceda al directorio donde se encuentra el programa:
+
+    ::
+
+        proyectos/
+        └── mysql/
+            └── crud/
+                └── mysql_record_insert.py
+
+    Si tiene la estructura de archivo previa, entonces ejecute el siguiente comando:
+
+    .. code-block:: console
+
+        $ python3 mysql_record_insert.py
+
+El anterior código al ejecutar debe mostrar el siguiente mensaje:
+
+.. code-block:: console
+
+    INFO:root:¡Conectado a la base de datos 'sistema'!
+
+    INFO:root:¡Fueron insertado(s) 3 registro(s) correctamente en la tabla!
+
+    INFO:root:¡Fueron insertado(s) 1 registro(s) correctamente en la tabla!
+
+    INFO:root:¡La conexión MySQL a la base de datos 'sistema' fue cerrada!
+
+
+Puede probar si la base de datos ``sistema`` fue creada correctamente, ejecutando
+el siguiente comando correspondiente a tu sistema operativo:
+
+.. tabs::
+
+   .. group-tab:: Linux
+
+      .. code-block:: console
+
+          $ docker exec -i mysql mysql -u root -proot -e "SHOW DATABASES;" mysql
+
+   .. group-tab:: Windows
+
+      .. code-block:: console
+
+          > docker exec -i mysql mysql -u root -proot -e "SHOW DATABASES;" mysql
+
+
+Puede probar si el usuario ``root`` de la base de datos ``sistema`` fue creada correctamente, ejecutando
+el siguiente comando correspondiente a tu sistema operativo:
+
+.. tabs::
+
+   .. group-tab:: Linux
+
+      .. code-block:: console
+
+          $ docker exec -i mysql mysql -u root -proot -e "SELECT user FROM mysql.user;" mysql
+
+   .. group-tab:: Windows
+
+      .. code-block:: console
+
+          > docker exec -i mysql mysql -u root -proot -e "SELECT user FROM mysql.user;" mysql
+
+Puede probar si la tabla ``clientes`` en la base de datos ``sistema`` fue creada correctamente, ademas
+si sus registros fueron cargados en la tabla, ejecutando el siguiente comando correspondiente a tu sistema operativo:
+
+.. tabs::
+
+   .. group-tab:: Linux
+
+      .. code-block:: console
+
+          $ docker exec -i mysql mysql -u root -proot -e "USE sistema; SHOW TABLES; SELECT * FROM clientes;" mysql
+
+   .. group-tab:: Windows
+
+      .. code-block:: console
+
+          > docker exec -i mysql mysql -u root -proot -e "USE sistema; SHOW TABLES; SELECT * FROM clientes;" mysql
+
+
+De esta forma puede insertar registro en una tabla en una base de datos ``MySQL``.
+
 
 Consultar registros
 -------------------
 
 Si requiere consultar registros de tabla, a continuación tiene un ejemplo:
+
+.. literalinclude:: ../../recursos/leccion2/mysql/crud/mysql_record_select.py
+    :language: python
+    :linenos:
+    :lines: 1-58
+
+
+.. important::
+    Usted puede descargar el código usado en esta sección haciendo clic en el
+    siguiente enlace: :download:`mysql_record_select.py <../../recursos/leccion2/mysql/crud/mysql_record_select.py>`.
+
+
+.. tip::
+    Para ejecutar el código :file:`mysql_record_select.py`
+    abra una consola de comando, acceda al directorio donde se encuentra el programa:
+
+    ::
+
+        proyectos/
+        └── mysql/
+            └── crud/
+                └── mysql_record_select.py
+
+    Si tiene la estructura de archivo previa, entonces ejecute el siguiente comando:
+
+    .. code-block:: console
+
+        $ python3 mysql_record_select.py
+
+El anterior código al ejecutar debe mostrar el siguiente mensaje:
+
+.. code-block:: console
+
+    INFO:root:¡Conectado a la base de datos 'sistema'!
+
+    Total de filas son: 4
+
+    Mostrar cada fila:
+
+            Id: 1
+            Nombre: Leonardo Caballero
+            Apellido: 5001
+            Código postal: +58-412-4734567
+
+            Id: 2
+            Nombre: Ana Poleo
+            Apellido: 6302
+            Código postal: +58-426-5831297
+
+            Id: 3
+            Nombre: Manuel Matos
+            Apellido: 4001
+            Código postal: +58-414-2360943
+
+            Id: 4
+            Nombre: Liliana Andradez
+            Apellido: 4001
+            Código postal: +58-414-6782473
+
+    INFO:root:¡La conexión MySQL a la base de datos 'sistema' fue cerrada!
+
+
+De esta forma puede consultar registros en una tabla dentro una base de datos ``MySQL``.
+
+
+----
 
 
 Actualizar registros
@@ -139,19 +348,369 @@ Actualizar registros
 
 Si requiere actualizar registro de tabla, a continuación tiene un ejemplo:
 
+.. literalinclude:: ../../recursos/leccion2/mysql/crud/mysql_record_update.py
+    :language: python
+    :linenos:
+    :lines: 1-60
+
+
+.. important::
+    Usted puede descargar el código usado en esta sección haciendo clic en el
+    siguiente enlace: :download:`mysql_record_update.py <../../recursos/leccion2/mysql/crud/mysql_record_update.py>`.
+
+
+.. tip::
+    Para ejecutar el código :file:`mysql_record_update.py`
+    abra una consola de comando, acceda al directorio donde se encuentra el programa:
+
+    ::
+
+        proyectos/
+        └── mysql/
+            └── crud/
+                └── mysql_record_update.py
+
+    Si tiene la estructura de archivo previa, entonces ejecute el siguiente comando:
+
+    .. code-block:: console
+
+        $ python3 mysql_record_update.py
+
+El anterior código al ejecutar debe mostrar el siguiente mensaje:
+
+.. code-block:: console
+
+    INFO:root:¡Conectado a la base de datos 'sistema'!
+
+    INFO:root:¡Fueron actualizado(s) 2 registro(s) correctamente en la tabla!
+
+    INFO:root:¡La conexión MySQL a la base de datos 'sistema' fue cerrada!
+
+
+De esta forma puede actualizar registros en una tabla dentro una base de datos ``MySQL``.
+
+
+----
+
 
 Eliminar registros
 ------------------
 
 Si requiere eliminar registro de tabla, a continuación tiene un ejemplo:
 
-.. todo::
-    TODO Terminar de escribir esta sección.
+.. literalinclude:: ../../recursos/leccion2/mysql/crud/mysql_record_delete.py
+    :language: python
+    :linenos:
+    :lines: 1-51
+
+
+.. important::
+    Usted puede descargar el código usado en esta sección haciendo clic en el
+    siguiente enlace: :download:`mysql_record_delete.py <../../recursos/leccion2/mysql/crud/mysql_record_delete.py>`.
+
+
+.. tip::
+    Para ejecutar el código :file:`mysql_record_delete.py`
+    abra una consola de comando, acceda al directorio donde se encuentra el programa:
+
+    ::
+
+        proyectos/
+        └── mysql/
+            └── crud/
+                └── mysql_record_delete.py
+
+    Si tiene la estructura de archivo previa, entonces ejecute el siguiente comando:
+
+    .. code-block:: console
+
+        $ python3 mysql_record_delete.py
+
+El anterior código al ejecutar debe mostrar el siguiente mensaje:
+
+.. code-block:: console
+
+    INFO:root:¡Conectado a la base de datos 'sistema'!
+
+    INFO:root:¡Registro eliminado correctamente!
+
+    INFO:root:¡La conexión MySQL a la base de datos 'sistema' fue cerrada!
+
 
 Asi de esta forma puede ingresar, consultar, actualizar y eliminar
 registro en una tabla en una base de datos ``MySQL``.
 
+
 ----
+
+
+.. _python_mysql_scaffolding:
+
+Práctica - Caso real
+--------------------
+
+A continuación se presenta una práctica más real de implementar el uso de proyectos
+con ``MySQL``, a continuación la estructura de proyecto llamado ``MySQL``:
+
+
+A continuación se presenta y explica el uso de cada archivo para este proyecto:
+
+*Archivo .env.example*
+
+Archivo plantilla `dotenv`_, es un archivo de *configuración de variables de entorno*
+para el proyecto. Ademas, es usado para  `establecer variables de entorno`_ con
+``Docker``, `Docker Compose`_ y del paquete adicional `python-dotenv`_.
+
+.. literalinclude:: ../../recursos/leccion2/mysql/sistema/.env.example
+    :language: text
+    :linenos:
+    :lines: 1-8
+
+*Archivo requirements.txt*
+
+Archivo de `requirements.txt`_ de la herramienta de gestión de paquetes `pip`_.
+
+.. literalinclude:: ../../recursos/leccion2/mysql/sistema/requirements.txt
+    :language: python
+    :linenos:
+    :lines: 1-4
+
+*Archivo settings.py*
+
+Modulo de configuraciones del programa.
+
+.. literalinclude:: ../../recursos/leccion2/mysql/sistema/settings.py
+    :language: python
+    :linenos:
+    :lines: 1-54
+
+*Archivo main.py*
+
+Modulo de principal del programa.
+
+.. literalinclude:: ../../recursos/leccion2/mysql/sistema/main.py
+    :language: python
+    :linenos:
+    :lines: 1-244
+
+*Archivo docker-compose.yml*
+
+Para instalar el servidor ``MySQL`` existen varias formas de realizarlo, para en este caso
+se realizara con la tecnología `Docker`_. Esto significa que debe instalar en tu sistema operativo:
+
+- `Docker Compose`_.
+
+El primer paso para configurar un entorno de desarrollo con ``Docker Compose`` es crear el archivo
+de configuración ``docker-compose.yml``. Este archivo define los servicios, contenedores, redes y
+volúmenes necesarios para tu aplicación.
+
+A continuación se presenta el archivo ``docker-compose.yml`` con la configuración necesaria:
+
+.. literalinclude:: ../../recursos/leccion2/mysql/sistema/docker-compose.yml
+    :language: yaml
+    :linenos:
+    :lines: 1-25
+
+
+----
+
+
+Teniendo creada la anterior estructura de proyecto, vuelva a ejecutar ahora el modulo con
+el siguiente comando, el cual a continuación se presentan el correspondiente comando de tu
+sistema operativo:
+
+.. tabs::
+
+   .. group-tab:: Linux
+
+      Antes de ejecutar debes instalar sus dependencias, con el siguiente comando:
+
+      .. code-block:: console
+
+          $ pip3 install -r requirements.txt
+
+      Ademas debe crear y editar el archivo ``.env``, con el siguiente comando:
+
+      .. code-block:: console
+
+          $ cp .env.example .env
+          $ nano .env
+
+      .. tip::
+        El archivo ``.env`` se definen las configuraciones de conexión a la base de datos,
+        puede modificarlo cambiar valores de la conexión.
+
+      Debe crear y editar el archivo ``docker-compose.yml``, con el siguiente comando:
+
+      .. tip::
+        Para ejecutar el comando del instalador del servidor ``MySQL`` con `Docker`_ debe crear
+        un archivo llamado ``docker-compose.yml`` en el directorio ``sistema/`` con el contenido
+        anterior de dicho archivo, ejecutando el siguiente comando:
+
+      .. code-block:: console
+
+          $ nano docker-compose.yml
+
+      .. tip::
+        Si tiene creado el archivo con el contenido, entonces puede ejecutar la instalación un
+        servidor ``MySQL``, ejecutando el siguiente comando:
+
+      .. code-block:: console
+
+          $ docker-compose up -d
+
+      De esta forma crea el contenedor Docker llamado ``mysql``, necesario para ejecutar el script Python.
+
+      .. tip::
+        Para ejecutar el código fuente de esta práctica debe invocar al modulo :file:`main.py`,
+        abra una consola de comando, acceda al directorio donde se encuentra la estructura previa
+        y ejecute el siguiente comando:
+
+      .. code-block:: console
+
+          $ python3 main.py
+
+   .. group-tab:: Windows
+
+      Antes de ejecutar debes instalar sus dependencias, con el siguiente comando:
+
+      .. code-block:: console
+
+          > pip3 install -r requirements.txt
+
+      Ademas debe crear y editar el archivo ``.env``, con el siguiente comando:
+
+      .. code-block:: console
+
+          > copy .env.example .env
+          > notepad.exe .env &
+
+      .. tip::
+        El archivo ``.env`` se definen las configuraciones de conexión a la base de datos,
+        puede modificarlo cambiar valores de la conexión.
+
+      Debe crear y editar el archivo ``docker-compose.yml``, con el siguiente comando:
+
+      .. tip::
+        Para ejecutar el comando del instalador del servidor ``MySQL`` con `Docker`_ debe crear
+        un archivo llamado ``docker-compose.yml`` en el directorio ``sistema/`` con el contenido
+        anterior, ejecutando el siguiente comando:
+
+      .. code-block:: console
+
+          > notepad.exe docker-compose.yml
+
+      .. tip::
+        Si tiene creado el archivo con el contenido, entonces puede ejecutar la instalación un
+        servidor ``MySQL``, ejecutando el siguiente comando:
+
+      .. code-block:: console
+
+          > docker-compose up -d
+
+      De esta forma crea el contenedor Docker llamado ``mysql``, necesario para ejecutar el script Python.
+
+      .. tip::
+        Para ejecutar el código fuente de esta práctica debe invocar al modulo :file:`main.py`,
+        abra una consola de comando, acceda al directorio donde se encuentra la estructura previa
+        y ejecute el siguiente comando:
+
+      .. code-block:: console
+
+          > python3 main.py
+
+
+El anterior código al ejecutar debe mostrar el siguiente mensaje:
+
+.. code-block:: console
+
+    INFO:root:¡Conexión a la base de datos 'sistema' fue exitosa!
+
+    INFO:root:¡Fueron creado(s) 0 tabla(s) correctamente en la base de datos!
+
+    INFO:root:¡Fueron insertado(s) 3 registro(s) correctamente en la tabla!
+
+    INFO:root:¡Fueron insertado(s) 1 registro(s) correctamente en la tabla!
+
+    Total de filas son: 4
+
+    Mostrar cada fila:
+
+            Id: 1
+            Nombre: Leonardo Caballero
+            Código postal: 5001
+            Teléfono: +58-412-4734567
+
+            Id: 2
+            Nombre: Ana Poleo
+            Código postal: 6302
+            Teléfono: +58-426-5831297
+
+            Id: 3
+            Nombre: Manuel Matos
+            Código postal: 4001
+            Teléfono: +58-414-2360943
+
+            Id: 4
+            Nombre: Liliana Andradez
+            Código postal: 4001
+            Teléfono: +58-414-6782473
+
+    INFO:root:¡Fueron actualizado(s) 2 registro(s) correctamente en la tabla!
+
+    INFO:root:¡Registro eliminado correctamente!
+
+
+Asi de esta forma puede ingresar, consultar, actualizar y eliminar registro en una
+tabla usando ``MySQL``.
+
+
+.. important::
+    Usted puede descargar el código usado en esta sección haciendo clic en los
+    siguientes enlaces:
+
+    - :download:`docker-compose.yml <../../recursos/leccion2/mysql/sistema/docker-compose.yml>`.
+
+    - :download:`__init__.py <../../recursos/leccion2/mysql/sistema/__init__.py>`.
+
+    - :download:`.env.example <../../recursos/leccion2/mysql/sistema/.env.example>`.
+
+    - :download:`main.py <../../recursos/leccion2/mysql/sistema/main.py>`.
+
+    - :download:`requirements.txt <../../recursos/leccion2/mysql/sistema/requirements.txt>`.
+
+    - :download:`settings.py <../../recursos/leccion2/mysql/sistema/settings.py>`.
+
+
+.. tip::
+    Para ejecutar el código del proyecto llamado ``mysql`` abra una consola de comando,
+    acceda al directorio donde se encuentra el programa:
+
+    ::
+
+        proyectos/
+        └── mysql/
+            └── sistema/
+                ├── docker-compose.yml
+                ├── __init__.py
+                ├── .env.example
+                ├── main.py
+                ├── requirements.txt
+                └── settings.py
+
+    Si tiene la estructura de archivo previa, entonces ejecute el siguiente comando:
+
+    .. code-block:: console
+
+        $ python3 main.py
+
+
+Asi de esta forma puede replicar una practica real de un proyecto para realizar operaciones
+en una base de datos ``MySQL``, aplicando buenas prácticas de código funcional.
+
+
+----
+
 
 .. seealso::
 
@@ -161,3 +720,13 @@ registro en una tabla en una base de datos ``MySQL``.
 
 .. _`MySQL`: https://es.wikipedia.org/wiki/MySQL
 .. _`PyMySQL`: https://pymysql.readthedocs.io/en/latest/
+.. _`dotenv`: https://dev.to/emma_donery/python-dotenv-keep-your-secrets-safe-4ocn
+.. _`establecer variables de entorno`: https://docs.docker.com/compose/how-tos/environment-variables/set-environment-variables/
+.. _`Docker`: https://docker.com/
+.. _`Docker Engine`: https://docs.docker.com/engine/
+.. _`Docker Desktop`: https://docs.docker.com/desktop/
+.. _`Docker Compose`: https://docs.docker.com/compose/
+.. _`entorno virtual`: https://plone-spanish-docs.readthedocs.io/es/latest/python/creacion_entornos_virtuales.html
+.. _`python-dotenv`: https://pypi.org/project/python-dotenv/
+.. _`requirements.txt`: https://pip.pypa.io/en/stable/reference/requirements-file-format/
+.. _`pip`: https://pip.pypa.io/en/stable/

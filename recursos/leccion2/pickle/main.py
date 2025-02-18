@@ -1,8 +1,9 @@
-"""Modulo de Main"""
+"""Programa que simula un inventario de productos"""
 
 import os
 from pathlib import Path
 import pickle
+
 
 class Producto:
     """Clase Producto"""
@@ -20,12 +21,12 @@ class Producto:
     def __str__(self):
         """Método de representación de informal del objeto,
         usado para crear la salida que se le mostrará al usuario"""
-        return "Id: {0}\nDescripción: {1}".format(self.id, self.descripcion)
+        return f"Id: {self.id}\nDescripción: {self.descripcion}"
 
     def __repr__(self):
         """Método de representación de formal del objeto,
         usado para depuración y desarrollo"""
-        return f'{self.__class__.__name__}:({repr(self.id)}, {repr(self.descripcion)})'
+        return f"{self.__class__.__name__}:({repr(self.id)}, {repr(self.descripcion)})"
 
 
 class Inventario:
@@ -33,7 +34,9 @@ class Inventario:
 
     def __init__(self):
         """Método constructor de clase de Inventario"""
-        self._DB_DIR = os.path.dirname(os.path.abspath(__file__)) + os.sep + 'filestorage/'
+        self._DB_DIR = (
+            os.path.dirname(os.path.abspath(__file__)) + os.sep + "filestorage/"
+        )
         self.productos = []
         self.archivo = self._DB_DIR + "inventario.pkl"
         self.leer_datos()
@@ -41,34 +44,31 @@ class Inventario:
     def __str__(self):
         """Método de representación de informal del objeto,
         usado para crear la salida que se le mostrará al usuario"""
-        return "Ruta BD: {0}".format(self.archivo)
+        return f"Ruta BD: {self.archivo}"
 
     def __repr__(self):
         """Método de representación de formal del objeto,
         usado para depuración y desarrollo"""
-        return f'{self.__class__.__name__}:({repr(self.archivo)})'
-
+        return f"{self.__class__.__name__}:({repr(self.archivo)})"
 
     def leer_datos(self):
         """Leer el archivo de almacenamiento"""
         try:
             Path(self._DB_DIR).mkdir(parents=True, exist_ok=True)
-            with open(self.archivo, 'rb') as bd:
+            with open(self.archivo, "rb") as bd:
                 self.productos = pickle.load(bd)
-        except IOError:
+        except OSError:
             print("El archivo no existe en la ubicación")
-
 
     def guardar_datos(self):
         """Guarda los datos"""
         try:
             if os.path.isfile(self.archivo):
                 os.remove(self.archivo)
-            with open(self.archivo, 'wb') as bd:
+            with open(self.archivo, "wb") as bd:
                 pickle.dump(self.productos, bd)
-        except IOError:
+        except OSError:
             print("El archivo no existe en la ubicación")
-
 
     def existe(self, codigo):
         """Valida si existe el producto
@@ -82,7 +82,6 @@ class Inventario:
                     return True
         return False
 
-
     def buscar(self, codigo):
         """Buscar el producto en el Inventario
 
@@ -94,7 +93,6 @@ class Inventario:
                 return posicion, producto
         return 0, None
 
-
     def agregar_registro(self, codigo):
         """Agregar el producto
 
@@ -105,7 +103,6 @@ class Inventario:
         producto = Producto(codigo, descripcion)
         self.productos.append(producto)
         self.guardar_datos()
-
 
     def mostrar_registro(self, codigo):
         """Mostrar el producto
@@ -119,7 +116,6 @@ class Inventario:
         else:
             print("¡El producto no existe!")
         input("Presione ENTER para continuar")
-
 
     def actualizar_registro(self, codigo):
         """Actualizar el producto
@@ -139,7 +135,6 @@ class Inventario:
             print("¡El producto no existe!")
         input("Presione ENTER para continuar")
 
-
     def eliminar_registro(self, codigo):
         """Eliminar el producto
 
@@ -157,7 +152,6 @@ class Inventario:
         else:
             print("¡El producto no existe!")
         input("Presione ENTER para continuar")
-
 
     def menu_principal(self):
         """Menu principal del programa"""
@@ -198,10 +192,11 @@ class Inventario:
                     break
         except KeyboardInterrupt:
             import sys
+
             print()
             sys.exit()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     app = Inventario()
     app.menu_principal()
