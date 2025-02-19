@@ -1,9 +1,9 @@
-""" Modulo de modelos de SQLAlchemy """
+"""Módulo de modelos de SQLAlchemy"""
 
 from db import Base
 
 from sqlalchemy import Column, Date, Enum, ForeignKey, Integer, String
-from sqlalchemy.orm import declarative_base, relationship
+from sqlalchemy.orm import relationship
 
 
 class Estados(Base):
@@ -144,4 +144,4 @@ class Pedidos(Base):
         return f"Pedidos({self.producto} {self.fecha}, {self.status})"
 
     def __str__(self):
-        return self.producto + " " + self.fecha
+        return f"{self.producto} {self.fecha}"

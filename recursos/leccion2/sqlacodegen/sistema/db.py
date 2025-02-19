@@ -1,12 +1,11 @@
-""" Modulo de configuraciones del programa """
+"""Módulo de configuraciones del programa"""
 
 import os
 from dotenv import load_dotenv
 
 from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker, exc
+from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy import insert, select, update, delete
 
 load_dotenv()
 
@@ -17,7 +16,9 @@ USER = os.getenv("USER")
 PASSW = os.getenv("PASSW")
 HOST = os.getenv("HOST")
 PORT = os.getenv("PORT")
-DB = os.getenv("DB")
+DB = os.getenv("DB", "sistema.db")
+
+engine = None
 
 if ENGINE == "sqlite" and ENGINE is not None:
     if "DB_PATH" in globals() and "DB_FILE" in globals():
