@@ -67,7 +67,7 @@ con ``pickle`` para operaciones CRUD en un archivo de registros serializados:
 
 .. tip::
     Para ejecutar el código :file:`main.py`, abra una consola de comando,
-    acceda al directorio donde se encuentra ambos programas:
+    acceda al directorio donde se encuentra el programa:
 
     ::
 
@@ -79,7 +79,7 @@ con ``pickle`` para operaciones CRUD en un archivo de registros serializados:
 
     .. code-block:: console
 
-        $ python main.py
+        $ python3 main.py
 
 Asi de esta forma puede ingresar, consultar, actualizar y eliminar
 registro en un archivo serializado de objetos python ``pickle``.

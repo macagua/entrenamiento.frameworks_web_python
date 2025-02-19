@@ -297,7 +297,7 @@ añade el código que te muestro a continuación:
 .. literalinclude:: ../../recursos/leccion2/sqlalchemy/productos/models.py
     :language: python
     :linenos:
-    :lines: 1-32
+    :lines: 1-31
 
 Asi de esta forma tiene definido una clase modelo llamado ``Productos`` la cual mapea
 la tabla ``productos``.
@@ -608,7 +608,7 @@ Modulo de configuraciones del programa.
 .. literalinclude:: ../../recursos/leccion2/sqlalchemy/productos/db.py
     :language: python
     :linenos:
-    :lines: 1-21
+    :lines: 1-20
 
 *Archivo main.py*
 
@@ -626,7 +626,7 @@ Modulo de :ref:`modelos <python_sqlalchemy_modelos>` de :ref:`SQLAlchemy <python
 .. literalinclude:: ../../recursos/leccion2/sqlalchemy/productos/models.py
     :language: python
     :linenos:
-    :lines: 1-32
+    :lines: 1-31
 
 *Archivo productos.sqlite3*
 
@@ -641,7 +641,7 @@ Archivo de `requirements.txt`_ de la herramienta de gestión de paquetes `pip`_.
 .. literalinclude:: ../../recursos/leccion2/sqlalchemy/productos/requirements.txt
     :language: python
     :linenos:
-    :lines: 1-3
+    :lines: 1-2
 
 Teniendo creada la anterior estructura de proyecto, vuelva a ejecutar ahora el módulo con
 el siguiente comando, el cual a continuación se presentan el correspondiente comando de tu

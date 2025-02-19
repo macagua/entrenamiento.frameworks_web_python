@@ -38,7 +38,7 @@ def eliminar_registro():
         # Cerrar el cursor
         cursor.close()
     except pymysql.err.Error as error:
-        print("¡Fallo la eliminación de registro(s) en la tabla!", error)
+        logging.info(f"¡Fallo la eliminación de registro(s) en la tabla!: {error}")
     finally:
         if conexion:
             # Cerrar la conexión a la base de datos
