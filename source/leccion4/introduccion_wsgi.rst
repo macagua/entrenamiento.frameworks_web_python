@@ -50,7 +50,7 @@ Servidor WSGI
 Un servidor WSGI (lo que significa que cumple con el WSGI) solo
 recibe la solicitud del cliente, la pasa a la aplicación y luego
 envía la respuesta devuelta por la aplicación al cliente. No hace
-nada más. Todos los detalles explicitos deben ser suministrados
+nada más. Todos los detalles explícitos deben ser suministrados
 por la aplicación o middleware.
 
 No es necesario conocer la especificación WSGI para crear
@@ -67,7 +67,7 @@ en la industria como Apache con `mod_wsgi <https://modwsgi.readthedocs.io/en/mas
 
 Todo el código en este tutorial es de bajo nivel y tiene el único
 propósito de demostrar la especificación WSGI en funcionamiento.
-No es para uso real. Para código de producción, apéguese a kits
+No es para uso real. Para código de producción, utilice a los kits
 de herramientas, frameworks y middleware.
 
 .. figure:: ../_static/images/web_browser_server_wsgi.png

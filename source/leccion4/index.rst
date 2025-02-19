@@ -9,7 +9,7 @@ una API común.
 
 En esta lección se busca hacer una introducción a la especificación WSGI
 en Python, sus características, instalación, interacciones con un WSGI y
-los recursos mas destacados disponibles en la Web para tomar en cuenta.
+los recursos más destacados disponibles en la Web para tomar en cuenta.
 
 A continuación el temario de esta lección:
 

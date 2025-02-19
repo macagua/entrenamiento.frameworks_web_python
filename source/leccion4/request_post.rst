@@ -3,38 +3,41 @@
 Solicitud del POST
 ==================
 
-Cuando el método de solicitud es POST, la cadena de consulta se enviará en el cuerpo de
+Cuando el método de solicitud es ``POST``, la cadena de consulta se enviará en el cuerpo de
 la solicitud HTTP en lugar de en la URL. El cuerpo de la solicitud se encuentra en el
-archivo ``wsgi.input`` proporcionado por el servidor WSGI como variable de entorno.
+archivo ``wsgi.input`` proporcionado por el servidor :ref:`WSGI <python_leccion4>` como
+variable de entorno.
 
 Es necesario conocer el tamaño del cuerpo de la respuesta como un número entero para leerlo
 desde ``wsgi.input``. El `PEP 3333 <https://peps.python.org/pep-3333/>`_ dice que la variable
 ``CONTENT_LENGTH``, que contiene el tamaño del cuerpo, puede estar vacía o faltante, así que
-léala en un bloque ``try``/``except``.
+léala en un bloque ``try`` / ``except``.
 
-La etiqueta HTML ``form`` en este script indica al navegador que realice una solicitud POST
+La etiqueta HTML ``form`` en este script indica al navegador que realice una solicitud ``POST``
 (``method="post"``):
 
-.. literalinclude:: ../../recursos/leccion4/post_request.py
+.. literalinclude:: ../../recursos/leccion4/wsgi_post_request.py
    :language: python
-   :lines: 1-85
+   :lines: 1-114
 
 
 .. important::
     Usted puede descargar el código usado en esta sección haciendo clic
-    :download:`aquí <../../recursos/leccion4/post_request.py>`.
+    :download:`aquí <../../recursos/leccion4/wsgi_post_request.py>`.
 
 
 .. tip::
-    Para ejecutar el código :file:`post_request.py`, abra una consola de
+    Para ejecutar el código :file:`wsgi_post_request.py`, abra una consola de
     comando, acceda al directorio donde se encuentra el mismo, y ejecute el siguiente
     comando:
 
     .. code-block:: console
 
-        python3 post_request.py
+        python3 wsgi_post_request.py
 
-    El servidor estará atendiendo peticiones en la dirección en http://localhost:8080
+    De esta forma, una vez ejecutado el comando, el servidor estará atendiendo peticiones,
+    puede abrir desde con su navegador Web favorito (Mozilla Firefox, Google Chrome, etc)
+    la siguiente dirección http://localhost:8080
 
 ----
 
