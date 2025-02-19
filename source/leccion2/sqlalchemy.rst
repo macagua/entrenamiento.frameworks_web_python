@@ -107,13 +107,13 @@ a continuación se presentan el correspondiente comando de tu sistema operativo:
 
       .. code-block:: console
 
-          $ pip install SQLAlchemy==1.4.36
+          $ pip3 install SQLAlchemy==1.4.36
 
    .. group-tab:: Windows
 
       .. code-block:: console
 
-          > pip install SQLAlchemy==1.4.36
+          > pip3 install SQLAlchemy==1.4.36
 
 
 Puede probar si la instalación se realizo correctamente, ejecutando
@@ -125,13 +125,13 @@ el siguiente comando correspondiente a tu sistema operativo:
 
       .. code-block:: console
 
-          $ python -c "import sqlalchemy ; print(sqlalchemy.__version__)"
+          $ python3 -c "import sqlalchemy ; print(sqlalchemy.__version__)"
 
    .. group-tab:: Windows
 
       .. code-block:: console
 
-          > python -c "import sqlalchemy ; print(sqlalchemy.__version__)"
+          > python3 -c "import sqlalchemy ; print(sqlalchemy.__version__)"
 
 Si muestra el numero de la versión instalada de ``SQLAlchemy``, tiene
 correctamente instalada la librería. Con esto, ya tiene todo listo para continuar.
@@ -376,13 +376,13 @@ Ejecuta ahora el programa con el siguiente comando:
 
       .. code-block:: console
 
-          $ python main.py
+          $ python3 main.py
 
    .. group-tab:: Windows
 
       .. code-block:: console
 
-          > python main.py
+          > python3 main.py
 
 El anterior código al ejecutar debe mostrar el siguiente mensaje:
 
@@ -655,7 +655,7 @@ sistema operativo:
 
       .. code-block:: console
 
-          $ pip install -r requirements.txt
+          $ pip3 install -r requirements.txt
 
       Ademas debe instalar y editar el archivo ``.env``, con el siguiente comando:
 
@@ -673,13 +673,13 @@ sistema operativo:
         debe definir las variables que por defecto no están definidas.
 
       .. tip::
-        Para ejecutar el código fuente de esta practica debe invocar al modulo :file:`main.py`,
+        Para ejecutar el código fuente de esta práctica debe invocar al modulo :file:`main.py`,
         abra una consola de comando, acceda al directorio donde se encuentra la estructura previa
         y ejecute el siguiente comando:
 
       .. code-block:: console
 
-          $ python main.py
+          $ python3 main.py
 
    .. group-tab:: Windows
 
@@ -687,7 +687,7 @@ sistema operativo:
 
       .. code-block:: console
 
-          > pip install -r requirements.txt
+          > pip3 install -r requirements.txt
 
       Ademas debe instalar y editar el archivo ``.env``, con el siguiente comando:
 
@@ -705,13 +705,13 @@ sistema operativo:
         debe definir las variables que por defecto no están definidas.
 
       .. tip::
-        Para ejecutar el código fuente de esta practica debe invocar al modulo :file:`main.py`,
+        Para ejecutar el código fuente de esta práctica debe invocar al modulo :file:`main.py`,
         abra una consola de comando, acceda al directorio donde se encuentra la estructura previa
         y ejecute el siguiente comando:
 
       .. code-block:: console
 
-          > python main.py
+          > python3 main.py
 
 El anterior código al ejecutar debe mostrar el siguiente mensaje:
 
