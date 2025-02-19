@@ -111,6 +111,16 @@ Descargar ficheros a un dispositivo
 Como el terminal tiene acceso al sistema de archivos, también puedes descargar imágenes fácilmente
 desde direcciones URL.
 
+Por ejemplo, esta es la URL del logotipo de Python.org, y con el comando ``http``, puedes descargar
+un archivo comprimido de la siguiente forma:
+
+.. code-block:: console
+
+    $ curl https://www.python.org/ftp/python/3.11.11/Python-3.11.11.tar.xz -o Python-3.11.11.tar.xz
+
+Con el comando ``http`` y la URL de un archivo comprimido, pueden obtenerse los datos binarios del
+archivo comprimido y almacenarse en el disco duro con el mismo nombre del archivo original ``Python-3.11.11.tar.xz``.
+
 Por ejemplo, esta es la URL del logotipo de Python.org, y con el comando ``curl``, puedes descargar
 la imagen de la siguiente forma:
 
