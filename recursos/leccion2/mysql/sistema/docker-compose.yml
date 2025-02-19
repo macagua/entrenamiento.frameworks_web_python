@@ -4,6 +4,7 @@ services:
       - .env
     image: "mysql:${MYSQL_VERSION}"
     container_name: ${MYSQL_CONTAINER}
+    restart: always
     environment:
       - MYSQL_ROOT_PASSWORD=${PASSW}
       - MYSQL_DATABASE=${DB}
@@ -12,8 +13,7 @@ services:
     ports:
       - "${PORT}:3306"
     volumes:
-      - db_data:/var/lib/mysql
-    restart: always
+      - my_data:/var/lib/mysql
     healthcheck:
       test: mysqladmin ping -h ${HOST} -u $${USER} --password=$${PASSW}
       start_period: 5s
@@ -22,4 +22,4 @@ services:
       retries: 55
 
 volumes:
-  db_data:
+  my_data:

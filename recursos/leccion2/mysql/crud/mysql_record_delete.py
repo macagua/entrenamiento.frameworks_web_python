@@ -30,6 +30,7 @@ def eliminar_registro():
         # Crear un objeto cursor para ejecutar las eliminaciones
         cursor = conexion.cursor()
         logging.info(f"¡Conectado a la base de datos '{credenciales['database']}'!\n")
+        # Eliminar un fila de registro simple
         cursor.execute(DELETE_SCRIPTS)
         # Guardar los cambios en la base de datos
         conexion.commit()

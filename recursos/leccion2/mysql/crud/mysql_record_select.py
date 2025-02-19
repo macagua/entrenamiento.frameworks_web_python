@@ -35,6 +35,7 @@ def consultar_registro():
         # Recuperar los registros de la consulta
         registros = cursor.fetchall()
         # Mostrar los registros de la tabla
+        print(f"Total de filas son: {len(registros)} \n")
         print("Mostrar cada fila: \n")
         for fila in registros:
             print(f"\tId: {fila[0]}")
