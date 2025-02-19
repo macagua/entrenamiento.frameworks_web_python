@@ -485,7 +485,7 @@ A continuación se presenta el archivo ``docker-compose.yml`` con la configuraci
 ----
 
 
-Teniendo creada la anterior estructura de proyecto, vuelva a ejecutar ahora el modulo con
+Teniendo creada la anterior estructura de proyecto, vuelva a ejecutar ahora el módulo con
 el siguiente comando, el cual a continuación se presentan el correspondiente comando de tu
 sistema operativo:
 
@@ -532,7 +532,7 @@ sistema operativo:
       De esta forma crea el contenedor Docker llamado ``postgresql``, necesario para ejecutar el script Python.
 
       .. tip::
-        Para ejecutar el código fuente de esta práctica debe invocar al modulo :file:`main.py`,
+        Para ejecutar el código fuente de esta práctica debe invocar al módulo :file:`main.py`,
         abra una consola de comando, acceda al directorio donde se encuentra la estructura previa
         y ejecute el siguiente comando:
 
@@ -581,7 +581,7 @@ sistema operativo:
       De esta forma crea el contenedor Docker llamado ``postgresql``, necesario para ejecutar el script Python.
 
       .. tip::
-        Para ejecutar el código fuente de esta práctica debe invocar al modulo :file:`main.py`,
+        Para ejecutar el código fuente de esta práctica debe invocar al módulo :file:`main.py`,
         abra una consola de comando, acceda al directorio donde se encuentra la estructura previa
         y ejecute el siguiente comando:
 

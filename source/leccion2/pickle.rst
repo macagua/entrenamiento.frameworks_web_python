@@ -58,7 +58,7 @@ con ``pickle`` para operaciones CRUD en un archivo de registros serializados:
 .. literalinclude:: ../../recursos/leccion2/pickle/main.py
     :language: python
     :linenos:
-    :lines: 1-207
+    :lines: 1-202
 
 .. important::
     Usted puede descargar el código usado en esta sección haciendo clic en el

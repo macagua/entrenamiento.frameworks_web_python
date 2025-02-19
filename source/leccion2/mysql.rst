@@ -74,7 +74,7 @@ Luego de instalar las herramientas necesarias, debe ejecutar el siguiente comand
 
 .. code-block:: console
 
-    docker run -d --name mysql -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=sistema -p 3306:3306 -v db_data:/var/lib/mysql --restart always mysql:latest
+    docker run -d --name mysql -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=sistema -p 3306:3306 -v my_data:/var/lib/mysql --restart always mysql:latest
 
 
 De esta forma ha instalado y ejecutado el servidor ``MySQL`` necesario para las próximas script Python
@@ -269,6 +269,9 @@ si sus registros fueron cargados en la tabla, ejecutando el siguiente comando co
 
 
 De esta forma puede insertar registro en una tabla en una base de datos ``MySQL``.
+
+
+----
 
 
 Consultar registros
@@ -515,7 +518,7 @@ A continuación se presenta el archivo ``docker-compose.yml`` con la configuraci
 ----
 
 
-Teniendo creada la anterior estructura de proyecto, vuelva a ejecutar ahora el modulo con
+Teniendo creada la anterior estructura de proyecto, vuelva a ejecutar ahora el módulo con
 el siguiente comando, el cual a continuación se presentan el correspondiente comando de tu
 sistema operativo:
 
@@ -562,7 +565,7 @@ sistema operativo:
       De esta forma crea el contenedor Docker llamado ``mysql``, necesario para ejecutar el script Python.
 
       .. tip::
-        Para ejecutar el código fuente de esta práctica debe invocar al modulo :file:`main.py`,
+        Para ejecutar el código fuente de esta práctica debe invocar al módulo :file:`main.py`,
         abra una consola de comando, acceda al directorio donde se encuentra la estructura previa
         y ejecute el siguiente comando:
 
@@ -611,7 +614,7 @@ sistema operativo:
       De esta forma crea el contenedor Docker llamado ``mysql``, necesario para ejecutar el script Python.
 
       .. tip::
-        Para ejecutar el código fuente de esta práctica debe invocar al modulo :file:`main.py`,
+        Para ejecutar el código fuente de esta práctica debe invocar al módulo :file:`main.py`,
         abra una consola de comando, acceda al directorio donde se encuentra la estructura previa
         y ejecute el siguiente comando:
 
@@ -722,7 +725,7 @@ en una base de datos ``MySQL``, aplicando buenas prácticas de código funcional
 .. _`PyMySQL`: https://pymysql.readthedocs.io/en/latest/
 .. _`dotenv`: https://dev.to/emma_donery/python-dotenv-keep-your-secrets-safe-4ocn
 .. _`establecer variables de entorno`: https://docs.docker.com/compose/how-tos/environment-variables/set-environment-variables/
-.. _`Docker`: https://docker.com/
+.. _`Docker`: https://www.docker.com/
 .. _`Docker Engine`: https://docs.docker.com/engine/
 .. _`Docker Desktop`: https://docs.docker.com/desktop/
 .. _`Docker Compose`: https://docs.docker.com/compose/
