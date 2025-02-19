@@ -379,7 +379,7 @@ este programa ejecute el siguiente comando:
 
 .. code-block:: console
 
-    $ sudo apt install ipython
+    $ sudo apt install -y ipython
 
 
 Sustituya el comando ``python3`` por ``ipython3`` de la siguiente forma:

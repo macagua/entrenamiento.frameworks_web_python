@@ -78,7 +78,7 @@ comando con el parámetro ``--timeout`` habilitado para el tiempo de espera:
 
 .. code-block:: console
 
-    $ virtualenv --python=/usr/bin/python3 venv
+    $ virtualenv --python /usr/bin/python3 venv
     $ source ./venv/bin/activate
     $ pip3 install -U pip
     $ pip3 install cookiecutter --timeout 120
