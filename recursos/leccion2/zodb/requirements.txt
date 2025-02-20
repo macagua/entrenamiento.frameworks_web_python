@@ -1,0 +1,11 @@
+# Install the packages from PyPi repository.
+BTrees==6.1
+ZConfig==4.2
+ZODB==6.0
+persistent==6.1
+transaction==5.0
+zc.lockfile==3.0.post1
+zodbpickle==4.2
+zope.deferredimport==5.0
+zope.interface==7.2
+zope.proxy==6.1

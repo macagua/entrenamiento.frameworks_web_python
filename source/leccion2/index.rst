@@ -29,6 +29,7 @@ la Web para tomar en cuenta. A continuación el temario de esta lección:
    :maxdepth: 2
 
    pickle
+   zodb
    base_datos_relacional
    dbapi
    sqlite
