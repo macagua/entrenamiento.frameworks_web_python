@@ -106,6 +106,18 @@ A continuación una serie de términos usados en las tecnologías Python.
         generado. Las respuestas proporcionadas por un usuario en respuesta a las variables
         se utilizan para rellenar los marcadores de posición en este contenido.
 
+    Requirement
+        Especificación de un `paquete`_ que debe instalarse. `pip`_, el instalador recomendado
+        por `PYPA`_, permite varias formas de especificación que pueden considerarse todas ellas
+        un "requisito". Para más información, consulte la referencia `pip install`_.
+
+    Requirements File
+        Un archivo que contiene una lista de requerimientos que pueden ser instalados usando `pip`_.
+        Para obtener más información, consulte la documentación de pip sobre `archivos de requerimientos`_.
+
+    ``requirements.txt``
+        Véase el termino :term:`Requirements File`.
+
     setup.py
         El archivo :file:`setup.py` es un módulo de Python, que por lo general indica que
         el módulo / paquete que está a punto de instalar ha sido empacado y distribuidos
@@ -130,12 +142,12 @@ A continuación una serie de términos usados en las tecnologías Python.
         Diminutivo en plural del termino :term:`variable`.
 
     variable
-        5) Una pregunta que debe ser respondida por el usuario cuando esta generando una
+        3) Una pregunta que debe ser respondida por el usuario cuando esta generando una
         estructura de esqueleto de proyecto usando el sistema de plantilla ``copier``. En este
         caso una variable (var) es una descripción de la información requerida, texto de
         ayuda y reglas de validación para garantizar la entrada de usuario correcta.
 
-        6) Una declarativa cuyo valor puede ser variable o constante dentro de un programa
+        4) Una declarativa cuyo valor puede ser variable o constante dentro de un programa
         Python o en el sistema operativo.
 
     variables
@@ -169,3 +181,8 @@ A continuación una serie de términos usados en las tecnologías Python.
 .. _`PEP 427`: https://peps.python.org/pep-0427/
 .. _`formato de distribución Binario`: https://packaging.python.org/en/latest/specifications/binary-distribution-format/#binary-distribution-format
 .. _`Formatos de paquetes`: https://packaging.python.org/en/latest/discussions/package-formats/#package-formats
+.. _`paquete`: https://packaging.python.org/en/latest/glossary/#term-Distribution-Package
+.. _`PyPA`: https://packaging.python.org/en/latest/glossary/#term-Python-Packaging-Authority-PyPA
+.. _`pip`: https://packaging.python.org/en/latest/key_projects/#pip
+.. _`pip install`: https://pip.pypa.io/en/latest/cli/pip_install/#pip-install
+.. _`archivos de requerimientos`: https://pip.pypa.io/en/latest/user_guide/#requirements-files
