@@ -29,7 +29,7 @@ project = project_short_name[0].capitalize() + project_short_name[1:38]
 project_name = project_namecode.replace(".", "")
 project_details = f"Entrenamiento de {project_short_name}"
 publisher = "Leonardo J. Caballero G."
-years = "2018 - 2023"
+years = "2018 - 2025"
 copyright = f"{years}, {publisher}"
 author = "Leonardo J. Caballero G."
 
@@ -88,6 +88,9 @@ linkcheck_ignore = [
     r"http://example.com/news",
     r"http://example.com\d+/",
     r"acerca_de.html#sobre-el-instructor",
+    r"https://httpbin.org/get/1",
+    r"https://httpbin.org/redirect/4",
+    r"https://httpbin.org/redirect/5",
 ]
 linkcheck_anchors = False
 linkcheck_timeout = 30
@@ -163,7 +166,7 @@ html_theme = "sphinx_immaterial"
 # documentation.
 #
 html_theme_options = {
-    "edit_uri": "edit/3.7/source",
+    "edit_uri": "edit/master/source",
     "repo_url": "https://github.com/macagua/entrenamiento.frameworks_web_python",
     "repo_name": "entrenamiento.frameworks_web_python",
     "repo_type": "github",
@@ -208,8 +211,8 @@ html_theme_options = {
     # "version_dropdown": True,
     # "version_info": [
     #     {
-    #         "version": "https://entrenamiento-frameworks-web-python.readthedocs.io/es/3.7/",
-    #         "title": "3.7",
+    #         "version": "https://entrenamiento-frameworks-web-python.readthedocs.io/es/latest/",
+    #         "title": "3.x",
     #         "aliases": [],
     #     },
     # ],
@@ -345,10 +348,10 @@ latex_elements = {
     "preamble": r"""
     \usepackage{pmboxdraw}
     \authoraddress{
-      \strong{Contactos:} \email{leonardocaballero@gmail.com} -
+      \strong{Email:} \email{leonardocaballero@gmail.com} -
       \url{https://github.com/macagua}\\
-      \strong{Ciudad de Mérida, Estado Mérida, Venezuela. 5101.}\\
-      \strong{Telf.} +58-412-473.53.76 (WhatsApp / Telegram)
+      \strong{Fuenlabrada, Madrid, España. 5101.}\\
+      \strong{Contactos} @leonardojcaballerog (Telegram)
     }
     \let\Verbatim=\OriginalVerbatim
     \let\endVerbatim=\endOriginalVerbatim
@@ -481,10 +484,22 @@ epub_exclude_files = ["search.html"]
 # https://kev.inburke.com/kevin/sphinx-interlinks/
 intersphinx_mapping = {
     "python3": ("https://docs.python.org/3.11/", None),
-    "entrenamiento-python-basico": ("https://entrenamiento-python-basico.readthedocs.io/es/3.7/", None),
-    "entrenamiento-python-intermedio": ("https://entrenamiento-python-intermedio.readthedocs.io/es/latest/", None),
-    "entrenamiento-python-avanzado": ("https://entrenamiento-python-avanzado.readthedocs.io/es/latest/", None),
-    "entrenamiento-data-scientist-python": ("https://entrenamiento-data-scientist-python.readthedocs.io/", None),
+    "entrenamiento-python-basico": (
+        "https://entrenamiento-python-basico.readthedocs.io/es/3.7/",
+        None,
+    ),
+    "entrenamiento-python-intermedio": (
+        "https://entrenamiento-python-intermedio.readthedocs.io/es/latest/",
+        None,
+    ),
+    "entrenamiento-python-avanzado": (
+        "https://entrenamiento-python-avanzado.readthedocs.io/es/latest/",
+        None,
+    ),
+    "entrenamiento-data-scientist-python": (
+        "https://entrenamiento-data-scientist-python.readthedocs.io/",
+        None,
+    ),
 }
 intersphinx_timeout = 120
 
