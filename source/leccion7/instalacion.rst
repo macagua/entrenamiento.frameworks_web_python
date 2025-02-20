@@ -13,13 +13,13 @@ Actualizar repositorios de paquetes disponibles para instalar, con el siguiente 
 
 ::
 
-    $ sudo apt update
+    $ sudo apt update && sudo apt upgrade -y
 
 Instalar dependencias mínimas necesarias, con el siguiente comando:
 
 ::
 
-    $ sudo apt install python3-dev python3-pip python3-virtualenv git
+    $ sudo apt install -y python3-dev python3-pip python3-virtualenv git
 
 
 Entorno virtual Python
@@ -30,10 +30,12 @@ Crear entorno virtual Python en directorio raíz con el siguiente comando:
 ::
 
     $ cd $HOME
-    $ virtualenv --python=/usr/bin/python3 venv
+    $ virtualenv --python /usr/bin/python3 venv
 
 
 Activar el entorno virtual Python creado con el siguiente comando:
+
+::
 
     $ source ~/venv/bin/activate
 
@@ -45,6 +47,7 @@ Para instalar las dependencias para usar del framework Django, con el siguiente 
 
 ::
 
+    $ pip3 install -U pip
     $ pip3 install -U Django
 
 
@@ -54,6 +57,9 @@ Puede probar la instalación hecha en el comando previo del framework Django, co
 
     $ python3 -m django --version
 
+
+
+Si muestra el numero de la versión instalada de ``Django``, tiene correctamente instalada la librería.
 
 ----
 

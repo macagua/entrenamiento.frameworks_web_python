@@ -287,15 +287,12 @@ Lección 7 - Django
 
 - `Django project <https://www.djangoproject.com/>`_.
 
-- `Django project 2.1 Documentation <https://docs.djangoproject.com/es/2.1/>`_.
+- `Django project 2.1 Documentation <https://docs.djangoproject.com/es/5.1/>`_.
 
-- `Parte 1 del tutorial Escribiendo su primera aplicación en Django <https://docs.djangoproject.com/es/2.1/intro/tutorial01/>`_.
+- `Parte 1 del tutorial Escribiendo su primera aplicación en Django <https://docs.djangoproject.com/es/5.1/intro/tutorial01/>`_.
 
-- `Parte 2 del tutorial Escribiendo su primera aplicación en Django <https://docs.djangoproject.com/es/2.1/intro/tutorial02/>`_.
+- `Parte 2 del tutorial Escribiendo su primera aplicación en Django <https://docs.djangoproject.com/es/5.1/intro/tutorial02/>`_.
 
 - `Django en PyPI <https://pypi.org/project/Django>`_.
 
 - `Framework Web Django (Python) - Aprende sobre desarrollo web - MDN <https://developer.mozilla.org/es/docs/Learn_web_development/Extensions/Server-side/Django>`_.
-
-.. todo::
-    TODO terminar de escribir esta sección
