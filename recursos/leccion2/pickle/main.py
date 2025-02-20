@@ -1,6 +1,7 @@
 """Programa que simula un inventario de productos"""
 
 import os
+import sys
 from pathlib import Path
 import pickle
 
@@ -57,7 +58,7 @@ class Inventario:
             Path(self._DB_DIR).mkdir(parents=True, exist_ok=True)
             with open(self.archivo, "rb") as bd:
                 self.productos = pickle.load(bd)
-        except OSError:
+        except FileNotFoundError:
             print("El archivo no existe en la ubicación")
 
     def guardar_datos(self):
@@ -156,6 +157,8 @@ class Inventario:
     def menu_principal(self):
         """Menu principal del programa"""
         try:
+            # Instancia de la clase Inventario
+            inventario = Inventario()
             while True:
                 print("\n==============")
                 print("MENÚ PRINCIPAL")
@@ -166,11 +169,9 @@ class Inventario:
                 opciones_menu += "4) Eliminar\n"
                 opciones_menu += "5) Salir\n"
                 opciones_menu += "\nElija uno: "
-
+                # Solicitar al usuario que elija una opción
                 opcion = int(input(opciones_menu))
-
-                inventario = Inventario()
-
+                # Opciones del menú
                 if opcion == 1:
                     codigo = int(input("Id de Producto: "))
                     if not inventario.existe(codigo):
@@ -191,12 +192,13 @@ class Inventario:
                 elif opcion == 5:
                     break
         except KeyboardInterrupt:
-            import sys
-
+            print(" <Ctrl-C> entered, exit the program...")
             print()
             sys.exit()
 
 
 if __name__ == "__main__":
+    # Instancia de la clase Inventario
     app = Inventario()
+    # Llamar al método menu_principal
     app.menu_principal()
