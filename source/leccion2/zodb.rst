@@ -55,7 +55,7 @@ de Python, lo hace.
 
 El inconveniente es que el programador tiene que gestionar explícitamente los objetos, leyendo
 un objeto cuando se necesita y escribiéndolo en el disco cuando el objeto ya no es necesario.
-La ZODB gestiona los objetos por ti, manteniéndolos en una caché, escribiéndolos en disco cuando
+La ``ZODB`` gestiona los objetos por ti, manteniéndolos en una caché, escribiéndolos en disco cuando
 se modifican y eliminándolos de la caché si no se han utilizado durante un tiempo.
 
 
@@ -68,8 +68,8 @@ OODBs vs. BD relacionales
 Otra forma de verlo es que ZODB es una base de datos orientada a objetos (OODB) específica
 de Python. Las bases de datos de objetos comerciales para C++ o Java a menudo exigen pasar
 por el aro, como utilizar un preprocesador especial o evitar determinados tipos de datos.
-Como veremos, el ZODB tiene que pasar por algunos obstáculos, pero en comparación, la
-naturalidad del ZODB es asombrosa.
+Como veremos, el ``ZODB`` tiene que pasar por algunos obstáculos, pero en comparación, la
+naturalidad del ``ZODB`` es asombrosa.
 
 Las bases de datos relacionales (RDB) son mucho más comunes que las OODB. Las bases de
 datos relacionales almacenan la información en tablas; una tabla consta de cualquier
@@ -153,10 +153,25 @@ un valor de 2.0?  En la versión relacional, tiene dos opciones poco atractivas:
    Repite para la carrera #2, 3, y así sucesivamente. Esto hace un gran número de consultas SQL, y
    por lo tanto es increíblemente lento.
 
-Una base de datos de objetos como ZODB simplemente almacena punteros internos de objeto a objeto, por
+Una base de datos de objetos como ``ZODB`` simplemente almacena punteros internos de objeto a objeto, por
 lo que leer un solo objeto es mucho más rápido que hacer un montón de consultas SQL y ensamblar los
 resultados. Por lo tanto, escanear todas las ejecuciones sigue siendo ineficiente, pero no extremadamente
 ineficiente.
+
+
+¿Qué es ZEO?
+^^^^^^^^^^^^^
+
+``ZODB`` incluye varias clases diferentes que implementan la interfaz :class:`Storage`. Tales clases
+manejan el trabajo de escribir objetos Python a un medio de almacenamiento físico, que puede ser
+un archivo de disco (la clase :class:`FileStorage`), un archivo BerkeleyDB (:class:`BDBFullStorage`),
+una base de datos relacional (:class:`DCOracleStorage`), o algún otro medio. `ZEO`_ añade :class:`ClientStorage`,
+una nueva :class:`Storage` que no escribe en soportes físicos, sino que simplemente reenvía todas
+las peticiones a través de una red a un servidor.
+
+El servidor, que está ejecutando una instancia de la clase :class:`StorageServer`, simplemente actúa
+como un front-end para alguna clase física :class:`Storage`. Es una idea bastante simple, pero como
+veremos más adelante en este documento, abre muchas posibilidades.
 
 
 ----
@@ -300,3 +315,4 @@ registro en un archivo serializado de objetos python ``ZODB``.
     Consulte la sección de :ref:`lecturas suplementarias <lectura_extras_leccion2>`
 
 .. _`ZODB`: https://zodb-docs.readthedocs.io/en/latest/
+.. _`ZEO`: https://pypi.org/project/ZEO/
