@@ -13,13 +13,13 @@ Actualizar repositorios de paquetes disponibles para instalar, con el siguiente 
 
 ::
 
-    $ sudo apt update
+    $ sudo apt update && sudo apt upgrade -y
 
 Instalar dependencias mínimas necesarias, con el siguiente comando:
 
 ::
 
-    $ sudo apt install python3-dev python3-pip python3-virtualenv git
+    $ sudo apt install -y python3-dev python3-pip python3-virtualenv git
 
 
 Entorno virtual Python
@@ -30,7 +30,7 @@ Crear entorno virtual Python en directorio raíz con el siguiente comando:
 ::
 
     $ cd $HOME
-    $ virtualenv --python=/usr/bin/python3 venv
+    $ virtualenv --python /usr/bin/python3 venv
 
 
 Activar el entorno virtual Python creado con el siguiente comando:
@@ -47,16 +47,16 @@ Para instalar las dependencias para usar del framework Flask, con el siguiente c
 
 ::
 
+    $ pip3 install -U pip
     $ pip3 install -U Flask
 
-Puede probar si la instalación se realizo correctamente, ejecutando
-el siguiente comando:
+Puede probar si la instalación se realizo correctamente, ejecute el siguiente comando:
 
 .. code-block:: console
 
-  $ python3 -c "import flask ; print(flask.__version__)"
+  $ flask --version
 
-Si muestra el numero de la versión instalada de SQLAlchemy, tiene
+Si muestra el numero de la versión instalada de ``Flask``, tiene
 correctamente instalada la librería.
 
 

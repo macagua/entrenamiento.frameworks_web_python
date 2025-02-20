@@ -26,13 +26,14 @@ con el siguiente comando:
 
 ::
 
-    $ sudo apt update
+    $ sudo apt update && sudo apt upgrade -y
 
 Instalar dependencias mínimas necesarias, con el siguiente comando:
 
 ::
 
-    $ sudo apt install python3-dev python3-pip python3-virtualenv git sqlitebrowser
+    $ sudo apt install -y python3-dev python3-pip python3-virtualenv
+    $ sudo apt install -y git sqlite3 sqlitebrowser
 
 
 Entorno virtual Python
@@ -43,7 +44,7 @@ siguiente comando:
 
 ::
 
-    $ virtualenv --python=/usr/bin/python3 venv
+    $ virtualenv --python /usr/bin/python3 venv
 
 
 Activarlo entorno virtual Python creado con el siguiente comando:
@@ -73,7 +74,7 @@ Crear estructura de proyecto Flask, con el siguiente comando:
 
     $ mkdir -p ~/projects/flask-crud-app/templates && cd $_ && cd ../
 
-Cree modulo Python llamado :file:`bookmanager.py` dentro del
+Cree módulo Python llamado :file:`bookmanager.py` dentro del
 directorio :file:`~/projects/flask-crud-app`, con el siguiente comando:
 
 ::
@@ -97,19 +98,24 @@ Cree plantilla HTML llamado :file:`home.html` dentro del directorio
 Agregue el siguiente contenido al archivo :file:`~/projects/flask-crud-app/templates/home.html`.
 
 .. literalinclude:: ../../recursos/leccion6/flask-crud-app/templates/home.html
-   :language: python
+   :language: html
    :lines: 1-33
 
 
 Crear base de datos
 ^^^^^^^^^^^^^^^^^^^
 
-Crear base de datos SQLite, con los siguientes comando:
+Crear base de datos SQLite, ejecute el siguiente comando:
 
 ::
 
     $ cd ~/projects/flask-crud-app/
-    $ python3
+
+Desde la :ref:`consola interactiva de Python <python_interactivo>`, ejecute
+los siguientes comando:
+
+::
+
     >>> from bookmanager import db
     >>> db.create_all()
     >>> exit()
@@ -145,7 +151,8 @@ Ejecutar aplicación Web Flask, con el siguiente comando:
 
     $ python3 bookmanager.py
 
-Abrir en navegador >>> http://127.0.0.1:8087
+De esta forma, una vez ejecutado el comando, se puede abrir desde con su navegador Web favorito
+(Mozilla Firefox, Google Chrome, etc) la siguiente dirección http://127.0.0.1:8087
 
 
 .. figure:: ../_static/images/flask-bookmanager.png

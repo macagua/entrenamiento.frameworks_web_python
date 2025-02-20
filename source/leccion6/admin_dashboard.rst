@@ -30,13 +30,14 @@ el siguiente comando:
 
 ::
 
-    $ sudo apt update
+    $ sudo apt update && sudo apt upgrade -y
 
 Instalar dependencias mínimas necesarias, con el siguiente comando:
 
 ::
 
-    $ sudo apt install python3-dev python3-pip python3-virtualenv git sqlitebrowser
+    $ sudo apt install -y python3-dev python3-pip python3-virtualenv
+    $ sudo apt install -y git sqlite3 sqlitebrowser
 
 
 Descargar código
@@ -57,7 +58,7 @@ Crear entorno virtual Python en directorio :file:`~/Flask-Admin-Dashboard` con e
 
 ::
 
-    $ virtualenv --python=/usr/bin/python3 venv
+    $ virtualenv --python /usr/bin/python3 venv
 
 
 Activarlo entorno virtual Python creado con el siguiente comando:
@@ -85,7 +86,8 @@ Para ejecutar aplicación Web Flask, con los siguientes comandos:
     $ chmod +x app.py
     $ ./app.py
 
-Abrir en navegador >>> http://127.0.0.1:5000/admin/
+De esta forma, una vez ejecutado el comando, se puede abrir desde con su navegador Web favorito
+(Mozilla Firefox, Google Chrome, etc) la siguiente dirección http://127.0.0.1:5000/admin/
 
 
 Flask Authentication

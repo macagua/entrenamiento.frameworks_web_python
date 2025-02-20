@@ -278,9 +278,6 @@ Admin Dashboard
 
 - `Flask-Security - PyPI <https://pypi.org/project/Flask-Security/>`_.
 
-.. todo::
-    TODO terminar de escribir esta sección
-
 
 .. _lecturas_extras_leccion7:
 

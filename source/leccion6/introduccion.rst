@@ -6,7 +6,7 @@ Introducción
 `Flask <https://flask.palletsprojects.com/en/stable/>`_ es un framework minimalista
 escrito en Python que permite crear aplicaciones web rápidamente
 y con un mínimo número de líneas de código. Está basado en la
-especificación `WSGI <https://wsgi.readthedocs.io/en/latest/>`_ de
+especificación :ref:`WSGI <python_leccion4>` de
 `Werkzeug <https://palletsprojects.com/projects/werkzeug/>`_ y el motor
 de plantillas `Jinja2 <https://palletsprojects.com/projects/jinja/>`_
 con licencia BSD.
@@ -31,7 +31,7 @@ Características
 
 - Soporte para cookies seguras (sesiones del lado del cliente).
 
-- 100% compatible con WSGI 1.0.
+- 100% compatible con :ref:`WSGI <python_leccion4>` 1.0.
 
 - Basado en Unicode.
 
