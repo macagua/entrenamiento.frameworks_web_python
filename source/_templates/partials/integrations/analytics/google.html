@@ -1,5 +1,5 @@
 {# BEGIN: Enable Google Analytics tracking in the documentation. #}
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-36645888-4']);
       _gaq.push(['_trackPageview']);
@@ -9,5 +9,14 @@
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
+    </script> -->
+    <!-- Google Analytics -->
+    <script type="text/javascript" async src="https://www.googletagmanager.com/gtag/js?id=G-331531655"></script>
+    <script type="text/javascript">
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-331531655'); // Reemplaza con tu ID de medición
     </script>
 {# END: Enable Google Analytics tracking in the documentation. #}
