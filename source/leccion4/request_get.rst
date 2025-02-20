@@ -1,7 +1,10 @@
 .. _python_wsgi_request_get:
 
-Solicitud del GET
-=================
+Petición GET
+=============
+
+La petición ``GET`` en :ref:`WSGI <python_leccion4>` es una forma de enviar datos al servidor
+a través de la URL.
 
 Ejecute el script :ref:`print_environment.py <python_wsgi_variables_entorno>` nuevamente
 y esta vez llámalo así:

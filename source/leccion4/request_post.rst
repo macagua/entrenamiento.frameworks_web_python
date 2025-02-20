@@ -1,7 +1,10 @@
 .. _python_wsgi_request_post:
 
-Solicitud del POST
-==================
+Petición POST
+=============
+
+La petición ``POST`` en :ref:`WSGI <python_leccion4>` es una forma de enviar datos al servidor
+a través de la URL.
 
 Cuando el método de solicitud es ``POST``, la cadena de consulta se enviará en el cuerpo de
 la solicitud HTTP en lugar de en la URL. El cuerpo de la solicitud se encuentra en el

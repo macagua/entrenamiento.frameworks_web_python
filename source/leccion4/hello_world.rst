@@ -9,8 +9,8 @@ El objeto de esta sección es hacer un demostración local de
 
 .. _python_wsgi_helloworld_request_get:
 
-Solicitud del GET
------------------
+Petición GET
+-------------
 
 En pocas palabras, una aplicación compatible con :ref:`WSGI <python_leccion4>` debe proporcionar
 una (función, clase) invocable que acepte un diccionario ``environ`` y una
@@ -35,8 +35,8 @@ De esta forma puede una aplicación web ``WSGI`` simple que maneja una petición
 
 .. _python_wsgi_helloworld_request_post:
 
-Solicitud del POST
-------------------
+Petición POST
+--------------
 
 Ahora que esta familiarizado con la estructura básica de una aplicación
 compatible con :ref:`WSGI <python_leccion4>`, ahora podemos experimentar
