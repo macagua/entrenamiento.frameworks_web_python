@@ -28,7 +28,7 @@ sphinxcontrib-qthelp==1.0.3
 sphinxcontrib-serializinghtml==1.1.5
 typing-extensions==4.3.0
 urllib3==1.26.19
-zipp==3.8.1
+zipp==3.19.1
 
 # sphinx-immaterial[keys] https://pypi.org/project/sphinx-immaterial/
 Markdown==3.4.1
