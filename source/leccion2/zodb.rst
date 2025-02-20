@@ -17,6 +17,12 @@ ZODB
 
 - ✅ Las relaciones entre objetos se gestionan de forma muy natural, lo que permite crear grafos de objetos complejos sin uniones.
 
+.. figure:: ../_static/images/zodb_logo.png
+    :align: center
+    :width: 100%
+
+    Logotipo de ZODB
+
 ``ZODB`` es una base de datos transaccional ACID.
 
 ``ZODB`` funciona con Python 3.7 y versiones superiores. También funciona con PyPy.
