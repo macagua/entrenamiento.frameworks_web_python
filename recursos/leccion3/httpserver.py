@@ -102,17 +102,17 @@ def run():
         server_address = (HOST_NAME, int(PORT_NUMBER))
         server = HTTPServer(server_address, MyHTTPRequestHandler)
         print(
-            f"HTTP Server running on http://{HOST_NAME}:{PORT_NUMBER}/ use <Ctrl-C> to stop."
+            f" HTTP Server running on http://{HOST_NAME}:{PORT_NUMBER}/ use <Ctrl-C> to stop."
         )
         server.serve_forever()
     except KeyboardInterrupt:
-        print(" o <Ctrl-C> entered, stopping HTTP Server...")
+        print(" <Ctrl-C> entered, stopping HTTP Server...")
         if server:
             server.socket.close()
 
 
 if __name__ == "__main__":
-    """Starting Python program"""
+    """Starting HTTP Server"""
     run()
 else:
     print("This program is bad configured, you should be call to the module...")

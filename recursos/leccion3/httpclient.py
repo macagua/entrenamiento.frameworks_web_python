@@ -3,6 +3,7 @@ import sys
 
 
 def run(http_server):
+    """Run HTTP Client"""
     print("HTTP Client is starting...")
 
     connection = None
@@ -33,17 +34,17 @@ def run(http_server):
         if connection:
             connection.close()
     except KeyboardInterrupt:
-        print(" o <Ctrl-C> entered, stopping HTTP Client....")
+        print(" <Ctrl-C> entered, stopping HTTP Client...")
         if connection:
             connection.close()
 
 
 if __name__ == "__main__":
-    """Starting Python program"""
+    """Starting HTTP Client"""
 
     if not sys.argv[1:]:
         print(
-            "Fatal: You forgot to include the URL like 127.0.0.1:8085 from the httpserver.py module on the command line."
+            " Fatal: You forgot to include the URL like 127.0.0.1:8085 from the httpserver.py module on the command line."
         )
         print(f"Usage: python3 {sys.argv[0]} IP:PORT")
         sys.exit(2)
@@ -52,4 +53,4 @@ if __name__ == "__main__":
         http_server = sys.argv[1]
     run(http_server)
 else:
-    print("This program is bad configured, you should be call to the module....")
+    print("This program is bad configured, you should be call to the module...")
