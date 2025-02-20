@@ -1,5 +1,6 @@
-from sqlalchemy import insert, select, update, delete
-from sqlalchemy.orm import exc
+"""Módulo principal del programa"""
+
+from sqlalchemy import insert, select, update, delete, exc
 from db import Base, engine, session
 from models import Productos
 

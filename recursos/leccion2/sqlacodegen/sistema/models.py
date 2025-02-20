@@ -25,10 +25,10 @@ class Estados(Base):
     ciudades = relationship("Ciudades", back_populates="estados")
 
     def __repr__(self):
-        return f"Estados({self.nombre}, {self.codigo})"
+        return f"<Estados({self.nombre}, {self.codigo})>"
 
     def __str__(self):
-        return self.nombre
+        return f"Estado: {self.nombre}"
 
 
 class Productos(Base):
@@ -49,14 +49,13 @@ class Productos(Base):
     categoria = Column(String(25), nullable=False)
     precio = Column(Integer, nullable=False)
     status = Column(Enum("y", "n"), nullable=False)
-
     pedidos = relationship("Pedidos", back_populates="producto")
 
     def __repr__(self):
-        return f"Productos({self.nombre}, {self.categoria}, {self.precio})"
+        return f"<Productos(nombre={self.nombre}, categoria={self.categoria}, precio={self.precio})>"
 
     def __str__(self):
-        return self.nombre
+        return f"Producto: {self.nombre} ({self.categoria}) - {self.precio:.2f}"
 
 
 class Ciudades(Base):
@@ -77,15 +76,14 @@ class Ciudades(Base):
     )
     nombre = Column(String(25), nullable=False)
     capital = Column(Integer, nullable=False)
-
     estados = relationship("Estados", back_populates="ciudades")
     clientes = relationship("Clientes", back_populates="ciudades")
 
     def __repr__(self):
-        return f"Ciudades({self.nombre}, {self.estados})"
+        return f"<Ciudades({self.nombre}, {self.estados})>"
 
     def __str__(self):
-        return self.nombre
+        return f"Ciudad: {self.nombre}, {self.estados}."
 
 
 class Clientes(Base):
@@ -113,10 +111,10 @@ class Clientes(Base):
     pedidos = relationship("Pedidos", back_populates="cliente")
 
     def __repr__(self):
-        return f"Clientes({self.nombre} {self.apellido}, {self.telefono}, {self.ciudades}, {self.pedidos})"
+        return f"<Clientes({self.nombre} {self.apellido}, {self.telefono}, {self.ciudades}, {self.pedidos})>"
 
     def __str__(self):
-        return self.nombre + " " + self.apellido
+        return f"Cliente: {self.nombre} ${self.apellido}"
 
 
 class Pedidos(Base):
@@ -141,7 +139,7 @@ class Pedidos(Base):
     producto = relationship("Productos", back_populates="pedidos")
 
     def __repr__(self):
-        return f"Pedidos({self.producto} {self.fecha}, {self.status})"
+        return f"<Pedidos({self.producto} {self.fecha}, {self.status})>"
 
     def __str__(self):
-        return f"{self.producto} {self.fecha}"
+        return f"Pedido: {self.producto}, {self.fecha}"

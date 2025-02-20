@@ -1,5 +1,8 @@
-from sqlalchemy import Column, Integer, String, Float
+"""Módulo de modelos de SQLAlchemy"""
+
 from db import Base
+
+from sqlalchemy import Column, Float, Integer, String
 
 
 class Productos(Base):
@@ -28,4 +31,4 @@ class Productos(Base):
         return f"<Productos(nombre={self.nombre}, categoria={self.categoria}, precio={self.precio})>"
 
     def __str__(self):
-        return f"{self.nombre} ({self.categoria}) - ${self.precio:.2f}"
+        return f"Producto: {self.nombre} ({self.categoria}) - ${self.precio:.2f}"

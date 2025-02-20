@@ -337,7 +337,7 @@ Modulo de configuraciones del programa.
 .. literalinclude:: ../../recursos/leccion2/sqlacodegen/sistema/db.py
     :language: python
     :linenos:
-    :lines: 1-54
+    :lines: 1-55
 
 *Archivo models.py*
 
@@ -346,7 +346,7 @@ Modulo de :ref:`modelos <python_sqlalchemy_modelos>` de :ref:`SQLAlchemy <python
 .. literalinclude:: ../../recursos/leccion2/sqlacodegen/sistema/models.py
     :language: python
     :linenos:
-    :lines: 1-147
+    :lines: 1-145
 
 *Archivo main.py*
 
@@ -355,7 +355,7 @@ Modulo principal del programa.
 .. literalinclude:: ../../recursos/leccion2/sqlacodegen/sistema/main.py
     :language: python
     :linenos:
-    :lines: 1-31
+    :lines: 1-67
 
 *Archivo requirements.txt*
 
@@ -447,9 +447,40 @@ El anterior código al ejecutar debe mostrar el siguiente mensaje:
 
 .. code-block:: console
 
-    ¡Consulta todos los estados!
+    📜 Lista de Estados:
 
-    ¡Consulta todas las ciudades!
+    Estado: Amazonas
+    Estado: Anzoátegui
+    Estado: Apure
+    Estado: Aragua
+    Estado: Barinas
+    Estado: Bolívar
+    Estado: Carabobo
+    Estado: Cojedes
+    Estado: Delta Amacuro
+    Estado: Falcón
+    Estado: Guárico
+    Estado: Lara
+    Estado: Mérida
+    ...
+
+    📜 Lista de Ciudades:
+
+    Ciudad: Maroa, Estado: Amazonas.
+    Ciudad: Puerto Ayacucho, Estado: Amazonas.
+    Ciudad: San Fernando de Atabapo, Estado: Amazonas.
+    Ciudad: Anaco, Estado: Anzoátegui.
+    Ciudad: Aragua de Barcelona, Estado: Anzoátegui.
+    Ciudad: Barcelona, Estado: Anzoátegui.
+    Ciudad: Boca de Uchire, Estado: Anzoátegui.
+    Ciudad: Cantaura, Estado: Anzoátegui.
+    Ciudad: Clarines, Estado: Anzoátegui.
+    Ciudad: El Chaparro, Estado: Anzoátegui.
+    Ciudad: El Pao Anzoátegui, Estado: Anzoátegui.
+    Ciudad: El Tigre, Estado: Anzoátegui.
+    Ciudad: El Tigrito, Estado: Anzoátegui.
+    Ciudad: Guanape, Estado: Anzoátegui.
+    ...
 
 
 Asi de esta forma puede usar ``sqlacodegen`` para generar modelos ``SQLAlchemy`` desde

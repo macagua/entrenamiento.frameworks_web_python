@@ -270,11 +270,12 @@ el que te muestro a continuación:
     DB_PATH = os.path.dirname(os.path.abspath(__file__)) + os.sep
     DB_FILE = "productos.sqlite3"
 
+    # Configurar conexiones entre SQLAlchemy y SQLite3 DB API
     engine = create_engine(f"sqlite:///{DB_PATH}{DB_FILE}")
-
+    # Crear sesión con el engine de base de datos
     Session = sessionmaker(bind=engine)
     session = Session()
-
+    # Crear base declarativa
     Base = declarative_base()
 
 Al final del mismo hemos creado una clase llamada ``Base`` con el método
@@ -288,7 +289,7 @@ A continuación, le presento como debe quedar el archivo ``db.py``:
 .. literalinclude:: ../../recursos/leccion2/sqlalchemy/productos/db.py
     :language: python
     :linenos:
-    :lines: 1-20
+    :lines: 1-24
 
 Por tanto, lo siguiente que debe hacer es crear el modelo ``Productos``. Crea un
 nuevo archivo en el directorio ``productos`` llamado ``models.py`` y
@@ -297,7 +298,7 @@ añade el código que te muestro a continuación:
 .. literalinclude:: ../../recursos/leccion2/sqlalchemy/productos/models.py
     :language: python
     :linenos:
-    :lines: 1-31
+    :lines: 1-34
 
 Asi de esta forma tiene definido una clase modelo llamado ``Productos`` la cual mapea
 la tabla ``productos``.
@@ -608,7 +609,7 @@ Modulo de configuraciones del programa.
 .. literalinclude:: ../../recursos/leccion2/sqlalchemy/productos/db.py
     :language: python
     :linenos:
-    :lines: 1-20
+    :lines: 1-24
 
 *Archivo main.py*
 
@@ -617,7 +618,7 @@ Modulo de principal del programa.
 .. literalinclude:: ../../recursos/leccion2/sqlalchemy/productos/main.py
     :language: python
     :linenos:
-    :lines: 1-142
+    :lines: 1-145
 
 *Archivo models.py*
 
@@ -626,7 +627,7 @@ Modulo de :ref:`modelos <python_sqlalchemy_modelos>` de :ref:`SQLAlchemy <python
 .. literalinclude:: ../../recursos/leccion2/sqlalchemy/productos/models.py
     :language: python
     :linenos:
-    :lines: 1-31
+    :lines: 1-34
 
 *Archivo productos.sqlite3*
 

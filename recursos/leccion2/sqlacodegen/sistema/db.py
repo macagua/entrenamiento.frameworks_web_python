@@ -9,14 +9,14 @@ from sqlalchemy.ext.declarative import declarative_base
 
 load_dotenv()
 
-DB_PATH = os.path.dirname(os.path.abspath(__file__)) + os.sep
-DB_FILE = os.getenv("DB")
 ENGINE = os.getenv("ENGINE_DB")
 USER = os.getenv("USER")
 PASSW = os.getenv("PASSW")
 HOST = os.getenv("HOST")
 PORT = os.getenv("PORT")
 DB = os.getenv("DB", "sistema.db")
+DB_PATH = os.path.dirname(os.path.abspath(__file__)) + os.sep
+DB_FILE = os.getenv("DB")
 
 engine = None
 
@@ -51,5 +51,5 @@ if "engine" in globals():
     # Crear sesión con el engine de base de datos
     Session = sessionmaker(bind=engine)
     session = Session()
-
+    # Crear base declarativa
     Base = declarative_base()

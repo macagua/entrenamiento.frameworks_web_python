@@ -573,7 +573,7 @@ Modulo de principal del programa.
 .. literalinclude:: ../../recursos/leccion2/sqlite/sistema/main.py
     :language: python
     :linenos:
-    :lines: 1-132
+    :lines: 1-148
 
 
 *Archivo sistema.db*
