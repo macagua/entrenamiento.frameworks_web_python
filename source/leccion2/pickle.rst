@@ -111,6 +111,6 @@ registro en un archivo serializado de objetos python ``pickle``.
 
 .. seealso::
 
-    Consulte la sección de :ref:`lecturas suplementarias <lectura_extras_leccion2>`
+    Consulte la sección de :ref:`lecturas suplementarias <lecturas_extras_leccion2>`
 
 .. _`pickle`: https://docs.python.org/es/3/library/pickle.html
