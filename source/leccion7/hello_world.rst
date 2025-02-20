@@ -32,18 +32,21 @@ archivos dentro, a continuación se muestra:
 ::
 
     helloworld/
-        manage.py
-        helloworld/
-            __init__.py
-            settings.py
-            urls.py
-            wsgi.py
+    ├── helloworld
+    │   ├── asgi.py
+    │   ├── __init__.py
+    │   ├── settings.py
+    │   ├── urls.py
+    │   ├── views.py
+    │   └── wsgi.py
+    └── manage.py
+
 
 Si quiere entender para que funciona cada archivo consulte la
 `documentación <https://docs.djangoproject.com/en/2.1/intro/tutorial01/#creating-a-project>`_.
 
 
-Cree modulo Python llamado :file:`views.py` dentro del directorio
+Cree módulo Python llamado :file:`views.py` dentro del directorio
 :file:`~/helloworld/helloworld`
 
 ::
@@ -58,7 +61,7 @@ Agregue el siguiente contenido al archivo :file:`~/helloworld/helloworld/views.p
    :lines: 1-4
 
 
-Adapte modulo Python llamado :file:`urls.py` dentro del directorio
+Adapte módulo Python llamado :file:`urls.py` dentro del directorio
 :file:`~/helloworld/helloworld`
 
 ::
@@ -82,7 +85,8 @@ Para ejecutar aplicación Web Django, con el siguiente comando:
 
     $ python3 manage.py runserver
 
-Abrir en navegador favorito la siguiente dirección http://127.0.0.1:8000/
+De esta forma, una vez ejecutado el comando, se puede abrir desde con su navegador Web favorito
+(Mozilla Firefox, Google Chrome, etc) la siguiente dirección http://127.0.0.1:8000/
 
 .. figure:: ../_static/images/django-helloworld.png
   :class: image-inline

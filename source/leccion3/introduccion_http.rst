@@ -3,11 +3,12 @@
 Introducción a HTTP
 ===================
 
-El protocolo HTTP fue creado por Tim Berners-Lee en 1989, es el protocolo utilizado
-para acceder y publicar en la Web. Significa Protocolo de transmisión de hipertexto.
+El **protocolo Hypertext Transfer Protocol (HTTP)** fue creado por Tim Berners-Lee en
+1989, es el protocolo utilizado para acceder y publicar en la Web. Significa en espanol
+*Protocolo de transmisión de hipertexto*.
 
-Actualmente el World Wide Web Consortium (W3C) es la entidad encargada de publicar
-la especificación del protocolo HTTP, entre otras cosas.
+Actualmente el `World Wide Web Consortium (W3C) <https://www.w3.org/>`_ es la entidad
+encargada de publicar la especificación del protocolo HTTP, entre otras cosas.
 
 HTTP está basado en una arquitectura cliente-servidor en la que se intercambian peticiones
 (requests) por parte del cliente y respuestas (responses) por parte del servidor.
@@ -15,25 +16,28 @@ HTTP está basado en una arquitectura cliente-servidor en la que se intercambian
 Características
 ---------------
 
--  **Sin estado**. Es decir, que cada una de las transacciones
-   request/response que se realizan no afectan al estado del cliente o
-   del servidor, además de que cada transacción es totalmente
-   independiente de el resto.
+-  **Sin estado**. Es decir, que cada una de las transacciones request/response
+   que se realizan no afectan al estado del cliente o del servidor, además de que
+   cada transacción es totalmente independiente de el resto.
 
--  **Independiente del contenido**. Aún cuando es muy común que un
-   servidor HTTP entregue documentos HTML, pero no existe restricción en
-   el tipo de recurso al que se pueda acceder.
+-  **Independiente del contenido**. Aún cuando es muy común que un servidor HTTP
+   entregue documentos HTML, pero no existe restricción en el tipo de recurso al
+   que se pueda acceder.
 
--  **Sin conexión**. Una vez que la transacción request/response es
-   terminada, la conexión entre cliente y servidor es destruida.
+-  **Sin conexión**. Una vez que la transacción request/response es terminada, la
+   conexión entre cliente y servidor es destruida.
 
 
 Uniform Resource Identifiers (URI)
 
-Como su nombre lo indica, los Identificadores Recursos Uniformes siempre apuntan hacia un
-recurso al que se puede acceder.
+Como su nombre lo indica, los Identificadores Recursos Uniformes siempre apuntan
+hacia un recurso al que se puede acceder.
 
-**Sintaxis:** URI = "http:" "//" host [ ":" port ] [ abs\_path [ "?" query ]]
+**Sintaxis:**
+
+::
+
+   URI = "http:" "//" host [ ":" port ] [ abs\_path [ "?" query ]]
 
 Peticiones, respuestas y sesiones
 ---------------------------------
@@ -59,18 +63,22 @@ emite cuando un recurso no es encontrado.
 Tipos por el número inicial
 ''''''''''''''''''''''''''''
 
--  1xx Información.
-
--  2xx Éxito.
-
--  3xx Redireccionamiento.
-
--  4xx Error del cliente.
-
--  5xx Error del servidor.
++------------+---------------------+
+| **Método** | **Explicación**     |
++------------+---------------------+
+| ``1xx``    | Información.        |
++------------+---------------------+
+| ``2xx``    | Éxito.              |
++------------+---------------------+
+| ``3xx``    | Redireccionamiento. |
++------------+---------------------+
+| ``4xx``    | Error del cliente.  |
++------------+---------------------+
+| ``5xx``    | Error del servidor. |
++------------+---------------------+
 
 Puede consultar los mensajes de estado de HTTP en el siguiente
-enlace: https://www.restapitutorial.com/httpstatuscodes.html
+enlace: https://www.restapitutorial.com/httpstatuscodes
 
 Métodos HTTP
 ------------
@@ -79,32 +87,40 @@ El protocolo HTTP define métodos o "verbos", los cuales permiten
 realizar peticiones específicas entre un cliente y un servidor. Algunos
 de los métodos más utilizados son:
 
--  **GET** se utiliza para obtener los datos de un recurso a partir de
-   una URI. La información enviada mediante *GET* puede ser añadida a
-   marcadores y puede ser registrada en las bitácoras del servidor.
++--------------+--------------------------------------------------------------------------+
+| **Método**   | **Explicación**                                                          |
++--------------+--------------------------------------------------------------------------+
+| ``GET``      | Se utiliza para obtener los datos de un recurso a partir de una URI. La  |
+|              | información enviada mediante ``GET`` puede ser añadida a marcadores y    |
+|              | puede ser registrada en las bitácoras del servidor.                      |
++--------------+--------------------------------------------------------------------------+
+| ``HEAD``     | Es similar al método ``GET``, pero sólo proporciona el encabezado de la  |
+|              | la petición y el mensaje de estado resultante.                           |
++--------------+--------------------------------------------------------------------------+
+| ``POST``     | Se utiliza para crear un recurso. Los datos enviados no son expuestos en |
+|              | la URI sino que son enviados dentro de la estructura de la petición.     |
++--------------+--------------------------------------------------------------------------+
+| ``PUT``      | Es un método similar a ``POST``, pero puede ser utilizado para sustituir |
+|              | un recurso existente o incluso crearlos en casos específicos.            |
++--------------+--------------------------------------------------------------------------+
+| ``PATCH``    | Es un método que se utiliza para modificar parcialmente un recurso.      |
++--------------+--------------------------------------------------------------------------+
 
--  **HEAD** es similar al método GET, pero sólo proporciona el
-   encabezado de la petición y el mensaje de estado resultante.
-
--  **POST** se utiliza para crear un recurso. Los datos enviados no son
-   expuestos en la URI sino que son enviados dentro de la estructura de
-   la petición.
-
--  **PUT** es un método similar a **POST**, pero puede ser utilizado
-   para sustituir un recurso existente o incluso crearlos en casos
-   específicos.
-
--  **PATCH** es un método que se utiliza para modificar parcialmente
-   un recurso.
-
-Existen algunos otros métodos como *OPTIONS*, *TRACE* y *CONNECT*,
+Existen algunos otros métodos como ``OPTIONS``, ``TRACE`` y ``CONNECT``,
 pero no están contemplados en el alcance de este taller. Puede consultar
 más al respecto en https://developer.mozilla.org/es/docs/Web/HTTP/Methods.
 
 Idempotencia
 ''''''''''''
-Un método es 'idempotente' cuando no importan las veces que se envíe la
-misma petición, ésta dará el mismo resultado.
+
+En matemática y lógica, la *"idempotencia"* es la propiedad para realizar una
+acción determinada varias veces y aun así conseguir el mismo resultado que se
+obtendría si se realizase una sola vez. Un elemento que cumple esta propiedad
+es un elemento *"idempotente"*, o un *"idempotente"*.
+
+Por consiguiente en un lenguaje de programación, un método es *"idempotente"*
+cuando no importan las veces que se envíe la misma petición, ésta dará el
+mismo resultado.
 
 Seguridad
 '''''''''
@@ -115,24 +131,24 @@ accede.
 +--------------+-----------------+------------+
 | *Método*     | *Idempotente*   | *Seguro*   |
 +==============+=================+============+
-| **GET**      | Sí              | Sí         |
+| ``GET``      | Sí              | Sí         |
 +--------------+-----------------+------------+
-| **HEAD**     | Sí              | Sí         |
+| ``HEAD``     | Sí              | Sí         |
 +--------------+-----------------+------------+
-| **DELETE**   | Sí              | No         |
+| ``DELETE``   | Sí              | No         |
 +--------------+-----------------+------------+
-| **POST**     | Sí              | No         |
+| ``POST``     | Sí              | No         |
 +--------------+-----------------+------------+
-| **PUT**      | Sí              | No         |
+| ``PUT``      | Sí              | No         |
 +--------------+-----------------+------------+
-| **PATCH**    | No              | No         |
+| ``PATCH``    | No              | No         |
 +--------------+-----------------+------------+
 
 Advertencia sobre los métodos seguros
 '''''''''''''''''''''''''''''''''''''
 
 La seguridad de un método depende de su implementación y aún cuando se
-considera como una mala práctica, es posible que los métodos como *GET*
+considera como una mala práctica, es posible que los métodos como ``GET``
 sean capaces de modificar los recursos a los que acceden.
 
 

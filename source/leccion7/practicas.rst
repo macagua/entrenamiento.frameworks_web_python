@@ -20,13 +20,14 @@ Instalación de Django
 
     .. code-block:: console
 
-        $ virtualenv --python=/usr/bin/python3 venv
+        $ virtualenv --python /usr/bin/python3 venv
         $ source ./venv/bin/activate
 
 #. Instalar ultima versión Django, con el siguiente comando:
 
     .. code-block:: console
 
+        $ pip3 install -U pip
         $ pip3 install Django==2.1.2
 
 #. Crear proyecto Django, con el siguiente comando:
@@ -145,7 +146,7 @@ Usando al Django Admin http://localhost:8000/admin/ y el usuario previamente cre
 
 
 #. Iniciar sesión de usuario con cada usuario previamente cargado y verificar los siguientes
-   permisos de acceso para agregar, buscar, modificar, eliminar para el modulo ``Polls``.
+   permisos de acceso para agregar, buscar, modificar, eliminar para el módulo ``Polls``.
 
 
 ----

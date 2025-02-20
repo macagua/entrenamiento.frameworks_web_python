@@ -27,7 +27,7 @@ parts/
 sdist/
 var/
 venv/
-py3.7/
+py3.*/
 *.bnk
 *.egg-info/
 .installed.cfg
@@ -70,3 +70,10 @@ docs/_build/
 
 # Visual Studio Code
 *.code-workspace
+
+# Database
+*.pkl
+*.db
+*.sqlite3
+*.sqlite
+*.f*

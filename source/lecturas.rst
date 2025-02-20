@@ -170,15 +170,28 @@ Introducción a HTTP
 Cliente y servidor HTTP
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-- `http.server — HTTP servers — Python 3.7 documentation <https://docs.python.org/3.7/library/http.server.html>`_.
+- `http.server — HTTP servers — Python 3.11 documentation <https://docs.python.org/3.11/library/http.server.html>`_.
 
 - `Python: Let’s Create a Simple HTTP Server (Tutorial) <https://www.afternerd.com/blog/python-http-server/>`_.
+
+
+Librería requests
+^^^^^^^^^^^^^^^^^
+
+- `requests <https://requests.readthedocs.io/en/latest/>`_, Requests: HTTP para Humanos.
 
 
 Cliente httpie
 ^^^^^^^^^^^^^^
 
-- `cURL <https://curl.se/>`_, utilidad de línea de comandos y libreria para transferir datos con URL.
+- `cURL <https://curl.se/>`_, utilidad de línea de comandos y librería para transferir datos con URL.
+
+- `Qué es el comando cURL y cómo usarlo <https://blog.hubspot.es/website/comando-curl>`_.
+
+
+Cliente httpie
+^^^^^^^^^^^^^^
+
 
 - `HTTPie - línea de comandos cliente HTTP <https://httpie.io/>`_.
 
@@ -186,11 +199,7 @@ Cliente httpie
 
 - `curl vs HTTPie <https://daniel.haxx.se/docs/curl-vs-httpie.html>`_.
 
-
-Librería requests
-^^^^^^^^^^^^^^^^^
-
-- `requests <https://requests.readthedocs.io/en/latest/>`_, Requests: HTTP para Humanos.
+- `HTTPie, un cliente HTTP de línea de comandos disponible para Ubuntu <https://ubunlog.com/httpie-un-cliente-http-de-linea-de-comandos-disponible-para-ubuntu/>`_
 
 
 .. _lecturas_extras_leccion4:
@@ -204,10 +213,18 @@ Introducción a WSGI
 
 - `WSGI <https://wsgi.readthedocs.io/en/latest/>`_.
 
-- wsgiref - `WSGI Utilities and Reference Implementation <https://docs.python.org/3.7/library/wsgiref.html>`_.
+- wsgiref - `WSGI Utilities and Reference Implementation <https://docs.python.org/3.11/library/wsgiref.html>`_.
 
-.. todo::
-    TODO terminar de escribir esta sección
+- `WSGI - Wikipedia <https://es.wikipedia.org/wiki/WSGI>`_.
+
+- `Python Web Applications: The basics of WSGI <https://www.sitepoint.com/python-web-applications-the-basics-of-wsgi/>`_.
+
+- `uWSGI project <https://uwsgi-docs.readthedocs.io/en/latest/>`_.
+
+- `Learn about WSGI <https://wsgi.readthedocs.io/en/latest/learn.html>`_.
+
+..
+  - `WSGI: The Server-Application Interface for Python <https://www.toptal.com/python/pythons-wsgi-server-application-interface>`_.
 
 
 .. _lecturas_extras_leccion5:
@@ -222,13 +239,21 @@ Lección 5 - Frameworks Web
 
 - :ref:`Django <lecturas_extras_leccion7>`.
 
-- `Sanic framework <https://sanic.dev/>`_.
+- `Pyramid framework <https://trypyramid.com/>`_.
+
+  - `Pyramid - A Python web framework <https://github.com/Pylons/pyramid>`_.
+
+- `Tornado framework <https://www.tornadoweb.org/en/stable/>`_.
+
+  - `Tornado - A Python web framework <https://github.com/tornadoweb/tornado>`_.
+
+- `Sanic framework <https://sanic.dev/en/>`_.
 
   - `Sanic Async Python 3.6+ web server/framework <https://github.com/sanic-org/sanic>`_.
 
-.. todo::
-    TODO terminar de escribir esta sección
+- `FastAPI framework <https://fastapi.tiangolo.com/>`_.
 
+  - `FastAPI framework - GitHub <https://github.com/fastapi/fastapi>`_.
 
 .. _lecturas_extras_leccion6:
 
@@ -239,9 +264,9 @@ Lección 6 - Flask
 Flask
 ^^^^^
 
-- `Sitio Web de Flask <https://flask.palletsprojects.com/en/2.2.x/>`_.
+- `Sitio Web de Flask <https://flask.palletsprojects.com/en/stable/>`_.
 
-- `Flask documentation <https://flask.palletsprojects.com/en/2.2.x/>`_.
+- `Flask documentation <https://flask.palletsprojects.com/en/stable/>`_.
 
 - `Flask - PyPI <https://pypi.org/project/Flask>`_.
 
@@ -251,7 +276,7 @@ Flask
 Aplicación CRUD
 ^^^^^^^^^^^^^^^
 
-- `Flask-SQLAlchemy <https://flask-sqlalchemy.palletsprojects.com/en/3.0.x/>`_.
+- `Flask-SQLAlchemy <https://flask-sqlalchemy.palletsprojects.com/en/stable/>`_.
 
 - `Flask-SQLAlchemy - PyPI <https://pypi.org/project/Flask-SQLAlchemy/>`_.
 
@@ -263,14 +288,11 @@ Admin Dashboard
 
 - `Flask-Admin - PyPI <https://pypi.org/project/Flask-Admin/>`_.
 
-- `flask-admin/flask-admin: Simple and extensible administrative interface framework for Flask <https://github.com/flask-admin/flask-admin/>`_.
+- `flask-admin/flask-admin: Simple and extensible administrative interface framework for Flask <https://github.com/pallets-eco/flask-admin>`_.
 
-- `Flask-Security <https://flask-security.readthedocs.io/en/3.0.0/>`_.
+- `Flask-Security <https://flask-security.readthedocs.io/en/stable/>`_.
 
 - `Flask-Security - PyPI <https://pypi.org/project/Flask-Security/>`_.
-
-.. todo::
-    TODO terminar de escribir esta sección
 
 
 .. _lecturas_extras_leccion7:
@@ -281,15 +303,12 @@ Lección 7 - Django
 
 - `Django project <https://www.djangoproject.com/>`_.
 
-- `Django project 2.1 Documentation <https://docs.djangoproject.com/es/2.1/>`_.
+- `Django project 2.1 Documentation <https://docs.djangoproject.com/es/5.1/>`_.
 
-- `Parte 1 del tutorial Escribiendo su primera aplicación en Django <https://docs.djangoproject.com/es/2.1/intro/tutorial01/>`_.
+- `Parte 1 del tutorial Escribiendo su primera aplicación en Django <https://docs.djangoproject.com/es/5.1/intro/tutorial01/>`_.
 
-- `Parte 2 del tutorial Escribiendo su primera aplicación en Django <https://docs.djangoproject.com/es/2.1/intro/tutorial02/>`_.
+- `Parte 2 del tutorial Escribiendo su primera aplicación en Django <https://docs.djangoproject.com/es/5.1/intro/tutorial02/>`_.
 
 - `Django en PyPI <https://pypi.org/project/Django>`_.
 
-- `Framework Web Django (Python) - Aprende sobre desarrollo web - MDN <https://developer.mozilla.org/es/docs/Learn/Server-side/Django>`_.
-
-.. todo::
-    TODO terminar de escribir esta sección
+- `Framework Web Django (Python) - Aprende sobre desarrollo web - MDN <https://developer.mozilla.org/es/docs/Learn_web_development/Extensions/Server-side/Django>`_.

@@ -1,24 +1,24 @@
-version: '3.9'
-
 services:
   db:
+    env_file:
+      - .env
     image: "postgres:${POSTGRES_VERSION}"
     container_name: ${POSTGRES_CONTAINER}
+    restart: always
     environment:
       - POSTGRES_USER=${USER}
       - POSTGRES_PASSWORD=${PASSW}
       - POSTGRES_DB=${DB}
     ports:
-      - ${PORT}:5432
+      - "${PORT}:5432"
     volumes:
-      - db-data:/var/lib/postgresql/data/pgdata
-    restart: always
+      - pg_data:/var/lib/postgresql/data
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -d ${DB} -g ${HOST} -p ${PORT} -u ${USER}"]
+      start_period: 30s
       interval: 5s
       timeout: 5s
       retries: 5
-      start_period: 30s
 
 volumes:
-  db-data:
+  pg_data:

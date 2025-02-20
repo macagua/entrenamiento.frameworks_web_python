@@ -1,7 +1,6 @@
-"""
-    El tipado dinámico significa que los objetos en tiempo de
-    ejecución (valores) tienen un tipo, a diferencia del tipado
-    estático donde las variables tienen un tipo.
+"""El tipado dinámico significa que los objetos en tiempo de
+ejecución (valores) tienen un tipo, a diferencia del tipado
+estático donde las variables tienen un tipo.
 
     >>> variable = 11
     >>> print(variable, type(variable))

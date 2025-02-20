@@ -22,32 +22,30 @@ SQL_SCRIPTS = """UPDATE clientes SET codigo_postal = ? WHERE id = ?;"""
 def actualizar_registro():
     """Función para la actualización de registro de la tabla"""
 
+    conexion = None
     try:
         # Crear la instancia de DB y pasar el nombre del archivo
         conexion = sqlite3.connect(DB)
+        # Crear un cursor para la base de datos
         cursor = conexion.cursor()
-        logging.info(f"¡Conectado a la base de datos {DB_FILE}!\n")
-
-        count = cursor.executemany(SQL_SCRIPTS, MULTIPLE_COLUMNS)
+        logging.info(f"¡Conectado a la base de datos '{DB_FILE}'!\n")
+        # Ejecutar SQL
+        cursor.executemany(SQL_SCRIPTS, MULTIPLE_COLUMNS)
         # Guardar los cambios en la base de datos
         conexion.commit()
         logging.info(
-            "¡Fueron actualizado(s) {} registro(s) correctamente en la tabla!\n".format(
-                cursor.rowcount
-            )
+            f"¡Fueron actualizado(s) {cursor.rowcount} registro(s) correctamente en la tabla!\n"
         )
+        # Cerrar cursor
         cursor.close()
-
     except sqlite3.Error as error:
-        print("¡Fallo la actualización de registro(s) en la tabla!", error)
+        logging.error(f"¡Fallo la actualización de registro(s) en la tabla!: {error}")
     finally:
         if conexion:
             # Cerrar la conexión a la base de datos
             conexion.close()
             logging.info(
-                "¡La conexión SQLite a la base de datos {} fue cerrada!\n".format(
-                    DB_FILE
-                )
+                f"¡La conexión SQLite a la base de datos '{DB_FILE}' fue cerrada!\n"
             )
 
 

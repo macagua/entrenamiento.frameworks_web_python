@@ -10,7 +10,7 @@ DB_FILE = os.getenv("DB")
 INSERT_MULTIPLE_COLUMNS = [
     (1, "Leonardo", "Caballero", "5001", "+58-412-4734567"),
     (2, "Ana", "Poleo", "6302", "+58-426-5831297"),
-    (3, "Pedro", "Lopez", "4001", "+58-414-2360943"),
+    (3, "Manuel", "Matos", "4001", "+58-414-2360943"),
 ]
 
 # Script INSERT SQL a usar al ingresar datos

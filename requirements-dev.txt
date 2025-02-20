@@ -12,7 +12,6 @@ platformdirs==2.5.2
 pre-commit==2.20.0
 PyYAML==6.0
 toml==0.10.2
-virtualenv==20.26.6
 
 # https://pypi.org/project/pyupgrade/
 pyupgrade==2.37.3

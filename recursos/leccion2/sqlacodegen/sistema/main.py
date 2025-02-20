@@ -1,4 +1,4 @@
-""" Modulo principal del programa """
+"""Módulo principal del programa"""
 
 from db import session
 from models import Estados, Ciudades

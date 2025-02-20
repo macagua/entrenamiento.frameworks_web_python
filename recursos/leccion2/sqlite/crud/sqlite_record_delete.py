@@ -15,28 +15,28 @@ SQL_SCRIPTS = """DELETE FROM clientes WHERE id = 3;"""
 def eliminar_registro():
     """Función para la eliminación de registro de la tabla"""
 
+    conexion = None
     try:
+        # Crear la instancia de DB y pasar el nombre del archivo
         conexion = sqlite3.connect(DB)
+        # Crear un cursor para la base de datos
         cursor = conexion.cursor()
-        logging.info(f"¡Conectado a la base de datos {DB_FILE}!\n")
-
-        # Eliminar un fila de registro simple
+        logging.info(f"¡Conectado a la base de datos '{DB_FILE}'!\n")
+        # Ejecutar SQL
         cursor.execute(SQL_SCRIPTS)
         # Guardar los cambios en la base de datos
         conexion.commit()
         logging.info("¡Registro eliminado correctamente!\n")
+        # Cerrar cursor
         cursor.close()
-
     except sqlite3.Error as error:
-        print("¡Fallo la eliminación de registro(s) en la tabla!", error)
+        logging.error(f"¡Fallo la eliminación de registro(s) en la tabla!: {error}")
     finally:
         if conexion:
             # Cerrar la conexión a la base de datos
             conexion.close()
             logging.info(
-                "¡La conexión SQLite a la base de datos {} fue cerrada!\n".format(
-                    DB_FILE
-                )
+                f"¡La conexión SQLite a la base de datos '{DB_FILE}' fue cerrada!\n"
             )
 
 

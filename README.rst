@@ -5,7 +5,7 @@ Entrenamiento "Frameworks de Desarrollo Web en Python"
 ======================================================
 
 Repositorio de manuales y recursos del entrenamiento "Frameworks de Desarrollo Web en
-`Python 3.7`_" realizado por la empresa `Covantec R.L`_.
+`Python 3.11`_" realizado por la empresa `Covantec R.L`_.
 
 .. contents :: :local:
 
@@ -41,12 +41,11 @@ los siguientes comando:
 
 ::
 
-  $ sudo apt update
-  $ sudo apt install -y python3-dev python3-pip python-setuptools git
+  $ sudo apt update && sudo apt upgrade -y
+  $ sudo apt install -y python3-dev python3-pip python3-virtualenv python3-setuptools git
   $ sudo apt install -y texlive texlive-base texlive-latex-base texlive-extra-utils \
                         texlive-font-utils texlive-fonts-recommended texlive-latex-extra \
                         texlive-latex-recommended texlive-lang-spanish dvi2ps dvipng latexmk
-  $ sudo pip3 install virtualenv
 
 
 Descargar repositorio
@@ -59,6 +58,8 @@ siguientes comando:
 
   $ cd $HOME
   $ git clone https://github.com/macagua/entrenamiento.frameworks_web_python.git
+  $ git submodule update --init --recursive
+  $ git submodule update --init --remote --recursive
 
 Crear entorno virtual de Python para reconstruir este proyecto, ejecutando el siguiente
 comando:
@@ -66,14 +67,14 @@ comando:
 ::
 
   $ cd ~/entrenamiento.frameworks_web_python
-  $ virtualenv --python=/usr/bin/python3 venv
+  $ virtualenv --python /usr/bin/python3 venv
   $ source ./venv/bin/activate
 
 Luego instale dependencias del paquete ``Sphinx``, ejecutando el siguiente comando:
 
 ::
 
-  (venv)$ pip install -r requirements-dev.txt
+  (venv)$ pip3 install -r requirements-dev.txt
 
 
 Recursos del entrenamiento
@@ -143,6 +144,6 @@ directorio ``docs`` tanto en el idioma Ingles (LICENSE.rst) como el idioma Espa√
 (LICENSE.es.rst).
 
 .. _`Covantec R.L`: https://github.com/Covantec
-.. _`Python 3.7`: https://docs.python.org/es/3.7/
+.. _`Python 3.11`: https://docs.python.org/es/3.11/
 .. _`entrenamiento.frameworks_web_python`: https://github.com/macagua/entrenamiento.frameworks_web_python
 .. _`ticket de soporte`: https://github.com/macagua/entrenamiento.frameworks_web_python/issues/new

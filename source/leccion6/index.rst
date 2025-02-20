@@ -8,7 +8,7 @@ aplicaciones web rápidamente y con un mínimo número de líneas de
 código.
 
 En esta lección se busca hacer una introducción al Framework Web
-Flask, su instalación, y algunas practicas útiles de casos básicos
+Flask, su instalación, y algunas prácticas útiles de casos básicos
 de trabajo con el mismo.
 
 .. figure:: ../_static/images/flask.jpg

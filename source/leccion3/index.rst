@@ -3,24 +3,23 @@
 Protocolo HTTP
 ==============
 
-En esta lección se busca hacer una introducción al Protocolo HTTP
+En esta lección se busca hacer una introducción al protocolo HTTP
 en Python, sus características, instalación de clientes HTTP,
-interacciones con un servidor HTTP y los recursos mas destacados
-disponibles en la Web para tomar en cuenta. A continuación el temario
-de esta lección:
-
-.. todo::
-    TODO Escribir la introducción a la sección "Protocolo HTTP en Python".
+instalación e interacciones con un servidor HTTP y los recursos mas
+destacados disponibles en la Web para tomar en cuenta. A continuación
+el temario de esta lección:
 
 
 .. toctree::
    :maxdepth: 2
 
    introduccion_http
-   http_server
+   http_examples
    http_client
-   httpie
    requests
+   curl
+   httpie
+   http_server
 
 .. seealso::
 

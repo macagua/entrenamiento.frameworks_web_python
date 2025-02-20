@@ -51,7 +51,7 @@ la técnica *herencia simple* de Clases en Python 3:
 .. literalinclude:: ../../recursos/leccion1/clases.py
    :language: python
    :linenos:
-   :lines: 6-189
+   :lines: 4-191
 
 
 ----
@@ -68,7 +68,7 @@ la técnica *herencia simple* de Clases en Python 3:
 .. tip::
     Para ejecutar el código :file:`fuertemente_tipados.py`, :file:`tipado_dinamico.py`
     y :file:`clases.py`, abra una consola de comando, acceda al directorio donde se
-    encuentra ambos programas:
+    encuentra los programas:
 
     ::
 
@@ -102,7 +102,7 @@ la técnica *herencia simple* de Clases en Python 3:
 .. disqus::
 
 .. commets:
-	http://jupyter.org
-	https://ipython.org/ipython-doc/3/notebook/notebook.html#introduction
-	Primeros pasos con Jupyter Notebook https://www.adictosaltrabajo.com/tutoriales/primeros-pasos-con-jupyter-notebook/
-	https://github.com/Covantec/training.python_web/blob/master/notebooks/Networking%20%26%20Sockets.ipynb
+    http://jupyter.org
+    https://ipython.org/ipython-doc/3/notebook/notebook.html#introduction
+    Primeros pasos con Jupyter Notebook https://www.adictosaltrabajo.com/tutoriales/primeros-pasos-con-jupyter-notebook/
+    https://github.com/Covantec/training.python_web/blob/master/notebooks/Networking%20%26%20Sockets.ipynb

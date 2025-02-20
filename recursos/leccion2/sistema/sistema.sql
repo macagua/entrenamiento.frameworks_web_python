@@ -5,75 +5,79 @@
 -- ======================================================================
 
 CREATE TABLE productos
-  (
-    id           int           unique not null,
-    nombre       varchar(11)   not null,
-    descripcion  varchar(25)   not null,
-    categoria    varchar(25)   not null,
-    precio       int           not null,
-    status       char(1)       not null,
+(
+    id int UNIQUE NOT NULL,
+    nombre varchar(11) NOT NULL,
+    descripcion varchar(25) NOT NULL,
+    categoria varchar(25) NOT NULL,
+    precio int NOT NULL,
+    status char(1) NOT NULL,
 
-    primary key(id),
+    PRIMARY KEY (id),
 
-    CHECK(status IN ('y', 'n'))
-  );
+    CHECK (status IN ('y', 'n'))
+);
 
 -- ======================================================================
 
 CREATE TABLE estados
-  (
-    id      int           unique not null,
-    nombre  varchar(25)   not null,
-    codigo  varchar(2)    not null,
+(
+    id int UNIQUE NOT NULL,
+    nombre varchar(25) NOT NULL,
+    codigo varchar(2) NOT NULL,
 
-    primary key(id)
-  );
+    PRIMARY KEY (id)
+);
 
 -- ======================================================================
 
 CREATE TABLE ciudades
-  (
-    id         int           unique not null,
-    id_estado  int           not null,
-    nombre     varchar(25)   not null,
-    capital    int           not null,
+(
+    id int UNIQUE NOT NULL,
+    id_estado int NOT NULL,
+    nombre varchar(25) NOT NULL,
+    capital int NOT NULL,
 
-    primary key(id),
+    PRIMARY KEY (id),
 
-    foreign key(id_estado) references estados(id) on update CASCADE on delete CASCADE
-  );
+    FOREIGN KEY (id_estado) REFERENCES estados (
+        id
+    ) ON UPDATE CASCADE ON DELETE CASCADE
+);
 
 -- ======================================================================
 
 CREATE TABLE clientes
-  (
-    id             int           unique not null,
-    nombre         varchar(25)   not null,
-    apellido       varchar(25)   not null,
-    codigo_postal  int           not null,
-    telefono       varchar(11)   not null,
+(
+    id int UNIQUE NOT NULL,
+    nombre varchar(25) NOT NULL,
+    apellido varchar(25) NOT NULL,
+    codigo_postal int NOT NULL,
+    telefono varchar(20) NOT NULL,
 
-    primary key(id),
+    PRIMARY KEY (id),
 
-    foreign key(codigo_postal) references ciudades(id) on update CASCADE on delete CASCADE
-  );
+    FOREIGN KEY (codigo_postal) REFERENCES ciudades (
+        id
+    ) ON UPDATE CASCADE ON DELETE CASCADE
+);
 
 -- ======================================================================
 
 CREATE TABLE pedidos
-  (
-    id           int       unique not null,
-    cliente_id   int       not null,
-    fecha        date      not null,
-    producto_id  int       not null,
-    status       char(1)   not null,
+(
+    id int UNIQUE NOT NULL,
+    cliente_id int NOT NULL,
+    fecha date NOT NULL,
+    producto_id int NOT NULL,
+    status char(1) NOT NULL,
 
-    primary key(id),
+    PRIMARY KEY (id),
 
-    foreign key(cliente_id) references clientes(id),
-    foreign key(producto_id) references productos(id),
+    FOREIGN KEY (cliente_id) REFERENCES clientes (id),
+    FOREIGN KEY (producto_id) REFERENCES productos (id),
 
-    CHECK(status IN ('y', 'n'))
-  );
+    CHECK (status IN ('y', 'n'))
+);
 
 -- ======================================================================

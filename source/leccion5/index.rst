@@ -20,7 +20,7 @@ actividades comunes usadas en desarrollos web.
 
   Frameworks Web
 
-Por ejemplo, muchos framework proporcionan librerias para acceder a
+Por ejemplo, muchos framework proporcionan librerías para acceder a
 :ref:`bases de datos <python_leccion2>`, estructuras para plantillas, gestión
 de sesiones, y con frecuencia facilitan la reutilización de código.
 
@@ -35,9 +35,42 @@ Frameworks Web en Python
 
   Frameworks Web en Python
 
-.. todo::
-    TODO Escribir la introducción sección "Frameworks Web en Python".
 
+Python es un lenguaje de programación muy popular para el desarrollo web
+debido a su simplicidad y legibilidad. Existen numerosos frameworks web
+en Python que facilitan la creación de aplicaciones web robustas y
+escalables. Estos frameworks proporcionan herramientas y bibliotecas que
+simplifican tareas comunes como el manejo de solicitudes HTTP, la gestión
+de bases de datos, la autenticación de usuarios y la generación de
+plantillas HTML.
+
+Entre los frameworks web más conocidos en Python se encuentran Django,
+Flask, Pyramid y FastAPI. Cada uno de estos frameworks tiene sus propias
+características y ventajas, lo que permite a los desarrolladores elegir
+el que mejor se adapte a sus necesidades específicas.
+
+- :doc:`Flask <../leccion7/index>`: Un microframework ligero y flexible
+  que permite a los desarrolladores crear aplicaciones web rápidamente.
+  Flask es conocido por su simplicidad y su capacidad para ser extendido
+  con diversas extensiones.
+- :doc:`Django <../leccion6/index>`: Un framework de alto nivel que
+  promueve el desarrollo rápido y el diseño limpio y pragmático.
+  Incluye una gran cantidad de funcionalidades integradas, como un
+  ORM (Object-Relational Mapping), un sistema de autenticación y un
+  panel de administración.
+- **Pyramid**: Un framework que se adapta tanto a proyectos pequeños
+  como a aplicaciones complejas. Pyramid es muy flexible y permite a
+  los desarrolladores elegir los componentes que desean utilizar.
+- **FastAPI**: Un framework moderno y de alto rendimiento para construir
+  APIs con Python 3.7+ basado en las anotaciones de tipo estándar
+  de Python. FastAPI es conocido por su rapidez y eficiencia, y es ideal
+  para aplicaciones que requieren un alto rendimiento.
+
+Cada uno de estos frameworks tiene una comunidad activa y una amplia
+documentación, lo que facilita el aprendizaje y la resolución de problemas.
+Al elegir un framework web en Python, es importante considerar factores
+como la complejidad del proyecto, las necesidades de rendimiento y las
+preferencias personales del equipo de desarrollo.
 
 ----
 

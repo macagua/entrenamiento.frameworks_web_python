@@ -7,7 +7,7 @@
 Frameworks de Desarrollo Web en Python
 ======================================
 
-Repositorio de manuales y recursos del entrenamiento **"Frameworks de Desarrollo Web en** `Python 3.7`_ -
+Repositorio de manuales y recursos del entrenamiento **"Frameworks de Desarrollo Web en** `Python 3.11`_ -
 **Nivel básico"**.
 
 .. warning::
@@ -70,4 +70,4 @@ Búsqueda
 
 * :ref:`search`
 
-.. _`Python 3.7`: https://docs.python.org/es/3.7/
+.. _`Python 3.11`: https://docs.python.org/es/3.11/

@@ -43,13 +43,13 @@ a continuación se presentan el correspondiente comando de tu sistema operativo:
 
       .. code-block:: console
 
-          $ pip install git+https://github.com/agronholm/sqlacodegen.git@3.0.0rc1#egg=sqlacodegen
+          $ pip3 install git+https://github.com/agronholm/sqlacodegen.git@3.0.0rc1#egg=sqlacodegen
 
    .. group-tab:: Windows
 
       .. code-block:: console
 
-          > pip install git+https://github.com/agronholm/sqlacodegen.git@3.0.0rc1#egg=sqlacodegen
+          > pip3 install git+https://github.com/agronholm/sqlacodegen.git@3.0.0rc1#egg=sqlacodegen
 
 
 Puede probar si la instalación se realizo correctamente, ejecutando el siguiente
@@ -61,13 +61,13 @@ comando correspondiente a tu sistema operativo:
 
       .. code-block:: console
 
-          $ python -c "import sqlacodegen ; print(sqlacodegen.__name__)"
+          $ python3 -c "import sqlacodegen ; print(sqlacodegen.__name__)"
 
    .. group-tab:: Windows
 
       .. code-block:: console
 
-          > python -c "import sqlacodegen ; print(sqlacodegen.__name__)"
+          > python3 -c "import sqlacodegen ; print(sqlacodegen.__name__)"
 
 
 Si muestra el nombre del paquete como ``sqlacodegen``, tiene correctamente instalada
@@ -94,7 +94,7 @@ SQLite
 Para configurar el ``engine`` con ``SQLite`` debe definir la :ref:`cadena de conexión <python_sqlite3_conn_strs>`
 que esta compuesto por varios parámetros.
 
-Los parámetros deben ser reemplazadas con sus propios datos en la linea de comando:
+Los parámetros deben ser reemplazadas con sus propios datos en la línea de comando:
 
 .. code-block:: console
 
@@ -123,14 +123,14 @@ MySQL
 
 Para configurar el ``engine`` con ``MySQL`` debe definir la :ref:`cadena de conexión <python_mysql_conn_strs>`
 que esta compuesto por varios parámetros, los cuales deben ser reemplazadas con sus propios datos
-en la linea de comando con el comando ``sqlacodegen``.
+en la línea de comando con el comando ``sqlacodegen``.
 
 .. tip::
     Para conectarte al servidor ``MySQL`` necesite el paquete :ref:`PyMySQL <python_mysql_instalar>`.
 
 Luego ya teniendo instalado el paquete ``PyMySQL`` debe ejecutar el siguiente comando
 de ``sqlacodegen``, los parámetros deben ser reemplazadas con sus propios datos en la
-linea de comando:
+línea de comando:
 
 .. code-block:: console
 
@@ -160,14 +160,14 @@ PostgreSQL
 
 Para configurar el ``engine`` con ``PostgreSQL`` debe definir la :ref:`cadena de conexión <python_psycopg2_conn_strs>`
 que esta compuesto por varios parámetros, los cuales deben ser reemplazadas con sus propios datos
-en la linea de comando con el comando ``sqlacodegen``.
+en la línea de comando con el comando ``sqlacodegen``.
 
 .. tip::
     Para conectarte al servidor ``PostgreSQL`` necesite el paquete :ref:`psycopg2 <python_psycopg2_instalar>`.
 
 Luego ya teniendo instalado el paquete ``psycopg2`` debe ejecutar el siguiente comando
 de ``sqlacodegen``, los parámetros deben ser reemplazadas con sus propios datos en la
-linea de comando:
+línea de comando:
 
 .. code-block:: console
 
@@ -218,7 +218,7 @@ operativo:
 
           > .\sqlacodegen.exe --generator declarative sqlite:///sistema.db --outfile models.py
 
-El anterior comando al ejecutar debe generar un modulo python llamado ``models.py``
+El anterior comando al ejecutar debe generar un módulo python llamado ``models.py``
 que contiene el siguiente código:
 
 .. code-block:: python
@@ -370,10 +370,10 @@ Archivo de `requirements.txt`_ de la herramienta de gestión de paquetes `pip`_.
 
 Archivo de base de datos de :ref:`SQLite <python_modulo_sqlite3>` llamado :file:`sistema.db`
 la cual se incluye ya que cada tiene la estructura de tablas y registros iniciales para hacer
-esta practica.
+esta práctica.
 
 
-Teniendo creada la anterior estructura de proyecto, vuelva a ejecutar ahora el modulo con
+Teniendo creada la anterior estructura de proyecto, vuelva a ejecutar ahora el módulo con
 el siguiente comando, el cual a continuación se presentan el correspondiente comando de tu
 sistema operativo:
 
@@ -385,7 +385,7 @@ sistema operativo:
 
       .. code-block:: console
 
-          $ pip install -r requirements.txt
+          $ pip3 install -r requirements.txt
 
       Ademas debe instalar y editar el archivo ``.env``, con el siguiente comando:
 
@@ -403,13 +403,13 @@ sistema operativo:
         debe definir las variables que por defecto no están definidas.
 
       .. tip::
-        Para ejecutar el código fuente de esta practica debe invocar al modulo :file:`main.py`,
+        Para ejecutar el código fuente de esta práctica debe invocar al módulo :file:`main.py`,
         abra una consola de comando, acceda al directorio donde se encuentra la estructura previa
         y ejecute el siguiente comando:
 
       .. code-block:: console
 
-          $ python main.py
+          $ python3 main.py
 
    .. group-tab:: Windows
 
@@ -417,7 +417,7 @@ sistema operativo:
 
       .. code-block:: console
 
-          > pip install -r requirements.txt
+          > pip3 install -r requirements.txt
 
       Ademas debe instalar y editar el archivo ``.env``, con el siguiente comando:
 
@@ -435,13 +435,13 @@ sistema operativo:
         debe definir las variables que por defecto no están definidas.
 
       .. tip::
-        Para ejecutar el código fuente de esta practica debe invocar al modulo :file:`main.py`,
+        Para ejecutar el código fuente de esta práctica debe invocar al módulo :file:`main.py`,
         abra una consola de comando, acceda al directorio donde se encuentra la estructura previa
         y ejecute el siguiente comando:
 
       .. code-block:: console
 
-          > python main.py
+          > python3 main.py
 
 El anterior código al ejecutar debe mostrar el siguiente mensaje:
 

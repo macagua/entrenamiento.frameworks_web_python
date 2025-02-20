@@ -1,53 +1,10 @@
-.. _python_http_clients:
-
-Clientes HTTP
-=============
-
-Existen varias herramientas clientes para el protocolo
-
-.. _python_http_client_curl:
-
-Cliente cURL
-============
-
-- Escrito en C y usa la libreria ``libcurl``.
-
-- Admite muchos otros protocolos además de HTTP(S).
-
-- Admite cualquier cantidad de URL en la línea de comando.
-
-- Puede enviar POST binarios.
-
-- Admite múltiples métodos HTTP en una sola línea de comando para diferentes URL.
-
-- Documentado en una página man para documentación fuera de línea.
-
-- Admite solicitudes HTTP/1.0.
-
-- Características URL "globbing" para rangos y secuencias.
-
-- Permite modificaciones de encabezado más invasivas, como pasar letras no válidas en encabezados personalizados ( Höst:), reemplazar Content-Length:en un POST y eliminar el Host:encabezado de una solicitud. O simplemente agregar un encabezado sin espacio después de los dos puntos.
-
-- Admite globos oculares felices o uso explícito de ipv4/ipv6.
-
-- Admite trucos de conexión personalizados como --resolve y --connect-to.
-
-- Compatibilidad con HTTP/2 (tanto para HTTP:// como para HTTPS:// URL).
-
-- Compatibilidad con HTTP/3.
-
-- Ofrece compresión usando gzip, brotli y zstd.
-
-- Se envía de forma predeterminada en macOS y Windows 10.
-
-
 .. _python_http_client_httpie:
 
 Cliente httpie
-==============
+--------------
 
-HTTPie (pronunciado aitch-tee-tee-pie) es un cliente HTTP de línea de
-comandos sustituto del `cURL <https://curl.se/>`_. Su objetivo es
+`HTTPie`_ (pronunciado aitch-tee-tee-pie) es un :ref:`cliente HTTP <python_http_client>`
+de línea de comandos sustituto del :ref:`cURL <python_http_client_curl>`. Su objetivo es
 hacer que la interacción de CLI con los servicios web sea lo más amigable
 posible para los usuarios.
 
@@ -64,7 +21,7 @@ resultados en color. HTTPie se puede usar para probar, depurar y, en
 general, interactuar con servidores HTTP.
 
 Características
----------------
+'''''''''''''''
 
 HTTPie consiste en un solo comando ``http`` diseñado para la depuración
 e interacción sin problemas con los servidores HTTP, las API RESTful y
@@ -103,32 +60,132 @@ principales:
 
 
 Instalación
------------
+'''''''''''
 
-Es una aplicación Python, por lo que puedo instalarla con:
+Es una aplicación Python de línea de comando, por lo que puedo instalarla con:
 
 .. code-block:: console
 
+    $ virtualenv --python /usr/bin/python3 venv
+    $ source ./venv/bin/activate
+    $ pip3 install -U pip
     $ pip3 install httpie
 
+Una vez instalado puedes ejecutar con el siguiente comando:
+
+.. code-block:: console
+
+    $ http --version
+
+Si muestra el numero de la versión instalada de ``http``, tiene
+correctamente instalada la herramienta.
+
 Uso
----
+'''
 
-Una vez instalado podéis ejecutar el "Hello World":
-
-.. code-block:: console
-
-    $ http httpie.org
-
-El uso de la herramienta tiene la siguiente sintaxis,
+Con esta interfaz de línea de comandos (o CLI), puede especificarse la URL de un servidor
+(es decir, la ubicación a la que se envía la solicitud) y los datos que se van a enviar a
+ese servidor.
 
 .. code-block:: console
 
-    $ http [flags] [metodo] <url> [item [item]]
+    $ http https://httpie.io/
+
+Aunque las plataformas API suelen tener interfaces muy intuitivas para solicitar y transferir
+datos a una URL, el comando ``http`` puede ser una herramienta muy útil para usar con el
+terminal, y estos son algunos de sus usos más comunes.
 
 
-.. todo::
-    TODO Terminar de escribir sobre el paquete "httpie".
+Guardar contenido de una URL
+*****************************
+
+De la misma forma en que puedes usar el comando ``http`` para descargar imágenes, puedes guardar
+el contenido de una URL (como una página web) en un archivo. Este es un ejemplo que usa la
+página de proyecto ``http``:
+
+.. code-block:: console
+
+    $ http -o httpie.html https://httpie.io/
+
+En este ejemplo, el código de origen de la página de proyecto ``http`` se guarda en un archivo
+denominado :file:`httpie.html`.
+
+----
+
+Descargar ficheros a un dispositivo
+************************************
+
+Como el terminal tiene acceso al sistema de archivos, también puedes descargar imágenes fácilmente
+desde direcciones URL.
+
+Por ejemplo, esta es la URL del logotipo de Python.org, y con el comando ``http``, puedes descargar
+un archivo comprimido de la siguiente forma:
+
+.. code-block:: console
+
+    $ http -d https://www.python.org/ftp/python/3.11.11/Python-3.11.11.tar.xz
+
+Con el comando ``http`` y la URL de un archivo comprimido, pueden obtenerse los datos binarios del
+archivo comprimido y almacenarse en el disco duro con el mismo nombre del archivo original ``Python-3.11.11.tar.xz``.
+
+Por ejemplo, esta es la URL del logotipo de Python.org, y con el comando ``http``, puedes descargar
+la imagen de la siguiente forma:
+
+.. code-block:: console
+
+    $ http -d https://www.python.org/static/img/python-logo.png -o python-logo.png
+
+Con el comando ``http`` y la URL de la imagen, pueden obtenerse los datos binarios del logotipo y
+almacenarse en un archivo de imagen (con una extensión ``.png`` como la del archivo original) que
+luego puede guardarse en el disco duro.
+
+
+----
+
+Probar rápidamente una API desde el terminal
+********************************************
+
+Como ya hemos visto, el comando ``http`` permite probar rápidamente una API desde el terminal sin
+tener que descargar una aplicación específica.
+
+
+request GET con response 200
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: console
+
+    $ http GET https://jsonplaceholder.typicode.com/todos/1
+
+request POST formato x-www-form-urlencoded
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: console
+
+    $ http --form POST https://jsonplaceholder.typicode.com/posts name='HTTPie' type='article'
+
+request POST formato json
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: console
+
+    $ echo -n '{"name": "HTTPie", "type": "article"}' | http POST https://jsonplaceholder.typicode.com/posts
+
+request PUT formato json
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: console
+
+    $ http PUT https://jsonplaceholder.typicode.com/posts/1 Content-Type:application/json <<< '{"name": "JSON", "type": "post"}'
+
+request DELETE
+^^^^^^^^^^^^^^^
+
+.. code-block:: console
+
+    $ http DELETE https://jsonplaceholder.typicode.com/posts/1
+
+
+De esta forma aprendió a usar el comando ``http``.
 
 
 ----
@@ -143,4 +200,7 @@ El uso de la herramienta tiene la siguiente sintaxis,
 .. raw:: html
    :file: ../_templates/partials/soporte_profesional.html
 
+
 .. disqus::
+
+.. _`HTTPie`: https://httpie.io/
