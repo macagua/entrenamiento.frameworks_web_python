@@ -717,7 +717,7 @@ en una base de datos ``MySQL``, aplicando buenas prácticas de código funcional
 
 .. seealso::
 
-    Consulte la sección de :ref:`lecturas suplementarias <lectura_extras_leccion2>`
+    Consulte la sección de :ref:`lecturas suplementarias <lecturas_extras_leccion2>`
     del entrenamiento para ampliar su conocimiento en esta temática.
 
 
