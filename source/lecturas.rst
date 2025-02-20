@@ -213,10 +213,18 @@ Introducción a WSGI
 
 - `WSGI <https://wsgi.readthedocs.io/en/latest/>`_.
 
-- wsgiref - `WSGI Utilities and Reference Implementation <https://docs.python.org/3.7/library/wsgiref.html>`_.
+- wsgiref - `WSGI Utilities and Reference Implementation <https://docs.python.org/3.11/library/wsgiref.html>`_.
 
-.. todo::
-    TODO terminar de escribir esta sección
+- `WSGI - Wikipedia <https://es.wikipedia.org/wiki/WSGI>`_.
+
+- `Python Web Applications: The basics of WSGI <https://www.sitepoint.com/python-web-applications-the-basics-of-wsgi/>`_.
+
+- `uWSGI project <https://uwsgi-docs.readthedocs.io/en/latest/>`_.
+
+- `Learn about WSGI <https://wsgi.readthedocs.io/en/latest/learn.html>`_.
+
+..
+  - `WSGI: The Server-Application Interface for Python <https://www.toptal.com/python/pythons-wsgi-server-application-interface>`_.
 
 
 .. _lecturas_extras_leccion5:
@@ -231,13 +239,21 @@ Lección 5 - Frameworks Web
 
 - :ref:`Django <lecturas_extras_leccion7>`.
 
+- `Pyramid framework <https://trypyramid.com/>`_.
+
+  - `Pyramid - A Python web framework <https://github.com/Pylons/pyramid>`_.
+
+- `Tornado framework <https://www.tornadoweb.org/en/stable/>`_.
+
+  - `Tornado - A Python web framework <https://github.com/tornadoweb/tornado>`_.
+
 - `Sanic framework <https://sanic.dev/en/>`_.
 
   - `Sanic Async Python 3.6+ web server/framework <https://github.com/sanic-org/sanic>`_.
 
-.. todo::
-    TODO terminar de escribir esta sección
+- `FastAPI framework <https://fastapi.tiangolo.com/>`_.
 
+  - `FastAPI framework - GitHub <https://github.com/fastapi/fastapi>`_.
 
 .. _lecturas_extras_leccion6:
 

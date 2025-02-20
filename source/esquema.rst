@@ -36,7 +36,7 @@ Lección 2 - Base de datos SQL
 
 **Práctica:**
     Entender el patrón ORM, instalar librería SQLAlchemy, creación de una aplicación
-    con operaciones Create, Researh, Update y Delete - CRUD usando la librería,
+    con operaciones Create, Research, Update y Delete - CRUD usando la librería,
     explorando el resultado desde el interprete Python y la consola de comando.
 
 
@@ -47,14 +47,14 @@ Lección 3 - Protocolo HTTP en Python
 ------------------------------------
 
 **Descripción:**
-    Comprender el protocolo HTTP y las formas de comunicación usando las librerías
+    Comprender el :ref:`protocolo HTTP <python_introduccion_http>` y las formas de comunicación usando las librerías
     integradas de Python.
 
 **Práctica:**
-    Creación de aplicaciones usando el modulo integrado HTTP Server en el lenguaje
-    realizando peticiones GET y POST del protocolo HTTP con la herramienta httpie
-    o scripts, explorando el resultado desde el interprete Python vía consola de
-    comando.
+    Creación de aplicaciones usando el módulo integrado HTTP Server en el lenguaje
+    realizando peticiones ``GET`` y ``POST`` del :ref:`protocolo HTTP <python_introduccion_http>` con las herramientas
+    :ref:`requests <python_http_client_requests>`, :ref:`cURL <python_http_client_curl>` y :ref:`httpie <python_http_client_httpie>`
+    o mediante scripts, explorando el resultado desde el interprete Python vía consola de comando.
 
 
 .. _esquema_entrenamiento_leccion4:
@@ -65,10 +65,10 @@ Lección 4 - Web Server Gateway Interface
 
 **Descripción:**
     Comprender el funcionamiento, sintaxis de configuración y despliegues de aplicaciones
-    usando el Web Server Gateway Interface - WSGI.
+    usando el Web Server Gateway Interface - :ref:`WSGI <python_leccion4>`.
 
 **Práctica:**
-    Creación de una aplicación WSGI, con configuraciones y despliegue en entorno de
+    Creación de una aplicación :ref:`WSGI <python_leccion4>`, con configuraciones y despliegue en entorno de
     desarrollo, explorando el resultado desde el interprete Python y la consola de
     comando.
 
