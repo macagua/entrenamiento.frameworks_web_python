@@ -142,12 +142,12 @@ A continuación una serie de términos usados en las tecnologías Python.
         Diminutivo en plural del termino :term:`variable`.
 
     variable
-        3) Una pregunta que debe ser respondida por el usuario cuando esta generando una
+        1) Una pregunta que debe ser respondida por el usuario cuando esta generando una
         estructura de esqueleto de proyecto usando el sistema de plantilla ``copier``. En este
         caso una variable (var) es una descripción de la información requerida, texto de
         ayuda y reglas de validación para garantizar la entrada de usuario correcta.
 
-        4) Una declarativa cuyo valor puede ser variable o constante dentro de un programa
+        2) Una declarativa cuyo valor puede ser variable o constante dentro de un programa
         Python o en el sistema operativo.
 
     variables
