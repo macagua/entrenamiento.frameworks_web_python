@@ -7,6 +7,12 @@ MySQL
     **Propósito:** Controlador `MySQL`_ escrito en Python que no depende de las bibliotecas
     cliente MySQL C e implementa la especificación :ref:`DB API v2.0 (PEP-249) <python_dbapi>`.
 
+.. figure:: ../_static/images/mysql_textlogo.jpg
+    :align: center
+    :width: 60%
+
+    Logotipo de MySQL
+
 A diferencia de :ref:`SQLite <python_modulo_sqlite3>`, no hay un módulo Python SQL
 predeterminado que pueda usar para conectarse a una base de datos MySQL. En su lugar,
 deberá instalar un controlador Python SQL para MySQL para poder interactuar con una
@@ -319,23 +325,23 @@ El anterior código al ejecutar debe mostrar el siguiente mensaje:
 
             Id: 1
             Nombre: Leonardo Caballero
-            Apellido: 5001
-            Código postal: +58-412-4734567
+            Código postal: 5001
+            Teléfono: +58-412-4734567
 
             Id: 2
             Nombre: Ana Poleo
-            Apellido: 6302
-            Código postal: +58-426-5831297
+            Código postal: 6302
+            Telefono: +58-426-5831297
 
             Id: 3
             Nombre: Manuel Matos
-            Apellido: 4001
-            Código postal: +58-414-2360943
+            Código postal: 4001
+            Telefono: +58-414-2360943
 
             Id: 4
             Nombre: Liliana Andradez
-            Apellido: 4001
-            Código postal: +58-414-6782473
+            Código postal: 4001
+            Telefono: +58-414-6782473
 
     INFO:root:¡La conexión MySQL a la base de datos 'sistema' fue cerrada!
 

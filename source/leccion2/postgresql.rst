@@ -6,6 +6,12 @@ PostgreSQL
 .. note::
     **Propósito:** Es un Adaptador Python de base de datos `PostgreSQL`_.
 
+.. figure:: ../_static/images/postgresql_logo.jpg
+    :align: center
+    :width: 60%
+
+    Logotipo de PostgreSQL
+
 `psycopg`_, es el adaptador de base de datos PostgreSQL más popular para el lenguaje
 de programación Python. Sus principales características son la implementación completa
 de la especificación Python :ref:`DB-API 2.0 <python_dbapi>` y la seguridad de
