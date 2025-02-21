@@ -15,15 +15,9 @@ class Persona:
         self.sexo = sexo
 
     def __str__(self):
-        """Devuelve una cadena representativa al Persona"""
+        """Devuelve una cadena representativa de Persona"""
         doc = self.__doc__[25:34] if self.__doc__ else "Persona"
-        return "{}: {}, {} {}, {}.".format(
-            doc,
-            str(self.cedula),
-            self.nombre,
-            self.apellido,
-            self.getGenero(self.sexo),
-        )
+        return f"{doc}: {str(self.cedula)}, {self.nombre} {self.apellido}, {self.getGenero(self.sexo)}."
 
     def hablar(self, mensaje):
         """Mostrar mensaje de saludo de Persona"""
@@ -56,13 +50,7 @@ class Supervisor(Persona):
     def __str__(self):
         """Devuelve una cadena representativa al Supervisor"""
         doc = self.__doc__[26:37] if self.__doc__ else "Supervisor"
-        return "{}: {} {}, rol: '{}', sus tareas: {}.".format(
-            doc,
-            self.nombre,
-            self.apellido,
-            self.rol,
-            self.consulta_tareas(),
-        )
+        return f"{doc}: {self.nombre} {self.apellido}, rol: '{self.rol}', sus tareas: {self.consulta_tareas()}."
 
     def consulta_tareas(self):
         """Mostrar las tareas del Supervisor"""
@@ -82,7 +70,7 @@ def poblar_persona():
 
     print("\n" + str(persona1) + "\n")
 
-    print(f"- Cedula de identidad: {persona1.cedula}.")
+    print(f"- Cédula de identidad: {persona1.cedula}.")
     print(f"- Nombre completo: {persona1.nombre} {persona1.apellido}.")
     print(f"- Genero: {persona1.getGenero(persona1.sexo)}.")
     print(
@@ -108,7 +96,7 @@ def poblar_persona():
     print("\n" + str(persona2) + "\n")
 
     # Atributo(s) y Método(s) heredado de la clase Persona
-    print(f"- Cedula de identidad: {persona2.cedula}.")
+    print(f"- Cédula de identidad: {persona2.cedula}.")
     print(f"- Nombre completo: {persona2.nombre} {persona2.apellido}.")
     print("- Genero: {}.".format(persona2.getGenero(persona2.__getattribute__("sexo"))))
     print(
@@ -143,7 +131,7 @@ def poblar_supervisor():
     print("\n" + str(supervisor1) + "\n")
 
     # Atributo(s) y Método(s) heredado de la clase Persona
-    print(f"- Cedula de identidad: {supervisor1.cedula}.")
+    print(f"- Cédula de identidad: {supervisor1.cedula}.")
     print(f"- Nombre completo: {supervisor1.nombre} {supervisor1.apellido}.")
     print(f"- Genero: {supervisor1.getGenero(supervisor1.sexo)}.")
     print(
