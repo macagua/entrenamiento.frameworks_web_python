@@ -11,7 +11,7 @@ En esta lección se busca hacer una introducción al Framework Web
 Flask, su instalación, y algunas prácticas útiles de casos básicos
 de trabajo con el mismo.
 
-.. figure:: ../_static/images/flask.jpg
+.. figure:: ../_static/images/flask.png
   :class: image-inline
   :alt: Flask framework
   :align: center

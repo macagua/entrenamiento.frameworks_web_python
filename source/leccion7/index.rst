@@ -11,7 +11,7 @@ frameworks de servidores web más populares, cómo configurar un entorno
 de desarrollo y cómo empezar a usarlo para crear tus propias aplicaciones
 web.
 
-.. figure:: ../_static/images/django.jpg
+.. figure:: ../_static/images/django.png
   :class: image-inline
   :alt: Flask framework
   :align: center
