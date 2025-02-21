@@ -11,6 +11,12 @@ comunicación con las bases de datos relacionales más conocidas, como
 `cx_Oracle`_, bases de datos *NoSQL* como `MongoDB`_, etc. O en su lugar, puedes
 usar `SQLAlchemy`_.
 
+.. figure:: ../_static/images/sqlalchemy_logo.png
+    :align: center
+    :width: 60%
+
+    Logotipo de SQLAlchemy
+
 
 La librería ``SQLAlchemy`` es el kit de herramientas SQL de Python y el
 mapeador relacional de objetos.

@@ -7,7 +7,7 @@ MySQL
     **Propósito:** Controlador `MySQL`_ escrito en Python que no depende de las bibliotecas
     cliente MySQL C e implementa la especificación :ref:`DB API v2.0 (PEP-249) <python_dbapi>`.
 
-.. figure:: ../_static/images/mysql_textlogo.jpg
+.. figure:: ../_static/images/mysql_textlogo.png
     :align: center
     :width: 60%
 
