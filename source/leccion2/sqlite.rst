@@ -12,7 +12,7 @@ SQLite
 disco que no requiere un proceso de servidor separado y permite acceder a la base
 de datos usando una variación no estándar del lenguaje de consulta SQL.
 
-.. figure:: ../_static/images/sqlite_logo.jpg
+.. figure:: ../_static/images/sqlite_logo.png
     :align: center
     :width: 60%
 

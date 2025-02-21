@@ -6,7 +6,7 @@ PostgreSQL
 .. note::
     **Propósito:** Es un Adaptador Python de base de datos `PostgreSQL`_.
 
-.. figure:: ../_static/images/postgresql_logo.jpg
+.. figure:: ../_static/images/postgresql_logo.png
     :align: center
     :width: 60%
 
