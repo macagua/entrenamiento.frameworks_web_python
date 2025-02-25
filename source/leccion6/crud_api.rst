@@ -57,13 +57,13 @@ as `curl <https://curl.se/>`_ command.
 
 
 Hacer peticiones
-=================
+-----------------
 
 El comando ``curl`` le permite probar rápidamente una API desde el terminal sin
 la necesidad de tener que descargar una aplicación específica.
 
 request GET con response 200
------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: console
 
@@ -74,7 +74,7 @@ registrados por defecto en la base de datos como una operación ``READ`` en una 
 ``CRUD``.
 
 request POST formato JSON
---------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: console
 
@@ -85,7 +85,7 @@ Es decir, en realidad está insertando un nuevo usuario en la base de datos como
 ``CREATE``. en una aplicación ``CRUD``.
 
 request GET con response 200
------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: console
 
@@ -95,7 +95,7 @@ El comando anterior muestra cómo realizar una solicitud ``GET`` para obtener in
 sobre del usuario con el id ``4`` como una operación ``READ`` en una aplicación ``CRUD``.
 
 request PUT formato JSON
--------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: console
 
@@ -106,7 +106,7 @@ Es decir, se está actualizando la información del usuario con el id ``4`` como
 en una aplicación ``CRUD``.
 
 request DELETE
----------------
+^^^^^^^^^^^^^^^
 
 .. code-block:: console
 
