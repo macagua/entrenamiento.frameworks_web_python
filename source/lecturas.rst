@@ -331,4 +331,3 @@ Lección 7 - Django
    :file: _templates/partials/soporte_profesional.html
 
 .. disqus::
-
