@@ -95,7 +95,7 @@ De esta forma, una vez ejecutado el comando, se puede abrir desde con su navegad
 
   Hello World en Django
 
-Mostrara un mensaje **Hello, World!**, como la figura anterior.
+Mostrará un mensaje **Hello, World!**, como la figura anterior.
 
 
 .. note::
