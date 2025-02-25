@@ -10,3 +10,6 @@
 [submodule "recursos/leccion6/flask-admin-dashboard"]
 	path = recursos/leccion6/flask-admin-dashboard
 	url = https://github.com/macagua/example.flask.admin-dashboard.git
+[submodule "recursos/leccion6/flask-api"]
+	path = recursos/leccion6/flask-api
+	url = https://github.com/macagua/example.flask.api.git

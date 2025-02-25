@@ -25,6 +25,7 @@ de trabajo con el mismo.
    instalacion
    hello_world
    crud_app
+   crud_api
    admin_dashboard
 
 ----

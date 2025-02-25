@@ -196,7 +196,7 @@ Cliente httpie
 
 - `cURL <https://curl.se/>`_, utilidad de línea de comandos y librería para transferir datos con URL.
 
-- `Qué es el comando cURL y cómo usarlo <https://blog.hubspot.es/website/comando-curl>`_.
+- `¿Qué es el comando cURL y cómo usarlo (con ejemplos)? <https://es.linux-console.net/?p=34441>`_.
 
 
 Cliente httpie
