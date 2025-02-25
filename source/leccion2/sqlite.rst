@@ -50,6 +50,9 @@ Si muestra el nombre del paquete  ``sqlite3``, tiene instalado la librería.
 Adicionalmente puedes instalar administradores de base de datos SQLite nativos para sistemas
 operativos Linux y Windows, a continuación se presentan alternativas:
 
+
+.. _python_sqlite3_tools_instalar:
+
 SQLite Tools
 ^^^^^^^^^^^^
 
@@ -164,6 +167,9 @@ los modos de instalación:
       .. note::
 
         Mas información consulte https://www.sqlite.org/sqlanalyze.html
+
+
+.. _python_sqlite3_sqlitebrowser_instalar:
 
 
 DB Browser for SQLite
