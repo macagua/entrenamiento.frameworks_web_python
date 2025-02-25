@@ -1,17 +1,16 @@
 .. _python_flask_admin_dashboard:
 
-Admin Dashboard
-===============
+Aplicación Admin
+================
 
 El objeto de esta sección es hacer un demostración local de una
-interfaz "Admin" que integre un "Dashboard" en ``Flask``.
-
+interfaz "Administrativa - (Admin)" que integre un "Dashboard" en ``Flask``.
 
 Requisitos previos
 -------------------
 
-Para hacer un demostración local de un ``Flask-Admin`` Dashboard
-requiere instalar las siguientes librerías:
+Para hacer un demostración local de un aplicación Dashboard de
+``Flask-Admin`` requiere instalar las siguientes librerías:
 
 - `Flask <https://pypi.org/project/Flask/>`_.
 
@@ -132,8 +131,8 @@ como se muestra en la siguiente figura:
 DB Browser para SQLite
 -----------------------
 
-La aplicación ``Flask-Admin`` Dashboard usa la base de datos de ``SQLite`` para
-almacenar sus datos, usted puede ver gráficamente la estructura y registros
+La aplicación Dashboard de ``Flask-Admin`` usa la base de datos de ``SQLite``
+para almacenar sus datos, usted puede ver gráficamente la estructura y registros
 de la base de datos, con el siguiente comando:
 
 ::
