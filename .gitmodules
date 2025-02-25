@@ -7,3 +7,6 @@
 [submodule "recursos/leccion7/django-helloworld"]
 	path = recursos/leccion7/django-helloworld
 	url = https://github.com/django-ve/django-helloworld.git
+[submodule "recursos/leccion6/flask-admin-dashboard"]
+	path = recursos/leccion6/flask-admin-dashboard
+	url = https://github.com/macagua/example.flask.admin-dashboard.git
