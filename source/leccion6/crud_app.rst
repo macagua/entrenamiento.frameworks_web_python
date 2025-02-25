@@ -3,7 +3,7 @@
 Aplicación CRUD
 ===============
 
-Hacer un demo local de una aplicación Flask
+Hacer un demo local de una aplicación ``Flask``
 `CRUD <https://es.wikipedia.org/wiki/CRUD>`_, es decir,
 una aplicación con las funciones básicas en bases de datos
 como "Crear, Leer, Actualizar y Borrar".
@@ -12,7 +12,7 @@ como "Crear, Leer, Actualizar y Borrar".
 Requisitos previos
 ------------------
 
-Para trabajar una aplicación Flask con bases de datos relacionales
+Para trabajar una aplicación ``Flask`` con bases de datos relacionales
 requiere instalar las siguientes librerías:
 
 - `Flask <https://pypi.org/project/Flask/>`_.
@@ -33,7 +33,8 @@ Instalar dependencias mínimas necesarias, con el siguiente comando:
 ::
 
     $ sudo apt install -y python3-dev python3-pip python3-virtualenv
-    $ sudo apt install -y git sqlite3 sqlitebrowser
+    $ sudo apt install -y git
+    $ sudo apt install -y sqlite3
 
 
 Entorno virtual Python
@@ -44,7 +45,7 @@ siguiente comando:
 
 ::
 
-    $ virtualenv --python /usr/bin/python3 venv
+    $ virtualenv --python /usr/bin/python3 ~/venv
 
 
 Activarlo entorno virtual Python creado con el siguiente comando:
@@ -57,18 +58,18 @@ Activarlo entorno virtual Python creado con el siguiente comando:
 Instalar paquetes Python
 ------------------------
 
-Para instalar las dependencias para usar del framework Flask, con
+Para instalar las dependencias para usar del framework ``Flask``, con
 el siguiente comando:
 
 ::
 
-    $ pip3 install Flask==1.0.2 Flask-SQLAlchemy==2.4.0 SQLAlchemy==1.3.5
+    $ pip3 install Flask==3.1.0 Flask-SQLAlchemy==3.1.1 SQLAlchemy==2.0.38
 
 
 Estructura de proyecto
 ^^^^^^^^^^^^^^^^^^^^^^
 
-Crear estructura de proyecto Flask, con el siguiente comando:
+Crear estructura de proyecto ``Flask``, con el siguiente comando:
 
 ::
 
@@ -85,7 +86,7 @@ Agregue el siguiente contenido al archivo :file:`~/projects/flask-crud-app/bookm
 
 .. literalinclude:: ../../recursos/leccion6/flask-crud-app/bookmanager.py
    :language: python
-   :lines: 7-66
+   :lines: 1-98
 
 
 Cree plantilla HTML llamado :file:`home.html` dentro del directorio
@@ -99,53 +100,13 @@ Agregue el siguiente contenido al archivo :file:`~/projects/flask-crud-app/templ
 
 .. literalinclude:: ../../recursos/leccion6/flask-crud-app/templates/home.html
    :language: html
-   :lines: 1-33
-
-
-Crear base de datos
-^^^^^^^^^^^^^^^^^^^
-
-Crear base de datos SQLite, ejecute el siguiente comando:
-
-::
-
-    $ cd ~/projects/flask-crud-app/
-
-Desde la :ref:`consola interactiva de Python <python_interactivo>`, ejecute
-los siguientes comando:
-
-::
-
-    >>> from bookmanager import db
-    >>> db.create_all()
-    >>> exit()
-
-
-De esta forma puede ver gráficamente la estructura de la base de datos
-SQLite, con el siguiente comando:
-
-::
-
-    $ sqlitebrowser bookdatabase.db
-
-Este mostrara el Database Browser para SQLite de la aplicación BookManager,
-como la siguiente figura:
-
-.. figure:: ../_static/images/flask-bookmanager-sqlitebrowser-db.png
-  :class: image-inline
-  :alt: BookManager - Database Browser para SQLite
-  :align: center
-
-  BookManager - Database Browser para SQLite
-
-De esta forma ya tiene creada la base de datos SQLite necesaria para
-la ejecución de la aplicación BookManager.
+   :lines: 1-42
 
 
 Ejecutar aplicación Flask
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Ejecutar aplicación Web Flask, con el siguiente comando:
+Para ejecutar la aplicación Web ``Flask``, debe ejecutar el siguiente comando:
 
 ::
 
@@ -160,8 +121,32 @@ De esta forma, una vez ejecutado el comando, se puede abrir desde con su navegad
   :alt: BookManager - una Aplicación CRUD Flask
   :align: center
 
-  BookManager - una Aplicación CRUD Flask
+  BookManager - una Aplicación CRUD ``Flask``.
 
+La ejecución de la aplicación Web ``Flask`` crea la base de datos ``SQLite``
+``book_database.sqlite3`` en el directorio :file:`~/projects/flask-crud-app/`.
+
+Puede ver examinar la estructura de la base de datos ``SQLite``, de las siguientes formas:
+
+- :ref:`SQLite Tools <python_sqlite3_tools_instalar>`.
+
+- :ref:`DB Browser for SQLite <python_sqlite3_sqlitebrowser_instalar>`.
+
+Por ejemplo, el ``DB Browser for SQLite`` mostrará gráficamente la estructura de la aplicación ``BookManager``,
+como la siguiente figura:
+
+.. figure:: ../_static/images/flask-bookmanager-sqlitebrowser-db.png
+  :class: image-inline
+  :alt: BookManager - DB Browser para SQLite
+  :align: center
+
+  BookManager - DB Browser para ``SQLite``
+
+.. tip::
+    La base de datos ``SQLite`` se crea automáticamente al ejecutar la aplicación ``BookManager``
+    necesaria para el funcionamiento de la aplicación.
+
+De esta forma puede interactuar con un ejemplo operaciones dentro una base de datos ``SQLite``.
 
 .. note::
     El código ejemplo usado puede encontrarlo en: https://github.com/macagua/example.flask.crud-app

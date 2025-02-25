@@ -36,7 +36,7 @@ Agregue el siguiente contenido al archivo :file:`~/projects/flask-helloworld/hel
 
 .. literalinclude:: ../../recursos/leccion6/flask-helloworld/hello.py
    :language: python
-   :lines: 1-7
+   :lines: 1-9
 
 
 Ejecutar aplicación Flask
@@ -46,7 +46,7 @@ Para ejecutar aplicación Web Flask, con el siguiente comando:
 
 ::
 
-    $ FLASK_APP=hello.py flask run
+    $ flask --app hello run
 
 De esta forma, una vez ejecutado el comando, se puede abrir desde con su navegador Web favorito
 (Mozilla Firefox, Google Chrome, etc) la siguiente dirección http://127.0.0.1:5000
@@ -58,7 +58,7 @@ De esta forma, una vez ejecutado el comando, se puede abrir desde con su navegad
 
   Hello World en Flask
 
-Mostrara un mensaje **Hello, World!**, como la figura anterior.
+Mostrará un mensaje **Hello, World!**, como la figura anterior.
 
 
 .. note::
