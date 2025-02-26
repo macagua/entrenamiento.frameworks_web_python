@@ -13,3 +13,6 @@
 [submodule "recursos/leccion6/flask-api"]
 	path = recursos/leccion6/flask-api
 	url = https://github.com/macagua/example.flask.api.git
+[submodule "recursos/leccion8/fastapi-helloworld"]
+	path = recursos/leccion8/fastapi-helloworld
+	url = https://github.com/macagua/example.fastapi.helloworld.git

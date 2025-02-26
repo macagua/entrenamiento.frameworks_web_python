@@ -40,6 +40,7 @@ Repositorio de manuales y recursos del entrenamiento **"Frameworks de Desarrollo
    leccion5/index
    leccion6/index
    leccion7/index
+   leccion8/index
 
 
 .. warning::
