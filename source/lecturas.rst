@@ -324,6 +324,19 @@ Lección 7 - Django
 - `Framework Web Django (Python) - Aprende sobre desarrollo web - MDN <https://developer.mozilla.org/es/docs/Learn_web_development/Extensions/Server-side/Django>`_.
 
 
+.. _lecturas_extras_leccion8:
+
+
+Lección 8 - FastAPI
+-------------------
+
+- `FastAPI project <https://fastapi.tiangolo.com/es/>`_.
+
+- `FastAPI en PyPI <https://pypi.org/project/fastapi/>`_.
+
+- `Repositorio FastAPI <https://github.com/fastapi/fastapi>`_.
+
+
 ----
 
 
