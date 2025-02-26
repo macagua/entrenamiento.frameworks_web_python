@@ -13,10 +13,10 @@ web.
 
 .. figure:: ../_static/images/django.png
   :class: image-inline
-  :alt: Flask framework
+  :alt: Django framework
   :align: center
 
-  Flask framework
+  Django framework
 
 .. toctree::
    :maxdepth: 2
