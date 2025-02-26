@@ -61,10 +61,11 @@ el que mejor se adapte a sus necesidades específicas.
 - **Pyramid**: Un framework que se adapta tanto a proyectos pequeños
   como a aplicaciones complejas. Pyramid es muy flexible y permite a
   los desarrolladores elegir los componentes que desean utilizar.
-- **FastAPI**: Un framework moderno y de alto rendimiento para construir
-  APIs con Python 3.7+ basado en las anotaciones de tipo estándar
-  de Python. FastAPI es conocido por su rapidez y eficiencia, y es ideal
-  para aplicaciones que requieren un alto rendimiento.
+- :doc:`FastAPI <../leccion8/index>`: Un framework moderno y de alto
+  rendimiento para construir APIs con Python 3.7+ basado en las
+  anotaciones de tipo estándar de Python. FastAPI es conocido por su
+  rapidez y eficiencia, y es ideal para aplicaciones que requieren un
+  alto rendimiento.
 
 Cada uno de estos frameworks tiene una comunidad activa y una amplia
 documentación, lo que facilita el aprendizaje y la resolución de problemas.
