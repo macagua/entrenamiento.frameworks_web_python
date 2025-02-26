@@ -49,8 +49,8 @@ Para ejecutar aplicación Web Flask, con el siguiente comando:
     $ flask run
 
 
-Open a new terminal windows for testing the API using a HTTP client
-as `curl <https://curl.se/>`_ command.
+Abra una nueva ventana de terminal para probar la API utilizando un cliente HTTP
+como comando `curl <https://curl.se/>`_.
 
 
 ----
