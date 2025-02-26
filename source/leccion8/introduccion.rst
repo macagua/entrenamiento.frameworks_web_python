@@ -35,28 +35,8 @@ Características
 - **Asincronía nativa**: Compatible con `async` y `await`, lo que permite manejar
   operaciones concurrentes de manera eficiente.
 
-..
-    #### ✨ **Ejemplo básico en FastAPI**:
-    ```python
-    from fastapi import FastAPI
-
-    app = FastAPI()
-
-    @app.get("/")
-    def read_root():
-        return {"message": "¡Hola, FastAPI!"}
-
-    @app.get("/items/{item_id}")
-    def read_item(item_id: int, q: str = None):
-        return {"item_id": item_id, "q": q}
-    ```
-    🔹 Ejecuta el servidor con:
-    ```sh
-    uvicorn main:app --reload
-    ```
-
 Documentación generada
------------------------
+----------------------
 
 La documentación auto-generada en gracias a los siguientes herramientas:
 
