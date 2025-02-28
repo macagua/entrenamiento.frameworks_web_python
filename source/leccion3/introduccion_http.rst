@@ -155,4 +155,6 @@ sean capaces de modificar los recursos a los que acceden.
 .. raw:: html
    :file: ../_templates/partials/soporte_profesional.html
 
-.. disqus::
+
+..
+  .. disqus::

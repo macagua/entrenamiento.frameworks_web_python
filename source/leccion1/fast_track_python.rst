@@ -99,7 +99,9 @@ la técnica *herencia simple* de Clases en Python 3:
 .. raw:: html
    :file: ../_templates/partials/soporte_profesional.html
 
-.. disqus::
+
+..
+  .. disqus::
 
 .. commets:
     http://jupyter.org

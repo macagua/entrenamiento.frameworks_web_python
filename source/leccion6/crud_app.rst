@@ -167,4 +167,6 @@ De esta forma puede interactuar con un ejemplo operaciones dentro una base de da
 .. raw:: html
    :file: ../_templates/partials/soporte_profesional.html
 
-.. disqus::
+
+..
+  .. disqus::

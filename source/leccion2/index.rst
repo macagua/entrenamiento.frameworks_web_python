@@ -49,4 +49,6 @@ la Web para tomar en cuenta. A continuación el temario de esta lección:
 .. raw:: html
    :file: ../_templates/partials/soporte_profesional.html
 
-.. disqus::
+
+..
+  .. disqus::

@@ -34,7 +34,9 @@ A continuación el temario de esta lección:
 .. raw:: html
    :file: ../_templates/partials/soporte_profesional.html
 
-.. disqus::
+
+..
+  .. disqus::
 
 
 .. _`WSGI`: https://wsgi.readthedocs.io/en/latest/what.html

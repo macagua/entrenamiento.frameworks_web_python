@@ -161,4 +161,6 @@ Usando al Django Admin http://localhost:8000/admin/ y el usuario previamente cre
 .. raw:: html
    :file: ../_templates/partials/soporte_profesional.html
 
-.. disqus::
+
+..
+  .. disqus::

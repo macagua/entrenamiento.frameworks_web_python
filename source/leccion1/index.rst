@@ -28,4 +28,6 @@ disponibles en la Web para tomar en cuenta. A continuación el temario de esta l
 .. raw:: html
    :file: ../_templates/partials/soporte_profesional.html
 
-.. disqus::
+
+..
+  .. disqus::

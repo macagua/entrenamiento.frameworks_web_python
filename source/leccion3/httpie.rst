@@ -201,6 +201,8 @@ De esta forma aprendió a usar el comando ``http``.
    :file: ../_templates/partials/soporte_profesional.html
 
 
-.. disqus::
+
+..
+  .. disqus::
 
 .. _`HTTPie`: https://httpie.io/

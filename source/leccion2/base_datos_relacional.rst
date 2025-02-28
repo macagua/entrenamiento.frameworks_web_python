@@ -131,6 +131,8 @@ registro a dicha tabla.
 .. raw:: html
    :file: ../_templates/partials/soporte_profesional.html
 
-.. disqus::
+
+..
+  .. disqus::
 
 .. _`base de datos`: https://es.wikipedia.org/wiki/Base_de_datos

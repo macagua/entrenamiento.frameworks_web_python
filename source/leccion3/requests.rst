@@ -380,7 +380,9 @@ Eso da como resultado:
    :file: ../_templates/partials/soporte_profesional.html
 
 
-.. disqus::
+
+..
+  .. disqus::
 
 
 .. |pig_image_request_png| image:: ../_static/images/cerdo.png

@@ -134,4 +134,6 @@ De esta forma hago las peticiones a la API usando el comando ``curl``.
 .. raw:: html
    :file: ../_templates/partials/soporte_profesional.html
 
-.. disqus::
+
+..
+  .. disqus::
