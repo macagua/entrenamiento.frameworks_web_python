@@ -84,4 +84,6 @@ preferencias personales del equipo de desarrollo.
 .. raw:: html
    :file: ../_templates/partials/soporte_profesional.html
 
-.. disqus::
+
+..
+  .. disqus::

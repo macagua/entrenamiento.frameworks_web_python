@@ -194,6 +194,8 @@ De esta forma aprendió a usar el comando ``curl``.
    :file: ../_templates/partials/soporte_profesional.html
 
 
-.. disqus::
+
+..
+  .. disqus::
 
 .. _`cURL`: https://curl.se/

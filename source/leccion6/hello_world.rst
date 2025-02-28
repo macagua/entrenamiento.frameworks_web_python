@@ -77,4 +77,6 @@ Mostrará un mensaje **Hello, World!**, como la figura anterior.
 .. raw:: html
    :file: ../_templates/partials/soporte_profesional.html
 
-.. disqus::
+
+..
+  .. disqus::

@@ -73,4 +73,6 @@ Si muestra el numero de la versión instalada de ``Django``, tiene correctamente
 .. raw:: html
    :file: ../_templates/partials/soporte_profesional.html
 
-.. disqus::
+
+..
+  .. disqus::

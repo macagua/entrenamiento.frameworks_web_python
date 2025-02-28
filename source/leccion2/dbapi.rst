@@ -385,7 +385,9 @@ Las librerías de bases de datos relacionales más populares son:
 .. raw:: html
    :file: ../_templates/partials/soporte_profesional.html
 
-.. disqus::
+
+..
+  .. disqus::
 
 .. _`JDBC`: https://es.wikipedia.org/wiki/Java_Database_Connectivity
 .. _`ODBC`: https://es.wikipedia.org/wiki/Open_Database_Connectivity

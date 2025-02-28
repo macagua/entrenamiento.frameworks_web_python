@@ -38,6 +38,8 @@ El servidor rellena el diccionario de entorno con variables similares a
 .. raw:: html
    :file: ../_templates/partials/soporte_profesional.html
 
-.. disqus::
+
+..
+  .. disqus::
 
 .. _`CGI`: https://docs.python.org/es/3/library/cgi.html

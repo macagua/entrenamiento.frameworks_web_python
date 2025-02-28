@@ -248,6 +248,8 @@ menos dos métodos HTTP ``GET`` y ``POST``.
    :file: ../_templates/partials/soporte_profesional.html
 
 
-.. disqus::
+
+..
+  .. disqus::
 
 .. _`http.server`: https://docs.python.org/3/library/http.server.html

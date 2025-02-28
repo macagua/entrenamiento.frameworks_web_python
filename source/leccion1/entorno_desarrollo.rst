@@ -172,4 +172,6 @@ Así de esta forma congela las versiones usadas para el proceso de instalación 
 .. raw:: html
    :file: ../_templates/partials/soporte_profesional.html
 
-.. disqus::
+
+..
+  .. disqus::

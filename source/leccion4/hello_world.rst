@@ -93,7 +93,9 @@ De esta forma ha aprendido a crear aplicaciones web ``WSGI`` que maneja peticion
 .. raw:: html
    :file: ../_templates/partials/soporte_profesional.html
 
-.. disqus::
+
+..
+  .. disqus::
 
 .. _`$_SERVER`: https://www.php.net/manual/es/reserved.variables.server.php
 .. _`$_GET`: https://www.php.net/manual/es/reserved.variables.get.php

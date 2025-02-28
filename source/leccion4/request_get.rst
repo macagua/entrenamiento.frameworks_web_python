@@ -74,6 +74,8 @@ La etiqueta HTML ``form`` en este script indica al navegador que realice una sol
 .. raw:: html
    :file: ../_templates/partials/soporte_profesional.html
 
-.. disqus::
+
+..
+  .. disqus::
 
 .. _`listas`: https://entrenamiento-python-basico.readthedocs.io/es/3.7/leccion3/tipo_listas.html

@@ -66,7 +66,7 @@ extensions = [
     "sphinxcontrib.email",
     # "sphinxcontrib.quizdown",
     "yasfb",
-    "sphinx_disqus.disqus",
+    # "sphinx_disqus.disqus",
 ]
 
 # Options for the linkcheck builder
@@ -640,7 +640,7 @@ feed_author = publisher
 # -- Options for disqus extension --------------------------------------------
 
 # Set disqus site short name.
-disqus_shortname = "frameworks-de-desarrollo-web-en-python"
+# disqus_shortname = "frameworks-de-desarrollo-web-en-python"
 
 # -- Options for main setup --------------------------------------------------
 

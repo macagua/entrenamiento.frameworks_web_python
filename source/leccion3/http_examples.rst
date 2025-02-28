@@ -145,7 +145,9 @@ de uso, soporte para autenticación, manejo de sesiones y compatibilidad con JSO
 .. raw:: html
    :file: ../_templates/partials/soporte_profesional.html
 
-.. disqus::
+
+..
+  .. disqus::
 
 .. _`http.client`: https://docs.python.org/3/library/http.client.html
 .. _`urllib`: https://docs.python.org/3/library/urllib.html
