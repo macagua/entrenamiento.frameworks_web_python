@@ -314,13 +314,12 @@ html_short_title = project_short_name[0].capitalize() + project_short_name[1:53]
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
-html_logo = "_static/python_logo_web.png"
+html_logo = "_static/images/python_logo_web.png"
 
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
 # pixels large.
 html_favicon = "_static/favicon/favicon-16x16.png"
-# html_favicon = "_static/favicon.png"
 
 # A list of CSS files. The entry must be a filename string or a tuple containing
 # the filename string and the attributes dictionary. The filename must be relative
@@ -455,7 +454,7 @@ latex_documents = [
 
 # The name of an image file (relative to this directory) to place at the top of
 # the title page.
-latex_logo = "_static/python_logo_print.png"
+latex_logo = "_static/images/python_logo_print.png"
 
 # For "manual" documents, if this is true, then toplevel headings are parts,
 # not chapters.
