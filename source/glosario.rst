@@ -5,10 +5,12 @@
 Glosario
 ========
 
-:Autor(es): Leonardo J. Caballero G.
-:Correo(s): :email:`leonardoc@plone.org`
-:Compatible con: Python 3.11.x
-:Fecha: 21 de Febrero de 2025
+.. note::
+
+   :Autor(es): Leonardo J. Caballero G.
+   :Correo(s): :email:`leonardoc@plone.org`
+   :Compatible con: Python 3.11.x
+   :Fecha: 27 de Febrero de 2025
 
 A continuación una serie de términos usados en las tecnologías Python.
 

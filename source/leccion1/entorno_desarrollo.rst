@@ -21,6 +21,7 @@ Instalar dependencias mínimas necesarias, con el siguiente comando:
 
     $ sudo apt install -y python3-dev python3-pip python3-virtualenv
 
+----
 
 Entornos virtuales Python
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -39,6 +40,9 @@ Para desactivar entorno virtual creado, con el siguiente comando:
 
     $ deactivate
 
+De esta forma, puedes tener un directorio común para almacenar diversos entornos virtuales.
+
+----
 
 Cache local de paquetes con Pip
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -55,6 +59,12 @@ descargados, ejecutando este comando:
     $ printf '[global]\ndownload_cache = ~/.cache/pip\n' \
             >> ~/.pip/pip.conf
 
+Asi cada ves que ejecute el comando ``pip3 install`` la herramienta ``pip`` usara el
+directorio ``~/.cache/pip`` como directorio cache, esto permite agilizar la descarga
+de paquetes, ya que ``pip`` primero buscara en ese archivo primero, si no esta descargado,
+lo buscara en Internet en el repositorio :term:`PyPI`.
+
+----
 
 Gestionar paquetes Python
 ^^^^^^^^^^^^^^^^^^^^^^^^^

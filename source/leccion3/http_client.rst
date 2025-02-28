@@ -13,7 +13,7 @@ desde línea de comando, con el siguiente código fuente:
 
 .. literalinclude:: ../../recursos/leccion3/httpclient.py
    :language: python
-   :lines: 1-55
+   :lines: 1-56
 
 Guarde el archivo :file:`httpclient.py` y ejecutándolo con el siguiente comando:
 

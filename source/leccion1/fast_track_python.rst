@@ -15,15 +15,41 @@ en un número. Cada cambio de tipo requiere una conversión explícita.
 
 ::
 
-   >>> valor1 = 2
-   >>> valor2 = "5"
-   >>> total = valor1 + valor2
-   Traceback (most recent call last):
-     File "<stdin>", line 1, in <module>
-   TypeError: unsupported operand type(s) for +: 'int' and 'str'
-   >>> total = valor1 + int(valor2)
-   >>> print ("El total es: " + str(total))
-   7
+    >>> valor1 = 2
+    >>> valor2 = "5"
+    >>> total = valor1 + valor2
+    Traceback (most recent call last):
+        File "<stdin>", line 1, in <module>
+    TypeError: unsupported operand type(s) for +: 'int' and 'str'
+    >>> total = valor1 + int(valor2)
+    >>> total
+    7
+    >>> print("El total es: " + str(total))
+    El total es: 7
+
+..
+    .. ipython::
+
+        In [1]: valor1 = 2
+
+        In [2]: valor2 = "5"
+
+        In [3]: total = valor1 + valor2
+        ---------------------------------------------------------------------------
+        TypeError                                 Traceback (most recent call last)
+        Cell In[3], line 1
+        ----> 1 total = valor1 + valor2
+
+        TypeError: unsupported operand type(s) for +: 'int' and 'str'
+
+        In [4]: total = valor1 + int(valor2)
+
+        In [5]: print("El total es: " + str(total))
+        El total es: 7
+
+        In [6]: print(f"El total es: {str(total)}")
+        El total es: 7
+
 
 Tipado dinámico
 ---------------
@@ -35,11 +61,24 @@ tienen un tipo.
 ::
 
    >>> variable = 11
-   >>> print (variable, type(variable))
+   >>> print(variable, type(variable))
    11 <class 'int'>
    >>> variable = "activo"
-   >>> print (variable, type(variable))
+   >>> print(variable, type(variable))
    activo <class 'str'>
+
+..
+    .. ipython::
+
+        In [1]: variable = 11
+
+        In [2]: print(variable, type(variable))
+        11 <class 'int'>
+
+        In [3]: variable = "activo"
+
+        In [4]: print(variable, type(variable))
+        activo <class 'str'>
 
 POO y Clases
 ------------

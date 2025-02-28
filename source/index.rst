@@ -1,5 +1,5 @@
 .. entrenamiento.frameworks_web_python documentation master file, created by
-   sphinx-quickstart on Thu Sep  1 02:33:40 2022.
+   sphinx-quickstart on Wed Feb 27 23:22:31 2025.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
@@ -14,24 +14,22 @@ Repositorio de manuales y recursos del entrenamiento **"Frameworks de Desarrollo
    Si esta buscando los manuales y recursos del entrenamiento **Frameworks de Desarrollo Web en Python** visite el siguiente enlace:
    `https://entrenamiento-frameworks-web-python.readthedocs.io/es/latest/ <https://entrenamiento-frameworks-web-python.readthedocs.io/es/latest/>`_.
 
-.. sidebar:: Sobre este entrenamiento
+.. tip::
 
-    Para dominar el lenguaje de programación se tiene pensado
-    como un entrenamiento de 4 a 5 días para las personas que
-    son nuevas usándolo o los que quieren aprender acerca de
-    las mejores prácticas actuales del desarrollo en Python.
+   Para dominar el lenguaje de programación se tiene pensado
+   como un entrenamiento de 4 a 5 días para las personas que
+   son nuevas usándolo o los que quieren aprender acerca de
+   las mejores prácticas actuales del desarrollo en Python.
 
-    La planificación de este entrenamiento se estima en:
+   La planificación de este entrenamiento se estima en:
 
-    - Un entrenamiento de **nivel básico** (*4 a 5 días*) que
-      cubre los *seis (06) capítulos*.
-
-
-**Tabla de contenidos**
+   - Un entrenamiento de **nivel básico** (*4 a 5 días*) que
+     cubre los *seis (06) capítulos*.
 
 .. toctree::
    :numbered:
    :maxdepth: 2
+   :caption: Tabla de contenidos
 
    leccion1/index
    leccion2/index

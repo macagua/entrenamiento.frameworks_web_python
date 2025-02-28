@@ -5,7 +5,8 @@ Entrenamiento "Frameworks de Desarrollo Web en Python"
 ======================================================
 
 Repositorio de manuales y recursos del entrenamiento "Frameworks de Desarrollo Web en
-`Python 3.11`_" realizado por la empresa `Covantec R.L`_.
+`Python 3.11`_" realizado por la empresa `Covantec R.L`_ actualmente mantenido por
+`Leonardo J. Caballero G.`_.
 
 .. contents :: :local:
 
@@ -144,6 +145,7 @@ directorio ``docs`` tanto en el idioma Ingles (LICENSE.rst) como el idioma Espa√
 (LICENSE.es.rst).
 
 .. _`Covantec R.L`: https://github.com/Covantec
+.. _`Leonardo J. Caballero G.`: https://github.com/macagua
 .. _`Python 3.11`: https://docs.python.org/es/3.11/
 .. _`entrenamiento.frameworks_web_python`: https://github.com/macagua/entrenamiento.frameworks_web_python
 .. _`ticket de soporte`: https://github.com/macagua/entrenamiento.frameworks_web_python/issues/new

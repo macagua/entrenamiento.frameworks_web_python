@@ -101,9 +101,6 @@ el tutorial. La lista completa de colaboradores está disponible en el repositor
    :avatars:
    :exclude: dependabot[bot]
 
-.. todo::
-    TODO corregir alineación de avatar de los colaboradores.
-
 Es muy fácil entrar en la lista. Simplemente escriba un artículo o proponga cambios
 en el repositorio del entrenamiento. Y obtenga el agradecimiento de todos.
 
