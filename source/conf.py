@@ -211,7 +211,7 @@ html_theme_options = {
         "toc.sticky",
         "content.action.edit",
         "content.action.view",
-        # "content.code.copy",
+        "content.code.copy",
         "content.tooltips",
     ],
     "palette": [

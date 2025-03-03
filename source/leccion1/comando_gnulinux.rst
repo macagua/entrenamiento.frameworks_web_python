@@ -9,9 +9,10 @@ instalación o configuración en Python, ya que trabaja vía comando.
 
 Por lo general un comando en GNU/Linux, esta conformado de la siguiente forma:
 
-::
+.. code-block:: console
+    :class: no-copy
 
-  $ nombre-comando  opciones  valores  meta-caracter  otros-comando
+    nombre-comando  opciones  valores  meta-caracter  otros-comando
 
 Explicación
 

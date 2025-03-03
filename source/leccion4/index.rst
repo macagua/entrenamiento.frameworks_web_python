@@ -23,7 +23,9 @@ A continuación el temario de esta lección:
    request_get
    request_post
 
+
 ----
+
 
 .. seealso::
 
@@ -33,7 +35,6 @@ A continuación el temario de esta lección:
 
 .. raw:: html
    :file: ../_templates/partials/soporte_profesional.html
-
 
 ..
   .. disqus::

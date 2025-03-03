@@ -66,16 +66,20 @@ Es una aplicación Python de línea de comando, por lo que puedo instalarla con:
 
 .. code-block:: console
 
-    $ virtualenv --python /usr/bin/python3 venv
-    $ source ./venv/bin/activate
-    $ pip3 install -U pip
-    $ pip3 install httpie
+    virtualenv --python /usr/bin/python3 venv && source ./venv/bin/activate
+
+Es una aplicación de línea de comando, por lo que puedo instalarla con el siguiente
+comando:
+
+.. code-block:: console
+
+    pip3 install httpie
 
 Una vez instalado puedes ejecutar con el siguiente comando:
 
 .. code-block:: console
 
-    $ http --version
+    http --version
 
 Si muestra el numero de la versión instalada de ``http``, tiene
 correctamente instalada la herramienta.
@@ -89,7 +93,7 @@ ese servidor.
 
 .. code-block:: console
 
-    $ http https://httpie.io/
+    http https://httpie.io/
 
 Aunque las plataformas API suelen tener interfaces muy intuitivas para solicitar y transferir
 datos a una URL, el comando ``http`` puede ser una herramienta muy útil para usar con el
@@ -105,12 +109,14 @@ página de proyecto ``http``:
 
 .. code-block:: console
 
-    $ http -o httpie.html https://httpie.io/
+    http -o httpie.html https://httpie.io/
 
 En este ejemplo, el código de origen de la página de proyecto ``http`` se guarda en un archivo
 denominado :file:`httpie.html`.
 
+
 ----
+
 
 Descargar ficheros a un dispositivo
 ************************************
@@ -123,7 +129,7 @@ un archivo comprimido de la siguiente forma:
 
 .. code-block:: console
 
-    $ http -d https://www.python.org/ftp/python/3.11.11/Python-3.11.11.tar.xz
+    http -d https://www.python.org/ftp/python/3.11.11/Python-3.11.11.tar.xz
 
 Con el comando ``http`` y la URL de un archivo comprimido, pueden obtenerse los datos binarios del
 archivo comprimido y almacenarse en el disco duro con el mismo nombre del archivo original ``Python-3.11.11.tar.xz``.
@@ -133,7 +139,7 @@ la imagen de la siguiente forma:
 
 .. code-block:: console
 
-    $ http -d https://www.python.org/static/img/python-logo.png -o python-logo.png
+    http -d https://www.python.org/static/img/python-logo.png -o python-logo.png
 
 Con el comando ``http`` y la URL de la imagen, pueden obtenerse los datos binarios del logotipo y
 almacenarse en un archivo de imagen (con una extensión ``.png`` como la del archivo original) que
@@ -141,6 +147,7 @@ luego puede guardarse en el disco duro.
 
 
 ----
+
 
 Probar rápidamente una API desde el terminal
 ********************************************
@@ -154,35 +161,35 @@ request GET con response 200
 
 .. code-block:: console
 
-    $ http GET https://jsonplaceholder.typicode.com/todos/1
+    http GET https://jsonplaceholder.typicode.com/todos/1
 
 request POST formato x-www-form-urlencoded
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: console
 
-    $ http --form POST https://jsonplaceholder.typicode.com/posts name='HTTPie' type='article'
+    http --form POST https://jsonplaceholder.typicode.com/posts name='HTTPie' type='article'
 
 request POST formato json
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: console
 
-    $ echo -n '{"name": "HTTPie", "type": "article"}' | http POST https://jsonplaceholder.typicode.com/posts
+    echo -n '{"name": "HTTPie", "type": "article"}' | http POST https://jsonplaceholder.typicode.com/posts
 
 request PUT formato json
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: console
 
-    $ http PUT https://jsonplaceholder.typicode.com/posts/1 Content-Type:application/json <<< '{"name": "JSON", "type": "post"}'
+    http PUT https://jsonplaceholder.typicode.com/posts/1 Content-Type:application/json <<< '{"name": "JSON", "type": "post"}'
 
 request DELETE
 ^^^^^^^^^^^^^^^
 
 .. code-block:: console
 
-    $ http DELETE https://jsonplaceholder.typicode.com/posts/1
+    http DELETE https://jsonplaceholder.typicode.com/posts/1
 
 
 De esta forma aprendió a usar el comando ``http``.
@@ -199,7 +206,6 @@ De esta forma aprendió a usar el comando ``http``.
 
 .. raw:: html
    :file: ../_templates/partials/soporte_profesional.html
-
 
 
 ..

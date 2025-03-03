@@ -2,7 +2,6 @@
 
 import logging
 import pymysql
-import os
 
 logging.basicConfig(level=logging.INFO)
 
@@ -12,6 +11,7 @@ MULTIPLE_COLUMNS = [
     ("6303", 2),
 ]
 
+# Script UPDATE SQL a usar al actualizar datos
 UPDATE_SCRIPTS = """UPDATE clientes SET codigo_postal = %s WHERE id = %s;"""
 
 
@@ -20,10 +20,10 @@ def actualizar_registro():
 
     conexion = None
     credenciales = {
-        "host": "localhost",  # Servidor MySQL (localhost si está en tu máquina)
-        "user": "root",  # Usuario de MySQL
-        "password": "root",  # Contraseña de MySQL
-        "database": "sistema",  # Nombre de la base de datos
+        "host": "localhost",
+        "user": "root",
+        "password": "root",
+        "database": "sistema",
     }
     try:
         # Establecer la conexión con la base de datos

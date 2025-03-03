@@ -46,6 +46,7 @@ Ejemplo de una solicitud ``GET`` con la biblioteca `http.client`_ desde la
 :ref:`consola interactiva de Python <python_interactivo>`, ejecute el siguiente comando:
 
 .. code-block:: pycon
+   :class: no-copy
 
     >>> import http.client
     >>>
@@ -60,6 +61,7 @@ Ejemplo de una solicitud ``GET`` con la biblioteca `http.client`_ desde la
 
 
 ----
+
 
 .. _python_urllib:
 
@@ -76,6 +78,7 @@ Ejemplo con el módulo ``urllib.request`` desde la
 siguiente comando:
 
 .. code-block:: pycon
+   :class: no-copy
 
     >>> import urllib.request
     >>>
@@ -87,6 +90,7 @@ siguiente comando:
 
 
 ----
+
 
 .. _python_requests:
 
@@ -100,7 +104,7 @@ que es externa, más se puede instalar ejecutando el siguiente comando:
 
 .. code-block:: console
 
-    $ pip3 install requests
+    pip3 install requests
 
 
 Ejemplo de una solicitud ``GET`` con la librería :ref:`requests <python_http_client_requests>`
@@ -108,6 +112,7 @@ desde la :ref:`consola interactiva de Python <python_interactivo>`, ejecute el s
 comando:
 
 .. code-block:: pycon
+   :class: no-copy
 
     >>> import requests
     >>>
@@ -122,6 +127,7 @@ Ejemplo de una solicitud ``POST`` con la librería :ref:`requests <python_http_c
 desde la :ref:`consola interactiva de Python <python_interactivo>`, ejecute el siguiente comando:
 
 .. code-block:: pycon
+   :class: no-copy
 
     >>> import requests
     >>>
@@ -140,6 +146,15 @@ Python 3 ofrece múltiples formas de interactuar con el protocolo HTTP. Aunque l
 estándar (:ref:`http.client <python_http_client_lib>` y :ref:`urllib <python_urllib>`) son útiles,
 la biblioteca :ref:`requests <python_requests>` es la opción más recomendada debido a su facilidad
 de uso, soporte para autenticación, manejo de sesiones y compatibilidad con JSON.
+
+
+----
+
+
+.. seealso::
+
+    Consulte la sección de :ref:`lecturas suplementarias <lecturas_extras_leccion3>`
+    del entrenamiento para ampliar su conocimiento en esta temática.
 
 
 .. raw:: html

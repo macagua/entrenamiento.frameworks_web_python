@@ -1,6 +1,6 @@
 .. _python_wsgi_request_post:
 
-Petición POST
+Request POST
 =============
 
 La petición ``POST`` en :ref:`WSGI <python_leccion4>` es una forma de enviar datos al servidor
@@ -25,8 +25,10 @@ La etiqueta HTML ``form`` en este script indica al navegador que realice una sol
 
 
 .. important::
-    Usted puede descargar el código usado en esta sección haciendo clic
-    :download:`aquí <../../recursos/leccion4/wsgi_post_request.py>`.
+    Usted puede descargar el código usado en esta sección haciendo clic en el
+    siguiente enlace:
+
+    - :download:`wsgi_post_request.py <../../recursos/leccion4/wsgi_post_request.py>`.
 
 
 .. tip::
@@ -42,6 +44,7 @@ La etiqueta HTML ``form`` en este script indica al navegador que realice una sol
     puede abrir desde con su navegador Web favorito (Mozilla Firefox, Google Chrome, etc)
     la siguiente dirección http://localhost:8080
 
+
 ----
 
 
@@ -53,7 +56,6 @@ La etiqueta HTML ``form`` en este script indica al navegador que realice una sol
 
 .. raw:: html
    :file: ../_templates/partials/soporte_profesional.html
-
 
 ..
   .. disqus::

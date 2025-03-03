@@ -32,3 +32,19 @@ web.
 
 .. todo::
    TODO: Escribir ejemplo con ``SQLalchemy``.
+
+
+----
+
+
+.. seealso::
+
+    Consulte la sección de :ref:`lecturas suplementarias <lecturas_extras_leccion8>`
+    del entrenamiento para ampliar su conocimiento en esta temática.
+
+
+.. raw:: html
+   :file: ../_templates/partials/soporte_profesional.html
+
+..
+  .. disqus::

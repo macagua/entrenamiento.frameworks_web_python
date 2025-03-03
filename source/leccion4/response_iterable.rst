@@ -34,8 +34,10 @@ response será la suma de todas las longitudes de la cadena, como en este script
 
 
 .. important::
-    Usted puede descargar el código usado en esta sección haciendo clic
-    :download:`aquí <../../recursos/leccion4/wsgi_response_iterable.py>`.
+    Usted puede descargar el código usado en esta sección haciendo clic en el
+    siguiente enlace:
+
+    - :download:`wsgi_response_iterable.py <../../recursos/leccion4/wsgi_response_iterable.py>`.
 
 
 .. tip::
@@ -49,6 +51,7 @@ response será la suma de todas las longitudes de la cadena, como en este script
 
     El servidor estará atendiendo peticiones en la dirección en http://localhost:8051
 
+
 ----
 
 
@@ -60,7 +63,6 @@ response será la suma de todas las longitudes de la cadena, como en este script
 
 .. raw:: html
    :file: ../_templates/partials/soporte_profesional.html
-
 
 ..
   .. disqus::

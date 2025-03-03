@@ -198,13 +198,13 @@ a continuación se presentan el correspondiente comando de tu sistema operativo:
 
       .. code-block:: console
 
-          $ pip3 install ZODB==6.0
+          pip3 install ZODB==6.0
 
    .. group-tab:: Windows
 
       .. code-block:: console
 
-          > pip3 install ZODB==6.0
+          pip3 install ZODB==6.0
 
 Puede probar si la instalación se realizo correctamente, ejecutando
 el siguiente comando correspondiente a tu sistema operativo:
@@ -215,13 +215,13 @@ el siguiente comando correspondiente a tu sistema operativo:
 
       .. code-block:: console
 
-          $ pip3 freeze | grep "ZODB"
+          pip3 freeze | grep "ZODB"
 
    .. group-tab:: Windows
 
       .. code-block:: console
 
-          > pip3 freeze | grep "ZODB"
+          pip3 freeze | grep "ZODB"
 
 
 Si muestra el numero de la versión instalada de ``ZODB``, tiene correctamente instalada
@@ -244,14 +244,17 @@ con ``ZODB`` para operaciones CRUD en un archivo de registros serializados:
 
 .. important::
     Usted puede descargar el código usado en esta sección haciendo clic en el
-    siguiente enlace: :download:`main.py <../../recursos/leccion2/zodb/main.py>`.
+    siguiente enlace:
+
+    - :download:`main.py <../../recursos/leccion2/zodb/main.py>`.
 
 
 .. tip::
     Para ejecutar el código :file:`main.py`, abra una consola de comando,
     acceda al directorio donde se encuentra el programa:
 
-    ::
+    .. code-block:: pycon
+        :class: no-copy
 
         zodb/
         ├── filestorage/
@@ -261,12 +264,13 @@ con ``ZODB`` para operaciones CRUD en un archivo de registros serializados:
 
     .. code-block:: console
 
-        $ python3 main.py
+        python3 main.py
 
 
     La salida esperada será similar a la siguiente:
 
-    ::
+    .. code-block:: console
+        :class: no-copy
 
         ✅ ¡La conexión ZODB a la base de datos 'data.fs' fue establecida!
 
@@ -296,7 +300,8 @@ con ``ZODB`` para operaciones CRUD en un archivo de registros serializados:
 
     La estructura de directorio debe ser similar a la siguiente:
 
-    ::
+    .. code-block:: pycon
+        :class: no-copy
 
         zodb/
         ├── filestorage/
@@ -316,9 +321,19 @@ registro en un archivo serializado de objetos python ``ZODB``.
 
 ----
 
+
 .. seealso::
 
     Consulte la sección de :ref:`lecturas suplementarias <lecturas_extras_leccion2>`
+    del entrenamiento para ampliar su conocimiento en esta temática.
+
+
+.. raw:: html
+   :file: ../_templates/partials/soporte_profesional.html
+
+
+..
+  .. disqus::
 
 .. _`ZODB`: https://zodb-docs.readthedocs.io/en/latest/
 .. _`ZEO`: https://pypi.org/project/ZEO/

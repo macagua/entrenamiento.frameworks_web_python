@@ -2,10 +2,10 @@
 
 import logging
 import pymysql
-import os
 
 logging.basicConfig(level=logging.INFO)
 
+# Script DELETE SQL a usar al eliminar datos
 DELETE_SCRIPTS = """DELETE FROM clientes WHERE id = 3;"""
 
 
@@ -14,10 +14,10 @@ def eliminar_registro():
 
     conexion = None
     credenciales = {
-        "host": "localhost",  # Servidor MySQL (localhost si está en tu máquina)
-        "user": "root",  # Usuario de MySQL
-        "password": "root",  # Contraseña de MySQL
-        "database": "sistema",  # Nombre de la base de datos
+        "host": "localhost",
+        "user": "root",
+        "password": "root",
+        "database": "sistema",
     }
     try:
         # Establecer la conexión con la base de datos

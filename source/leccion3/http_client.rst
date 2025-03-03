@@ -19,26 +19,29 @@ Guarde el archivo :file:`httpclient.py` y ejecutándolo con el siguiente comando
 
 .. code-block:: console
 
-  $ python3 httpclient.py
+  python3 httpclient.py
 
 
 ----
 
 
 .. important::
-    Usted puede descargar el código usado en esta sección haciendo clic en los
-    siguientes enlaces:
-    :download:`httpclient.py <../../recursos/leccion3/httpclient.py>`.
+    Usted puede descargar el código usado en esta sección haciendo clic en el
+    siguiente enlace:
+
+    - :download:`httpclient.py <../../recursos/leccion3/httpclient.py>`.
 
 
 .. tip::
     Para ejecutar el código :file:`httpclient.py`, abra una consola de comando,
     acceda al directorio donde se encuentra el programa:
 
-    ::
+    .. code-block:: console
+        :class: no-copy
 
-        leccion3/
-        └── httpclient.py
+        proyectos/
+        └── http/
+            └── httpclient.py
 
     Si tiene la estructura de archivo previa, entonces ejecute el siguiente comando:
 
@@ -48,6 +51,7 @@ Guarde el archivo :file:`httpclient.py` y ejecutándolo con el siguiente comando
 
 
 ----
+
 
 .. _python_http_external_clients:
 
@@ -74,7 +78,6 @@ Existen varias herramientas clientes del :ref:`protocolo HTTP <python_introducci
 
 .. raw:: html
    :file: ../_templates/partials/soporte_profesional.html
-
 
 
 ..

@@ -17,7 +17,7 @@ MULTIPLE_COLUMNS = [
     (3, "Manuel", "Matos", "4001", "+58-414-2360943"),
 ]
 
-# Script CREATE TABLE SQL para crear tabla(s)
+# Script CREATE TABLE SQL para crear tabla clientes
 CREATE_TABLE_SQL = """
 CREATE TABLE IF NOT EXISTS clientes (
     id INTEGER UNIQUE NOT NULL,
@@ -28,8 +28,8 @@ CREATE TABLE IF NOT EXISTS clientes (
     PRIMARY KEY(id)
 );"""
 
-
-SQL_SCRIPTS = """INSERT INTO clientes VALUES (?, ?, ?, ?, ?);"""
+# Script INSERT SQL a usar al ingresar datos
+INSERT_SQL = """INSERT INTO clientes VALUES (?, ?, ?, ?, ?);"""
 
 
 def insertar_registro():
@@ -37,9 +37,9 @@ def insertar_registro():
 
     conexion = None
     try:
-        # Crear la instancia de DB y pasar el nombre del archivo
+        # Establecer la conexión con la base de datos
         conexion = sqlite3.connect(DB)
-        # Crear un cursor para la base de datos
+        # Crear un objeto cursor para la base de datos
         cursor = conexion.cursor()
         logging.info(f"¡Conectado a la base de datos '{DB_FILE}'!\n")
         # Crear la tabla productos si no existe
@@ -47,13 +47,22 @@ def insertar_registro():
         # Confirmar la creación de la tabla
         conexion.commit()
         # Insertar nuevos registros en la tabla
-        cursor.executemany(SQL_SCRIPTS, MULTIPLE_COLUMNS)
-        # Guardar los cambios en la base de datos
+        cursor.executemany(INSERT_SQL, MULTIPLE_COLUMNS)
+        # Confirmar la inserción de los registros
         conexion.commit()
         logging.info(
             f"¡Fueron insertado(s) {cursor.rowcount} registro(s) correctamente en la tabla!\n"
         )
-        # Cerrar cursor
+        # Insertar un nuevo registro en la tabla
+        cursor.execute(
+            INSERT_SQL, (4, "Liliana", "Andradez", "4001", "+58-414-6782473")
+        )
+        # Confirmar la inserción del registro
+        conexion.commit()
+        logging.info(
+            f"¡Fueron insertado(s) {cursor.rowcount} registro(s) correctamente en la tabla!\n"
+        )
+        # Cerrar el cursor
         cursor.close()
     except sqlite3.Error as error:
         logging.error(f"¡Fallo la inserción de registro(s) en la tabla!: {error}")

@@ -2,7 +2,6 @@
 
 import logging
 import pymysql
-import os
 
 logging.basicConfig(level=logging.INFO)
 
@@ -32,10 +31,10 @@ def insertar_registro():
 
     conexion = None
     credenciales = {
-        "host": "localhost",  # Servidor MySQL (localhost si está en tu máquina)
-        "user": "root",  # Usuario de MySQL
-        "password": "root",  # Contraseña de MySQL
-        "database": "sistema",  # Nombre de la base de datos
+        "host": "localhost",
+        "user": "root",
+        "password": "root",
+        "database": "sistema",
     }
     try:
         # Establecer la conexión con la base de datos
@@ -45,13 +44,16 @@ def insertar_registro():
             password=credenciales["password"],
             database=credenciales["database"],
         )
-        # Crear un objeto cursor para ejecutar las consultas
+        # Crear un objeto cursor para la base de datos
         cursor = conexion.cursor()
         logging.info(f"¡Conectado a la base de datos '{credenciales['database']}'!\n")
         # Crear la tabla productos si no existe
         cursor.execute(CREATE_TABLE_SQL)
         # Confirmar la creación de la tabla
         conexion.commit()
+        logging.info(
+            f"¡Fue creo una tabla correctamente en la base de datos '{credenciales['database']}'!\n"
+        )
         # Insertar nuevos registros en la tabla
         cursor.executemany(INSERT_SQL, MULTIPLE_COLUMNS)
         # Confirmar la inserción de los registros

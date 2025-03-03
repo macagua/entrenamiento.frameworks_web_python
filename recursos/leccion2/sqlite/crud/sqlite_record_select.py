@@ -9,7 +9,9 @@ logging.basicConfig(level=logging.INFO)
 DB_PATH = os.path.dirname(os.path.abspath(__file__)) + os.sep
 DB_FILE = "sistema.db"
 DB = DB_PATH + DB_FILE
-SQL_SCRIPTS = """SELECT * FROM clientes;"""
+
+# Script SELECT SQL a usar al consultar datos
+SELECT_SCRIPTS = """SELECT * FROM clientes;"""
 
 
 def consultar_registro():
@@ -17,24 +19,24 @@ def consultar_registro():
 
     conexion = None
     try:
-        # Crear la instancia de DB y pasar el nombre del archivo
+        # Establecer la conexión con la base de datos
         conexion = sqlite3.connect(DB)
-        # Crear un cursor para la base de datos
+        # Crear un objeto cursor para ejecutar las consultas
         cursor = conexion.cursor()
         logging.info(f"¡Conectado a la base de datos '{DB_FILE}'!\n")
-        # Ejecutar SQL
-        cursor.execute(SQL_SCRIPTS)
-        # Recupera todas las filas de los resultados de una consulta
+        # Realizar consulta la tabla clientes
+        cursor.execute(SELECT_SCRIPTS)
+        # Recuperar los registros de la consulta
         registros = cursor.fetchall()
-        # Mostrar registros
+        # Mostrar los registros de la tabla
         print(f"Total de filas son: {len(registros)} \n")
         print("Mostrar cada fila: \n")
         for fila in registros:
             print(f"\tId: {fila[0]}")
-            print(f"\tNombre: {fila[1]}")
-            print(f"\tApellido: {fila[2]}")
-            print(f"\tCódigo postal: {fila[3]}\n")
-        # Cerrar cursor
+            print(f"\tNombre: {fila[1]} {fila[2]}")
+            print(f"\tCódigo postal: {fila[3]}")
+            print(f"\tTeléfono: {fila[4]}\n")
+        # Cerrar el cursor
         cursor.close()
     except sqlite3.Error as error:
         logging.error(f"¡Fallo la consulta de registro(s) en la tabla!: {error}")
