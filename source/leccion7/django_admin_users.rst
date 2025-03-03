@@ -104,7 +104,7 @@ siguientes detalles:
 +-------------+------------+--------------+----------------+
 |  Username   | Password   | Permissions  | Groups         |
 +-------------+------------+--------------+----------------+
-|  usuario1   | dswer34k#  | Staff user   | Departamento 3 |
+|  usuario1   | rdswer34k# | Staff user   | Departamento 3 |
 +-------------+------------+--------------+----------------+
 |  usuario2   | rdsw34k#er | Staff user   | Departamento 2 |
 +-------------+------------+--------------+----------------+
