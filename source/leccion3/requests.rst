@@ -244,7 +244,7 @@ el bloque de código inscrito.
 
 Si ejecuto el comando anterior, este da como resultado lo siguiente:
 
-.. code-block:: python
+.. code-block:: pycon
     :class: no-copy
 
     Código HTTP Response: 404

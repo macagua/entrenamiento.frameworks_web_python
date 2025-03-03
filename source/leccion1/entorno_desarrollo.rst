@@ -244,7 +244,7 @@ ejecute el siguiente comando:
           sudo apt install -y python3-virtualenv
 
 Cree un directorio raíz para almacenar los diversos entornos virtuales,
-ejecutando el siguiente comando: 
+ejecutando el siguiente comando:
 
 .. code-block:: console
 
