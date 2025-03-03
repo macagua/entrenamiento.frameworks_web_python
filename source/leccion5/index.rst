@@ -25,6 +25,8 @@ Por ejemplo, muchos framework proporcionan librerías para acceder a
 de sesiones, y con frecuencia facilitan la reutilización de código.
 
 
+.. _python_leccion5_frameworks_web_populares:
+
 Frameworks Web en Python
 ------------------------
 
@@ -73,7 +75,9 @@ Al elegir un framework web en Python, es importante considerar factores
 como la complejidad del proyecto, las necesidades de rendimiento y las
 preferencias personales del equipo de desarrollo.
 
+
 ----
+
 
 .. seealso::
 
@@ -83,7 +87,6 @@ preferencias personales del equipo de desarrollo.
 
 .. raw:: html
    :file: ../_templates/partials/soporte_profesional.html
-
 
 ..
   .. disqus::

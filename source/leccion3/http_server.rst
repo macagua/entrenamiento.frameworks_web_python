@@ -49,17 +49,21 @@ para usar en las siguientes prácticas.
 
 
 .. tip::
-    La estructura de la carpeta llamada ``leccion3`` donde se encuentra los archivos HTML,
+    La estructura de la carpeta llamada ``http`` donde se encuentra los archivos HTML,
     como se muestra a continuación:
 
-    ::
+    .. code-block:: console
+        :class: no-copy
 
-        leccion3/
-        ├── index2.html
-        ├── index.html
-        └── test.html
+        proyectos/
+        └── http/
+            ├── index2.html
+            ├── index.html
+            └── test.html
+
 
 ----
+
 
 Línea de comando
 -----------------
@@ -72,8 +76,14 @@ de la carpeta llamada ``leccion3`` el siguiente comando:
 
 .. code-block:: console
 
-  $ python3 -m http.server
-  Serving HTTP on 0.0.0.0 port 8000 ...
+  python3 -m http.server
+
+Si ejecuto el comando anterior, este da como resultado lo siguiente:
+
+.. code-block:: console
+    :class: no-copy
+
+    Serving HTTP on 0.0.0.0 port 8000 ...
 
 De esta forma, una vez ejecutado el comando, se puede abrir desde con su navegador Web favorito
 (Mozilla Firefox, Google Chrome, etc) las siguientes direcciones:
@@ -83,12 +93,18 @@ De esta forma, una vez ejecutado el comando, se puede abrir desde con su navegad
 - http://localhost:8000/test.html
 
 Si desea cambiar el puerto de ejecución del servidor HTTP local, ejecute dentro de la carpeta llamada
-``leccion3`` el siguiente comando:
+``http`` el siguiente comando:
 
 .. code-block:: console
 
-  $ python3 -m http.server 8001
-  Serving HTTP on 0.0.0.0 port 8001 ...
+  python3 -m http.server 8001
+
+Si ejecuto el comando anterior, este da como resultado lo siguiente:
+
+.. code-block:: console
+    :class: no-copy
+
+    Serving HTTP on 0.0.0.0 port 8001 ...
 
 
 De esta forma, una vez ejecutado el comando, se puede abrir desde con su navegador Web favorito
@@ -99,12 +115,18 @@ De esta forma, una vez ejecutado el comando, se puede abrir desde con su navegad
 - http://localhost:8001/test.html
 
 Si desea cambiar la IP de ejecución del servidor HTTP local, ejecute dentro de la carpeta llamada
-``leccion3`` el siguiente comando:
+``http`` el siguiente comando:
 
 .. code-block:: console
 
-  $ python3 -m http.server 8080 --bind 127.0.0.1
-  Serving HTTP on 127.0.0.1 port 8080 ...
+  python3 -m http.server 8080 --bind 127.0.0.1
+
+Si ejecuto el comando anterior, este da como resultado lo siguiente:
+
+.. code-block:: console
+    :class: no-copy
+
+    Serving HTTP on 127.0.0.1 port 8080 ...
 
 
 De esta forma, una vez ejecutado el comando, se puede abrir desde con su navegador Web favorito
@@ -117,7 +139,9 @@ De esta forma, una vez ejecutado el comando, se puede abrir desde con su navegad
 
 De esta forma, puede usar la librería `http.server`_ para servir archivos estáticos, como archivos HTML.
 
+
 ----
+
 
 Ejecución en script
 -------------------
@@ -135,29 +159,35 @@ fuente:
 .. important::
     Usted puede descargar el código usado en esta sección haciendo clic en los
     siguientes enlaces:
-    :download:`httpserver.py <../../recursos/leccion3/httpserver.py>`,
-    :download:`index2.html <../../recursos/leccion3/index2.html>`,
-    :download:`index.html <../../recursos/leccion3/index.html>`,
-    y :download:`test.html <../../recursos/leccion3/test.html>`.
+
+    - :download:`httpserver.py <../../recursos/leccion3/httpserver.py>`.
+
+    - :download:`index2.html <../../recursos/leccion3/index2.html>`.
+
+    - :download:`index.html <../../recursos/leccion3/index.html>`.
+
+    - :download:`test.html <../../recursos/leccion3/test.html>`.
 
 
 .. tip::
     Para ejecutar el código :file:`httpserver.py` abra una consola de comando,
     acceda al directorio donde se encuentra el programa y los archivos a servir:
 
-    ::
+    .. code-block:: console
+        :class: no-copy
 
-        leccion3/
-        ├── httpserver.py
-        ├── index2.html
-        ├── index.html
-        └── test.html
+        proyectos/
+        └── http/
+            ├── httpserver.py
+            ├── index2.html
+            ├── index.html
+            └── test.html
 
     Si tiene la estructura de archivo previa, entonces ejecute el siguiente comando:
 
-    ::
+    .. code-block:: console
 
-        python3 httpserver.py
+       python3 httpserver.py
 
     Para probar el funcionamiento del script del servidor HTTP, abra otra ventana de la
     terminal de comando, donde puede usar el :ref:`cliente cURL <python_http_client_curl>`
@@ -165,17 +195,24 @@ fuente:
     comando:
 
     .. code-block:: console
+        :class: no-copy
 
-      $ curl -X GET 127.0.0.1:8085/test.html
-      <!DOCTYPE html>
-      <html>
-        <head>
-          <title>HTTP GET verb</title>
-        </head>
-        <body>
-          <h1>This is a GET verb!</h1>
-        </body>
-      </html>
+        curl -X GET 127.0.0.1:8085/test.html
+
+    Si ejecuto el comando anterior, este da como resultado lo siguiente:
+
+    .. code-block:: console
+        :class: no-copy
+
+        <!DOCTYPE html>
+        <html>
+          <head>
+            <title>HTTP GET verb</title>
+          </head>
+          <body>
+            <h1>This is a GET verb!</h1>
+          </body>
+        </html>
 
     Para probar el funcionamiento del script del servidor HTTP, abra otra ventana de la
     terminal de comando, donde puede usar el :ref:`cliente cURL <python_http_client_curl>`
@@ -184,7 +221,7 @@ fuente:
 
     .. code-block:: console
 
-      $ curl -X GET 127.0.0.1:8085/index.html
+      curl -X GET 127.0.0.1:8085/index.html
 
     Para probar el funcionamiento del script del servidor HTTP, abra otra ventana de la
     terminal de comando, donde puede usar el :ref:`cliente cURL <python_http_client_curl>`
@@ -193,7 +230,7 @@ fuente:
 
     .. code-block:: console
 
-      $ curl -X GET 127.0.0.1:8085/index2.html
+      curl -X GET 127.0.0.1:8085/index2.html
 
     Para probar el funcionamiento del script del servidor HTTP, abra otra ventana de la
     terminal de comando, donde puede usar el :ref:`cliente cURL <python_http_client_curl>`
@@ -202,16 +239,22 @@ fuente:
 
     .. code-block:: console
 
-      $ curl -X POST -d "message=Python" 127.0.0.1:8085
-      <!DOCTYPE html>
-      <html>
-        <body>
-          <h1>POST verb demo</h1>
-          <p>The message is 'Python'.</p>
-          <br />
-          <p>This is a POST verb!</p>
-        </body>
-      </html>
+        curl -X POST -d "message=Python" 127.0.0.1:8085
+
+    Si ejecuto el comando anterior, este da como resultado lo siguiente:
+
+    .. code-block:: html
+        :class: no-copy
+
+        <!DOCTYPE html>
+        <html>
+          <body>
+            <h1>POST verb demo</h1>
+            <p>The message is 'Python'.</p>
+            <br />
+            <p>This is a POST verb!</p>
+          </body>
+        </html>
 
     Para probar el funcionamiento del script del servidor HTTP, abra otra ventana de la
     terminal de comando, donde puede usar el :ref:`cliente cURL <python_http_client_curl>`
@@ -220,20 +263,27 @@ fuente:
 
     .. code-block:: console
 
-      $ curl -X POST -d "message=" 127.0.0.1:8085
-      <!DOCTYPE html>
-      <html>
-        <body>
-          <h1>POST verb demo</h1>
-          <p>The message is 'Default'.</p>
-          <br />
-          <p>This is a POST verb!</p>
-        </body>
-      </html>
+        curl -X POST -d "message=" 127.0.0.1:8085
+
+    Si ejecuto el comando anterior, este da como resultado lo siguiente:
+
+    .. code-block:: html
+        :class: no-copy
+
+        <!DOCTYPE html>
+        <html>
+          <body>
+            <h1>POST verb demo</h1>
+            <p>The message is 'Default'.</p>
+            <br />
+            <p>This is a POST verb!</p>
+          </body>
+        </html>
 
 
 De esta forma pudo simular el comportamiento de un servidor HTTP de forma local, con al
 menos dos métodos HTTP ``GET`` y ``POST``.
+
 
 ----
 
@@ -246,7 +296,6 @@ menos dos métodos HTTP ``GET`` y ``POST``.
 
 .. raw:: html
    :file: ../_templates/partials/soporte_profesional.html
-
 
 
 ..

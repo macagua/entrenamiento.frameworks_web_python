@@ -30,6 +30,5 @@ el temario de esta lección:
 .. raw:: html
    :file: ../_templates/partials/soporte_profesional.html
 
-
 ..
   .. disqus::

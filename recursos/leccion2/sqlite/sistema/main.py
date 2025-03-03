@@ -85,9 +85,9 @@ def consultar_registro(conexion_bd, select_sql):
         print("Mostrar cada fila: \n")
         for fila in registros:
             print(f"\tId: {fila[0]}")
-            print(f"\tNombre: {fila[1]}")
-            print(f"\tApellido: {fila[2]}")
-            print(f"\tCódigo postal: {fila[3]}\n")
+            print(f"\tNombre: {fila[1]} {fila[2]}")
+            print(f"\tCódigo postal: {fila[3]}")
+            print(f"\tTeléfono: {fila[4]}\n")
         # Cerrar el cursor
         cursor.close()
     except Error as error:

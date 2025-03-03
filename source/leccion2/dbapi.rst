@@ -36,7 +36,7 @@ Importar el conector
 La forma más comunes de importar la librería de implementación DB-API
 
 .. code-block:: python
-    :linenos:
+    :class: no-copy
 
     import databasepackage as base_datos
 
@@ -55,7 +55,7 @@ Los dos objetos de nivel superior cuando se trabaja con DB-API son
 la conexión y el cursor. Primero obtienes una conexión a una base de datos:
 
 .. code-block:: python
-    :linenos:
+    :class: no-copy
 
     conexion = base_datos.connect()
 
@@ -68,7 +68,6 @@ Algunas bases de datos tienen sus propias opciones, como ``sqlite3`` tiene
 la opción para una base de datos en memoria no persistente:
 
 .. code-block:: python
-    :linenos:
 
     conexion = sqlite3.connect(":memory:")
 
@@ -83,7 +82,6 @@ A continuación, se obtiene un cursor, que se utilizará para ejecutar comandos
 transaccionales, consultas SQL y manipulación de datos.
 
 .. code-block:: python
-    :linenos:
 
     cursor = conexion.cursor()
 
@@ -93,7 +91,6 @@ de recursos en la conexión, pero solo unas pocas lo admiten en el cursor.
 Usando `with`_, tanto la conexión como el cursor se cierran después del uso.
 
 .. code-block:: python
-    :linenos:
 
     server_params = {
         "database": "nomina",  # Nombre de la base de datos
@@ -112,7 +109,6 @@ debe estar envuelto en un bloque de sentencias ``try`` / ``finally`` para
 garantizar que el cursor esté cerrado:
 
 .. code-block:: python
-    :linenos:
 
     with sqlite3.connect(":memory:") as conexion:
         cursor = conexion.cursor()
@@ -128,7 +124,6 @@ Si no se admite el manejo de recursos de conexión, ambos tienen métodos
 ``close()`` que deben llamarse como parte de un bloque finalmente:
 
 .. code-block:: python
-    :linenos:
 
     conexion = sqlite3.connect(":memory:")
     cursor = conexion.cursor()
@@ -150,13 +145,18 @@ Todos los cursores en la conexión se ejecutarán dentro de esa transacción.
 Si se utiliza `with`_ para el manejo de recursos, la transacción se confirmará
 al final del bloque. Si administra manualmente los recursos, esta transacción
 debe confirmarse explícitamente antes de cerrar la conexión, o se revertirá
-automáticamente. La reversión y la confirmación se realizan con los métodos
-del mismo nombre:
+automáticamente.
+
+El ``rollback`` se realizan con el método del mismo nombre:
 
 .. code-block:: python
-    :linenos:
 
     conexion.rollback()
+
+El ``commit`` se realizan con el método del mismo nombre:
+
+.. code-block:: python
+
     conexion.commit()
 
 La confirmación automática también se puede habilitar configurando
@@ -177,9 +177,8 @@ Un cursor tiene solo dos métodos, ``execute`` y ``executemany``, que se utiliza
 para todas las consultas y `DML`_:
 
 .. code-block:: python
-    :linenos:
 
-    cursor.execute("SELECT * FROM empleados")
+    cursor.execute("SELECT * FROM clientes")
 
 Para consultas que involucran parámetros, hay cinco estilos de sustitución integrados
 en los métodos ``execute``:
@@ -192,10 +191,10 @@ en los métodos ``execute``:
 .. code-block:: sql
     :linenos:
 
-    INSERT INTO empleados
-        (nombre, apellido, fecha_nacimiento)
+    INSERT INTO clientes
+        (nombre, apellido, codigo_postal, telefono)
     VALUES
-        (?, ?, ?)
+        (?, ?, ?, ?)
 
 
 .. _python_dbapi_execute_numeric:
@@ -205,10 +204,10 @@ en los métodos ``execute``:
 .. code-block:: sql
     :linenos:
 
-    INSERT INTO empleados
-        (nombre, apellido, fecha_nacimiento)
+    INSERT INTO clientes
+        (nombre, apellido, codigo_postal, telefono)
     VALUES
-        (:1, :2, :3)
+        (:1, :2, :3, :4)
 
 
 .. _python_dbapi_execute_named:
@@ -218,10 +217,10 @@ en los métodos ``execute``:
 .. code-block:: sql
     :linenos:
 
-    INSERT INTO empleados
-        (nombre, apellido, fecha_nacimiento)
+    INSERT INTO clientes
+        (nombre, apellido, codigo_postal, telefono)
     VALUES
-        (:nombre, :apellido, :fecha_nacimiento)
+        (:nombre, :apellido, :codigo_postal, :telefono)
 
 
 .. _python_dbapi_execute_format:
@@ -231,10 +230,10 @@ en los métodos ``execute``:
 .. code-block:: sql
     :linenos:
 
-    INSERT INTO empleados
-        (nombre, apellido, fecha_nacimiento)
+    INSERT INTO clientes
+        (nombre, apellido, codigo_postal, telefono)
     VALUES
-        (%s, %s, %s)
+        (%s, %s, %s, %s)
 
 
 .. _python_dbapi_execute_pyformat:
@@ -244,10 +243,10 @@ en los métodos ``execute``:
 .. code-block:: sql
     :linenos:
 
-    INSERT INTO empleados
-        (nombre, apellido, fecha_nacimiento)
+    INSERT INTO clientes
+        (nombre, apellido, codigo_postal, telefono)
     VALUES
-        (%(nombre)s, %(apellido)s, %(fecha_nacimiento)s)
+        (%(nombre)s, %(apellido)s, %(codigo_postal)s, %(telefono)s)
 
 Se recomienda encarecidamente utilizar una de estas formas de sustitución en lugar de realizar
 una construcción o reemplazo directo de cadenas. Usar los operadores de formato integrados de
@@ -273,38 +272,33 @@ para parámetros posicionales o un :ref:`diccionario <python_dict>` para paráme
 **qmark**
 
 .. code-block:: python
-    :linenos:
 
-    cursor.execute("SELECT * FROM empleados WHERE nombre = ?", ("Leonardo",))
+    cursor.execute("SELECT * FROM clientes WHERE nombre = ?", ("Leonardo",))
 
 **numeric**
 
 .. code-block:: python
-    :linenos:
 
-    cursor.execute("SELECT * FROM empleados WHERE nombre = :1", ("Leonardo",))
+    cursor.execute("SELECT * FROM clientes WHERE nombre = :1", ("Leonardo",))
 
 **named**
 
 .. code-block:: python
-    :linenos:
 
-    cursor.execute("SELECT * FROM empleados WHERE nombre = :nombre", {"nombre": "Leonardo"})
+    cursor.execute("SELECT * FROM clientes WHERE nombre = :nombre", {"nombre": "Leonardo"})
 
 **format**
 
 .. code-block:: python
-    :linenos:
 
-    cursor.execute("SELECT * FROM empleados WHERE nombre = %s", ("Leonardo",))
+    cursor.execute("SELECT * FROM clientes WHERE nombre = %s", ("Leonardo",))
 
 **pyformat**
 
 .. code-block:: python
-    :linenos:
 
     cursor.execute(
-        "SELECT * FROM empleados WHERE nombre = %(nombre)s", {"nombre": "Leonardo"}
+        "SELECT * FROM clientes WHERE nombre = %(nombre)s", {"nombre": "Leonardo"}
     )
 
 
@@ -319,12 +313,23 @@ resultados de la base de datos hasta que hacemos una llamada para buscarlos.
 
 Se usan los métodos de búsqueda para obtener resultados de la consulta:
 
-.. code-block:: python
-    :linenos:
+Devolver una lista de objectos
 
-    cursor.fetchall()  # devuelve una lista
-    cursor.fetchone()  # devuelve un objecto
-    cursor.fetchmany(size=N)  # devuelve una lista
+.. code-block:: python
+
+    cursor.fetchall()
+
+Devolver un objecto
+
+.. code-block:: python
+
+    cursor.fetchone()
+
+Devolver una lista de 5 objectos
+
+.. code-block:: python
+
+    cursor.fetchmany(size=5)
 
 Diferentes bases de datos también proporcionan extensiones propietarias para funciones no
 especificadas en DB-API. Por ejemplo, :ref:`psycopg <python_pkg_postgresql>` hace que el
@@ -335,7 +340,7 @@ resultados potencialmente grande:
     :linenos:
 
     cursor.execute(
-        "SELECT * FROM empleados WHERE nombre = %(nombre)s", {"nombre": "Leonardo"}
+        "SELECT * FROM clientes WHERE nombre = %(nombre)s", {"nombre": "Leonardo"}
     )
 
     for registro in cursor:
@@ -349,7 +354,6 @@ Se puede cerrar el cursor a la base de datos usando la método ``close``
 del cursor del conector a usado.
 
 .. code-block:: python
-    :linenos:
 
     conexion.close()
 
@@ -363,7 +367,7 @@ Las librerías de bases de datos relacionales más populares son:
 
 - :ref:`psycopg <python_pkg_postgresql>` para conexiones a *PostgreSQL*.
 
-- :ref:`mysql <python_pkg_mysql>` para conexiones a *MySQL*.
+- :ref:`PyMySQL <python_pkg_mysql>` para conexiones a *MySQL*.
 
 - `cx_Oracle`_ para conexiones a *Oracle*.
 

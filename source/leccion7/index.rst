@@ -25,9 +25,11 @@ web.
    instalacion
    hello_world
    practicas
+   django_admin_users
 
 
 ----
+
 
 .. seealso::
 
@@ -37,7 +39,6 @@ web.
 
 .. raw:: html
    :file: ../_templates/partials/soporte_profesional.html
-
 
 ..
   .. disqus::

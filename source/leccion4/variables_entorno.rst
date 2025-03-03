@@ -11,8 +11,10 @@ El servidor rellena el diccionario de entorno con variables similares a
    :lines: 1-51
 
 .. important::
-    Usted puede descargar el código usado en esta sección haciendo clic
-    :download:`aquí <../../recursos/leccion4/wsgi_print_environment.py>`.
+    Usted puede descargar el código usado en esta sección haciendo clic en el
+    siguiente enlace:
+
+    - :download:`wsgi_print_environment.py <../../recursos/leccion4/wsgi_print_environment.py>`.
 
 
 .. tip::
@@ -26,6 +28,7 @@ El servidor rellena el diccionario de entorno con variables similares a
 
     El servidor estará atendiendo peticiones en la dirección en http://localhost:8080
 
+
 ----
 
 
@@ -37,7 +40,6 @@ El servidor rellena el diccionario de entorno con variables similares a
 
 .. raw:: html
    :file: ../_templates/partials/soporte_profesional.html
-
 
 ..
   .. disqus::

@@ -85,14 +85,17 @@ con ``pickle`` para operaciones CRUD en un archivo de registros serializados:
 
 .. important::
     Usted puede descargar el código usado en esta sección haciendo clic en el
-    siguiente enlace: :download:`main.py <../../recursos/leccion2/pickle/main.py>`.
+    siguiente enlace:
+
+    - :download:`main.py <../../recursos/leccion2/pickle/main.py>`.
 
 
 .. tip::
     Para ejecutar el código :file:`main.py`, abra una consola de comando,
     acceda al directorio donde se encuentra el programa:
 
-    ::
+    .. code-block:: pycon
+        :class: no-copy
 
         pickle/
         └── main.py
@@ -101,7 +104,7 @@ con ``pickle`` para operaciones CRUD en un archivo de registros serializados:
 
     .. code-block:: console
 
-        $ python3 main.py
+        python3 main.py
 
 Asi de esta forma puede ingresar, consultar, actualizar y eliminar
 registro en un archivo serializado de objetos python ``pickle``.
@@ -109,8 +112,18 @@ registro en un archivo serializado de objetos python ``pickle``.
 
 ----
 
+
 .. seealso::
 
     Consulte la sección de :ref:`lecturas suplementarias <lecturas_extras_leccion2>`
+    del entrenamiento para ampliar su conocimiento en esta temática.
+
+
+.. raw:: html
+   :file: ../_templates/partials/soporte_profesional.html
+
+
+..
+  .. disqus::
 
 .. _`pickle`: https://docs.python.org/es/3/library/pickle.html

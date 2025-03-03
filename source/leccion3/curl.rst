@@ -57,21 +57,26 @@ Características
 Instalación
 '''''''''''
 
+Primero actualice su sistema, con el siguiente comando:
+
+.. code-block:: console
+
+    sudo apt update && sudo apt upgrade -y
+
 Es una aplicación de línea de comando, por lo que puedo instalarla con el siguiente comando:
 
 .. code-block:: console
 
-    $ sudo apt update && sudo apt upgrade -y
-    $ sudo apt install -y curl
+    sudo apt install -y curl
 
 Una vez instalado puedes ejecutar con el siguiente comando:
 
 .. code-block:: console
 
-    $ curl --version
+    curl --version
 
-Si muestra el numero de la versión instalada de ``curl``, tiene
-correctamente instalada la herramienta.
+Si muestra el numero de la versión instalada de ``curl``, tiene correctamente instalada la
+herramienta.
 
 Uso
 '''
@@ -82,7 +87,7 @@ ese servidor.
 
 .. code-block:: console
 
-    $ curl https://curl.se/
+    curl https://curl.se/
 
 Aunque las plataformas API suelen tener interfaces muy intuitivas para solicitar y transferir
 datos a una URL, el comando ``curl`` puede ser una herramienta muy útil para usar con el
@@ -98,12 +103,14 @@ página de proyecto ``curl``:
 
 .. code-block:: console
 
-    $ curl -o curl.html https://curl.se/
+    curl -o curl.html https://curl.se/
 
 En este ejemplo, el código de origen de la página de proyecto ``curl`` se guarda en un archivo
 denominado :file:`curl.html`.
 
+
 ----
+
 
 Descargar ficheros a un dispositivo
 ************************************
@@ -116,7 +123,7 @@ un archivo comprimido de la siguiente forma:
 
 .. code-block:: console
 
-    $ curl https://www.python.org/ftp/python/3.11.11/Python-3.11.11.tar.xz -o Python-3.11.11.tar.xz
+    curl https://www.python.org/ftp/python/3.11.11/Python-3.11.11.tar.xz -o Python-3.11.11.tar.xz
 
 Con el comando ``http`` y la URL de un archivo comprimido, pueden obtenerse los datos binarios del
 archivo comprimido y almacenarse en el disco duro con el mismo nombre del archivo original ``Python-3.11.11.tar.xz``.
@@ -126,7 +133,7 @@ la imagen de la siguiente forma:
 
 .. code-block:: console
 
-    $ curl https://www.python.org/static/img/python-logo.png > python-logo.png
+    curl https://www.python.org/static/img/python-logo.png > python-logo.png
 
 Con el comando ``curl`` y la URL de la imagen, pueden obtenerse los datos binarios del logotipo y
 almacenarse en un archivo de imagen (con una extensión ``.png`` como la del archivo original) que
@@ -134,6 +141,7 @@ luego puede guardarse en el disco duro.
 
 
 ----
+
 
 Probar rápidamente una API desde el terminal
 ********************************************
@@ -147,35 +155,35 @@ request GET con response 200
 
 .. code-block:: console
 
-    $ curl -X GET https://jsonplaceholder.typicode.com/todos/1
+    curl -X GET https://jsonplaceholder.typicode.com/todos/1
 
 request POST formato x-www-form-urlencoded
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: console
 
-    $ curl -X POST -d "name=cURL&type=article" https://jsonplaceholder.typicode.com/posts
+    curl -X POST -d "name=cURL&type=article" https://jsonplaceholder.typicode.com/posts
 
 request POST formato json
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: console
 
-    $ curl -X POST -d '{"name": "cURL", "type": "article"}' -H "Content-Type: application/json" https://jsonplaceholder.typicode.com/posts
+    curl -X POST -d '{"name": "cURL", "type": "article"}' -H "Content-Type: application/json" https://jsonplaceholder.typicode.com/posts
 
 request PUT formato json
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: console
 
-    $ curl -X PUT -d '{"name": "json", "type": "post"}' -H "Content-Type: application/json" https://jsonplaceholder.typicode.com/posts/1
+    curl -X PUT -d '{"name": "json", "type": "post"}' -H "Content-Type: application/json" https://jsonplaceholder.typicode.com/posts/1
 
 request DELETE
 ^^^^^^^^^^^^^^^
 
 .. code-block:: console
 
-    $ curl -X DELETE https://jsonplaceholder.typicode.com/posts/1
+    curl -X DELETE https://jsonplaceholder.typicode.com/posts/1
 
 
 De esta forma aprendió a usar el comando ``curl``.
@@ -192,7 +200,6 @@ De esta forma aprendió a usar el comando ``curl``.
 
 .. raw:: html
    :file: ../_templates/partials/soporte_profesional.html
-
 
 
 ..

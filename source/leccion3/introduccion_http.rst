@@ -35,7 +35,8 @@ hacia un recurso al que se puede acceder.
 
 **Sintaxis:**
 
-::
+.. code-block:: console
+   :class: no-copy
 
    URI = "http:" "//" host [ ":" port ] [ abs\_path [ "?" query ]]
 
@@ -150,6 +151,15 @@ Advertencia sobre los métodos seguros
 La seguridad de un método depende de su implementación y aún cuando se
 considera como una mala práctica, es posible que los métodos como ``GET``
 sean capaces de modificar los recursos a los que acceden.
+
+
+----
+
+
+.. seealso::
+
+    Consulte la sección de :ref:`lecturas suplementarias <lecturas_extras_leccion3>`
+    del entrenamiento para ampliar su conocimiento en esta temática.
 
 
 .. raw:: html

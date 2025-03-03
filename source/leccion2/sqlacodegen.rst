@@ -4,7 +4,7 @@ Autogenerar modelos SQLAlchemy
 ==============================
 
 .. note::
-    **Propósito:** Generador automático de código fuente de modelos SQLAlchemy
+    **Propósito:** Generador automático de código fuente de modelos :ref:`SQLAlchemy <python_sqlalchemy>`.
 
 
 `sqlacodegen`_ es una herramienta que lee la estructura de una base de datos
@@ -43,13 +43,13 @@ a continuación se presentan el correspondiente comando de tu sistema operativo:
 
       .. code-block:: console
 
-          $ pip3 install git+https://github.com/agronholm/sqlacodegen.git@3.0.0rc1#egg=sqlacodegen
+          pip3 install git+https://github.com/agronholm/sqlacodegen.git@3.0.0rc1#egg=sqlacodegen
 
    .. group-tab:: Windows
 
       .. code-block:: console
 
-          > pip3 install git+https://github.com/agronholm/sqlacodegen.git@3.0.0rc1#egg=sqlacodegen
+          pip3 install git+https://github.com/agronholm/sqlacodegen.git@3.0.0rc1#egg=sqlacodegen
 
 
 Puede probar si la instalación se realizo correctamente, ejecutando el siguiente
@@ -61,13 +61,13 @@ comando correspondiente a tu sistema operativo:
 
       .. code-block:: console
 
-          $ python3 -c "import sqlacodegen ; print(sqlacodegen.__name__)"
+          python3 -c "import sqlacodegen ; print(sqlacodegen.__name__)"
 
    .. group-tab:: Windows
 
       .. code-block:: console
 
-          > python3 -c "import sqlacodegen ; print(sqlacodegen.__name__)"
+          python3 -c "import sqlacodegen ; print(sqlacodegen.__name__)"
 
 
 Si muestra el nombre del paquete como ``sqlacodegen``, tiene correctamente instalada
@@ -91,8 +91,9 @@ a continuación:
 SQLite
 ^^^^^^
 
-Para configurar el ``engine`` con ``SQLite`` debe definir la :ref:`cadena de conexión <python_sqlite3_conn_strs>`
-que esta compuesto por varios parámetros.
+Para configurar el ``engine`` con :ref:`SQLite <python_modulo_sqlite3>` debe definir
+la :ref:`cadena de conexión <python_sqlite3_conn_strs>` que esta compuesto por varios
+parámetros.
 
 Los parámetros deben ser reemplazadas con sus propios datos en la línea de comando:
 
@@ -108,22 +109,23 @@ A continuación se presentan el correspondiente comando de tu sistema operativo:
 
       .. code-block:: console
 
-          $ sqlacodegen --generator declarative sqlite:///db.sqlite3 --outfile models.py
+          sqlacodegen --generator declarative sqlite:///db.sqlite3 --outfile models.py
 
    .. group-tab:: Windows
 
       .. code-block:: console
 
-          > .\sqlacodegen.exe --generator declarative sqlite:///db.sqlite3 --outfile models.py
+          .\sqlacodegen.exe --generator declarative sqlite:///db.sqlite3 --outfile models.py
 
 .. _python_sqlacodegen_mysql:
 
 MySQL
 ^^^^^
 
-Para configurar el ``engine`` con ``MySQL`` debe definir la :ref:`cadena de conexión <python_mysql_conn_strs>`
-que esta compuesto por varios parámetros, los cuales deben ser reemplazadas con sus propios datos
-en la línea de comando con el comando ``sqlacodegen``.
+Para configurar el ``engine`` con :ref:`MySQL <python_pkg_mysql>` debe definir la
+:ref:`cadena de conexión <python_mysql_conn_strs>` que esta compuesto por varios parámetros,
+los cuales deben ser reemplazadas con sus propios datos en la línea de comando con el comando
+``sqlacodegen``.
 
 .. tip::
     Para conectarte al servidor ``MySQL`` necesite el paquete :ref:`PyMySQL <python_mysql_instalar>`.
@@ -144,23 +146,24 @@ A continuación se presentan el correspondiente comando de tu sistema operativo:
 
       .. code-block:: console
 
-          $ sqlacodegen --generator declarative mysql+pymysql://root:root@localhost:3306/sistema \
+          sqlacodegen --generator declarative mysql+pymysql://root:root@localhost:3306/sistema \
             --outfile models.py
 
    .. group-tab:: Windows
 
       .. code-block:: console
 
-          > .\sqlacodegen.exe --generator declarative mysql+pymysql://root:root@localhost:3306/sistema --outfile models.py
+          .\sqlacodegen.exe --generator declarative mysql+pymysql://root:root@localhost:3306/sistema --outfile models.py
 
 .. _python_sqlacodegen_psycopg2:
 
 PostgreSQL
 ^^^^^^^^^^
 
-Para configurar el ``engine`` con ``PostgreSQL`` debe definir la :ref:`cadena de conexión <python_psycopg2_conn_strs>`
-que esta compuesto por varios parámetros, los cuales deben ser reemplazadas con sus propios datos
-en la línea de comando con el comando ``sqlacodegen``.
+Para configurar el ``engine`` con :ref:`PostgreSQL <python_pkg_postgresql>` debe definir la
+:ref:`cadena de conexión <python_psycopg2_conn_strs>` que esta compuesto por varios parámetros,
+los cuales deben ser reemplazadas con sus propios datos en la línea de comando con el comando
+``sqlacodegen``.
 
 .. tip::
     Para conectarte al servidor ``PostgreSQL`` necesite el paquete :ref:`psycopg2 <python_psycopg2_instalar>`.
@@ -181,14 +184,14 @@ A continuación se presentan el correspondiente comando de tu sistema operativo:
 
       .. code-block:: console
 
-          $ sqlacodegen --generator declarative postgresql://root:root@localhost:3306/sistema \
+          sqlacodegen --generator declarative postgresql://root:root@localhost:3306/sistema \
             --outfile models.py
 
    .. group-tab:: Windows
 
       .. code-block:: console
 
-          > .\sqlacodegen.exe --generator declarative postgresql://root:root@localhost:3306/sistema --outfile models.py
+          .\sqlacodegen.exe --generator declarative postgresql://root:root@localhost:3306/sistema --outfile models.py
 
 
 Si necesita más tipos de cadenas de conexión o :ref:`engine <python_sqlalchemy_engine>`, puede
@@ -210,13 +213,13 @@ operativo:
 
       .. code-block:: console
 
-          $ sqlacodegen --generator declarative sqlite:///sistema.db --outfile models.py
+          sqlacodegen --generator declarative sqlite:///sistema.db --outfile models.py
 
    .. group-tab:: Windows
 
       .. code-block:: console
 
-          > .\sqlacodegen.exe --generator declarative sqlite:///sistema.db --outfile models.py
+          .\sqlacodegen.exe --generator declarative sqlite:///sistema.db --outfile models.py
 
 El anterior comando al ejecutar debe generar un módulo python llamado ``models.py``
 que contiene el siguiente código:
@@ -297,7 +300,7 @@ que contiene el siguiente código:
 
 
 Este es el código fuente de modelos ``SQLAlchemy`` generado en base a la base
-de datos ``sistema.db``. Mas adelante se mejorara esta código fuente para obtener
+de datos ``sistema.db``. Más adelante se mejorara esta código fuente para obtener
 una mejor representación de los objetos.
 
 .. _python_sqlacodegen_scaffolding:
@@ -309,6 +312,7 @@ A continuación se presenta una práctica más real de implementar el uso de ``s
 en proyectos con ``SQLAlchemy``, a continuación la estructura de proyecto llamado ``sistema``:
 
 .. code-block:: console
+    :class: no-copy
 
     sistema/
     ├── .env.example
@@ -385,14 +389,14 @@ sistema operativo:
 
       .. code-block:: console
 
-          $ pip3 install -r requirements.txt
+          pip3 install -r requirements.txt
 
-      Ademas debe instalar y editar el archivo ``.env``, con el siguiente comando:
+      Ademas debe crear el archivo ``.env`` en base a la plantilla ``.env.example``
+      y editarlo, con el siguiente comando:
 
       .. code-block:: console
 
-          $ cp .env.example .env
-          $ nano .env
+          cp .env.example .env && nano .env
 
       .. tip::
         El archivo ``.env`` se definen las configuraciones de conexión a la base de datos,
@@ -409,7 +413,47 @@ sistema operativo:
 
       .. code-block:: console
 
-          $ python3 main.py
+          python3 main.py
+
+      El anterior código al ejecutar debe mostrar el siguiente mensaje:
+
+      .. code-block:: console
+          :class: no-copy
+
+          📜 Lista de Estados:
+
+          Estado: Amazonas
+          Estado: Anzoátegui
+          Estado: Apure
+          Estado: Aragua
+          Estado: Barinas
+          Estado: Bolívar
+          Estado: Carabobo
+          Estado: Cojedes
+          Estado: Delta Amacuro
+          Estado: Falcón
+          Estado: Guárico
+          Estado: Lara
+          Estado: Mérida
+          ...
+
+          📜 Lista de Ciudades:
+
+          Ciudad: Maroa, Estado: Amazonas.
+          Ciudad: Puerto Ayacucho, Estado: Amazonas.
+          Ciudad: San Fernando de Atabapo, Estado: Amazonas.
+          Ciudad: Anaco, Estado: Anzoátegui.
+          Ciudad: Aragua de Barcelona, Estado: Anzoátegui.
+          Ciudad: Barcelona, Estado: Anzoátegui.
+          Ciudad: Boca de Uchire, Estado: Anzoátegui.
+          Ciudad: Cantaura, Estado: Anzoátegui.
+          Ciudad: Clarines, Estado: Anzoátegui.
+          Ciudad: El Chaparro, Estado: Anzoátegui.
+          Ciudad: El Pao Anzoátegui, Estado: Anzoátegui.
+          Ciudad: El Tigre, Estado: Anzoátegui.
+          Ciudad: El Tigrito, Estado: Anzoátegui.
+          Ciudad: Guanape, Estado: Anzoátegui.
+          ...
 
    .. group-tab:: Windows
 
@@ -417,14 +461,20 @@ sistema operativo:
 
       .. code-block:: console
 
-          > pip3 install -r requirements.txt
+          pip3 install -r requirements.txt
 
-      Ademas debe instalar y editar el archivo ``.env``, con el siguiente comando:
+      Ademas debe crear el archivo ``.env`` en base a la plantilla ``env.example`` , con
+      el siguiente comando:
 
       .. code-block:: console
 
-          > copy .env.example .env
-          > notepad.exe .env &
+          copy .env.example .env
+
+      Editar el archivo ``.env``, con el siguiente comando:
+
+      .. code-block:: console
+
+          notepad.exe .env &
 
       .. tip::
         El archivo ``.env`` se definen las configuraciones de conexión a la base de datos,
@@ -441,58 +491,69 @@ sistema operativo:
 
       .. code-block:: console
 
-          > python3 main.py
+          python3 main.py
 
-El anterior código al ejecutar debe mostrar el siguiente mensaje:
+      El anterior código al ejecutar debe mostrar el siguiente mensaje:
 
-.. code-block:: console
+      .. code-block:: console
+          :class: no-copy
 
-    📜 Lista de Estados:
+          📜 Lista de Estados:
 
-    Estado: Amazonas
-    Estado: Anzoátegui
-    Estado: Apure
-    Estado: Aragua
-    Estado: Barinas
-    Estado: Bolívar
-    Estado: Carabobo
-    Estado: Cojedes
-    Estado: Delta Amacuro
-    Estado: Falcón
-    Estado: Guárico
-    Estado: Lara
-    Estado: Mérida
-    ...
+          Estado: Amazonas
+          Estado: Anzoátegui
+          Estado: Apure
+          Estado: Aragua
+          Estado: Barinas
+          Estado: Bolívar
+          Estado: Carabobo
+          Estado: Cojedes
+          Estado: Delta Amacuro
+          Estado: Falcón
+          Estado: Guárico
+          Estado: Lara
+          Estado: Mérida
+          ...
 
-    📜 Lista de Ciudades:
+          📜 Lista de Ciudades:
 
-    Ciudad: Maroa, Estado: Amazonas.
-    Ciudad: Puerto Ayacucho, Estado: Amazonas.
-    Ciudad: San Fernando de Atabapo, Estado: Amazonas.
-    Ciudad: Anaco, Estado: Anzoátegui.
-    Ciudad: Aragua de Barcelona, Estado: Anzoátegui.
-    Ciudad: Barcelona, Estado: Anzoátegui.
-    Ciudad: Boca de Uchire, Estado: Anzoátegui.
-    Ciudad: Cantaura, Estado: Anzoátegui.
-    Ciudad: Clarines, Estado: Anzoátegui.
-    Ciudad: El Chaparro, Estado: Anzoátegui.
-    Ciudad: El Pao Anzoátegui, Estado: Anzoátegui.
-    Ciudad: El Tigre, Estado: Anzoátegui.
-    Ciudad: El Tigrito, Estado: Anzoátegui.
-    Ciudad: Guanape, Estado: Anzoátegui.
-    ...
+          Ciudad: Maroa, Estado: Amazonas.
+          Ciudad: Puerto Ayacucho, Estado: Amazonas.
+          Ciudad: San Fernando de Atabapo, Estado: Amazonas.
+          Ciudad: Anaco, Estado: Anzoátegui.
+          Ciudad: Aragua de Barcelona, Estado: Anzoátegui.
+          Ciudad: Barcelona, Estado: Anzoátegui.
+          Ciudad: Boca de Uchire, Estado: Anzoátegui.
+          Ciudad: Cantaura, Estado: Anzoátegui.
+          Ciudad: Clarines, Estado: Anzoátegui.
+          Ciudad: El Chaparro, Estado: Anzoátegui.
+          Ciudad: El Pao Anzoátegui, Estado: Anzoátegui.
+          Ciudad: El Tigre, Estado: Anzoátegui.
+          Ciudad: El Tigrito, Estado: Anzoátegui.
+          Ciudad: Guanape, Estado: Anzoátegui.
+          ...
 
 
 Asi de esta forma puede usar ``sqlacodegen`` para generar modelos ``SQLAlchemy`` desde
 una base de datos existente e implementar las operaciones ingresar, consultar,
 actualizar y eliminar registro en las tablas.
 
+
 ----
+
 
 .. seealso::
 
     Consulte la sección de :ref:`lecturas suplementarias <lecturas_extras_leccion2>`
     del entrenamiento para ampliar su conocimiento en esta temática.
+
+
+.. raw:: html
+   :file: ../_templates/partials/soporte_profesional.html
+
+
+..
+  .. disqus::
 
 .. _`sqlacodegen`: https://pypi.org/project/sqlacodegen/
 .. _`sqlautocode`: https://code.google.com/archive/p/sqlautocode

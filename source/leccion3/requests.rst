@@ -13,26 +13,31 @@ manejo de 'cookies', etc.
 Instalación
 -----------
 
+Para instalarlo de crear y activar un entorno virtual, ejecutando el siguiente comando:
+
+.. code-block:: console
+
+    virtualenv --python /usr/bin/python3 venv && source ./venv/bin/activate
+
 Para instalarlo ejecute el siguiente comando:
 
 .. code-block:: console
 
-    $ virtualenv --python /usr/bin/python3 venv
-    $ source ./venv/bin/activate
-    $ pip3 install -U pip
-    $ pip3 install requests
+    pip3 install requests
 
 Puede probar si la instalación se realizo correctamente, ejecutando
 el siguiente comando correspondiente a tu sistema operativo:
 
 .. code-block:: console
 
-    $ python3 -c "import requests ; print(requests.__version__)"
+    python3 -c "import requests ; print(requests.__version__)"
 
 Si muestra el numero de la versión instalada de ``requests``, tiene
 correctamente instalada la paquete. Con esto, ya tiene todo listo para continuar.
 
+
 ----
+
 
 Uso
 ---
@@ -50,9 +55,10 @@ Puede consultar la ayuda del método ``GET`` de la librería, ejecute el siguien
 
     >>> help(requests.get)
 
-Eso da como resultado:
+Si ejecuto el comando anterior, este da como resultado lo siguiente:
 
-::
+.. code-block:: pycon
+    :class: no-copy
 
     Help on function get in module requests.api:
 
@@ -72,9 +78,10 @@ Puede consultar la ayuda del método ``POST`` de la librería, ejecute el siguie
 
     >>> help(requests.post)
 
-Eso da como resultado:
+Si ejecuto el comando anterior, este da como resultado lo siguiente:
 
-::
+.. code-block:: pycon
+    :class: no-copy
 
     Help on function post in module requests.api:
 
@@ -115,9 +122,10 @@ Los encabezados de la petición contenidos en el atributo ``website_request.head
 
     >>> print(website_request.headers)
 
-Eso da como resultado:
+Si ejecuto el comando anterior, este da como resultado lo siguiente:
 
-::
+.. code-block:: javascript
+    :class: no-copy
 
     {
         'Date': 'Sun, 16 Feb 2025 14:44:55 GMT',
@@ -133,8 +141,14 @@ El mensaje de estado resultante contenido en el atributo ``website_request.statu
 
 .. code-block:: pycon
 
-    >>> print(website_request.status_code)
-    >>> 200
+    >>> print(f"Código HTTP Response: {website_request.status_code}")
+
+Si ejecuto el comando anterior, este da como resultado lo siguiente:
+
+.. code-block:: pycon
+    :class: no-copy
+
+    Código HTTP Response: 200
 
 El contenido de la respuesta contenido en el atributo ``website_request.content``.
 
@@ -143,12 +157,13 @@ El contenido de la respuesta contenido en el atributo ``website_request.content`
     >>> print(website_request.content)
 
 
-
-Eso da como resultado:
+Si ejecuto el comando anterior, este da como resultado lo siguiente:
 
 .. code-block:: pycon
+    :class: no-copy
 
-    >>> b'{\n  "headers": {\n    "Accept": "*/*", \n    "Accept-Encoding": "gzip, deflate", \n    "Host": "httpbin.org", \n    "User-Agent": "python-requests/2.32.2", \n    "X-Amzn-Trace-Id": "Root=1-67b1f9e7-36514b17484bc9ac228fd167"\n  }\n}\n'
+    b'{\n  "headers": {\n    "Accept": "*/*", \n    "Accept-Encoding": "gzip, deflate", \n    "Host": "httpbin.org", \n    "User-Agent": "python-requests/2.32.2", \n    "X-Amzn-Trace-Id": "Root=1-67b1f9e7-36514b17484bc9ac228fd167"\n  }\n}\n'
+
 
 Se cerrará la conexión mediante el método ``website_request.close()``.
 
@@ -156,7 +171,11 @@ Se cerrará la conexión mediante el método ``website_request.close()``.
 
     >>> website_request.close()
 
+De esta forma obtuvo el contenido del ``Headers`` del ``Response``.
+
+
 ----
+
 
 request GET recurso imágenes con response 200
 '''''''''''''''''''''''''''''''''''''''''''''
@@ -175,23 +194,19 @@ Puede mostrar el contenido del request con lo siguiente:
 
 Para desplegar una imagen se utilizará la función ``Image`` del módulo ``iPython.display``.
 
-**Nota:** El paquete ``IPython`` está disponible dentro de la paquete
-`ipython <https://pypi.org/project/ipython/>`_. Para instalarlo ejecute el siguiente comando:
-
-    .. code-block:: console
-
-        $ pip3 install ipython
-
 .. code-block:: pycon
 
     >>> from IPython.display import Image
+
+.. note::
+    El paquete :ref:`IPython <python_interprete_interactivo>` está instalado también.
+
 
 .. code-block:: pycon
 
     >>> Image(pig_image_request.content)
 
-
-Eso da como resultado:
+Si ejecuto el comando anterior, este da como resultado lo siguiente:
 
     |pig_image_request_png|
 
@@ -201,7 +216,11 @@ Se cerrará la conexión mediante el método ``pig_image_request.close()``.
 
     >>> pig_image_request.close()
 
+De esta forma obtuvo el contenido de una imagen y la visualizo la imagen del ``Response``.
+
+
 ----
+
 
 request GET con response 404
 ''''''''''''''''''''''''''''
@@ -220,18 +239,22 @@ el bloque de código inscrito.
 .. code-block:: python
 
     with requests.get("https://httpbin.org/get/1") as resource_request:
-        print(resource_request.status_code)
+        print(f"Código HTTP Response: {resource_request.status_code}")
         print(resource_request.content)
 
-Eso da como resultado:
+Si ejecuto el comando anterior, este da como resultado lo siguiente:
 
 .. code-block:: python
+    :class: no-copy
 
-    404
+    Código HTTP Response: 404
     b'<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">\n<title>404 Not Found</title>\n<h1>Not Found</h1>\n<p>The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.</p>\n'
+
+De esta forma obtuvo un código HTTP del ``Response``, con el valor ``404`` y el valor del contenido del ``Response``.
 
 
 ----
+
 
 request GET con response 302
 ''''''''''''''''''''''''''''
@@ -251,14 +274,15 @@ ejecute el bloque de código inscrito.
 .. code-block:: python
 
     with requests.head("https://httpbin.org/redirect/5") as request_redirect:
-        print(request_redirect.status_code)
+        print(f"Código HTTP Response: {request_redirect.status_code}")
         print(request_redirect.headers)
 
-Eso da como resultado:
+Si ejecuto el comando anterior, este da como resultado lo siguiente:
 
-::
+.. code-block:: javascript
+    :class: no-copy
 
-    302
+    Código HTTP Response: 302
     {
         'Date': 'Sun, 16 Feb 2025 14:55:27 GMT',
         'Content-Type': 'text/html; charset=utf-8',
@@ -270,8 +294,12 @@ Eso da como resultado:
         'Access-Control-Allow-Credentials': 'true'
     }
 
+De esta forma obtuvo un código HTTP del ``Response``, con el valor ``302`` y los ``Headers`` en formato ``json``.
+
+
 
 ----
+
 
 request POST con response 200
 '''''''''''''''''''''''''''''
@@ -289,15 +317,15 @@ de regreso el contenido de la petición.
     >>> data = {"saludo": "Hola"}
     >>>
     >>> response = requests.post(url, json=data)
-    >>> print(response.status_code)
+    >>> print(f"Código HTTP Response: {response.status_code}")
     >>> print(response.json())
 
 
-Eso da como resultado:
+Si ejecuto el comando anterior, este da como resultado lo siguiente:
 
-::
+.. code-block:: javascript
 
-    200
+    Código HTTP Response: 200
     {
         'args': {},
         'data': '{"saludo": "Hola"}',
@@ -317,7 +345,11 @@ Eso da como resultado:
         'url': 'https://httpbin.org/post'
     }
 
+De esta forma obtuvo un código HTTP del ``Response``, con el valor ``200`` y el ``Response`` en formato ``json``.
+
+
 ----
+
 
 Manejo de errores y excepciones
 -------------------------------
@@ -336,18 +368,18 @@ ejecute el siguiente comando:
     >>> try:
     ...     response = requests.post(url, json=data)
     ...     response.raise_for_status()
-    ...     print(response.status_code)
+    ...     print(f"Código HTTP Response: {response.status_code}")
     ...     print(response.json())
     ... except requests.exceptions.RequestException as e:
     ...     print(f"Error en la solicitud: {e}")
     ...
 
 
-Eso da como resultado:
+Si ejecuto el comando anterior, este da como resultado lo siguiente:
 
-::
+.. code-block:: javascript
 
-    200
+    Código HTTP Response: 200
     {
         'args': {}, 'data': '{"saludo": "Hola"}',
         'files': {},
@@ -366,6 +398,8 @@ Eso da como resultado:
         'url': 'https://httpbin.org/post'
     }
 
+De esta forma obtuvo un código HTTP del ``Response``, con el valor ``200`` y el ``Response`` en formato ``json``.
+
 
 ----
 
@@ -378,7 +412,6 @@ Eso da como resultado:
 
 .. raw:: html
    :file: ../_templates/partials/soporte_profesional.html
-
 
 
 ..

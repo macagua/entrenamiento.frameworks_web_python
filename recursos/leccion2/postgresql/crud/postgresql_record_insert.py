@@ -2,7 +2,6 @@
 
 import logging
 import psycopg2
-import os
 
 logging.basicConfig(level=logging.INFO)
 
@@ -16,7 +15,7 @@ MULTIPLE_COLUMNS = [
 # Script CREATE DATABASE SQL para crear la base de datos
 CREATE_DATABASE_SQL = """CREATE DATABASE sistema;"""
 
-# Script CREATE TABLE SQL para crear tabla(s)
+# Script CREATE TABLE SQL para crear tabla clientes
 CREATE_TABLE_SQL = """
 CREATE TABLE IF NOT EXISTS clientes (
     id int unique not null,
@@ -51,16 +50,19 @@ def insertar_registro():
             user=credenciales["user"],
             password=credenciales["password"],
         )
-        # Crear un objeto cursor para ejecutar las consultas
+        # Crear un objeto cursor para la base de datos
         cursor = conexion.cursor()
         logging.info(f"¡Conectado a la base de datos '{credenciales['database']}'!\n")
         # Crear la tabla productos si no existe
         cursor.execute(CREATE_TABLE_SQL)
         # Confirmar la creación de la tabla
         conexion.commit()
+        logging.info(
+            f"¡Fue creo una tabla correctamente en la base de datos '{credenciales['database']}'!\n"
+        )
         # Insertar nuevos registros en la tabla
         cursor.executemany(INSERT_SQL, MULTIPLE_COLUMNS)
-        # Confirmar la creación de los registros
+        # Confirmar la inserción de los registros
         conexion.commit()
         logging.info(
             f"¡Fueron insertado(s) {cursor.rowcount} registro(s) correctamente en la tabla!\n"
@@ -69,6 +71,8 @@ def insertar_registro():
         cursor.execute(
             INSERT_SQL, (4, "Liliana", "Andradez", "4001", "+58-414-6782473")
         )
+        # Confirmar la inserción del registro
+        conexion.commit()
         logging.info(
             f"¡Fueron insertado(s) {cursor.rowcount} registro(s) correctamente en la tabla!\n"
         )

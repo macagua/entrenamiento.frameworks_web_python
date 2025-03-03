@@ -9,7 +9,9 @@ logging.basicConfig(level=logging.INFO)
 DB_PATH = os.path.dirname(os.path.abspath(__file__)) + os.sep
 DB_FILE = "sistema.db"
 DB = DB_PATH + DB_FILE
-SQL_SCRIPTS = """DELETE FROM clientes WHERE id = 3;"""
+
+# Script DELETE SQL a usar al eliminar datos
+DELETE_SCRIPTS = """DELETE FROM clientes WHERE id = 3;"""
 
 
 def eliminar_registro():
@@ -17,17 +19,17 @@ def eliminar_registro():
 
     conexion = None
     try:
-        # Crear la instancia de DB y pasar el nombre del archivo
+        # Establecer la conexión con la base de datos
         conexion = sqlite3.connect(DB)
-        # Crear un cursor para la base de datos
+        # Crear un objeto cursor para ejecutar las eliminaciones
         cursor = conexion.cursor()
         logging.info(f"¡Conectado a la base de datos '{DB_FILE}'!\n")
-        # Ejecutar SQL
-        cursor.execute(SQL_SCRIPTS)
+        # Eliminar un fila de registro simple
+        cursor.execute(DELETE_SCRIPTS)
         # Guardar los cambios en la base de datos
         conexion.commit()
         logging.info("¡Registro eliminado correctamente!\n")
-        # Cerrar cursor
+        # Cerrar el cursor
         cursor.close()
     except sqlite3.Error as error:
         logging.error(f"¡Fallo la eliminación de registro(s) en la tabla!: {error}")

@@ -47,20 +47,45 @@ el comando ``python`` de la siguiente forma:
 
 .. code-block:: console
 
-    $ python3
+    python3
+
+Si ejecuto el comando anterior, este da como resultado lo siguiente:
+
+.. code-block:: pycon
+    :class: no-copy
+
     Python 3.11.2 (main, Nov 30 2024, 21:22:50) [GCC 12.2.0] on linux
     Type "help", "copyright", "credits" or "license" for more information.
     >>>
 
 
-Puede solicitar la ayudar del interprete de Python, ejecutando:
+Puede solicitar la ayuda del interprete de Python, ejecutando:
 
 .. code-block:: pycon
 
     >>> help
+
+Si ejecuto el comando anterior, este da como resultado lo siguiente:
+
+.. code-block:: pycon
+    :class: no-copy
+
+    >>> help
     Type help() for interactive help, or help(object) for help about object.
+    >>>
+
+Puede entrar en la ayuda interactiva de Python, ejecutando:
+
+.. code-block:: pycon
+
     >>> help()
 
+Si ejecuto el comando anterior, este da como resultado lo siguiente:
+
+.. code-block:: pycon
+    :class: no-copy
+
+    >>> help()
     Welcome to Python 3.11's help utility!
 
     If this is your first time using Python, you should definitely check out
@@ -77,12 +102,16 @@ Puede solicitar la ayudar del interprete de Python, ejecutando:
 
     help>
 
-Para ejecutar la ayuda disponible sobre la sintaxis Python ejecute el
-siguiente comando:
+Para ejecutar la ayuda disponible sobre la sintaxis de los diversos Python
+ejecute el siguiente comando:
 
 .. code-block:: pycon
 
     help> modules
+
+Si ejecuto el comando anterior, este da como resultado lo siguiente:
+
+.. code-block:: pycon
 
     Please wait a moment while I gather a list of all available modules...
 
@@ -192,6 +221,11 @@ Entonces consulte la ayuda del módulo ``os``, ejecutando:
 .. code-block:: pycon
 
     help> os
+
+Si ejecuto el comando anterior, este da como resultado lo siguiente:
+
+.. code-block:: pycon
+
     Help on module os:
 
     NAME
@@ -243,11 +277,16 @@ Luego realice la importación de la `librería del estándar`_ Python llamada
 
 Previamente importada la librería usted puede usar la función ``dir()`` para
 listar o descubrir que atributos, métodos de la clase están disponibles con
-la importación
+la importación:
 
 .. code-block:: pycon
 
     >>> dir(os)
+
+Si ejecuto el comando anterior, este da como resultado lo siguiente:
+
+.. code-block:: pycon
+
     ['CLD_CONTINUED', 'CLD_DUMPED', 'CLD_EXITED', 'CLD_KILLED', 'CLD_STOPPED',
     'CLD_TRAPPED', 'DirEntry', 'EFD_CLOEXEC', 'EFD_NONBLOCK', 'EFD_SEMAPHORE',
     'EX_CANTCREAT', 'EX_CONFIG', 'EX_DATAERR', 'EX_IOERR', 'EX_NOHOST', 'EX_NOINPUT',
@@ -318,6 +357,11 @@ ubicación de la librería importada de la siguiente forma:
 .. code-block:: pycon
 
     >>> os.__file__
+
+Si ejecuto el comando anterior, este da como resultado lo siguiente:
+
+.. code-block:: pycon
+
     '/usr/lib/python3.11/os.py'
     >>>
 
@@ -327,6 +371,11 @@ siguiente comando:
 .. code-block:: pycon
 
     >>> print(os.__doc__)
+
+Si ejecuto el comando anterior, este da como resultado lo siguiente:
+
+.. code-block:: pycon
+
     OS routines for NT or Posix depending on what system we're on.
 
     This exports:
@@ -358,6 +407,14 @@ Ejecute el comando exit() para salir del interprete...
     >>> exit()
 
 
+Asi pudo salir de la sesión del interprete interactivo ``python3``.
+
+De esta forma aprendio nociones basicas con el interprete interactivo ``ipython``.
+
+
+----
+
+
 .. _python_interprete_interactivo:
 
 Interprete ipython
@@ -377,16 +434,31 @@ Según Wikipedia
 Para mayor información visite su página principal de `ipython`_ y si necesita instalar
 este programa ejecute el siguiente comando:
 
-.. code-block:: console
+.. tabs::
 
-    $ sudo apt install -y ipython
+   .. group-tab:: PIP
 
+      .. code-block:: console
+
+          pip3 install ipython
+
+   .. group-tab:: Ubuntu/Debian Linux
+
+      .. code-block:: console
+
+          sudo apt install -y ipython
 
 Sustituya el comando ``python3`` por ``ipython3`` de la siguiente forma:
 
 .. code-block:: console
 
-    $ ipython3
+    ipython3
+
+Si ejecuto el comando anterior, este da como resultado lo siguiente:
+
+.. code-block:: console
+    :class: no-copy
+
     Python 3.11.2 (main, Nov 30 2024, 21:22:50) [GCC 12.2.0]
     Type 'copyright', 'credits' or 'license' for more information
     IPython 8.10.0 -- An enhanced Interactive Python. Type '?' for help.
@@ -400,6 +472,12 @@ Un ejemplo de uso del comando ``help`` es consultar la ayuda del comando
 .. code-block:: pycon
 
     In [1]: help(dir)
+
+Si ejecuto el comando anterior, este da como resultado lo siguiente:
+
+.. code-block:: pycon
+    :class: no-copy
+
     Help on built-in function dir in module builtins:
 
     dir(...)
@@ -419,8 +497,7 @@ Un ejemplo de uso del comando ``help`` es consultar la ayuda del comando
 
 Entonces presione la tecla **q** para salir de la ayuda de la función ``dir()``.
 
-De nuevo realice la importación de la librería del estándar Python llamada
-``os``.
+De nuevo realice la importación de la librería del estándar Python llamada ``os``.
 
 .. code-block:: pycon
 
@@ -433,6 +510,12 @@ la librería ``os`` ejecutando el siguiente comando:
 .. code-block:: pycon
 
     In [2]: os?
+
+Si ejecuto el comando anterior, este da como resultado lo siguiente:
+
+.. code-block:: pycon
+    :class: no-copy
+
     Type:        module
     String form: <module 'os' (frozen)>
     File:        /usr/lib/python3.11/os.py
@@ -475,11 +558,17 @@ ayudar a la introspección del lenguaje y sus librerías.
 
 
 De nuevo ejecute el método ``file`` para determinar la ubicación de la
-librería importada
+librería importada:
 
 .. code-block:: pycon
 
     In [4]: os.__file__
+
+Si ejecuto el comando anterior, este da como resultado lo siguiente:
+
+.. code-block:: pycon
+    :class: no-copy
+
     Out[4]: '/usr/lib/python3.11/os.py'
 
 También puede consultar la documentación de la librería ``os`` de la
@@ -488,6 +577,12 @@ siguiente forma:
 .. code-block:: pycon
 
     In [5]: print(os.__doc__)
+
+Si ejecuto el comando anterior, este da como resultado lo siguiente:
+
+.. code-block:: pycon
+    :class: no-copy
+
     OS routines for NT or Posix depending on what system we're on.
 
     This exports:
@@ -516,6 +611,12 @@ Otro ejemplo es imprimir el **nombre de la clase** con el siguiente comando:
 .. code-block:: pycon
 
     In[6]: os.__name__
+
+Si ejecuto el comando anterior, este da como resultado lo siguiente:
+
+.. code-block:: pycon
+    :class: no-copy
+
     Out[6]: "os"
 
 
@@ -525,6 +626,12 @@ ejecutando el siguiente comando:
 .. code-block:: pycon
 
     In [7]: help(os)
+
+Si ejecuto el comando anterior, este da como resultado lo siguiente:
+
+.. code-block:: pycon
+    :class: no-copy
+
     Help on module os:
 
     NAME
@@ -568,30 +675,53 @@ Y para cerrar la sesión con el ``ipython`` ejecute el siguiente comando:
 .. code-block:: pycon
 
     In [8]: exit()
+
+Si ejecuto el comando anterior, este da como resultado lo siguiente:
+
+.. code-block:: pycon
+    :class: no-copy
+
     Do you really want to exit ([y]/n)? y
+
+Entonces presione la tecla :keys:`y` para salir de interprete interactivo ``ipython``.
+
+De esta forma aprendio nociones basicas con el interprete interactivo ``ipython``.
+
+
+----
 
 
 Interprete bpython
 ..................
 
-Alternativamente puedes usar el paquete `bpython` que mejora aun más la experiencia
-de trabajo con el paquete `ipython`.
+Alternativamente puedes usar el paquete ``bpython`` que mejora aun más la experiencia
+de trabajo con el paquete :ref:`ipython <python_interprete_interactivo>`.
 
 Para mayor información visite su página principal de `interprete bpython`_ y si necesita
 instalar este programa ejecute el siguiente comando:
 
+..
+    .. code-block:: console
+
+        sudo apt install -y python-pip
+
 .. code-block:: console
 
-    $ sudo apt install -y python-pip
-    $ sudo pip3 install bpython
+    pip3 install bpython
 
 Luego cierra sesión de **root** y vuelve al usuario y sustituya el comando
-``python`` por ``ipython`` de la siguiente forma:
+``python`` por ``bpython`` de la siguiente forma:
 
 .. code-block:: console
 
-    $ bpython
-    bpython version 0.25 on top of Python 3.11.2 /usr//bin/python
+    bpython
+
+Si ejecuto el comando anterior, este da como resultado lo siguiente:
+
+.. code-block:: console
+    :class: no-copy
+
+    bpython version 0.25 on top of Python 3.11.2 /usr/bin/python
     >>>
 
 Dentro de interprete Python puede apreciar que ofrece otra forma de presentar
@@ -600,7 +730,17 @@ la documentación y la estructura del lenguaje, con los siguientes comandos de e
 .. code-block:: console
 
     >>> print('Hola Mundo')
+
+Si ejecuto el comando anterior, este da como resultado lo siguiente:
+
+.. code-block:: console
+    :class: no-copy
+
     Hola Mundo
+
+.. code-block:: console
+    :class: no-copy
+
     >>> for item in range(
     ┌──────────────────────────────────────────────────────────────────────────────────────────────┐
     │ range: (stop)                                                                        │
@@ -615,6 +755,27 @@ la documentación y la estructura del lenguaje, con los siguientes comandos de e
     │ When step is given, it specifies the increment (or decrement).                       │
     └──────────────────────────────────────────────────────────────────────────────────────────────┘
 
+Y para cerrar la sesión con el ``bpython`` ejecute el siguiente comando:
+
+.. code-block:: pycon
+
+    >>> exit()
+
+
+Si ejecuto el comando anterior, este da como resultado lo siguiente:
+
+.. code-block:: pycon
+    :class: no-copy
+
+    (None,)
+
+Asi pudo salir de la sesión del interprete interactivo ``bpython``.
+
+De esta forma aprendio nociones basicas con el interprete interactivo ``bpython``.
+
+
+----
+
 
 Conclusiones
 ............
@@ -627,6 +788,7 @@ módulos propios escritos en Python que tienes instalado en tu sistema.
 
 
 ----
+
 
 .. seealso::
 

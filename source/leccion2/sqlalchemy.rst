@@ -113,13 +113,13 @@ a continuación se presentan el correspondiente comando de tu sistema operativo:
 
       .. code-block:: console
 
-          $ pip3 install SQLAlchemy==1.4.36
+          pip3 install SQLAlchemy==1.4.36
 
    .. group-tab:: Windows
 
       .. code-block:: console
 
-          > pip3 install SQLAlchemy==1.4.36
+          pip3 install SQLAlchemy==1.4.36
 
 
 Puede probar si la instalación se realizo correctamente, ejecutando
@@ -131,13 +131,13 @@ el siguiente comando correspondiente a tu sistema operativo:
 
       .. code-block:: console
 
-          $ python3 -c "import sqlalchemy ; print(sqlalchemy.__version__)"
+          python3 -c "import sqlalchemy ; print(sqlalchemy.__version__)"
 
    .. group-tab:: Windows
 
       .. code-block:: console
 
-          > python3 -c "import sqlalchemy ; print(sqlalchemy.__version__)"
+          python3 -c "import sqlalchemy ; print(sqlalchemy.__version__)"
 
 Si muestra el numero de la versión instalada de ``SQLAlchemy``, tiene
 correctamente instalada la librería. Con esto, ya tiene todo listo para continuar.
@@ -383,19 +383,28 @@ Ejecuta ahora el programa con el siguiente comando:
 
       .. code-block:: console
 
-          $ python3 main.py
+          python3 main.py
+
+      El anterior código al ejecutar debe mostrar el siguiente mensaje:
+
+      .. code-block:: console
+          :class: no-copy
+
+          ¡Creación exitosa de la tabla productos!
 
    .. group-tab:: Windows
 
       .. code-block:: console
 
-          > python3 main.py
+          python3 main.py
 
-El anterior código al ejecutar debe mostrar el siguiente mensaje:
+      El anterior código al ejecutar debe mostrar el siguiente mensaje:
 
-.. code-block:: console
+      .. code-block:: console
+          :class: no-copy
 
-    ¡Creación exitosa de la tabla productos!
+          ¡Creación exitosa de la tabla productos!
+
 
 Se ha creado la tabla ``productos`` en la base de datos ``productos.sqlite3``. Verás que aparece un
 archivo con dicho nombre en el directorio ``productos``.
@@ -448,13 +457,39 @@ de datos y se muestra, de nuevo, el valor del atributo ``id`` del objeto ``arroz
 puedes observar que su valor es ``1`` y que coincide con el valor de la columna ``id``
 de la primera fila de la tabla ``productos``.
 
-El anterior código al ejecutar debe mostrar el siguiente mensaje:
+Ejecuta ahora el programa con el siguiente comando:
 
-.. code-block:: console
+.. tabs::
 
-    ¡Creación exitosa de la tabla productos!
+   .. group-tab:: Linux
 
-    ¡Inserción exitosa de los 4 productos!
+      .. code-block:: console
+
+          python3 main.py
+
+      El anterior código al ejecutar debe mostrar el siguiente mensaje:
+
+      .. code-block:: console
+          :class: no-copy
+
+          ¡Creación exitosa de la tabla productos!
+
+          ¡Inserción exitosa de los 4 productos!
+
+   .. group-tab:: Windows
+
+      .. code-block:: console
+
+          python3 main.py
+
+      El anterior código al ejecutar debe mostrar el siguiente mensaje:
+
+      .. code-block:: console
+          :class: no-copy
+
+          ¡Creación exitosa de la tabla productos!
+
+          ¡Inserción exitosa de los 4 productos!
 
 
 .. _python_sqlalchemy_consultas:
@@ -476,7 +511,6 @@ Siguiendo con el ejemplo, para realizar consultas sobre la clase ``Productos`` d
 ejecutar el siguiente código:
 
 .. code-block:: python
-    :linenos:
 
     productos = session.query(Productos)
 
@@ -491,7 +525,6 @@ Obtener un objeto a partir de su id
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: python
-    :linenos:
 
     producto = session.query(Productos).get(1)
 
@@ -509,7 +542,6 @@ método ``all()``. Este método devuelve una lista con los objetos devueltos por
 consulta:
 
 .. code-block:: python
-    :linenos:
 
     productos = session.query(Productos).all()
 
@@ -525,7 +557,6 @@ Contar el número de elementos devueltos por una consulta
 Si quieres contar el número de elementos que devuelve una consulta, utiliza el método ``count()``:
 
 .. code-block:: python
-    :linenos:
 
     contar_productos = session.query(Productos).count()
 
@@ -587,6 +618,7 @@ A continuación se presenta una práctica más real de implementar el uso de pro
 con ``SQLAlchemy``, a continuación la estructura de proyecto llamado ``productos``:
 
 .. code-block:: console
+    :class: no-copy
 
     productos/
     ├── .env.example
@@ -662,14 +694,14 @@ sistema operativo:
 
       .. code-block:: console
 
-          $ pip3 install -r requirements.txt
+          pip3 install -r requirements.txt
 
-      Ademas debe instalar y editar el archivo ``.env``, con el siguiente comando:
+      Ademas debe crear el archivo ``.env`` en base a la plantilla ``.env.example``
+      y editarlo, con el siguiente comando:
 
       .. code-block:: console
 
-          $ cp .env.example .env
-          $ nano .env
+          cp .env.example .env && nano .env
 
       .. tip::
         El archivo ``.env`` se definen las configuraciones de conexión a la base de datos,
@@ -686,7 +718,60 @@ sistema operativo:
 
       .. code-block:: console
 
-          $ python3 main.py
+          python3 main.py
+
+      El anterior código al ejecutar debe mostrar el siguiente mensaje:
+
+      .. code-block:: console
+          :class: no-copy
+
+          ¡Creación exitosa de la tabla productos!
+
+          ¡Inserción exitosa de los 4 productos!
+
+          ¡Consulta todos los productos!
+          Arroz
+          Agua
+          Mantequilla
+          Queso
+
+          ¡Consulta todos los productos con más atributos!
+          Arroz 1.25
+          Agua 0.3
+          Mantequilla 3.56
+          Queso 8.56
+
+          ¡Consulta de producto en base a su clave primaria!
+          Arroz
+
+          ¡Consulta de productos lácteos!
+          Mantequilla
+          Queso
+
+          ¡Otra consulta de productos lácteos!
+          3, Mantequilla, Lácteos
+          4, Queso, Lácteos
+
+          ¡Consulta del primer producto!
+          Mantequilla
+
+          ¡Consulta del único producto!
+          Agua
+
+          ¡Consulta los productos cuyos nombres coincidan con los suministrados!
+          Arroz
+          Agua
+
+          ¡Actualiza el producto suministrado!
+          Precio anterior: Arroz 1.25
+          Precio nuevo: Arroz 11.5
+          ¡Actualización exitosa de precio del producto!
+
+          ¡Actualiza el producto suministrado!
+          ¡Actualización exitosa de precio del producto!
+
+          ¡Elimina los productos suministrados!
+          ¡Eliminación exitosa del producto!
 
    .. group-tab:: Windows
 
@@ -694,14 +779,20 @@ sistema operativo:
 
       .. code-block:: console
 
-          > pip3 install -r requirements.txt
+          pip3 install -r requirements.txt
 
-      Ademas debe instalar y editar el archivo ``.env``, con el siguiente comando:
+      Ademas debe crear el archivo ``.env`` en base a la plantilla ``env.example`` , con
+      el siguiente comando:
 
       .. code-block:: console
 
-          > copy .env.example .env
-          > notepad.exe .env &
+          copy .env.example .env
+
+      Editar el archivo ``.env``, con el siguiente comando:
+
+      .. code-block:: console
+
+          notepad.exe .env &
 
       .. tip::
         El archivo ``.env`` se definen las configuraciones de conexión a la base de datos,
@@ -718,64 +809,68 @@ sistema operativo:
 
       .. code-block:: console
 
-          > python3 main.py
+          python3 main.py
 
-El anterior código al ejecutar debe mostrar el siguiente mensaje:
+      El anterior código al ejecutar debe mostrar el siguiente mensaje:
 
-.. code-block:: console
+      .. code-block:: console
+          :class: no-copy
 
-    ¡Creación exitosa de la tabla productos!
+          ¡Creación exitosa de la tabla productos!
 
-    ¡Inserción exitosa de los 4 productos!
+          ¡Inserción exitosa de los 4 productos!
 
-    ¡Consulta todos los productos!
-    Arroz
-    Agua
-    Mantequilla
-    Queso
+          ¡Consulta todos los productos!
+          Arroz
+          Agua
+          Mantequilla
+          Queso
 
-    ¡Consulta todos los productos con más atributos!
-    Arroz 1.25
-    Agua 0.3
-    Mantequilla 3.56
-    Queso 8.56
+          ¡Consulta todos los productos con más atributos!
+          Arroz 1.25
+          Agua 0.3
+          Mantequilla 3.56
+          Queso 8.56
 
-    ¡Consulta de producto en base a su clave primaria!
-    Arroz
+          ¡Consulta de producto en base a su clave primaria!
+          Arroz
 
-    ¡Consulta de productos lácteos!
-    Mantequilla
-    Queso
+          ¡Consulta de productos lácteos!
+          Mantequilla
+          Queso
 
-    ¡Otra consulta de productos lácteos!
-    3, Mantequilla, Lácteos
-    4, Queso, Lácteos
+          ¡Otra consulta de productos lácteos!
+          3, Mantequilla, Lácteos
+          4, Queso, Lácteos
 
-    ¡Consulta del primer producto!
-    Mantequilla
+          ¡Consulta del primer producto!
+          Mantequilla
 
-    ¡Consulta del único producto!
-    Agua
+          ¡Consulta del único producto!
+          Agua
 
-    ¡Consulta los productos cuyos nombres coincidan con los suministrados!
-    Arroz
-    Agua
+          ¡Consulta los productos cuyos nombres coincidan con los suministrados!
+          Arroz
+          Agua
 
-    ¡Actualiza el producto suministrado!
-    Precio anterior: Arroz 1.25
-    Precio nuevo: Arroz 11.5
-    ¡Actualización exitosa de precio del producto!
+          ¡Actualiza el producto suministrado!
+          Precio anterior: Arroz 1.25
+          Precio nuevo: Arroz 11.5
+          ¡Actualización exitosa de precio del producto!
 
-    ¡Actualiza el producto suministrado!
-    ¡Actualización exitosa de precio del producto!
+          ¡Actualiza el producto suministrado!
+          ¡Actualización exitosa de precio del producto!
 
-    ¡Elimina los productos suministrados!
-    ¡Eliminación exitosa del producto!
+          ¡Elimina los productos suministrados!
+          ¡Eliminación exitosa del producto!
+
 
 Asi de esta forma puede ingresar, consultar, actualizar y eliminar registro en una
 tabla usando ``SQLAlchemy``.
 
+
 ----
+
 
 .. seealso::
 

@@ -93,28 +93,33 @@ Si requiere eliminar registro de tabla, a continuación tiene un ejemplo:
 .. literalinclude:: ../../recursos/leccion2/sistema/sistema_data.sql
     :language: sql
     :linenos:
-    :lines: 18
+    :lines: 20-21
 
 
 Asi de esta forma puede crear una tabla, ingresar, consultar, actualizar y eliminar
 registro a dicha tabla.
+
 
 ----
 
 
 .. important::
     Usted puede descargar el código usado en esta sección haciendo clic en los
-    siguientes enlaces: :download:`sistema.sql <../../recursos/leccion2/sistema/sistema.sql>`
-    y :download:`sistema_data.sql <../../recursos/leccion2/sistema/sistema_data.sql>`.
+    siguientes enlaces:
+
+    - :download:`sistema.sql <../../recursos/leccion2/sistema/sistema.sql>`.
+
+    - :download:`sistema_data.sql <../../recursos/leccion2/sistema/sistema_data.sql>`.
 
 
 .. tip::
     Para ejecutar el código SQL de la base de datos debe tener una copia local de los scripts
     :file:`sistema.sql` y :file:`sistema_data.sql`.
 
-    ::
+    .. code-block:: pycon
+        :class: no-copy
 
-        leccion2/
+        proyectos/
         └── sistema/
             ├── sistema.sql
             └── sistema_data.sql
