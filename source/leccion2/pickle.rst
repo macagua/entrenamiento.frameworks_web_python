@@ -26,7 +26,7 @@ Python ofrece tres módulos diferentes en la biblioteca estándar que le permite
 Librería pickle
 ----------------
 
-El móulo `pickle`_ implementa protocolos binarios para **serializar** y **deserializar**
+El módulo `pickle`_ implementa protocolos binarios para **serializar** y **deserializar**
 una estructura de objetos Python.
 
 El módulo ``pickle`` nos permite **serializar** y **deserializar** datos en archivos binarios.
@@ -70,10 +70,10 @@ datos en una lista de diccionarios.
         TODO terminar de escribir esta sección.
 
 
-    .. _python_pickle_scaffolding:
+.. _python_pickle_scaffolding:
 
-    Práctica - Caso real
-    ^^^^^^^^^^^^^^^^^^^^
+Práctica - Caso real
+^^^^^^^^^^^^^^^^^^^^
 
 A continuación se presenta una práctica más real de implementar el uso de proyectos
 con ``pickle`` para operaciones CRUD en un archivo de registros serializados:
