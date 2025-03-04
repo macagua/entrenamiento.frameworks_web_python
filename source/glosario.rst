@@ -1,5 +1,3 @@
-.. -*- coding: utf-8 -*-
-
 .. _glosario:
 
 Glosario
@@ -172,6 +170,13 @@ A continuación una serie de términos usados en las tecnologías Python.
         La `arquitectura de componentes de Zope (alias ZCA)`_, es un
         sistema que permite la aplicación y la expedición enchufabilidad complejo
         basado en objetos que implementan una interfaz.
+
+
+----
+
+
+..
+  .. disqus::
 
 .. _`sitio web de PEAK`: http://peak.telecommunity.com/DevCenter/setuptools
 .. _`Paste`: https://paste.readthedocs.io/en/latest/

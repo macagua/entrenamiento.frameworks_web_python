@@ -1,6 +1,3 @@
-.. -*- coding: utf-8 -*-
-
-
 .. _lecturas_extras_entrenamiento:
 
 Lecturas suplementarias del entrenamiento

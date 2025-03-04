@@ -112,6 +112,7 @@ ejecute el siguiente comando:
 Si ejecuto el comando anterior, este da como resultado lo siguiente:
 
 .. code-block:: pycon
+    :class: no-copy
 
     Please wait a moment while I gather a list of all available modules...
 
@@ -225,6 +226,7 @@ Entonces consulte la ayuda del módulo ``os``, ejecutando:
 Si ejecuto el comando anterior, este da como resultado lo siguiente:
 
 .. code-block:: pycon
+    :class: no-copy
 
     Help on module os:
 
@@ -286,6 +288,7 @@ la importación:
 Si ejecuto el comando anterior, este da como resultado lo siguiente:
 
 .. code-block:: pycon
+    :class: no-copy
 
     ['CLD_CONTINUED', 'CLD_DUMPED', 'CLD_EXITED', 'CLD_KILLED', 'CLD_STOPPED',
     'CLD_TRAPPED', 'DirEntry', 'EFD_CLOEXEC', 'EFD_NONBLOCK', 'EFD_SEMAPHORE',
@@ -375,6 +378,7 @@ siguiente comando:
 Si ejecuto el comando anterior, este da como resultado lo siguiente:
 
 .. code-block:: pycon
+    :class: no-copy
 
     OS routines for NT or Posix depending on what system we're on.
 
@@ -447,6 +451,12 @@ este programa ejecute el siguiente comando:
       .. code-block:: console
 
           sudo apt install -y ipython
+
+   .. group-tab:: Windows
+
+      .. code-block:: console
+
+          pip3 install ipython
 
 Sustituya el comando ``python3`` por ``ipython3`` de la siguiente forma:
 
@@ -550,7 +560,7 @@ ayudar a la introspección del lenguaje y sus librerías.
 
 .. code-block:: pycon
 
-    In [3]: os.__all__
+    In [3]: os.__
                  __all__      __file__     __package__
                  __builtins__ __loader__   __spec__
                  __doc__      __name__

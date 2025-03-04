@@ -64,9 +64,10 @@ Apéndices
    por_mejorar
 
 
-Búsqueda
-========
+..
+   Búsqueda
+   ========
 
-* :ref:`search`
+   * :ref:`search`
 
 .. _`Python 3.11`: https://docs.python.org/es/3.11/

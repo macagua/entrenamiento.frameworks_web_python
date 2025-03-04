@@ -183,7 +183,7 @@ html_theme_options = {
                     "name": "Esta página podría mejorarse",
                     "data": 0,
                     "note": "Gracias por sus comentarios. Ayúdenos a mejorar esta página "
-                    '<a href="https://github.com/jbms/sphinx-immaterial/issues">abriendo una incidencia</a>.',
+                    '<a href="https://github.com/macagua/entrenamiento.frameworks_web_python/issues">abriendo una incidencia</a>.',
                 },
             ],
         },
@@ -197,6 +197,7 @@ html_theme_options = {
     "repo_name": "entrenamiento.frameworks_web_python",
     "edit_uri": "edit/master/source",
     "globaltoc_collapse": True,
+    # BEGIN: Features
     "features": [
         "navigation.expand",
         # "navigation.tabs",
@@ -214,6 +215,8 @@ html_theme_options = {
         "content.code.copy",
         "content.tooltips",
     ],
+    # END: Features
+    # BEGIN: Palette toggle
     "palette": [
         {
             "media": "(prefers-color-scheme)",
@@ -245,6 +248,7 @@ html_theme_options = {
             },
         },
     ],
+    # END: Palette toggle
     # BEGIN: version_dropdown
     # "version_dropdown": True,
     # "version_info": [

@@ -1,13 +1,10 @@
-.. -*- coding: utf-8 -*-
-
-
 .. _esquema_entrenamiento:
 
 Esquema del entrenamiento
 =========================
 
-Este entrenamiento toma 6 lecciones. Cada lección contiene material de lectura y
-ejercicios que usted tendrá que escribir en el interprete Python. Cada lección
+Este entrenamiento toma 8 lecciones. Cada lección contiene material de lectura
+y ejercicios que usted tendrá que escribir en el interprete Python. Cada lección
 aprendida están asociadas entre si mismas.
 
 
@@ -119,3 +116,29 @@ Lección 7 - Framework Web Django
     habilitando el "Django Admin" para los formularios HTML, Gestionar usuarios Django
     creando y aplicando permisos de forma granulada, explorando el resultado desde la
     consola de comando y el navegador Web.
+
+
+.. _esquema_entrenamiento_leccion8:
+
+
+Lección 8 - Framework FastAPI
+-----------------------------
+
+**Descripción:**
+    Comprender la filosofía y el desarrollo de aplicaciones API usando el framework
+    FastAPI.
+
+**Práctica:**
+    Creación de aplicación API Rest, operaciones CRUD usando BD SQL, habilitando la
+    documentacion de API" en formulario HTML, explorando el resultado desde la
+    consola de comando y el navegador Web.
+
+
+----
+
+
+.. raw:: html
+   :file: _templates/partials/soporte_profesional.html
+
+..
+  .. disqus::

@@ -18,6 +18,8 @@ web.
 
   Django framework
 
+A continuación el temario de esta lección:
+
 .. toctree::
    :maxdepth: 2
 

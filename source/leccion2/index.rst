@@ -23,7 +23,9 @@ opción, ya que su formato es más portátil.
 En esta lección se busca introducir al uso de Base de datos relacional
 con programación en Python, sus características, modos de instalación,
 soporte comunitario, y los recursos más destacados disponibles en
-la Web para tomar en cuenta. A continuación el temario de esta lección:
+la Web para tomar en cuenta.
+
+A continuación el temario de esta lección:
 
 .. toctree::
    :maxdepth: 2

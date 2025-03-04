@@ -18,6 +18,8 @@ de trabajo con el mismo.
 
   Flask framework
 
+A continuación el temario de esta lección:
+
 .. toctree::
    :maxdepth: 2
 

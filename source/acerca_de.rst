@@ -1,6 +1,3 @@
-.. -*- coding: utf-8 -*-
-
-
 .. _acerca_de:
 
 =========================
@@ -135,5 +132,12 @@ Contáctenos
 
 .. raw:: html
    :file: _templates/partials/contactenos.html
+
+
+----
+
+
+..
+  .. disqus::
 
 .. _`Covantec R.L`: https://github.com/Covantec
