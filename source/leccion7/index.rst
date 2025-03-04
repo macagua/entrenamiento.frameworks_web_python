@@ -24,7 +24,7 @@ web.
    introduccion
    instalacion
    hello_world
-   practicas
+   django_admin_models
    django_admin_users
 
 

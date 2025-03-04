@@ -319,6 +319,8 @@ Lección 7 - Django
 
 - `Parte 2 del tutorial Escribiendo su primera aplicación en Django <https://docs.djangoproject.com/es/5.1/intro/tutorial02/>`_.
 
+- `The Django admin site <https://docs.djangoproject.com/en/5.1/ref/contrib/admin/>`_.
+
 - `Django en PyPI <https://pypi.org/project/Django>`_.
 
 - `Framework Web Django (Python) - Aprende sobre desarrollo web - MDN <https://developer.mozilla.org/es/docs/Learn_web_development/Extensions/Server-side/Django>`_.
