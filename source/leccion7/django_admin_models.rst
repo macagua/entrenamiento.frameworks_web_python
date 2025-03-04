@@ -207,8 +207,8 @@ de los modelos ``Question`` y ``Choice`` en la interfaz ``Django Admin``, agrega
     admin.site.register(Question, QuestionAdmin)
     admin.site.register(Choice, ChoiceAdmin)
 
-Detenga el ``runserver`` presionando la combinación de teclas ::kbd:`Crtl + c` y
-inicie de nuevo el ``runserver``, con el siguiente comando:
+Detenga el ``runserver`` presionando la combinación de teclas :kbd:`Crtl+c` y inicie de nuevo
+el ``runserver``, con el siguiente comando:
 
 .. code-block:: console
 
