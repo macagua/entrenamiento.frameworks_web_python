@@ -264,7 +264,7 @@ Si ejecuto el comando anterior, este da como resultado lo siguiente:
 
 .. tip:: Presione la tecla :keys:`q` para salir de la ayuda del módulo ``os``.
 
-Seguidamente presione la combinación de tecla **Crtl+d** para salir de la ayuda.
+Seguidamente presione la combinación de tecla :keys:`Crtl+d` para salir de la ayuda.
 
 Luego realice la importación de la `librería del estándar`_ Python llamada
 ``os``, con el siguiente comando:
@@ -495,7 +495,7 @@ Si ejecuto el comando anterior, este da como resultado lo siguiente:
         recursively the attributes of its class's base classes.
 
 
-Entonces presione la tecla **q** para salir de la ayuda de la función ``dir()``.
+Entonces presione la tecla :keys:`q` para salir de la ayuda de la función ``dir()``.
 
 De nuevo realice la importación de la librería del estándar Python llamada ``os``.
 
@@ -543,8 +543,8 @@ Si ejecuto el comando anterior, este da como resultado lo siguiente:
     (e.g., split and join).
 
 
-Escriba la librería *os.* y luego escribe dos **underscore** y presione *dos
-veces la tecla tabular* para usar la completado automático del interprete al
+Escriba la librería ``os.`` y luego escribe dos **underscore** y presione *dos
+veces la tecla tabular* :keys:`Tab` para usar la completado automático del interprete al
 `estilo de completación de lineas de comandos`_ en el shell UNIX/Linux para
 ayudar a la introspección del lenguaje y sus librerías.
 
@@ -771,7 +771,7 @@ Si ejecuto el comando anterior, este da como resultado lo siguiente:
 
 Asi pudo salir de la sesión del interprete interactivo ``bpython``.
 
-De esta forma aprendio nociones basicas con el interprete interactivo ``bpython``.
+De esta forma, ha aprendió nociones básicas con el interprete interactivo ``bpython``.
 
 
 ----
