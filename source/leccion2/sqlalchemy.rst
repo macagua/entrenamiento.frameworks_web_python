@@ -680,7 +680,7 @@ Archivo de `requirements.txt`_ de la herramienta de gestión de paquetes `pip`_.
 .. literalinclude:: ../../recursos/leccion2/sqlalchemy/productos/requirements.txt
     :language: python
     :linenos:
-    :lines: 1-2
+    :lines: 2-3
 
 Teniendo creada la anterior estructura de proyecto, vuelva a ejecutar ahora el módulo con
 el siguiente comando, el cual a continuación se presentan el correspondiente comando de tu

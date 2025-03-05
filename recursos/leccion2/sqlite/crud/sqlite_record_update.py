@@ -16,7 +16,8 @@ MULTIPLE_COLUMNS = [
     ("6303", 2),
 ]
 
-SQL_SCRIPTS = """UPDATE clientes SET codigo_postal = ? WHERE id = ?;"""
+# Script UPDATE SQL a usar al actualizar datos
+UPDATE_SCRIPTS = """UPDATE clientes SET codigo_postal = ? WHERE id = ?;"""
 
 
 def actualizar_registro():
@@ -30,7 +31,7 @@ def actualizar_registro():
         cursor = conexion.cursor()
         logging.info(f"¡Conectado a la base de datos '{DB_FILE}'!\n")
         # Ejecutar SQL
-        cursor.executemany(SQL_SCRIPTS, MULTIPLE_COLUMNS)
+        cursor.executemany(UPDATE_SCRIPTS, MULTIPLE_COLUMNS)
         # Guardar los cambios en la base de datos
         conexion.commit()
         logging.info(

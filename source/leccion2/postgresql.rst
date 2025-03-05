@@ -421,7 +421,7 @@ Si requiere consultar registros de tabla, a continuación tiene un ejemplo:
 
                 Id: 4
                 Nombre: Liliana Andradez
-                Código postal: 4001
+                Código postal: 3105
                 Teléfono: +58-414-6782473
 
         INFO:root:¡La conexión PostgreSQL a la base de datos 'sistema' fue cerrada!
@@ -723,7 +723,7 @@ configuración y ejecución del código fuente.
 
                   Id: 4
                   Nombre: Liliana Andradez
-                  Código postal: 4001
+                  Código postal: 3105
                   Teléfono: +58-414-6782473
 
           INFO:root:¡Fueron actualizado(s) 2 registro(s) correctamente en la tabla!
@@ -819,7 +819,7 @@ configuración y ejecución del código fuente.
 
                   Id: 4
                   Nombre: Liliana Andradez
-                  Código postal: 4001
+                  Código postal: 3105
                   Teléfono: +58-414-6782473
 
           INFO:root:¡Fueron actualizado(s) 2 registro(s) correctamente en la tabla!

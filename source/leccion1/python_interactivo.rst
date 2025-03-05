@@ -85,7 +85,6 @@ Si ejecuto el comando anterior, este da como resultado lo siguiente:
 .. code-block:: pycon
     :class: no-copy
 
-    >>> help()
     Welcome to Python 3.11's help utility!
 
     If this is your first time using Python, you should definitely check out
@@ -364,6 +363,7 @@ ubicación de la librería importada de la siguiente forma:
 Si ejecuto el comando anterior, este da como resultado lo siguiente:
 
 .. code-block:: pycon
+    :class: no-copy
 
     '/usr/lib/python3.11/os.py'
     >>>
@@ -460,20 +460,41 @@ este programa ejecute el siguiente comando:
 
 Sustituya el comando ``python3`` por ``ipython3`` de la siguiente forma:
 
-.. code-block:: console
+.. tabs::
 
-    ipython3
+   .. group-tab:: Linux
 
-Si ejecuto el comando anterior, este da como resultado lo siguiente:
+      .. code-block:: console
 
-.. code-block:: console
-    :class: no-copy
+          ipython3
 
-    Python 3.11.2 (main, Nov 30 2024, 21:22:50) [GCC 12.2.0]
-    Type 'copyright', 'credits' or 'license' for more information
-    IPython 8.10.0 -- An enhanced Interactive Python. Type '?' for help.
+     Si ejecuto el comando anterior, este da como resultado lo siguiente:
 
-        In [1]:
+      .. code-block:: console
+          :class: no-copy
+
+          Python 3.11.2 (main, Nov 30 2024, 21:22:50) [GCC 12.2.0]
+          Type 'copyright', 'credits' or 'license' for more information
+          IPython 8.10.0 -- An enhanced Interactive Python. Type '?' for help.
+
+              In [1]:
+
+   .. group-tab:: Windows
+
+      .. code-block:: console
+
+          ipython3
+
+     Si ejecuto el comando anterior, este da como resultado lo siguiente:
+
+      .. code-block:: console
+          :class: no-copy
+
+          Python 3.11.5 (default, Sep 11 2023, 13:26:23)
+          Type 'copyright', 'credits' or 'license' for more information
+          IPython 7.34.0 -- An enhanced Interactive Python. Type '?' for help.
+
+              In [1]:
 
 
 Un ejemplo de uso del comando ``help`` es consultar la ayuda del comando
@@ -561,10 +582,10 @@ ayudar a la introspección del lenguaje y sus librerías.
 .. code-block:: pycon
 
     In [3]: os.__
-                 __all__      __file__     __package__
-                 __builtins__ __loader__   __spec__
-                 __doc__      __name__
-                 instance
+    __all__      __file__     __package__
+    __builtins__ __loader__   __spec__
+    __doc__      __name__
+    instance
 
 
 De nuevo ejecute el método ``file`` para determinar la ubicación de la
@@ -700,6 +721,8 @@ De esta forma aprendio nociones basicas con el interprete interactivo ``ipython`
 
 ----
 
+
+.. _python_modulo_bpython:
 
 Interprete bpython
 ..................

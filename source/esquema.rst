@@ -39,7 +39,6 @@ Lección 2 - Base de datos SQL
 
 .. _esquema_entrenamiento_leccion3:
 
-
 Lección 3 - Protocolo HTTP en Python
 ------------------------------------
 
@@ -71,7 +70,6 @@ Lección 4 - Web Server Gateway Interface
 
 
 .. _esquema_entrenamiento_leccion5:
-
 
 Lección 5 - Frameworks Web en Python
 ------------------------------------

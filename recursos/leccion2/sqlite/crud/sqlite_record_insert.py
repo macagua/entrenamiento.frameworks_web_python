@@ -55,7 +55,7 @@ def insertar_registro():
         )
         # Insertar un nuevo registro en la tabla
         cursor.execute(
-            INSERT_SQL, (4, "Liliana", "Andradez", "4001", "+58-414-6782473")
+            INSERT_SQL, (4, "Liliana", "Andradez", "3105", "+58-414-6782473")
         )
         # Confirmar la inserción del registro
         conexion.commit()
