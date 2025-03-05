@@ -107,7 +107,7 @@ los modos de instalación:
       Windows debe descargar e instalar el ``SQLite Tools`` con los siguientes pasos:
 
       Cree el directorio donde se va a descomprimir las utilidades del ``SQLite Tools``, con
-      el siguiente comando:
+      los siguientes comandos:
 
       .. code-block:: console
 
