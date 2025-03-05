@@ -23,13 +23,15 @@ def consultar_registro():
         conexion = DB.open()
         # Crear la instancia de conexion y llamar al método open de db
         nodo = conexion.root()
-        logging.info(f"✅ ¡Conectado a la base de datos {os.path.basename(DB_FILE.getName())}!\n")
+        logging.info(
+            f"✅ ¡Conectado a la base de datos {os.path.basename(DB_FILE.getName())}!\n"
+        )
         print("Todos los registros: ")
         print(nodo.items())
         print("Todos los valores: ")
         print(nodo.values())
-        if 'producto1' in nodo.items():
-            print("Producto: ", nodo['producto1'])
+        if "producto1" in nodo.items():
+            print("Producto: ", nodo["producto1"])
             print(f"\tId: {nodo['producto1'].id}")
             print(f"\tDescripción del producto: {nodo['producto1'].descripcion}")
         else:

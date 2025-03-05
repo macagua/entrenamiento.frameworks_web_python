@@ -24,11 +24,13 @@ def eliminar_registro():
         conexion = DB.open()
         # Crear la instancia de conexion y llamar al método open de db
         nodo = conexion.root()
-        logging.info(f"✅ ¡Conectado a la base de datos {os.path.basename(DB_FILE.getName())}!\n")
+        logging.info(
+            f"✅ ¡Conectado a la base de datos {os.path.basename(DB_FILE.getName())}!\n"
+        )
         # Mostrar el objeto a eliminar
-        print(nodo['producto1'].descripcion)
+        print(nodo["producto1"].descripcion)
         # Eliminar el objeto 'producto1'
-        if 'producto1' in nodo.items():
+        if "producto1" in nodo.items():
             # Eliminar el objeto de la raíz
             nodo.pop("producto1")
             # Guardar los cambios en la base de datos

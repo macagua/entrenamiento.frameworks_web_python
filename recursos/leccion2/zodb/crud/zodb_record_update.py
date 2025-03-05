@@ -23,19 +23,21 @@ def actualizar_registro():
         conexion = DB.open()
         # Crear la instancia de conexion y llamar al método open de db
         nodo = conexion.root()
-        logging.info(f"✅ ¡Conectado a la base de datos {os.path.basename(DB_FILE.getName())}!\n")
+        logging.info(
+            f"✅ ¡Conectado a la base de datos {os.path.basename(DB_FILE.getName())}!\n"
+        )
         # Actualizar el nodo 'producto1'
-        print(nodo['producto1'].descripcion)
-        nodo['producto1'].descripcion='Vehiculo'
-        print(nodo['producto1'].descripcion)
+        print(nodo["producto1"].descripcion)
+        nodo["producto1"].descripcion = "Vehiculo"
+        print(nodo["producto1"].descripcion)
         # Actualizar el nodo 'producto2'
-        print(nodo['producto2'].descripcion)
-        nodo['producto2'].descripcion='Motocicleta'
-        print(nodo['producto2'].descripcion)
+        print(nodo["producto2"].descripcion)
+        nodo["producto2"].descripcion = "Motocicleta"
+        print(nodo["producto2"].descripcion)
         # Actualizar el nodo 'producto3'
-        print(nodo['producto3'].descripcion)
-        nodo['producto3'].descripcion='Bici'
-        print(nodo['producto3'].descripcion)
+        print(nodo["producto3"].descripcion)
+        nodo["producto3"].descripcion = "Bici"
+        print(nodo["producto3"].descripcion)
         # Guardar los cambios en la base de datos
         transaction.commit()
     except StorageError as error:

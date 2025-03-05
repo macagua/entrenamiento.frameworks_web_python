@@ -450,7 +450,7 @@ Si requiere insertar registro en una tabla, a continuación tiene un ejemplo:
 .. literalinclude:: ../../recursos/leccion2/zodb/crud/zodb_record_insert.py
     :language: python
     :linenos:
-    :lines: 1-78
+    :lines: 1-83
 
 
 ----
@@ -484,11 +484,11 @@ El anterior código al ejecutar debe mostrar el siguiente mensaje:
 
 .. code-block:: console
 
-    INFO:root:✅ ¡Conectado a la base de datos productos.fs!
+    INFO:root:✅ ¡Conectado a la base de datos 'Data.fs'!
 
     INFO:root:✅ ¡Fueron insertado(s) los registro(s) correctamente en la ZODB!
 
-    INFO:root:✅ ¡La conexión ZODB a la base de datos productos.fs fue cerrada!
+    INFO:root:✅ ¡La conexión ZODB a la base de datos 'Data.fs' fue cerrada!
 
 
 ----
@@ -502,7 +502,7 @@ Si requiere consultar registros de tabla, a continuación tiene un ejemplo:
 .. literalinclude:: ../../recursos/leccion2/zodb/crud/zodb_record_read.py
     :language: python
     :linenos:
-    :lines: 1-49
+    :lines: 1-51
 
 
 ----
@@ -536,28 +536,33 @@ El anterior código al ejecutar debe mostrar el siguiente mensaje:
 
 .. code-block:: console
 
-    INFO:root:✅ ¡Conectado a la base de datos sistema.db!
+    INFO:root:✅ ¡Conectado a la base de datos 'Data.fs'!
 
-    Total de filas son: 3
+    Total de filas son: 4
 
     Mostrar cada fila:
 
             Id: 1
-            Nombre: Leonardo
-            Código postal: Caballero
-            Teléfono: 5001
+            Nombre: Leonardo Caballero
+            Código postal: 5001
+            Teléfono: +58-412-4734567
 
             Id: 2
-            Nombre: Ana
-            Código postal: Poleo
-            Teléfono: 6302
+            Nombre: Ana Poleo
+            Código postal: 6302
+            Teléfono: +58-426-5831297
 
             Id: 3
-            Nombre: Pedro
-            Código postal: Lopez
-            Teléfono: 4001
+            Nombre: Manuel Matos
+            Código postal: 4001
+            Teléfono: +58-414-2360943
 
-    INFO:root:✅ ¡La conexión ZODB a la base de datos sistema.db fue cerrada!
+            Id: 4
+            Nombre: Liliana Andradez
+            Código postal: 3105
+            Teléfono: +58-414-6782473
+
+    INFO:root:✅ ¡La conexión ZODB a la base de datos 'Data.fs' fue cerrada!
 
 
 ----
@@ -571,7 +576,7 @@ Si requiere actualizar registro de tabla, a continuación tiene un ejemplo:
 .. literalinclude:: ../../recursos/leccion2/zodb/crud/zodb_record_update.py
     :language: python
     :linenos:
-    :lines: 1-53
+    :lines: 1-55
 
 
 ----
@@ -605,11 +610,11 @@ El anterior código al ejecutar debe mostrar el siguiente mensaje:
 
 .. code-block:: console
 
-    INFO:root:✅ ¡Conectado a la base de datos sistema.db!
+    INFO:root:✅ ¡Conectado a la base de datos 'Data.fs'!
 
     INFO:root:✅ ¡Fueron actualizado(s) 2 registro(s) correctamente en la tabla!
 
-    INFO:root:✅ ¡La conexión ZODB a la base de datos sistema.db fue cerrada!
+    INFO:root:✅ ¡La conexión ZODB a la base de datos 'Data.fs' fue cerrada!
 
 
 ----
@@ -623,7 +628,7 @@ Si requiere eliminar registro de tabla, a continuación tiene un ejemplo:
 .. literalinclude:: ../../recursos/leccion2/zodb/crud/zodb_record_delete.py
     :language: python
     :linenos:
-    :lines: 1-51
+    :lines: 1-53
 
 
 ----
@@ -657,11 +662,11 @@ El anterior código al ejecutar debe mostrar el siguiente mensaje:
 
 .. code-block:: console
 
-    INFO:root:✅ ¡Conectado a la base de datos sistema.db!
+    INFO:root:✅ ¡Conectado a la base de datos 'Data.fs'!
 
     INFO:root:✅ ¡Registro eliminado correctamente!
 
-    INFO:root:✅ ¡La conexión ZODB a la base de datos sistema.db fue cerrada!
+    INFO:root:✅ ¡La conexión ZODB a la base de datos 'Data.fs' fue cerrada!
 
 
 Asi de esta forma puede ingresar, consultar, actualizar y eliminar
@@ -682,7 +687,7 @@ con ``ZODB`` para operaciones CRUD en un archivo de registros serializados:
 .. literalinclude:: ../../recursos/leccion2/zodb/sistema/main.py
     :language: python
     :linenos:
-    :lines: 1-96
+    :lines: 1-97
 
 .. important::
     Usted puede descargar el código usado en esta sección haciendo clic en el

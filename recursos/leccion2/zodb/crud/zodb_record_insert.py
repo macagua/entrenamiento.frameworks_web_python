@@ -18,6 +18,7 @@ DB = ZODB.DB(DB_FILE)
 
 class Producto(persistent.Persistent):
     """Clase Producto"""
+
     def __init__(self, id, descripcion):
         """Método constructor de clase de Producto
 
@@ -36,7 +37,7 @@ class Producto(persistent.Persistent):
     def __repr__(self):
         """Método de representación de formal del objeto,
         usado para depuración y desarrollo"""
-        return f'{self.__class__.__name__}:({repr(self.id)}, {repr(self.descripcion)})'
+        return f"{self.__class__.__name__}:({repr(self.id)}, {repr(self.descripcion)})"
 
 
 def insertar_registro():
@@ -48,21 +49,25 @@ def insertar_registro():
         conexion = DB.open()
         # Crear la instancia de conexion y llamar al método open de db
         nodo = conexion.root()
-        logging.info(f"✅ ¡Conectado a la base de datos {os.path.basename(DB_FILE.getName())}!\n")
+        logging.info(
+            f"✅ ¡Conectado a la base de datos {os.path.basename(DB_FILE.getName())}!\n"
+        )
         # Crear una instancia de la clase Producto
         producto1 = Producto(1, "Carro")
-        nodo['producto1'] = producto1
+        nodo["producto1"] = producto1
         # Crear una instancia de la clase Producto
         producto2 = Producto(2, "Moto")
-        nodo['producto2'] = producto2
+        nodo["producto2"] = producto2
         # Crear una instancia de la clase Producto
         producto3 = Producto(3, "Bicicleta")
-        nodo['producto3'] = producto3
+        nodo["producto3"] = producto3
         # Crear una lista de instancia de objetos Producto
-        nodo['productos'] = [producto1, producto2, producto3]
+        nodo["productos"] = [producto1, producto2, producto3]
         # Confirmar la inserción del registro
         transaction.commit()
-        logging.info("✅ ¡Fueron insertado(s) los registro(s) correctamente en la ZODB!\n")
+        logging.info(
+            "✅ ¡Fueron insertado(s) los registro(s) correctamente en la ZODB!\n"
+        )
     except StorageError as error:
         logging.error(f"❌ ¡Fallo la inserción de registro(s) en la ZODB!: {error}")
     finally:
