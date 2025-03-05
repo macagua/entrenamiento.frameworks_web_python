@@ -7,7 +7,7 @@ import transaction
 _DB_DIR = os.path.dirname(os.path.abspath(__file__)) + os.sep + "filestorage/"
 
 # Archivo de la base de datos ZODB
-DB = "data.fs"
+DB = "Data.fs"
 
 storage = ZODB.FileStorage.FileStorage(_DB_DIR + DB)
 zodb = ZODB.DB(storage)
@@ -76,6 +76,7 @@ def eliminar_cliente(id):
 crear_cliente(1, "Leonardo", "Caballero", "5001", "+58-412-4734567")
 crear_cliente(2, "Ana", "Poleo", "6302", "+58-426-5831297")
 crear_cliente(3, "Manuel", "Matos", "4001", "+58-414-2360943")
+crear_cliente(4, "Liliana", "Andradez", "3105", "+58-414-6782473")
 
 # Leer clientes
 leer_clientes()
@@ -85,7 +86,7 @@ actualizar_cliente(1, telefono="+58-416-5831297")
 leer_clientes()
 
 # Eliminar clientes
-eliminar_cliente(3)
+eliminar_cliente(4)
 leer_clientes()
 
 # Cerrar la conexión a la base de datos
