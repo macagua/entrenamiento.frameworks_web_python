@@ -63,7 +63,7 @@ def insertar_registro():
         )
         # Insertar un nuevo registro en la tabla
         cursor.execute(
-            INSERT_SQL, (4, "Liliana", "Andradez", "4001", "+58-414-6782473")
+            INSERT_SQL, (4, "Liliana", "Andradez", "3105", "+58-414-6782473")
         )
         # Confirmar la inserción del registro
         conexion.commit()
@@ -73,7 +73,7 @@ def insertar_registro():
         # Cerrar el cursor
         cursor.close()
     except pymysql.err.Error as error:
-        logging.info(f"¡Fallo la inserción de registro(s) en la tabla!: {error}")
+        logging.error(f"¡Fallo la inserción de registro(s) en la tabla!: {error}")
     finally:
         if conexion:
             # Cerrar la conexión a la base de datos

@@ -46,7 +46,7 @@ def actualizar_registro():
         # Cerrar el cursor
         cursor.close()
     except pymysql.err.Error as error:
-        logging.info(f"¡Fallo la actualización de registro(s) en la tabla!: {error}")
+        logging.error(f"¡Fallo la actualización de registro(s) en la tabla!: {error}")
     finally:
         if conexion:
             # Cerrar la conexión a la base de datos
