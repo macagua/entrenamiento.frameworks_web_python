@@ -8,7 +8,10 @@ a la vez que sencillo y fácil de aprender.
 
 En esta lección se busca hacer una vía rápida de programación en Python, sus
 características, modos de instalación, soporte comunitario, y los recursos más destacados
-disponibles en la Web para tomar en cuenta. A continuación el temario de esta lección:
+disponibles en la Web para tomar en cuenta.
+
+A continuación el temario de esta lección:
+
 
 .. toctree::
    :maxdepth: 2
