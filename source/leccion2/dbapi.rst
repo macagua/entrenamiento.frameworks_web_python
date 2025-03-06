@@ -396,8 +396,8 @@ Las librerías de bases de datos relacionales más populares son:
 .. _`JDBC`: https://es.wikipedia.org/wiki/Java_Database_Connectivity
 .. _`ODBC`: https://es.wikipedia.org/wiki/Open_Database_Connectivity
 .. _`NoSQL`: https://es.wikipedia.org/wiki/NoSQL
-.. _`with`: https://entrenamiento-python-basico.readthedocs.io/es/3.7/leccion9/errores.html#sentencia-with
-.. _`Exception`: https://entrenamiento-python-basico.readthedocs.io/es/3.7/leccion9/exceptions.html#python-exception
+.. _`with`: https://entrenamiento-python-basico.readthedocs.io/es/3.11/leccion9/errores.html#sentencia-with
+.. _`Exception`: https://entrenamiento-python-basico.readthedocs.io/es/3.11/leccion9/exceptions.html#python-exception
 .. _`DML`: https://es.wikipedia.org/wiki/Lenguaje_de_manipulaci%C3%B3n_de_datos
 .. _`The Novice’s Guide to the Python 3 DB-API`: https://philvarner.github.io/pages/novice-python3-db-api.html
 .. _`Acceso A Bases De Datos Desde Python - Interfaz Db-Api`: https://wiki.python.org.ar/dbapi/

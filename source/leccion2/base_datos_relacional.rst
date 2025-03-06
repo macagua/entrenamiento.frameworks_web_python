@@ -67,7 +67,7 @@ Si requiere consultar registros de tabla, a continuación tiene un ejemplo:
 .. literalinclude:: ../../recursos/leccion2/sistema/sistema_data.sql
     :language: sql
     :linenos:
-    :lines: 10-11
+    :lines: 10-12
 
 
 .. _python_base_actualizar_registro:
@@ -80,7 +80,7 @@ Si requiere actualizar registro de tabla, a continuación tiene un ejemplo:
 .. literalinclude:: ../../recursos/leccion2/sistema/sistema_data.sql
     :language: sql
     :linenos:
-    :lines: 14-15
+    :lines: 15-16
 
 
 .. _python_base_eliminar_registro:
@@ -93,7 +93,7 @@ Si requiere eliminar registro de tabla, a continuación tiene un ejemplo:
 .. literalinclude:: ../../recursos/leccion2/sistema/sistema_data.sql
     :language: sql
     :linenos:
-    :lines: 20-21
+    :lines: 21-22
 
 
 Asi de esta forma puede crear una tabla, ingresar, consultar, actualizar y eliminar
