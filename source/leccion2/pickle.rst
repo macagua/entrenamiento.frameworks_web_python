@@ -1,4 +1,4 @@
-.. _python_modulo_pickle:
+.. _python_serializacion_objetos:
 
 Serialización de objetos
 ========================
@@ -21,7 +21,7 @@ Formatos comunes entre los distintos lenguajes de programación incluyen XML y J
 Python ofrece tres módulos diferentes en la biblioteca estándar que le permiten
 **serializar** y **deserializar** objetos:
 
-.. _python_pickle:
+.. _python_modulo_pickle:
 
 Librería pickle
 ----------------
@@ -52,7 +52,7 @@ datos en una lista de diccionarios.
         TODO Terminar de escribir esta sección.
 
 
-    .. _python_pickle_serializar:
+    .. _python_modulo_pickle_serializar:
 
     Serializar
     ^^^^^^^^^^
@@ -61,7 +61,7 @@ datos en una lista de diccionarios.
         TODO terminar de escribir esta sección.
 
 
-    .. _python_pickle_deserializar:
+    .. _python_modulo_pickle_deserializar:
 
     Deserializar
     ^^^^^^^^^^^^
@@ -70,7 +70,7 @@ datos en una lista de diccionarios.
         TODO terminar de escribir esta sección.
 
 
-.. _python_pickle_scaffolding:
+.. _python_modulo_pickle_scaffolding:
 
 Práctica - Caso real
 ^^^^^^^^^^^^^^^^^^^^
@@ -78,16 +78,16 @@ Práctica - Caso real
 A continuación se presenta una práctica más real de implementar el uso de proyectos
 con ``pickle`` para operaciones CRUD en un archivo de registros serializados:
 
-.. literalinclude:: ../../recursos/leccion2/pickle/main.py
+.. literalinclude:: ../../recursos/leccion2/pickle/sistema/main.py
     :language: python
     :linenos:
-    :lines: 1-204
+    :lines: 1-203
 
 .. important::
     Usted puede descargar el código usado en esta sección haciendo clic en el
     siguiente enlace:
 
-    - :download:`main.py <../../recursos/leccion2/pickle/main.py>`.
+    - :download:`main.py <../../recursos/leccion2/pickle/sistema/main.py>`.
 
 
 .. tip::
@@ -97,14 +97,50 @@ con ``pickle`` para operaciones CRUD en un archivo de registros serializados:
     .. code-block:: pycon
         :class: no-copy
 
-        pickle/
-        └── main.py
+        proyectos/
+        └── pickle/
+            └── sistema/
+                └── main.py
 
     Si tiene la estructura de archivo previa, entonces ejecute el siguiente comando:
 
     .. code-block:: console
 
         python3 main.py
+
+    El anterior código al ejecutar debe mostrar el siguiente mensaje:
+
+    .. code-block:: console
+        :class: no-copy
+
+        ==============
+        MENÚ PRINCIPAL
+        ==============
+
+        1) Crear
+        2) Consultar
+        3) Actualizar
+        4) Eliminar
+        5) Salir
+
+        Elija uno:
+
+    Luego de crear un registro, el archivo :file:`inventario.pkl` debe ser
+    creado en el directorio :file:`filestorage/` como se muestra a continuación:
+
+    .. code-block:: pycon
+        :class: no-copy
+
+        proyectos/
+        └── pickle/
+            └── sistema/
+                ├── filestorage/
+                │   └── inventario.pkl
+                └── main.py
+
+.. tip::
+    En lugar de una base de datos real, usaremos un archivo ``inventario.pkl`` para almacenar los
+    datos en una lista de diccionarios.
 
 Asi de esta forma puede ingresar, consultar, actualizar y eliminar
 registro en un archivo serializado de objetos python ``pickle``.

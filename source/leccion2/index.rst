@@ -5,17 +5,18 @@ Persistencia de datos
 
 La librería estándar incluye una variedad de módulos para datos persistentes.
 El patrón más común para almacenar datos de objetos de Python para su reutilización
-es serializarlos con el módulo ``pickle`` y luego escribirlos directamente en un
-archivo o almacenarlos usando uno de los muchos formatos de base de datos de pares
-*clave-valor* disponibles con la API del módulo ``dbm`` . Si no le importa el formato
-``dbm`` subyacente, el módulo ``shelve`` proporciona la mejor interfaz de persistencia.
+es serializarlos con el módulo :ref:`pickle <python_modulo_pickle>` y luego escribirlos
+directamente en un archivo o almacenarlos usando uno de los muchos formatos de base
+de datos de pares *clave-valor* disponibles con la API del módulo `dbm`_ . Si no le
+importa el formato ``dbm`` subyacente, el módulo `shelve`_ proporciona la mejor interfaz
+de persistencia.
 
 Si le importa, puede usar uno de los otros módulos basados en directamente
 el módulo ``dbm``.
 
-- ``pickle`` y cPickle: serialización de objetos de Python.
+- :ref:`pickle <python_modulo_pickle>` y ``cPickle``: serialización de objetos de Python.
 
-- ``sqlite3`` - Base de datos relacional integrada SQLite3.
+- :ref:`sqlite3 <python_modulo_sqlite3>` - Base de datos relacional integrada ``SQLite3``.
 
 Para la serialización en la web, el módulo ``json`` puede ser una mejor
 opción, ya que su formato es más portátil.
@@ -56,3 +57,7 @@ A continuación el temario de esta lección:
 
 ..
   .. disqus::
+
+
+.. _`dbm`: https://docs.python.org/es/3.11/library/dbm.html
+.. _`shelve`: https://docs.python.org/es/3.11/library/shelve.html
