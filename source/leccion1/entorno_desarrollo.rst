@@ -192,7 +192,7 @@ Si ejecuto el comando anterior, debería mostrar algo parecido al siguiente mens
     click==8.1.8
     cookiecutter==2.6.0
     idna==3.10
-    Jinja2==3.1.5
+    Jinja2==3.1.6
     markdown-it-py==3.0.0
     MarkupSafe==3.0.2
     mdurl==0.1.2

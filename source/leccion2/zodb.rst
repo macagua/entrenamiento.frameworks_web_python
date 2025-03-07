@@ -502,7 +502,7 @@ Si requiere consultar registros de tabla, a continuación tiene un ejemplo:
 .. literalinclude:: ../../recursos/leccion2/zodb/crud/zodb_record_read.py
     :language: python
     :linenos:
-    :lines: 1-51
+    :lines: 1-55
 
 
 ----
