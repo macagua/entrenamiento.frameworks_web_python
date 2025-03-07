@@ -26,10 +26,14 @@ def consultar_registro():
         logging.info(
             f"✅ ¡Conectado a la base de datos {os.path.basename(DB_FILE.getName())}!\n"
         )
+        # Mostrar los nodos de la DB
         print("Todos los registros: ")
+        # Mostrar los elementos de nodos
         print(nodo.items())
+        # Mostrar los valores de nodos
         print("Todos los valores: ")
         print(nodo.values())
+        # Mostrar el nodo 'producto1'
         if "producto1" in nodo.items():
             print("Producto: ", nodo["producto1"])
             print(f"\tId: {nodo['producto1'].id}")
