@@ -139,7 +139,7 @@ con ``pickle`` para operaciones CRUD en un archivo de registros serializados:
                 └── main.py
 
 .. tip::
-    En lugar de una base de datos real, usaremos un archivo ``inventario.pkl`` para almacenar los
+    En lugar de una base de datos real, usaremos un archivo :file:`inventario.pkl`` para almacenar los
     datos en una lista de diccionarios.
 
 Asi de esta forma puede ingresar, consultar, actualizar y eliminar
