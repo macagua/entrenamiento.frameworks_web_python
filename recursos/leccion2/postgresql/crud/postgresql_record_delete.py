@@ -31,22 +31,24 @@ def eliminar_registro():
         )
         # Crear un objeto cursor para ejecutar las eliminaciones
         cursor = conexion.cursor()
-        logging.info(f"¡Conectado a la base de datos '{credenciales['database']}'!\n")
+        logging.info(f"✅ ¡Conectado a la base de datos '{credenciales['database']}'!\n")
         # Eliminar un fila de registro simple
         cursor.execute(DELETE_SCRIPTS)
         # Guardar los cambios en la base de datos
         conexion.commit()
-        logging.info("¡Registro eliminado correctamente!\n")
+        logging.info("✅ ¡Registro eliminado correctamente!\n")
         # Cerrar el cursor
         cursor.close()
     except psycopg2.Error as error:
-        logging.error(f"¡Fallo la eliminación de registro(s) en la tabla!: {error}")
+        logging.error(
+            f"❌ ERROR: Fallo la eliminación de registro(s) en la tabla!: {error}"
+        )
     finally:
         if conexion:
             # Cerrar la conexión a la base de datos
             conexion.close()
             logging.info(
-                f"¡La conexión PostgreSQL a la base de datos '{credenciales['database']}' fue cerrada!\n"
+                f"✅ ¡La conexión PostgreSQL a la base de datos '{credenciales['database']}' fue cerrada!\n"
             )
 
 

@@ -52,20 +52,20 @@ def insertar_registro():
         )
         # Crear un objeto cursor para la base de datos
         cursor = conexion.cursor()
-        logging.info(f"¡Conectado a la base de datos '{credenciales['database']}'!\n")
+        logging.info(f"✅ ¡Conectado a la base de datos '{credenciales['database']}'!\n")
         # Crear la tabla productos si no existe
         cursor.execute(CREATE_TABLE_SQL)
         # Confirmar la creación de la tabla
         conexion.commit()
         logging.info(
-            f"¡Fue creo una tabla correctamente en la base de datos '{credenciales['database']}'!\n"
+            f"✅ ¡Fue creo una tabla correctamente en la base de datos '{credenciales['database']}'!\n"
         )
         # Insertar nuevos registros en la tabla
         cursor.executemany(INSERT_SQL, MULTIPLE_COLUMNS)
         # Confirmar la inserción de los registros
         conexion.commit()
         logging.info(
-            f"¡Fueron insertado(s) {cursor.rowcount} registro(s) correctamente en la tabla!\n"
+            f"✅ ¡Fueron insertado(s) {cursor.rowcount} registro(s) correctamente en la tabla!\n"
         )
         # Insertar un nuevo registro en la tabla
         cursor.execute(
@@ -74,18 +74,20 @@ def insertar_registro():
         # Confirmar la inserción del registro
         conexion.commit()
         logging.info(
-            f"¡Fueron insertado(s) {cursor.rowcount} registro(s) correctamente en la tabla!\n"
+            f"✅ ¡Fueron insertado(s) {cursor.rowcount} registro(s) correctamente en la tabla!\n"
         )
         # Cerrar el cursor
         cursor.close()
     except psycopg2.errors.Error as error:
-        logging.error(f"¡Fallo la inserción de registro(s) en la tabla!: {error}")
+        logging.error(
+            f"❌ ERROR: ¡Fallo la inserción de registro(s) en la tabla!: {error}"
+        )
     finally:
         if conexion:
             # Cerrar la conexión a la base de datos
             conexion.close()
             logging.info(
-                f"¡La conexión PostgreSQL a la base de datos '{credenciales['database']}' fue cerrada!\n"
+                f"✅ ¡La conexión PostgreSQL a la base de datos '{credenciales['database']}' fue cerrada!"
             )
 
 
