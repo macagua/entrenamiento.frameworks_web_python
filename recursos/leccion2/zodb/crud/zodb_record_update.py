@@ -1,4 +1,4 @@
-"""Modulo de actualizar registros en la ZODB"""
+"""Programa para la actualización de registro(s) en la ZODB"""
 
 import logging
 import os
@@ -6,6 +6,7 @@ import transaction
 import ZODB, ZODB.FileStorage
 from ZODB.POSException import StorageError
 from pathlib import Path
+from classes import Producto
 
 logging.basicConfig(level=logging.INFO)
 
@@ -24,22 +25,26 @@ def actualizar_registro():
         # Crear la instancia de conexion y llamar al método open de db
         nodo = conexion.root()
         logging.info(
-            f"✅ ¡Conectado a la base de datos {os.path.basename(DB_FILE.getName())}!\n"
+            f"✅ ¡Conectado a la base de datos '{os.path.basename(DB_FILE.getName())}!'\n"
         )
+        # Mostrar nodo "producto1"
+        print(f"{nodo['producto1']}")
         # Actualizar el nodo 'producto1'
-        print(nodo["producto1"].descripcion)
         nodo["producto1"].descripcion = "Vehiculo"
-        print(nodo["producto1"].descripcion)
+        print(f"\tDescripción nueva: {nodo['producto1'].descripcion}")
+        # Mostrar nodo "producto2"
+        print(f"{nodo['producto2']}")
         # Actualizar el nodo 'producto2'
-        print(nodo["producto2"].descripcion)
         nodo["producto2"].descripcion = "Motocicleta"
-        print(nodo["producto2"].descripcion)
+        print(f"\tDescripción nueva: {nodo['producto2'].descripcion}")
+        # Mostrar nodo "producto3"
+        print(f"{nodo['producto3']}")
         # Actualizar el nodo 'producto3'
-        print(nodo["producto3"].descripcion)
         nodo["producto3"].descripcion = "Bici"
-        print(nodo["producto3"].descripcion)
+        print(f"\tDescripción nueva: {nodo['producto3'].descripcion}\n")
         # Guardar los cambios en la base de datos
         transaction.commit()
+        logging.info(f"✅ ¡Fueron actualizados los nodos correctamente!")
     except StorageError as error:
         logging.error(f"❌ ¡Fallo la actualización de registro(s) en la ZODB!: {error}")
     finally:
@@ -47,7 +52,7 @@ def actualizar_registro():
             # Cerrar la conexión a la base de datos
             conexion.close()
             logging.info(
-                f"✅ ¡La conexión ZODB a la base de datos {os.path.basename(DB_FILE.getName())} fue cerrada!\n"
+                f"✅ ¡La conexión ZODB a la base de datos '{os.path.basename(DB_FILE.getName())}' fue cerrada!"
             )
 
 

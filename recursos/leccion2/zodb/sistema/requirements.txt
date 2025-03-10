@@ -9,3 +9,4 @@ zodbpickle==4.2
 zope.deferredimport==5.0
 zope.interface==7.2
 zope.proxy==6.1
+zodbbrowser==0.17.1
