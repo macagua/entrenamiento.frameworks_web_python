@@ -125,7 +125,7 @@ MySQL
 Para configurar el ``engine`` con :ref:`MySQL <python_pkg_mysql>` debe definir la
 :ref:`cadena de conexión <python_mysql_conn_strs>` que esta compuesto por varios parámetros,
 los cuales deben ser reemplazadas con sus propios datos en la línea de comando con el comando
-``sqlacodegen``.
+:command:`sqlacodegen`.
 
 .. tip::
     Para conectarte al servidor ``MySQL`` necesite el paquete :ref:`PyMySQL <python_mysql_instalar>`.
@@ -163,7 +163,7 @@ PostgreSQL
 Para configurar el ``engine`` con :ref:`PostgreSQL <python_pkg_postgresql>` debe definir la
 :ref:`cadena de conexión <python_psycopg2_conn_strs>` que esta compuesto por varios parámetros,
 los cuales deben ser reemplazadas con sus propios datos en la línea de comando con el comando
-``sqlacodegen``.
+:command:`sqlacodegen`.
 
 .. tip::
     Para conectarte al servidor ``PostgreSQL`` necesite el paquete :ref:`psycopg2 <python_psycopg2_instalar>`.
@@ -221,7 +221,7 @@ operativo:
 
           .\sqlacodegen.exe --generator declarative sqlite:///sistema.db --outfile models.py
 
-El anterior comando al ejecutar debe generar un módulo python llamado ``models.py``
+El anterior comando al ejecutar debe generar un módulo python llamado :file:`models.py`
 que contiene el siguiente código:
 
 .. code-block:: python
@@ -325,7 +325,7 @@ en proyectos con ``SQLAlchemy``, a continuación la estructura de proyecto llama
 
 A continuación se presenta y explica el uso de cada archivo para este proyecto:
 
-*Archivo .env.example*
+*Archivo* :file:`.env.example`
 
 Archivo plantilla `dotenv`_ del paquete adicional `python-dotenv`_.
 
@@ -334,34 +334,34 @@ Archivo plantilla `dotenv`_ del paquete adicional `python-dotenv`_.
     :linenos:
     :lines: 1-9
 
-*Archivo db.py*
+*Archivo* :file:`db.py`
 
-Modulo de configuraciones del programa.
+Módulo de configuraciones del programa.
 
 .. literalinclude:: ../../recursos/leccion2/sqlacodegen/sistema/db.py
     :language: python
     :linenos:
-    :lines: 1-55
+    :lines: 1-54
 
-*Archivo models.py*
+*Archivo* :file:`models.py`
 
-Modulo de :ref:`modelos <python_sqlalchemy_modelos>` de :ref:`SQLAlchemy <python_sqlalchemy>`.
+Módulo de :ref:`modelos <python_sqlalchemy_modelos>` de :ref:`SQLAlchemy <python_sqlalchemy>`.
 
 .. literalinclude:: ../../recursos/leccion2/sqlacodegen/sistema/models.py
     :language: python
     :linenos:
     :lines: 1-145
 
-*Archivo main.py*
+*Archivo* :file:`main.py`
 
-Modulo principal del programa.
+Módulo principal del programa.
 
 .. literalinclude:: ../../recursos/leccion2/sqlacodegen/sistema/main.py
     :language: python
     :linenos:
-    :lines: 1-67
+    :lines: 1-31
 
-*Archivo requirements.txt*
+*Archivo* :file:`requirements.txt`
 
 Archivo de `requirements.txt`_ de la herramienta de gestión de paquetes `pip`_.
 
@@ -370,7 +370,7 @@ Archivo de `requirements.txt`_ de la herramienta de gestión de paquetes `pip`_.
     :linenos:
     :lines: 1-6
 
-*Archivo sistema.db*
+*Archivo* :file:`sistema.db`
 
 Archivo de base de datos de :ref:`SQLite <python_modulo_sqlite3>` llamado :file:`sistema.db`
 la cual se incluye ya que cada tiene la estructura de tablas y registros iniciales para hacer
@@ -391,7 +391,7 @@ sistema operativo:
 
           pip3 install -r requirements.txt
 
-      Ademas debe crear el archivo ``.env`` en base a la plantilla ``.env.example``
+      Además debe crear el archivo :file:`.env` en base a la plantilla :file:`.env.example`
       y editarlo, con el siguiente comando:
 
       .. code-block:: console
@@ -399,7 +399,7 @@ sistema operativo:
           cp .env.example .env && nano .env
 
       .. tip::
-        El archivo ``.env`` se definen las configuraciones de conexión a la base de datos,
+        El archivo :file:`.env` se definen las configuraciones de conexión a la base de datos,
         puede modificarlo cambiar valores de la conexión.
 
       .. note::
@@ -463,21 +463,21 @@ sistema operativo:
 
           pip3 install -r requirements.txt
 
-      Ademas debe crear el archivo ``.env`` en base a la plantilla ``env.example`` , con
-      el siguiente comando:
+      Además debe crear el archivo :file:`.env` en base a la plantilla :file:`.env.example`
+      y editarlo, con el siguiente comando:
 
       .. code-block:: console
 
           copy .env.example .env
 
-      Editar el archivo ``.env``, con el siguiente comando:
+      Editar el archivo :file:`.env`, con el siguiente comando:
 
       .. code-block:: console
 
           notepad.exe .env &
 
       .. tip::
-        El archivo ``.env`` se definen las configuraciones de conexión a la base de datos,
+        El archivo :file:`.env` se definen las configuraciones de conexión a la base de datos,
         puede modificarlo cambiar valores de la conexión.
 
       .. note::
