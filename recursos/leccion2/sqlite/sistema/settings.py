@@ -6,6 +6,17 @@ load_dotenv()
 # Nombre del archivo de base de datos.
 DB_FILE = os.getenv("DB")
 
+# Script CREATE TABLE SQL para crear tabla(s)
+CREATE_TABLE_SQL = """
+CREATE TABLE IF NOT EXISTS clientes (
+    id INTEGER UNIQUE NOT NULL,
+    nombre TEXT NOT NULL,
+    apellido TEXT NOT NULL,
+    codigo_postal INTEGER NOT NULL,
+    telefono TEXT NOT NULL,
+    PRIMARY KEY(id)
+);"""
+
 # Lista de filas a ingresar
 INSERT_MULTIPLE_COLUMNS = [
     (1, "Leonardo", "Caballero", "5001", "+58-412-4734567"),
