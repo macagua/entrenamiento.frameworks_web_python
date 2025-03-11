@@ -151,7 +151,7 @@ ejecutándose en el puerto ``5433`` con la base de datos llamada ``sistema`` e i
         docker exec -it postgresql psql -U postgres -d sistema -c "SELECT table_name FROM information_schema.tables WHERE table_schema = 'public';"
         docker exec -it postgresql psql -U postgres -d sistema -c "\dt"
 
-El comando anterior muestra las tablas creadas en la base de datos ``sistema``.
+    El comando anterior muestra las tablas creadas en la base de datos ``sistema``.
 
 De esta forma ha instalado y ejecutado el servidor ``PostgreSQL`` necesario para las próximas script
 Python a ejecutar. Con esto, ya tiene todo listo para continuar.
@@ -593,7 +593,7 @@ Módulo de configuraciones del programa.
 
 *Archivo* :file:`main.py`
 
-Módulo de principal del programa.
+Módulo principal del programa.
 
 .. literalinclude:: ../../recursos/leccion2/postgresql/sistema/main.py
     :language: python
@@ -832,7 +832,7 @@ configuración y ejecución del código fuente.
 
           INFO:root:✅ ¡Registro eliminado correctamente!
 
-          INFO:root:✅ ¡La conexión SQLite a la base de datos 'sistema' fue cerrada!
+          INFO:root:✅ ¡La conexión PostgreSQL a la base de datos 'sistema' fue cerrada!
 
       La ejecucion anterior generar la siguiente estructura:
 
@@ -840,7 +840,7 @@ configuración y ejecución del código fuente.
           :class: no-copy
 
           proyectos/
-          └── sqlite/
+          └── postgresql/
               └── sistema/
                   ├── __init__.py
                   ├── .env

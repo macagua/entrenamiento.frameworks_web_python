@@ -41,7 +41,7 @@ def eliminar_registro():
         cursor.close()
     except psycopg2.Error as error:
         logging.error(
-            f"❌ ERROR: Fallo la eliminación de registro(s) en la tabla!: {error}"
+            f"❌ ERROR: ¡Fallo la eliminación de registro(s) en la tabla!: {error}"
         )
     finally:
         if conexion:
