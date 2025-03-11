@@ -1,6 +1,6 @@
 """Módulo de modelos de SQLAlchemy"""
 
-from db import Base
+from settings import Base
 
 from sqlalchemy import Column, Date, Enum, ForeignKey, Integer, String
 from sqlalchemy.orm import relationship
@@ -114,7 +114,7 @@ class Clientes(Base):
         return f"<Clientes({self.nombre} {self.apellido}, {self.telefono}, {self.ciudades}, {self.pedidos})>"
 
     def __str__(self):
-        return f"Cliente: {self.nombre} ${self.apellido}"
+        return f"Cliente: {self.nombre} {self.apellido}"
 
 
 class Pedidos(Base):
