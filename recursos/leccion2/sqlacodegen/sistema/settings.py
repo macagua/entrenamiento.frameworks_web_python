@@ -16,7 +16,7 @@ HOST = os.getenv("HOST")
 PORT = os.getenv("PORT")
 DB = os.getenv("DB", "sistema.db")
 DB_PATH = os.path.dirname(os.path.abspath(__file__)) + os.sep
-DB_FILE = os.getenv("DB")
+DB_FILE = DB
 
 engine = None
 

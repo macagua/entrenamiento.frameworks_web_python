@@ -43,13 +43,15 @@ a continuación se presentan el correspondiente comando de tu sistema operativo:
 
       .. code-block:: console
 
-          pip3 install git+https://github.com/agronholm/sqlacodegen.git@3.0.0rc1#egg=sqlacodegen
+          pip3 install sqlacodegen==3.0.0
+..
+  pip3 install git+https://github.com/agronholm/sqlacodegen.git@3.0.0rc1#egg=sqlacodegen
 
    .. group-tab:: Windows
 
       .. code-block:: console
 
-          pip3 install git+https://github.com/agronholm/sqlacodegen.git@3.0.0rc1#egg=sqlacodegen
+          pip3 install sqlacodegen==3.0.0
 
 
 Puede probar si la instalación se realizo correctamente, ejecutando el siguiente
@@ -125,7 +127,7 @@ MySQL
 Para configurar el ``engine`` con :ref:`MySQL <python_pkg_mysql>` debe definir la
 :ref:`cadena de conexión <python_mysql_conn_strs>` que esta compuesto por varios parámetros,
 los cuales deben ser reemplazadas con sus propios datos en la línea de comando con el comando
-``sqlacodegen``.
+:command:`sqlacodegen`.
 
 .. tip::
     Para conectarte al servidor ``MySQL`` necesite el paquete :ref:`PyMySQL <python_mysql_instalar>`.
@@ -163,7 +165,7 @@ PostgreSQL
 Para configurar el ``engine`` con :ref:`PostgreSQL <python_pkg_postgresql>` debe definir la
 :ref:`cadena de conexión <python_psycopg2_conn_strs>` que esta compuesto por varios parámetros,
 los cuales deben ser reemplazadas con sus propios datos en la línea de comando con el comando
-``sqlacodegen``.
+:command:`sqlacodegen`.
 
 .. tip::
     Para conectarte al servidor ``PostgreSQL`` necesite el paquete :ref:`psycopg2 <python_psycopg2_instalar>`.
@@ -221,7 +223,7 @@ operativo:
 
           .\sqlacodegen.exe --generator declarative sqlite:///sistema.db --outfile models.py
 
-El anterior comando al ejecutar debe generar un módulo python llamado ``models.py``
+El anterior comando al ejecutar debe generar un módulo python llamado :file:`models.py`
 que contiene el siguiente código:
 
 .. code-block:: python
@@ -316,61 +318,61 @@ en proyectos con ``SQLAlchemy``, a continuación la estructura de proyecto llama
 
     sistema/
     ├── .env.example
-    ├── db.py
     ├── __init__.py
     ├── main.py
     ├── models.py
     ├── requirements.txt
+    ├── settings.py
     └── sistema.db
 
 A continuación se presenta y explica el uso de cada archivo para este proyecto:
 
-*Archivo .env.example*
+*Archivo* :file:`.env.example`
 
 Archivo plantilla `dotenv`_ del paquete adicional `python-dotenv`_.
 
 .. literalinclude:: ../../recursos/leccion2/sqlacodegen/sistema/.env.example
     :language: text
     :linenos:
-    :lines: 1-9
+    :lines: 1-10
 
-*Archivo db.py*
+*Archivo* :file:`settings.py`
 
-Modulo de configuraciones del programa.
+Módulo de configuraciones del programa.
 
-.. literalinclude:: ../../recursos/leccion2/sqlacodegen/sistema/db.py
+.. literalinclude:: ../../recursos/leccion2/sqlacodegen/sistema/settings.py
     :language: python
     :linenos:
     :lines: 1-55
 
-*Archivo models.py*
+*Archivo* :file:`models.py`
 
-Modulo de :ref:`modelos <python_sqlalchemy_modelos>` de :ref:`SQLAlchemy <python_sqlalchemy>`.
+Módulo de :ref:`modelos <python_sqlalchemy_modelos>` de :ref:`SQLAlchemy <python_sqlalchemy>`.
 
 .. literalinclude:: ../../recursos/leccion2/sqlacodegen/sistema/models.py
     :language: python
     :linenos:
     :lines: 1-145
 
-*Archivo main.py*
+*Archivo* :file:`main.py`
 
-Modulo principal del programa.
+Módulo principal del programa.
 
 .. literalinclude:: ../../recursos/leccion2/sqlacodegen/sistema/main.py
     :language: python
     :linenos:
-    :lines: 1-67
+    :lines: 1-117
 
-*Archivo requirements.txt*
+*Archivo* :file:`requirements.txt`
 
 Archivo de `requirements.txt`_ de la herramienta de gestión de paquetes `pip`_.
 
 .. literalinclude:: ../../recursos/leccion2/sqlacodegen/sistema/requirements.txt
     :language: python
     :linenos:
-    :lines: 1-6
+    :lines: 1-7
 
-*Archivo sistema.db*
+*Archivo* :file:`sistema.db`
 
 Archivo de base de datos de :ref:`SQLite <python_modulo_sqlite3>` llamado :file:`sistema.db`
 la cual se incluye ya que cada tiene la estructura de tablas y registros iniciales para hacer
@@ -391,7 +393,7 @@ sistema operativo:
 
           pip3 install -r requirements.txt
 
-      Ademas debe crear el archivo ``.env`` en base a la plantilla ``.env.example``
+      Además debe crear el archivo :file:`.env` en base a la plantilla :file:`.env.example`
       y editarlo, con el siguiente comando:
 
       .. code-block:: console
@@ -399,7 +401,7 @@ sistema operativo:
           cp .env.example .env && nano .env
 
       .. tip::
-        El archivo ``.env`` se definen las configuraciones de conexión a la base de datos,
+        El archivo :file:`.env` se definen las configuraciones de conexión a la base de datos,
         puede modificarlo cambiar valores de la conexión.
 
       .. note::
@@ -420,40 +422,46 @@ sistema operativo:
       .. code-block:: console
           :class: no-copy
 
-          📜 Lista de Estados:
+          ✅ Lista de 10 Estados
+          📜 Estado: Amazonas
+          📜 Estado: Anzoátegui
+          📜 Estado: Apure
+          📜 Estado: Aragua
+          📜 Estado: Barinas
+          📜 Estado: Bolívar
+          📜 Estado: Carabobo
+          📜 Estado: Cojedes
+          📜 Estado: Delta Amacuro
+          📜 Estado: Falcón
+          INFO:root:✅ ¡Consulta de los '10' estados!
 
-          Estado: Amazonas
-          Estado: Anzoátegui
-          Estado: Apure
-          Estado: Aragua
-          Estado: Barinas
-          Estado: Bolívar
-          Estado: Carabobo
-          Estado: Cojedes
-          Estado: Delta Amacuro
-          Estado: Falcón
-          Estado: Guárico
-          Estado: Lara
-          Estado: Mérida
-          ...
+          ✅ Lista de 10 Ciudades
+          📜 Ciudad: Maroa, Estado: Amazonas.
+          📜 Ciudad: Puerto Ayacucho, Estado: Amazonas.
+          📜 Ciudad: San Fernando de Atabapo, Estado: Amazonas.
+          📜 Ciudad: Anaco, Estado: Anzoátegui.
+          📜 Ciudad: Aragua de Barcelona, Estado: Anzoátegui.
+          📜 Ciudad: Barcelona, Estado: Anzoátegui.
+          📜 Ciudad: Boca de Uchire, Estado: Anzoátegui.
+          📜 Ciudad: Cantaura, Estado: Anzoátegui.
+          📜 Ciudad: Clarines, Estado: Anzoátegui.
+          📜 Ciudad: El Chaparro, Estado: Anzoátegui.
+          INFO:root:✅ ¡Consulta de las '10' ciudades!
 
-          📜 Lista de Ciudades:
+          ✅ Lista de Clientes
+          📜 Cliente: Leonardo Caballero
+          📜 Cliente: Ana Poleo
+          📜 Cliente: Manuel Matos
+          📜 Cliente: Liliana Andradez
+          INFO:root:✅ ¡Consulta de los '4' clientes!
 
-          Ciudad: Maroa, Estado: Amazonas.
-          Ciudad: Puerto Ayacucho, Estado: Amazonas.
-          Ciudad: San Fernando de Atabapo, Estado: Amazonas.
-          Ciudad: Anaco, Estado: Anzoátegui.
-          Ciudad: Aragua de Barcelona, Estado: Anzoátegui.
-          Ciudad: Barcelona, Estado: Anzoátegui.
-          Ciudad: Boca de Uchire, Estado: Anzoátegui.
-          Ciudad: Cantaura, Estado: Anzoátegui.
-          Ciudad: Clarines, Estado: Anzoátegui.
-          Ciudad: El Chaparro, Estado: Anzoátegui.
-          Ciudad: El Pao Anzoátegui, Estado: Anzoátegui.
-          Ciudad: El Tigre, Estado: Anzoátegui.
-          Ciudad: El Tigrito, Estado: Anzoátegui.
-          Ciudad: Guanape, Estado: Anzoátegui.
-          ...
+          ✅ Lista de Productos
+          ERROR:root:❌ ¡No hay ningún 'producto' en la base de datos!
+
+          ✅ Lista de Pedidos
+          ERROR:root:❌ ¡No hay ningún 'pedido' en la base de datos!
+
+          INFO:root:✅ ¡La conexión SQLite a la base de datos 'sistema.db' fue cerrada!
 
    .. group-tab:: Windows
 
@@ -463,21 +471,21 @@ sistema operativo:
 
           pip3 install -r requirements.txt
 
-      Ademas debe crear el archivo ``.env`` en base a la plantilla ``env.example`` , con
-      el siguiente comando:
+      Además debe crear el archivo :file:`.env` en base a la plantilla :file:`.env.example`
+      y editarlo, con el siguiente comando:
 
       .. code-block:: console
 
           copy .env.example .env
 
-      Editar el archivo ``.env``, con el siguiente comando:
+      Editar el archivo :file:`.env`, con el siguiente comando:
 
       .. code-block:: console
 
           notepad.exe .env &
 
       .. tip::
-        El archivo ``.env`` se definen las configuraciones de conexión a la base de datos,
+        El archivo :file:`.env` se definen las configuraciones de conexión a la base de datos,
         puede modificarlo cambiar valores de la conexión.
 
       .. note::
@@ -498,40 +506,46 @@ sistema operativo:
       .. code-block:: console
           :class: no-copy
 
-          📜 Lista de Estados:
+          ✅ Lista de 10 Estados
+          📜 Estado: Amazonas
+          📜 Estado: Anzoátegui
+          📜 Estado: Apure
+          📜 Estado: Aragua
+          📜 Estado: Barinas
+          📜 Estado: Bolívar
+          📜 Estado: Carabobo
+          📜 Estado: Cojedes
+          📜 Estado: Delta Amacuro
+          📜 Estado: Falcón
+          INFO:root:✅ ¡Consulta de los '10' estados!
 
-          Estado: Amazonas
-          Estado: Anzoátegui
-          Estado: Apure
-          Estado: Aragua
-          Estado: Barinas
-          Estado: Bolívar
-          Estado: Carabobo
-          Estado: Cojedes
-          Estado: Delta Amacuro
-          Estado: Falcón
-          Estado: Guárico
-          Estado: Lara
-          Estado: Mérida
-          ...
+          ✅ Lista de 10 Ciudades
+          📜 Ciudad: Maroa, Estado: Amazonas.
+          📜 Ciudad: Puerto Ayacucho, Estado: Amazonas.
+          📜 Ciudad: San Fernando de Atabapo, Estado: Amazonas.
+          📜 Ciudad: Anaco, Estado: Anzoátegui.
+          📜 Ciudad: Aragua de Barcelona, Estado: Anzoátegui.
+          📜 Ciudad: Barcelona, Estado: Anzoátegui.
+          📜 Ciudad: Boca de Uchire, Estado: Anzoátegui.
+          📜 Ciudad: Cantaura, Estado: Anzoátegui.
+          📜 Ciudad: Clarines, Estado: Anzoátegui.
+          📜 Ciudad: El Chaparro, Estado: Anzoátegui.
+          INFO:root:✅ ¡Consulta de las '10' ciudades!
 
-          📜 Lista de Ciudades:
+          ✅ Lista de Clientes
+          📜 Cliente: Leonardo Caballero
+          📜 Cliente: Ana Poleo
+          📜 Cliente: Manuel Matos
+          📜 Cliente: Liliana Andradez
+          INFO:root:✅ ¡Consulta de los '4' clientes!
 
-          Ciudad: Maroa, Estado: Amazonas.
-          Ciudad: Puerto Ayacucho, Estado: Amazonas.
-          Ciudad: San Fernando de Atabapo, Estado: Amazonas.
-          Ciudad: Anaco, Estado: Anzoátegui.
-          Ciudad: Aragua de Barcelona, Estado: Anzoátegui.
-          Ciudad: Barcelona, Estado: Anzoátegui.
-          Ciudad: Boca de Uchire, Estado: Anzoátegui.
-          Ciudad: Cantaura, Estado: Anzoátegui.
-          Ciudad: Clarines, Estado: Anzoátegui.
-          Ciudad: El Chaparro, Estado: Anzoátegui.
-          Ciudad: El Pao Anzoátegui, Estado: Anzoátegui.
-          Ciudad: El Tigre, Estado: Anzoátegui.
-          Ciudad: El Tigrito, Estado: Anzoátegui.
-          Ciudad: Guanape, Estado: Anzoátegui.
-          ...
+          ✅ Lista de Productos
+          ERROR:root:❌ ¡No hay ningún 'producto' en la base de datos!
+
+          ✅ Lista de Pedidos
+          ERROR:root:❌ ¡No hay ningún 'pedido' en la base de datos!
+
+          INFO:root:✅ ¡La conexión SQLite a la base de datos 'sistema.db' fue cerrada!
 
 
 Asi de esta forma puede usar ``sqlacodegen`` para generar modelos ``SQLAlchemy`` desde

@@ -5,10 +5,10 @@ SQLite
 
 .. note::
     **Propósito:** es una libraría proporciona una interfaz SQL compatible con
-    la especificación :ref:`DB-API 2.0 <python_dbapi>` requiere SQLite 3.7.15 o
+    la especificación :ref:`DB-API 2.0 <python_dbapi>` requiere `SQLite`_, 3.7.15 o
     posterior.
 
-`SQLite`_, es una libraría de C que provee una base de datos ligera basada en
+`sqlite3`_, es una libraría de C que provee una base de datos ligera basada en
 disco que no requiere un proceso de servidor separado y permite acceder a la base
 de datos usando una variación no estándar del lenguaje de consulta SQL.
 
@@ -368,7 +368,7 @@ Si requiere insertar registro en una tabla, a continuación tiene un ejemplo:
 .. literalinclude:: ../../recursos/leccion2/sqlite/crud/sqlite_record_insert.py
     :language: python
     :linenos:
-    :lines: 1-70
+    :lines: 1-84
 
 
 .. important::
@@ -401,12 +401,15 @@ Si requiere insertar registro en una tabla, a continuación tiene un ejemplo:
     .. code-block:: console
         :class: no-copy
 
-        INFO:root:¡Conectado a la base de datos 'sistema.db'!
+        INFO:root:✅ ¡Conectado a la base de datos 'sistema.db'!
 
-        INFO:root:¡Fueron insertado(s) 3 registro(s) correctamente en la tabla!
+        INFO:root:✅ ¡Fue creo una tabla correctamente en la base de datos 'sistema.db'!
 
-        INFO:root:¡La conexión SQLite a la base de datos 'sistema.db' fue cerrada!
+        INFO:root:✅ ¡Fueron insertado(s) 3 registro(s) correctamente en la tabla!
 
+        INFO:root:✅ ¡Fueron insertado(s) 1 registro(s) correctamente en la tabla!
+
+        INFO:root:✅ ¡La conexión SQLite a la base de datos 'sistema.db' fue cerrada!
 
 De esta forma puede ingresar registros en una tabla dentro una base de datos ``SQLite``.
 
@@ -422,7 +425,7 @@ Si requiere consultar registros de tabla, a continuación tiene un ejemplo:
 .. literalinclude:: ../../recursos/leccion2/sqlite/crud/sqlite_record_select.py
     :language: python
     :linenos:
-    :lines: 1-51
+    :lines: 1-55
 
 
 .. important::
@@ -455,11 +458,11 @@ Si requiere consultar registros de tabla, a continuación tiene un ejemplo:
     .. code-block:: console
         :class: no-copy
 
-        INFO:root:¡Conectado a la base de datos 'sistema.db'!
+        INFO:root:✅ ¡Conectado a la base de datos 'sistema.db'!
 
-        Total de filas son: 3
+        📜 Total de filas son: 4
 
-        Mostrar cada fila:
+        📜 Mostrar cada fila:
 
                 Id: 1
                 Nombre: Leonardo Caballero
@@ -476,7 +479,12 @@ Si requiere consultar registros de tabla, a continuación tiene un ejemplo:
                 Código postal: 4001
                 Teléfono: +58-414-2360943
 
-        INFO:root:¡La conexión SQLite a la base de datos 'sistema.db' fue cerrada!
+                Id: 4
+                Nombre: Liliana Andradez
+                Código postal: 3105
+                Teléfono: +58-414-6782473
+
+        INFO:root:✅ ¡La conexión SQLite a la base de datos 'sistema.db' fue cerrada!
 
 
 De esta forma puede consultar registros en una tabla dentro una base de datos ``SQLite``.
@@ -493,7 +501,7 @@ Si requiere actualizar registro de tabla, a continuación tiene un ejemplo:
 .. literalinclude:: ../../recursos/leccion2/sqlite/crud/sqlite_record_update.py
     :language: python
     :linenos:
-    :lines: 1-53
+    :lines: 1-56
 
 
 .. important::
@@ -526,11 +534,11 @@ Si requiere actualizar registro de tabla, a continuación tiene un ejemplo:
     .. code-block:: console
         :class: no-copy
 
-        INFO:root:¡Conectado a la base de datos 'sistema.db'!
+        INFO:root:✅ ¡Conectado a la base de datos 'sistema.db'!
 
-        INFO:root:¡Fueron actualizado(s) 2 registro(s) correctamente en la tabla!
+        INFO:root:✅ ¡Fueron actualizado(s) 2 registro(s) correctamente en la tabla!
 
-        INFO:root:¡La conexión SQLite a la base de datos 'sistema.db' fue cerrada!
+        INFO:root:✅ ¡La conexión SQLite a la base de datos 'sistema.db' fue cerrada!
 
 
 De esta forma puede actualizar registros en una tabla dentro una base de datos ``SQLite``.
@@ -547,7 +555,7 @@ Si requiere eliminar registro de tabla, a continuación tiene un ejemplo:
 .. literalinclude:: ../../recursos/leccion2/sqlite/crud/sqlite_record_delete.py
     :language: python
     :linenos:
-    :lines: 1-44
+    :lines: 1-48
 
 
 .. important::
@@ -580,11 +588,11 @@ Si requiere eliminar registro de tabla, a continuación tiene un ejemplo:
     .. code-block:: console
         :class: no-copy
 
-        INFO:root:¡Conectado a la base de datos 'sistema.db'!
+        INFO:root:✅ ¡Conectado a la base de datos 'sistema.db'!
 
-        INFO:root:¡Registro eliminado correctamente!
+        INFO:root:✅ ¡Registro eliminado correctamente!
 
-        INFO:root:¡La conexión SQLite a la base de datos 'sistema.db' fue cerrada!
+        INFO:root:✅ ¡La conexión SQLite a la base de datos 'sistema.db' fue cerrada!
 
 
 De esta forma puede eliminar registros en una tabla dentro una base de datos ``SQLite``.
@@ -610,7 +618,7 @@ con ``sqlite3``, a continuación la estructura de proyecto llamado ``sqlite``:
 
 A continuación se presenta y explica el uso de cada archivo para este proyecto:
 
-*Archivo .env.example*
+*Archivo* :file:`.env.example`
 
 Archivo plantilla `dotenv`_ del paquete adicional `python-dotenv`_.
 
@@ -619,7 +627,7 @@ Archivo plantilla `dotenv`_ del paquete adicional `python-dotenv`_.
     :linenos:
     :lines: 1-2
 
-*Archivo requirements.txt*
+*Archivo* :file:`requirements.txt`
 
 Archivo de `requirements.txt`_ de la herramienta de gestión de paquetes `pip`_.
 
@@ -628,30 +636,23 @@ Archivo de `requirements.txt`_ de la herramienta de gestión de paquetes `pip`_.
     :linenos:
     :lines: 1-2
 
-*Archivo settings.py*
+*Archivo* :file:`settings.py`
 
-Modulo de configuraciones del programa.
+Módulo de configuraciones del programa.
 
 .. literalinclude:: ../../recursos/leccion2/sqlite/sistema/settings.py
     :language: python
     :linenos:
-    :lines: 1-32
+    :lines: 1-43
 
-*Archivo main.py*
+*Archivo* :file:`main.py`
 
-Modulo de principal del programa.
+Módulo de principal del programa.
 
 .. literalinclude:: ../../recursos/leccion2/sqlite/sistema/main.py
     :language: python
     :linenos:
-    :lines: 1-148
-
-
-*Archivo sistema.db*
-
-Archivo de base de datos de :ref:`SQLite <python_modulo_sqlite3>` llamado :file:`sistema.db`
-la cual no se incluye ya que cada vez que se inicia el programa :file:`main.py` se elimina y crea
-nuevamente, para cuidar la creación de los datos iniciales.
+    :lines: 1-207
 
 
 ----
@@ -671,7 +672,7 @@ sistema operativo:
 
           pip3 install -r requirements.txt
 
-      Ademas debe crear el archivo ``.env`` en base a la plantilla ``.env.example``
+      Además debe crear el archivo :file:`.env` en base a la plantilla :file:`.env.example``
       y editarlo, con el siguiente comando:
 
       .. code-block:: console
@@ -679,7 +680,7 @@ sistema operativo:
           cp .env.example .env && nano .env
 
       .. tip::
-        El archivo ``.env`` se definen las configuraciones de conexión a la base de datos,
+        El archivo :file:`.env` se definen las configuraciones de conexión a la base de datos,
         puede modificarlo cambiar valores de la conexión.
 
       .. tip::
@@ -697,8 +698,7 @@ sistema operativo:
                     ├── .env.example
                     ├── main.py
                     ├── requirements.txt
-                    ├── settings.py
-                    └── sistema.db
+                    └── settings.py
 
         Si tiene la estructura de archivo previa, entonces puede continuar con la ejecución del
         código fuente.
@@ -717,13 +717,15 @@ sistema operativo:
       .. code-block:: console
           :class: no-copy
 
-          INFO:root:¡Conexión a la base de datos 'sistema.db' fue exitosa!
+          INFO:root:✅ ¡Conexión a la base de datos 'sistema.db' fue exitosa!
 
-          INFO:root:¡Fueron insertado(s) 3 registro(s) correctamente en la tabla!
+          INFO:root:✅ ¡Fueron insertado(s) 3 registro(s) correctamente en la tabla!
 
-          Total de filas son: 3
+          INFO:root:✅ ¡Fueron insertado(s) 1 registro(s) correctamente en la tabla!
 
-          Mostrar cada fila:
+          📜 Total de filas son: 4
+
+          📜 Mostrar cada fila:
 
                   Id: 1
                   Nombre: Leonardo Caballero
@@ -740,9 +742,39 @@ sistema operativo:
                   Código postal: 4001
                   Teléfono: +58-414-2360943
 
-          INFO:root:¡Fueron actualizado(s) 2 registro(s) correctamente en la tabla!
+                  Id: 4
+                  Nombre: Liliana Andradez
+                  Código postal: 3105
+                  Teléfono: +58-414-6782473
 
-          INFO:root:¡Registro eliminado correctamente!
+          INFO:root:✅ ¡Fueron actualizado(s) 2 registro(s) correctamente en la tabla!
+
+          INFO:root:✅ ¡Registro eliminado correctamente!
+
+          INFO:root:✅ ¡La conexión SQLite a la base de datos 'sistema.db' fue cerrada!
+
+      La ejecucion anterior generar la siguiente estructura:
+
+      .. code-block:: console
+          :class: no-copy
+
+          proyectos/
+          └── sqlite/
+              └── sistema/
+                  ├── __init__.py
+                  ├── .env
+                  ├── .env.example
+                  ├── main.py
+                  ├── requirements.txt
+                  ├── settings.py
+                  └── sistema.db
+
+      *Archivo* :file:`sistema.db`
+
+      Archivo de base de datos de :ref:`SQLite <python_modulo_sqlite3>` llamado :file:`sistema.db`
+      la cual no se incluye ya que cada vez que se inicia el programa :file:`main.py` se elimina y crea
+      nuevamente, para cuidar la creación de los datos iniciales.
+
 
    .. group-tab:: Windows
 
@@ -752,21 +784,21 @@ sistema operativo:
 
           pip3 install -r requirements.txt
 
-      Ademas debe crear el archivo ``.env`` en base a la plantilla ``env.example`` , con
+      Además debe crear el archivo :file:`.env` en base a la plantilla :file:`.env.example` , con
       el siguiente comando:
 
       .. code-block:: console
 
           copy .env.example .env
 
-      Editar el archivo ``.env``, con el siguiente comando:
+      Editar el archivo :file:`.env`, con el siguiente comando:
 
       .. code-block:: console
 
           notepad.exe .env &
 
       .. tip::
-        El archivo ``.env`` se definen las configuraciones de conexión a la base de datos,
+        El archivo :file:`.env` se definen las configuraciones de conexión a la base de datos,
         puede modificarlo cambiar valores de la conexión.
 
       .. tip::
@@ -804,13 +836,15 @@ sistema operativo:
       .. code-block:: console
           :class: no-copy
 
-          INFO:root:¡Conexión a la base de datos 'sistema.db' fue exitosa!
+          INFO:root:✅ ¡Conexión a la base de datos 'sistema.db' fue exitosa!
 
-          INFO:root:¡Fueron insertado(s) 3 registro(s) correctamente en la tabla!
+          INFO:root:✅ ¡Fueron insertado(s) 3 registro(s) correctamente en la tabla!
 
-          Total de filas son: 3
+          INFO:root:✅ ¡Fueron insertado(s) 1 registro(s) correctamente en la tabla!
 
-          Mostrar cada fila:
+          📜 Total de filas son: 4
+
+          📜 Mostrar cada fila:
 
                   Id: 1
                   Nombre: Leonardo Caballero
@@ -827,10 +861,38 @@ sistema operativo:
                   Código postal: 4001
                   Teléfono: +58-414-2360943
 
-          INFO:root:¡Fueron actualizado(s) 2 registro(s) correctamente en la tabla!
+                  Id: 4
+                  Nombre: Liliana Andradez
+                  Código postal: 3105
+                  Teléfono: +58-414-6782473
 
-          INFO:root:¡Registro eliminado correctamente!
+          INFO:root:✅ ¡Fueron actualizado(s) 2 registro(s) correctamente en la tabla!
 
+          INFO:root:✅ ¡Registro eliminado correctamente!
+
+          INFO:root:✅ ¡La conexión SQLite a la base de datos 'sistema.db' fue cerrada!
+
+      La ejecucion anterior generar la siguiente estructura:
+
+      .. code-block:: console
+          :class: no-copy
+
+          proyectos/
+          └── sqlite/
+              └── sistema/
+                  ├── __init__.py
+                  ├── .env
+                  ├── .env.example
+                  ├── main.py
+                  ├── requirements.txt
+                  ├── settings.py
+                  └── sistema.db
+
+      *Archivo* :file:`sistema.db`
+
+      Archivo de base de datos de :ref:`SQLite <python_modulo_sqlite3>` llamado :file:`sistema.db`
+      la cual no se incluye ya que cada vez que se inicia el programa :file:`main.py` se elimina y crea
+      nuevamente, para cuidar la creación de los datos iniciales.
 
 Asi de esta forma puede ingresar, consultar, actualizar y eliminar registro en una
 tabla usando ``SQLite``.
@@ -849,8 +911,6 @@ tabla usando ``SQLite``.
     - :download:`requirements.txt <../../recursos/leccion2/sqlite/sistema/requirements.txt>`.
 
     - :download:`settings.py <../../recursos/leccion2/sqlite/sistema/settings.py>`.
-
-    - :download:`sistema.db <../../recursos/leccion2/sqlite/sistema/sistema.db>`.
 
 
 Asi de esta forma puede replicar una práctica real de un proyecto para realizar operaciones

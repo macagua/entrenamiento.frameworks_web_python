@@ -5,6 +5,8 @@ INSERT INTO clientes (id, nombre, apellido, codigo_postal, telefono)
 VALUES (2, 'Ana', 'Poleo', '6302', '+58-426-5831297');
 INSERT INTO clientes (id, nombre, apellido, codigo_postal, telefono)
 VALUES (3, 'Manuel', 'Matos', '4001', '+58-414-2360943');
+INSERT INTO clientes (id, nombre, apellido, codigo_postal, telefono)
+VALUES (4, 'Liliana', 'Andradez', '3105', '+58-414-6782473');
 
 -- Seleccionar registros
 SELECT * FROM clientes;

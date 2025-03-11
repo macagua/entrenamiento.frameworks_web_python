@@ -145,7 +145,7 @@ class Inventario:
         if self.existe(codigo):
             posicion, producto = self.buscar(codigo)
             print(producto)
-            confirmar = input("Estas seguro? (S/N): ").upper()
+            confirmar = input("¿Estas seguro? (S/N): ").upper()
             if confirmar in ("s", "S", "si", "Si", "SI"):
                 del self.productos[posicion]
                 self.guardar_datos()
@@ -192,8 +192,7 @@ class Inventario:
                 elif opcion == 5:
                     break
         except KeyboardInterrupt:
-            print(" <Ctrl-C> entered, exit the program...")
-            print()
+            print(" <Ctrl-C> introducido, saliendo del programa...\n")
             sys.exit()
 
 

@@ -2,11 +2,11 @@
 
 import logging
 import os
-import persistent
 import transaction
 import ZODB, ZODB.FileStorage
 from ZODB.POSException import StorageError
 from pathlib import Path
+from classes import Producto
 
 logging.basicConfig(level=logging.INFO)
 
@@ -16,41 +16,16 @@ DB_FILE = ZODB.FileStorage.FileStorage(DB_PATH + "Data.fs")
 DB = ZODB.DB(DB_FILE)
 
 
-class Producto(persistent.Persistent):
-    """Clase Producto"""
-
-    def __init__(self, id, descripcion):
-        """Método constructor de clase de Producto
-
-        Args:
-            id (int): ID del producto
-            descripcion (str): Descripción del producto
-        """
-        self.id = id
-        self.descripcion = descripcion
-
-    def __str__(self):
-        """Método de representación de informal del objeto,
-        usado para crear la salida que se le mostrará al usuario"""
-        return f"Id: {self.id}\nDescripción: {self.descripcion}"
-
-    def __repr__(self):
-        """Método de representación de formal del objeto,
-        usado para depuración y desarrollo"""
-        return f"{self.__class__.__name__}:({repr(self.id)}, {repr(self.descripcion)})"
-
-
 def insertar_registro():
-    """Función para la inserción de registro de la ZODB"""
-
+    """Función para la inserción de registro(s) de la ZODB"""
     conexion = None
     try:
         # Crear la instancia de DB y pasar el nombre del archivo
         conexion = DB.open()
-        # Crear la instancia de conexion y llamar al método open de db
+        # Crear la instancia de conexion y llamar al método open de DB
         nodo = conexion.root()
         logging.info(
-            f"✅ ¡Conectado a la base de datos {os.path.basename(DB_FILE.getName())}!\n"
+            f"✅ ¡Conectado a la base de datos '{os.path.basename(DB_FILE.getName())}!'\n"
         )
         # Crear una instancia de la clase Producto
         producto1 = Producto(1, "Carro")
@@ -75,7 +50,7 @@ def insertar_registro():
             # Cerrar la conexión a la base de datos
             conexion.close()
             logging.info(
-                f"✅ ¡La conexión ZODB a la base de datos {os.path.basename(DB_FILE.getName())} fue cerrada!\n"
+                f"✅ ¡La conexión ZODB a la base de datos '{os.path.basename(DB_FILE.getName())}' fue cerrada!"
             )
 
 

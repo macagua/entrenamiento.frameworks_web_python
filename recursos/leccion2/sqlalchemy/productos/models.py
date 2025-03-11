@@ -1,6 +1,6 @@
 """Módulo de modelos de SQLAlchemy"""
 
-from db import Base
+from settings import Base
 
 from sqlalchemy import Column, Float, Integer, String
 

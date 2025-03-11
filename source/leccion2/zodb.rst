@@ -310,7 +310,7 @@ el siguiente comando:
 
       .. note::
 
-        Mas información consulte https://pypi.org/project/zodbbrowser/
+        Más información consulte https://pypi.org/project/zodbbrowser/
 
    .. group-tab:: Windows
 
@@ -445,20 +445,32 @@ De esta forma se crea una cadena de conexión para ``ZODB`` para ser usada por e
 Insertar registros
 ------------------
 
-Si requiere insertar registro en una tabla, a continuación tiene un ejemplo:
+Si requiere insertar registro en un nodo, a continuación tiene un ejemplo:
+
+.. literalinclude:: ../../recursos/leccion2/zodb/crud/classes.py
+    :language: python
+    :linenos:
+    :lines: 1-27
+
+El módulo :file:`classes.py` anterior, muestra las clases de tipo ``persistent``.
 
 .. literalinclude:: ../../recursos/leccion2/zodb/crud/zodb_record_insert.py
     :language: python
     :linenos:
-    :lines: 1-83
+    :lines: 1-58
+
+El módulo :file:`zodb_record_insert.py` anterior, muestra el script principal de
+ejecución del programa.
 
 
 ----
 
 
 .. important::
-    Usted puede descargar el código usado en esta sección haciendo clic en el
-    siguiente enlace:
+    Usted puede descargar el código usado en esta sección haciendo clic en los
+    siguientes enlaces:
+
+    - :download:`classes.py <../../recursos/leccion2/zodb/crud/classes.py>`.
 
     - :download:`zodb_record_insert.py <../../recursos/leccion2/zodb/crud/zodb_record_insert.py>`.
 
@@ -472,6 +484,7 @@ Si requiere insertar registro en una tabla, a continuación tiene un ejemplo:
 
         proyectos/
         └── zodb/
+            ├── classes.py
             └── zodb_record_insert.py
 
     Si tiene la estructura de archivo previa, entonces ejecute el siguiente comando:
@@ -484,7 +497,7 @@ El anterior código al ejecutar debe mostrar el siguiente mensaje:
 
 .. code-block:: console
 
-    INFO:root:✅ ¡Conectado a la base de datos 'Data.fs'!
+    INFO:root:✅ ¡Conectado a la base de datos 'Data.fs!'
 
     INFO:root:✅ ¡Fueron insertado(s) los registro(s) correctamente en la ZODB!
 
@@ -497,20 +510,32 @@ El anterior código al ejecutar debe mostrar el siguiente mensaje:
 Consultar registros
 -------------------
 
-Si requiere consultar registros de tabla, a continuación tiene un ejemplo:
+Si requiere consultar registros de un nodo, a continuación tiene un ejemplo:
+
+.. literalinclude:: ../../recursos/leccion2/zodb/crud/classes.py
+    :language: python
+    :linenos:
+    :lines: 1-27
+
+El módulo :file:`classes.py` anterior, muestra las clases de tipo ``persistent``.
 
 .. literalinclude:: ../../recursos/leccion2/zodb/crud/zodb_record_read.py
     :language: python
     :linenos:
     :lines: 1-55
 
+El módulo :file:`zodb_record_read.py` anterior, muestra el script principal de
+ejecución del programa.
+
 
 ----
 
 
 .. important::
-    Usted puede descargar el código usado en esta sección haciendo clic en el
-    siguiente enlace:
+    Usted puede descargar el código usado en esta sección haciendo clic en los
+    siguientes enlaces:
+
+    - :download:`classes.py <../../recursos/leccion2/zodb/crud/classes.py>`.
 
     - :download:`zodb_record_read.py <../../recursos/leccion2/zodb/crud/zodb_record_read.py>`.
 
@@ -524,6 +549,7 @@ Si requiere consultar registros de tabla, a continuación tiene un ejemplo:
 
         proyectos/
         └── zodb/
+            ├── classes.py
             └── zodb_record_read.py
 
     Si tiene la estructura de archivo previa, entonces ejecute el siguiente comando:
@@ -536,31 +562,16 @@ El anterior código al ejecutar debe mostrar el siguiente mensaje:
 
 .. code-block:: console
 
-    INFO:root:✅ ¡Conectado a la base de datos 'Data.fs'!
+    INFO:root:✅ ¡Conectado a la base de datos 'Data.fs!'
 
-    Total de filas son: 4
+    📜 Lista de registros:
+    'producto1', Valor: (Producto) Id: 1, Descripción: Carro.
+    'producto2', Valor: (Producto) Id: 2, Descripción: Moto.
+    'producto3', Valor: (Producto) Id: 3, Descripción: Bicicleta.
+    'productos', Valor: [<Producto:(id=1, descripcion='Carro')>, <Producto:(id=2, descripcion='Moto')>, <Producto:(id=3, descripcion='Bicicleta')>]
 
-    Mostrar cada fila:
-
-            Id: 1
-            Nombre: Leonardo Caballero
-            Código postal: 5001
-            Teléfono: +58-412-4734567
-
-            Id: 2
-            Nombre: Ana Poleo
-            Código postal: 6302
-            Teléfono: +58-426-5831297
-
-            Id: 3
-            Nombre: Manuel Matos
-            Código postal: 4001
-            Teléfono: +58-414-2360943
-
-            Id: 4
-            Nombre: Liliana Andradez
-            Código postal: 3105
-            Teléfono: +58-414-6782473
+    📜 Detalles del nodo 'producto1':
+    Nodo: (Producto) Id: 1, Descripción: Carro.
 
     INFO:root:✅ ¡La conexión ZODB a la base de datos 'Data.fs' fue cerrada!
 
@@ -571,20 +582,32 @@ El anterior código al ejecutar debe mostrar el siguiente mensaje:
 Actualizar registros
 --------------------
 
-Si requiere actualizar registro de tabla, a continuación tiene un ejemplo:
+Si requiere actualizar un nodo, a continuación tiene un ejemplo:
+
+.. literalinclude:: ../../recursos/leccion2/zodb/crud/classes.py
+    :language: python
+    :linenos:
+    :lines: 1-27
+
+El módulo :file:`classes.py` anterior, muestra las clases de tipo ``persistent``.
 
 .. literalinclude:: ../../recursos/leccion2/zodb/crud/zodb_record_update.py
     :language: python
     :linenos:
-    :lines: 1-55
+    :lines: 1-60
+
+El módulo :file:`zodb_record_update.py` anterior, muestra el script principal de
+ejecución del programa.
 
 
 ----
 
 
 .. important::
-    Usted puede descargar el código usado en esta sección haciendo clic en el
-    siguiente enlace:
+    Usted puede descargar el código usado en esta sección haciendo clic en los
+    siguientes enlaces:
+
+    - :download:`classes.py <../../recursos/leccion2/zodb/crud/classes.py>`.
 
     - :download:`zodb_record_update.py <../../recursos/leccion2/zodb/crud/zodb_record_update.py>`.
 
@@ -598,6 +621,7 @@ Si requiere actualizar registro de tabla, a continuación tiene un ejemplo:
 
         proyectos/
         └── zodb/
+            ├── classes.py
             └── zodb_record_update.py
 
     Si tiene la estructura de archivo previa, entonces ejecute el siguiente comando:
@@ -610,10 +634,16 @@ El anterior código al ejecutar debe mostrar el siguiente mensaje:
 
 .. code-block:: console
 
-    INFO:root:✅ ¡Conectado a la base de datos 'Data.fs'!
+    INFO:root:✅ ¡Conectado a la base de datos 'Data.fs!'
 
-    INFO:root:✅ ¡Fueron actualizado(s) 2 registro(s) correctamente en la tabla!
+    (Producto) Id: 1, Descripción: Carro.
+            Descripción nueva: Vehiculo
+    (Producto) Id: 2, Descripción: Moto.
+            Descripción nueva: Motocicleta
+    (Producto) Id: 3, Descripción: Bicicleta.
+            Descripción nueva: Bici
 
+    INFO:root:✅ ¡Fueron actualizados los nodos correctamente!
     INFO:root:✅ ¡La conexión ZODB a la base de datos 'Data.fs' fue cerrada!
 
 
@@ -623,20 +653,32 @@ El anterior código al ejecutar debe mostrar el siguiente mensaje:
 Eliminar registros
 ------------------
 
-Si requiere eliminar registro de tabla, a continuación tiene un ejemplo:
+Si requiere eliminar un nodo, a continuación tiene un ejemplo:
+
+.. literalinclude:: ../../recursos/leccion2/zodb/crud/classes.py
+    :language: python
+    :linenos:
+    :lines: 1-27
+
+El módulo :file:`classes.py` anterior, muestra las clases de tipo ``persistent``.
 
 .. literalinclude:: ../../recursos/leccion2/zodb/crud/zodb_record_delete.py
     :language: python
     :linenos:
-    :lines: 1-53
+    :lines: 1-54
+
+El módulo :file:`zodb_record_delete.py` anterior, muestra el script principal de
+ejecución del programa.
 
 
 ----
 
 
 .. important::
-    Usted puede descargar el código usado en esta sección haciendo clic en el
-    siguiente enlace:
+    Usted puede descargar el código usado en esta sección haciendo clic en los
+    siguientes enlaces:
+
+    - :download:`classes.py <../../recursos/leccion2/zodb/crud/classes.py>`.
 
     - :download:`zodb_record_delete.py <../../recursos/leccion2/zodb/crud/zodb_record_delete.py>`.
 
@@ -650,6 +692,7 @@ Si requiere eliminar registro de tabla, a continuación tiene un ejemplo:
 
         proyectos/
         └── zodb/
+            ├── classes.py
             └── zodb_record_delete.py
 
     Si tiene la estructura de archivo previa, entonces ejecute el siguiente comando:
@@ -662,12 +705,12 @@ El anterior código al ejecutar debe mostrar el siguiente mensaje:
 
 .. code-block:: console
 
-    INFO:root:✅ ¡Conectado a la base de datos 'Data.fs'!
+    INFO:root:✅ ¡Conectado a la base de datos 'Data.fs!'
+
+    📜 Descripción del nodo: Vehiculo
 
     INFO:root:✅ ¡Registro eliminado correctamente!
-
     INFO:root:✅ ¡La conexión ZODB a la base de datos 'Data.fs' fue cerrada!
-
 
 Asi de esta forma puede ingresar, consultar, actualizar y eliminar
 registro en una tabla en una base de datos ``ZODB``.
@@ -682,88 +725,213 @@ Práctica - Caso real
 --------------------
 
 A continuación se presenta una práctica más real de implementar el uso de proyectos
-con ``ZODB`` para operaciones CRUD en un archivo de registros serializados:
+con ``ZODB``, a continuación la estructura de proyecto llamado ``sistema``:
+
+.. code-block:: console
+
+    zodb/
+    └── sistema/
+        ├── classes/
+        │   ├── __init__.py
+        │   ├── cliente.py
+        │   └── producto.py
+        ├── __init__.py
+        ├── main.py
+        ├── requirements.txt
+        └── settings.py
+
+
+A continuación se presenta y explica el uso de cada archivo para este proyecto:
+
+*Archivo* :file:`producto.py`
+
+Módulo :file:`producto.py`, muestra la clases de tipo ``persistent``.
+
+.. literalinclude:: ../../recursos/leccion2/zodb/sistema/classes/producto.py
+    :language: python
+    :linenos:
+    :lines: 1-27
+
+*Archivo* :file:`main.py`
+
+Módulo de principal del programa.
 
 .. literalinclude:: ../../recursos/leccion2/zodb/sistema/main.py
     :language: python
     :linenos:
-    :lines: 1-97
+    :lines: 1-151
 
-.. important::
-    Usted puede descargar el código usado en esta sección haciendo clic en el
-    siguiente enlace:
+*Archivo* :file:`settings.py`
 
-    - :download:`main.py <../../recursos/leccion2/zodb/sistema/main.py>`.
+Módulo de configuraciones del programa.
 
+.. literalinclude:: ../../recursos/leccion2/zodb/sistema/settings.py
+    :language: python
+    :linenos:
+    :lines: 1-27
 
-.. tip::
-    Para ejecutar el código :file:`main.py`, abra una consola de comando,
-    acceda al directorio donde se encuentra el programa:
+*Archivo* :file:`inventario.fs`
 
-    .. code-block:: pycon
-        :class: no-copy
+Archivo de base de datos de :ref:`ZODB <python_modulo_zodb>` llamado :file:`inventario.fs`
+la cual no se incluye ya que cada vez que se inicia el programa :file:`main.py` se elimina y crea
+nuevamente, para cuidar la creación de los datos iniciales.
 
-        proyectos/
-        └── zodb/
-            ├── filestorage/
-            └── main.py
+*Archivo* :file:`requirements.txt`
 
-    Si tiene la estructura de archivo previa, entonces ejecute el siguiente comando:
+Archivo de `requirements.txt`_ de la herramienta de gestión de paquetes `pip`_.
 
-    .. code-block:: console
+.. literalinclude:: ../../recursos/leccion2/zodb/sistema/requirements.txt
+    :language: python
+    :linenos:
+    :lines: 1-12
 
-        python3 main.py
+Teniendo creada la anterior estructura de proyecto, vuelva a ejecutar ahora el Módulo con
+el siguiente comando, el cual a continuación se presentan el correspondiente comando de tu
+sistema operativo:
 
+.. tabs::
 
-    La salida esperada será similar a la siguiente:
+   .. group-tab:: Linux
 
-    .. code-block:: console
-        :class: no-copy
+      Antes de ejecutar debes instalar sus dependencias, con el siguiente comando:
 
-        ✅ ¡La conexión ZODB a la base de datos 'Data.fs' fue establecida!
+      .. code-block:: console
 
-        ✅ Cliente 'Leonardo Caballero' creado con éxito.
-        ✅ Cliente 'Ana Poleo' creado con éxito.
-        ✅ Cliente 'Manuel Matos' creado con éxito.
+          pip3 install -r requirements.txt
 
-        📜 Lista de Clientes:
-        ID: 1, Nombre: Leonardo, Apellido: Caballero, Código postal: 5001, Teléfono: +58-412-4734567
-        ID: 2, Nombre: Ana, Apellido: Poleo, Código postal: 6302, Teléfono: +58-426-5831297
-        ID: 3, Nombre: Manuel, Apellido: Matos, Código postal: 4001, Teléfono: +58-414-2360943
-        ✅ Cliente con ID: '1' actualizado con éxito.
+      .. tip::
+        Para ejecutar el código fuente de esta practica debe invocar al Módulo :file:`main.py`,
+        abra una consola de comando, acceda al directorio donde se encuentra la estructura previa
+        y ejecute el siguiente comando:
 
-        📜 Lista de Clientes:
-        ID: 1, Nombre: Leonardo, Apellido: Caballero, Código postal: 5001, Teléfono: +58-416-5831297
-        ID: 2, Nombre: Ana, Apellido: Poleo, Código postal: 6302, Teléfono: +58-426-5831297
-        ID: 3, Nombre: Manuel, Apellido: Matos, Código postal: 4001, Teléfono: +58-414-2360943
-        ID: 4, Nombre: Liliana, Apellido: Andradez, Código postal: 3105, Teléfono: +58-414-6782473
-        ✅ Cliente con ID: '4' eliminado con éxito.
+      .. code-block:: console
 
-        📜 Lista de Clientes:
-        ID: 1, Nombre: Leonardo, Apellido: Caballero, Código postal: 5001, Teléfono: +58-416-5831297
-        ID: 2, Nombre: Ana, Apellido: Poleo, Código postal: 6302, Teléfono: +58-426-5831297
+          python3 main.py
 
-        ✅ ¡La conexión ZODB a la base de datos 'Data.fs' fue cerrada!
-        ✅ ¡La base de datos ZODB 'Data.fs' fue cerrada!
+      El anterior código al ejecutar debe mostrar el siguiente mensaje:
 
+      .. code-block:: console
 
-    La estructura de directorio debe ser similar a la siguiente:
+          INFO:root:✅ ¡Conectado a la base de datos 'inventario.fs!'
 
-    .. code-block:: pycon
-        :class: no-copy
+          INFO:root:✅ ¡Fueron insertado(s) 3 registro(s) correctamente en la ZODB!
 
-        proyectos/
-        └── zodb/
-            ├── filestorage/
-            │   ├── Data.fs
-            │   ├── Data.fs.index
-            │   ├── Data.fs.lock
-            │   └── Data.fs.tmp
-            └── main.py
+          📜 Lista de registros:
 
-.. tip::
-    En lugar de una base de datos real, usaremos un archivo ``Data.fs`` para almacenar los
-    datos en una lista de diccionarios.
+          Producto 1:
+              ID: 1
+              Descripción: Carro
+          Producto 2:
+              ID: 2
+              Descripción: Bici
+          Producto 3:
+              ID: 3
+              Descripción: Motocicleta
+
+          📜 Total de producto(s) en Inventario: 3.
+
+          INFO:root:✅ ¡Fueron consultados 3 registro(s) correctamente en la ZODB!
+
+          📜 El producto 'Carro' fue actualizado con 'Vehiculo'.
+
+          📜 El producto 'Bici' fue actualizado con 'Bicicleta'.
+
+          INFO:root:✅ ¡Fueron actualizados 2 registro(s) correctamente en la ZODB!
+
+          📜 El producto 'Bicicleta' fue eliminado correctamente.
+
+          📜 El producto 'Vehiculo' fue eliminado correctamente.
+
+          INFO:root:✅ ¡Fueron eliminados 2 registro(s) correctamente en la ZODB!
+
+          INFO:root:✅ ¡La conexión ZODB a la base de datos 'inventario.fs' fue cerrada!
+
+      La ejecucion anterior generar la siguiente estructura:
+
+      .. code-block:: console
+
+          zodb/
+          └── sistema/
+              ├── classes/
+              │   ├── __init__.py
+              │   ├── cliente.py
+              │   └── producto.py
+              ├── filestorage/
+              │   ├── inventario.fs
+              │   ├── inventario.fs.index
+              │   ├── inventario.fs.lock
+              │   └── inventario.fs.tmp
+              ├── __init__.py
+              ├── main.py
+              ├── requirements.txt
+              └── settings.py
+
+   .. group-tab:: Windows
+
+      Antes de ejecutar debes instalar sus dependencias, con el siguiente comando:
+
+      .. code-block:: console
+
+          pip3 install -r requirements.txt
+
+      .. tip::
+        Para ejecutar el código fuente de esta practica debe invocar al Módulo :file:`main.py`,
+        abra una consola de comando, acceda al directorio donde se encuentra la estructura previa
+        y ejecute el siguiente comando:
+
+      .. code-block:: console
+
+          python3 main.py
+
+      El anterior código al ejecutar debe mostrar el siguiente mensaje:
+
+      .. code-block:: console
+
+          INFO:root:✅ ¡Conectado a la base de datos 'inventario.fs!'
+
+          INFO:root:✅ ¡Fueron insertado(s) 3 registro(s) correctamente en la ZODB!
+
+          📜 Lista de registros:
+
+          Producto 1:
+              ID: 1
+              Descripción: Carro
+          Producto 2:
+              ID: 2
+              Descripción: Bici
+          Producto 3:
+              ID: 3
+              Descripción: Motocicleta
+
+          📜 Total de producto(s) en Inventario: 3.
+
+          INFO:root:✅ ¡Fueron consultados 3 registro(s) correctamente en la ZODB!
+
+          📜 El producto 'Carro' fue actualizado con 'Vehiculo'.
+
+          📜 El producto 'Bici' fue actualizado con 'Bicicleta'.
+
+          INFO:root:✅ ¡Fueron actualizados 2 registro(s) correctamente en la ZODB!
+
+      La ejecucion anterior generar la siguiente estructura:
+
+      .. code-block:: console
+
+          zodb/
+          └── sistema/
+              ├── classes/
+              │   ├── __init__.py
+              │   ├── cliente.py
+              │   └── producto.py
+              ├── filestorage/
+              │   ├── inventario.fs
+              │   ├── inventario.fs.index
+              │   ├── inventario.fs.lock
+              │   └── inventario.fs.tmp
+              ├── __init__.py
+              ├── main.py
+              ├── requirements.txt
+              └── settings.py
 
 Asi de esta forma puede ingresar, consultar, actualizar y eliminar
 registro en un archivo serializado de objetos python ``ZODB``.
