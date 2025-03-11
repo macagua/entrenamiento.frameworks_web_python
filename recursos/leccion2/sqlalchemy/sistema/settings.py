@@ -9,7 +9,7 @@ from sqlalchemy.ext.declarative import declarative_base
 load_dotenv()
 
 DB_PATH = os.path.dirname(os.path.abspath(__file__)) + os.sep
-DB_FILE = os.getenv("DB", "productos.sqlite3")
+DB_FILE = os.getenv("DB", "sistema.db")
 
 engine = None
 
