@@ -559,7 +559,7 @@ Módulo principal del programa.
 .. literalinclude:: ../../recursos/leccion2/mysql/sistema/main.py
     :language: python
     :linenos:
-    :lines: 1-244
+    :lines: 1-261
 
 *Archivo* :file:`docker-compose.yml`
 
