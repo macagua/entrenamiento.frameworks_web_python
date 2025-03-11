@@ -155,7 +155,7 @@ El motor se usa principalmente para manejar dos elementos: los pools de conexion
 y el dialecto a utilizar.
 
 Vamos a crear un ``engine``. Para ello, añade un nuevo módulo Python llamado
-:file:`db.py` al directorio ``productos`` con el siguiente contenido:
+:file:`settings.py` al directorio ``productos`` con el siguiente contenido:
 
 .. code-block:: python
     :linenos:
@@ -224,7 +224,7 @@ creados, modificados o eliminados dentro de una misma transacción, de manera qu
 cuando se confirma la transacción, se reflejan en base de datos todas la
 operaciones involucradas (o ninguna si ocurre cualquier error).
 
-Va a crear una sesión en el proyecto. Abre el archivo :file:`db.py` y añade lo siguiente:
+Va a crear una sesión en el proyecto. Abre el archivo :file:`settings.py` y añade lo siguiente:
 
 .. code-block:: python
     :linenos:
@@ -262,7 +262,7 @@ Para que se pueda realizar el mapeo de forma automática de una clase a una tabl
 y viceversa, vamos a utilizar una clase base en los modelos que implementa toda
 esta lógica.
 
-De nuevo, abre el archivo :file:`db.py` y modificarlo para que su contenido sea como
+De nuevo, abre el archivo :file:`settings.py` y modificarlo para que su contenido sea como
 el que te muestro a continuación:
 
 .. code-block:: python
@@ -290,12 +290,12 @@ la capacidad de realizar el mapeo correspondiente a partir de la
 meta información (atributos de clase, nombre de la clase, etc.) que encuentre,
 precisamente, en cada uno de los modelos.
 
-A continuación, le presento como debe quedar el archivo :file:`db.py`:
+A continuación, le presento como debe quedar el archivo :file:`settings.py`:
 
-.. literalinclude:: ../../recursos/leccion2/sqlalchemy/productos/db.py
+.. literalinclude:: ../../recursos/leccion2/sqlalchemy/productos/settings.py
     :language: python
     :linenos:
-    :lines: 1-20
+    :lines: 1-24
 
 Por tanto, lo siguiente que debe hacer es crear el modelo ``Productos``. Crea un
 nuevo archivo en el directorio ``productos`` llamado :file:`models.py` y
@@ -304,7 +304,7 @@ añade el código que te muestro a continuación:
 .. literalinclude:: ../../recursos/leccion2/sqlalchemy/productos/models.py
     :language: python
     :linenos:
-    :lines: 1-32
+    :lines: 1-34
 
 Asi de esta forma tiene definido una clase modelo llamado ``Productos`` la cual mapea
 la tabla ``productos``.
@@ -318,7 +318,7 @@ La clase ``Productos`` del código anterior representa la tabla ``productos``.
 
 Para que se pueda realizar el mapeo automático *clase-tabla*, la clase hereda
 de la clase ``Base`` que creo en la sección anterior y que se encuentra en el
-módulo :file:`db.py`. Además, hay que especificar el nombre de la tabla a través
+módulo :file:`settings.py`. Además, hay que especificar el nombre de la tabla a través
 del atributo de clase ``__tablename__``.
 
 Por otro lado, cada una de las columnas de la tabla tienen su correspondiente
@@ -567,12 +567,17 @@ Aplicar filtros a una consulta
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Para aplicar un filtro a una consulta, lo que sería la cláusula *WHERE* de *SQL*,
-puedes llamar a los métodos ``filter_by(keyword)`` o ``filter()``:
+puedes llamar al método ``filter_by(keyword)``:
 
 .. code-block:: python
-    :linenos:
 
     agua = session.query(Productos).filter_by(nombre="Agua").first()
+
+Para aplicar un filtro a una consulta, lo que sería la cláusula *WHERE* de *SQL*,
+puedes llamar al método ``filter()``:
+
+.. code-block:: python
+
     menos_de_1 = session.query(Productos).filter(Productos.precio < 1).all()
 
 
@@ -622,12 +627,12 @@ con ``SQLAlchemy``, a continuación la estructura de proyecto llamado ``producto
 
     productos/
     ├── .env.example
-    ├── db.py
     ├── __init__.py
     ├── main.py
     ├── models.py
     ├── productos.sqlite3
-    └── requirements.txt
+    ├── requirements.txt
+    └── settings.py
 
 A continuación se presenta y explica el uso de cada archivo para este proyecto:
 
@@ -640,11 +645,11 @@ Archivo plantilla `dotenv`_ del paquete adicional `python-dotenv`_.
     :linenos:
     :lines: 1-2
 
-*Archivo* :file:`db.py`
+*Archivo* :file:`settings.py`
 
 Módulo de configuraciones del programa.
 
-.. literalinclude:: ../../recursos/leccion2/sqlalchemy/productos/db.py
+.. literalinclude:: ../../recursos/leccion2/sqlalchemy/productos/settings.py
     :language: python
     :linenos:
     :lines: 1-24
@@ -656,7 +661,7 @@ Módulo de principal del programa.
 .. literalinclude:: ../../recursos/leccion2/sqlalchemy/productos/main.py
     :language: python
     :linenos:
-    :lines: 1-145
+    :lines: 1-183
 
 *Archivo* :file:`models.py`
 
@@ -725,53 +730,60 @@ sistema operativo:
       .. code-block:: console
           :class: no-copy
 
-          ¡Creación exitosa de la tabla productos!
+          INFO:root:✅ ¡Creación exitosa de la tabla 'productos'!
 
-          ¡Inserción exitosa de los 4 productos!
+          INFO:root:✅ ¡Inserción exitosa de los '4' productos!
 
-          ¡Consulta todos los productos!
-          Arroz
-          Agua
-          Mantequilla
-          Queso
+          ✅ ¡Consulta todos los productos!
+          📜 Producto: Arroz (Granos) - $1.25
+          📜 Producto: Agua (Líquidos) - $0.30
+          📜 Producto: Mantequilla (Lácteos) - $3.56
+          📜 Producto: Queso (Lácteos) - $8.56
+          INFO:root:✅ ¡Consulta exitosa de '4' productos!
 
-          ¡Consulta todos los productos con más atributos!
-          Arroz 1.25
-          Agua 0.3
-          Mantequilla 3.56
-          Queso 8.56
+          ✅ ¡Consulta el 'nombre' y 'precio' de todos los productos!
+          📜 Arroz 1.25
+          📜 Agua 0.3
+          📜 Mantequilla 3.56
+          📜 Queso 8.56
+          INFO:root:✅ ¡Consulta exitosa del 'nombre' y 'precio' de todos los productos!
 
-          ¡Consulta de producto en base a su clave primaria!
-          Arroz
+          ✅ ¡Consulta de producto en base a su clave primaria!
+          📜 Producto: Arroz (Granos) - $1.25
+          INFO:root:✅ ¡Consulta exitosa del producto 'Arroz'!
 
-          ¡Consulta de productos lácteos!
-          Mantequilla
-          Queso
+          ✅ ¡Consulta de productos 'lacteos' con precio mayor a '3.0'!
+          📜 Producto: Mantequilla (Lácteos) - $3.56
+          📜 Producto: Queso (Lácteos) - $8.56
+          INFO:root:✅ ¡Consulta exitosa de los productos 'lacteos' con precio mayor a '3.0'!
 
-          ¡Otra consulta de productos lácteos!
-          3, Mantequilla, Lácteos
-          4, Queso, Lácteos
+          ✅ ¡Otra consulta de productos 'lácteos'!
+          📜 3, Mantequilla, Lácteos
+          📜 4, Queso, Lácteos
+          INFO:root:✅ ¡Consulta exitosa de todos los productos 'lacteos'!
 
-          ¡Consulta del primer producto!
-          Mantequilla
+          ✅ ¡Consulta del primer producto!
+          📜 Producto: Mantequilla (Lácteos) - $3.56
 
-          ¡Consulta del único producto!
-          Agua
+          ✅ ¡Consulta del único producto!
+          📜 Producto: Agua (Líquidos) - $0.30
+          INFO:root:✅ ¡Consulta exitosa del único producto!
 
-          ¡Consulta los productos cuyos nombres coincidan con los suministrados!
-          Arroz
-          Agua
+          ✅ ¡Consulta los productos cuyos nombres coincidan con los suministrados!
+          📜 Producto: Arroz (Granos) - $1.25
+          📜 Producto: Agua (Líquidos) - $0.30
+          INFO:root:✅ ¡Consulta exitosa de producto(s) cuyo(s) nombres coincidan con 'Agua' y 'Arroz'!
 
-          ¡Actualiza el producto suministrado!
-          Precio anterior: Arroz 1.25
-          Precio nuevo: Arroz 11.5
-          ¡Actualización exitosa de precio del producto!
+          ✅ ¡Actualiza el producto suministrado!
+          📜 Precio anterior: Producto: Arroz (Granos) - $1.25 1.25
+          📜 Precio nuevo: Producto: Arroz (Granos) - $11.50 11.5
+          INFO:root:✅ ¡Actualización exitosa de precio del producto 'Arroz'!
 
-          ¡Actualiza el producto suministrado!
-          ¡Actualización exitosa de precio del producto!
+          INFO:root:✅ ¡Actualización exitosa del producto 'Agua' con el precio '3.33'!
 
-          ¡Elimina los productos suministrados!
-          ¡Eliminación exitosa del producto!
+          INFO:root:✅ ¡Eliminación exitosa del producto 'Arroz'!
+
+          INFO:root:✅ ¡La conexión SQLite a la base de datos 'productos.sqlite3' fue cerrada!
 
    .. group-tab:: Windows
 
@@ -816,53 +828,62 @@ sistema operativo:
       .. code-block:: console
           :class: no-copy
 
-          ¡Creación exitosa de la tabla productos!
 
-          ¡Inserción exitosa de los 4 productos!
 
-          ¡Consulta todos los productos!
-          Arroz
-          Agua
-          Mantequilla
-          Queso
+          INFO:root:✅ ¡Creación exitosa de la tabla 'productos'!
 
-          ¡Consulta todos los productos con más atributos!
-          Arroz 1.25
-          Agua 0.3
-          Mantequilla 3.56
-          Queso 8.56
+          INFO:root:✅ ¡Inserción exitosa de los '4' productos!
 
-          ¡Consulta de producto en base a su clave primaria!
-          Arroz
+          ✅ ¡Consulta todos los productos!
+          📜 Producto: Arroz (Granos) - $1.25
+          📜 Producto: Agua (Líquidos) - $0.30
+          📜 Producto: Mantequilla (Lácteos) - $3.56
+          📜 Producto: Queso (Lácteos) - $8.56
+          INFO:root:✅ ¡Consulta exitosa de '4' productos!
 
-          ¡Consulta de productos lácteos!
-          Mantequilla
-          Queso
+          ✅ ¡Consulta el 'nombre' y 'precio' de todos los productos!
+          📜 Arroz 1.25
+          📜 Agua 0.3
+          📜 Mantequilla 3.56
+          📜 Queso 8.56
+          INFO:root:✅ ¡Consulta exitosa del 'nombre' y 'precio' de todos los productos!
 
-          ¡Otra consulta de productos lácteos!
-          3, Mantequilla, Lácteos
-          4, Queso, Lácteos
+          ✅ ¡Consulta de producto en base a su clave primaria!
+          📜 Producto: Arroz (Granos) - $1.25
+          INFO:root:✅ ¡Consulta exitosa del producto 'Arroz'!
 
-          ¡Consulta del primer producto!
-          Mantequilla
+          ✅ ¡Consulta de productos 'lacteos' con precio mayor a '3.0'!
+          📜 Producto: Mantequilla (Lácteos) - $3.56
+          📜 Producto: Queso (Lácteos) - $8.56
+          INFO:root:✅ ¡Consulta exitosa de los productos 'lacteos' con precio mayor a '3.0'!
 
-          ¡Consulta del único producto!
-          Agua
+          ✅ ¡Otra consulta de productos 'lácteos'!
+          📜 3, Mantequilla, Lácteos
+          📜 4, Queso, Lácteos
+          INFO:root:✅ ¡Consulta exitosa de todos los productos 'lacteos'!
 
-          ¡Consulta los productos cuyos nombres coincidan con los suministrados!
-          Arroz
-          Agua
+          ✅ ¡Consulta del primer producto!
+          📜 Producto: Mantequilla (Lácteos) - $3.56
 
-          ¡Actualiza el producto suministrado!
-          Precio anterior: Arroz 1.25
-          Precio nuevo: Arroz 11.5
-          ¡Actualización exitosa de precio del producto!
+          ✅ ¡Consulta del único producto!
+          📜 Producto: Agua (Líquidos) - $0.30
+          INFO:root:✅ ¡Consulta exitosa del único producto!
 
-          ¡Actualiza el producto suministrado!
-          ¡Actualización exitosa de precio del producto!
+          ✅ ¡Consulta los productos cuyos nombres coincidan con los suministrados!
+          📜 Producto: Arroz (Granos) - $1.25
+          📜 Producto: Agua (Líquidos) - $0.30
+          INFO:root:✅ ¡Consulta exitosa de producto(s) cuyo(s) nombres coincidan con 'Agua' y 'Arroz'!
 
-          ¡Elimina los productos suministrados!
-          ¡Eliminación exitosa del producto!
+          ✅ ¡Actualiza el producto suministrado!
+          📜 Precio anterior: Producto: Arroz (Granos) - $1.25 1.25
+          📜 Precio nuevo: Producto: Arroz (Granos) - $11.50 11.5
+          INFO:root:✅ ¡Actualización exitosa de precio del producto 'Arroz'!
+
+          INFO:root:✅ ¡Actualización exitosa del producto 'Agua' con el precio '3.33'!
+
+          INFO:root:✅ ¡Eliminación exitosa del producto 'Arroz'!
+
+          INFO:root:✅ ¡La conexión SQLite a la base de datos 'productos.sqlite3' fue cerrada!
 
 
 Asi de esta forma puede ingresar, consultar, actualizar y eliminar registro en una
