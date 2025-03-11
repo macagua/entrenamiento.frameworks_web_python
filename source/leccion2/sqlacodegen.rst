@@ -18,7 +18,7 @@ versión de :ref:`SQLAlchemy <python_sqlalchemy_modelos>`).
 Características
 ---------------
 
-- Soporta ``SQLAlchemy`` 0.8.x - 1.4.x.
+- Soporta :ref:`SQLAlchemy <python_sqlalchemy>` 0.8.x - 1.4.x.
 
 - Produce código declarativo que casi parece escrito a mano.
 
@@ -43,7 +43,7 @@ a continuación se presentan el correspondiente comando de tu sistema operativo:
 
       .. code-block:: console
 
-          pip3 install sqlacodegen==3.0.0
+          pip3 install sqlacodegen
 ..
   pip3 install git+https://github.com/agronholm/sqlacodegen.git@3.0.0rc1#egg=sqlacodegen
 
@@ -51,7 +51,7 @@ a continuación se presentan el correspondiente comando de tu sistema operativo:
 
       .. code-block:: console
 
-          pip3 install sqlacodegen==3.0.0
+          pip3 install sqlacodegen
 
 
 Puede probar si la instalación se realizo correctamente, ejecutando el siguiente
@@ -74,6 +74,36 @@ comando correspondiente a tu sistema operativo:
 
 Si muestra el nombre del paquete como ``sqlacodegen``, tiene correctamente instalada
 la librería. Con esto, ya tiene todo listo para continuar.
+
+
+----
+
+
+Estructura de archivos
+^^^^^^^^^^^^^^^^^^^^^^
+
+Para crear la estructura de archivos del proyecto ``sqlacodegen`` debe ejecutar los siguientes comandos:
+
+Crear el directorio ``~/proyectos/sqlacodegen/sistema`` con el siguiente comando:
+
+.. code-block:: console
+
+    mkdir -p ~/proyectos/sqlacodegen/sistema && cd $_
+
+
+El comando anterior crea la siguiente estructura de directorios:
+
+.. code-block:: console
+    :class: no-copy
+
+    proyectos/
+    └── sqlacodegen/
+        └── sistema/
+
+Si tiene la estructura de archivo previa, entonces puede continuar con la siguiente sección.
+
+
+----
 
 .. _python_sqlacodegen_uso:
 
@@ -310,20 +340,21 @@ una mejor representación de los objetos.
 Práctica - Caso real
 --------------------
 
-A continuación se presenta una práctica más real de implementar el uso de ``sqlacodegen``
-en proyectos con ``SQLAlchemy``, a continuación la estructura de proyecto llamado ``sistema``:
+A continuación se presenta una práctica más real de implementar el uso de proyectos
+con ``sqlacodegen``, a continuación la estructura de proyecto llamado ``sistema``:
 
 .. code-block:: console
     :class: no-copy
 
-    sistema/
-    ├── .env.example
-    ├── __init__.py
-    ├── main.py
-    ├── models.py
-    ├── requirements.txt
-    ├── settings.py
-    └── sistema.db
+    proyectos/
+    └── sqlacodegen/
+        └── sistema/
+            ├── .env.example
+            ├── __init__.py
+            ├── main.py
+            ├── models.py
+            ├── requirements.txt
+            └── settings.py
 
 A continuación se presenta y explica el uso de cada archivo para este proyecto:
 
@@ -361,7 +392,7 @@ Módulo principal del programa.
 .. literalinclude:: ../../recursos/leccion2/sqlacodegen/sistema/main.py
     :language: python
     :linenos:
-    :lines: 1-117
+    :lines: 1-120
 
 *Archivo* :file:`requirements.txt`
 
@@ -370,13 +401,7 @@ Archivo de `requirements.txt`_ de la herramienta de gestión de paquetes `pip`_.
 .. literalinclude:: ../../recursos/leccion2/sqlacodegen/sistema/requirements.txt
     :language: python
     :linenos:
-    :lines: 1-7
-
-*Archivo* :file:`sistema.db`
-
-Archivo de base de datos de :ref:`SQLite <python_modulo_sqlite3>` llamado :file:`sistema.db`
-la cual se incluye ya que cada tiene la estructura de tablas y registros iniciales para hacer
-esta práctica.
+    :lines: 1-3,5
 
 
 Teniendo creada la anterior estructura de proyecto, vuelva a ejecutar ahora el módulo con
@@ -422,6 +447,8 @@ sistema operativo:
       .. code-block:: console
           :class: no-copy
 
+          INFO:root:✅ ¡Creación exitosa de las tablas en la base de datos 'sistema.db'!
+
           ✅ Lista de 10 Estados
           📜 Estado: Amazonas
           📜 Estado: Anzoátegui
@@ -462,6 +489,29 @@ sistema operativo:
           ERROR:root:❌ ¡No hay ningún 'pedido' en la base de datos!
 
           INFO:root:✅ ¡La conexión SQLite a la base de datos 'sistema.db' fue cerrada!
+
+      La ejecucion anterior generar la siguiente estructura:
+
+      .. code-block:: console
+          :class: no-copy
+
+          proyectos/
+          └── sqlacodegen/
+              └── sistema/
+                  ├── __init__.py
+                  ├── .env
+                  ├── .env.example
+                  ├── main.py
+                  ├── models.py
+                  ├── requirements.txt
+                  ├── settings.py
+                  └── sistema.db
+
+      *Archivo* :file:`sistema.db`
+
+      Archivo de base de datos de :ref:`SQLite <python_modulo_sqlite3>` llamado :file:`sistema.db`
+      la cual no se incluye ya que cada vez que se inicia el programa :file:`main.py` se elimina y crea
+      nuevamente, para cuidar la creación de los datos iniciales.
 
    .. group-tab:: Windows
 
@@ -506,6 +556,8 @@ sistema operativo:
       .. code-block:: console
           :class: no-copy
 
+          INFO:root:✅ ¡Creación exitosa de las tablas en la base de datos 'sistema.db'!
+
           ✅ Lista de 10 Estados
           📜 Estado: Amazonas
           📜 Estado: Anzoátegui
@@ -547,10 +599,33 @@ sistema operativo:
 
           INFO:root:✅ ¡La conexión SQLite a la base de datos 'sistema.db' fue cerrada!
 
+      La ejecucion anterior generar la siguiente estructura:
+
+      .. code-block:: console
+          :class: no-copy
+
+          proyectos/
+          └── sqlacodegen/
+              └── sistema/
+                  ├── __init__.py
+                  ├── .env
+                  ├── .env.example
+                  ├── main.py
+                  ├── models.py
+                  ├── requirements.txt
+                  ├── settings.py
+                  └── sistema.db
+
+      *Archivo* :file:`sistema.db`
+
+      Archivo de base de datos de :ref:`SQLite <python_modulo_sqlite3>` llamado :file:`sistema.db`
+      la cual no se incluye ya que cada vez que se inicia el programa :file:`main.py` se elimina y crea
+      nuevamente, para cuidar la creación de los datos iniciales.
+
 
 Asi de esta forma puede usar ``sqlacodegen`` para generar modelos ``SQLAlchemy`` desde
-una base de datos existente e implementar las operaciones ingresar, consultar,
-actualizar y eliminar registro en las tablas.
+una base de datos existente e implementar las operaciones ingresar, consultar, actualizar
+y eliminar registro en las tablas.
 
 
 ----

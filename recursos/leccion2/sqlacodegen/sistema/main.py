@@ -93,6 +93,9 @@ if __name__ == "__main__":
     try:
         # Crea la base de datos y tablas
         Base.metadata.create_all(engine)
+        logging.info(
+            f"✅ ¡Creación exitosa de las tablas en la base de datos '{DB_FILE}'!\n"
+        )
         # Consulta de productos
         consulta_estados()
         # Consulta de ciudades

@@ -1,7 +1,7 @@
+# Install the packages from PyPi repository.
+SQLAlchemy>=2.0.23 # For the last test date, version SQLAlchemy==2.0.38 was used.
+python-dotenv==1.0.1
+
+sqlacodegen==3.0.0
 # Install the sqlacodegen v3.0.0rc1 from github repo.
 # -e git+https://github.com/agronholm/sqlacodegen.git@3.0.0rc1#egg=sqlacodegen
-
-# Install the packages from PyPi repository.
-SQLAlchemy>=2.0.23
-sqlacodegen==3.0.0
-python-dotenv==1.0.1
