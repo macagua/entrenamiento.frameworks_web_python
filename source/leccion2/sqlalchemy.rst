@@ -139,7 +139,7 @@ el siguiente comando correspondiente a tu sistema operativo:
 
           python3 -c "import sqlalchemy ; print(sqlalchemy.__version__)"
 
-Si muestra el numero de la versión instalada de ``SQLAlchemy``, tiene
+Si muestra el número de la versión instalada de ``SQLAlchemy``, tiene
 correctamente instalada la librería. Con esto, ya tiene todo listo para continuar.
 
 .. _python_sqlalchemy_engine:
@@ -155,7 +155,7 @@ El motor se usa principalmente para manejar dos elementos: los pools de conexion
 y el dialecto a utilizar.
 
 Vamos a crear un ``engine``. Para ello, añade un nuevo módulo Python llamado
-``db.py`` al directorio ``productos`` con el siguiente contenido:
+:file:`db.py` al directorio ``productos`` con el siguiente contenido:
 
 .. code-block:: python
     :linenos:
@@ -224,7 +224,7 @@ creados, modificados o eliminados dentro de una misma transacción, de manera qu
 cuando se confirma la transacción, se reflejan en base de datos todas la
 operaciones involucradas (o ninguna si ocurre cualquier error).
 
-Va a crear una sesión en el proyecto. Abre el archivo ``db.py`` y añade lo siguiente:
+Va a crear una sesión en el proyecto. Abre el archivo :file:`db.py` y añade lo siguiente:
 
 .. code-block:: python
     :linenos:
@@ -262,7 +262,7 @@ Para que se pueda realizar el mapeo de forma automática de una clase a una tabl
 y viceversa, vamos a utilizar una clase base en los modelos que implementa toda
 esta lógica.
 
-De nuevo, abre el archivo ``db.py`` y modificarlo para que su contenido sea como
+De nuevo, abre el archivo :file:`db.py` y modificarlo para que su contenido sea como
 el que te muestro a continuación:
 
 .. code-block:: python
@@ -290,21 +290,21 @@ la capacidad de realizar el mapeo correspondiente a partir de la
 meta información (atributos de clase, nombre de la clase, etc.) que encuentre,
 precisamente, en cada uno de los modelos.
 
-A continuación, le presento como debe quedar el archivo ``db.py``:
+A continuación, le presento como debe quedar el archivo :file:`db.py`:
 
 .. literalinclude:: ../../recursos/leccion2/sqlalchemy/productos/db.py
     :language: python
     :linenos:
-    :lines: 1-24
+    :lines: 1-20
 
 Por tanto, lo siguiente que debe hacer es crear el modelo ``Productos``. Crea un
-nuevo archivo en el directorio ``productos`` llamado ``models.py`` y
+nuevo archivo en el directorio ``productos`` llamado :file:`models.py` y
 añade el código que te muestro a continuación:
 
 .. literalinclude:: ../../recursos/leccion2/sqlalchemy/productos/models.py
     :language: python
     :linenos:
-    :lines: 1-34
+    :lines: 1-32
 
 Asi de esta forma tiene definido una clase modelo llamado ``Productos`` la cual mapea
 la tabla ``productos``.
@@ -318,7 +318,7 @@ La clase ``Productos`` del código anterior representa la tabla ``productos``.
 
 Para que se pueda realizar el mapeo automático *clase-tabla*, la clase hereda
 de la clase ``Base`` que creo en la sección anterior y que se encuentra en el
-módulo ``db.py``. Además, hay que especificar el nombre de la tabla a través
+módulo :file:`db.py`. Además, hay que especificar el nombre de la tabla a través
 del atributo de clase ``__tablename__``.
 
 Por otro lado, cada una de las columnas de la tabla tienen su correspondiente
@@ -351,10 +351,10 @@ Crear tablas
 Una vez definidos los modelos, hay que crear las tablas correspondientes.
 
 Crea un nuevo archivo Python en el directorio ``productos`` llamado
-``main.py``. En este archivo será donde escribas el código de ejemplo del
+:file:`main.py`. En este archivo será donde escribas el código de ejemplo del
 programa.
 
-Añade el siguiente código fuente al archivo ``main.py``:
+Añade el siguiente código fuente al archivo :file:`main.py`:
 
 .. code-block:: python
     :linenos:
@@ -420,7 +420,7 @@ una fila de una tabla se corresponde con un objeto Python. Por tanto, para crear
 fila debemos instanciar un objeto de la clase ``Productos``, añadirlo a la sesión y
 finalmente aplicar los cambios.
 
-Añade un método ``ingresar_data()`` del archivo ``main.py`` con el siguiente código:
+Añade un método ``ingresar_data()`` del archivo :file:`main.py` con el siguiente código:
 
 .. code-block:: python
     :linenos:
@@ -631,7 +631,7 @@ con ``SQLAlchemy``, a continuación la estructura de proyecto llamado ``producto
 
 A continuación se presenta y explica el uso de cada archivo para este proyecto:
 
-*Archivo .env.example*
+*Archivo* :file:`.env.example`
 
 Archivo plantilla `dotenv`_ del paquete adicional `python-dotenv`_.
 
@@ -640,47 +640,47 @@ Archivo plantilla `dotenv`_ del paquete adicional `python-dotenv`_.
     :linenos:
     :lines: 1-2
 
-*Archivo db.py*
+*Archivo* :file:`db.py`
 
-Modulo de configuraciones del programa.
+Módulo de configuraciones del programa.
 
 .. literalinclude:: ../../recursos/leccion2/sqlalchemy/productos/db.py
     :language: python
     :linenos:
     :lines: 1-24
 
-*Archivo main.py*
+*Archivo* :file:`main.py`
 
-Modulo de principal del programa.
+Módulo de principal del programa.
 
 .. literalinclude:: ../../recursos/leccion2/sqlalchemy/productos/main.py
     :language: python
     :linenos:
     :lines: 1-145
 
-*Archivo models.py*
+*Archivo* :file:`models.py`
 
-Modulo de :ref:`modelos <python_sqlalchemy_modelos>` de :ref:`SQLAlchemy <python_sqlalchemy>`.
+Módulo de :ref:`modelos <python_sqlalchemy_modelos>` de :ref:`SQLAlchemy <python_sqlalchemy>`.
 
 .. literalinclude:: ../../recursos/leccion2/sqlalchemy/productos/models.py
     :language: python
     :linenos:
     :lines: 1-34
 
-*Archivo productos.sqlite3*
+*Archivo* :file:`productos.sqlite3`
 
 Archivo de base de datos de :ref:`SQLite <python_modulo_sqlite3>` llamado :file:`productos.sqlite3`
 la cual no se incluye ya que cada vez que se inicia el programa :file:`main.py` se elimina y crea
 nuevamente, para cuidar la creación de los datos iniciales.
 
-*Archivo requirements.txt*
+*Archivo* :file:`requirements.txt`
 
 Archivo de `requirements.txt`_ de la herramienta de gestión de paquetes `pip`_.
 
 .. literalinclude:: ../../recursos/leccion2/sqlalchemy/productos/requirements.txt
     :language: python
     :linenos:
-    :lines: 2-3
+    :lines: 1-3
 
 Teniendo creada la anterior estructura de proyecto, vuelva a ejecutar ahora el módulo con
 el siguiente comando, el cual a continuación se presentan el correspondiente comando de tu
@@ -696,7 +696,7 @@ sistema operativo:
 
           pip3 install -r requirements.txt
 
-      Ademas debe crear el archivo ``.env`` en base a la plantilla ``.env.example``
+      Además debe crear el archivo :file:`.env` en base a la plantilla :file:`.env.example`
       y editarlo, con el siguiente comando:
 
       .. code-block:: console
@@ -704,7 +704,7 @@ sistema operativo:
           cp .env.example .env && nano .env
 
       .. tip::
-        El archivo ``.env`` se definen las configuraciones de conexión a la base de datos,
+        El archivo :file:`.env` se definen las configuraciones de conexión a la base de datos,
         puede modificarlo cambiar valores de la conexión.
 
       .. note::
@@ -781,21 +781,21 @@ sistema operativo:
 
           pip3 install -r requirements.txt
 
-      Ademas debe crear el archivo ``.env`` en base a la plantilla ``env.example`` , con
+      Además debe crear el archivo :file:`.env` en base a la plantilla :file:`env.example` , con
       el siguiente comando:
 
       .. code-block:: console
 
           copy .env.example .env
 
-      Editar el archivo ``.env``, con el siguiente comando:
+      Editar el archivo :file:`.env`, con el siguiente comando:
 
       .. code-block:: console
 
           notepad.exe .env &
 
       .. tip::
-        El archivo ``.env`` se definen las configuraciones de conexión a la base de datos,
+        El archivo :file:`.env` se definen las configuraciones de conexión a la base de datos,
         puede modificarlo cambiar valores de la conexión.
 
       .. note::
