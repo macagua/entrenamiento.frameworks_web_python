@@ -61,7 +61,7 @@ a cada sistema operativo, los cuales se presentan a continuación:
 
       #. :ref:`Entorno virtual Python <python_entorno_desarrollo_venv>`.
 
-      #. Paquete ``PyMySQL``, ejecutando el siguiente comando:
+      #. Instalar el paquete ``PyMySQL``, ejecutando el siguiente comando:
 
          .. code-block:: console
 
@@ -111,11 +111,15 @@ Luego de instalar las herramientas necesarias, debe ejecutar el siguiente comand
 
 
 El comando anterior crea un contenedor Docker llamado ``mysql`` con la version ``latest``,
-ejecutándose en el puerto ``3306`` con un punto de montaje ``my_data``.
+ejecutándose en el puerto ``3306`` con la base de datos llamada ``sistema`` e incluye un punto de montaje ``my_data``.
 
 
 De esta forma ha instalado y ejecutado el servidor ``MySQL`` necesario para las próximas script
 Python a ejecutar. Con esto, ya tiene todo listo para continuar.
+
+
+----
+
 
 Estructura de archivos
 ''''''''''''''''''''''
@@ -215,7 +219,7 @@ Si requiere insertar registro en una tabla, a continuación tiene un ejemplo:
 .. literalinclude:: ../../recursos/leccion2/mysql/crud/mysql_record_insert.py
     :language: python
     :linenos:
-    :lines: 1-87
+    :lines: 1-89
 
 
 .. important::
@@ -248,15 +252,15 @@ Si requiere insertar registro en una tabla, a continuación tiene un ejemplo:
     .. code-block:: console
         :class: no-copy
 
-        INFO:root:¡Conectado a la base de datos 'sistema'!
+        INFO:root:✅ ¡Conectado a la base de datos 'sistema'!
 
-        INFO:root:¡Fue creo una tabla correctamente en la base de datos 'sistema'!
+        INFO:root:✅ ¡Fue creo una tabla correctamente en la base de datos 'sistema'!
 
-        INFO:root:¡Fueron insertado(s) 3 registro(s) correctamente en la tabla!
+        INFO:root:✅ ¡Fueron insertado(s) 3 registro(s) correctamente en la tabla!
 
-        INFO:root:¡Fueron insertado(s) 1 registro(s) correctamente en la tabla!
+        INFO:root:✅ ¡Fueron insertado(s) 1 registro(s) correctamente en la tabla!
 
-        INFO:root:¡La conexión MySQL a la base de datos 'sistema' fue cerrada!
+        INFO:root:✅ ¡La conexión MySQL a la base de datos 'sistema' fue cerrada!
 
 
 Puede probar si la base de datos ``sistema`` fue creada correctamente, ejecutando
@@ -326,7 +330,7 @@ Si requiere consultar registros de tabla, a continuación tiene un ejemplo:
 .. literalinclude:: ../../recursos/leccion2/mysql/crud/mysql_record_select.py
     :language: python
     :linenos:
-    :lines: 1-59
+    :lines: 1-61
 
 
 .. important::
@@ -359,11 +363,11 @@ Si requiere consultar registros de tabla, a continuación tiene un ejemplo:
     .. code-block:: console
         :class: no-copy
 
-        INFO:root:¡Conectado a la base de datos 'sistema'!
+        INFO:root:✅ ¡Conectado a la base de datos 'sistema'!
 
-        Total de filas son: 4
+        📜 Total de filas son: 4
 
-        Mostrar cada fila:
+        📜 Mostrar cada fila:
 
                 Id: 1
                 Nombre: Leonardo Caballero
@@ -385,7 +389,7 @@ Si requiere consultar registros de tabla, a continuación tiene un ejemplo:
                 Código postal: 3105
                 Teléfono: +58-414-6782473
 
-        INFO:root:¡La conexión MySQL a la base de datos 'sistema' fue cerrada!
+        INFO:root:✅ ¡La conexión MySQL a la base de datos 'sistema' fue cerrada!
 
 
 De esta forma puede consultar registros en una tabla dentro una base de datos ``MySQL``.
@@ -402,7 +406,7 @@ Si requiere actualizar registro de tabla, a continuación tiene un ejemplo:
 .. literalinclude:: ../../recursos/leccion2/mysql/crud/mysql_record_update.py
     :language: python
     :linenos:
-    :lines: 1-60
+    :lines: 1-62
 
 
 .. important::
@@ -435,11 +439,11 @@ Si requiere actualizar registro de tabla, a continuación tiene un ejemplo:
     .. code-block:: console
         :class: no-copy
 
-        INFO:root:¡Conectado a la base de datos 'sistema'!
+        INFO:root:✅ ¡Conectado a la base de datos 'sistema'!
 
-        INFO:root:¡Fueron actualizado(s) 2 registro(s) correctamente en la tabla!
+        INFO:root:✅ ¡Fueron actualizado(s) 2 registro(s) correctamente en la tabla!
 
-        INFO:root:¡La conexión MySQL a la base de datos 'sistema' fue cerrada!
+        INFO:root:✅ ¡La conexión MySQL a la base de datos 'sistema' fue cerrada!
 
 
 De esta forma puede actualizar registros en una tabla dentro una base de datos ``MySQL``.
@@ -456,7 +460,7 @@ Si requiere eliminar registro de tabla, a continuación tiene un ejemplo:
 .. literalinclude:: ../../recursos/leccion2/mysql/crud/mysql_record_delete.py
     :language: python
     :linenos:
-    :lines: 1-52
+    :lines: 1-54
 
 
 .. important::
@@ -489,11 +493,11 @@ Si requiere eliminar registro de tabla, a continuación tiene un ejemplo:
     .. code-block:: console
         :class: no-copy
 
-        INFO:root:¡Conectado a la base de datos 'sistema'!
+        INFO:root:✅ ¡Conectado a la base de datos 'sistema'!
 
-        INFO:root:¡Registro eliminado correctamente!
+        INFO:root:✅ ¡Registro eliminado correctamente!
 
-        INFO:root:¡La conexión MySQL a la base de datos 'sistema' fue cerrada!
+        INFO:root:✅ ¡La conexión MySQL a la base de datos 'sistema' fue cerrada!
 
 
 De esta forma puede eliminar registros en una tabla dentro una base de datos ``MySQL``.
@@ -514,15 +518,15 @@ Práctica - Caso real
 --------------------
 
 A continuación se presenta una práctica más real de implementar el uso de proyectos
-con ``MySQL``, a continuación la estructura de proyecto llamado ``MySQL``:
+con ``MySQL``, a continuación la estructura de proyecto llamado ``mysql``:
 
 
 A continuación se presenta y explica el uso de cada archivo para este proyecto:
 
-*Archivo .env.example*
+*Archivo* :file:`.env.example`
 
 Archivo plantilla `dotenv`_, es un archivo de *configuración de variables de entorno*
-para el proyecto. Ademas, es usado para  `establecer variables de entorno`_ con
+para el proyecto. Además, es usado para `establecer variables de entorno`_ con
 ``Docker``, `Docker Compose`_ y del paquete adicional `python-dotenv`_.
 
 .. literalinclude:: ../../recursos/leccion2/mysql/sistema/.env.example
@@ -530,7 +534,7 @@ para el proyecto. Ademas, es usado para  `establecer variables de entorno`_ con
     :linenos:
     :lines: 1-8
 
-*Archivo requirements.txt*
+*Archivo* :file:`requirements.txt`
 
 Archivo de `requirements.txt`_ de la herramienta de gestión de paquetes `pip`_.
 
@@ -539,25 +543,25 @@ Archivo de `requirements.txt`_ de la herramienta de gestión de paquetes `pip`_.
     :linenos:
     :lines: 1-4
 
-*Archivo settings.py*
+*Archivo* :file:`settings.py`
 
-Modulo de configuraciones del programa.
+Módulo de configuraciones del programa.
 
 .. literalinclude:: ../../recursos/leccion2/mysql/sistema/settings.py
     :language: python
     :linenos:
     :lines: 1-57
 
-*Archivo main.py*
+*Archivo* :file:`main.py`
 
-Modulo de principal del programa.
+Módulo principal del programa.
 
 .. literalinclude:: ../../recursos/leccion2/mysql/sistema/main.py
     :language: python
     :linenos:
     :lines: 1-244
 
-*Archivo docker-compose.yml*
+*Archivo* :file:`docker-compose.yml`
 
 Para instalar el servidor ``MySQL`` existen varias formas de realizarlo, para en este caso
 se realizara con la tecnología `Docker`_. Esto significa que debe instalar en tu sistema operativo:
@@ -565,10 +569,10 @@ se realizara con la tecnología `Docker`_. Esto significa que debe instalar en t
 - `Docker Compose`_.
 
 El primer paso para configurar un entorno de desarrollo con ``Docker Compose`` es crear el archivo
-de configuración ``docker-compose.yml``. Este archivo define los servicios, contenedores, redes y
+de configuración :file:`docker-compose.yml`. Este archivo define los servicios, contenedores, redes y
 volúmenes necesarios para tu aplicación.
 
-A continuación se presenta el archivo ``docker-compose.yml`` con la configuración necesaria:
+A continuación se presenta el archivo :file:`docker-compose.yml` con la configuración necesaria:
 
 .. literalinclude:: ../../recursos/leccion2/mysql/sistema/docker-compose.yml
     :language: yaml
@@ -609,7 +613,7 @@ configuración y ejecución del código fuente.
 
           pip3 install -r requirements.txt
 
-      Ademas debe crear el archivo ``.env`` en base a la plantilla ``.env.example``
+      Además debe crear el archivo :file:`.env` en base a la plantilla :file:`.env.example``
       y editarlo, con el siguiente comando:
 
       .. code-block:: console
@@ -617,14 +621,14 @@ configuración y ejecución del código fuente.
           cp .env.example .env && nano .env
 
       .. tip::
-        El archivo ``.env`` se definen las configuraciones de conexión a la base de datos,
+        El archivo :file:`.env` se definen las configuraciones de conexión a la base de datos,
         puede modificarlo cambiar valores de la conexión.
 
-      Debe crear y editar el archivo ``docker-compose.yml``, con el siguiente comando:
+      Debe crear y editar el archivo :file:`docker-compose.yml`, con el siguiente comando:
 
       .. tip::
         Para ejecutar el comando del instalador del servidor ``MySQL`` con `Docker`_ debe crear
-        un archivo llamado ``docker-compose.yml`` en el directorio ``sistema/`` con el contenido
+        un archivo llamado :file:`docker-compose.yml` en el directorio ``sistema/`` con el contenido
         anterior de dicho archivo, ejecutando el siguiente comando:
 
       .. code-block:: console
@@ -655,17 +659,17 @@ configuración y ejecución del código fuente.
       .. code-block:: console
           :class: no-copy
 
-          INFO:root:¡Conexión a la base de datos 'sistema' fue exitosa!
+          INFO:root:✅ ¡Conexión a la base de datos 'sistema' fue exitosa!
 
-          INFO:root:¡Fueron creado(s) 0 tabla(s) correctamente en la base de datos!
+          INFO:root:✅ ¡Fueron creado(s) 0 tabla(s) correctamente en la base de datos!
 
-          INFO:root:¡Fueron insertado(s) 3 registro(s) correctamente en la tabla!
+          INFO:root:✅ ¡Fueron insertado(s) 3 registro(s) correctamente en la tabla!
 
-          INFO:root:¡Fueron insertado(s) 1 registro(s) correctamente en la tabla!
+          INFO:root:✅ ¡Fueron insertado(s) 1 registro(s) correctamente en la tabla!
 
-          Total de filas son: 4
+          📜 Total de filas son: 4
 
-          Mostrar cada fila:
+          📜 Mostrar cada fila:
 
                   Id: 1
                   Nombre: Leonardo Caballero
@@ -687,9 +691,11 @@ configuración y ejecución del código fuente.
                   Código postal: 3105
                   Teléfono: +58-414-6782473
 
-          INFO:root:¡Fueron actualizado(s) 2 registro(s) correctamente en la tabla!
+          INFO:root:✅ ¡Fueron actualizado(s) 2 registro(s) correctamente en la tabla!
 
-          INFO:root:¡Registro eliminado correctamente!
+          INFO:root:✅ ¡Registro eliminado correctamente!
+
+          INFO:root:✅ ¡La conexión MySQL a la base de datos 'sistema' fue cerrada!
 
    .. group-tab:: Windows
 
@@ -699,28 +705,28 @@ configuración y ejecución del código fuente.
 
           pip3 install -r requirements.txt
 
-      Ademas debe crear el archivo ``.env`` en base a la plantilla ``env.example`` , con
+      Además debe crear el archivo :file:`.env` en base a la plantilla :file:`.env.example` , con
       el siguiente comando:
 
       .. code-block:: console
 
           copy .env.example .env
 
-      Editar el archivo ``.env``, con el siguiente comando:
+      Editar el archivo :file:`.env`, con el siguiente comando:
 
       .. code-block:: console
 
           notepad.exe .env &
 
       .. tip::
-        El archivo ``.env`` se definen las configuraciones de conexión a la base de datos,
+        El archivo :file:`.env` se definen las configuraciones de conexión a la base de datos,
         puede modificarlo cambiar valores de la conexión.
 
-      Debe crear y editar el archivo ``docker-compose.yml``, con el siguiente comando:
+      Debe crear y editar el archivo :file:`docker-compose.yml`, con el siguiente comando:
 
       .. tip::
         Para ejecutar el comando del instalador del servidor ``MySQL`` con `Docker`_ debe crear
-        un archivo llamado ``docker-compose.yml`` en el directorio ``sistema/`` con el contenido
+        un archivo llamado :file:`docker-compose.yml` en el directorio ``sistema/`` con el contenido
         anterior, ejecutando el siguiente comando:
 
       .. code-block:: console
@@ -751,17 +757,17 @@ configuración y ejecución del código fuente.
       .. code-block:: console
           :class: no-copy
 
-          INFO:root:¡Conexión a la base de datos 'sistema' fue exitosa!
+          INFO:root:✅ ¡Conexión a la base de datos 'sistema' fue exitosa!
 
-          INFO:root:¡Fueron creado(s) 0 tabla(s) correctamente en la base de datos!
+          INFO:root:✅ ¡Fueron creado(s) 0 tabla(s) correctamente en la base de datos!
 
-          INFO:root:¡Fueron insertado(s) 3 registro(s) correctamente en la tabla!
+          INFO:root:✅ ¡Fueron insertado(s) 3 registro(s) correctamente en la tabla!
 
-          INFO:root:¡Fueron insertado(s) 1 registro(s) correctamente en la tabla!
+          INFO:root:✅ ¡Fueron insertado(s) 1 registro(s) correctamente en la tabla!
 
-          Total de filas son: 4
+          📜 Total de filas son: 4
 
-          Mostrar cada fila:
+          📜 Mostrar cada fila:
 
                   Id: 1
                   Nombre: Leonardo Caballero
@@ -783,9 +789,26 @@ configuración y ejecución del código fuente.
                   Código postal: 3105
                   Teléfono: +58-414-6782473
 
-          INFO:root:¡Fueron actualizado(s) 2 registro(s) correctamente en la tabla!
+          INFO:root:✅ ¡Fueron actualizado(s) 2 registro(s) correctamente en la tabla!
 
-          INFO:root:¡Registro eliminado correctamente!
+          INFO:root:✅ ¡Registro eliminado correctamente!
+
+          INFO:root:✅ ¡La conexión MySQL a la base de datos 'sistema' fue cerrada!
+
+      La ejecucion anterior generar la siguiente estructura:
+
+      .. code-block:: console
+          :class: no-copy
+
+          proyectos/
+          └── mysql/
+              └── sistema/
+                  ├── __init__.py
+                  ├── .env
+                  ├── .env.example
+                  ├── main.py
+                  ├── requirements.txt
+                  └── settings.py
 
 
 Asi de esta forma puede ingresar, consultar, actualizar y eliminar registro en una
