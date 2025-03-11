@@ -16,8 +16,8 @@ from settings import (
     UPDATE_SQL_SCRIPTS,
     DELETE_SQL_SCRIPTS,
 )
-from psycopg2.errors import Error, DatabaseError, OperationalError, ProgrammingError
 from psycopg2 import connect
+from psycopg2.errors import Error, DatabaseError, OperationalError, ProgrammingError
 
 logging.basicConfig(level=logging.INFO)
 
@@ -119,7 +119,7 @@ def insertar_registro(conexion_bd, insert_values, insert_sql):
     """Función para la inserción de registro de la tabla
 
     Args:
-        conexion_bd (Connection): Representación conexión a la base de datos SQLite
+        conexion_bd (Connection): Representación conexión a la base de datos PostgreSQL
         insert_values (list): Lista de filas a ingresar
         insert_sql (str): Script INSERT SQL a usar al ingresar datos
     """
@@ -133,7 +133,7 @@ def insertar_registro(conexion_bd, insert_values, insert_sql):
         )
         # Insertar un nuevo registro en la tabla
         cursor.execute(
-            INSERT_SQL_SCRIPTS, (4, "Liliana", "Andradez", "3105", "+58-414-6782473")
+            insert_sql, (4, "Liliana", "Andradez", "3105", "+58-414-6782473")
         )
         # Hacer persistentes los cambios en la base de datos
         conexion_bd.commit()
@@ -152,7 +152,7 @@ def consultar_registro(conexion_bd, select_sql):
     """Función para la consulta de registro(s) de la tabla
 
     Args:
-        conexion_bd (Connection): Representación conexión a la base de datos SQLite
+        conexion_bd (Connection): Representación conexión a la base de datos PostgreSQL
         select_sql (str): Script SELECT SQL a usar al consultar datos
     """
     try:
@@ -182,7 +182,7 @@ def actualizar_registro(conexion_bd, update_values, update_sql):
     """Función para la actualización de registro de la tabla
 
     Args:
-        conexion_bd (Connection): Representación conexión a la base de datos SQLite
+        conexion_bd (Connection): Representación conexión a la base de datos PostgreSQL
         update_values (list): Lista de filas a actualizar
         update_sql (str): Script UPDATE SQL a usar al actualizar datos
     """
@@ -208,7 +208,7 @@ def eliminar_registro(conexion_bd, delete_sql):
     """Función para la eliminación de registro de la tabla
 
     Args:
-        conexion_bd (Connection): Representación conexión a la base de datos SQLite
+        conexion_bd (Connection): Representación conexión a la base de datos PostgreSQL
         delete_sql (str): Script DELETE SQL a usar al eliminar datos
     """
     try:
@@ -240,12 +240,12 @@ if __name__ == "__main__":
         eliminar_registro(conexion, DELETE_SQL_SCRIPTS)
     except Error as e:
         logging.error(
-            f"❌ ERROR: ¡Se produjo un falla al establecer la conexión a la base de datos '{DB_FILE}': '{e}'!"
+            f"❌ ERROR: ¡Se produjo un falla al establecer la conexión a la base de datos '{DB}': '{e}'!"
         )
     finally:
         if conexion:
             # Cerrar la conexión a la base de datos
             conexion.close()
             logging.info(
-                f"✅ ¡La conexión SQLite a la base de datos '{DB_FILE}' fue cerrada!"
+                f"✅ ¡La conexión PostgreSQL a la base de datos '{DB}' fue cerrada!"
             )
