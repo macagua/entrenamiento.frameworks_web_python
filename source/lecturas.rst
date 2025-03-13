@@ -132,6 +132,14 @@ Librería psycopg
 - `psycopg - PostgreSQL database adapter for Python - PyPI <https://pypi.org/project/psycopg/>`_.
 
 
+Módulo PyMySQL
+^^^^^^^^^^^^^^
+
+- `PyMySQL - PostgreSQL database adapter for Python - PyPI <https://pymysql.readthedocs.io/en/latest/>`_.
+
+- `MySQL <https://es.wikipedia.org/wiki/MySQL>`_.
+
+
 Librería SQLAlchemy
 ^^^^^^^^^^^^^^^^^^^
 
