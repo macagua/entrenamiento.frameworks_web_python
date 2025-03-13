@@ -112,8 +112,8 @@ Interfaz DB-API
 - `Databases - The Hitchhiker's Guide to Python <https://docs.python-guide.org/scenarios/db/>`_.
 
 
-Librería sqlite3
-^^^^^^^^^^^^^^^^
+Módulo sqlite3
+^^^^^^^^^^^^^^
 
 - `sqlite3 — DB-API 2.0 interfaz para bases de datos SQLite <https://docs.python.org/es/3.11/library/sqlite3.html>`_.
 
