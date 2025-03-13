@@ -3,7 +3,7 @@
 Interfaz DB-API
 ===============
 
-En Python, ofrece el acceso a :doc:`bases de datos relacionales <./base_datos_relacional>`
+En Python, ofrece el acceso a :ref:`bases de datos relacionales <python_base_datos_relacional>`
 estandarizado por la especificación Database API (DB-API), actualmente
 en la versión 2.0 *(PEP 249: Python Database API Specification v2.0)*.
 
@@ -33,14 +33,14 @@ los siguientes pasos:
 Importar el conector
 --------------------
 
-La forma más comunes de importar la librería de implementación DB-API
+La forma más comunes de importar el módulo de implementación DB-API
 
 .. code-block:: python
     :class: no-copy
 
     import databasepackage as base_datos
 
-En general, la única método que se usa directamente en la librería
+En general, la única método que se usa directamente en el módulo
 es ``connect``, ya que la mayoría de las demás operaciones se realizan
 en objetos devueltos después de llamar a ``this``.
 
@@ -60,11 +60,11 @@ la conexión y el cursor. Primero obtienes una conexión a una base de datos:
     conexion = base_datos.connect()
 
 Hay varias formas de especificar los parámetros de conexión de la base
-de datos. Para la mayoría de las librerías, los valores predeterminados
+de datos. Para la mayoría de los módulos, los valores predeterminados
 para el método de conexión se conectarán a una base de datos instalada
 localmente configurada de manera predeterminada.
 
-Algunas bases de datos tienen sus propias opciones, como ``sqlite3`` tiene
+Algunas bases de datos tienen sus propias opciones, como el módulo :ref:`sqlite3 <python_modulo_sqlite3>` tiene
 la opción para una base de datos en memoria no persistente:
 
 .. code-block:: python
@@ -86,9 +86,9 @@ transaccionales, consultas SQL y manipulación de datos.
     cursor = conexion.cursor()
 
 La mejor manera de usar la conexión y el cursor es desde los controladores
-de recursos. La mayoría de las librerías de bases de datos admiten el manejo
+de recursos. La mayoría de los módulos de bases de datos admiten el manejo
 de recursos en la conexión, pero solo unas pocas lo admiten en el cursor.
-Usando `with`_, tanto la conexión como el cursor se cierran después del uso.
+Usando la sentencia :ref:`with <python_sent_with>`, tanto la conexión como el cursor se cierran después del uso.
 
 .. code-block:: python
 
@@ -105,7 +105,7 @@ Usando `with`_, tanto la conexión como el cursor se cierran después del uso.
             pass  # Los comandos SQL van aquí
 
 Si solo se admite el manejo de recursos de conexión, entonces el cursor
-debe estar envuelto en un bloque de sentencias ``try`` / ``finally`` para
+debe estar envuelto en un bloque de sentencias :ref:`try <python_sent_try_except>` / :ref:`finally <python_sent_finally>` para
 garantizar que el cursor esté cerrado:
 
 .. code-block:: python
@@ -137,12 +137,12 @@ Si no se admite el manejo de recursos de conexión, ambos tienen métodos
         if cursor:
             cursor.close()
 
-Todas las librerías para bases de datos relacionales que soportan transacciones
+Todas los módulos para bases de datos relacionales que soportan transacciones
 iniciarán automáticamente una nueva cuando la primera declaración en un cursor
 nuevo o inmediatamente después de una llamada al método ``commit()`` un cursor.
 Todos los cursores en la conexión se ejecutarán dentro de esa transacción.
 
-Si se utiliza `with`_ para el manejo de recursos, la transacción se confirmará
+Si se utiliza la sentencia :ref:`with <python_sent_with>` para el manejo de recursos, la transacción se confirmará
 al final del bloque. Si administra manualmente los recursos, esta transacción
 debe confirmarse explícitamente antes de cerrar la conexión, o se revertirá
 automáticamente.
@@ -160,10 +160,10 @@ El ``commit`` se realizan con el método del mismo nombre:
     conexion.commit()
 
 La confirmación automática también se puede habilitar configurando
-``conexion.autocommit = True`` en la librería ``pyscopg2`` después de crear la
+``conexion.autocommit = True`` en el módulo ``pyscopg2`` después de crear la
 conexión pero antes de la primera ejecución.
 
-El manejo de excepciones se puede hacer con la clase `Exception`_ genérica o con
+El manejo de excepciones se puede hacer con la clase :ref:`Exception <python_exception>` genérica o con
 las clases específicas para cada librería.
 
 
@@ -252,7 +252,7 @@ Se recomienda encarecidamente utilizar una de estas formas de sustitución en lu
 una construcción o reemplazo directo de cadenas. Usar los operadores de formato integrados de
 Python no es la forma correcta de hacer esto.
 
-Solo se requiere que cada DB-API admita uno de estos, pero la mayoría de las librerías admiten
+Solo se requiere que cada DB-API admita uno de estos, pero la mayoría de los módulos admiten
 más de uno.
 
 - ``sqlite3``: :ref:`qmark <python_dbapi_execute_qmark>`, :ref:`numeric <python_dbapi_execute_numeric>` y :ref:`named <python_dbapi_execute_named>`.
@@ -358,10 +358,10 @@ del cursor del conector a usado.
     conexion.close()
 
 
-Librerías más populares
------------------------
+Módulos más populares
+---------------------
 
-Las librerías de bases de datos relacionales más populares son:
+Las módulos Python más populares para el manejo de bases de datos relacionales son:
 
 - :ref:`sqlite3 <python_modulo_sqlite3>` para conexiones a *SQLite*.
 
@@ -396,10 +396,7 @@ Las librerías de bases de datos relacionales más populares son:
 .. _`JDBC`: https://es.wikipedia.org/wiki/Java_Database_Connectivity
 .. _`ODBC`: https://es.wikipedia.org/wiki/Open_Database_Connectivity
 .. _`NoSQL`: https://es.wikipedia.org/wiki/NoSQL
-.. _`with`: https://entrenamiento-python-basico.readthedocs.io/es/3.11/leccion9/errores.html#sentencia-with
-.. _`Exception`: https://entrenamiento-python-basico.readthedocs.io/es/3.11/leccion9/exceptions.html#python-exception
 .. _`DML`: https://es.wikipedia.org/wiki/Lenguaje_de_manipulaci%C3%B3n_de_datos
-.. _`The Novice’s Guide to the Python 3 DB-API`: https://philvarner.github.io/pages/novice-python3-db-api.html
 .. _`Acceso A Bases De Datos Desde Python - Interfaz Db-Api`: https://wiki.python.org.ar/dbapi/
 .. _`cx_Oracle`: https://cx-oracle.readthedocs.io/en/latest/
 .. _`pypyodbc`: https://pypi.org/project/pypyodbc/
