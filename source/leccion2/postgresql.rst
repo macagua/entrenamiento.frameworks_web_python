@@ -14,26 +14,26 @@ PostgreSQL
 
     Logotipo de PostgreSQL
 
-`psycopg`_, es el adaptador de base de datos PostgreSQL más popular para el lenguaje
-de programación Python. Sus principales características son la implementación completa
-de la especificación Python :ref:`DB-API 2.0 <python_dbapi>` y la seguridad de
-sub-procesos (varios sub-procesos pueden compartir la misma conexión).
+El módulo `psycopg`_, es el adaptador de base de datos ``PostgreSQL`` más popular para el lenguaje de
+programación Python. Sus principales características son la implementación completa de la especificación
+Python :ref:`DB-API 2.0 <python_dbapi>` y la seguridad de sub-procesos (varios sub-procesos pueden
+compartir la misma conexión).
 
-Al igual del paquete :ref:`PyMySQL <python_pkg_mysql>`, no hay un módulo Python SQL
-predeterminado en la librería estándar de Python, que pueda usar para conectarse a una
-base de datos ``PostgreSQL``. En su lugar, deberá instalar un controlador Python SQL
-para ``PostgreSQL`` para poder interactuar con base de datos desde aplicaciones de Python.
+Al igual que el módulo :ref:`PyMySQL <python_pkg_mysql>`, no hay un módulo Python SQL predeterminado en
+la :ref:`librería estándar de Python <python_libreria_estandar>`, que pueda usar para conectarse a una
+base de datos ``PostgreSQL``. En su lugar, deberá instalar un módulo externor que funja como controlador
+Python SQL para el servidor ``PostgreSQL`` para poder interactuar con base de datos desde aplicaciones de
+Python.
 
-Fue diseñado para aplicaciones con múltiples sub-procesos que crean y destruyen muchos
-cursores y hacen una gran cantidad de ":ref:`INSERT <python_base_ingresar_registro>`"
-o ":ref:`UPDATE <python_base_actualizar_registro>`" simultáneos.
+Fue diseñado para aplicaciones con múltiples sub-procesos que crean y destruyen muchos cursores y hacen una
+gran cantidad de ":ref:`INSERT <python_base_ingresar_registro>`" o ":ref:`UPDATE <python_base_actualizar_registro>`" \
+simultáneos.
 
-`psycopg`_ se implementa principalmente en C como un envoltorio de `libpq`_, lo que
-resulta en que sea eficiente y seguro. Cuenta con cursores del lado del cliente y del lado
-del servidor, comunicación asíncrona y notificaciones, compatibilidad con sentencias ``COPY``.
-Muchos tipos de Python son compatibles de forma inmediata y están adaptados para coincidir
-con los tipos de datos de ``PostgreSQL``; la adaptación se puede ampliar y personalizar gracias
-a un sistema flexible de adaptación de objetos.
+Este módulo se implementa principalmente en C como un envoltorio de `libpq`_, lo que resulta en que sea
+eficiente y seguro. Cuenta con cursores del lado del cliente y del lado del servidor, comunicación asíncrona
+y notificaciones, compatibilidad con sentencias ``COPY``. Muchos tipos de Python son compatibles de forma
+inmediata y están adaptados para coincidir con los tipos de datos de ``PostgreSQL``; la adaptación se puede
+ampliar y personalizar gracias a un sistema flexible de adaptación de objetos.
 
 .. tip::
     Es el adaptador de base de datos `PostgreSQL`_ más popular para el lenguaje de programación *Python*.
@@ -44,17 +44,16 @@ a un sistema flexible de adaptación de objetos.
 Instalación
 -----------
 
-Para conectarte al servidor ``PostgreSQL`` necesita el paquete `psycopg2`_. Esto
-significa que debe instalar ``psycopg2`` ejecutando los siguientes comandos correspondiente
-a cada sistema operativo, los cuales se presentan a continuación:
+Para conectarte al servidor ``PostgreSQL`` necesita el módulo `psycopg2`_. Esto significa que debe instalar
+``psycopg2`` ejecutando los siguientes comandos correspondiente a cada sistema operativo, los cuales se
+presentan a continuación:
 
 .. tabs::
 
    .. group-tab:: Linux
 
-
       Para trabajar una aplicación con bases de datos relacionales ``PostgreSQL`` requiere
-      instalar las siguientes librerías:
+      instalar las siguientes librerías/módulos:
 
       #. :ref:`Entorno de desarrollo <python_entorno_desarrollo>`.
 
@@ -62,13 +61,13 @@ a cada sistema operativo, los cuales se presentan a continuación:
 
       #. :ref:`Entorno virtual Python <python_entorno_desarrollo_venv>`.
 
-      #. Dependencias de desarrollo del paquete ``psycopg2``, ejecutando el siguiente comando:
+      #. Dependencias de desarrollo del módulo ``psycopg2``, ejecutando el siguiente comando:
 
          .. code-block:: console
 
              sudo apt install -y libpq-dev postgresql-client-common postgresql-client
 
-      #. Instalar el paquete ``psycopg2``, ejecutando el siguiente comando:
+      #. Instalar el módulo ``psycopg2``, ejecutando el siguiente comando:
 
          .. code-block:: console
 
@@ -80,7 +79,7 @@ a cada sistema operativo, los cuales se presentan a continuación:
 
       #. :ref:`Entorno virtual Python <python_entorno_desarrollo_venv>`.
 
-      #. Instalar el paquete ``psycopg2``, ejecutando el siguiente comando:
+      #. Instalar el módulo ``psycopg2``, ejecutando el siguiente comando:
 
          .. code-block:: console
 
@@ -106,8 +105,8 @@ el siguiente comando correspondiente a tu sistema operativo:
           python3 -c "import psycopg2 ; print(psycopg2.__version__)"
 
 
-Si muestra el número de la versión instalada de ``psycopg2``, tiene correctamente instalada
-la paquete. Con esto, ya tiene todo listo para continuar.
+Si muestra el número de la versión instalada de ``psycopg2``, tiene correctamente instalado
+el módulo. Con esto, ya tiene todo listo para continuar.
 
 
 .. _python_postgresql_instalar:
@@ -165,21 +164,53 @@ Estructura de archivos
 
 Para crear la estructura de archivos del proyecto ``PostgreSQL`` debe ejecutar los siguientes comandos:
 
-Crear el directorio ``~/proyectos/postgresql/crud`` con el siguiente comando:
+Crear el directorio ``crud`` con el siguiente comando:
 
-.. code-block:: console
+.. tabs::
 
-    mkdir -p ~/proyectos/postgresql/crud && cd $_
+   .. group-tab:: Linux
 
+      Crear y acceder al directorio en un solo comando, ejecutando el siguiente comando:
 
-El comando anterior crea la siguiente estructura de directorios:
+      .. code-block:: console
 
-.. code-block:: console
-    :class: no-copy
+          mkdir -p ~/proyectos/postgresql/crud && cd $_
 
-    proyectos/
-    └── postgresql/
-        └── crud/
+      El comando anterior crea la siguiente estructura de directorios:
+
+      .. code-block:: console
+          :class: no-copy
+
+          proyectos/
+          └── postgresql/
+              └── crud/
+
+   .. group-tab:: Windows
+
+      Para realiar esta practica debe crear la estructura de archivos del proyecto, ejecute el
+      siguiente comando:
+
+      Debe crear el directorio ``crud``, ejecutando el siguiente comando:
+
+      .. code-block:: console
+
+          md .\proyectos\postgresql\crud
+
+      Debe acceder al directorio , ejecutando el siguiente comando:
+
+      .. code-block:: console
+
+          cd .\proyectos\postgresql\crud
+
+      El comando anterior crea la siguiente estructura de directorios:
+
+      .. code-block:: console
+          :class: no-copy
+
+          proyectos/
+          └── postgresql/
+              └── crud/
+
 
 Si tiene la estructura de archivo previa, entonces puede continuar con la siguiente sección.
 
@@ -230,7 +261,7 @@ para una base de datos ``PostgreSQL``:
 
 El ejemplo anterior se describe a continuación:
 
-- En la línea 1, se importa la librería ``psycopg2``.
+- En la línea 1, se importa el módulo ``psycopg2``.
 
 - En la línea 3, se define en la constante ``USER``, del usuario de conexión a la base de datos.
 
@@ -557,8 +588,62 @@ Práctica - Caso real
 --------------------
 
 A continuación se presenta una práctica más real de implementar el uso de proyectos
-con ``PostgreSQL``, a continuación la estructura de proyecto llamado ``postgresql``:
+con ``PostgreSQL`` en Python:
 
+
+Estructura de archivos
+^^^^^^^^^^^^^^^^^^^^^^
+
+Para crear la estructura de archivos del proyecto ``PostgreSQL`` debe ejecutar los siguientes comandos:
+
+.. tabs::
+
+   .. group-tab:: Linux
+
+      Crear y acceder al directorio ``sistema`` en un solo comando, ejecutando el siguiente comando:
+
+      .. code-block:: console
+
+          mkdir -p ~/proyectos/postgresql/sistema && cd $_
+
+      El comando anterior crea la siguiente estructura de directorios:
+
+      .. code-block:: console
+          :class: no-copy
+
+          proyectos/
+          └── postgresql/
+              └── sistema/
+
+      Si tiene la estructura de archivo previa, entonces puede continuar con la siguiente sección.
+
+   .. group-tab:: Windows
+
+      Para realiar esta practica debe crear la estructura de archivos del proyecto, ejecute el
+      siguiente comando:
+
+      Debe crear el directorio ``sistema``, ejecutando el siguiente comando:
+
+      .. code-block:: console
+
+          md .\proyectos\postgresql\sistema
+
+      Debe acceder al directorio , ejecutando el siguiente comando:
+
+      .. code-block:: console
+
+          cd .\proyectos\postgresql\sistema
+
+      El comando anterior crea la siguiente estructura de directorios:
+
+      .. code-block:: console
+          :class: no-copy
+
+          proyectos/
+          └── postgresql/
+              └── sistema/
+
+      Si tiene la estructura de archivo previa, entonces puede continuar con la siguiente sección.
 
 A continuación se presenta y explica el uso de cada archivo para este proyecto:
 
@@ -667,7 +752,7 @@ configuración y ejecución del código fuente.
 
       .. tip::
         Para ejecutar el comando del instalador del servidor ``PostgreSQL`` con `Docker`_ debe crear
-        un archivo llamado :file:`docker-compose.yml` en el directorio ``sistema/`` con el contenido
+        un archivo llamado :file:`docker-compose.yml` en el directorio ``sistema`` con el contenido
         anterior de dicho archivo, ejecutando el siguiente comando:
 
       .. code-block:: console
@@ -700,7 +785,7 @@ configuración y ejecución del código fuente.
 
           INFO:root:✅ ¡Conexión a la base de datos 'sistema' fue exitosa!
 
-          INFO:root:✅ ¡Fueron creado(s) -1 tabla(s) correctamente en la base de datos!
+          INFO:root:✅ ¡Fueron creado(s) 1 tabla(s) correctamente en la base de datos!
 
           INFO:root:✅ ¡Fueron insertado(s) 3 registro(s) correctamente en la tabla!
 
@@ -765,7 +850,7 @@ configuración y ejecución del código fuente.
 
       .. tip::
         Para ejecutar el comando del instalador del servidor ``PostgreSQL`` con `Docker`_ debe crear
-        un archivo llamado :file:`docker-compose.yml` en el directorio ``sistema/`` con el contenido
+        un archivo llamado :file:`docker-compose.yml` en el directorio ``sistema`` con el contenido
         anterior, ejecutando el siguiente comando:
 
       .. code-block:: console
@@ -798,7 +883,7 @@ configuración y ejecución del código fuente.
 
           INFO:root:✅ ¡Conexión a la base de datos 'sistema' fue exitosa!
 
-          INFO:root:✅ ¡Fueron creado(s) -1 tabla(s) correctamente en la base de datos!
+          INFO:root:✅ ¡Fueron creado(s) 1 tabla(s) correctamente en la base de datos!
 
           INFO:root:✅ ¡Fueron insertado(s) 3 registro(s) correctamente en la tabla!
 
@@ -893,7 +978,7 @@ en una base de datos ``PostgreSQL``, aplicando buenas prácticas de código func
 
 
 .. _`PostgreSQL`: https://www.postgresql.org/
-.. _`psycopg`: https://www.psycopg.org/docs/
+.. _`psycopg`: https://www.psycopg.org/
 .. _`psycopg2`: https://pypi.org/project/psycopg2/
 .. _`libpq`: https://www.postgresql.org/docs/current/libpq.html
 .. _`dotenv`: https://dev.to/emma_donery/python-dotenv-keep-your-secrets-safe-4ocn
