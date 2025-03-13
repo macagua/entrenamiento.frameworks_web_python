@@ -34,7 +34,7 @@ Características
 Instalación
 -----------
 
-Para instalar la librería ``sqlacodegen`` debe seguir el siguientes paso, el cual
+Para instalar la herramienta ``sqlacodegen`` debe seguir el siguientes paso, el cual
 a continuación se presentan el correspondiente comando de tu sistema operativo:
 
 .. tabs::
@@ -73,7 +73,7 @@ comando correspondiente a tu sistema operativo:
 
 
 Si muestra el nombre del paquete como ``sqlacodegen``, tiene correctamente instalada
-la librería. Con esto, ya tiene todo listo para continuar.
+la herramienta. Con esto, ya tiene todo listo para continuar.
 
 
 ----
@@ -111,12 +111,12 @@ Conexión al Engine
 ------------------
 
 Luego configura el :ref:`engine <python_sqlalchemy_engine>` (cadena de conexión)
-para la DB respectiva. Para esto se explican algunas configuraciones, para SQLite,
+para la DB respectiva. Para esto se explican algunas configuraciones, para :ref:`SQLite <python_modulo_sqlite3>`,
 :ref:`MySQL <python_pkg_mysql>` y :ref:`PostgreSQL <python_pkg_postgresql>`
 a continuación:
 
 .. tip::
-    Cada cadena de conexión necesita que se instale la librería dependiente.
+    Cada cadena de conexión necesita que se instale el módulo dependiente.
 
 .. _python_sqlacodegen_sqlite:
 
@@ -160,9 +160,9 @@ los cuales deben ser reemplazadas con sus propios datos en la línea de comando 
 :command:`sqlacodegen`.
 
 .. tip::
-    Para conectarte al servidor ``MySQL`` necesite el paquete :ref:`PyMySQL <python_mysql_instalar>`.
+    Para conectarte al servidor ``MySQL`` necesite el módulo :ref:`PyMySQL <python_mysql_instalar>`.
 
-Luego ya teniendo instalado el paquete ``PyMySQL`` debe ejecutar el siguiente comando
+Luego ya teniendo instalado el módulo ``PyMySQL`` debe ejecutar el siguiente comando
 de ``sqlacodegen``, los parámetros deben ser reemplazadas con sus propios datos en la
 línea de comando:
 
@@ -198,9 +198,9 @@ los cuales deben ser reemplazadas con sus propios datos en la línea de comando 
 :command:`sqlacodegen`.
 
 .. tip::
-    Para conectarte al servidor ``PostgreSQL`` necesite el paquete :ref:`psycopg2 <python_psycopg2_instalar>`.
+    Para conectarte al servidor ``PostgreSQL`` necesite el módulo :ref:`psycopg2 <python_psycopg2_instalar>`.
 
-Luego ya teniendo instalado el paquete ``psycopg2`` debe ejecutar el siguiente comando
+Luego ya teniendo instalado el módulo ``psycopg2`` debe ejecutar el siguiente comando
 de ``sqlacodegen``, los parámetros deben ser reemplazadas con sus propios datos en la
 línea de comando:
 

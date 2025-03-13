@@ -66,8 +66,8 @@ Lección 2 - Persistencia de datos
 - `Persistencia e intercambio de datos <https://rico-schmidt.name/pymotw-3/persistence.html>`_.
 
 
-Librería pickle
-^^^^^^^^^^^^^^^
+Módulo pickle
+^^^^^^^^^^^^^
 
 - `pickle - Serialización de objetos Python <https://docs.python.org/es/3.11/library/pickle.html>`_.
 
@@ -76,14 +76,16 @@ Librería pickle
 - `Python: Serialización de objetos <http://mundogeek.net/archivos/2008/05/20/python-serializacion-de-objetos/>`_.
 
 
-ZODB
-^^^^
+Librería ZODB
+^^^^^^^^^^^^^
 
 - `ZODB - a native object database for Python <https://zodb.org/en/latest/>`_.
 
-- `ZODB · PyPI <https://pypi.org/project/ZODB/>`_.
+- `ZODB, a Python object-oriented database - PyPI <https://pypi.org/project/ZODB/>`_.
 
 - `ZODB · Python object-oriented database <https://github.com/zopefoundation/ZODB>`_.
+
+- `ZODB browser - PyPI <https://pypi.org/project/zodbbrowser/>`_.
 
 
 Base de datos relacional
@@ -112,8 +114,8 @@ Interfaz DB-API
 - `Databases - The Hitchhiker's Guide to Python <https://docs.python-guide.org/scenarios/db/>`_.
 
 
-Librería sqlite3
-^^^^^^^^^^^^^^^^
+Módulo sqlite3
+^^^^^^^^^^^^^^
 
 - `sqlite3 — DB-API 2.0 interfaz para bases de datos SQLite <https://docs.python.org/es/3.11/library/sqlite3.html>`_.
 
@@ -124,12 +126,20 @@ Librería sqlite3
 - `How To Use the sqlite3 Module in Python 3 <https://www.digitalocean.com/community/tutorials/how-to-use-the-sqlite3-module-in-python-3>`_.
 
 
-Librería psycopg
-^^^^^^^^^^^^^^^^
+Módulo psycopg
+^^^^^^^^^^^^^^
 
 - `Psycopg - PostgreSQL database adapter for Python — Psycopg 2.9.9 documentation <https://www.psycopg.org/docs/index.html>`_.
 
 - `psycopg - PostgreSQL database adapter for Python - PyPI <https://pypi.org/project/psycopg/>`_.
+
+
+Módulo PyMySQL
+^^^^^^^^^^^^^^
+
+- `PyMySQL - PostgreSQL database adapter for Python - PyPI <https://pymysql.readthedocs.io/en/latest/>`_.
+
+- `MySQL <https://es.wikipedia.org/wiki/MySQL>`_.
 
 
 Librería SQLAlchemy
@@ -142,8 +152,8 @@ Librería SQLAlchemy
 - `Patrón de diseño ORM <https://es.wikipedia.org/wiki/Mapeo_objeto-relacional>`_.
 
 
-Librería sqlacodegen
-^^^^^^^^^^^^^^^^^^^^
+Autogenerar modelos SQLAlchemy
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 - `sqlacodegen,  Automatic model code generator for SQLAlchemy - PyPI <https://pypi.org/project/sqlacodegen/>`_.
 

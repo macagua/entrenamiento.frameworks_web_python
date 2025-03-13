@@ -14,16 +14,18 @@ MySQL
 
     Logotipo de MySQL
 
-`PyMySQL`_, es un paquete contiene una librería cliente MySQL puramente en Python,
-basada en la especificación :ref:`PEP 249 <python_dbapi>`.
+El módulo `PyMySQL`_, es el adaptador de base de datos ``MySQL`` para el lenguaje de
+programación Python. Sus principales características son la implementación de la especificación
+Python :ref:`DB-API 2.0 <python_dbapi>` y que esta desarrollado puramente en Python.
 
-A diferencia de :ref:`SQLite <python_modulo_sqlite3>`, no hay un módulo Python SQL
-predeterminado en la librería estándar de Python, que pueda usar para conectarse a una
-base de datos ``MySQL``. En su lugar, deberá instalar un controlador Python SQL
-para ``MySQL`` para poder interactuar con base de datos desde aplicaciones de Python.
+A diferencia del módulo :ref:`SQLite <python_modulo_sqlite3>`, no hay un módulo Python SQL predeterminado en
+la :ref:`librería estándar de Python <python_libreria_estandar>`, que pueda usar para conectarse a una
+base de datos ``MySQL``. En su lugar, deberá instalar un módulo externor que funja como controlador
+Python SQL para el servidor ``MySQL`` para poder interactuar con base de datos desde aplicaciones de
+Python.
 
 .. tip::
-    Es el adaptador de base de datos `MySQL`_ más popular para el lenguaje de programación *Python*.
+    Es un adaptador de base de datos `MySQL`_ para el lenguaje de programación *Python*.
 
 
 .. _python_pymysql_instalar:
@@ -31,17 +33,16 @@ para ``MySQL`` para poder interactuar con base de datos desde aplicaciones de Py
 Instalación
 -----------
 
-Para conectarte al servidor ``MySQL`` necesita el paquete `PyMySQL`_. Esto
-significa que debe instalar ``PyMySQL`` ejecutando los siguientes comandos correspondiente
-a cada sistema operativo, los cuales se presentan a continuación:
+Para conectarte al servidor ``MySQL`` necesita el módulo `PyMySQL`_. Esto significa que debe instalar
+``PyMySQL`` ejecutando los siguientes comandos correspondiente a cada sistema operativo, los cuales se
+presentan a continuación:
 
 .. tabs::
 
    .. group-tab:: Linux
 
-
-      Para trabajar una aplicación con bases de datos relacionales ``PostgreSQL`` requiere
-      instalar las siguientes librerías:
+      Para trabajar una aplicación con bases de datos relacionales ``MySQL`` requiere
+      instalar las siguientes librerías/módulos:
 
       #. :ref:`Entorno de desarrollo <python_entorno_desarrollo>`.
 
@@ -49,7 +50,7 @@ a cada sistema operativo, los cuales se presentan a continuación:
 
       #. :ref:`Entorno virtual Python <python_entorno_desarrollo_venv>`.
 
-      #. Paquete ``PyMySQL``, ejecutando el siguiente comando:
+      #. Instalar el módulo ``PyMySQL``, ejecutando el siguiente comando:
 
          .. code-block:: console
 
@@ -61,7 +62,7 @@ a cada sistema operativo, los cuales se presentan a continuación:
 
       #. :ref:`Entorno virtual Python <python_entorno_desarrollo_venv>`.
 
-      #. Instalar el paquete ``PyMySQL``, ejecutando el siguiente comando:
+      #. Instalar el módulo ``PyMySQL``, ejecutando el siguiente comando:
 
          .. code-block:: console
 
@@ -87,14 +88,14 @@ el siguiente comando correspondiente a tu sistema operativo:
           python3 -c "import pymysql ; print(pymysql.__version__)"
 
 
-Si muestra el numero de la versión instalada de ``PyMySQL``, tiene correctamente instalada
-la paquete. Con esto, ya tiene todo listo para continuar.
+Si muestra el número de la versión instalada de ``PyMySQL``, tiene correctamente instalado
+el módulo. Con esto, ya tiene todo listo para continuar.
 
 
 .. _python_mysql_instalar:
 
 Servidor MySQL
-'''''''''''''''
+^^^^^^^^^^^^^^
 
 Para instalar el servidor ``MySQL`` existen varias formas de realizarlo, para en este caso
 se realizara con la tecnología `Docker`_. Esto significa que debe instalar en tu sistema operativo:
@@ -126,21 +127,53 @@ Estructura de archivos
 
 Para crear la estructura de archivos del proyecto ``MySQL`` debe ejecutar los siguientes comandos:
 
-Crear el directorio ``~/proyectos/mysql/crud`` con el siguiente comando:
+Crear el directorio ``crud`` con el siguiente comando:
 
-.. code-block:: console
+.. tabs::
 
-    mkdir -p ~/proyectos/mysql/crud && cd $_
+   .. group-tab:: Linux
 
+      Crear y acceder al directorio en un solo comando, ejecutando el siguiente comando:
 
-El comando anterior crea la siguiente estructura de directorios:
+      .. code-block:: console
 
-.. code-block:: console
-    :class: no-copy
+          mkdir -p ~/proyectos/mysql/crud && cd $_
 
-    proyectos/
-    └── mysql/
-        └── crud/
+      El comando anterior crea la siguiente estructura de directorios:
+
+      .. code-block:: console
+          :class: no-copy
+
+          proyectos/
+          └── mysql/
+              └── crud/
+
+   .. group-tab:: Windows
+
+      Para realiar esta practica debe crear la estructura de archivos del proyecto, ejecute el
+      siguiente comando:
+
+      Debe crear el directorio ``crud``, ejecutando el siguiente comando:
+
+      .. code-block:: console
+
+          md .\proyectos\mysql\crud
+
+      Debe acceder al directorio , ejecutando el siguiente comando:
+
+      .. code-block:: console
+
+          cd .\proyectos\mysql\crud
+
+      El comando anterior crea la siguiente estructura de directorios:
+
+      .. code-block:: console
+          :class: no-copy
+
+          proyectos/
+          └── mysql/
+              └── crud/
+
 
 Si tiene la estructura de archivo previa, entonces puede continuar con la siguiente sección.
 
@@ -191,7 +224,7 @@ para una base de datos ``MySQL``:
 
 El ejemplo anterior se describe a continuación:
 
-- En la línea 1, se importa la librería ``pymysql``.
+- En la línea 1, se importa el módulo ``pymysql``.
 
 - En la línea 3, se define en la constante ``USER``, del usuario de conexión a la base de datos.
 
@@ -518,8 +551,62 @@ Práctica - Caso real
 --------------------
 
 A continuación se presenta una práctica más real de implementar el uso de proyectos
-con ``MySQL``, a continuación la estructura de proyecto llamado ``mysql``:
+con ``MySQL`` en Python:
 
+
+Estructura de archivos
+^^^^^^^^^^^^^^^^^^^^^^
+
+Para crear la estructura de archivos del proyecto ``MySQL`` debe ejecutar los siguientes comandos:
+
+.. tabs::
+
+   .. group-tab:: Linux
+
+      Crear y acceder al directorio ``sistema`` en un solo comando, ejecutando el siguiente comando:
+
+      .. code-block:: console
+
+          mkdir -p ~/proyectos/mysql/sistema && cd $_
+
+      El comando anterior crea la siguiente estructura de directorios:
+
+      .. code-block:: console
+          :class: no-copy
+
+          proyectos/
+          └── mysql/
+              └── sistema/
+
+      Si tiene la estructura de archivo previa, entonces puede continuar con la siguiente sección.
+
+   .. group-tab:: Windows
+
+      Para realiar esta practica debe crear la estructura de archivos del proyecto, ejecute el
+      siguiente comando:
+
+      Debe crear el directorio ``sistema``, ejecutando el siguiente comando:
+
+      .. code-block:: console
+
+          md .\proyectos\mysql\sistema
+
+      Debe acceder al directorio , ejecutando el siguiente comando:
+
+      .. code-block:: console
+
+          cd .\proyectos\mysql\sistema
+
+      El comando anterior crea la siguiente estructura de directorios:
+
+      .. code-block:: console
+          :class: no-copy
+
+          proyectos/
+          └── mysql/
+              └── sistema/
+
+      Si tiene la estructura de archivo previa, entonces puede continuar con la siguiente sección.
 
 A continuación se presenta y explica el uso de cada archivo para este proyecto:
 
@@ -628,7 +715,7 @@ configuración y ejecución del código fuente.
 
       .. tip::
         Para ejecutar el comando del instalador del servidor ``MySQL`` con `Docker`_ debe crear
-        un archivo llamado :file:`docker-compose.yml` en el directorio ``sistema/`` con el contenido
+        un archivo llamado :file:`docker-compose.yml` en el directorio ``sistema`` con el contenido
         anterior de dicho archivo, ejecutando el siguiente comando:
 
       .. code-block:: console
@@ -661,7 +748,7 @@ configuración y ejecución del código fuente.
 
           INFO:root:✅ ¡Conexión a la base de datos 'sistema' fue exitosa!
 
-          INFO:root:✅ ¡Fueron creado(s) 0 tabla(s) correctamente en la base de datos!
+          INFO:root:✅ ¡Fueron creado(s) 1 tabla(s) correctamente en la base de datos!
 
           INFO:root:✅ ¡Fueron insertado(s) 3 registro(s) correctamente en la tabla!
 
@@ -726,7 +813,7 @@ configuración y ejecución del código fuente.
 
       .. tip::
         Para ejecutar el comando del instalador del servidor ``MySQL`` con `Docker`_ debe crear
-        un archivo llamado :file:`docker-compose.yml` en el directorio ``sistema/`` con el contenido
+        un archivo llamado :file:`docker-compose.yml` en el directorio ``sistema`` con el contenido
         anterior, ejecutando el siguiente comando:
 
       .. code-block:: console
@@ -759,7 +846,7 @@ configuración y ejecución del código fuente.
 
           INFO:root:✅ ¡Conexión a la base de datos 'sistema' fue exitosa!
 
-          INFO:root:✅ ¡Fueron creado(s) 0 tabla(s) correctamente en la base de datos!
+          INFO:root:✅ ¡Fueron creado(s) 1 tabla(s) correctamente en la base de datos!
 
           INFO:root:✅ ¡Fueron insertado(s) 3 registro(s) correctamente en la tabla!
 

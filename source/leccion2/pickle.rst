@@ -23,8 +23,8 @@ Python ofrece tres módulos diferentes en la biblioteca estándar que le permite
 
 .. _python_modulo_pickle:
 
-Librería pickle
-----------------
+Módulo pickle
+-------------
 
 El módulo `pickle`_ implementa protocolos binarios para **serializar** y **deserializar**
 una estructura de objetos Python.

@@ -28,7 +28,7 @@ datos más grande como :ref:`PostgreSQL <python_pkg_postgresql>` u `Oracle <http
 Instalación
 -----------
 
-La librería ``sqlite3`` esta incluida en librería estándar de Python, puede probar la
+El módulo ``sqlite3`` esta incluida en :ref:`librería estándar de Python <python_libreria_estandar>`, puede probar la
 instalación existe, ejecutando el siguiente comando:
 
 .. tabs::
@@ -45,9 +45,10 @@ instalación existe, ejecutando el siguiente comando:
 
           python3 -c "import sqlite3 ; print(sqlite3.__package__)"
 
-Si muestra el nombre del paquete  ``sqlite3``, tiene instalado la librería.
+Si muestra el nombre del módulo ``sqlite3``, tiene correctamente instalado el módulo.
+Con esto, ya tiene todo listo para continuar.
 
-Adicionalmente puedes instalar administradores de base de datos SQLite nativos para sistemas
+Adicionalmente puedes instalar administradores de base de datos ``SQLite`` nativos para sistemas
 operativos Linux y Windows, a continuación se presentan alternativas:
 
 
@@ -94,7 +95,7 @@ los modos de instalación:
           Use ".open FILENAME" to reopen on a persistent database.
           sqlite>
 
-      Si muestra la consola SQLite ``sqlite>``, tiene correctamente instalada el administrador
+      Si muestra la consola SQLite ``sqlite>``, tiene correctamente instalado el administrador
       de base de datos nativa ``sqlite3`` por línea de comando.
 
       .. note::
@@ -258,8 +259,8 @@ los modos de instalación:
 
           DB Browser for SQLite en Linux
 
-      Si muestra la interfaz gráfica de ``sqlitebrowser``, tiene correctamente instalada el administrador
-      de base de datos nativo de ``sqlite3``.
+      Si muestra la interfaz gráfica de ``sqlitebrowser``, tiene correctamente instalado el administrador
+      de base de datos gráfico nativo de ``sqlite3``.
 
    .. group-tab:: Windows
 
@@ -291,21 +292,53 @@ Estructura de archivos
 
 Para crear la estructura de archivos del proyecto ``SQLite`` debe ejecutar los siguientes comandos:
 
-Crear el directorio ``~/proyectos/sqlite/crud`` con el siguiente comando:
+Crear el directorio ``crud`` con el siguiente comando:
 
-.. code-block:: console
+.. tabs::
 
-    mkdir -p ~/proyectos/sqlite/crud && cd $_
+   .. group-tab:: Linux
 
+      Crear y acceder al directorio en un solo comando, ejecutando el siguiente comando:
 
-El comando anterior crea la siguiente estructura de directorios:
+      .. code-block:: console
 
-.. code-block:: console
-    :class: no-copy
+          mkdir -p ~/proyectos/sqlite/crud && cd $_
 
-    proyectos/
-    └── sqlite/
-        └── crud/
+      El comando anterior crea la siguiente estructura de directorios:
+
+      .. code-block:: console
+          :class: no-copy
+
+          proyectos/
+          └── sqlite/
+              └── crud/
+
+   .. group-tab:: Windows
+
+      Para realiar esta practica debe crear la estructura de archivos del proyecto, ejecute el
+      siguiente comando:
+
+      Debe crear el directorio ``crud``, ejecutando el siguiente comando:
+
+      .. code-block:: console
+
+          md .\proyectos\sqlite\crud
+
+      Debe acceder al directorio , ejecutando el siguiente comando:
+
+      .. code-block:: console
+
+          cd .\proyectos\sqlite\crud
+
+      El comando anterior crea la siguiente estructura de directorios:
+
+      .. code-block:: console
+          :class: no-copy
+
+          proyectos/
+          └── sqlite/
+              └── crud/
+
 
 Si tiene la estructura de archivo previa, entonces puede continuar con la siguiente sección.
 
@@ -318,8 +351,8 @@ Si tiene la estructura de archivo previa, entonces puede continuar con la siguie
 Cadenas de conexión
 -------------------
 
-Para definir el método ``connect`` debe definir las cadenas de conexión con
-``SQLite`` como se describe a continuación:
+Para definir el método ``connect`` debe definir las cadenas de conexión con ``SQLite``
+como se describe a continuación:
 
 ``DB_PATH``
     Ruta absoluta o relativa del archivo de base de datos ``SQLite``.
@@ -344,9 +377,9 @@ para una base de datos ``SQLite``:
 
 El ejemplo anterior se describe a continuación:
 
-- En la línea 1, se importa la librería ``os`` de la librería estándar Python.
+- En la línea 1, se importa el módulo ``os`` de la :ref:`librería estándar de Python <python_libreria_estandar>`.
 
-- En la línea 2, se importa la librería ``sqlite3`` de la librería estándar Python.
+- En la línea 2, se importa el módulo ``sqlite3`` de la :ref:`librería estándar de Python <python_libreria_estandar>`.
 
 - En la línea 4, se define en la constante ``DB_PATH`` la ruta absoluta usada para guardar la base de datos.
 
