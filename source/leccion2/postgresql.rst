@@ -187,9 +187,6 @@ Crear el directorio ``crud`` con el siguiente comando:
 
    .. group-tab:: Windows
 
-      Para realiar esta practica debe crear la estructura de archivos del proyecto, ejecute el
-      siguiente comando:
-
       Debe crear el directorio ``crud``, ejecutando el siguiente comando:
 
       .. code-block:: console
@@ -618,9 +615,6 @@ Para crear la estructura de archivos del proyecto ``PostgreSQL`` debe ejecutar l
       Si tiene la estructura de archivo previa, entonces puede continuar con la siguiente sección.
 
    .. group-tab:: Windows
-
-      Para realiar esta practica debe crear la estructura de archivos del proyecto, ejecute el
-      siguiente comando:
 
       Debe crear el directorio ``sistema``, ejecutando el siguiente comando:
 
