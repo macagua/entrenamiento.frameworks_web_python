@@ -202,9 +202,9 @@ veremos más adelante en este documento, abre muchas posibilidades.
 Instalación
 -----------
 
-Para conectarte a una ``ZODB`` necesita el paquete `ZODB`_. Esto
-significa que debe instalar ``ZODB`` ejecutando el siguiente comando, el cual
-a continuación se presentan el correspondiente comando de tu sistema operativo:
+Para conectarte hacia una ``ZODB`` necesita la librería `ZODB`_. Esto significa que debe instalar
+``ZODB`` ejecutando el siguiente comando correspondiente a cada sistema operativo, el cual se
+presentan a continuación:
 
 .. tabs::
 
@@ -239,7 +239,7 @@ el siguiente comando correspondiente a tu sistema operativo:
 
 
 Si muestra el nombre del paquete ``ZODB`` en la terminal, tiene
-correctamente instalada la paquete. Con esto, ya tiene todo listo para continuar.
+correctamente instalada la librería. Con esto, ya tiene todo listo para continuar.
 
 Adicionalmente puedes instalar un cliente de base de datos ZODB, a continuación se
 presentan alternativas:
@@ -305,8 +305,8 @@ el siguiente comando:
             --debug           enable debug logging
             --rw              open the database read-write (default: read-only)
 
-      Si tiene disponibles el comando ``zodbbrowser``, tiene correctamente instalada el cliente
-      de base de datos nativa ``ZODB`` por linea de comando.
+      Si tiene disponibles el comando :command:`zodbbrowser`, tiene correctamente instalado el cliente
+      de base de datos gráfico nativo de ``ZODB``.
 
       .. note::
 
@@ -339,14 +339,14 @@ el siguiente comando:
             --debug           enable debug logging
             --rw              open the database read-write (default: read-only)
 
-      Si tiene disponibles el comando ``zodbbrowser``, tiene correctamente instalada el cliente
-      de base de datos nativa ``ZODB`` por linea de comando.
+      Si tiene disponibles el comando :command:`zodbbrowser`, tiene correctamente instalado el cliente
+      de base de datos gráfico nativo de ``ZODB``.
 
       .. note::
 
         Más información consulte https://pypi.org/project/zodbbrowser/
 
-Ejecute el comando ``zodbrowser`` especificando un nombre de archivo ZODB, ejecutando el siguiente comando:
+Ejecute el comando :command:`zodbrowser` especificando un nombre de archivo ``ZODB``, ejecutando el siguiente comando:
 
 .. tabs::
 
@@ -383,8 +383,8 @@ a continuación:
 
     ZODB browser
 
-Si muestra la interfaz gráfica de ``zodbbrowser``, tiene correctamente instalada el cliente
-de base de datos ``ZODB``.
+Si muestra la interfaz gráfica de ``zodbbrowser``, tiene correctamente instalado el cliente
+de base de datos gráfico nativo de ``ZODB``.
 
 
 ----
@@ -426,15 +426,15 @@ para una base de datos ``ZODB``:
 
 El ejemplo anterior se describe a continuación:
 
-- En la linea 1, se importa la librería ``os`` de la librería estándar Python.
+- En la línea 1, se importa el módulo ``os`` de la :ref:`librería estándar de Python <python_libreria_estandar>`.
 
-- En la linea 2, se importa la librería ``ZODB`` de la librería estándar Python.
+- En la línea 2, se importa el módulo ``ZODB``.
 
-- En la linea 4, se define en la constante ``DB_PATH`` la ruta absoluta usada para guardar la base de datos.
+- En la línea 4, se define en la constante ``DB_PATH`` la ruta absoluta usada para guardar la base de datos.
 
-- En la linea 5, se define en la constante ``DB_FILE`` el nombre de la base de datos.
+- En la línea 5, se define en la constante ``DB_FILE`` el nombre de la base de datos.
 
-- En la linea 6, se define en la constante ``DB`` la ruta completa usada para leer la base de datos.
+- En la línea 6, se define en la constante ``DB`` la ruta completa usada para leer la base de datos.
 
 De esta forma se crea una cadena de conexión para ``ZODB`` para ser usada por el método ``open``.
 
@@ -728,17 +728,19 @@ A continuación se presenta una práctica más real de implementar el uso de pro
 con ``ZODB``, a continuación la estructura de proyecto llamado ``sistema``:
 
 .. code-block:: console
+    :class: no-copy
 
-    zodb/
-    └── sistema/
-        ├── classes/
-        │   ├── __init__.py
-        │   ├── cliente.py
-        │   └── producto.py
-        ├── __init__.py
-        ├── main.py
-        ├── requirements.txt
-        └── settings.py
+    proyectos/
+    └── zodb/
+        └── sistema/
+            ├── classes/
+            │   ├── __init__.py
+            │   ├── cliente.py
+            │   └── producto.py
+            ├── __init__.py
+            ├── main.py
+            ├── requirements.txt
+            └── settings.py
 
 
 A continuación se presenta y explica el uso de cada archivo para este proyecto:
@@ -800,7 +802,7 @@ sistema operativo:
           pip3 install -r requirements.txt
 
       .. tip::
-        Para ejecutar el código fuente de esta practica debe invocar al Módulo :file:`main.py`,
+        Para ejecutar el código fuente de esta práctica debe invocar al módulo :file:`main.py`,
         abra una consola de comando, acceda al directorio donde se encuentra la estructura previa
         y ejecute el siguiente comando:
 
@@ -849,22 +851,24 @@ sistema operativo:
       La ejecucion anterior generar la siguiente estructura:
 
       .. code-block:: console
+          :class: no-copy
 
-          zodb/
-          └── sistema/
-              ├── classes/
-              │   ├── __init__.py
-              │   ├── cliente.py
-              │   └── producto.py
-              ├── filestorage/
-              │   ├── inventario.fs
-              │   ├── inventario.fs.index
-              │   ├── inventario.fs.lock
-              │   └── inventario.fs.tmp
-              ├── __init__.py
-              ├── main.py
-              ├── requirements.txt
-              └── settings.py
+          proyectos/
+          └── zodb/
+              └── sistema/
+                  ├── classes/
+                  │   ├── __init__.py
+                  │   ├── cliente.py
+                  │   └── producto.py
+                  ├── filestorage/
+                  │   ├── inventario.fs
+                  │   ├── inventario.fs.index
+                  │   ├── inventario.fs.lock
+                  │   └── inventario.fs.tmp
+                  ├── __init__.py
+                  ├── main.py
+                  ├── requirements.txt
+                  └── settings.py
 
    .. group-tab:: Windows
 
@@ -875,7 +879,7 @@ sistema operativo:
           pip3 install -r requirements.txt
 
       .. tip::
-        Para ejecutar el código fuente de esta practica debe invocar al Módulo :file:`main.py`,
+        Para ejecutar el código fuente de esta práctica debe invocar al módulo :file:`main.py`,
         abra una consola de comando, acceda al directorio donde se encuentra la estructura previa
         y ejecute el siguiente comando:
 
@@ -916,22 +920,24 @@ sistema operativo:
       La ejecucion anterior generar la siguiente estructura:
 
       .. code-block:: console
+          :class: no-copy
 
-          zodb/
-          └── sistema/
-              ├── classes/
-              │   ├── __init__.py
-              │   ├── cliente.py
-              │   └── producto.py
-              ├── filestorage/
-              │   ├── inventario.fs
-              │   ├── inventario.fs.index
-              │   ├── inventario.fs.lock
-              │   └── inventario.fs.tmp
-              ├── __init__.py
-              ├── main.py
-              ├── requirements.txt
-              └── settings.py
+          proyectos/
+          └── zodb/
+              └── sistema/
+                  ├── classes/
+                  │   ├── __init__.py
+                  │   ├── cliente.py
+                  │   └── producto.py
+                  ├── filestorage/
+                  │   ├── inventario.fs
+                  │   ├── inventario.fs.index
+                  │   ├── inventario.fs.lock
+                  │   └── inventario.fs.tmp
+                  ├── __init__.py
+                  ├── main.py
+                  ├── requirements.txt
+                  └── settings.py
 
 Asi de esta forma puede ingresar, consultar, actualizar y eliminar
 registro en un archivo serializado de objetos python ``ZODB``.
