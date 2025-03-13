@@ -152,8 +152,8 @@ Librería SQLAlchemy
 - `Patrón de diseño ORM <https://es.wikipedia.org/wiki/Mapeo_objeto-relacional>`_.
 
 
-Librería sqlacodegen
-^^^^^^^^^^^^^^^^^^^^
+Autogenerar modelos SQLAlchemy
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 - `sqlacodegen,  Automatic model code generator for SQLAlchemy - PyPI <https://pypi.org/project/sqlacodegen/>`_.
 
