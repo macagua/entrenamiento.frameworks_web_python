@@ -66,8 +66,8 @@ Lección 2 - Persistencia de datos
 - `Persistencia e intercambio de datos <https://rico-schmidt.name/pymotw-3/persistence.html>`_.
 
 
-Librería pickle
-^^^^^^^^^^^^^^^
+Módulo pickle
+^^^^^^^^^^^^^
 
 - `pickle - Serialización de objetos Python <https://docs.python.org/es/3.11/library/pickle.html>`_.
 
