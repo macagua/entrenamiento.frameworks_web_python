@@ -623,7 +623,7 @@ sistema operativo:
       nuevamente, para cuidar la creación de los datos iniciales.
 
 
-Asi de esta forma puede usar ``sqlacodegen`` para generar modelos ``SQLAlchemy`` desde
+Así de esta forma puede usar ``sqlacodegen`` para generar modelos ``SQLAlchemy`` desde
 una base de datos existente e implementar las operaciones ingresar, consultar, actualizar
 y eliminar registro en las tablas.
 

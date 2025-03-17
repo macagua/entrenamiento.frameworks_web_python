@@ -570,7 +570,7 @@ Si requiere eliminar registro de tabla, a continuación tiene un ejemplo:
 De esta forma puede eliminar registros en una tabla dentro una base de datos ``PostgreSQL``.
 
 .. note::
-    Asi de esta forma puede realizar las operaciones de ingresar, consultar, actualizar
+    Así de esta forma puede realizar las operaciones de ingresar, consultar, actualizar
     y eliminar registro en una tabla en una base de datos ``PostgreSQL`` de forma separada
     en programas Python, en la siguiente práctica se mostrara un caso real de uso de todos
     estas operaciones en un solo programa Python.
@@ -929,7 +929,7 @@ configuración y ejecución del código fuente.
                   └── settings.py
 
 
-Asi de esta forma puede ingresar, consultar, actualizar y eliminar registro en una
+Así de esta forma puede ingresar, consultar, actualizar y eliminar registro en una
 tabla usando ``PostgreSQL``.
 
 
@@ -950,7 +950,7 @@ tabla usando ``PostgreSQL``.
     - :download:`settings.py <../../recursos/leccion2/postgresql/sistema/settings.py>`.
 
 
-Asi de esta forma puede replicar una práctica real de un proyecto para realizar operaciones
+Así de esta forma puede replicar una práctica real de un proyecto para realizar operaciones
 en una base de datos ``PostgreSQL``, aplicando buenas prácticas de código funcional.
 
 

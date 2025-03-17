@@ -114,7 +114,6 @@ Luego de instalar las herramientas necesarias, debe ejecutar el siguiente comand
 El comando anterior crea un contenedor Docker llamado ``mysql`` con la version ``latest``,
 ejecutándose en el puerto ``3306`` con la base de datos llamada ``sistema`` e incluye un punto de montaje ``my_data``.
 
-
 De esta forma ha instalado y ejecutado el servidor ``MySQL`` necesario para las próximas script
 Python a ejecutar. Con esto, ya tiene todo listo para continuar.
 
@@ -533,7 +532,7 @@ Si requiere eliminar registro de tabla, a continuación tiene un ejemplo:
 De esta forma puede eliminar registros en una tabla dentro una base de datos ``MySQL``.
 
 .. note::
-    Asi de esta forma puede realizar las operaciones de ingresar, consultar, actualizar
+    Así de esta forma puede realizar las operaciones de ingresar, consultar, actualizar
     y eliminar registro en una tabla en una base de datos ``MySQL`` de forma separada
     en programas Python, en la siguiente práctica se mostrara un caso real de uso de todos
     estas operaciones en un solo programa Python.
@@ -892,7 +891,7 @@ configuración y ejecución del código fuente.
                   └── settings.py
 
 
-Asi de esta forma puede ingresar, consultar, actualizar y eliminar registro en una
+Así de esta forma puede ingresar, consultar, actualizar y eliminar registro en una
 tabla usando ``MySQL``.
 
 
@@ -913,7 +912,7 @@ tabla usando ``MySQL``.
     - :download:`settings.py <../../recursos/leccion2/mysql/sistema/settings.py>`.
 
 
-Asi de esta forma puede replicar una practica real de un proyecto para realizar operaciones
+Así de esta forma puede replicar una práctica real de un proyecto para realizar operaciones
 en una base de datos ``MySQL``, aplicando buenas prácticas de código funcional.
 
 
