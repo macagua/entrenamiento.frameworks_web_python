@@ -3,11 +3,6 @@
 Serialización de objetos
 ========================
 
-.. note::
-    **Propósito:** es una libraría para implementa protocolos binarios para **serializar**
-    y **deserializar** una estructura de objetos Python, es decir, convertirlos en un flujo
-    de bytes que se puede almacenar o transmitir por una red.
-
 La *serialización* es el proceso de convertir un objeto en una secuencia de bytes
 para almacenarlo o transmitirlo a la memoria, a una base de datos o a un archivo.
 Su propósito principal es guardar el estado de un objeto para poder volver a
@@ -25,6 +20,11 @@ Python ofrece tres módulos diferentes en la biblioteca estándar que le permite
 
 Módulo pickle
 -------------
+
+.. note::
+    **Propósito:** es una libraría para implementa protocolos binarios para **serializar**
+    y **deserializar** una estructura de objetos Python, es decir, convertirlos en un flujo
+    de bytes que se puede almacenar o transmitir por una red.
 
 El módulo `pickle`_ implementa protocolos binarios para **serializar** y **deserializar**
 una estructura de objetos Python.
@@ -52,19 +52,19 @@ datos en una lista de diccionarios.
         TODO Terminar de escribir esta sección.
 
 
-    .. _python_modulo_pickle_serializar:
+    .. _python_modulo_pickle_codificar:
 
-    Serializar
-    ^^^^^^^^^^
+    Codificación
+    ^^^^^^^^^^^^
 
     .. todo::
         TODO terminar de escribir esta sección.
 
 
-    .. _python_modulo_pickle_deserializar:
+    .. _python_modulo_pickle_decodificar:
 
-    Deserializar
-    ^^^^^^^^^^^^
+    Decodificación
+    ^^^^^^^^^^^^^^
 
     .. todo::
         TODO terminar de escribir esta sección.
