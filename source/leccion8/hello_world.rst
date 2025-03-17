@@ -94,7 +94,7 @@ El comando anterior muestra cómo realizar una petición ``GET`` para obtener el
 mensaje ``Hello World``.
 
 De esta forma, se puede ver que la API funciona correctamente mediante las peticiones
-a la API usando el comando ``curl``.
+a la API usando el comando :ref:`curl <python_http_client_curl>`.
 
 
 ----

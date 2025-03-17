@@ -98,7 +98,7 @@ ejecutando el siguiente comando:
     printf '[global]\ndownload_cache = ~/.cache/pip\n' \
             >> ~/.pip/pip.conf
 
-Asi cada ves que ejecute el comando ``pip3 install`` la herramienta :ref:`pip <python_entorno_desarrollo_pip>`
+Así cada ves que ejecute el comando :command:`pip3 install` de la herramienta :ref:`pip <python_entorno_desarrollo_pip>`
 usara el directorio ``~/.cache/pip`` como directorio cache, esto permite agilizar la descarga
 de paquetes, ya que :ref:`pip <python_entorno_desarrollo_pip>` primero buscara en ese archivo
 primero, si no esta descargado, lo buscara en Internet en el repositorio :term:`PyPI`. Con esto,
@@ -164,14 +164,14 @@ seguido de la ruta absoluta o relativa del archivo previamente creado.
 
     pip3 install -r requirements.txt
 
-Luego de la instalación puede ejecuta el comando ``cookiecutter -V`` el cual ofrece
+Luego de la instalación puede ejecuta el comando :command:`cookiecutter -V` el cual ofrece
 una salida de la versión.
 
 .. code-block:: console
 
     cookiecutter -V
 
-Luego de la instalación puede ejecuta el comando ``pip3 freeze`` el cual ofrece una salida de
+Luego de la instalación puede ejecuta el comando :command:`pip3 freeze` el cual ofrece una salida de
 paquetes instalados en formato de archivos `requirements <https://pip.pypa.io/en/stable/user_guide/#requirements-files>`_.
 Los paquetes se enumeran en un ordenan de forma tal que no distingue entre mayúsculas y minúsculas.
 
@@ -250,13 +250,13 @@ ejecutando el siguiente comando:
 
     mkdir ~/virtualenv && cd $_
 
-Cree un entorno virtual llamado ``python3``, ejecutando el siguiente comando:
+Cree un entorno virtual llamado :command:`python3`, ejecutando el siguiente comando:
 
 .. code-block:: console
 
     virtualenv --python /usr/bin/python3 python3
 
-Activar el entorno virtual llamado ``python3``, ejecutando el siguiente comando:
+Activar el entorno virtual llamado :command:`python3`, ejecutando el siguiente comando:
 
 .. code-block:: console
 

@@ -152,7 +152,7 @@ El comando anterior muestra como realizar una petición ``DELETE`` con formato `
 Es decir, en realidad estás borrando la información del usuario con el id ``4`` como
 operación ``DELETE`` de una aplicación ``CRUD``.
 
-De esta forma hago las peticiones a la API usando el comando ``curl``.
+De esta forma hago las peticiones a la API usando el comando :ref:`curl <python_http_client_curl>`.
 
 
 ----
