@@ -490,7 +490,7 @@ sistema operativo:
 
           INFO:root:✅ ¡La conexión SQLite a la base de datos 'sistema.db' fue cerrada!
 
-      La ejecucion anterior generar la siguiente estructura:
+      La ejecución anterior generar la siguiente estructura:
 
       .. code-block:: console
           :class: no-copy
@@ -599,7 +599,7 @@ sistema operativo:
 
           INFO:root:✅ ¡La conexión SQLite a la base de datos 'sistema.db' fue cerrada!
 
-      La ejecucion anterior generar la siguiente estructura:
+      La ejecución anterior generar la siguiente estructura:
 
       .. code-block:: console
           :class: no-copy

@@ -848,7 +848,7 @@ sistema operativo:
 
           INFO:root:✅ ¡La conexión ZODB a la base de datos 'inventario.fs' fue cerrada!
 
-      La ejecucion anterior generar la siguiente estructura:
+      La ejecución anterior generar la siguiente estructura:
 
       .. code-block:: console
           :class: no-copy
@@ -917,7 +917,7 @@ sistema operativo:
 
           INFO:root:✅ ¡Fueron actualizados 2 registro(s) correctamente en la ZODB!
 
-      La ejecucion anterior generar la siguiente estructura:
+      La ejecución anterior generar la siguiente estructura:
 
       .. code-block:: console
           :class: no-copy

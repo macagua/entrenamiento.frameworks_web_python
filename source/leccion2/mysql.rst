@@ -875,7 +875,7 @@ configuración y ejecución del código fuente.
 
           INFO:root:✅ ¡La conexión MySQL a la base de datos 'sistema' fue cerrada!
 
-      La ejecucion anterior generar la siguiente estructura:
+      La ejecución anterior generar la siguiente estructura:
 
       .. code-block:: console
           :class: no-copy
