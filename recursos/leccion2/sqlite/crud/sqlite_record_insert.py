@@ -29,10 +29,10 @@ MULTIPLE_COLUMNS = [
 ]
 
 # Script INSERT SQL a usar al ingresar datos
-INSERT_SQL = """INSERT INTO clientes VALUES (?, ?, ?, ?, ?);"""
+INSERT_SQL_SCRIPTS = """INSERT INTO clientes VALUES (?, ?, ?, ?, ?);"""
 
 
-def insertar_registro():
+def insertar_registro(create_table_sql, insert_sql, insert_values):
     """Función para la inserción de registro de la tabla"""
 
     conexion = None
@@ -43,14 +43,14 @@ def insertar_registro():
         cursor = conexion.cursor()
         logging.info(f"✅ ¡Conectado a la base de datos '{DB_FILE}'!\n")
         # Crear la tabla productos si no existe
-        cursor.execute(CREATE_TABLE_SQL)
+        cursor.execute(create_table_sql)
         # Confirmar la creación de la tabla
         conexion.commit()
         logging.info(
             f"✅ ¡Fue creo una tabla correctamente en la base de datos '{DB_FILE}'!\n"
         )
         # Insertar nuevos registros en la tabla
-        cursor.executemany(INSERT_SQL, MULTIPLE_COLUMNS)
+        cursor.executemany(insert_sql, insert_values)
         # Confirmar la inserción de los registros
         conexion.commit()
         logging.info(
@@ -58,7 +58,7 @@ def insertar_registro():
         )
         # Insertar un nuevo registro en la tabla
         cursor.execute(
-            INSERT_SQL, (4, "Liliana", "Andradez", "3105", "+58-414-6782473")
+            insert_sql, (4, "Liliana", "Andradez", "3105", "+58-414-6782473")
         )
         # Confirmar la inserción del registro
         conexion.commit()
@@ -81,4 +81,4 @@ def insertar_registro():
 
 
 if __name__ == "__main__":
-    insertar_registro()
+    insertar_registro(CREATE_TABLE_SQL, INSERT_SQL_SCRIPTS, MULTIPLE_COLUMNS)
