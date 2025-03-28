@@ -96,7 +96,7 @@ Si requiere eliminar registro de tabla, a continuación tiene un ejemplo:
     :lines: 21-22
 
 
-Asi de esta forma puede crear una tabla, ingresar, consultar, actualizar y eliminar
+Así de esta forma puede crear una tabla, ingresar, consultar, actualizar y eliminar
 registro a dicha tabla.
 
 

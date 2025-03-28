@@ -114,7 +114,6 @@ Luego de instalar las herramientas necesarias, debe ejecutar el siguiente comand
 El comando anterior crea un contenedor Docker llamado ``mysql`` con la version ``latest``,
 ejecutándose en el puerto ``3306`` con la base de datos llamada ``sistema`` e incluye un punto de montaje ``my_data``.
 
-
 De esta forma ha instalado y ejecutado el servidor ``MySQL`` necesario para las próximas script
 Python a ejecutar. Con esto, ya tiene todo listo para continuar.
 
@@ -149,9 +148,6 @@ Crear el directorio ``crud`` con el siguiente comando:
               └── crud/
 
    .. group-tab:: Windows
-
-      Para realiar esta practica debe crear la estructura de archivos del proyecto, ejecute el
-      siguiente comando:
 
       Debe crear el directorio ``crud``, ejecutando el siguiente comando:
 
@@ -536,7 +532,7 @@ Si requiere eliminar registro de tabla, a continuación tiene un ejemplo:
 De esta forma puede eliminar registros en una tabla dentro una base de datos ``MySQL``.
 
 .. note::
-    Asi de esta forma puede realizar las operaciones de ingresar, consultar, actualizar
+    Así de esta forma puede realizar las operaciones de ingresar, consultar, actualizar
     y eliminar registro en una tabla en una base de datos ``MySQL`` de forma separada
     en programas Python, en la siguiente práctica se mostrara un caso real de uso de todos
     estas operaciones en un solo programa Python.
@@ -581,9 +577,6 @@ Para crear la estructura de archivos del proyecto ``MySQL`` debe ejecutar los si
       Si tiene la estructura de archivo previa, entonces puede continuar con la siguiente sección.
 
    .. group-tab:: Windows
-
-      Para realiar esta practica debe crear la estructura de archivos del proyecto, ejecute el
-      siguiente comando:
 
       Debe crear el directorio ``sistema``, ejecutando el siguiente comando:
 
@@ -882,7 +875,7 @@ configuración y ejecución del código fuente.
 
           INFO:root:✅ ¡La conexión MySQL a la base de datos 'sistema' fue cerrada!
 
-      La ejecucion anterior generar la siguiente estructura:
+      La ejecución anterior generar la siguiente estructura:
 
       .. code-block:: console
           :class: no-copy
@@ -898,7 +891,7 @@ configuración y ejecución del código fuente.
                   └── settings.py
 
 
-Asi de esta forma puede ingresar, consultar, actualizar y eliminar registro en una
+Así de esta forma puede ingresar, consultar, actualizar y eliminar registro en una
 tabla usando ``MySQL``.
 
 
@@ -919,7 +912,7 @@ tabla usando ``MySQL``.
     - :download:`settings.py <../../recursos/leccion2/mysql/sistema/settings.py>`.
 
 
-Asi de esta forma puede replicar una practica real de un proyecto para realizar operaciones
+Así de esta forma puede replicar una práctica real de un proyecto para realizar operaciones
 en una base de datos ``MySQL``, aplicando buenas prácticas de código funcional.
 
 

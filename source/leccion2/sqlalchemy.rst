@@ -337,7 +337,7 @@ añade el código que te muestro a continuación:
     :linenos:
     :lines: 1-34
 
-Asi de esta forma tiene definido una clase modelo llamado ``Productos`` la cual mapea
+Así de esta forma tiene definido una clase modelo llamado ``Productos`` la cual mapea
 la tabla ``productos``.
 
 .. _python_sqlalchemy_mapeo_clase_tabla:
@@ -812,7 +812,7 @@ sistema operativo:
 
           INFO:root:✅ ¡La conexión SQLite a la base de datos 'sistema.db' fue cerrada!
 
-      La ejecucion anterior generar la siguiente estructura:
+      La ejecución anterior generar la siguiente estructura:
 
       .. code-block:: console
           :class: no-copy
@@ -933,7 +933,7 @@ sistema operativo:
 
           INFO:root:✅ ¡La conexión SQLite a la base de datos 'sistema.db' fue cerrada!
 
-      La ejecucion anterior generar la siguiente estructura:
+      La ejecución anterior generar la siguiente estructura:
 
       .. code-block:: console
           :class: no-copy
@@ -957,7 +957,7 @@ sistema operativo:
       nuevamente, para cuidar la creación de los datos iniciales.
 
 
-Asi de esta forma puede ingresar, consultar, actualizar y eliminar registro en una
+Así de esta forma puede ingresar, consultar, actualizar y eliminar registro en una
 tabla usando ``SQLAlchemy``.
 
 

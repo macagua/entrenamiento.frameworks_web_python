@@ -25,7 +25,7 @@ Crear estructura de proyecto ``Django``, con el siguiente comando:
 
     mkdir -p ~/proyectos/django/helloworld && cd $_
 
-Ejecutar el comando ``django-admin`` dentro del directorio
+Ejecutar el comando :command:`django-admin` dentro del directorio
 :file:`~/proyectos/django`, con el siguiente comando:
 
 .. code-block:: console

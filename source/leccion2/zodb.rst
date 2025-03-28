@@ -712,7 +712,7 @@ El anterior código al ejecutar debe mostrar el siguiente mensaje:
     INFO:root:✅ ¡Registro eliminado correctamente!
     INFO:root:✅ ¡La conexión ZODB a la base de datos 'Data.fs' fue cerrada!
 
-Asi de esta forma puede ingresar, consultar, actualizar y eliminar
+Así de esta forma puede ingresar, consultar, actualizar y eliminar
 registro en una tabla en una base de datos ``ZODB``.
 
 
@@ -848,7 +848,7 @@ sistema operativo:
 
           INFO:root:✅ ¡La conexión ZODB a la base de datos 'inventario.fs' fue cerrada!
 
-      La ejecucion anterior generar la siguiente estructura:
+      La ejecución anterior generar la siguiente estructura:
 
       .. code-block:: console
           :class: no-copy
@@ -917,7 +917,7 @@ sistema operativo:
 
           INFO:root:✅ ¡Fueron actualizados 2 registro(s) correctamente en la ZODB!
 
-      La ejecucion anterior generar la siguiente estructura:
+      La ejecución anterior generar la siguiente estructura:
 
       .. code-block:: console
           :class: no-copy
@@ -939,7 +939,7 @@ sistema operativo:
                   ├── requirements.txt
                   └── settings.py
 
-Asi de esta forma puede ingresar, consultar, actualizar y eliminar
+Así de esta forma puede ingresar, consultar, actualizar y eliminar
 registro en un archivo serializado de objetos python ``ZODB``.
 
 

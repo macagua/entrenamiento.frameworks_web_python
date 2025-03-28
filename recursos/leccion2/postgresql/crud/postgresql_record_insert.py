@@ -5,13 +5,6 @@ import psycopg2
 
 logging.basicConfig(level=logging.INFO)
 
-# Creando una lista de filas a ingresar
-MULTIPLE_COLUMNS = [
-    (1, "Leonardo", "Caballero", "5001", "+58-412-4734567"),
-    (2, "Ana", "Poleo", "6302", "+58-426-5831297"),
-    (3, "Manuel", "Matos", "4001", "+58-414-2360943"),
-]
-
 # Script CREATE DATABASE SQL para crear la base de datos
 CREATE_DATABASE_SQL = """CREATE DATABASE sistema;"""
 
@@ -26,11 +19,18 @@ CREATE TABLE IF NOT EXISTS clientes (
     primary key(id)
 );"""
 
+# Creando una lista de filas a ingresar
+MULTIPLE_COLUMNS = [
+    (1, "Leonardo", "Caballero", "5001", "+58-412-4734567"),
+    (2, "Ana", "Poleo", "6302", "+58-426-5831297"),
+    (3, "Manuel", "Matos", "4001", "+58-414-2360943"),
+]
+
 # Script INSERT SQL a usar al ingresar datos
-INSERT_SQL = """INSERT INTO clientes VALUES (%s, %s, %s, %s, %s);"""
+INSERT_SQL_SCRIPTS = """INSERT INTO clientes VALUES (%s, %s, %s, %s, %s);"""
 
 
-def insertar_registro():
+def insertar_registro(create_table_sql, insert_sql, insert_values):
     """Función para la inserción de registro de la tabla"""
 
     conexion = None
@@ -54,14 +54,14 @@ def insertar_registro():
         cursor = conexion.cursor()
         logging.info(f"✅ ¡Conectado a la base de datos '{credenciales['database']}'!\n")
         # Crear la tabla productos si no existe
-        cursor.execute(CREATE_TABLE_SQL)
+        cursor.execute(create_table_sql)
         # Confirmar la creación de la tabla
         conexion.commit()
         logging.info(
             f"✅ ¡Fue creo una tabla correctamente en la base de datos '{credenciales['database']}'!\n"
         )
         # Insertar nuevos registros en la tabla
-        cursor.executemany(INSERT_SQL, MULTIPLE_COLUMNS)
+        cursor.executemany(insert_sql, insert_values)
         # Confirmar la inserción de los registros
         conexion.commit()
         logging.info(
@@ -69,7 +69,7 @@ def insertar_registro():
         )
         # Insertar un nuevo registro en la tabla
         cursor.execute(
-            INSERT_SQL, (4, "Liliana", "Andradez", "3105", "+58-414-6782473")
+            insert_sql, (4, "Liliana", "Andradez", "3105", "+58-414-6782473")
         )
         # Confirmar la inserción del registro
         conexion.commit()
@@ -92,4 +92,4 @@ def insertar_registro():
 
 
 if __name__ == "__main__":
-    insertar_registro()
+    insertar_registro(CREATE_TABLE_SQL, INSERT_SQL_SCRIPTS, MULTIPLE_COLUMNS)

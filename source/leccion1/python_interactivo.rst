@@ -43,7 +43,7 @@ factores:
   documentación desde los códigos fuentes Python como `Sphinx`_.
 
 La forma más fácil es iniciar tu relación con Python simplemente ejecutando
-el comando ``python`` de la siguiente forma:
+el comando :command:`python` de la siguiente forma:
 
 .. code-block:: console
 
@@ -411,7 +411,7 @@ Ejecute el comando exit() para salir del interprete...
     >>> exit()
 
 
-Asi pudo salir de la sesión del interprete interactivo ``python3``.
+Así pudo salir de la sesión del interprete interactivo :command:`python3`.
 
 De esta forma aprendio nociones basicas con el interprete interactivo ``ipython``.
 
@@ -458,7 +458,7 @@ este programa ejecute el siguiente comando:
 
           pip3 install ipython
 
-Sustituya el comando ``python3`` por ``ipython3`` de la siguiente forma:
+Sustituya el comando :command:`python3` por el comando :command:`ipython3` de la siguiente forma:
 
 .. tabs::
 
@@ -802,7 +802,7 @@ Si ejecuto el comando anterior, este da como resultado lo siguiente:
 
     (None,)
 
-Asi pudo salir de la sesión del interprete interactivo ``bpython``.
+Así pudo salir de la sesión del interprete interactivo :command:`bpython`.
 
 De esta forma, ha aprendió nociones básicas con el interprete interactivo ``bpython``.
 

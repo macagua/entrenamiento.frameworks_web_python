@@ -6,10 +6,10 @@ import psycopg2
 logging.basicConfig(level=logging.INFO)
 
 # Script SELECT SQL a usar al consultar datos
-SELECT_SCRIPTS = """SELECT * FROM clientes;"""
+SELECT_SQL_SCRIPTS = """SELECT * FROM clientes;"""
 
 
-def consultar_registro():
+def consultar_registro(select_sql):
     """Función para la consulta de registro(s) de la tabla"""
 
     conexion = None
@@ -33,7 +33,7 @@ def consultar_registro():
         cursor = conexion.cursor()
         logging.info(f"✅ ¡Conectado a la base de datos '{credenciales['database']}'!\n")
         # Realizar consulta la tabla clientes
-        cursor.execute(SELECT_SCRIPTS)
+        cursor.execute(select_sql)
         # Recuperar los registros de la consulta
         registros = cursor.fetchall()
         # Mostrar los registros de la tabla
@@ -60,4 +60,4 @@ def consultar_registro():
 
 
 if __name__ == "__main__":
-    consultar_registro()
+    consultar_registro(SELECT_SQL_SCRIPTS)

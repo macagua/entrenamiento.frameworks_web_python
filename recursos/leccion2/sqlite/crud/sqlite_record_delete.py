@@ -11,10 +11,10 @@ DB_FILE = "sistema.db"
 DB = DB_PATH + DB_FILE
 
 # Script DELETE SQL a usar al eliminar datos
-DELETE_SCRIPTS = """DELETE FROM clientes WHERE id = 3;"""
+DELETE_SQL_SCRIPTS = """DELETE FROM clientes WHERE id = 3;"""
 
 
-def eliminar_registro():
+def eliminar_registro(delete_sql):
     """Función para la eliminación de registro de la tabla"""
 
     conexion = None
@@ -25,7 +25,7 @@ def eliminar_registro():
         cursor = conexion.cursor()
         logging.info(f"✅ ¡Conectado a la base de datos '{DB_FILE}'!\n")
         # Eliminar un fila de registro simple
-        cursor.execute(DELETE_SCRIPTS)
+        cursor.execute(delete_sql)
         # Guardar los cambios en la base de datos
         conexion.commit()
         logging.info("✅ ¡Registro eliminado correctamente!\n")
@@ -45,4 +45,4 @@ def eliminar_registro():
 
 
 if __name__ == "__main__":
-    eliminar_registro()
+    eliminar_registro(DELETE_SQL_SCRIPTS)
