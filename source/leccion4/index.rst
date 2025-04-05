@@ -7,8 +7,8 @@ Web Server Gateway Interface
 diferentes servidores web y framework de aplicaciones interactúen según
 una API común.
 
-En esta lección se busca hacer una introducción a la especificación WSGI
-en Python, sus características, instalación, interacciones con un WSGI y
+En esta lección se busca hacer una introducción a la especificación ``WSGI``
+en Python, sus características, instalación, interacciones con un ``WSGI`` y
 los recursos más destacados disponibles en la Web para tomar en cuenta.
 
 A continuación el temario de esta lección:
