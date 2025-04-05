@@ -25,7 +25,7 @@ instalar las siguientes librerías:
 Para trabajar una aplicación ``Flask`` con bases de datos relacionales
 requiere instalar las siguientes librerías:
 
-- :ref:`Flask <python_leccion6>`.
+- :ref:`Flask <python_flask>`.
 
 - :ref:`SQLAlchemy <python_sqlalchemy>`.
 

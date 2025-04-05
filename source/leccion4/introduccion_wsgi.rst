@@ -3,7 +3,7 @@
 Introducción a WSGI
 ===================
 
-Tras bambalinas de frameworks como :ref:`Flask <python_leccion6>`,
+Tras bambalinas de frameworks como :ref:`Flask <python_flask>`,
 :ref:`Django <python_django>`, Bottle y cualquier otro framework web
 de Python, se encuentra el *Web Server Gateway Interface (WSGI)*.
 
