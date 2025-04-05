@@ -4,7 +4,7 @@ Introducción a WSGI
 ===================
 
 Tras bambalinas de frameworks como :ref:`Flask <python_leccion6>`,
-:ref:`Django <python_leccion7>`, Bottle y cualquier otro framework web
+:ref:`Django <python_django>`, Bottle y cualquier otro framework web
 de Python, se encuentra el *Web Server Gateway Interface (WSGI)*.
 
 WSGI es para Python lo que son Servlets para Java: una especificación común

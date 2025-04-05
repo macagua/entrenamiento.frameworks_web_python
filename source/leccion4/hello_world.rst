@@ -107,7 +107,7 @@ De esta forma puede una aplicación web ``WSGI`` simple que maneja una petición
 
 
 Estos son los bloques de construcción muy simplificados utilizados en :ref:`framework web <python_leccion5_frameworks_web_populares>`
-populares como :ref:`Flask <python_leccion6>` y :ref:`Django <python_leccion7>`.
+populares como :ref:`Flask <python_leccion6>` y :ref:`Django <python_django>`.
 
 De esta forma ha aprendido a crear aplicaciones web ``WSGI`` que maneja peticiones ``GET`` y ``POST``.
 
