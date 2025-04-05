@@ -3,7 +3,7 @@
 Instalación
 ===========
 
-Para instalar el framework :ref:`Flask <python_leccion6>` debe seguir los siguientes pasos:
+Para instalar el framework :ref:`Flask <python_flask>` debe seguir los siguientes pasos:
 
 
 Requisitos previos

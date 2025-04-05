@@ -1,4 +1,4 @@
-.. _python_leccion6:
+.. _python_flask:
 
 Flask
 =====

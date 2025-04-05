@@ -12,7 +12,7 @@ Requisitos previos
 Para hacer un demostración local de un aplicación Dashboard de
 ``Flask-Admin`` requiere instalar las siguientes librerías:
 
-- :ref:`Flask <python_leccion6>`.
+- :ref:`Flask <python_flask>`.
 
 - `Flask-Admin <https://pypi.org/project/Flask-Admin/>`_.
 

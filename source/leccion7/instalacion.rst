@@ -3,7 +3,7 @@
 Instalación
 ===========
 
-Para instalar el framework :ref:`Django <python_leccion7>` debe seguir los siguientes pasos:
+Para instalar el framework :ref:`Django <python_django>` debe seguir los siguientes pasos:
 
 
 Requisitos previos

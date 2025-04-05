@@ -224,7 +224,7 @@ Así de esta forma congela las versiones usadas para el proceso de instalación 
 
 
 Entornos virtuales Python
-^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------
 
 Para la instalación de la herramienta de entornos virtuales en Python,
 ejecute el siguiente comando:
