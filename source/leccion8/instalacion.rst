@@ -3,7 +3,7 @@
 Instalación
 ===========
 
-Para instalar el framework :ref:`FastAPI <python_leccion8>` debe seguir los siguientes pasos:
+Para instalar el framework :ref:`FastAPI <python_fastapi>` debe seguir los siguientes pasos:
 
 
 Requisitos previos
