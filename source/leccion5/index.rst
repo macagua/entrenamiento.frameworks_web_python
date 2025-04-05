@@ -60,7 +60,7 @@ el que mejor se adapte a sus necesidades específicas.
   Incluye una gran cantidad de funcionalidades integradas, como un
   ORM (Object-Relational Mapping), un sistema de autenticación y un
   panel de administración.
-- **Pyramid**: Un framework que se adapta tanto a proyectos pequeños
+- `Pyramid`_: Un framework que se adapta tanto a proyectos pequeños
   como a aplicaciones complejas. Pyramid es muy flexible y permite a
   los desarrolladores elegir los componentes que desean utilizar.
 - :doc:`FastAPI <../leccion8/index>`: Un framework moderno y de alto
@@ -74,6 +74,10 @@ documentación, lo que facilita el aprendizaje y la resolución de problemas.
 Al elegir un framework web en Python, es importante considerar factores
 como la complejidad del proyecto, las necesidades de rendimiento y las
 preferencias personales del equipo de desarrollo.
+
+.. important::
+  Es importante comunicarse con el equipo de desarrollo para asegurarse de
+  que el framework se adapte adecuadamente a sus necesidades.
 
 
 ----
@@ -93,3 +97,6 @@ preferencias personales del equipo de desarrollo.
 
 ..
   .. disqus::
+
+
+.. _`Pyramid`: https://pypi.org/project/pyramid/
