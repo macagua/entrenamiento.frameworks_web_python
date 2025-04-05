@@ -33,7 +33,7 @@ instalación existe, ejecutando el siguiente comando:
 
 .. tabs::
 
-   .. group-tab:: Linux
+   .. group-tab:: macOS, Linux, y Windows con WSL
 
       .. code-block:: console
 
@@ -68,7 +68,7 @@ los modos de instalación:
 
 .. tabs::
 
-   .. group-tab:: Linux
+   .. group-tab:: macOS, Linux, y Windows con WSL
 
       Para instalar administradores de base de datos nativos ``sqlite3`` para la plataforma
       Unix/Linux debe seguir los siguientes pasos:
@@ -234,7 +234,7 @@ los modos de instalación:
 
 .. tabs::
 
-   .. group-tab:: Linux
+   .. group-tab:: macOS, Linux, y Windows con WSL
 
       Para instalar el programa ``sqlitebrowser`` para administrador de base de datos nativos
       ``sqlite3`` para la plataforma Unix/Linux debe seguir los siguientes pasos:
@@ -296,7 +296,7 @@ Crear el directorio ``crud`` con el siguiente comando:
 
 .. tabs::
 
-   .. group-tab:: Linux
+   .. group-tab:: macOS, Linux, y Windows con WSL
 
       Crear y acceder al directorio en un solo comando, ejecutando el siguiente comando:
 
@@ -697,7 +697,7 @@ sistema operativo:
 
 .. tabs::
 
-   .. group-tab:: Linux
+   .. group-tab:: macOS, Linux, y Windows con WSL
 
       Antes de ejecutar debes instalar sus dependencias, con el siguiente comando:
 

@@ -440,17 +440,17 @@ este programa ejecute el siguiente comando:
 
 .. tabs::
 
+   .. group-tab:: macOS, Linux, y Windows con WSL
+
+      .. code-block:: console
+
+          sudo apt install -y ipython
+
    .. group-tab:: PIP
 
       .. code-block:: console
 
           pip3 install ipython
-
-   .. group-tab:: Ubuntu/Debian Linux
-
-      .. code-block:: console
-
-          sudo apt install -y ipython
 
    .. group-tab:: Windows
 
@@ -462,7 +462,7 @@ Sustituya el comando :command:`python3` por el comando :command:`ipython3` de la
 
 .. tabs::
 
-   .. group-tab:: Linux
+   .. group-tab:: macOS, Linux, y Windows con WSL
 
       .. code-block:: console
 

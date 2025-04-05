@@ -208,7 +208,7 @@ presentan a continuación:
 
 .. tabs::
 
-   .. group-tab:: Linux
+   .. group-tab:: macOS, Linux, y Windows con WSL
 
       .. code-block:: console
 
@@ -225,7 +225,7 @@ el siguiente comando correspondiente a tu sistema operativo:
 
 .. tabs::
 
-   .. group-tab:: Linux
+   .. group-tab:: macOS, Linux, y Windows con WSL
 
       .. code-block:: console
 
@@ -260,7 +260,7 @@ los modos de instalación:
 
 .. tabs::
 
-   .. group-tab:: Linux
+   .. group-tab:: macOS, Linux, y Windows con WSL
 
       .. code-block:: console
 
@@ -278,7 +278,7 @@ el siguiente comando:
 
 .. tabs::
 
-   .. group-tab:: Linux
+   .. group-tab:: macOS, Linux, y Windows con WSL
 
       Puede probar si la instalación se realizo correctamente, ejecutando
       el siguiente comando:
@@ -350,7 +350,7 @@ Ejecute el comando :command:`zodbrowser` especificando un nombre de archivo ``ZO
 
 .. tabs::
 
-   .. group-tab:: Linux
+   .. group-tab:: macOS, Linux, y Windows con WSL
 
       .. code-block:: console
 
@@ -793,7 +793,7 @@ sistema operativo:
 
 .. tabs::
 
-   .. group-tab:: Linux
+   .. group-tab:: macOS, Linux, y Windows con WSL
 
       Antes de ejecutar debes instalar sus dependencias, con el siguiente comando:
 

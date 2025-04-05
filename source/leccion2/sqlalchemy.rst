@@ -109,7 +109,7 @@ a continuación se presentan el correspondiente comando de tu sistema operativo:
 
 .. tabs::
 
-   .. group-tab:: Linux
+   .. group-tab:: macOS, Linux, y Windows con WSL
 
       .. code-block:: console
 
@@ -127,7 +127,7 @@ el siguiente comando correspondiente a tu sistema operativo:
 
 .. tabs::
 
-   .. group-tab:: Linux
+   .. group-tab:: macOS, Linux, y Windows con WSL
 
       .. code-block:: console
 
@@ -410,7 +410,7 @@ Ejecuta ahora el programa con el siguiente comando:
 
 .. tabs::
 
-   .. group-tab:: Linux
+   .. group-tab:: macOS, Linux, y Windows con WSL
 
       .. code-block:: console
 
@@ -492,7 +492,7 @@ Ejecuta ahora el programa con el siguiente comando:
 
 .. tabs::
 
-   .. group-tab:: Linux
+   .. group-tab:: macOS, Linux, y Windows con WSL
 
       .. code-block:: console
 
@@ -720,7 +720,7 @@ sistema operativo:
 
 .. tabs::
 
-   .. group-tab:: Linux
+   .. group-tab:: macOS, Linux, y Windows con WSL
 
       Antes de ejecutar debes instalar sus dependencias, con el siguiente comando:
 

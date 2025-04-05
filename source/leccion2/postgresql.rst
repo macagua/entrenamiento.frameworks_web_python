@@ -50,7 +50,7 @@ presentan a continuación:
 
 .. tabs::
 
-   .. group-tab:: Linux
+   .. group-tab:: macOS, Linux, y Windows con WSL
 
       Para trabajar una aplicación con bases de datos relacionales ``PostgreSQL`` requiere
       instalar las siguientes librerías/módulos:
@@ -92,7 +92,7 @@ el siguiente comando correspondiente a tu sistema operativo:
 
 .. tabs::
 
-   .. group-tab:: Linux
+   .. group-tab:: macOS, Linux, y Windows con WSL
 
       .. code-block:: console
 
@@ -168,7 +168,7 @@ Crear el directorio ``crud`` con el siguiente comando:
 
 .. tabs::
 
-   .. group-tab:: Linux
+   .. group-tab:: macOS, Linux, y Windows con WSL
 
       Crear y acceder al directorio en un solo comando, ejecutando el siguiente comando:
 
@@ -335,7 +335,7 @@ el siguiente comando correspondiente a tu sistema operativo:
 
 .. tabs::
 
-   .. group-tab:: Linux
+   .. group-tab:: macOS, Linux, y Windows con WSL
 
       .. code-block:: console
 
@@ -353,7 +353,7 @@ el siguiente comando correspondiente a tu sistema operativo:
 
 .. tabs::
 
-   .. group-tab:: Linux
+   .. group-tab:: macOS, Linux, y Windows con WSL
 
       .. code-block:: console
 
@@ -370,7 +370,7 @@ si sus registros fueron cargados en la tabla, ejecutando el siguiente comando co
 
 .. tabs::
 
-   .. group-tab:: Linux
+   .. group-tab:: macOS, Linux, y Windows con WSL
 
       .. code-block:: console
 
@@ -595,7 +595,7 @@ Para crear la estructura de archivos del proyecto ``PostgreSQL`` debe ejecutar l
 
 .. tabs::
 
-   .. group-tab:: Linux
+   .. group-tab:: macOS, Linux, y Windows con WSL
 
       Crear y acceder al directorio ``sistema`` en un solo comando, ejecutando el siguiente comando:
 
@@ -723,7 +723,7 @@ configuración y ejecución del código fuente.
 
 .. tabs::
 
-   .. group-tab:: Linux
+   .. group-tab:: macOS, Linux, y Windows con WSL
 
       Antes de ejecutar debes instalar sus dependencias, con el siguiente comando:
 
