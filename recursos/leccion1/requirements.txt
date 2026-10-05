@@ -10,7 +10,7 @@ Jinja2==3.1.6
 markdown-it-py==3.0.0
 MarkupSafe==3.0.2
 mdurl==0.1.2
-Pygments==2.19.1
+Pygments==2.20.0
 python-dateutil==2.9.0.post0
 python-slugify==8.0.4
 PyYAML==6.0.2
