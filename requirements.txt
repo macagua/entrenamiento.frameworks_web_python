@@ -4,13 +4,13 @@ babel==2.17.0
 charset-normalizer==3.4.1
 certifi==2025.1.31
 docutils==0.21.2
-idna==3.10
+idna==3.15
 imagesize==1.4.1
 Jinja2==3.1.6
 MarkupSafe==3.0.2
 packaging==24.2
 Pygments==2.20.0
-requests==2.32.4
+requests==2.33.0
 roman-numerals-py==3.1.0
 snowballstemmer==2.2.0
 Sphinx==8.2.1
@@ -20,7 +20,7 @@ sphinxcontrib-htmlhelp==2.1.0
 sphinxcontrib-jsmath==1.0.1
 sphinxcontrib-qthelp==2.0.0
 sphinxcontrib-serializinghtml==2.0.0
-urllib3==2.6.3
+urllib3==2.8.0
 
 # https://pypi.org/project/sphinx-immaterial/
 annotated-types==0.7.0
@@ -32,8 +32,8 @@ sphinx-immaterial==0.13.0
 typing-extensions==4.12.2
 
 # sphinx-immaterial[keys] https://pypi.org/project/sphinx-immaterial/
-markdown==3.7
-pymdown-extensions==10.16.1
+markdown==3.8.1
+pymdown-extensions==11.0.1
 pyyaml==6.0.2
 
 # https://pypi.org/project/ipython/
@@ -53,7 +53,7 @@ pyyaml==6.0.2
 # wcwidth==0.2.13
 
 # https://pypi.org/project/sphinxcontrib-email/
-lxml==5.3.1
+lxml==6.1.0
 sphinxcontrib-email==0.3.6
 
 # https://pypi.org/project/yasfb/
