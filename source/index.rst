@@ -26,6 +26,14 @@ Repositorio de manuales y recursos del entrenamiento **"Frameworks de Desarrollo
    - Un entrenamiento de **nivel básico** (*4 a 5 días*) que
      cubre los *seis (06) capítulos*.
 
+
+.. warning::
+   Tenga en cuenta que este documento no está completo sin
+   la palabra hablada de un instructor a pesar de que tratamos
+   de incluir las partes más importantes de lo que enseñamos
+   en la narrativa no puede considerarse completa sin la
+   palabra hablada.
+
 .. toctree::
    :numbered:
    :maxdepth: 2
@@ -39,14 +47,6 @@ Repositorio de manuales y recursos del entrenamiento **"Frameworks de Desarrollo
    leccion6/index
    leccion7/index
    leccion8/index
-
-
-.. warning::
-   Tenga en cuenta que este documento no está completo sin
-   la palabra hablada de un instructor a pesar de que tratamos
-   de incluir las partes más importantes de lo que enseñamos
-   en la narrativa no puede considerarse completa sin la
-   palabra hablada.
 
 
 Apéndices
